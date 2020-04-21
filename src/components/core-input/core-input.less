@@ -2,12 +2,29 @@
 
 // :host targets the custom element compiled by Stencil
 :host {
+  color: @color-gray-5;
   display: flex;
   font: 14px "Inter", sans-seif;
   position: relative;
 
   &([icon]) .native-element {
     padding-left: 40px;
+  }
+
+  &(.core-error) {
+    color: @color-red;
+
+    .native-element {
+      border-color: @color-red-light-1;
+    }
+  }
+
+  &(.core-success) {
+    color: @color-green;
+
+    .native-element {
+      border-color: @color-green-light-1;
+    }
   }
 }
 
