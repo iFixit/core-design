@@ -1,0 +1,16 @@
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+// :host targets the custom element compiled by Stencil
+:host {
+  box-sizing: border-box;
+  color: @color-gray-5;
+  display: flex;
+  font: 14px "Inter", sans-seif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .native-element {
+    margin-bottom: @space-2;
+  }
+}

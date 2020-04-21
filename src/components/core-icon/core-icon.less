@@ -1,0 +1,233 @@
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+// :host targets the custom element compiled by Stencil
+:host {
+  box-sizing: content-box;
+  color: inherit;
+  contain: strict;
+  align-self: center;
+  fill: currentColor;
+
+  &(.core-icon--16) {
+    height: 16px;
+    width: 16px;
+  }
+
+  &(.core-icon--24) {
+    height: 24px;
+    width: 24px;
+  }
+
+  &([slot=button-left]) {
+    margin-right: @space-2;
+  }
+
+  &([slot=button-right]) {
+    margin-left: @space-2;
+  }
+
+  &([slot=input-left]),
+  &([slot=input-right]) {
+    position: absolute;
+    top: calc(50% - @space-2);
+  }
+
+  &([slot=input-left]) {
+    left: @space-3;
+  }
+
+  &([slot=input-right]) {
+    right: @space-3;
+  }
+
+  // @Prop fill colors
+  // TODO: (IR) figure out an automated way to maintain
+  &([color=blue]) {
+    color: #1975f1;
+  }
+
+  &([color=green]) {
+    color: #33b464;
+  }
+
+  &([color=yellow]) {
+    color: #f9c03e;
+  }
+
+  &([color=red]) {
+    color: #f34e46;
+  }
+
+  &([color=white]) {
+    color: #ffffff;
+  }
+
+  &([color=black]) {
+    color: #11161a;
+  }
+
+  &([color=blue-light-4]) {
+    color: #edf6ff;
+  }
+
+  &([color=blue-light-3]) {
+    color: #bddcff;
+  }
+
+  &([color=blue-light-2]) {
+    color: #77b5ff;
+  }
+
+  &([color=blue-light-1]) {
+    color: #3b95ff;
+  }
+
+  &([color=blue-dark-1]) {
+    color: #085fd9;
+  }
+
+  &([color=blue-dark-2]) {
+    color: #004ab3;
+  }
+
+  &([color=blue-dark-3]) {
+    color: #00368c;
+  }
+
+  &([color=blue-dark-4]) {
+    color: #002466;
+  }
+
+  &([color=green-light-4]) {
+    color: #e8faee;
+  }
+
+  &([color=green-light-3]) {
+    color: #b7ecc8;
+  }
+
+  &([color=green-light-2]) {
+    color: #89dca5;
+  }
+
+  &([color=green-light-1]) {
+    color: #5dc984;
+  }
+
+  &([color=green-dark-1]) {
+    color: #269c55;
+  }
+
+  &([color=green-dark-2]) {
+    color: #1b8246;
+  }
+
+  &([color=green-dark-3]) {
+    color: #126637;
+  }
+
+  &([color=green-dark-4]) {
+    color: #0a4927;
+  }
+
+  &([color=yellow-light-4]) {
+    color: #fff8e9;
+  }
+
+  &([color=yellow-light-3]) {
+    color: #ffe9b9;
+  }
+
+  &([color=yellow-light-2]) {
+    color: #ffdb8c;
+  }
+
+  &([color=yellow-light-1]) {
+    color: #ffcd63;
+  }
+
+  &([color=yellow-dark-1]) {
+    color: #d99b2e;
+  }
+
+  &([color=yellow-dark-2]) {
+    color: #b37820;
+  }
+
+  &([color=yellow-dark-3]) {
+    color: #8c5715;
+  }
+
+  &([color=yellow-dark-4]) {
+    color: #66390c;
+  }
+
+  &([color=red-light-4]) {
+    color: #ffeded;
+  }
+
+  &([color=red-light-3]) {
+    color: #ffb8b3;
+  }
+
+  &([color=red-light-2]) {
+    color: #ff8b85;
+  }
+
+  &([color=red-light-1]) {
+    color: #ff6860;
+  }
+
+  &([color=red-dark-1]) {
+    color: #d93531;
+  }
+
+  &([color=red-dark-2]) {
+    color: #b3201f;
+  }
+
+  &([color=red-dark-3]) {
+    color: #8c1113;
+  }
+
+  &([color=red-dark-4]) {
+    color: #66070b;
+  }
+
+  &([color=gray-1]) {
+    color: #f7f9fa;
+  }
+
+  &([color=gray-2]) {
+    color: #e3e8ed;
+  }
+
+  &([color=gray-3]) {
+    color: #d2dadf;
+  }
+
+  &([color=gray-4]) {
+    color: #afbbc4;
+  }
+
+  &([color=gray-5]) {
+    color: #828d96;
+  }
+
+  &([color=gray-6]) {
+    color: #525d66;
+  }
+
+  &([color=gray-7]) {
+    color: #39444d;
+  }
+
+  &([color=-gray-8]) {
+    color: #242c33;
+  }
+}
+
+.core-icon--inner {
+  height: inherit;
+  width: inherit;
+}

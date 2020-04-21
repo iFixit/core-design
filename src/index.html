@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      icon="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Core Button</title>
+
+    <script type="module" src="/build/core.esm.js"></script>
+    <script nomodule src="/build/core.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        font: 14px "Inter", sans-seif;
+        margin: 5%;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: auto;
+      }
+      h2 {
+        margin-bottom: 2em;
+      }
+      section:not(:last-of-type) {
+        margin-bottom: 64px;
+      }
+      .grid {
+        display: grid;
+        grid-gap: 32px;
+      }
+      .grid span {
+        align-self: center;
+        color: #afbbc4;
+        font-size: 13px;
+      }
+      .grid > .grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+      .grid .inputs {
+        grid-column: 1 / 3;
+        grid-row: 1;
+      }
+      .grid .inputs > * {
+        margin-bottom: 16px;
+      }
+      .grid .textarea {
+        grid-column: 3 / 6;
+        grid-row: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="button">
+      <h2>Button States</h2>
+      <div class="grid">
+        <div class="states grid">
+          <span></span>
+          <span>Basic</span>
+          <span>Primary</span>
+          <span>Secondary</span>
+          <span>Color Dark</span>
+          <span>Color Light</span>
+        </div>
+        <div class="states grid">
+          <span>Default</span>
+          <core-button>Button</core-button>
+          <core-button variation="primary">Button</core-button>
+          <core-button variation="secondary">Button</core-button>
+          <core-button variation="dark">Button</core-button>
+          <core-button variation="light">Button</core-button>
+        </div>
+        <div class="states grid">
+          <span>Link</span>
+          <core-button href="https://www.dozuki.com/">Button</core-button>
+          <core-button variation="primary" href="https://www.dozuki.com/"
+            >Button</core-button
+          >
+          <core-button variation="secondary" href="https://www.dozuki.com/"
+            >Button</core-button
+          >
+          <core-button variation="dark" href="https://www.dozuki.com/"
+            >Button</core-button
+          >
+          <core-button variation="light" href="https://www.dozuki.com/"
+            >Button</core-button
+          >
+        </div>
+        <div class="states grid">
+          <span>Disabled</span>
+          <core-button disabled>Button</core-button>
+          <core-button variation="primary" disabled>Button</core-button>
+          <core-button variation="secondary" disabled>Button</core-button>
+          <core-button variation="dark" disabled>Button</core-button>
+          <core-button variation="light" disabled>Button</core-button>
+        </div>
+        <div class="states grid">
+          <span>Loading</span>
+          <core-button loading>Button</core-button>
+          <core-button variation="primary" loading>Button</core-button>
+          <core-button variation="secondary" loading>Button</core-button>
+          <core-button variation="dark" loading>Button</core-button>
+          <core-button variation="light" loading>Button</core-button>
+        </div>
+      </div>
+    </section>
+    <section class="button">
+      <h2>Button Sizes</h2>
+      <div class="grid">
+        <div class="sizes grid">
+          <span>Default</span>
+          <core-button>Button</core-button>
+          <core-button variation="primary">Button</core-button>
+          <core-button variation="secondary">Button</core-button>
+          <core-button disabled>Button</core-button>
+        </div>
+        <div class="sizes grid">
+          <span>Small</span>
+          <core-button size="small">Button</core-button>
+          <core-button size="small" variation="primary">Button</core-button>
+          <core-button size="small" variation="secondary">Button</core-button>
+          <core-button size="small" disabled>Button</core-button>
+        </div>
+        <div class="sizes grid">
+          <span>Large</span>
+          <core-button size="large">Button</core-button>
+          <core-button size="large" variation="primary">Button</core-button>
+          <core-button size="large" variation="secondary">Button</core-button>
+          <core-button size="large" disabled>Button</core-button>
+        </div>
+      </div>
+    </section>
+    <section class="button">
+      <h2>Icon Buttons</h2>
+      <div class="grid">
+        <div class="icon grid">
+          <span>Default</span>
+          <core-button>
+            <core-icon slot="button-left" icon="heart" color="gray-5"></core-icon>
+            Button
+          </core-button>
+          <core-button>
+            <core-icon slot="button-right" icon="heart" color="gray-5"></core-icon>
+            Button
+          </core-button>
+          <core-button>
+            <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+          </core-button>
+          <core-button radius="circle">
+            <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+          </core-button>
+        </div>
+        <div class="icon grid">
+          <span>Primary</span>
+          <core-button variation="primary">
+            <core-icon slot="button-left" icon="heart"></core-icon>
+            Button
+          </core-button>
+          <core-button variation="primary">
+            <core-icon slot="button-right" icon="heart"></core-icon>
+            Button
+          </core-button>
+          <core-button variation="primary">
+            <core-icon slot="button-icon-only" icon="heart"></core-icon>
+          </core-button>
+          <core-button variation="primary" radius="circle">
+            <core-icon slot="button-icon-only" icon="heart"></core-icon>
+          </core-button>
+        </div>
+        <div class="icon grid">
+          <span>Secondary</span>
+          <core-button variation="secondary">
+            <core-icon slot="button-left" icon="heart" color="gray-5"></core-icon>
+            Button
+          </core-button>
+          <core-button variation="secondary">
+            <core-icon slot="button-right" icon="heart" color="gray-5"></core-icon>
+            Button
+          </core-button>
+          <core-button variation="secondary">
+            <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+          </core-button>
+          <core-button variation="secondary" radius="circle">
+            <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+          </core-button>
+        </div>
+      </div>
+    </section>
+    <section class="input">
+      <h2>Text Inputs</h2>
+        <div class="grid">
+          <div class="text grid">
+            <div class="inputs">
+              <core-input placeholder="Placeholder"></core-input>
+              <core-input placeholder="Disabled" disabled></core-input>
+              <core-input placeholder="Icon Input" icon="calendar"></core-input>
+              <core-input placeholder="Error Input" icon="alert-circle" iconColor="red"></core-input>
+              <div>
+                <core-label forId="field-label">Field Label</core-label>
+                <core-input id="field-label" placeholder="Placeholder"></core-input>
+              </div>
+            </div>
+            <div class="textarea">
+              <core-textarea placeholder="Text area" rows="6" cols="50"></core-textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
