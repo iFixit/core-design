@@ -42,12 +42,16 @@
       .grid > .grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
       }
-      .grid .inputs {
+      .grid .row {
         grid-column: 1 / 3;
         grid-row: 1;
       }
-      .grid .inputs > * {
-        margin-bottom: 16px;
+      .grid .row > * {
+        margin-bottom: 32px;
+      }
+      core-button[loading="right"],
+      core-button[loading="left"] {
+        grid-column: auto / span 2;
       }
       .grid .textarea {
         grid-column: 3 / 6;
@@ -61,51 +65,63 @@
       <div class="grid">
         <div class="states grid">
           <span></span>
+          <span>Normal</span>
+          <span>Disbled</span>
+        </div>
+        <div class="states grid">
           <span>Basic</span>
-          <span>Primary</span>
-          <span>Secondary</span>
-          <span>Color Dark</span>
-          <span>Color Light</span>
-        </div>
-        <div class="states grid">
-          <span>Default</span>
           <core-button>Button</core-button>
-          <core-button variation="primary">Button</core-button>
-          <core-button variation="secondary">Button</core-button>
-          <core-button variation="dark">Button</core-button>
-          <core-button variation="light">Button</core-button>
-        </div>
-        <div class="states grid">
-          <span>Link</span>
-          <core-button href="https://www.dozuki.com/">Button</core-button>
-          <core-button variation="primary" href="https://www.dozuki.com/"
-            >Button</core-button
-          >
-          <core-button variation="secondary" href="https://www.dozuki.com/"
-            >Button</core-button
-          >
-          <core-button variation="dark" href="https://www.dozuki.com/"
-            >Button</core-button
-          >
-          <core-button variation="light" href="https://www.dozuki.com/"
-            >Button</core-button
-          >
-        </div>
-        <div class="states grid">
-          <span>Disabled</span>
           <core-button disabled>Button</core-button>
+        </div>
+        <div class="states grid">
+          <span>Primary</span>
+          <core-button variation="primary">Button</core-button>
           <core-button variation="primary" disabled>Button</core-button>
+        </div>
+        <div class="states grid">
+          <span>Secondary</span>
+          <core-button variation="secondary">Button</core-button>
           <core-button variation="secondary" disabled>Button</core-button>
+        </div>
+        <div class="states grid">
+          <span>Color dark</span>
+          <core-button variation="dark">Button</core-button>
           <core-button variation="dark" disabled>Button</core-button>
+        </div>
+        <div class="states grid">
+          <span>Color light</span>
+          <core-button variation="light">Button</core-button>
           <core-button variation="light" disabled>Button</core-button>
         </div>
+      </div>
+    </section>
+    <section class="button">
+      <div class="grid">
         <div class="states grid">
-          <span>Loading</span>
-          <core-button loading>Button</core-button>
-          <core-button variation="primary" loading>Button</core-button>
-          <core-button variation="secondary" loading>Button</core-button>
-          <core-button variation="dark" loading>Button</core-button>
-          <core-button variation="light" loading>Button</core-button>
+          <span>Loading basic</span>
+          <core-button>Submit</core-button>
+          <core-button loading="right">Submitting</core-button>
+          <core-button loading="only">Submitting</core-button>
+        </div>
+        <div class="states grid">
+          <span>Loading primary</span>
+          <core-button variation="primary">Submit</core-button>
+          <core-button variation="primary" loading="left">Submitting</core-button>
+          <core-button variation="primary" loading="only">Submitting</core-button>
+        </div>
+        <div class="states grid">
+          <span>Color dark</span>
+          <core-button variation="dark" status="success">Success</core-button>
+          <core-button variation="dark" status="danger">Danger</core-button>
+          <core-button variation="dark" status="warning">Warning</core-button>
+          <core-button variation="dark" status="alt">Alt</core-button>
+        </div>
+        <div class="states grid">
+          <span>Color light</span>
+          <core-button variation="light" status="success">Success</core-button>
+          <core-button variation="light" status="danger">Danger</core-button>
+          <core-button variation="light" status="warning">Warning</core-button>
+          <core-button variation="light" status="alt">Alt</core-button>
         </div>
       </div>
     </section>
@@ -195,7 +211,7 @@
       <h2>Text Inputs</h2>
         <div class="grid">
           <div class="text grid">
-            <div class="inputs">
+            <div class="row">
               <core-input placeholder="Placeholder"></core-input>
               <core-input placeholder="Disabled" disabled></core-input>
               <core-input placeholder="Icon Input" icon="calendar"></core-input>
@@ -203,12 +219,23 @@
               <core-input placeholder="Success Input" icon="check" class="core-success"></core-input>
               <div>
                 <core-label forId="field-label">Field Label</core-label>
-                <core-input id="field-label" placeholder="Placeholder"></core-input>
+                <core-input name="field-label" placeholder="Placeholder"></core-input>
               </div>
             </div>
             <div class="textarea">
               <core-textarea placeholder="Text area" rows="6" cols="50"></core-textarea>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="input">
+      <h2>Search</h2>
+      <div class="grid">
+        <div class="search grid">
+          <div class="row">
+            <core-input placeholder="Search" icon="search" class="core-search"></core-input>
+            <core-input placeholder="Large Search" icon="search" size="large" class="core-search"></core-input>
           </div>
         </div>
       </div>

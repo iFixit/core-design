@@ -30,6 +30,7 @@ export class Button implements ComponentInterface {
     return (
       <Host
         class={{
+          "core-label": true,
           [position]: true,
           [forId]: forId !== undefined,
         }}

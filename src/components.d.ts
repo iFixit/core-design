@@ -28,9 +28,9 @@ export namespace Components {
          */
         "href": string | undefined;
         /**
-          * If `true`, the button is in a loading state.
+          * Specifies the loading animation location if applied. Use: `"left"`, `"right"`, or `"only"`.
          */
-        "loading": boolean;
+        "loading"?: "left" | "right" | "only";
         /**
           * Set to the value of border-radius applied. Default is 4px.
          */
@@ -40,9 +40,13 @@ export namespace Components {
          */
         "rel": string | undefined;
         /**
-          * The button size.
+          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`. Default size is `"default"`.
          */
         "size"?: "small" | "default" | "large";
+        /**
+          * The status classing of the button. Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+         */
+        "status": "success" | "danger" | "warning" | "alt";
         /**
           * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
          */
@@ -92,7 +96,7 @@ export namespace Components {
     }
     interface CoreInput {
         /**
-          * This Boolean attribute lets you specify that a form control should have input focus when the page loads.
+          * Boolean attribute lets you specify that a form control should have input focus when the page loads.
          */
         "autofocus": boolean;
         /**
@@ -127,6 +131,10 @@ export namespace Components {
           * If `true`, the user must fill in a value before submitting a form.
          */
         "required": boolean;
+        /**
+          * The large pre-defined input size and styling. Use: `"large"`.
+         */
+        "size"?: "large";
         /**
           * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is text. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */
@@ -235,9 +243,9 @@ declare namespace LocalJSX {
          */
         "href"?: string | undefined;
         /**
-          * If `true`, the button is in a loading state.
+          * Specifies the loading animation location if applied. Use: `"left"`, `"right"`, or `"only"`.
          */
-        "loading"?: boolean;
+        "loading"?: "left" | "right" | "only";
         /**
           * Set to the value of border-radius applied. Default is 4px.
          */
@@ -247,9 +255,13 @@ declare namespace LocalJSX {
          */
         "rel"?: string | undefined;
         /**
-          * The button size.
+          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`. Default size is `"default"`.
          */
         "size"?: "small" | "default" | "large";
+        /**
+          * The status classing of the button. Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+         */
+        "status"?: "success" | "danger" | "warning" | "alt";
         /**
           * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
          */
@@ -299,7 +311,7 @@ declare namespace LocalJSX {
     }
     interface CoreInput {
         /**
-          * This Boolean attribute lets you specify that a form control should have input focus when the page loads.
+          * Boolean attribute lets you specify that a form control should have input focus when the page loads.
          */
         "autofocus"?: boolean;
         /**
@@ -330,6 +342,10 @@ declare namespace LocalJSX {
           * If `true`, the user must fill in a value before submitting a form.
          */
         "required"?: boolean;
+        /**
+          * The large pre-defined input size and styling. Use: `"large"`.
+         */
+        "size"?: "large";
         /**
           * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is text. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */

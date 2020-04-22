@@ -148,6 +148,7 @@ export class Icon {
       <Host
         role="img"
         class={{
+          "core-icon": true,
           [`core-icon--${this.size}`]: !!this.size,
         }}
       >

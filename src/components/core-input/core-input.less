@@ -11,6 +11,12 @@
     padding-left: 40px;
   }
 
+  // @Prop large size
+  ([size="large"]) .native-element {
+    font-size: 16px;
+    padding: 14px 20px 14px 50px;
+  }
+
   &(.core-error) {
     color: @color-red;
 
@@ -25,6 +31,10 @@
     .native-element {
       border-color: @color-green-light-1;
     }
+  }
+
+  &(.core-search) .native-element {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
   }
 }
 

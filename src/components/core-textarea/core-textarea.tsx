@@ -66,7 +66,12 @@ export class Textarea implements ComponentInterface {
   render() {
     const value = this.getValue();
     return (
-      <Host aria-disabled={this.disabled ? "true" : null}>
+      <Host
+        class={{
+          "core-textarea": true,
+        }}
+        aria-disabled={this.disabled ? "true" : null}
+      >
         <textarea
           class="native-element"
           ref={(el) => (this.nativeInput = el)}

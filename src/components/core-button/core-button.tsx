@@ -71,9 +71,11 @@ export class Button implements ComponentInterface {
   @Prop() rel: string | undefined;
 
   /**
-   * The button size.
+   * The pre-defined button size.
+   * Use: `"small"`, `"default"`, or `"large"`.
+   * Default size is `"default"`.
    */
-  @Prop({ reflectToAttr: true }) size?: "small" | "default" | "large";
+  @Prop() size?: "small" | "default" | "large" = "default";
 
   /**
    * Specifies where to display the linked URL.
@@ -88,15 +90,22 @@ export class Button implements ComponentInterface {
   @Prop() type: "submit" | "reset" | "button" = "button";
 
   /**
+   * The status classing of the button.
+   * Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+   */
+  @Prop() status: "success" | "danger" | "warning" | "alt";
+
+  /**
    * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
    */
   @Prop() display?: "block" | "inline" | "inline-flex" | "none" | "flex" =
     "flex";
 
   /**
-   * If `true`, the button is in a loading state.
+   * Specifies the loading animation location if applied.
+   * Use: `"left"`, `"right"`, or `"only"`.
    */
-  @Prop({ reflectToAttr: true }) loading = false;
+  @Prop({ reflectToAttr: true }) loading?: "left" | "right" | "only";
 
   private get hasIconOnly() {
     return !!this.el.querySelector('core-icon[slot="button-icon-only"]');
@@ -105,7 +114,6 @@ export class Button implements ComponentInterface {
   render() {
     const {
       disabled,
-      display,
       hasIconOnly,
       href,
       loading,
@@ -113,6 +121,7 @@ export class Button implements ComponentInterface {
       target,
       type,
       size,
+      status,
       variation,
       width,
     } = this;
@@ -131,13 +140,13 @@ export class Button implements ComponentInterface {
       <Host
         aria-disabled={disabled ? "true" : null}
         class={{
+          "core-button": true,
+          "button-icon-only": hasIconOnly,
+          [`${variation}`]: variation !== undefined,
           [`${width}`]: width !== undefined,
           [`${size}`]: size !== undefined,
-          [`${variation}`]: true,
-          [`${display}`]: true,
-          "button-icon-only": hasIconOnly,
+          [`${status}`]: status !== undefined,
           [`disabled`]: disabled,
-          [`loading`]: loading,
         }}
       >
         <TagType
@@ -146,11 +155,13 @@ export class Button implements ComponentInterface {
           disabled={disabled}
           loading={loading}
         >
-          <div class="button-loading"></div>
+          <div class="button-loading-only"></div>
           <slot name="button-icon-only"></slot>
+          <div class="button-loading-left"></div>
           <slot name="button-left"></slot>
           <slot></slot>
           <slot name="button-right"></slot>
+          <div class="button-loading-right"></div>
         </TagType>
       </Host>
     );

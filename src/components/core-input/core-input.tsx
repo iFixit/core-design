@@ -24,7 +24,13 @@ export class Input implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * This Boolean attribute lets you specify that a form control should
+   * The large pre-defined input size and styling.
+   * Use: `"large"`.
+   */
+  @Prop({ reflectToAttr: true }) size?: "large";
+
+  /**
+   * Boolean attribute lets you specify that a form control should
    * have input focus when the page loads.
    */
   @Prop() autofocus = false;
@@ -102,6 +108,7 @@ export class Input implements ComponentInterface {
       <Host
         aria-disabled={this.disabled ? "true" : null}
         class={{
+          "core-input": true,
           "has-focus": this.hasFocus,
         }}
       >
