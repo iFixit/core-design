@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-**_After cloning the repo for the first time, run: `npm run build` to copy core-icons into the build/assets directory._**
+_\*After cloning the repo for the first time, run: `npm run build` to copy core-icons into the build/assets directory._
 
 To start developing, run:
 
@@ -64,7 +64,9 @@ To use this component, just use it like any other HTML element:
 
 ## Naming Components
 
-When creating new component tags, use the `core-` prefix. For example, `core-button`, `core-icon`, etc.
+When creating new component tags, use the `core-` prefix.
+
+For example: `core-button`, `core-icon`, etc.
 
 ## Hosting the app
 
