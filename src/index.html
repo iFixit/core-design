@@ -57,6 +57,9 @@
         grid-column: 3 / 6;
         grid-row: 1;
       }
+      .checkbox.grid > div {
+        display: flex;
+      }
     </style>
   </head>
   <body>
@@ -235,7 +238,17 @@
         <div class="search grid">
           <div class="row">
             <core-input placeholder="Search" icon="search" class="core-search"></core-input>
-            <core-input placeholder="Large Search" icon="search" size="large" class="core-search"></core-input>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="input">
+      <h2>Checkboxes</h2>
+      <div class="grid">
+        <div class="checkbox grid">
+          <div>
+            <core-input type="checkbox"></core-input>
+            <core-label display="inline">Checkbox</core-label>
           </div>
         </div>
       </div>

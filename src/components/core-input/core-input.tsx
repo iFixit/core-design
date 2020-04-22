@@ -50,9 +50,9 @@ export class Input implements ComponentInterface {
    * How an <input> works varies considerably depending on the value of
    * its type attribute, hence the different types are covered in their
    * own separate reference pages. If this attribute is not specified,
-   * the default type adopted is text. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+   * the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
    */
-  @Prop() type?: string | null;
+  @Prop({ reflectToAttr: true }) type?: string | "text" = "text";
 
   /**
    * A hint to the browser for which keyboard to display.

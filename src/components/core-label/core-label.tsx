@@ -16,9 +16,9 @@ export class Button implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * The position determines where and how the label behaves inside an item.
+   * The display determines where and how the label behaves inside an item.
    */
-  @Prop() position?: "inline" | "block" = "block";
+  @Prop() display?: "inline" | "block" = "block";
 
   /**
    * The id of a labelable form-related element.
@@ -26,12 +26,12 @@ export class Button implements ComponentInterface {
   @Prop() forId?: string | null;
 
   render() {
-    const { position, forId } = this;
+    const { display, forId } = this;
     return (
       <Host
         class={{
           "core-label": true,
-          [position]: true,
+          [display]: true,
           [forId]: forId !== undefined,
         }}
       >

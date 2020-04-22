@@ -136,19 +136,19 @@ export namespace Components {
          */
         "size"?: "large";
         /**
-          * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is text. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+          * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */
-        "type"?: string | null;
+        "type"?: string | "text";
     }
     interface CoreLabel {
+        /**
+          * The display determines where and how the label behaves inside an item.
+         */
+        "display"?: "inline" | "block";
         /**
           * The id of a labelable form-related element.
          */
         "forId"?: string | null;
-        /**
-          * The position determines where and how the label behaves inside an item.
-         */
-        "position"?: "inline" | "block";
     }
     interface CoreTextarea {
         /**
@@ -347,19 +347,19 @@ declare namespace LocalJSX {
          */
         "size"?: "large";
         /**
-          * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is text. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+          * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */
-        "type"?: string | null;
+        "type"?: string | "text";
     }
     interface CoreLabel {
+        /**
+          * The display determines where and how the label behaves inside an item.
+         */
+        "display"?: "inline" | "block";
         /**
           * The id of a labelable form-related element.
          */
         "forId"?: string | null;
-        /**
-          * The position determines where and how the label behaves inside an item.
-         */
-        "position"?: "inline" | "block";
     }
     interface CoreTextarea {
         /**
