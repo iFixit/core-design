@@ -3,7 +3,7 @@
 // :host targets the custom element compiled by Stencil
 :host {
   display: flex;
-  font: 14px "Inter", sans-seif;
+  font: inherit;
 
   .native-element {
     border: 1px solid @color-gray-3;
@@ -11,6 +11,7 @@
     box-sizing: border-box;
     color: @color-gray-8;
     font: inherit;
+    outline: none;
     padding: @space-3 @space-4;
     width: inherit;
 
@@ -19,8 +20,11 @@
     }
 
     &:focus {
-      outline: fade(@color-blue, 20%) solid 2px;
-      outline-offset: 1px;
+      border-color: @color-gray-4;
+    }
+
+    &:active {
+      border-color: @color-gray-7;
     }
   }
 }

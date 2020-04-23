@@ -21,11 +21,13 @@
 ### Used by
 
  - [core-input](../core-input)
+ - [core-label](../core-label)
 
 ### Graph
 ```mermaid
 graph TD;
   core-input --> core-icon
+  core-label --> core-icon
   style core-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

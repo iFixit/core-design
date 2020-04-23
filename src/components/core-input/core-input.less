@@ -4,7 +4,7 @@
 :host {
   color: @color-gray-5;
   display: inline-flex;
-  font: 14px "Inter", sans-seif;
+  font: inherit;
   position: relative;
 
   &([icon]) .native-element {
@@ -12,17 +12,30 @@
   }
 
   // @Prop size large
-  ([size="large"]) .native-element {
+  &([size="large"]) .native-element {
     font-size: 16px;
     padding: 14px 20px 14px 50px;
   }
 
+  // @Prop type text (default)
+  &([type="text"]) .native-element {
+    min-width: 225px;
+  }
+
   // @Prop type checkbox
-  ([type="checkbox"]) .native-element {
-    height: @space-4;
-    margin: 0 @space-2 0 0;
-    padding: 0;
-    width: @space-4;
+  &([type="checkbox"]) {
+    .input-inner {
+      height: @space-4;
+      margin-right: @space-2;
+      width: @space-4;
+    }
+
+    .native-element {
+      height: inherit;
+      margin: 0;
+      padding: 0;
+      width: inherit;
+    }
   }
 
   &(.core-error) {
@@ -58,6 +71,7 @@
   color: @color-gray-8;
   font: inherit;
   min-height: 36px;
+  outline: none;
   padding-right: @space-4;
   padding-left: @space-4;
   width: inherit;
@@ -68,13 +82,10 @@
 
   &:focus {
     border-color: @color-gray-4;
-    outline: fade(@color-blue, 20%) solid 2px;
-    outline-offset: 1px;
   }
 
   &:active {
     border-color: @color-gray-7;
-    outline: 0;
   }
 
   &:disabled {

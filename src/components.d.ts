@@ -138,7 +138,7 @@ export namespace Components {
         /**
           * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */
-        "type"?: string | "text";
+        "type"?: string;
     }
     interface CoreLabel {
         /**
@@ -149,6 +149,14 @@ export namespace Components {
           * The id of a labelable form-related element.
          */
         "forId"?: string | null;
+        /**
+          * Displays the question mark help anchor icon on the right side of the label container.
+         */
+        "helpIcon": boolean;
+        /**
+          * Applies the provided URL to the helpIcon href.
+         */
+        "helpUrl"?: string | null;
     }
     interface CoreTextarea {
         /**
@@ -349,7 +357,7 @@ declare namespace LocalJSX {
         /**
           * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */
-        "type"?: string | "text";
+        "type"?: string;
     }
     interface CoreLabel {
         /**
@@ -360,6 +368,14 @@ declare namespace LocalJSX {
           * The id of a labelable form-related element.
          */
         "forId"?: string | null;
+        /**
+          * Displays the question mark help anchor icon on the right side of the label container.
+         */
+        "helpIcon"?: boolean;
+        /**
+          * Applies the provided URL to the helpIcon href.
+         */
+        "helpUrl"?: string | null;
     }
     interface CoreTextarea {
         /**

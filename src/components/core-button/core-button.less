@@ -3,7 +3,7 @@
 // :host targets the custom element compiled by Stencil
 :host {
   display: inline-flex;
-  font: 14px "Inter", sans-seif;
+  font: inherit;
 
   // @Prop basic variation
   &(.basic[loading]) {
@@ -24,24 +24,24 @@
       border-color: transparent;
       color: @color-white;
 
-      &:hover {
-        background: @color-blue-dark-1;
-      }
+      &:not(:disabled):not([loading]) {
+        &:hover,
+        &:active,
+        &:focus {
+          background: @color-blue-dark-1;
+          border-color: @color-blue-dark-1;
+        }
 
-      &:active,
-      &:focus {
-        background: @color-blue-dark-2;
-      }
-
-      &:active {
-        border-color: transparent;
-        box-shadow: 0 0 0 2px @color-blue-dark-2;
-        outline: 0;
+        &:active {
+          border-color: @color-blue-dark-2;
+          box-shadow: inset 0 0 0 1px @color-blue-dark-2;
+        }
       }
 
       &:disabled {
-        background: @color-gray-1;
-        color: @color-gray-5;
+        // background: @color-gray-2;
+        background: fade(@color-blue, 50%);
+        // color: @color-gray-5;
         opacity: 0.5;
       }
     }
@@ -64,23 +64,22 @@
       background: @color-gray-1;
       border-color: transparent;
 
-      &:hover {
-        background: @color-gray-2;
-      }
+      &:not(:disabled):not([loading]) {
+        &:hover,
+        &:active,
+        &:focus {
+          background: @color-gray-2;
+          border-color: @color-gray-2;
+        }
 
-      &:active,
-      &:focus {
-        background: @color-gray-3;
-      }
-
-      &:active {
-        border-color: transparent;
-        box-shadow: 0 0 0 2px @color-gray-4;
-        outline: 0;
+        &:active {
+          border-color: @color-gray-4;
+          box-shadow: inset 0 0 0 1px @color-gray-4;
+        }
       }
 
       &:disabled {
-        background: @color-gray-1;
+        background: @color-gray-2;
         color: @color-gray-5;
         opacity: 0.5;
       }
@@ -94,21 +93,25 @@
       border-color: transparent;
       color: @color-white;
 
-      &:hover,
-      &:active,
-      &:focus {
-        background: @color-green-dark-1;
-      }
+      &:not(:disabled):not([loading]) {
+        &:hover,
+        &:active,
+        &:focus {
+          background: @color-green-dark-1;
+          border-color: @color-green-dark-1;
+        }
 
-      &:active {
-        border-color: transparent;
-        box-shadow: 0 0 0 2px @color-green-dark-2;
-        outline: 0;
+        &:active {
+          border-color: @color-green-dark-2;
+          box-shadow: inset 0 0 0 1px @color-green-dark-2;
+          outline: none;
+        }
       }
 
       &:disabled {
-        background: @color-gray-1;
-        color: @color-gray-5;
+        // background: @color-gray-2;
+        background: fade(@color-green, 50%);
+        // color: @color-gray-5;
         opacity: 0.5;
       }
     }
@@ -119,7 +122,7 @@
     color: @color-white;
 
     &:active {
-      box-shadow: 0 0 0 2px @color-green;
+      box-shadow: inset 0 0 0 1px @color-green;
     }
   }
 
@@ -127,8 +130,17 @@
     background: @color-red;
     color: @color-white;
 
-    &:active {
-      box-shadow: 0 0 0 2px @color-red;
+    &:not(:disabled):not([loading]) {
+      &:hover,
+      &:active,
+      &:focus {
+        background: @color-red-dark-1;
+        border-color: @color-red-dark-1;
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px @color-red-dark-2;
+      }
     }
   }
 
@@ -136,8 +148,18 @@
     background: @color-yellow;
     color: @color-gray-8;
 
-    &:active {
-      box-shadow: 0 0 0 2px @color-yellow;
+    &:not(:disabled):not([loading]) {
+      &:hover,
+      &:active,
+      &:focus {
+        background: @color-yellow-dark-1;
+        border-color: @color-yellow-dark-1;
+      }
+
+      &:active {
+        border-color: @color-yellow-dark-2;
+        box-shadow: inset 0 0 0 1px @color-yellow-dark-2;
+      }
     }
   }
 
@@ -145,8 +167,17 @@
     background: #7f5aea;
     color: @color-white;
 
-    &:active {
-      box-shadow: 0 0 0 2px #7f5aea;
+    &:not(:disabled):not([loading]) {
+      &:hover,
+      &:active,
+      &:focus {
+        background: #6447bb;
+        border-color: #6447bb;
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px #493488;
+      }
     }
   }
 
@@ -157,21 +188,24 @@
       border-color: transparent;
       color: @color-green-dark-1;
 
-      &:hover,
-      &:active,
-      &:focus {
-        background: @color-green-light-3;
-        color: @color-green-dark-3;
-      }
+      &:not(:disabled):not([loading]) {
+        &:hover,
+        &:active,
+        &:focus {
+          background: @color-green-light-3;
+          border-color: @color-green-light-3;
+          color: @color-green-dark-3;
+        }
 
-      &:active {
-        border-color: transparent;
-        box-shadow: 0 0 0 2px @color-green-light-1;
-        outline: 0;
+        &:active {
+          border-color: @color-green-light-1;
+          box-shadow: inset 0 0 0 1px @color-green-light-1;
+          outline: none;
+        }
       }
 
       &:disabled {
-        background: @color-gray-1;
+        background: @color-gray-2;
         color: @color-gray-5;
         opacity: 0.5;
       }
@@ -183,7 +217,7 @@
     color: @color-green-dark-1;
 
     &:active {
-      box-shadow: 0 0 0 2px @color-green-light-4;
+      box-shadow: inset 0 0 0 1px @color-green-light-4;
     }
   }
 
@@ -191,8 +225,19 @@
     background: @color-red-light-4;
     color: @color-red-dark-1;
 
-    &:active {
-      box-shadow: 0 0 0 2px @color-red-light-4;
+    &:not(:disabled):not([loading]) {
+      &:hover,
+      &:active,
+      &:focus {
+        background: @color-red-light-3;
+        border-color: @color-red-light-3;
+        color: @color-red-dark-1;
+      }
+
+      &:active {
+        border-color: @color-red-light-1;
+        box-shadow: inset 0 0 0 1px @color-red-light-1;
+      }
     }
   }
 
@@ -200,8 +245,19 @@
     background: @color-yellow-light-4;
     color: @color-yellow-dark-3;
 
-    &:active {
-      box-shadow: 0 0 0 2px @color-yellow-light-4;
+    &:not(:disabled):not([loading]) {
+      &:hover,
+      &:active,
+      &:focus {
+        background: @color-yellow-light-3;
+        border-color: @color-yellow-light-3;
+        color: @color-yellow-dark-3;
+      }
+
+      &:active {
+        border-color: @color-yellow-light-1;
+        box-shadow: inset 0 0 0 1px @color-yellow-light-1;
+      }
     }
   }
 
@@ -209,8 +265,19 @@
     background: #dacdff;
     color: @color-gray-8;
 
-    &:active {
-      box-shadow: 0 0 0 2px #dacdff;
+    &:not(:disabled):not([loading]) {
+      &:hover,
+      &:active,
+      &:focus {
+        background: #ae93f9;
+        border-color: #ae93f9;
+        color: @color-gray-8;
+      }
+
+      &:active {
+        border-color: #7f5aea;
+        box-shadow: inset 0 0 0 1px #7f5aea;
+      }
     }
   }
 
@@ -248,7 +315,7 @@
 
     .button-loading-only {
       display: flex;
-      position: relative;
+      position: absolute;
       left: calc(50% - @space-2);
     }
   }
@@ -282,8 +349,8 @@
   }
 
   // @Prop button-only
-  &(.button-icon-only) .native-element {
-    padding: 8px 9px;
+  &(.icon-only) .native-element {
+    padding: 9px;
   }
 
   // @Prop circle radius
@@ -292,7 +359,7 @@
   }
 }
 
-// @Prop basic/default button styles with intentional lower specificity
+// @Prop basic (default) button styles with intentional lower specificity
 .native-element {
   background: @color-white;
   border-radius: @border-radius-md;
@@ -302,41 +369,41 @@
   color: @color-gray-8;
   display: flex;
   align-items: center;
-  font-kerning: none;
-  font-size: inherit;
+  font: inherit;
   font-weight: bold;
   max-width: 100%;
-  outline: 0;
+  outline: none;
   padding: 8px 15px 9px;
   position: relative;
   text-align: center;
   text-decoration: none;
   text-overflow: ellipsis;
   transition: background 0.12s cubic-bezier(0.47, 0, 0.75, 0.72),
-    border-color 0.12s cubic-bezier(0.47, 0, 0.75, 0.72),
+    border 0.12s cubic-bezier(0.47, 0, 0.75, 0.72),
     box-shadow 0.12s cubic-bezier(0.47, 0, 0.75, 0.72),
     color 0.12s cubic-bezier(0.47, 0, 0.75, 0.72);
   white-space: nowrap;
 
-  &:hover {
-    border-color: @color-gray-5;
-    cursor: pointer;
-  }
+  &:not(:disabled):not([loading]) {
+    &:hover {
+      border-color: @color-gray-5;
+      cursor: pointer;
+    }
 
-  &:focus {
-    border-color: @color-gray-7;
-    outline: fade(@color-blue, 20%) solid 2px;
-    outline-offset: 1px;
-  }
+    &:focus {
+      border-color: @color-gray-5;
+      outline: none;
+    }
 
-  &:active {
-    border-color: transparent;
-    box-shadow: 0 0 0 2px @color-gray-5;
-    outline: 0;
+    &:active {
+      border-color: @color-gray-5;
+      box-shadow: inset 0 0 0 1px @color-gray-5;
+      outline: none;
+    }
   }
 
   &:disabled {
-    background: @color-gray-1;
+    background: @color-gray-2;
     border-color: transparent;
     color: @color-gray-5;
     cursor: not-allowed;

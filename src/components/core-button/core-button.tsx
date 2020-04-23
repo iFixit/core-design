@@ -141,7 +141,7 @@ export class Button implements ComponentInterface {
         aria-disabled={disabled ? "true" : null}
         class={{
           "core-button": true,
-          "button-icon-only": hasIconOnly,
+          "icon-only": hasIconOnly,
           [`${variation}`]: variation !== undefined,
           [`${width}`]: width !== undefined,
           [`${size}`]: size !== undefined,
