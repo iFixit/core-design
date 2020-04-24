@@ -44,7 +44,7 @@ export class Button implements ComponentInterface {
           <slot></slot>
           <slot name="label-right">
             {this.helpurl ? (
-              <a href={this.helpurl}>
+              <a class="help-url" href={this.helpurl}>
                 <core-icon
                   slot="label-right"
                   icon="help-solid"

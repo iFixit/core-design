@@ -19,6 +19,7 @@
     <style>
       html {
         font: 14px "Inter", sans-serif;
+        font-feature-settings: "ss01" on, "ss02" on;
         margin: 5%;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -126,14 +127,12 @@
           <core-button variation="dark" status="success">Success</core-button>
           <core-button variation="dark" status="danger">Danger</core-button>
           <core-button variation="dark" status="warning">Warning</core-button>
-          <core-button variation="dark" status="alt">Alt</core-button>
         </div>
         <div class="states grid">
           <span>Status light</span>
           <core-button variation="light" status="success">Success</core-button>
           <core-button variation="light" status="danger">Danger</core-button>
           <core-button variation="light" status="warning">Warning</core-button>
-          <core-button variation="light" status="alt">Alt</core-button>
         </div>
       </div>
     </section>
@@ -183,17 +182,14 @@
             <core-button radius="circle">
               <core-icon slot="button-icon" icon="cart" color="gray-5"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="success">
-              <core-icon slot="button-icon" icon="clipboard"></core-icon>
-            </core-button>
-            <core-button radius="circle" variation="dark" status="danger">
+            <core-button radius="circle" status="danger">
               <core-icon slot="button-icon" icon="info"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="warning">
-              <core-icon slot="button-icon" icon="star"></core-icon>
+            <core-button radius="circle" status="success">
+              <core-icon slot="button-icon" icon="clipboard"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="alt">
-              <core-icon slot="button-icon" icon="toolbox"></core-icon>
+            <core-button radius="circle" status="warning">
+              <core-icon slot="button-icon" icon="star"></core-icon>
             </core-button>
           </div>
         </div>
@@ -214,17 +210,14 @@
             <core-button variation="primary" radius="circle">
               <core-icon slot="button-icon" icon="user"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="success">
-              <core-icon slot="button-icon" icon="bell"></core-icon>
-            </core-button>
-            <core-button radius="circle" variation="dark" status="danger">
+            <core-button variation="primary" radius="circle" status="danger">
               <core-icon slot="button-icon" icon="video"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="warning">
-              <core-icon slot="button-icon" icon="grid"></core-icon>
+            <core-button variation="primary" radius="circle" status="success">
+              <core-icon slot="button-icon" icon="bell"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="alt">
-              <core-icon slot="button-icon" icon="film-camera"></core-icon>
+            <core-button variation="primary" radius="circle" status="warning">
+              <core-icon slot="button-icon" icon="grid"></core-icon>
             </core-button>
           </div>
         </div>
@@ -245,17 +238,14 @@
             <core-button variation="secondary" radius="circle">
               <core-icon slot="button-icon" icon="plus-box" color="gray-5"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="success">
-              <core-icon slot="button-icon" icon="minus"></core-icon>
-            </core-button>
-            <core-button radius="circle" variation="dark" status="danger">
+            <core-button variation="secondary" radius="circle" status="danger">
               <core-icon slot="button-icon" icon="gear"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="warning">
-              <core-icon slot="button-icon" icon="mail"></core-icon>
+            <core-button variation="secondary" radius="circle" status="success">
+              <core-icon slot="button-icon" icon="minus"></core-icon>
             </core-button>
-            <core-button radius="circle" variation="dark" status="alt">
-              <core-icon slot="button-icon" icon="spinner"></core-icon>
+            <core-button variation="secondary" radius="circle" status="warning">
+              <core-icon slot="button-icon" icon="mail"></core-icon>
             </core-button>
           </div>
         </div>

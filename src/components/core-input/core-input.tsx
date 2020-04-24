@@ -24,7 +24,7 @@ export class Input implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * The large pre-defined input size and styling.
+   * Apply the large pre-defined input size and styling.
    * Use: `"large"`.
    */
   @Prop({ reflectToAttr: true }) size?: "large";

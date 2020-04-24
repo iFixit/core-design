@@ -1,4 +1,5 @@
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
 
 // :host targets the custom element compiled by Stencil
 :host {
@@ -47,6 +48,12 @@
 
     .native-element {
       border-color: @color-red-light-1;
+
+      &:focus,
+      &:active {
+        border-color: @color-red;
+        box-shadow: 0 0 0 3px fade(@color-red-light-1, 30%);
+      }
     }
   }
 
@@ -55,11 +62,23 @@
 
     .native-element {
       border-color: @color-green-light-1;
+
+      &:focus,
+      &:active {
+        border-color: @color-green;
+        box-shadow: 0 0 0 3px fade(@color-green-light-1, 30%);
+      }
     }
   }
 
   &(.core-search) .native-element {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+
+    &:focus,
+    &:active {
+      border-color: @color-gray-5;
+      box-shadow: @box-shadow;
+    }
   }
 }
 
@@ -71,6 +90,7 @@
   background: @color-white;
   border: 1px solid @color-gray-3;
   border-radius: @space-1;
+  box-shadow: 0 0 0 0 transparent;
   box-sizing: border-box;
   color: @color-gray-8;
   font: inherit;
@@ -78,18 +98,17 @@
   outline: none;
   padding-right: @space-4;
   padding-left: @space-4;
+  transition: box-shadow 0.12s ease-in-out;
   width: inherit;
 
   &::placeholder {
     color: @color-gray-4;
   }
 
-  &:focus {
-    border-color: @color-gray-4;
-  }
-
+  &:focus,
   &:active {
-    border-color: @color-gray-7;
+    border-color: @color-gray-5;
+    box-shadow: @box-shadow;
   }
 
   &:disabled {

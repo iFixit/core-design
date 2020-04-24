@@ -132,7 +132,7 @@ export namespace Components {
          */
         "required": boolean;
         /**
-          * The large pre-defined input size and styling. Use: `"large"`.
+          * Apply the large pre-defined input size and styling. Use: `"large"`.
          */
         "size"?: "large";
         /**
@@ -347,7 +347,7 @@ declare namespace LocalJSX {
          */
         "required"?: boolean;
         /**
-          * The large pre-defined input size and styling. Use: `"large"`.
+          * Apply the large pre-defined input size and styling. Use: `"large"`.
          */
         "size"?: "large";
         /**

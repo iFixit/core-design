@@ -25,12 +25,12 @@
 
 ## Slots
 
-| Slot                   | Description                                                           |
-| ---------------------- | --------------------------------------------------------------------- |
-|                        | Content is placed between the named slots if provided without a slot. |
-| `"`button-end`"`       | Content is placed to the right of the button text.                    |
-| `"`button-icon-only`"` | Should be used on an icon in a button that has no text.               |
-| `"`button-start`"`     | Content is placed to the left of the button text.                     |
+| Slot               | Description                                                           |
+| ------------------ | --------------------------------------------------------------------- |
+|                    | Content is placed between the named slots if provided without a slot. |
+| `"`button-icon`"`  | Should be used on an icon in a button that has no text.               |
+| `"`button-left`"`  | Content is placed to the left of the button text.                     |
+| `"`button-right`"` | Content is placed to the right of the button text.                    |
 
 
 ----------------------------------------------

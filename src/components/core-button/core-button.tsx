@@ -10,8 +10,8 @@ import {
 /**
  * @slot - Content is placed between the named slots if provided without a slot.
  * @slot `button-icon` - Should be used on an icon in a button that has no text.
- * @slot `button-start` - Content is placed to the left of the button text.
- * @slot `button-end` - Content is placed to the right of the button text.
+ * @slot `button-left` - Content is placed to the left of the button text.
+ * @slot `button-right` - Content is placed to the right of the button text.
  */
 
 @Component({
