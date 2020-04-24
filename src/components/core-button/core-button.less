@@ -11,7 +11,7 @@
       color: @color-gray-3;
     }
 
-    [class^="button-loading-"]::after {
+    .button-loading::after {
       border: 2px solid @color-gray-3;
       border-top-color: currentColor;
     }
@@ -52,7 +52,7 @@
       color: @color-blue-light-2;
     }
 
-    [class^="button-loading-"]::after {
+    .button-loading::after {
       border: 2px solid @color-blue-light-2;
       border-top-color: currentColor;
     }
@@ -287,7 +287,7 @@
       cursor: not-allowed;
     }
 
-    [class^="button-loading-"]::after {
+    .button-loading::after {
       content: "";
       border-radius: 50%;
       border: 2px solid @color-gray-2;
@@ -298,14 +298,15 @@
     }
   }
 
-  &([loading="right"]) .button-loading-right {
+  &([loading="right"]) .button-loading {
     display: flex;
     margin-left: @space-2;
   }
 
-  &([loading="left"]) .button-loading-left {
+  &([loading="left"]) .button-loading {
     display: flex;
     margin-right: @space-2;
+    order: -1;
   }
 
   &([loading="only"]) {
@@ -313,7 +314,7 @@
       visibility: hidden;
     }
 
-    .button-loading-only {
+    .button-loading {
       display: flex;
       position: absolute;
       left: calc(50% - @space-2);
@@ -348,7 +349,7 @@
     width: 100%;
   }
 
-  // @Prop button-only
+  // @Prop icon-only
   &(.icon-only) .native-element {
     padding: 9px;
   }
@@ -367,8 +368,6 @@
   box-shadow: 0 0 0 0 transparent;
   box-sizing: border-box;
   color: @color-gray-8;
-  display: flex;
-  align-items: center;
   font: inherit;
   font-weight: bold;
   max-width: 100%;
@@ -410,7 +409,12 @@
     opacity: 0.5;
   }
 
-  [class^="button-loading-"] {
+  .button-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .button-loading {
     display: none;
   }
 }

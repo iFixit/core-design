@@ -10,7 +10,19 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  &(.block) .native-element {
-    margin-bottom: @space-2;
+  &(.block) {
+    width: 100%;
+
+    .native-element {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: @space-2;
+      width: inherit;
+    }
+
+    a {
+      color: @color-gray-3;
+    }
   }
 }

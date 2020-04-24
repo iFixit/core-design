@@ -68,7 +68,7 @@
     </style>
   </head>
   <body>
-    <section class="button">
+    <section class="button-states">
       <h2>Button States</h2>
       <div class="grid">
         <div class="states grid">
@@ -103,7 +103,7 @@
         </div>
       </div>
     </section>
-    <section class="button">
+    <section class="button-states">
       <div class="grid">
         <div class="states grid">
           <span>Loading basic</span>
@@ -117,15 +117,19 @@
           <core-button variation="primary" loading="left" class="extend-2">Submitting</core-button>
           <core-button variation="primary" loading="only" class="extend-2">Submitting</core-button>
         </div>
+      </div>
+    </section>
+    <section class="button-states">
+      <div class="grid">
         <div class="states grid">
-          <span>Color dark</span>
+          <span>Status dark</span>
           <core-button variation="dark" status="success">Success</core-button>
           <core-button variation="dark" status="danger">Danger</core-button>
           <core-button variation="dark" status="warning">Warning</core-button>
           <core-button variation="dark" status="alt">Alt</core-button>
         </div>
         <div class="states grid">
-          <span>Color light</span>
+          <span>Status light</span>
           <core-button variation="light" status="success">Success</core-button>
           <core-button variation="light" status="danger">Danger</core-button>
           <core-button variation="light" status="warning">Warning</core-button>
@@ -133,7 +137,7 @@
         </div>
       </div>
     </section>
-    <section class="button">
+    <section class="button-sizes">
       <h2>Button Sizes</h2>
       <div class="grid">
         <div class="sizes grid">
@@ -159,7 +163,7 @@
         </div>
       </div>
     </section>
-    <section class="button">
+    <section class="icon-buttons">
       <h2>Icon Buttons</h2>
       <div class="grid">
         <div class="icon grid">
@@ -169,95 +173,95 @@
             Button
           </core-button>
           <core-button>
-            <core-icon slot="button-right" icon="heart" color="gray-5"></core-icon>
+            <core-icon slot="button-right" icon="link" color="gray-5"></core-icon>
             Button
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button>
-              <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+              <core-icon slot="button-icon" icon="menu" color="gray-5"></core-icon>
             </core-button>
             <core-button radius="circle">
-              <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+              <core-icon slot="button-icon" icon="cart" color="gray-5"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="success">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="clipboard"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="danger">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="info"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="warning">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="star"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="alt">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="toolbox"></core-icon>
             </core-button>
           </div>
         </div>
         <div class="icon grid">
           <span>Primary</span>
           <core-button variation="primary">
-            <core-icon slot="button-left" icon="heart"></core-icon>
+            <core-icon slot="button-left" icon="layers"></core-icon>
             Button
           </core-button>
           <core-button variation="primary">
-            <core-icon slot="button-right" icon="heart"></core-icon>
+            <core-icon slot="button-right" icon="pencil"></core-icon>
             Button
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button variation="primary">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="undo"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="user"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="success">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="bell"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="danger">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="video"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="warning">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="grid"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="alt">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="film-camera"></core-icon>
             </core-button>
           </div>
         </div>
         <div class="icon grid">
           <span>Secondary</span>
           <core-button variation="secondary">
-            <core-icon slot="button-left" icon="heart" color="gray-5"></core-icon>
+            <core-icon slot="button-left" icon="download" color="gray-5"></core-icon>
             Button
           </core-button>
           <core-button variation="secondary">
-            <core-icon slot="button-right" icon="heart" color="gray-5"></core-icon>
+            <core-icon slot="button-right" icon="columns" color="gray-5"></core-icon>
             Button
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button variation="secondary">
-              <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+              <core-icon slot="button-icon" icon="hourglass" color="gray-5"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle">
-              <core-icon slot="button-icon-only" icon="heart" color="gray-5"></core-icon>
+              <core-icon slot="button-icon" icon="plus-box" color="gray-5"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="success">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="minus"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="danger">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="gear"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="warning">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="mail"></core-icon>
             </core-button>
             <core-button radius="circle" variation="dark" status="alt">
-              <core-icon slot="button-icon-only" icon="heart"></core-icon>
+              <core-icon slot="button-icon" icon="spinner"></core-icon>
             </core-button>
           </div>
         </div>
       </div>
     </section>
-    <section class="input">
+    <section class="text-inputs">
       <h2>Text Inputs</h2>
         <div class="grid">
           <div class="text grid">
@@ -271,6 +275,10 @@
                 <core-label forId="field-label">Field Label</core-label>
                 <core-input name="field-label" placeholder="Placeholder"></core-input>
               </div>
+              <div>
+                <core-label forId="help-field-label" helpurl="https://www.dozuki.com/">Help Field Label</core-label>
+                <core-input name="help-field-label" placeholder="Placeholder"></core-input>
+              </div>
             </div>
             <div class="textarea">
               <core-textarea placeholder="Text area" rows="6" cols="50"></core-textarea>
@@ -279,8 +287,8 @@
         </div>
       </div>
     </section>
-    <section class="input">
-      <h2>Search</h2>
+    <section class="search-input">
+      <h2>Search Inputs</h2>
       <div class="grid">
         <div class="search grid">
           <div class="row">
@@ -289,8 +297,8 @@
         </div>
       </div>
     </section>
-    <section class="input">
-      <h2>Checkboxes</h2>
+    <section class="checkbox-input">
+      <h2>Checkbox Inputs</h2>
       <div class="grid">
         <div class="checkbox grid">
           <div>

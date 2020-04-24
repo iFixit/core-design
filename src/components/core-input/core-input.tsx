@@ -130,6 +130,7 @@ export class Input implements ComponentInterface {
           {this.clearInput && !this.disabled && (
             <button type="button" class="input-clear-icon" tabindex="-1" />
           )}
+          <slot name="input-right"></slot>
         </div>
       </Host>
     );

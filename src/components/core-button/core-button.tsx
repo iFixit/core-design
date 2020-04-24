@@ -9,7 +9,7 @@ import {
 
 /**
  * @slot - Content is placed between the named slots if provided without a slot.
- * @slot `button-icon-only` - Should be used on an icon in a button that has no text.
+ * @slot `button-icon` - Should be used on an icon in a button that has no text.
  * @slot `button-start` - Content is placed to the left of the button text.
  * @slot `button-end` - Content is placed to the right of the button text.
  */
@@ -108,7 +108,7 @@ export class Button implements ComponentInterface {
   @Prop({ reflectToAttr: true }) loading?: "left" | "right" | "only";
 
   private get hasIconOnly() {
-    return !!this.el.querySelector('core-icon[slot="button-icon-only"]');
+    return !!this.el.querySelector('core-icon[slot="button-icon"]');
   }
 
   render() {
@@ -146,7 +146,7 @@ export class Button implements ComponentInterface {
           [`${width}`]: width !== undefined,
           [`${size}`]: size !== undefined,
           [`${status}`]: status !== undefined,
-          [`disabled`]: disabled,
+          [`${disabled}`]: disabled,
         }}
       >
         <TagType
@@ -155,13 +155,13 @@ export class Button implements ComponentInterface {
           disabled={disabled}
           loading={loading}
         >
-          <div class="button-loading-only"></div>
-          <slot name="button-icon-only"></slot>
-          <div class="button-loading-left"></div>
-          <slot name="button-left"></slot>
-          <slot></slot>
-          <slot name="button-right"></slot>
-          <div class="button-loading-right"></div>
+          <div class="button-inner">
+            <slot name="button-icon"></slot>
+            <slot name="button-left"></slot>
+            <slot></slot>
+            <slot name="button-right"></slot>
+            <div class="button-loading"></div>
+          </div>
         </TagType>
       </Host>
     );

@@ -18,8 +18,12 @@
   }
 
   // @Prop type text (default)
-  &([type="text"]) .native-element {
-    min-width: 225px;
+  &([type="text"]) {
+    width: 100%;
+
+    .native-element {
+      width: inherit;
+    }
   }
 
   // @Prop type checkbox

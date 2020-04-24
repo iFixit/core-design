@@ -61,7 +61,7 @@ export class Icon {
   @Prop() lazy = false;
 
   /**
-   * Optional fill color of the icon.
+   * Optional color of the icon.
    * Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    * (e.g. `color="red"`, `color="gray-2"`, etc).
    */

@@ -70,7 +70,7 @@ export namespace Components {
          */
         "ariaLabel"?: string;
         /**
-          * Optional fill color of the icon. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+          * Optional color of the icon. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
         "color"?: string;
         /**
@@ -150,13 +150,9 @@ export namespace Components {
          */
         "forId"?: string | null;
         /**
-          * Displays the question mark help anchor icon on the right side of the label container.
-         */
-        "helpIcon": boolean;
-        /**
           * Applies the provided URL to the helpIcon href.
          */
-        "helpUrl"?: string | null;
+        "helpurl"?: string | null;
     }
     interface CoreTextarea {
         /**
@@ -293,7 +289,7 @@ declare namespace LocalJSX {
          */
         "ariaLabel"?: string;
         /**
-          * Optional fill color of the icon. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+          * Optional color of the icon. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
         "color"?: string;
         /**
@@ -369,13 +365,9 @@ declare namespace LocalJSX {
          */
         "forId"?: string | null;
         /**
-          * Displays the question mark help anchor icon on the right side of the label container.
-         */
-        "helpIcon"?: boolean;
-        /**
           * Applies the provided URL to the helpIcon href.
          */
-        "helpUrl"?: string | null;
+        "helpurl"?: string | null;
     }
     interface CoreTextarea {
         /**

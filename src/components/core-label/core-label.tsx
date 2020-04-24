@@ -21,15 +21,9 @@ export class Button implements ComponentInterface {
   @Prop() display?: "inline" | "block" = "block";
 
   /**
-   * Displays the question mark help anchor icon on the right side of the
-   * label container.
-   */
-  @Prop() helpIcon = false;
-
-  /**
    * Applies the provided URL to the helpIcon href.
    */
-  @Prop() helpUrl?: string | null;
+  @Prop() helpurl?: string | null;
 
   /**
    * The id of a labelable form-related element.
@@ -47,12 +41,15 @@ export class Button implements ComponentInterface {
         }}
       >
         <label class="native-element">
-          <slot name="label-left"></slot>
           <slot></slot>
           <slot name="label-right">
-            {this.helpIcon ? (
-              <a href={this.helpUrl || ""}>
-                <core-icon slot="label-right" icon="help"></core-icon>
+            {this.helpurl ? (
+              <a href={this.helpurl}>
+                <core-icon
+                  slot="label-right"
+                  icon="help-solid"
+                  color="gray-3"
+                ></core-icon>
               </a>
             ) : undefined}
           </slot>
