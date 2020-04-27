@@ -6,6 +6,29 @@
   font: inherit;
 
   // @Prop basic variation
+  &(.basic) {
+    .native-element {
+      background: @color-white;
+      box-shadow: inset 0 0 0 1px @color-gray-3;
+      color: @color-gray-8;
+
+      &:not(:disabled):not([loading]) {
+        &:hover {
+          box-shadow: inset 0 0 0 1px @color-gray-5;
+        }
+
+        &:active {
+          box-shadow: inset 0 0 0 2px @color-gray-5;
+        }
+      }
+
+      &:disabled {
+        background: @color-gray-2;
+        color: @color-gray-5;
+      }
+    }
+  }
+
   &(.basic[loading]) {
     slot {
       color: @color-gray-3;
@@ -21,28 +44,23 @@
   &(.primary) {
     .native-element {
       background: @color-blue;
-      border-color: transparent;
       color: @color-white;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-blue inset;
+
+        &:hover {
           background: @color-blue-dark-1;
-          border-color: @color-blue-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          border-color: @color-blue-dark-2;
-          box-shadow: inset 0 0 0 1px @color-blue-dark-2;
+          box-shadow: 0 0 0 2px @color-blue-dark-2 inset;
         }
       }
 
       &:disabled {
-        // background: @color-gray-2;
         background: fade(@color-blue, 50%);
-        // color: @color-gray-5;
-        opacity: 0.5;
       }
     }
   }
@@ -62,64 +80,50 @@
   &(.secondary) {
     .native-element {
       background: @color-gray-1;
-      border-color: transparent;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-gray-1 inset;
+
+        &:hover {
           background: @color-gray-2;
-          border-color: @color-gray-2;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          border-color: @color-gray-4;
-          box-shadow: inset 0 0 0 1px @color-gray-4;
+          box-shadow: 0 0 0 2px @color-gray-4 inset;
         }
       }
 
       &:disabled {
         background: @color-gray-2;
         color: @color-gray-5;
-        opacity: 0.5;
       }
     }
   }
 
   // @Prop dark variation
-  &(.dark) {
+  &(.dark),
+  &(.dark.success) {
     .native-element {
       background: @color-green;
-      border-color: transparent;
       color: @color-white;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-green inset;
+
+        &:hover {
           background: @color-green-dark-1;
-          border-color: @color-green-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          border-color: @color-green-dark-2;
-          box-shadow: inset 0 0 0 1px @color-green-dark-2;
-          outline: none;
+          box-shadow: 0 0 0 2px @color-green-dark-2 inset;
         }
       }
 
       &:disabled {
-        // background: @color-gray-2;
         background: fade(@color-green, 50%);
-        // color: @color-gray-5;
-        opacity: 0.5;
       }
-    }
-  }
-
-  &(.dark.success) {
-    .native-element:active {
-      box-shadow: inset 0 0 0 1px @color-green;
     }
   }
 
@@ -128,15 +132,15 @@
       background: @color-red;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-red inset;
+
+        &:hover {
           background: @color-red-dark-1;
-          border-color: @color-red-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          box-shadow: inset 0 0 0 1px @color-red-dark-2;
+          box-shadow: 0 0 0 2px @color-red-dark-2 inset;
         }
       }
     }
@@ -148,77 +152,43 @@
       color: @color-gray-8;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-yellow inset;
+
+        &:hover {
           background: @color-yellow-dark-1;
-          border-color: @color-yellow-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          border-color: @color-yellow-dark-2;
-          box-shadow: inset 0 0 0 1px @color-yellow-dark-2;
-        }
-      }
-    }
-  }
-
-  &(.dark.alt) {
-    .native-element {
-      background: #7f5aea;
-
-      &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
-          background: #6447bb;
-          border-color: #6447bb;
-        }
-
-        &:active {
-          box-shadow: inset 0 0 0 1px #493488;
+          box-shadow: 0 0 0 2px @color-yellow-dark-2 inset;
         }
       }
     }
   }
 
   // @Prop light variation
-  &(.light) {
+  &(.light),
+  &(.light.success) {
     .native-element {
       background: @color-green-light-4;
-      border-color: transparent;
       color: @color-green-dark-1;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-green-light-4 inset;
+
+        &:hover {
           background: @color-green-light-3;
-          border-color: @color-green-light-3;
-          color: @color-green-dark-3;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          border-color: @color-green-light-1;
-          box-shadow: inset 0 0 0 1px @color-green-light-1;
-          outline: none;
+          box-shadow: 0 0 0 2px @color-green-light-1 inset;
         }
       }
 
       &:disabled {
         background: @color-gray-2;
         color: @color-gray-5;
-        opacity: 0.5;
-      }
-    }
-  }
-
-  &(.light.success) {
-    .native-element {
-      background: @color-green-light-4;
-
-      &:active {
-        box-shadow: inset 0 0 0 1px @color-green-light-4;
       }
     }
   }
@@ -229,17 +199,15 @@
       color: @color-red-dark-1;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-red-light-4 inset;
+
+        &:hover {
           background: @color-red-light-3;
-          border-color: @color-red-light-3;
-          color: @color-red-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          border-color: @color-red-light-1;
-          box-shadow: inset 0 0 0 1px @color-red-light-1;
+          box-shadow: 0 0 0 2px @color-red-light-1 inset;
         }
       }
     }
@@ -251,53 +219,106 @@
       color: @color-yellow-dark-3;
 
       &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
+        box-shadow: 0 0 0 1px @color-yellow-light-4 inset;
+
+        &:hover {
           background: @color-yellow-light-3;
-          border-color: @color-yellow-light-3;
-          color: @color-yellow-dark-3;
+          box-shadow: 0 0 0 1px transparent inset;
         }
 
         &:active {
-          border-color: @color-yellow-light-1;
-          box-shadow: inset 0 0 0 1px @color-yellow-light-1;
-        }
-      }
-    }
-  }
-
-  &(.light.alt) {
-    .native-element {
-      background: #dacdff;
-      color: @color-gray-8;
-
-      &:not(:disabled):not([loading]) {
-        &:hover,
-        &:active,
-        &:focus {
-          background: #ae93f9;
-          border-color: #ae93f9;
-          color: @color-gray-8;
-        }
-
-        &:active {
-          border-color: #7f5aea;
-          box-shadow: inset 0 0 0 1px #7f5aea;
+          box-shadow: 0 0 0 2px @color-yellow-light-1 inset;
         }
       }
     }
   }
 
   //@Prop status success
-  &(.success.icon-only) {
+  &(.success) {
+    .native-element {
+      background: @color-green;
+
+      &:not(:disabled):not([loading]) {
+        box-shadow: 0 0 0 1px @color-green inset;
+
+        &:hover {
+          background: @color-green-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
+        }
+
+        &:active {
+          box-shadow: 0 0 0 2px @color-green-dark-2 inset;
+        }
+      }
+
+      &:disabled {
+        background: fade(@color-green, 50%);
+      }
+    }
+  }
+
+  //@Prop status danger
+  &(.danger) {
+    .native-element {
+      background: @color-red;
+
+      &:not(:disabled):not([loading]) {
+        box-shadow: 0 0 0 1px @color-red inset;
+
+        &:hover {
+          background: @color-red-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
+        }
+
+        &:active {
+          box-shadow: 0 0 0 2px @color-red-dark-2 inset;
+        }
+      }
+
+      &:disabled {
+        background: fade(@color-red, 50%);
+      }
+    }
+  }
+
+  //@Prop status warning
+  &(.warning) {
+    .native-element {
+      background: @color-yellow;
+
+      &:not(:disabled):not([loading]) {
+        box-shadow: 0 0 0 1px @color-yellow inset;
+
+        &:hover {
+          background: @color-yellow-dark-1;
+          box-shadow: 0 0 0 1px transparent inset;
+        }
+
+        &:active {
+          box-shadow: 0 0 0 2px @color-yellow-dark-2 inset;
+        }
+      }
+
+      &:disabled {
+        background: fade(@color-yellow, 50%);
+      }
+    }
+  }
+
+  //@Prop status success icon-only
+  &(.success.default.icon-only) {
     .native-element {
       background: @color-white;
-      border-color: @color-green-light-2;
+      box-shadow: 0 0 0 1px @color-green-light-2 inset;
       color: @color-green;
 
       &:hover {
-        border-color: @color-green;
+        background: @color-white;
+        box-shadow: 0 0 0 1px @color-green inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-green-dark-1 inset;
       }
     }
   }
@@ -305,12 +326,16 @@
   &(.success.primary.icon-only) {
     .native-element {
       background: @color-green;
-      border-color: @color-green;
+      box-shadow: 0 0 0 1px @color-green inset;
       color: @color-white;
 
       &:hover {
         background: @color-green-dark-1;
-        border-color: transparent;
+        box-shadow: 0 0 0 1px transparent inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-green-dark-2 inset;
       }
     }
   }
@@ -319,23 +344,33 @@
     .native-element {
       background: @color-green-light-4;
       border-color: @color-green-light-4;
+      box-shadow: 0 0 0 1px transparent inset;
 
       &:hover {
         background: @color-green-light-3;
-        border-color: transparent;
+        box-shadow: 0 0 0 1px transparent inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-green-light-2 inset;
       }
     }
   }
 
-  //@Prop status danger
-  &(.danger.icon-only) {
+  //@Prop status danger icon-only
+  &(.danger.default.icon-only) {
     .native-element {
       background: @color-white;
-      border-color: @color-red-light-2;
+      box-shadow: 0 0 0 1px @color-red-light-2 inset;
       color: @color-red;
 
       &:hover {
-        border-color: @color-red;
+        background: @color-white;
+        box-shadow: 0 0 0 1px @color-red inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-red-dark-1 inset;
       }
     }
   }
@@ -343,12 +378,16 @@
   &(.danger.primary.icon-only) {
     .native-element {
       background: @color-red;
-      border-color: @color-red;
+      box-shadow: 0 0 0 1px @color-red inset;
       color: @color-white;
 
       &:hover {
         background: @color-red-dark-1;
-        border-color: transparent;
+        box-shadow: 0 0 0 1px transparent inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-red-dark-2 inset;
       }
     }
   }
@@ -357,23 +396,33 @@
     .native-element {
       background: @color-red-light-4;
       border-color: @color-red-light-4;
+      box-shadow: 0 0 0 1px transparent inset;
 
       &:hover {
         background: @color-red-light-3;
-        border-color: transparent;
+        box-shadow: 0 0 0 1px transparent inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-red-light-2 inset;
       }
     }
   }
 
-  //@Prop status warning
-  &(.warning.icon-only) {
+  //@Prop status warning icon-only
+  &(.warning.default.icon-only) {
     .native-element {
       background: @color-white;
-      border-color: @color-yellow-light-2;
+      box-shadow: 0 0 0 1px @color-yellow-light-2 inset;
       color: @color-yellow-dark-3;
 
       &:hover {
-        border-color: @color-yellow;
+        background: @color-white;
+        box-shadow: 0 0 0 1px @color-yellow inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-yellow-dark-1 inset;
       }
     }
   }
@@ -381,12 +430,16 @@
   &(.warning.primary.icon-only) {
     .native-element {
       background: @color-yellow;
-      border-color: @color-yellow;
+      box-shadow: 0 0 0 1px @color-yellow inset;
       color: @color-gray-8;
 
       &:hover {
         background: @color-yellow-dark-1;
-        border-color: transparent;
+        box-shadow: 0 0 0 1px transparent inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-yellow-dark-2 inset;
       }
     }
   }
@@ -395,50 +448,18 @@
     .native-element {
       background: @color-yellow-light-4;
       border-color: @color-yellow-light-4;
+      box-shadow: 0 0 0 1px transparent inset;
 
       &:hover {
         background: @color-yellow-light-3;
-        border-color: transparent;
+        box-shadow: 0 0 0 1px transparent inset;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-yellow-light-2 inset;
       }
     }
   }
-
-  //@Prop status alt (WIP)
-  // &(.alt.icon-only) {
-  //   .native-element {
-  //     background: @color-white;
-  //     border-color: @color-lavendar-light-2;
-  //     color: @color-lavendar-dark-3;
-
-  //     &:hover {
-  //       border-color: @color-lavendar;
-  //     }
-  //   }
-  // }
-
-  // &(.alt.primary.icon-only) {
-  //   .native-element {
-  //     background: @color-lavendar;
-  //     color: @color-gray-8;
-
-  //     &:hover {
-  //       background: @color-lavendar-dark-1;
-  //       border-color: @color-lavendar-dark-1;
-  //     }
-  //   }
-  // }
-
-  // &(.alt.secondary.icon-only) {
-  //   .native-element {
-  //     background: @color-lavendar-light-4;
-  //     border-color: @color-lavendar-light-4;
-
-  //     &:hover {
-  //       background: @color-lavendar-light-3;
-  //       border-color: transparent;
-  //     }
-  //   }
-  // }
 
   // @Prop loading
   &([loading]) {
@@ -488,7 +509,7 @@
   // @Prop small size
   ([size="small"]) .native-element {
     font-weight: normal;
-    padding: 5px 12px 6px;
+    padding: 7px 12px;
   }
 
   // @Prop large size
@@ -510,7 +531,7 @@
 
   // @Prop icon-only
   &(.icon-only) .native-element {
-    padding: 9px;
+    padding: 10px;
   }
 
   // @Prop circle radius
@@ -521,47 +542,30 @@
 
 // @Prop basic (default) button styles with intentional lower specificity
 .native-element {
-  background: @color-white;
   border-radius: @border-radius-md;
-  border: 1px solid @color-gray-3;
-  box-shadow: 0 0 0 0 transparent;
+  border: 0;
   box-sizing: border-box;
-  color: @color-gray-8;
   font: inherit;
   font-weight: bold;
   max-width: 100%;
   outline: none;
-  padding: 9px 15px;
+  padding: 10px 15px;
   position: relative;
   text-align: center;
   text-decoration: none;
   text-overflow: ellipsis;
-  transition: background 0.12s ease-in-out, border 0.12s ease-in-out,
-    box-shadow 0.12s ease-in-out, color 0.12s ease-in-out;
+  transition: background 0.12s ease-in-out, box-shadow 0.12s ease-in-out,
+    color 0.12s ease-in-out;
   white-space: nowrap;
 
   &:not(:disabled):not([loading]) {
     &:hover {
-      border-color: @color-gray-5;
       cursor: pointer;
-    }
-
-    &:focus {
-      border-color: @color-gray-5;
-      outline: none;
-    }
-
-    &:active {
-      border-color: @color-gray-5;
-      box-shadow: inset 0 0 0 1px @color-gray-5;
-      outline: none;
     }
   }
 
   &:disabled {
-    background: @color-gray-2;
-    border-color: transparent;
-    color: @color-gray-5;
+    box-shadow: 0 0 0 0 transparent inset;
     cursor: not-allowed;
     opacity: 0.5;
   }
