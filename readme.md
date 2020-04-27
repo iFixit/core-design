@@ -62,12 +62,6 @@ To use this component, just use it like any other HTML element:
 <core-component first="Stencil" last="JS"></core-component>
 ```
 
-## Naming Components
-
-When creating new component tags, use the `core-` prefix.
-
-For example: `core-button`, `core-icon`, etc.
-
 ## Hosting the app
 
 Stencil components run directly in the browser through script includes just like normal Custom Elements, and run by using the tag just like any other HTML component:
@@ -87,6 +81,12 @@ Here's an example `index.html` file that runs a Stencil app:
 </html>
 ```
 
+## Naming Components
+
+When creating new component tags, use the `core-` prefix and kebab-case.
+
+For example: `core-button`, `core-icon`, etc. Custom Elements must contain a dashed name so they do not collide with existing html element names.
+
 ## API
 
 The API for Stencil closely mirrors the API for Custom Elements v1.
@@ -100,6 +100,154 @@ The API for Stencil closely mirrors the API for Custom Elements v1.
 | `@Prop()`      | Creates a property that will exist on the element and be data-bound to this component. |
 | `@State()`     | Creates a local state variable that will not be placed on the element.                 |
 | `@Method()`    | Expose specific methods to be publicly accessible.                                     |
+
+## High Level Component Example
+
+```tsx
+@Component({
+  tag: "ion-something",
+  styleUrls: {
+    ios: "something.ios.css",
+    md: "something.md.css",
+    wp: "something.wp.css",
+  },
+})
+export class Something {
+  /**
+   * 1. Own Properties
+   * Always set the type if a default value has not
+   * been set. If a default value is being set, then type
+   * is already inferred. List the own properties in
+   * alphabetical order. Note that because these properties
+   * do not have the @Prop() decorator, they will not be exposed
+   * publicly on the host element, but only used internally.
+   */
+  num: number;
+  someText = "default";
+
+  /**
+   * 2. Reference to host HTML element.
+   * Inlined decorator
+   */
+  @Element() el: HTMLElement;
+
+  /**
+   * 3. State() variables
+   * Inlined decorator, alphabetical order.
+   */
+  @State() isValidated: boolean;
+  @State() status = 0;
+
+  /**
+   * 4. Public Property API
+   * Inlined decorator, alphabetical order. These are
+   * different than "own properties" in that public props
+   * are exposed as properties and attributes on the host element.
+   * Requires JSDocs for public API documentation.
+   */
+  @Prop() content: string;
+  @Prop() enabled: boolean;
+  @Prop() menuId: string;
+  @Prop() type = "overlay";
+
+  /**
+   * Prop lifecycle events SHOULD go just behind the Prop they listen to.
+   * This makes sense since both statements are strongly connected.
+   * - If renaming the instance variable name you must also update the name in @Watch()
+   * - Code is easier to follow and maintain.
+   */
+  @Prop() swipeEnabled = true;
+
+  @Watch("swipeEnabled")
+  swipeEnabledChanged(newSwipeEnabled: boolean, oldSwipeEnabled: boolean) {
+    this.updateState();
+  }
+
+  /**
+   * 5. Events section
+   * Inlined decorator, alphabetical order.
+   * Requires JSDocs for public API documentation.
+   */
+  @Event() ionClose: EventEmitter;
+  @Event() ionDrag: EventEmitter;
+  @Event() ionOpen: EventEmitter;
+
+  /**
+   * 6. Component lifecycle events
+   * Ordered by their natural call order, for example
+   * WillLoad should go before DidLoad.
+   */
+  componentWillLoad() {}
+  componentDidLoad() {}
+  componentWillUpdate() {}
+  componentDidUpdate() {}
+  componentDidUnload() {}
+
+  /**
+   * 7. Listeners
+   * It is ok to place them in a different location
+   * if makes more sense in the context. Recommend
+   * starting a listener method with "on".
+   * Always use two lines.
+   */
+  @Listen("click", { enabled: false })
+  onClick(ev: UIEvent) {
+    console.log("hi!");
+  }
+
+  /**
+   * 8. Public methods API
+   * These methods are exposed on the host element.
+   * Always use two lines.
+   * Public Methods must be async.
+   * Requires JSDocs for public API documentation.
+   */
+  @Method()
+  async open(): Promise<boolean> {
+    // ...
+    return true;
+  }
+
+  @Method()
+  async close(): Promise<void> {
+    // ...
+  }
+
+  /**
+   * 9. Local methods
+   * Internal business logic. These methods cannot be
+   * called from the host element.
+   */
+  prepareAnimation(): Promise<void> {
+    // ...
+  }
+
+  updateState() {
+    // ...
+  }
+
+  /**
+   * 10. render() function
+   * Always the last one in the class.
+   */
+  render() {
+    return (
+      <Host
+        attribute="navigation"
+        side={this.isRightSide ? "right" : "left"}
+        type={this.type}
+        class={{
+          "something-is-animating": this.isAnimating,
+        }}
+      >
+        <div class="menu-inner page-inner">
+          <slot></slot>
+        </div>
+      </Host>
+    );
+  }
+}
+```
 
 ## Browser Support
 
