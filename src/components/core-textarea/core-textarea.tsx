@@ -22,6 +22,11 @@ export class Textarea implements ComponentInterface {
   @State() hasFocus = false;
 
   /**
+   * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
+   */
+  @Prop() cols?: number;
+
+  /**
    * If `true`, the user cannot interact with the textarea.
    */
   @Prop() disabled = false;
@@ -35,11 +40,6 @@ export class Textarea implements ComponentInterface {
    * If `true`, the user must fill in a value before submitting a form.
    */
   @Prop() required = false;
-
-  /**
-   * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
-   */
-  @Prop() cols?: number;
 
   /**
    * The number of visible text lines for the control.

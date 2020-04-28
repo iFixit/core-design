@@ -31,14 +31,11 @@ export class Icon {
   @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
 
   /**
-   * Specifies which icon to use from `src/core-icons`.
+   * Optional color of the icon.
+   * Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * (e.g. `color="red"`, `color="gray-2"`, etc).
    */
-  @Prop() name?: string;
-
-  /**
-   * Specifies the exact `src` of an SVG file to use.
-   */
-  @Prop() src?: string;
+  @Prop() color?: string;
 
   /**
    * A combination of both `name` and `src`. If a `src` url is detected
@@ -48,6 +45,17 @@ export class Icon {
   @Prop() icon?: any;
 
   /**
+   * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
+   * Default, `false`.
+   */
+  @Prop() lazy = false;
+
+  /**
+   * Specifies which icon to use from `src/core-icons`.
+   */
+  @Prop() name?: string;
+
+  /**
    * The size of the icon.
    * Available options are: `"16"` and `"24"`.
    * Default, `16`.
@@ -55,17 +63,9 @@ export class Icon {
   @Prop() size?: "16" | "24" = "16";
 
   /**
-   * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
-   * Default, `false`.
+   * Specifies the exact `src` of an SVG file to use.
    */
-  @Prop() lazy = false;
-
-  /**
-   * Optional color of the icon.
-   * Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
-   * (e.g. `color="red"`, `color="gray-2"`, etc).
-   */
-  @Prop() color?: string;
+  @Prop() src?: string;
 
   connectedCallback() {
     // purposely do not return the promise here because loading

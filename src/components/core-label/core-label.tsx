@@ -21,14 +21,14 @@ export class Button implements ComponentInterface {
   @Prop() display?: "inline" | "block" = "block";
 
   /**
-   * Applies the provided URL to the helpIcon href.
-   */
-  @Prop() helpurl?: string | null;
-
-  /**
    * The id of a labelable form-related element.
    */
   @Prop() forId?: string | null;
+
+  /**
+   * Applies the provided URL to the helpIcon href.
+   */
+  @Prop() helpurl?: string | null;
 
   render() {
     const { display, forId } = this;

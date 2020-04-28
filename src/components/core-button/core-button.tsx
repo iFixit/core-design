@@ -23,32 +23,15 @@ export class Button implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * The type of element.
-   */
-  @Prop({ mutable: true }) elementType = "button";
-
-  /**
-   * The button variation.
-   */
-  @Prop() variation?: "basic" | "primary" | "secondary" | "dark" | "light" =
-    "basic";
-
-  /**
    * If `true`, the user cannot interact with the button.
    */
   @Prop({ reflectToAttr: true }) disabled = false;
 
   /**
-   * Set to "full" for a full-width button without border-radius or
-   *  borders or to "block"` for a 100% width "block style" button.
+   * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
    */
-  @Prop() width?: "full" | "block" | undefined;
-
-  /**
-   * Set to the value of border-radius applied. Default is 4px.
-   */
-  @Prop() radius?: "0" | "2px" | "4px" | "8px" | "16px" | "32px" | "circle" =
-    "4px";
+  @Prop() display?: "block" | "inline" | "inline-flex" | "none" | "flex" =
+    "flex";
 
   /**
    * This attribute instructs browsers to download a URL instead of navigating to
@@ -59,10 +42,27 @@ export class Button implements ComponentInterface {
   @Prop() download: string | undefined;
 
   /**
+   * The type of element.
+   */
+  @Prop({ mutable: true }) elementType = "button";
+
+  /**
    * Contains a URL or a URL fragment that the hyperlink points to.
    * If this property is set, an anchor tag will be rendered instead of a button.
    */
   @Prop() href: string | undefined;
+
+  /**
+   * Specifies the loading animation location if applied.
+   * Use: `"left"`, `"right"`, or `"only"`.
+   */
+  @Prop({ reflectToAttr: true }) loading?: "left" | "right" | "only";
+
+  /**
+   * Set to the value of border-radius applied. Default is 4px.
+   */
+  @Prop() radius?: "0" | "2px" | "4px" | "8px" | "16px" | "32px" | "circle" =
+    "4px";
 
   /**
    * Specifies the relationship of the target object to the link object.
@@ -78,6 +78,12 @@ export class Button implements ComponentInterface {
   @Prop() size?: "small" | "default" | "large" = "default";
 
   /**
+   * The status classing of the button.
+   * Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+   */
+  @Prop() status: "success" | "danger" | "warning" | "alt";
+
+  /**
    * Specifies where to display the linked URL.
    * Only applies when an `href` is provided.
    * Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
@@ -90,22 +96,16 @@ export class Button implements ComponentInterface {
   @Prop() type: "submit" | "reset" | "button" = "button";
 
   /**
-   * The status classing of the button.
-   * Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+   * The button variation.
    */
-  @Prop() status: "success" | "danger" | "warning" | "alt";
+  @Prop() variation?: "basic" | "primary" | "secondary" | "dark" | "light" =
+    "basic";
 
   /**
-   * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+   * Set to "full" for a full-width button without border-radius or
+   *  borders or to "block"` for a 100% width "block style" button.
    */
-  @Prop() display?: "block" | "inline" | "inline-flex" | "none" | "flex" =
-    "flex";
-
-  /**
-   * Specifies the loading animation location if applied.
-   * Use: `"left"`, `"right"`, or `"only"`.
-   */
-  @Prop({ reflectToAttr: true }) loading?: "left" | "right" | "only";
+  @Prop() width?: "full" | "block" | undefined;
 
   private get hasIconOnly() {
     return !!this.el.querySelector('core-icon[slot="button-icon"]');

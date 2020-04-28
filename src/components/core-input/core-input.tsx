@@ -17,17 +17,11 @@ import { findItemLabel } from "../../utils/helpers";
 })
 export class Input implements ComponentInterface {
   private nativeInput?: HTMLInputElement;
-  private inputId = `core-input--${inputIds++}`;
+  private inputId = `core-input-${inputIds++}`;
 
   @State() hasFocus = false;
 
   @Element() el!: HTMLElement;
-
-  /**
-   * Apply the large pre-defined input size and styling.
-   * Use: `"large"`.
-   */
-  @Prop({ reflectToAttr: true }) size?: "large";
 
   /**
    * Boolean attribute lets you specify that a form control should
@@ -47,12 +41,9 @@ export class Input implements ComponentInterface {
   @Prop() disabled = false;
 
   /**
-   * How an <input> works varies considerably depending on the value of
-   * its type attribute, hence the different types are covered in their
-   * own separate reference pages. If this attribute is not specified,
-   * the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+   * The core-icon to render inside the text input.
    */
-  @Prop({ reflectToAttr: true }) type?: string = "text";
+  @Prop() icon?: string;
 
   /**
    * A hint to the browser for which keyboard to display.
@@ -85,9 +76,18 @@ export class Input implements ComponentInterface {
   @Prop() required = false;
 
   /**
-   * The core-icon to render inside the text input.
+   * Apply the large pre-defined input size and styling.
+   * Use: `"large"`.
    */
-  @Prop() icon?: string;
+  @Prop({ reflectToAttr: true }) size?: "large";
+
+  /**
+   * How an <input> works varies considerably depending on the value of
+   * its type attribute, hence the different types are covered in their
+   * own separate reference pages. If this attribute is not specified,
+   * the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+   */
+  @Prop({ reflectToAttr: true }) type?: string = "text";
 
   /**
    * Returns the native `<input>` element.
@@ -98,7 +98,7 @@ export class Input implements ComponentInterface {
   }
 
   render() {
-    const labelId = this.inputId;
+    const labelId = `${this.inputId}-label`;
     const label = findItemLabel(this.el);
     if (label) {
       label.id = labelId;
