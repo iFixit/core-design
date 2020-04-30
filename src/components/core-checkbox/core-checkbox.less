@@ -1,0 +1,49 @@
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
+
+// :host targets the custom element compiled by Stencil
+:host {
+  color: @color-gray-5;
+  display: inline-flex;
+  font: inherit;
+  position: relative;
+
+  // @Prop type size
+  &([size="large"]) {
+    .native-element {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+.native-element {
+  background: @color-white;
+  border: 1px solid @color-gray-3;
+  border-radius: @space-1;
+  box-shadow: 0 0 0 0 transparent;
+  box-sizing: border-box;
+  font: inherit;
+  height: @space-4;
+  margin: 0;
+  margin-right: @space-2;
+  outline: none;
+  transition: box-shadow 0.12s ease-in-out;
+  width: @space-4;
+
+  &:not(:disabled) {
+    &:focus,
+    &:active {
+      border-color: @color-gray-5;
+      box-shadow: @box-shadow;
+    }
+  }
+
+  &:disabled {
+    background: @color-gray-1;
+    border-color: transparent;
+    color: @color-gray-4;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
