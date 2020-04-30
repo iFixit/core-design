@@ -261,14 +261,14 @@
               <core-input placeholder="Icon Input" icon="calendar"></core-input>
               <core-input placeholder="Error Input" icon="alert-circle" class="core-error"></core-input>
               <core-input placeholder="Success Input" icon="check" class="core-success"></core-input>
-              <div>
-                <core-label forId="field-label">Field Label</core-label>
-                <core-input name="field-label" placeholder="Placeholder"></core-input>
-              </div>
-              <div>
-                <core-label forId="help-field-label" helpurl="https://www.dozuki.com/">Help Field Label</core-label>
-                <core-input name="help-field-label" placeholder="Placeholder"></core-input>
-              </div>
+              <core-label>
+                Field Label
+                <core-input slot="label-input" id="field-label" placeholder="Placeholder"></core-input>
+              </core-label>
+              <core-label helpurl="https://www.dozuki.com/">
+                Help Field Label
+                <core-input slot="label-input" id="help-field-label" placeholder="Placeholder"></core-input>
+              </core-label>
             </div>
             <div class="textarea">
               <core-textarea placeholder="Text area" rows="6" cols="50"></core-textarea>
@@ -290,16 +290,16 @@
     <section class="checkboxes">
       <h2>Checkboxes</h2>
       <div class="grid">
-        <div class="checkboxes grid">
-          <core-label display="inline">
-            <core-checkbox></core-checkbox>
+        <div class="checkbox grid">
+          <core-label slot="label-input" display="inline">
+            <core-input type="checkbox"></core-input>
             Checkbox
           </core-label>
           <div class="extend-2">
-            <core-label display="inline" disabled>
-              <core-checkbox disabled></core-checkbox>
-              Checkbox disabled
-          </core-label>
+            <core-label slot="label-input" display="inline" disabled>
+              <core-input id="disabled-checkbox" type="checkbox" disabled></core-input>
+              Disabled checkbox
+            </core-label>
           </div>
         </div>
       </div>

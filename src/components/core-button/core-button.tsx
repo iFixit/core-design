@@ -102,8 +102,7 @@ export class Button implements ComponentInterface {
     "basic";
 
   /**
-   * Set to "full" for a full-width button without border-radius or
-   *  borders or to "block"` for a 100% width "block style" button.
+   * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
    */
   @Prop() width?: "full" | "block" | undefined;
 

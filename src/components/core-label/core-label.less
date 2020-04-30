@@ -6,21 +6,41 @@
   color: @color-gray-5;
   display: flex;
   font: inherit;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
+  // @Prop type disabled
+  &([disabled]) .native-element {
+    color: fade(@color-gray-5, 50%);
+    cursor: not-allowed;
+  }
 
   &(.block) {
+    box-sizing: border-box;
     width: 100%;
 
     .native-element {
-      justify-content: space-between;
-      margin-bottom: @space-2;
       width: inherit;
     }
 
-    a {
+    .label-inner {
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    slot[name="label-input"] {
+      display: flex;
+      margin-top: @space-2;
+    }
+
+    .help-url {
       color: @color-gray-3;
+      transition: color 0.12s ease-in-out;
+
+      &:hover {
+        color: @color-gray-4;
+      }
     }
   }
 
