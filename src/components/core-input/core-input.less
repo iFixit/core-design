@@ -12,6 +12,12 @@
     padding-left: 40px;
   }
 
+  // @Prop type disabled
+  &([disabled]) .native-element {
+    color: fade(@color-gray-5, 50%);
+    cursor: not-allowed;
+  }
+
   // @Prop size large
   &([size="large"]) .native-element {
     font-size: 16px;
@@ -20,6 +26,7 @@
 
   // @Prop type text (default)
   &([type="text"]) {
+    box-sizing: border-box;
     width: 100%;
 
     .native-element {

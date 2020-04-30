@@ -7,7 +7,14 @@
   display: flex;
   font: inherit;
 
+  // @Prop type disabled
+  &([disabled]) .native-element {
+    color: fade(@color-gray-5, 50%);
+    cursor: not-allowed;
+  }
+
   &(.block) {
+    box-sizing: border-box;
     width: 100%;
 
     .native-element {

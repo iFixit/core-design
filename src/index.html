@@ -291,13 +291,15 @@
       <h2>Checkbox Inputs</h2>
       <div class="grid">
         <div class="checkbox grid">
-          <div>
+          <core-label slot="label-input" display="inline">
             <core-input type="checkbox"></core-input>
-            <core-label display="inline">Checkbox</core-label>
-          </div>
+            Checkbox
+          </core-label>
           <div class="extend-2">
-            <core-input type="checkbox" disabled></core-input>
-            <core-label display="inline">Disabled checkbox</core-label>
+            <core-label slot="label-input" display="inline" disabled>
+              <core-input id="disabled-checkbox" type="checkbox" disabled></core-input>
+              Disabled checkbox
+            </core-label>
           </div>
         </div>
       </div>

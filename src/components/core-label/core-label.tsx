@@ -16,6 +16,11 @@ export class Button implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
+   * If `true`, the user cannot interact with the nested element (typically core-input).
+   */
+  @Prop({ reflectToAttr: true }) disabled = false;
+
+  /**
    * The display determines where and how the label behaves inside an item.
    */
   @Prop() display?: "inline" | "block" = "block";

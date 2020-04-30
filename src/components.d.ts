@@ -60,7 +60,7 @@ export namespace Components {
          */
         "variation"?: "basic" | "primary" | "secondary" | "dark" | "light";
         /**
-          * Set to "full" for a full-width button without border-radius or   borders or to "block"` for a 100% width "block style" button.
+          * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
         "width"?: "full" | "block" | undefined;
     }
@@ -141,6 +141,10 @@ export namespace Components {
         "type"?: string;
     }
     interface CoreLabel {
+        /**
+          * If `true`, the user cannot interact with the nested element (typically core-input).
+         */
+        "disabled": boolean;
         /**
           * The display determines where and how the label behaves inside an item.
          */
@@ -275,7 +279,7 @@ declare namespace LocalJSX {
          */
         "variation"?: "basic" | "primary" | "secondary" | "dark" | "light";
         /**
-          * Set to "full" for a full-width button without border-radius or   borders or to "block"` for a 100% width "block style" button.
+          * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
         "width"?: "full" | "block" | undefined;
     }
@@ -352,6 +356,10 @@ declare namespace LocalJSX {
         "type"?: string;
     }
     interface CoreLabel {
+        /**
+          * If `true`, the user cannot interact with the nested element (typically core-input).
+         */
+        "disabled"?: boolean;
         /**
           * The display determines where and how the label behaves inside an item.
          */
