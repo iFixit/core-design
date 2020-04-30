@@ -21,38 +21,36 @@ export class Button implements ComponentInterface {
   @Prop() display?: "inline" | "block" = "block";
 
   /**
-   * The id of a labelable form-related element.
-   */
-  @Prop() forId?: string | null;
-
-  /**
    * Applies the provided URL to the helpIcon href.
    */
   @Prop() helpurl?: string | null;
 
   render() {
-    const { display, forId } = this;
+    const { display } = this;
     return (
       <Host
         class={{
           "core-label": true,
           [display]: true,
-          [forId]: forId !== undefined,
         }}
       >
         <label class="native-element">
-          <slot></slot>
-          <slot name="label-right">
-            {this.helpurl ? (
-              <a class="help-url" href={this.helpurl}>
-                <core-icon
-                  slot="label-right"
-                  icon="help-solid"
-                  color="gray-3"
-                ></core-icon>
-              </a>
-            ) : undefined}
-          </slot>
+          <div class="label-inner">
+            <slot name="label-left"></slot>
+            <slot></slot>
+            <slot name="label-right">
+              {this.helpurl ? (
+                <a class="help-url" href={this.helpurl}>
+                  <core-icon
+                    slot="label-right"
+                    icon="help-solid"
+                    color="gray-3"
+                  ></core-icon>
+                </a>
+              ) : undefined}
+            </slot>
+          </div>
+          <slot name="label-input"></slot>
         </label>
       </Host>
     );

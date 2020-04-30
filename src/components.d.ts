@@ -146,10 +146,6 @@ export namespace Components {
          */
         "display"?: "inline" | "block";
         /**
-          * The id of a labelable form-related element.
-         */
-        "forId"?: string | null;
-        /**
           * Applies the provided URL to the helpIcon href.
          */
         "helpurl"?: string | null;
@@ -360,10 +356,6 @@ declare namespace LocalJSX {
           * The display determines where and how the label behaves inside an item.
          */
         "display"?: "inline" | "block";
-        /**
-          * The id of a labelable form-related element.
-         */
-        "forId"?: string | null;
         /**
           * Applies the provided URL to the helpIcon href.
          */

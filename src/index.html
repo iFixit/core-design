@@ -261,14 +261,14 @@
               <core-input placeholder="Icon Input" icon="calendar"></core-input>
               <core-input placeholder="Error Input" icon="alert-circle" class="core-error"></core-input>
               <core-input placeholder="Success Input" icon="check" class="core-success"></core-input>
-              <div>
-                <core-label forId="field-label">Field Label</core-label>
-                <core-input name="field-label" placeholder="Placeholder"></core-input>
-              </div>
-              <div>
-                <core-label forId="help-field-label" helpurl="https://www.dozuki.com/">Help Field Label</core-label>
-                <core-input name="help-field-label" placeholder="Placeholder"></core-input>
-              </div>
+              <core-label>
+                Field Label
+                <core-input slot="label-input" id="field-label" placeholder="Placeholder"></core-input>
+              </core-label>
+              <core-label helpurl="https://www.dozuki.com/">
+                Help Field Label
+                <core-input slot="label-input" id="help-field-label" placeholder="Placeholder"></core-input>
+              </core-label>
             </div>
             <div class="textarea">
               <core-textarea placeholder="Text area" rows="6" cols="50"></core-textarea>
