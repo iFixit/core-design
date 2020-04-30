@@ -64,6 +64,20 @@ export namespace Components {
          */
         "width"?: "full" | "block" | undefined;
     }
+    interface CoreCheckbox {
+        /**
+          * If `true`, the user cannot interact with the input.
+         */
+        "disabled": boolean;
+        /**
+          * Apply the large pre-defined large checkbox size. Use: `"large"`.
+         */
+        "large": boolean;
+        /**
+          * If `true`, the user must fill in a value before submitting a form.
+         */
+        "required": boolean;
+    }
     interface CoreIcon {
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -192,6 +206,12 @@ declare global {
         prototype: HTMLCoreButtonElement;
         new (): HTMLCoreButtonElement;
     };
+    interface HTMLCoreCheckboxElement extends Components.CoreCheckbox, HTMLStencilElement {
+    }
+    var HTMLCoreCheckboxElement: {
+        prototype: HTMLCoreCheckboxElement;
+        new (): HTMLCoreCheckboxElement;
+    };
     interface HTMLCoreIconElement extends Components.CoreIcon, HTMLStencilElement {
     }
     var HTMLCoreIconElement: {
@@ -218,6 +238,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "core-button": HTMLCoreButtonElement;
+        "core-checkbox": HTMLCoreCheckboxElement;
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
@@ -282,6 +303,20 @@ declare namespace LocalJSX {
           * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
         "width"?: "full" | "block" | undefined;
+    }
+    interface CoreCheckbox {
+        /**
+          * If `true`, the user cannot interact with the input.
+         */
+        "disabled"?: boolean;
+        /**
+          * Apply the large pre-defined large checkbox size. Use: `"large"`.
+         */
+        "large"?: boolean;
+        /**
+          * If `true`, the user must fill in a value before submitting a form.
+         */
+        "required"?: boolean;
     }
     interface CoreIcon {
         /**
@@ -397,6 +432,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "core-button": CoreButton;
+        "core-checkbox": CoreCheckbox;
         "core-icon": CoreIcon;
         "core-input": CoreInput;
         "core-label": CoreLabel;
@@ -408,6 +444,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
+            "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
