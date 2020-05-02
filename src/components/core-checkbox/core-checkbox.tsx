@@ -16,17 +16,25 @@ export class Checkbox implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * If `true`, the user cannot interact with the input.
+   * If applied, the element is checked.
+   * Use: `"checked"`.
+   */
+  @Prop() checked = false;
+
+  /**
+   * If applied, the user cannot interact with the element.
+   * Use: `"disabled"`.
    */
   @Prop() disabled = false;
 
   /**
-   * If `true`, the user must fill in a value before submitting a form.
+   * If applied, the user must fill in a value before submitting a form containing this element.
+   * Use: `"required"`.
    */
   @Prop() required = false;
 
   /**
-   * Apply the large pre-defined large checkbox size.
+   * Apply the large pre-defined large checkbox size styling.
    * Use: `"large"`.
    */
   @Prop({ reflectToAttr: true }) large = false;
@@ -39,14 +47,13 @@ export class Checkbox implements ComponentInterface {
           "core-checkbox": true,
         }}
       >
-        <slot name="checkbox-left"></slot>
         <input
           class="native-element"
           type="checkbox"
+          checked={this.checked}
           disabled={this.disabled}
           required={this.required}
         />
-        <slot name="checkbox-right"></slot>
       </Host>
     );
   }

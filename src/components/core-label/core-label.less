@@ -18,20 +18,25 @@
     width: 100%;
 
     .native-element {
+      align-items: flex-start;
+      flex-direction: column;
       width: inherit;
     }
 
     .label-inner {
+      align-items: center;
       display: flex;
       justify-content: space-between;
       overflow: hidden;
       text-overflow: ellipsis;
+      width: inherit;
       white-space: nowrap;
     }
 
     slot[name="label-input"] {
       display: flex;
       margin-top: @space-2;
+      width: inherit;
     }
 
     .help-url {
@@ -44,8 +49,10 @@
     }
   }
 
-  .native-element {
-    display: flex;
-    align-items: center;
+  &(.inline) {
+    .label-inner {
+      display: inline-flex;
+      align-items: center;
+    }
   }
 }

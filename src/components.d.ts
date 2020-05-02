@@ -66,15 +66,19 @@ export namespace Components {
     }
     interface CoreCheckbox {
         /**
-          * If `true`, the user cannot interact with the input.
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked": boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */
         "disabled": boolean;
         /**
-          * Apply the large pre-defined large checkbox size. Use: `"large"`.
+          * Apply the large pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large": boolean;
         /**
-          * If `true`, the user must fill in a value before submitting a form.
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
         "required": boolean;
     }
@@ -306,15 +310,19 @@ declare namespace LocalJSX {
     }
     interface CoreCheckbox {
         /**
-          * If `true`, the user cannot interact with the input.
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked"?: boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */
         "disabled"?: boolean;
         /**
-          * Apply the large pre-defined large checkbox size. Use: `"large"`.
+          * Apply the large pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large"?: boolean;
         /**
-          * If `true`, the user must fill in a value before submitting a form.
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
         "required"?: boolean;
     }

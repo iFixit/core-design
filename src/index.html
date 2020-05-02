@@ -63,8 +63,8 @@
         grid-column: 3 / 6;
         grid-row: 1;
       }
-      .checkbox.grid > div {
-        display: flex;
+      .checkbox.grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     </style>
   </head>
@@ -291,16 +291,38 @@
       <h2>Checkboxes</h2>
       <div class="grid">
         <div class="checkbox grid">
-          <core-label slot="label-input" display="inline">
-            <core-input type="checkbox"></core-input>
+          <span>Default</span>
+          <span>Large</span>
+        </div>
+        <div class="checkbox grid">
+          <core-label display="inline">
+            <core-checkbox slot="label-left"></core-checkbox>
             Checkbox
           </core-label>
-          <div class="extend-2">
-            <core-label slot="label-input" display="inline" disabled>
-              <core-input id="disabled-checkbox" type="checkbox" disabled></core-input>
-              Disabled checkbox
-            </core-label>
-          </div>
+          <core-label display="inline">
+            <core-checkbox slot="label-left" large></core-checkbox>
+            Large Checkbox
+          </core-label>
+        </div>
+        <div class="checkbox grid">
+          <core-label display="inline" disabled>
+            <core-checkbox slot="label-left" disabled></core-checkbox>
+            Disabled checkbox
+          </core-label>
+          <core-label display="inline" disabled>
+            <core-checkbox slot="label-left" large disabled></core-checkbox>
+            Large Disabled checkbox
+          </core-label>
+        </div>
+        <div class="checkbox grid">
+          <core-label display="inline" disabled>
+            <core-checkbox slot="label-left" disabled checked></core-checkbox>
+            Disabled checkbox
+          </core-label>
+          <core-label display="inline" disabled>
+            <core-checkbox slot="label-left" large disabled checked></core-checkbox>
+            Large Disabled checkbox
+          </core-label>
         </div>
       </div>
     </section>
