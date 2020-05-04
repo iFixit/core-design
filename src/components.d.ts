@@ -160,6 +160,10 @@ export namespace Components {
     }
     interface CoreLabel {
         /**
+          * Optional color of the label. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+         */
+        "color"?: string;
+        /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
         "disabled": boolean;
@@ -399,6 +403,10 @@ declare namespace LocalJSX {
         "type"?: string;
     }
     interface CoreLabel {
+        /**
+          * Optional color of the label. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+         */
+        "color"?: string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */

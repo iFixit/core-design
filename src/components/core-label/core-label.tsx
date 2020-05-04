@@ -16,6 +16,13 @@ export class Button implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
+   * Optional color of the label.
+   * Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * (e.g. `color="red"`, `color="gray-2"`, etc).
+   */
+  @Prop() color?: string;
+
+  /**
    * If `true`, the user cannot interact with the nested element (typically core-input).
    */
   @Prop({ reflectToAttr: true }) disabled = false;
