@@ -28,8 +28,11 @@
       h2 {
         margin-bottom: 2em;
       }
+      section {
+        padding-top: 8px;
+      }
       section:not(:last-of-type) {
-        margin-bottom: 64px;
+        margin-bottom: 56px;
       }
       .grid {
         display: grid;
@@ -63,13 +66,13 @@
         grid-column: 3 / 6;
         grid-row: 1;
       }
-      .checkbox.grid > div {
-        display: flex;
+      .checkbox.grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     </style>
   </head>
   <body>
-    <section class="button-states">
+    <section id="button-states">
       <h2>Button States</h2>
       <div class="grid">
         <div class="states grid">
@@ -136,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section class="button-sizes">
+    <section id="button-sizes">
       <h2>Button Sizes</h2>
       <div class="grid">
         <div class="sizes grid">
@@ -162,7 +165,7 @@
         </div>
       </div>
     </section>
-    <section class="icon-buttons">
+    <section id="icon-buttons">
       <h2>Icon Buttons</h2>
       <div class="grid">
         <div class="icon grid">
@@ -251,7 +254,7 @@
         </div>
       </div>
     </section>
-    <section class="text-inputs">
+    <section id="text-inputs">
       <h2>Text Inputs</h2>
         <div class="grid">
           <div class="text grid">
@@ -277,7 +280,7 @@
         </div>
       </div>
     </section>
-    <section class="search-input">
+    <section id="search-input">
       <h2>Search Inputs</h2>
       <div class="grid">
         <div class="search grid">
@@ -287,20 +290,52 @@
         </div>
       </div>
     </section>
-    <section class="checkboxes">
+    <section id="checkboxes">
       <h2>Checkboxes</h2>
       <div class="grid">
         <div class="checkbox grid">
-          <core-label slot="label-input" display="inline">
-            <core-input type="checkbox"></core-input>
+          <span>Default</span>
+          <span>Large</span>
+        </div>
+        <div class="checkbox grid">
+          <core-label display="inline" color="gray-8">
+            <core-checkbox slot="label-left"></core-checkbox>
             Checkbox
           </core-label>
-          <div class="extend-2">
-            <core-label slot="label-input" display="inline" disabled>
-              <core-input id="disabled-checkbox" type="checkbox" disabled></core-input>
-              Disabled checkbox
-            </core-label>
-          </div>
+          <core-label display="inline" color="gray-8">
+            <core-checkbox slot="label-left" large></core-checkbox>
+            Checkbox
+          </core-label>
+        </div>
+        <div class="checkbox grid">
+          <core-label display="inline" color="gray-8">
+            <core-checkbox slot="label-left" checked></core-checkbox>
+            Selected checkbox
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            <core-checkbox slot="label-left" checked large></core-checkbox>
+            Selected checkbox
+          </core-label>
+        </div>
+        <div class="checkbox grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-checkbox slot="label-left" disabled></core-checkbox>
+            Disabled checkbox
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-checkbox slot="label-left" large disabled></core-checkbox>
+            Disabled checkbox
+          </core-label>
+        </div>
+        <div class="checkbox grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-checkbox slot="label-left" disabled checked></core-checkbox>
+            Disabled checkbox
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-checkbox slot="label-left" large disabled checked></core-checkbox>
+            Disabled checkbox
+          </core-label>
         </div>
       </div>
     </section>

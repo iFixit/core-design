@@ -66,15 +66,19 @@ export namespace Components {
     }
     interface CoreCheckbox {
         /**
-          * If `true`, the user cannot interact with the input.
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked": boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */
         "disabled": boolean;
         /**
-          * Apply the large pre-defined large checkbox size. Use: `"large"`.
+          * Apply the large pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large": boolean;
         /**
-          * If `true`, the user must fill in a value before submitting a form.
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
         "required": boolean;
     }
@@ -155,6 +159,10 @@ export namespace Components {
         "type"?: string;
     }
     interface CoreLabel {
+        /**
+          * Optional color of the label. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+         */
+        "color"?: string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
@@ -306,15 +314,19 @@ declare namespace LocalJSX {
     }
     interface CoreCheckbox {
         /**
-          * If `true`, the user cannot interact with the input.
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked"?: boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */
         "disabled"?: boolean;
         /**
-          * Apply the large pre-defined large checkbox size. Use: `"large"`.
+          * Apply the large pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large"?: boolean;
         /**
-          * If `true`, the user must fill in a value before submitting a form.
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
         "required"?: boolean;
     }
@@ -391,6 +403,10 @@ declare namespace LocalJSX {
         "type"?: string;
     }
     interface CoreLabel {
+        /**
+          * Optional color of the label. Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+         */
+        "color"?: string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
