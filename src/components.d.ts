@@ -176,6 +176,24 @@ export namespace Components {
          */
         "helpurl"?: string | null;
     }
+    interface CoreRadio {
+        /**
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked": boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled": boolean;
+        /**
+          * Apply the large pre-defined large radio size styling. Use: `"large"`.
+         */
+        "large": boolean;
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+         */
+        "required": boolean;
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -238,6 +256,12 @@ declare global {
         prototype: HTMLCoreLabelElement;
         new (): HTMLCoreLabelElement;
     };
+    interface HTMLCoreRadioElement extends Components.CoreRadio, HTMLStencilElement {
+    }
+    var HTMLCoreRadioElement: {
+        prototype: HTMLCoreRadioElement;
+        new (): HTMLCoreRadioElement;
+    };
     interface HTMLCoreTextareaElement extends Components.CoreTextarea, HTMLStencilElement {
     }
     var HTMLCoreTextareaElement: {
@@ -250,6 +274,7 @@ declare global {
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
+        "core-radio": HTMLCoreRadioElement;
         "core-textarea": HTMLCoreTextareaElement;
     }
 }
@@ -420,6 +445,24 @@ declare namespace LocalJSX {
          */
         "helpurl"?: string | null;
     }
+    interface CoreRadio {
+        /**
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked"?: boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled"?: boolean;
+        /**
+          * Apply the large pre-defined large radio size styling. Use: `"large"`.
+         */
+        "large"?: boolean;
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+         */
+        "required"?: boolean;
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -452,6 +495,7 @@ declare namespace LocalJSX {
         "core-icon": CoreIcon;
         "core-input": CoreInput;
         "core-label": CoreLabel;
+        "core-radio": CoreRadio;
         "core-textarea": CoreTextarea;
     }
 }
@@ -464,6 +508,7 @@ declare module "@stencil/core" {
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
+            "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
         }
     }
