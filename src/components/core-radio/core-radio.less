@@ -14,9 +14,8 @@
       height: @space-large;
       width: @space-large;
 
-      &:checked:not(:disabled) {
-        &:focus,
-        &:active {
+      &:not(:disabled) {
+        &:focus {
           box-shadow: 0 0 0 5px @color-blue inset, @box-shadow;
         }
       }
