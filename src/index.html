@@ -18,7 +18,7 @@
 
     <style>
       html {
-        font: 14px/16px "Inter", sans-serif;
+        font: 14px/1.143 "Inter", sans-serif;
         font-feature-settings: "ss01" on, "ss02" on;
         margin: 5%;
         text-rendering: optimizeLegibility;
@@ -66,7 +66,8 @@
         grid-column: 3 / 6;
         grid-row: 1;
       }
-      .checkbox.grid {
+      .checkbox.grid,
+      .toggles.grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     </style>
@@ -335,6 +336,104 @@
           <core-label display="inline" color="gray-8" disabled>
             <core-checkbox slot="label-left" large disabled checked></core-checkbox>
             Disabled checkbox
+          </core-label>
+        </div>
+      </div>
+    </section>
+    <section id="toggles">
+      <h2>Toggles</h2>
+      <div class="grid">
+        <div class="toggles grid">
+          <span>Default</span>
+          <span>Large</span>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left"></core-toggle>
+            Off
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left" large></core-toggle>
+            Large off
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left" checked></core-toggle>
+            On
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left" checked large></core-toggle>
+            Large on
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" disabled></core-toggle>
+            Off disabled
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" large disabled></core-toggle>
+            Large off disabled
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" disabled checked></core-toggle>
+            On disabled
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" large disabled checked></core-toggle>
+            Large on disabled
+          </core-label>
+        </div>
+      </div>
+    </section>
+    <section id="toggles">
+      <h2>Toggles 2</h2>
+      <div class="grid">
+        <div class="toggles grid">
+          <span>Default</span>
+          <span>Large</span>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left" alt></core-toggle>
+            Off (alt)
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left" large alt></core-toggle>
+            Large off (alt)
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left" checked alt></core-toggle>
+            On (alt)
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            <core-toggle slot="label-left" checked large alt></core-toggle>
+            Large on (alt)
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" disabled alt></core-toggle>
+            Off disabled (alt)
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" large disabled alt></core-toggle>
+            Large off disabled (alt)
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" disabled checked alt></core-toggle>
+            On disabled (alt)
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-toggle slot="label-left" large disabled checked alt></core-toggle>
+            Large on disabled (alt)
           </core-label>
         </div>
       </div>
