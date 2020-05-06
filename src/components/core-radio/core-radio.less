@@ -1,5 +1,4 @@
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
 @space-large: 20px;
 
 // :host targets the custom element compiled by Stencil
@@ -15,8 +14,9 @@
       width: @space-large;
 
       &:not(:disabled) {
-        &:focus {
-          box-shadow: 0 0 0 5px @color-blue inset, @box-shadow;
+        &:focus,
+        &:active {
+          box-shadow: 0 0 0 5px @color-blue inset;
         }
       }
 
@@ -45,7 +45,7 @@
   &:checked:not(:disabled) {
     &:focus,
     &:active {
-      box-shadow: 0 0 0 4px @color-blue inset, @box-shadow;
+      box-shadow: 0 0 0 4px @color-blue inset;
     }
   }
 
