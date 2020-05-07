@@ -1,0 +1,71 @@
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+@space-large: 20px;
+
+// :host targets the custom element compiled by Stencil
+:host {
+  color: @color-gray-5;
+  display: inline-flex;
+  font: inherit;
+
+  // @Prop type size
+  &([large]) {
+    .native-element {
+      height: @space-large;
+      width: @space-large;
+
+      &:not(:disabled) {
+        &:focus,
+        &:active {
+          box-shadow: 0 0 0 5px @color-blue inset;
+        }
+      }
+
+      &:checked {
+        box-shadow: 0 0 0 5px @color-blue inset;
+      }
+    }
+  }
+}
+
+.native-element {
+  background: @color-white;
+  border: 1px solid @color-gray-3;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 transparent inset;
+  box-sizing: border-box;
+  display: flex;
+  font: inherit;
+  height: @space-4;
+  margin: 0;
+  margin-right: @space-2;
+  outline: none;
+  transition: box-shadow 0.12s ease-in-out;
+  width: @space-4;
+
+  &:checked:not(:disabled) {
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 4px @color-blue inset;
+    }
+  }
+
+  &:disabled {
+    background: @color-gray-1;
+    border-color: transparent;
+    color: @color-gray-4;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .native-element {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:checked {
+      border-color: @color-blue-dark-1;
+      box-shadow: 0 0 0 4px @color-blue inset;
+    }
+  }
+}
