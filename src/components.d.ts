@@ -216,6 +216,10 @@ export namespace Components {
          */
         "checked": boolean;
         /**
+          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
+         */
+        "color"?: string;
+        /**
           * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */
         "disabled": boolean;
@@ -484,6 +488,10 @@ declare namespace LocalJSX {
           * If applied, the element is checked. Use: `"checked"`.
          */
         "checked"?: boolean;
+        /**
+          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
+         */
+        "color"?: string;
         /**
           * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */

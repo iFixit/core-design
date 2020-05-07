@@ -1,5 +1,4 @@
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
 @space-large: 20px;
 @toggle-ease: 0.2s cubic-bezier(0.2, 0, 0.6, 1);
 
@@ -43,6 +42,24 @@
     }
   }
 
+  // @Prop color
+  // TODO: (IR) figure out an automated way to maintain
+  &([color=green]) .native-element {
+    background: @color-green;
+  }
+
+  &([color=yellow]) .native-element {
+    background: @color-yellow;
+  }
+
+  &([color=red]) .native-element {
+    background: @color-red;
+  }
+
+  &([color=black]) .native-element {
+    background: @color-black;
+  }
+
   // @Prop type size
   &([large]) {
     .native-element {
@@ -50,6 +67,7 @@
       width: 38px;
 
       &::after {
+        box-shadow: @shadow-0;
         height: @space-4;
         width: @space-4;
       }
@@ -58,6 +76,14 @@
         transform: translateX(18px);
       }
     }
+  }
+
+  &([slot="label-right"]) .native-element {
+    margin-left: @space-2;
+  }
+
+  &([slot="label-left"]) .native-element {
+    margin-right: @space-2;
   }
 }
 
@@ -70,7 +96,6 @@
   font: inherit;
   height: @space-4;
   margin: 0;
-  margin-right: @space-2;
   outline: none;
   position: relative;
   transition: background @toggle-ease, box-shadow 0.12s ease-in-out;
@@ -78,6 +103,7 @@
 
   &::after {
     content: "";
+    box-shadow: @shadow-2;
     display: block;
     left: 2px;
     top: 2px;
@@ -87,12 +113,6 @@
     background: @color-white;
     position: absolute;
     transition: transform @toggle-ease;
-  }
-
-  &:not(:disabled) {
-    &:focus {
-      box-shadow: @box-shadow;
-    }
   }
 
   &:disabled {

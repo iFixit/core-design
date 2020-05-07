@@ -70,6 +70,9 @@
       .toggles.grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
+      .toggles.grid > .grid {
+        grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+      }
     </style>
   </head>
   <body>
@@ -393,47 +396,85 @@
       <h2>Toggles 2</h2>
       <div class="grid">
         <div class="toggles grid">
-          <span>Default</span>
+          <span>Small</span>
           <span>Large</span>
+        </div>
+        <div class="toggles grid">
+          <div class="grid">
+            <core-label display="inline" color="gray-8">
+              <core-toggle alt></core-toggle>
+            </core-label>
+            <core-label display="inline" color="gray-8">
+              <core-toggle checked alt></core-toggle>
+            </core-label>
+          </div>
+          <div class="grid">
+            <core-label display="inline" color="gray-8">
+              <core-toggle large alt></core-toggle>
+            </core-label>
+            <core-label display="inline" color="gray-8">
+              <core-toggle checked large alt></core-toggle>
+            </core-label>
+          </div>
         </div>
         <div class="toggles grid">
           <core-label display="inline" color="gray-8">
             <core-toggle slot="label-left" alt></core-toggle>
-            Off (alt)
+            Toggle left
           </core-label>
           <core-label display="inline" color="gray-8">
-            <core-toggle slot="label-left" large alt></core-toggle>
-            Large off (alt)
+            <core-toggle slot="label-left" large checked alt></core-toggle>
+            Toggle left large
           </core-label>
         </div>
         <div class="toggles grid">
           <core-label display="inline" color="gray-8">
-            <core-toggle slot="label-left" checked alt></core-toggle>
-            On (alt)
+            Toggle right
+            <core-toggle slot="label-right" alt></core-toggle>
           </core-label>
           <core-label display="inline" color="gray-8">
-            <core-toggle slot="label-left" checked large alt></core-toggle>
-            Large on (alt)
+            Toggle right large
+            <core-toggle slot="label-right" checked large alt></core-toggle>
           </core-label>
         </div>
         <div class="toggles grid">
-          <core-label display="inline" color="gray-8" disabled>
-            <core-toggle slot="label-left" disabled alt></core-toggle>
-            Off disabled (alt)
+          <core-label display="inline" color="gray-8">
+            Green color
+            <core-toggle slot="label-right" color="green" alt></core-toggle>
           </core-label>
-          <core-label display="inline" color="gray-8" disabled>
-            <core-toggle slot="label-left" large disabled alt></core-toggle>
-            Large off disabled (alt)
+          <core-label display="inline" color="gray-8">
+            Green color large
+            <core-toggle slot="label-right" color="green" checked large alt></core-toggle>
           </core-label>
         </div>
         <div class="toggles grid">
-          <core-label display="inline" color="gray-8" disabled>
-            <core-toggle slot="label-left" disabled checked alt></core-toggle>
-            On disabled (alt)
+          <core-label display="inline" color="gray-8">
+            Yellow color
+            <core-toggle slot="label-right" color="yellow" alt></core-toggle>
           </core-label>
-          <core-label display="inline" color="gray-8" disabled>
-            <core-toggle slot="label-left" large disabled checked alt></core-toggle>
-            Large on disabled (alt)
+          <core-label display="inline" color="gray-8">
+            Yellow color large
+            <core-toggle slot="label-right" color="yellow" checked large alt></core-toggle>
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8">
+            Red color
+            <core-toggle slot="label-right" color="red" alt></core-toggle>
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            Red color large
+            <core-toggle slot="label-right" color="red" checked large alt></core-toggle>
+          </core-label>
+        </div>
+        <div class="toggles grid">
+          <core-label display="inline" color="gray-8">
+            Black color
+            <core-toggle slot="label-right" color="black" alt></core-toggle>
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            Black color large
+            <core-toggle slot="label-right" color="black" checked large alt></core-toggle>
           </core-label>
         </div>
       </div>
