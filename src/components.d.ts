@@ -206,6 +206,32 @@ export namespace Components {
          */
         "value"?: string | null;
     }
+    interface CoreToggle {
+        /**
+          * If applied, the element is rendered with the alternate styling. Use: `"alt"`.
+         */
+        "alt": boolean;
+        /**
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked": boolean;
+        /**
+          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
+         */
+        "color"?: string;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled": boolean;
+        /**
+          * Apply the large pre-defined large toggle size styling. Use: `"large"`.
+         */
+        "large": boolean;
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+         */
+        "required": boolean;
+    }
 }
 declare global {
     interface HTMLCoreButtonElement extends Components.CoreButton, HTMLStencilElement {
@@ -244,6 +270,12 @@ declare global {
         prototype: HTMLCoreTextareaElement;
         new (): HTMLCoreTextareaElement;
     };
+    interface HTMLCoreToggleElement extends Components.CoreToggle, HTMLStencilElement {
+    }
+    var HTMLCoreToggleElement: {
+        prototype: HTMLCoreToggleElement;
+        new (): HTMLCoreToggleElement;
+    };
     interface HTMLElementTagNameMap {
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
@@ -251,6 +283,7 @@ declare global {
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
         "core-textarea": HTMLCoreTextareaElement;
+        "core-toggle": HTMLCoreToggleElement;
     }
 }
 declare namespace LocalJSX {
@@ -446,6 +479,32 @@ declare namespace LocalJSX {
          */
         "value"?: string | null;
     }
+    interface CoreToggle {
+        /**
+          * If applied, the element is rendered with the alternate styling. Use: `"alt"`.
+         */
+        "alt"?: boolean;
+        /**
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked"?: boolean;
+        /**
+          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
+         */
+        "color"?: string;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled"?: boolean;
+        /**
+          * Apply the large pre-defined large toggle size styling. Use: `"large"`.
+         */
+        "large"?: boolean;
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+         */
+        "required"?: boolean;
+    }
     interface IntrinsicElements {
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
@@ -453,6 +512,7 @@ declare namespace LocalJSX {
         "core-input": CoreInput;
         "core-label": CoreLabel;
         "core-textarea": CoreTextarea;
+        "core-toggle": CoreToggle;
     }
 }
 export { LocalJSX as JSX };
@@ -465,6 +525,7 @@ declare module "@stencil/core" {
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
+            "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
         }
     }
 }
