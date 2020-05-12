@@ -1,5 +1,5 @@
 {
-  "name": "core-components",
+  "name": "core-design",
   "version": "1.0.0",
   "description": "Core Design System",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/core/core-components.js",
+  "unpkg": "dist/core/core-design.js",
   "files": [
     "dist/",
     "loader/"
