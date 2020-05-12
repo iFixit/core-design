@@ -1,5 +1,5 @@
 {
-  "name": "core",
+  "name": "core-design",
   "version": "1.0.0",
   "description": "Core Design System",
   "main": "dist/index.js",
@@ -9,11 +9,15 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/core/core.js",
+  "unpkg": "dist/core/core-design.js",
   "files": [
     "dist/",
     "loader/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dozuki/core-components.git"
+  },
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
@@ -24,7 +28,7 @@
   "devDependencies": {
     "@core-ds/icons": "^1.2.0",
     "@core-ds/primitives": "^1.0.0",
-    "@stencil/core": "^1.12.2",
+    "@stencil/core": "1.13.0",
     "@stencil/less": "^1.0.0",
     "less-plugin-autoprefix": "^2.0.0"
   },
