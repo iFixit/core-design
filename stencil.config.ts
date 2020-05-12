@@ -3,7 +3,7 @@ import { less } from "@stencil/less";
 import LessPluginAutoPrefix from "less-plugin-autoprefix";
 
 export const config: Config = {
-  namespace: "core",
+  namespace: "core-design",
   taskQueue: "async",
   outputTargets: [
     {
