@@ -38,7 +38,7 @@
         display: grid;
         grid-gap: 32px;
       }
-      .grid span {
+      .hint {
         align-self: center;
         color: #afbbc4;
         font-size: 13px;
@@ -81,31 +81,31 @@
       <div class="grid">
         <div class="states grid">
           <span></span>
-          <span>Normal</span>
-          <span>Disabled</span>
+          <span class="hint">Normal</span>
+          <span class="hint">Disabled</span>
         </div>
         <div class="states grid">
-          <span>Basic</span>
+          <span class="hint">Basic</span>
           <core-button>Button</core-button>
           <core-button disabled>Button</core-button>
         </div>
         <div class="states grid">
-          <span>Primary</span>
+          <span class="hint">Primary</span>
           <core-button variation="primary">Button</core-button>
           <core-button variation="primary" disabled>Button</core-button>
         </div>
         <div class="states grid">
-          <span>Secondary</span>
+          <span class="hint">Secondary</span>
           <core-button variation="secondary">Button</core-button>
           <core-button variation="secondary" disabled>Button</core-button>
         </div>
         <div class="states grid">
-          <span>Color dark</span>
+          <span class="hint">Color dark</span>
           <core-button variation="dark">Button</core-button>
           <core-button variation="dark" disabled>Button</core-button>
         </div>
         <div class="states grid">
-          <span>Color light</span>
+          <span class="hint">Color light</span>
           <core-button variation="light">Button</core-button>
           <core-button variation="light" disabled>Button</core-button>
         </div>
@@ -114,29 +114,29 @@
     <section class="button-states">
       <div class="grid">
         <div class="states grid">
-          <span>Loading basic</span>
+          <span class="hint">Loading basic</span>
           <core-button>Submit</core-button>
+          <core-button loading="only">Submit</core-button>
           <core-button loading="right" class="extend-2">Submitting</core-button>
-          <core-button loading="only" class="extend-2">Submit</core-button>
         </div>
         <div class="states grid">
-          <span>Loading primary</span>
+          <span class="hint">Loading primary</span>
           <core-button variation="primary">Submit</core-button>
+          <core-button variation="primary" loading="only">Submitting</core-button>
           <core-button variation="primary" loading="left" class="extend-2">Submitting</core-button>
-          <core-button variation="primary" loading="only" class="extend-2">Submitting</core-button>
         </div>
       </div>
     </section>
     <section class="button-states">
       <div class="grid">
         <div class="states grid">
-          <span>Status dark</span>
+          <span class="hint">Status dark</span>
           <core-button variation="dark" status="success">Success</core-button>
           <core-button variation="dark" status="danger">Danger</core-button>
           <core-button variation="dark" status="warning">Warning</core-button>
         </div>
         <div class="states grid">
-          <span>Status light</span>
+          <span class="hint">Status light</span>
           <core-button variation="light" status="success">Success</core-button>
           <core-button variation="light" status="danger">Danger</core-button>
           <core-button variation="light" status="warning">Warning</core-button>
@@ -147,21 +147,21 @@
       <h2>Button Sizes</h2>
       <div class="grid">
         <div class="sizes grid">
-          <span>Default</span>
+          <span class="hint">Default</span>
           <core-button>Button</core-button>
           <core-button variation="primary">Button</core-button>
           <core-button variation="secondary">Button</core-button>
           <core-button disabled>Button</core-button>
         </div>
         <div class="sizes grid">
-          <span>Small</span>
+          <span class="hint">Small</span>
           <core-button size="small">Button</core-button>
           <core-button size="small" variation="primary">Button</core-button>
           <core-button size="small" variation="secondary">Button</core-button>
           <core-button size="small" disabled>Button</core-button>
         </div>
         <div class="sizes grid">
-          <span>Large</span>
+          <span class="hint">Large</span>
           <core-button size="large">Button</core-button>
           <core-button size="large" variation="primary">Button</core-button>
           <core-button size="large" variation="secondary">Button</core-button>
@@ -173,7 +173,7 @@
       <h2>Icon Buttons</h2>
       <div class="grid">
         <div class="icon grid">
-          <span>Default</span>
+          <span class="hint">Default</span>
           <core-button>
             <core-icon slot="button-left" icon="heart" color="gray-5"></core-icon>
             Button
@@ -184,24 +184,24 @@
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button>
-              <core-icon slot="button-icon" icon="menu" color="gray-5"></core-icon>
+              <core-icon slot="icon" icon="menu" color="gray-5"></core-icon>
             </core-button>
             <core-button radius="circle">
-              <core-icon slot="button-icon" icon="cart" color="gray-5"></core-icon>
+              <core-icon slot="icon" icon="cart" color="gray-5"></core-icon>
             </core-button>
             <core-button radius="circle" status="danger">
-              <core-icon slot="button-icon" icon="info"></core-icon>
+              <core-icon slot="icon" icon="info"></core-icon>
             </core-button>
             <core-button radius="circle" status="success">
-              <core-icon slot="button-icon" icon="clipboard"></core-icon>
+              <core-icon slot="icon" icon="clipboard"></core-icon>
             </core-button>
             <core-button radius="circle" status="warning">
-              <core-icon slot="button-icon" icon="star"></core-icon>
+              <core-icon slot="icon" icon="star"></core-icon>
             </core-button>
           </div>
         </div>
         <div class="icon grid">
-          <span>Primary</span>
+          <span class="hint">Primary</span>
           <core-button variation="primary">
             <core-icon slot="button-left" icon="layers"></core-icon>
             Button
@@ -212,24 +212,24 @@
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button variation="primary">
-              <core-icon slot="button-icon" icon="undo"></core-icon>
+              <core-icon slot="icon" icon="undo"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle">
-              <core-icon slot="button-icon" icon="user"></core-icon>
+              <core-icon slot="icon" icon="user"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle" status="danger">
-              <core-icon slot="button-icon" icon="video"></core-icon>
+              <core-icon slot="icon" icon="video"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle" status="success">
-              <core-icon slot="button-icon" icon="bell"></core-icon>
+              <core-icon slot="icon" icon="bell"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle" status="warning">
-              <core-icon slot="button-icon" icon="grid"></core-icon>
+              <core-icon slot="icon" icon="grid"></core-icon>
             </core-button>
           </div>
         </div>
         <div class="icon grid">
-          <span>Secondary</span>
+          <span class="hint">Secondary</span>
           <core-button variation="secondary">
             <core-icon slot="button-left" icon="download" color="gray-5"></core-icon>
             Button
@@ -240,19 +240,19 @@
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button variation="secondary">
-              <core-icon slot="button-icon" icon="hourglass" color="gray-5"></core-icon>
+              <core-icon slot="icon" icon="hourglass" color="gray-5"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle">
-              <core-icon slot="button-icon" icon="plus-box" color="gray-5"></core-icon>
+              <core-icon slot="icon" icon="plus-box" color="gray-5"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle" status="danger">
-              <core-icon slot="button-icon" icon="gear"></core-icon>
+              <core-icon slot="icon" icon="gear"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle" status="success">
-              <core-icon slot="button-icon" icon="minus"></core-icon>
+              <core-icon slot="icon" icon="minus"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle" status="warning">
-              <core-icon slot="button-icon" icon="mail"></core-icon>
+              <core-icon slot="icon" icon="mail"></core-icon>
             </core-button>
           </div>
         </div>
@@ -272,7 +272,7 @@
                 Field Label
                 <core-input slot="label-input" id="field-label" placeholder="Placeholder"></core-input>
               </core-label>
-              <core-label helpurl="https://www.dozuki.com/">
+              <core-label helpurl="#">
                 Help Field Label
                 <core-input slot="label-input" id="help-field-label" placeholder="Placeholder"></core-input>
               </core-label>
@@ -280,6 +280,58 @@
             <div class="textarea">
               <core-textarea placeholder="Text area" rows="6" cols="50"></core-textarea>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dropdown">
+      <h2>Dropdown</h2>
+      <div class="grid">
+        <div class="dropdown grid">
+          <div>
+            <core-dropdown>
+              <core-button slot="trigger" radius="circle">
+                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
+              </core-button>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+            </core-dropdown>
+          </div>
+          <div>
+            <core-dropdown nowrap>
+              <core-button slot="trigger" radius="circle">
+                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
+              </core-button>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+              <core-dropdown-item>
+                Nested content can be anything without wrapping (`nowrap` prop applied to parent `core-dropdown`)
+              </core-dropdown-item>
+            </core-dropdown>
+          </div>
+          <div>
+            <core-dropdown hoverable>
+              <core-button slot="trigger" radius="circle">
+                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
+              </core-button>
+              <core-dropdown-item href="#">
+                <core-icon slot="icon" icon="cart" color="green" style="margin-right:8px"></core-icon>
+                Option 1
+              </core-dropdown-item>
+              <core-dropdown-item href="#">
+                <core-icon slot="icon" icon="gear" color="red"></core-icon>
+                <span style="margin-left:8px">Option 2</span>
+              </core-dropdown-item>
+              <core-dropdown-item href="#">
+                <core-icon slot="icon" icon="archive" color="blue" style="margin-right:8px"></core-icon>
+                Option 3
+              </core-dropdown-item>
+              <core-dropdown-item>
+                Nested content can be anything
+              </core-dropdown-item>
+            </core-dropdown>
           </div>
         </div>
       </div>
@@ -347,8 +399,8 @@
       <h2>Toggles</h2>
       <div class="grid">
         <div class="toggles grid">
-          <span>Default</span>
-          <span>Large</span>
+          <span class="hint">Default</span>
+          <span class="hint">Large</span>
         </div>
         <div class="toggles grid">
           <core-label display="inline" color="gray-8">
@@ -396,8 +448,8 @@
       <h2>Toggles 2</h2>
       <div class="grid">
         <div class="toggles grid">
-          <span>Small</span>
-          <span>Large</span>
+          <span class="hint">Small</span>
+          <span class="hint">Large</span>
         </div>
         <div class="toggles grid">
           <div class="grid">
