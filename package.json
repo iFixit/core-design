@@ -1,7 +1,7 @@
 {
-  "name": "core",
-  "version": "1.0.0",
-  "description": "Core Design System",
+  "name": "@core-design/components",
+  "version": "1.0.2",
+  "description": "Core Design System Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -9,11 +9,15 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/core/core.js",
+  "unpkg": "dist/core/components.js",
   "files": [
     "dist/",
     "loader/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dozuki/core-components.git"
+  },
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
