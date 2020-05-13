@@ -67,6 +67,7 @@
         grid-row: 1;
       }
       .checkbox.grid,
+      .radio.grid,
       .toggles.grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
@@ -391,6 +392,55 @@
           <core-label display="inline" color="gray-8" disabled>
             <core-checkbox slot="label-left" large disabled checked></core-checkbox>
             Disabled checkbox
+          </core-label>
+        </div>
+      </div>
+    </section>
+    <section id="radio-buttons">
+      <h2>Radio Buttons</h2>
+      <div class="grid">
+        <div class="radio grid">
+          <span>Default</span>
+          <span>Large</span>
+        </div>
+        <div class="radio grid">
+          <core-label display="inline" color="gray-8">
+            <core-radio slot="label-left"></core-radio>
+            Radio
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            <core-radio slot="label-left" large></core-radio>
+            Large radio
+          </core-label>
+        </div>
+        <div class="radio grid">
+          <core-label display="inline" color="gray-8">
+            <core-radio slot="label-left" checked></core-radio>
+            Selected radio
+          </core-label>
+          <core-label display="inline" color="gray-8">
+            <core-radio slot="label-left" large checked></core-radio>
+            Selected large radio
+          </core-label>
+        </div>
+        <div class="radio grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-radio slot="label-left" disabled></core-radio>
+            Disabled radio
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-radio slot="label-left" large disabled></core-radio>
+            Disabled large radio
+          </core-label>
+        </div>
+        <div class="radio grid">
+          <core-label display="inline" color="gray-8" disabled>
+            <core-radio slot="label-left" checked disabled></core-radio>
+            Disabled selected radio
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
+            <core-radio slot="label-left" large checked disabled></core-radio>
+            Disabled selected large radio
           </core-label>
         </div>
       </div>
