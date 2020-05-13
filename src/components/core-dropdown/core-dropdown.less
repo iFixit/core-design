@@ -1,0 +1,47 @@
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
+
+// :host targets the custom element compiled by Stencil
+:host {
+  color: @color-gray-5;
+  display: inline-flex;
+  font: inherit;
+
+  // @Prop nowrap
+  &([nowrap]) {
+    white-space: nowrap;
+  }
+
+  .dropdown {
+    display: inline-flex;
+    position: relative;
+    vertical-align: top;
+
+    &.active,
+    &.hoverable:hover {
+      .menu-outter {
+        display: flex;
+      }
+    }
+  }
+
+  .menu-outter {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9;
+  }
+
+  .menu {
+    background-color: @color-white;
+    border-radius: @space-1;
+    box-shadow: @shadow-3;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: 10px;
+    min-width: 128px;
+    padding-top: @space-2;
+    padding-bottom: @space-1;
+  }
+}
