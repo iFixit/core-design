@@ -52,7 +52,9 @@ const getNamedUrl = (iconName: string) => {
   if (url) {
     return url;
   }
-  return getAssetPath(`assets/core-icons/16/${iconName}.svg`);
+  return getAssetPath(
+    `https://unpkg.com/@core-ds/icons/icons/16/${iconName}.svg`
+  );
 };
 
 export const getName = (
