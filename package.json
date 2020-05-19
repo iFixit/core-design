@@ -29,7 +29,7 @@
     "test.generate.watch": "stencil test --spec --json --outputFile=jest-test-results.json --watch",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "stencilbook": "concurrently \"start-storybook -p 6006 -c .storybook -s www\" \"npm:stencil\"",
+    "stencilbook": "concurrently \"npm:storybook\" \"npm:stencil\"",
     "storybook": "start-storybook -p 6006 -c .storybook -s www",
     "build-storybook": "build-storybook",
     "prepublish": "npm run build"
