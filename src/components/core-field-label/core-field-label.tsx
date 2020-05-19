@@ -12,7 +12,7 @@ import {
   styleUrl: "core-field-label.less",
   shadow: true,
 })
-export class Button implements ComponentInterface {
+export class FieldLabel implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
