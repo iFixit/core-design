@@ -8,8 +8,8 @@ import {
 } from "@stencil/core";
 
 @Component({
-  tag: "core-label",
-  styleUrl: "core-label.less",
+  tag: "core-field-label",
+  styleUrl: "core-field-label.less",
   shadow: true,
 })
 export class Button implements ComponentInterface {
@@ -17,7 +17,7 @@ export class Button implements ComponentInterface {
 
   /**
    * Optional color of the label.
-   * Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    * (e.g. `color="red"`, `color="gray-2"`, etc).
    */
   @Prop() color?: string;
@@ -42,7 +42,7 @@ export class Button implements ComponentInterface {
     return (
       <Host
         class={{
-          "core-label": true,
+          "core-field-label": true,
           [display]: true,
         }}
       >
@@ -59,7 +59,9 @@ export class Button implements ComponentInterface {
                     color="gray-3"
                   ></core-icon>
                 </a>
-              ) : undefined}
+              ) : (
+                undefined
+              )}
             </slot>
           </div>
           <slot name="label-input"></slot>

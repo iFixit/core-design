@@ -29,7 +29,7 @@ export class Toggle implements ComponentInterface {
 
   /**
    * Optional primary color of the icon. Defaults to `blue`.
-   * Use the following `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    * Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
    */
   @Prop() color?: string;

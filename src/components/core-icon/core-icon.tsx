@@ -32,7 +32,7 @@ export class Icon {
 
   /**
    * Optional color of the icon.
-   * Use any `@color` in [core-primatives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    * (e.g. `color="red"`, `color="gray-2"`, etc).
    */
   @Prop() color?: string;
