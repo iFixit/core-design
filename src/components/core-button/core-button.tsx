@@ -107,7 +107,7 @@ export class Button implements ComponentInterface {
   @Prop() width?: "full" | "block" | undefined;
 
   private get hasIconOnly() {
-    return !!this.el.querySelector('core-icon[slot="button-icon"]');
+    return !!this.el.querySelector('core-icon[slot="icon"]');
   }
 
   render() {
@@ -155,7 +155,7 @@ export class Button implements ComponentInterface {
           loading={loading}
         >
           <div class="button-inner">
-            <slot name="button-icon"></slot>
+            <slot name="icon"></slot>
             <slot name="button-left"></slot>
             <slot></slot>
             <slot name="button-right"></slot>

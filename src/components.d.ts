@@ -82,6 +82,34 @@ export namespace Components {
          */
         "required": boolean;
     }
+    interface CoreDropdown {
+        /**
+          * The dropdown visibility
+         */
+        "active": boolean;
+        /**
+          * The dropdown will show up when hovering the dropdown-trigger
+         */
+        "hoverable": boolean;
+        /**
+          * The dropdown will not wrap it's child element content.
+         */
+        "nowrap": boolean;
+    }
+    interface CoreDropdownItem {
+        /**
+          * The type of element.
+         */
+        "elementType": string;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a div.
+         */
+        "href": string | undefined;
+        /**
+          * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+         */
+        "target": string | undefined;
+    }
     interface CoreIcon {
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -176,6 +204,24 @@ export namespace Components {
          */
         "helpurl"?: string | null;
     }
+    interface CoreRadio {
+        /**
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked": boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled": boolean;
+        /**
+          * Apply the large pre-defined large radio size styling. Use: `"large"`.
+         */
+        "large": boolean;
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+         */
+        "required": boolean;
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -246,6 +292,18 @@ declare global {
         prototype: HTMLCoreCheckboxElement;
         new (): HTMLCoreCheckboxElement;
     };
+    interface HTMLCoreDropdownElement extends Components.CoreDropdown, HTMLStencilElement {
+    }
+    var HTMLCoreDropdownElement: {
+        prototype: HTMLCoreDropdownElement;
+        new (): HTMLCoreDropdownElement;
+    };
+    interface HTMLCoreDropdownItemElement extends Components.CoreDropdownItem, HTMLStencilElement {
+    }
+    var HTMLCoreDropdownItemElement: {
+        prototype: HTMLCoreDropdownItemElement;
+        new (): HTMLCoreDropdownItemElement;
+    };
     interface HTMLCoreIconElement extends Components.CoreIcon, HTMLStencilElement {
     }
     var HTMLCoreIconElement: {
@@ -264,6 +322,12 @@ declare global {
         prototype: HTMLCoreLabelElement;
         new (): HTMLCoreLabelElement;
     };
+    interface HTMLCoreRadioElement extends Components.CoreRadio, HTMLStencilElement {
+    }
+    var HTMLCoreRadioElement: {
+        prototype: HTMLCoreRadioElement;
+        new (): HTMLCoreRadioElement;
+    };
     interface HTMLCoreTextareaElement extends Components.CoreTextarea, HTMLStencilElement {
     }
     var HTMLCoreTextareaElement: {
@@ -279,9 +343,12 @@ declare global {
     interface HTMLElementTagNameMap {
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
+        "core-dropdown": HTMLCoreDropdownElement;
+        "core-dropdown-item": HTMLCoreDropdownItemElement;
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
+        "core-radio": HTMLCoreRadioElement;
         "core-textarea": HTMLCoreTextareaElement;
         "core-toggle": HTMLCoreToggleElement;
     }
@@ -362,6 +429,34 @@ declare namespace LocalJSX {
           * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
         "required"?: boolean;
+    }
+    interface CoreDropdown {
+        /**
+          * The dropdown visibility
+         */
+        "active"?: boolean;
+        /**
+          * The dropdown will show up when hovering the dropdown-trigger
+         */
+        "hoverable"?: boolean;
+        /**
+          * The dropdown will not wrap it's child element content.
+         */
+        "nowrap"?: boolean;
+    }
+    interface CoreDropdownItem {
+        /**
+          * The type of element.
+         */
+        "elementType"?: string;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a div.
+         */
+        "href"?: string | undefined;
+        /**
+          * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+         */
+        "target"?: string | undefined;
     }
     interface CoreIcon {
         /**
@@ -453,6 +548,24 @@ declare namespace LocalJSX {
          */
         "helpurl"?: string | null;
     }
+    interface CoreRadio {
+        /**
+          * If applied, the element is checked. Use: `"checked"`.
+         */
+        "checked"?: boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled"?: boolean;
+        /**
+          * Apply the large pre-defined large radio size styling. Use: `"large"`.
+         */
+        "large"?: boolean;
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+         */
+        "required"?: boolean;
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -508,9 +621,12 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
+        "core-dropdown": CoreDropdown;
+        "core-dropdown-item": CoreDropdownItem;
         "core-icon": CoreIcon;
         "core-input": CoreInput;
         "core-label": CoreLabel;
+        "core-radio": CoreRadio;
         "core-textarea": CoreTextarea;
         "core-toggle": CoreToggle;
     }
@@ -521,9 +637,12 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
+            "core-dropdown": LocalJSX.CoreDropdown & JSXBase.HTMLAttributes<HTMLCoreDropdownElement>;
+            "core-dropdown-item": LocalJSX.CoreDropdownItem & JSXBase.HTMLAttributes<HTMLCoreDropdownItemElement>;
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
+            "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
         }
