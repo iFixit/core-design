@@ -77,6 +77,14 @@
       .badges.grid {
         grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
       }
+      .spinners {
+        display: flex;
+      }
+      .spinners core-spinner {
+        margin-top: auto;
+        margin-right: 32px;
+        margin-bottom: auto;
+      }
     </style>
   </head>
   <body>
@@ -604,6 +612,22 @@
           <core-badge size="small" variation="bordered">8</core-badge>
           <core-badge size="small">345</core-badge>
           <core-badge size="small" variation="bordered">345</core-badge>
+        </div>
+      </div>
+    </section>
+    <section id="spinners">
+      <h2>Spinners</h2>
+      <div class="grid">
+        <div class="spinners">
+          <core-spinner size="large"></core-spinner>
+          <core-spinner></core-spinner>
+          <core-spinner size="small"></core-spinner>
+        </div>
+        <div class="spinners">
+          <core-spinner color="blue" size="large"></core-spinner>
+          <core-spinner color="green"></core-spinner>
+          <core-spinner color="yellow" size="small"></core-spinner>
+          <core-spinner color="red" size="small"></core-spinner>
         </div>
       </div>
     </section>

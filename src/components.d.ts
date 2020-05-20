@@ -236,6 +236,16 @@ export namespace Components {
          */
         "required": boolean;
     }
+    interface CoreSpinner {
+        /**
+          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+         */
+        "size"?: "small" | "medium" | "large";
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -348,6 +358,12 @@ declare global {
         prototype: HTMLCoreRadioElement;
         new (): HTMLCoreRadioElement;
     };
+    interface HTMLCoreSpinnerElement extends Components.CoreSpinner, HTMLStencilElement {
+    }
+    var HTMLCoreSpinnerElement: {
+        prototype: HTMLCoreSpinnerElement;
+        new (): HTMLCoreSpinnerElement;
+    };
     interface HTMLCoreTextareaElement extends Components.CoreTextarea, HTMLStencilElement {
     }
     var HTMLCoreTextareaElement: {
@@ -370,6 +386,7 @@ declare global {
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
         "core-radio": HTMLCoreRadioElement;
+        "core-spinner": HTMLCoreSpinnerElement;
         "core-textarea": HTMLCoreTextareaElement;
         "core-toggle": HTMLCoreToggleElement;
     }
@@ -601,6 +618,16 @@ declare namespace LocalJSX {
          */
         "required"?: boolean;
     }
+    interface CoreSpinner {
+        /**
+          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+         */
+        "size"?: "small" | "medium" | "large";
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -663,6 +690,7 @@ declare namespace LocalJSX {
         "core-icon": CoreIcon;
         "core-input": CoreInput;
         "core-radio": CoreRadio;
+        "core-spinner": CoreSpinner;
         "core-textarea": CoreTextarea;
         "core-toggle": CoreToggle;
     }
@@ -680,6 +708,7 @@ declare module "@stencil/core" {
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
+            "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
         }
