@@ -110,24 +110,6 @@ export namespace Components {
          */
         "target": string | undefined;
     }
-    interface CoreFieldLabel {
-        /**
-          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
-         */
-        "color"?: string;
-        /**
-          * If `true`, the user cannot interact with the nested element (typically core-input).
-         */
-        "disabled": boolean;
-        /**
-          * The display determines where and how the label behaves inside an item.
-         */
-        "display"?: "inline" | "block";
-        /**
-          * Applies the provided URL to the helpIcon href.
-         */
-        "helpurl"?: string | null;
-    }
     interface CoreIcon {
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -204,6 +186,24 @@ export namespace Components {
          */
         "type"?: string;
     }
+    interface CoreLabel {
+        /**
+          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+         */
+        "color"?: string;
+        /**
+          * If `true`, the user cannot interact with the nested element (typically core-input).
+         */
+        "disabled": boolean;
+        /**
+          * The display determines where and how the label behaves inside an item.
+         */
+        "display"?: "inline" | "block";
+        /**
+          * Applies the provided URL to the helpIcon href.
+         */
+        "helpurl"?: string | null;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -221,6 +221,24 @@ export namespace Components {
           * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
         "required": boolean;
+    }
+    interface CoreTag {
+        /**
+          * Allows the tag to be closeable and removed from the view.
+         */
+        "closeable": boolean;
+        /**
+          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="blue"`, `color="green"`, `color="yellow"`, `color="red"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The pre-defined tag size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The tag variation. Use: `"default"` or `"light"`. Default variation is `"default"`.
+         */
+        "variation"?: "default" | "light";
     }
     interface CoreTextarea {
         /**
@@ -304,12 +322,6 @@ declare global {
         prototype: HTMLCoreDropdownItemElement;
         new (): HTMLCoreDropdownItemElement;
     };
-    interface HTMLCoreFieldLabelElement extends Components.CoreFieldLabel, HTMLStencilElement {
-    }
-    var HTMLCoreFieldLabelElement: {
-        prototype: HTMLCoreFieldLabelElement;
-        new (): HTMLCoreFieldLabelElement;
-    };
     interface HTMLCoreIconElement extends Components.CoreIcon, HTMLStencilElement {
     }
     var HTMLCoreIconElement: {
@@ -322,11 +334,23 @@ declare global {
         prototype: HTMLCoreInputElement;
         new (): HTMLCoreInputElement;
     };
+    interface HTMLCoreLabelElement extends Components.CoreLabel, HTMLStencilElement {
+    }
+    var HTMLCoreLabelElement: {
+        prototype: HTMLCoreLabelElement;
+        new (): HTMLCoreLabelElement;
+    };
     interface HTMLCoreRadioElement extends Components.CoreRadio, HTMLStencilElement {
     }
     var HTMLCoreRadioElement: {
         prototype: HTMLCoreRadioElement;
         new (): HTMLCoreRadioElement;
+    };
+    interface HTMLCoreTagElement extends Components.CoreTag, HTMLStencilElement {
+    }
+    var HTMLCoreTagElement: {
+        prototype: HTMLCoreTagElement;
+        new (): HTMLCoreTagElement;
     };
     interface HTMLCoreTextareaElement extends Components.CoreTextarea, HTMLStencilElement {
     }
@@ -345,10 +369,11 @@ declare global {
         "core-checkbox": HTMLCoreCheckboxElement;
         "core-dropdown": HTMLCoreDropdownElement;
         "core-dropdown-item": HTMLCoreDropdownItemElement;
-        "core-field-label": HTMLCoreFieldLabelElement;
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
+        "core-label": HTMLCoreLabelElement;
         "core-radio": HTMLCoreRadioElement;
+        "core-tag": HTMLCoreTagElement;
         "core-textarea": HTMLCoreTextareaElement;
         "core-toggle": HTMLCoreToggleElement;
     }
@@ -458,24 +483,6 @@ declare namespace LocalJSX {
          */
         "target"?: string | undefined;
     }
-    interface CoreFieldLabel {
-        /**
-          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
-         */
-        "color"?: string;
-        /**
-          * If `true`, the user cannot interact with the nested element (typically core-input).
-         */
-        "disabled"?: boolean;
-        /**
-          * The display determines where and how the label behaves inside an item.
-         */
-        "display"?: "inline" | "block";
-        /**
-          * Applies the provided URL to the helpIcon href.
-         */
-        "helpurl"?: string | null;
-    }
     interface CoreIcon {
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -548,6 +555,24 @@ declare namespace LocalJSX {
          */
         "type"?: string;
     }
+    interface CoreLabel {
+        /**
+          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+         */
+        "color"?: string;
+        /**
+          * If `true`, the user cannot interact with the nested element (typically core-input).
+         */
+        "disabled"?: boolean;
+        /**
+          * The display determines where and how the label behaves inside an item.
+         */
+        "display"?: "inline" | "block";
+        /**
+          * Applies the provided URL to the helpIcon href.
+         */
+        "helpurl"?: string | null;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -565,6 +590,24 @@ declare namespace LocalJSX {
           * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
         "required"?: boolean;
+    }
+    interface CoreTag {
+        /**
+          * Allows the tag to be closeable and removed from the view.
+         */
+        "closeable"?: boolean;
+        /**
+          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="blue"`, `color="green"`, `color="yellow"`, `color="red"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The pre-defined tag size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The tag variation. Use: `"default"` or `"light"`. Default variation is `"default"`.
+         */
+        "variation"?: "default" | "light";
     }
     interface CoreTextarea {
         /**
@@ -623,10 +666,11 @@ declare namespace LocalJSX {
         "core-checkbox": CoreCheckbox;
         "core-dropdown": CoreDropdown;
         "core-dropdown-item": CoreDropdownItem;
-        "core-field-label": CoreFieldLabel;
         "core-icon": CoreIcon;
         "core-input": CoreInput;
+        "core-label": CoreLabel;
         "core-radio": CoreRadio;
+        "core-tag": CoreTag;
         "core-textarea": CoreTextarea;
         "core-toggle": CoreToggle;
     }
@@ -639,10 +683,11 @@ declare module "@stencil/core" {
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
             "core-dropdown": LocalJSX.CoreDropdown & JSXBase.HTMLAttributes<HTMLCoreDropdownElement>;
             "core-dropdown-item": LocalJSX.CoreDropdownItem & JSXBase.HTMLAttributes<HTMLCoreDropdownItemElement>;
-            "core-field-label": LocalJSX.CoreFieldLabel & JSXBase.HTMLAttributes<HTMLCoreFieldLabelElement>;
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
+            "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
+            "core-tag": LocalJSX.CoreTag & JSXBase.HTMLAttributes<HTMLCoreTagElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
         }
