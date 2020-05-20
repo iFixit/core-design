@@ -18,6 +18,18 @@
     padding-right: 3px;
   }
 
+  &([closable]) .icon-outter {
+    color: fade(@color-white, 50%);
+  }
+
+  &([closable].light) .icon-outter {
+    color: fade(@color-black, 15%);
+  }
+
+  &([closable].yellow) .icon-outter {
+    color: fade(@color-gray-8, 25%);
+  }
+
   // @Prop color
   // TODO: (IR) figure out an automated way to maintain
   &(.black) .native-element {
