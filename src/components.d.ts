@@ -6,6 +6,20 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CoreBadge {
+        /**
+          * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined badge size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+         */
+        "variation"?: "bordered" | "filled";
+    }
     interface CoreButton {
         /**
           * If `true`, the user cannot interact with the button.
@@ -280,6 +294,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCoreBadgeElement extends Components.CoreBadge, HTMLStencilElement {
+    }
+    var HTMLCoreBadgeElement: {
+        prototype: HTMLCoreBadgeElement;
+        new (): HTMLCoreBadgeElement;
+    };
     interface HTMLCoreButtonElement extends Components.CoreButton, HTMLStencilElement {
     }
     var HTMLCoreButtonElement: {
@@ -341,6 +361,7 @@ declare global {
         new (): HTMLCoreToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "core-badge": HTMLCoreBadgeElement;
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
         "core-dropdown": HTMLCoreDropdownElement;
@@ -354,6 +375,20 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CoreBadge {
+        /**
+          * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined badge size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+         */
+        "variation"?: "bordered" | "filled";
+    }
     interface CoreButton {
         /**
           * If `true`, the user cannot interact with the button.
@@ -619,6 +654,7 @@ declare namespace LocalJSX {
         "required"?: boolean;
     }
     interface IntrinsicElements {
+        "core-badge": CoreBadge;
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
         "core-dropdown": CoreDropdown;
@@ -635,6 +671,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
             "core-dropdown": LocalJSX.CoreDropdown & JSXBase.HTMLAttributes<HTMLCoreDropdownElement>;

@@ -74,6 +74,9 @@
       .toggles.grid > .grid {
         grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
       }
+      .badges.grid {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+      }
     </style>
   </head>
   <body>
@@ -578,6 +581,29 @@
             Black color large
             <core-toggle slot="label-right" color="black" checked large alt></core-toggle>
           </core-field-label>
+        </div>
+      </div>
+    </section>
+    <section id="badges">
+      <h2>Badges</h2>
+      <div class="grid">
+        <div class="badges grid">
+          <core-badge>8</core-badge>
+          <core-badge variation="bordered">8</core-badge>
+          <core-badge>345</core-badge>
+          <core-badge variation="bordered">345</core-badge>
+        </div>
+        <div class="badges grid">
+          <core-badge color="black">8</core-badge>
+          <core-badge color="black" variation="bordered">8</core-badge>
+          <core-badge color="black">345</core-badge>
+          <core-badge color="black" variation="bordered">345</core-badge>
+        </div>
+        <div class="badges grid">
+          <core-badge size="small">8</core-badge>
+          <core-badge size="small" variation="bordered">8</core-badge>
+          <core-badge size="small">345</core-badge>
+          <core-badge size="small" variation="bordered">345</core-badge>
         </div>
       </div>
     </section>

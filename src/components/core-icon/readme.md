@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property    | Attribute    | Description                                                                                                                                                                                   | Type           | Default     |
@@ -14,15 +15,15 @@
 | `size`      | `size`       | The size of the icon. Available options are: `"16"` and `"24"`. Default, `16`.                                                                                                                | `"16" \| "24"` | `"16"`      |
 | `src`       | `src`        | Specifies the exact `src` of an SVG file to use.                                                                                                                                              | `string`       | `undefined` |
 
+
 ## Dependencies
 
 ### Used by
 
-- [core-field-label](../core-field-label)
-- [core-input](../core-input)
+ - [core-field-label](../core-field-label)
+ - [core-input](../core-input)
 
 ### Graph
-
 ```mermaid
 graph TD;
   core-field-label --> core-icon
@@ -30,6 +31,6 @@ graph TD;
   style core-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*
