@@ -75,7 +75,13 @@
         grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
       }
       .badges.grid {
-        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      .badges > div {
+        display: flex;
+      }
+      .badges core-badge {
+        margin-right: 16px;
       }
       .spinners {
         display: flex;
@@ -596,22 +602,61 @@
       <h2>Badges</h2>
       <div class="grid">
         <div class="badges grid">
-          <core-badge>8</core-badge>
-          <core-badge variation="bordered">8</core-badge>
-          <core-badge>345</core-badge>
-          <core-badge variation="bordered">345</core-badge>
+          <span class="hint">Large</span>
+          <span class="hint">Small</span>
+          <span class="hint">Dot</span>
         </div>
         <div class="badges grid">
-          <core-badge color="black">8</core-badge>
-          <core-badge color="black" variation="bordered">8</core-badge>
-          <core-badge color="black">345</core-badge>
-          <core-badge color="black" variation="bordered">345</core-badge>
+          <div>
+            <core-badge>1</core-badge>
+            <core-badge>23</core-badge>
+            <core-badge>456</core-badge>
+          </div>
+          <div>
+            <core-badge size="small">1</core-badge>
+            <core-badge size="small">23</core-badge>
+            <core-badge size="small">456</core-badge>
+          </div>
+          <div>
+            <core-badge variation="dot"></core-badge>
+            <core-badge variation="dot" size="small"></core-badge>
+          </div>
         </div>
         <div class="badges grid">
-          <core-badge size="small">8</core-badge>
-          <core-badge size="small" variation="bordered">8</core-badge>
-          <core-badge size="small">345</core-badge>
-          <core-badge size="small" variation="bordered">345</core-badge>
+          <div>
+            <core-badge color="black">1</core-badge>
+            <core-badge color="black">23</core-badge>
+            <core-badge color="black">456</core-badge>
+          </div>
+          <div>
+            <core-badge color="black" size="small">1</core-badge>
+            <core-badge color="black" size="small">23</core-badge>
+            <core-badge color="black" size="small">456</core-badge>
+          </div>
+        </div>
+        <div class="badges grid">
+          <div>
+            <core-badge variation="border">1</core-badge>
+            <core-badge variation="border">23</core-badge>
+            <core-badge variation="border">456</core-badge>
+          </div>
+          <div>
+            <core-badge variation="border" size="small">1</core-badge>
+            <core-badge variation="border" size="small">23</core-badge>
+            <core-badge variation="border" size="small">456</core-badge>
+          </div>
+        </div>
+        <div class="badges grid">
+          <div>
+            <core-badge color="black" variation="border">1</core-badge>
+            <core-badge color="black" variation="border">23</core-badge>
+            <core-badge color="black" variation="border">456</core-badge>
+          </div>
+          <div>
+            <core-badge color="black" variation="border" size="small">1</core-badge>
+            <core-badge color="black" variation="border" size="small">23</core-badge>
+            <core-badge color="black" variation="border" size="small">456</core-badge>
+          </div>
         </div>
       </div>
     </section>

@@ -16,9 +16,9 @@ export namespace Components {
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`. Default variation is `"fill"`.
          */
-        "variation"?: "bordered" | "filled";
+        "variation"?: "border" | "dot" | "fill";
     }
     interface CoreButton {
         /**
@@ -402,9 +402,9 @@ declare namespace LocalJSX {
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`. Default variation is `"fill"`.
          */
-        "variation"?: "bordered" | "filled";
+        "variation"?: "border" | "dot" | "fill";
     }
     interface CoreButton {
         /**

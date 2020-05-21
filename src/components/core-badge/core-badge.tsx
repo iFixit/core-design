@@ -31,10 +31,10 @@ export class Badge implements ComponentInterface {
 
   /**
    * The badge variation.
-   * Use: `"filled"` or `"bordered"`.
-   * Default variation is `"filled"`.
+   * Use: `"border"`, `"dot"`, or `"fill"`.
+   * Default variation is `"fill"`.
    */
-  @Prop() variation?: "bordered" | "filled" = "filled";
+  @Prop() variation?: "border" | "dot" | "fill" = "fill";
 
   render() {
     const { color, variation } = this;
