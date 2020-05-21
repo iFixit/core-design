@@ -91,23 +91,27 @@
   // @Prop small size
   &([size="small"]) .native-element {
     font-size: 12px;
-    height: 16px;
-    padding: 0 @space-1;
+    font-weight: 500;
+    height: 18px;
+    line-height: 14px;
+    padding: 2px @space-1;
   }
 }
 
 // native element styles with intentional lower specificity
 .native-element {
   border-radius: 3px;
+  box-sizing: border-box;
   color: @color-white;
   cursor: default;
   display: flex;
   font: inherit;
-  font-weight: bold;
+  font-weight: 600;
+  height: 24px;
   letter-spacing: 0.02em;
   line-height: 16px;
   max-width: 100%;
-  padding: 3px 6px;
+  padding: @space-1 6px;
   text-align: center;
   white-space: nowrap;
 }
