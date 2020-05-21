@@ -51,12 +51,13 @@
 
   // @Prop small size
   &([size="small"]) .native-element {
+    border-radius: calc(16px / 2);
     font-size: 11px;
     height: 16px;
     letter-spacing: unset;
-    line-height: 16px;
+    line-height: 12px;
     min-width: 16px;
-    padding: 0 4px;
+    padding: 2px @space-1;
   }
 
   &([size="small"].dot) .native-element::before {
@@ -68,7 +69,7 @@
 // native element styles with intentional lower specificity
 .native-element {
   align-items: center;
-  border-radius: 23px;
+  border-radius: calc(23px / 2);
   box-sizing: border-box;
   cursor: default;
   display: flex;
@@ -77,9 +78,9 @@
   font-weight: bold;
   height: 23px;
   justify-content: center;
-  line-height: 23px;
+  line-height: 15px;
   max-width: 100%;
   min-width: 23px;
-  padding: 0 7px;
+  padding: @space-1 7px;
   white-space: nowrap;
 }
