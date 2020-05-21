@@ -6,6 +6,20 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CoreBadge {
+        /**
+          * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined badge size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+         */
+        "variation"?: "bordered" | "filled";
+    }
     interface CoreButton {
         /**
           * If `true`, the user cannot interact with the button.
@@ -240,6 +254,16 @@ export namespace Components {
          */
         "variation"?: "default" | "light";
     }
+    interface CoreSpinner {
+        /**
+          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+         */
+        "size"?: "small" | "medium" | "large";
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -298,6 +322,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCoreBadgeElement extends Components.CoreBadge, HTMLStencilElement {
+    }
+    var HTMLCoreBadgeElement: {
+        prototype: HTMLCoreBadgeElement;
+        new (): HTMLCoreBadgeElement;
+    };
     interface HTMLCoreButtonElement extends Components.CoreButton, HTMLStencilElement {
     }
     var HTMLCoreButtonElement: {
@@ -352,6 +382,12 @@ declare global {
         prototype: HTMLCoreTagElement;
         new (): HTMLCoreTagElement;
     };
+    interface HTMLCoreSpinnerElement extends Components.CoreSpinner, HTMLStencilElement {
+    }
+    var HTMLCoreSpinnerElement: {
+        prototype: HTMLCoreSpinnerElement;
+        new (): HTMLCoreSpinnerElement;
+    };
     interface HTMLCoreTextareaElement extends Components.CoreTextarea, HTMLStencilElement {
     }
     var HTMLCoreTextareaElement: {
@@ -365,6 +401,7 @@ declare global {
         new (): HTMLCoreToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "core-badge": HTMLCoreBadgeElement;
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
         "core-dropdown": HTMLCoreDropdownElement;
@@ -374,11 +411,26 @@ declare global {
         "core-label": HTMLCoreLabelElement;
         "core-radio": HTMLCoreRadioElement;
         "core-tag": HTMLCoreTagElement;
+        "core-spinner": HTMLCoreSpinnerElement;
         "core-textarea": HTMLCoreTextareaElement;
         "core-toggle": HTMLCoreToggleElement;
     }
 }
 declare namespace LocalJSX {
+    interface CoreBadge {
+        /**
+          * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined badge size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+         */
+        "variation"?: "bordered" | "filled";
+    }
     interface CoreButton {
         /**
           * If `true`, the user cannot interact with the button.
@@ -609,6 +661,16 @@ declare namespace LocalJSX {
          */
         "variation"?: "default" | "light";
     }
+    interface CoreSpinner {
+        /**
+          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+         */
+        "size"?: "small" | "medium" | "large";
+    }
     interface CoreTextarea {
         /**
           * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
@@ -662,6 +724,7 @@ declare namespace LocalJSX {
         "required"?: boolean;
     }
     interface IntrinsicElements {
+        "core-badge": CoreBadge;
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
         "core-dropdown": CoreDropdown;
@@ -671,6 +734,7 @@ declare namespace LocalJSX {
         "core-label": CoreLabel;
         "core-radio": CoreRadio;
         "core-tag": CoreTag;
+        "core-spinner": CoreSpinner;
         "core-textarea": CoreTextarea;
         "core-toggle": CoreToggle;
     }
@@ -679,6 +743,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
             "core-dropdown": LocalJSX.CoreDropdown & JSXBase.HTMLAttributes<HTMLCoreDropdownElement>;
@@ -688,6 +753,7 @@ declare module "@stencil/core" {
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-tag": LocalJSX.CoreTag & JSXBase.HTMLAttributes<HTMLCoreTagElement>;
+            "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
         }

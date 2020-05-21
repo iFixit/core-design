@@ -22,6 +22,7 @@
 
  - [core-input](../core-input)
  - [core-label](../core-label)
+ - [core-input](../core-input)
 
 ### Graph
 ```mermaid
