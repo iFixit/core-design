@@ -224,6 +224,24 @@ export namespace Components {
          */
         "type"?: string;
     }
+    interface CoreProgress {
+        /**
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The progress bar maximum value.
+         */
+        "max": number;
+        /**
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The progress bar value.
+         */
+        "value": number | undefined;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -364,6 +382,12 @@ declare global {
         prototype: HTMLCoreInputElement;
         new (): HTMLCoreInputElement;
     };
+    interface HTMLCoreProgressElement extends Components.CoreProgress, HTMLStencilElement {
+    }
+    var HTMLCoreProgressElement: {
+        prototype: HTMLCoreProgressElement;
+        new (): HTMLCoreProgressElement;
+    };
     interface HTMLCoreRadioElement extends Components.CoreRadio, HTMLStencilElement {
     }
     var HTMLCoreRadioElement: {
@@ -398,6 +422,7 @@ declare global {
         "core-field-label": HTMLCoreFieldLabelElement;
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
+        "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
         "core-spinner": HTMLCoreSpinnerElement;
         "core-textarea": HTMLCoreTextareaElement;
@@ -619,6 +644,24 @@ declare namespace LocalJSX {
          */
         "type"?: string;
     }
+    interface CoreProgress {
+        /**
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The progress bar maximum value.
+         */
+        "max"?: number;
+        /**
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The progress bar value.
+         */
+        "value"?: number | undefined;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -709,6 +752,7 @@ declare namespace LocalJSX {
         "core-field-label": CoreFieldLabel;
         "core-icon": CoreIcon;
         "core-input": CoreInput;
+        "core-progress": CoreProgress;
         "core-radio": CoreRadio;
         "core-spinner": CoreSpinner;
         "core-textarea": CoreTextarea;
@@ -728,6 +772,7 @@ declare module "@stencil/core" {
             "core-field-label": LocalJSX.CoreFieldLabel & JSXBase.HTMLAttributes<HTMLCoreFieldLabelElement>;
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
+            "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;

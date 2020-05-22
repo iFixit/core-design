@@ -91,6 +91,12 @@
         margin-right: 32px;
         margin-bottom: auto;
       }
+      .progress.grid {
+        grid-template-columns: repeat(auto-fill, minmax(227px, 1fr));
+      }
+      .progress.grid core-progress {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -702,6 +708,32 @@
             A notification message of information.
             <core-icon slot="icon" icon="info"></core-icon>
           </core-alert>
+        </div>
+      </div>
+    </section>
+    <section id="progress">
+      <h2>Progress</h2>
+      <div class="grid">
+        <div class="progress grid">
+          <core-progress value="60"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="33" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="100" color="green" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="75" color="yellow" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="50" color="red" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="25" color="black" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="0" color="black" size="small"></core-progress>
         </div>
       </div>
     </section>
