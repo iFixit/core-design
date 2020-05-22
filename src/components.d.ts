@@ -300,6 +300,12 @@ export namespace Components {
          */
         "value"?: string | null;
     }
+    interface CoreToast {
+        /**
+          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="white"`.
+         */
+        "color"?: "white" | "green" | "yellow" | "red";
+    }
     interface CoreToggle {
         /**
           * If applied, the element is rendered with the alternate styling. Use: `"alt"`.
@@ -406,6 +412,12 @@ declare global {
         prototype: HTMLCoreTextareaElement;
         new (): HTMLCoreTextareaElement;
     };
+    interface HTMLCoreToastElement extends Components.CoreToast, HTMLStencilElement {
+    }
+    var HTMLCoreToastElement: {
+        prototype: HTMLCoreToastElement;
+        new (): HTMLCoreToastElement;
+    };
     interface HTMLCoreToggleElement extends Components.CoreToggle, HTMLStencilElement {
     }
     var HTMLCoreToggleElement: {
@@ -426,6 +438,7 @@ declare global {
         "core-radio": HTMLCoreRadioElement;
         "core-spinner": HTMLCoreSpinnerElement;
         "core-textarea": HTMLCoreTextareaElement;
+        "core-toast": HTMLCoreToastElement;
         "core-toggle": HTMLCoreToggleElement;
     }
 }
@@ -716,6 +729,12 @@ declare namespace LocalJSX {
          */
         "value"?: string | null;
     }
+    interface CoreToast {
+        /**
+          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="white"`.
+         */
+        "color"?: "white" | "green" | "yellow" | "red";
+    }
     interface CoreToggle {
         /**
           * If applied, the element is rendered with the alternate styling. Use: `"alt"`.
@@ -756,6 +775,7 @@ declare namespace LocalJSX {
         "core-radio": CoreRadio;
         "core-spinner": CoreSpinner;
         "core-textarea": CoreTextarea;
+        "core-toast": CoreToast;
         "core-toggle": CoreToggle;
     }
 }
@@ -776,6 +796,7 @@ declare module "@stencil/core" {
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
+            "core-toast": LocalJSX.CoreToast & JSXBase.HTMLAttributes<HTMLCoreToastElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
         }
     }
