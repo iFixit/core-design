@@ -89,7 +89,13 @@
         grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
       }
       .badges.grid {
-        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      .badges > div {
+        display: flex;
+      }
+      .badges core-badge {
+        margin-right: 16px;
       }
       .spinners {
         display: flex;
@@ -98,6 +104,12 @@
         margin-top: auto;
         margin-right: 32px;
         margin-bottom: auto;
+      }
+      .progress.grid {
+        grid-template-columns: repeat(auto-fill, minmax(227px, 1fr));
+      }
+      .progress.grid core-progress {
+        width: 100%;
       }
     </style>
   </head>
@@ -740,22 +752,61 @@
       <h2>Badges</h2>
       <div class="grid">
         <div class="badges grid">
-          <core-badge>8</core-badge>
-          <core-badge variation="bordered">8</core-badge>
-          <core-badge>345</core-badge>
-          <core-badge variation="bordered">345</core-badge>
+          <span class="hint">Large</span>
+          <span class="hint">Small</span>
+          <span class="hint">Dot</span>
         </div>
         <div class="badges grid">
-          <core-badge color="black">8</core-badge>
-          <core-badge color="black" variation="bordered">8</core-badge>
-          <core-badge color="black">345</core-badge>
-          <core-badge color="black" variation="bordered">345</core-badge>
+          <div>
+            <core-badge>1</core-badge>
+            <core-badge>23</core-badge>
+            <core-badge>456</core-badge>
+          </div>
+          <div>
+            <core-badge size="small">1</core-badge>
+            <core-badge size="small">23</core-badge>
+            <core-badge size="small">456</core-badge>
+          </div>
+          <div>
+            <core-badge variation="dot"></core-badge>
+            <core-badge variation="dot" size="small"></core-badge>
+          </div>
         </div>
         <div class="badges grid">
-          <core-badge size="small">8</core-badge>
-          <core-badge size="small" variation="bordered">8</core-badge>
-          <core-badge size="small">345</core-badge>
-          <core-badge size="small" variation="bordered">345</core-badge>
+          <div>
+            <core-badge color="black">1</core-badge>
+            <core-badge color="black">23</core-badge>
+            <core-badge color="black">456</core-badge>
+          </div>
+          <div>
+            <core-badge color="black" size="small">1</core-badge>
+            <core-badge color="black" size="small">23</core-badge>
+            <core-badge color="black" size="small">456</core-badge>
+          </div>
+        </div>
+        <div class="badges grid">
+          <div>
+            <core-badge variation="border">1</core-badge>
+            <core-badge variation="border">23</core-badge>
+            <core-badge variation="border">456</core-badge>
+          </div>
+          <div>
+            <core-badge variation="border" size="small">1</core-badge>
+            <core-badge variation="border" size="small">23</core-badge>
+            <core-badge variation="border" size="small">456</core-badge>
+          </div>
+        </div>
+        <div class="badges grid">
+          <div>
+            <core-badge color="black" variation="border">1</core-badge>
+            <core-badge color="black" variation="border">23</core-badge>
+            <core-badge color="black" variation="border">456</core-badge>
+          </div>
+          <div>
+            <core-badge color="black" variation="border" size="small">1</core-badge>
+            <core-badge color="black" variation="border" size="small">23</core-badge>
+            <core-badge color="black" variation="border" size="small">456</core-badge>
+          </div>
         </div>
       </div>
     </section>
@@ -772,6 +823,61 @@
           <core-spinner color="green"></core-spinner>
           <core-spinner color="yellow" size="small"></core-spinner>
           <core-spinner color="red" size="small"></core-spinner>
+        </div>
+      </div>
+    </section>
+    <section id="alerts">
+      <h2>Alerts</h2>
+      <div class="grid">
+        <div class="alerts extend-2">
+          <core-alert>
+            <core-icon slot="icon" icon="globe"></core-icon>
+            A notification message of information.
+          </core-alert>
+        </div>
+        <div class="alerts extend-2">
+          <core-alert color="green">
+            <core-icon slot="icon" icon="check"></core-icon>
+            A notification message of information.
+          </core-alert>
+        </div>
+        <div class="alerts extend-2">
+          <core-alert color="yellow">
+            <core-icon slot="icon" icon="info"></core-icon>
+            A notification message of information.
+          </core-alert>
+        </div>
+        <div class="alerts extend-2">
+          <core-alert color="red">
+            A notification message of information.
+            <core-icon slot="icon" icon="info"></core-icon>
+          </core-alert>
+        </div>
+      </div>
+    </section>
+    <section id="progress">
+      <h2>Progress</h2>
+      <div class="grid">
+        <div class="progress grid">
+          <core-progress value="60"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="33" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="100" color="green" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="75" color="yellow" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="50" color="red" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="25" color="black" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="0" color="black" size="small"></core-progress>
         </div>
       </div>
     </section>

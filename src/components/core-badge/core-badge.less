@@ -4,7 +4,7 @@
 :host {
   display: flex;
   font-family: "Inter", sans-serif;
-  font-feature-settings: "ss01" on, "ss02" on;
+  font-feature-settings: "tnum" on, "lnum" on, "ss01" on;
   font-size: 13px;
   line-height: 1.143;
   text-rendering: optimizeLegibility;
@@ -21,40 +21,56 @@
   }
 
   // @Prop variation
-  &(.bordered) .native-element {
+  &(.border) .native-element {
     background: @color-white;
-    box-shadow: 0 0 0 1px currentColor;
+    box-shadow: 0 0 0 1px currentColor inset;
     color: currentColor;
   }
 
-  &(.filled) .native-element {
-    color: @color-white;
-  }
-
-  &(.bordered.black) .native-element {
-    box-shadow: 0 0 0 1px @color-gray-4;
+  &(.border.black) .native-element {
+    box-shadow: 0 0 0 1px @color-gray-4 inset;
     color: @color-gray-7;
   }
 
-  &(.bordered.red) .native-element {
+  &(.border.red) .native-element {
+    box-shadow: 0 0 0 1px @color-red-light-2 inset;
     color: @color-red;
+  }
+
+  &(.dot) .native-element::before {
+    content: "";
+    background: @color-white;
+    border-radius: 50%;
+    height: 5px;
+    margin: auto;
+    width: 5px;
+  }
+
+  &(.fill) .native-element {
+    color: @color-white;
   }
 
   // @Prop small size
   &([size="small"]) .native-element {
+    border-radius: calc(16px / 2);
     font-size: 11px;
     height: 16px;
     letter-spacing: unset;
-    line-height: 16px;
+    line-height: 12px;
     min-width: 16px;
-    padding: 0 3.6px;
+    padding: 2px @space-1;
+  }
+
+  &([size="small"].dot) .native-element::before {
+    height: 4px;
+    width: 4px;
   }
 }
 
 // native element styles with intentional lower specificity
 .native-element {
   align-items: center;
-  border-radius: 23px;
+  border-radius: calc(23px / 2);
   box-sizing: border-box;
   cursor: default;
   display: flex;
@@ -63,10 +79,9 @@
   font-weight: bold;
   height: 23px;
   justify-content: center;
-  letter-spacing: 0.05em;
-  line-height: 23px;
+  line-height: 15px;
   max-width: 100%;
-  min-width: 24px;
-  padding: 0 7.71px;
+  min-width: 23px;
+  padding: @space-1 7px;
   white-space: nowrap;
 }

@@ -1,0 +1,77 @@
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+// :host targets the custom element compiled by Stencil
+:host {
+  display: flex;
+
+  // @Prop color
+  &(.black) progress::-webkit-progress-value {
+    background-color: @color-black;
+  }
+  &(.black) progress::-moz-progress-bar {
+    background-color: @color-black;
+  }
+
+  &(.blue) progress::-webkit-progress-value {
+    background-color: @color-blue;
+  }
+  &(.blue) progress::-moz-progress-bar {
+    background-color: @color-blue;
+  }
+
+  &(.green) progress::-webkit-progress-value {
+    background-color: @color-green;
+  }
+  &(.green) progress::-moz-progress-bar {
+    background-color: @color-green;
+  }
+
+  &(.yellow) progress::-webkit-progress-value {
+    background-color: @color-yellow;
+  }
+  &(.yellow) progress::-moz-progress-bar {
+    background-color: @color-yellow;
+  }
+
+  &(.red) progress::-webkit-progress-value {
+    background-color: @color-red;
+  }
+  &(.red) progress::-moz-progress-bar {
+    background-color: @color-red;
+  }
+
+  // @Prop small size
+  &([size="small"]) progress,
+  &([size="small"]) progress::-webkit-progress-bar {
+    border-radius: @border-radius-sm;
+    height: @space-1;
+  }
+}
+
+// native element styles with intentional lower specificity
+progress {
+  appearance: none;
+  border: none;
+  border-radius: @border-radius-md;
+  box-sizing: border-box;
+  color: @color-blue; // progress bar color for IE
+  cursor: default;
+  height: @space-2;
+  min-width: 100px;
+  overflow: hidden;
+  width: inherit;
+
+  &::-moz-progress-bar {
+    background-color: @color-blue;
+    border-radius: @border-radius-md;
+  }
+}
+
+progress::-webkit-progress-bar {
+  background-color: @color-gray-2;
+}
+
+progress::-webkit-progress-value {
+  background-color: @color-blue;
+  border-radius: @border-radius-md;
+}

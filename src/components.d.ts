@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CoreAlert {
+        /**
+          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+         */
+        "color"?: "gray" | "green" | "yellow" | "red";
+    }
     interface CoreBadge {
         /**
           * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
@@ -16,9 +22,9 @@ export namespace Components {
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`. Default variation is `"fill"`.
          */
-        "variation"?: "bordered" | "filled";
+        "variation"?: "border" | "dot" | "fill";
     }
     interface CoreButton {
         /**
@@ -218,6 +224,24 @@ export namespace Components {
          */
         "helpurl"?: string | null;
     }
+    interface CoreProgress {
+        /**
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The progress bar maximum value.
+         */
+        "max": number;
+        /**
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The progress bar value.
+         */
+        "value": number | undefined;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -322,6 +346,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCoreAlertElement extends Components.CoreAlert, HTMLStencilElement {
+    }
+    var HTMLCoreAlertElement: {
+        prototype: HTMLCoreAlertElement;
+        new (): HTMLCoreAlertElement;
+    };
     interface HTMLCoreBadgeElement extends Components.CoreBadge, HTMLStencilElement {
     }
     var HTMLCoreBadgeElement: {
@@ -369,6 +399,12 @@ declare global {
     var HTMLCoreLabelElement: {
         prototype: HTMLCoreLabelElement;
         new (): HTMLCoreLabelElement;
+    }
+    interface HTMLCoreProgressElement extends Components.CoreProgress, HTMLStencilElement {
+    }
+    var HTMLCoreProgressElement: {
+        prototype: HTMLCoreProgressElement;
+        new (): HTMLCoreProgressElement;
     };
     interface HTMLCoreRadioElement extends Components.CoreRadio, HTMLStencilElement {
     }
@@ -401,6 +437,7 @@ declare global {
         new (): HTMLCoreToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "core-alert": HTMLCoreAlertElement;
         "core-badge": HTMLCoreBadgeElement;
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
@@ -409,6 +446,7 @@ declare global {
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
+        "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
         "core-tag": HTMLCoreTagElement;
         "core-spinner": HTMLCoreSpinnerElement;
@@ -417,6 +455,12 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CoreAlert {
+        /**
+          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+         */
+        "color"?: "gray" | "green" | "yellow" | "red";
+    }
     interface CoreBadge {
         /**
           * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
@@ -427,9 +471,9 @@ declare namespace LocalJSX {
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"filled"` or `"bordered"`. Default variation is `"filled"`.
+          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`. Default variation is `"fill"`.
          */
-        "variation"?: "bordered" | "filled";
+        "variation"?: "border" | "dot" | "fill";
     }
     interface CoreButton {
         /**
@@ -625,6 +669,24 @@ declare namespace LocalJSX {
          */
         "helpurl"?: string | null;
     }
+    interface CoreProgress {
+        /**
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The progress bar maximum value.
+         */
+        "max"?: number;
+        /**
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The progress bar value.
+         */
+        "value"?: number | undefined;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -724,6 +786,7 @@ declare namespace LocalJSX {
         "required"?: boolean;
     }
     interface IntrinsicElements {
+        "core-alert": CoreAlert;
         "core-badge": CoreBadge;
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
@@ -732,6 +795,7 @@ declare namespace LocalJSX {
         "core-icon": CoreIcon;
         "core-input": CoreInput;
         "core-label": CoreLabel;
+        "core-progress": CoreProgress;
         "core-radio": CoreRadio;
         "core-tag": CoreTag;
         "core-spinner": CoreSpinner;
@@ -743,6 +807,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "core-alert": LocalJSX.CoreAlert & JSXBase.HTMLAttributes<HTMLCoreAlertElement>;
             "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
@@ -751,6 +816,7 @@ declare module "@stencil/core" {
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
+            "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-tag": LocalJSX.CoreTag & JSXBase.HTMLAttributes<HTMLCoreTagElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
