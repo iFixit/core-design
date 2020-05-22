@@ -8,11 +8,11 @@ import {
 } from "@stencil/core";
 
 @Component({
-  tag: "core-field-label",
-  styleUrl: "core-field-label.less",
+  tag: "core-label",
+  styleUrl: "core-label.less",
   shadow: true,
 })
-export class FieldLabel implements ComponentInterface {
+export class Label implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
@@ -42,7 +42,7 @@ export class FieldLabel implements ComponentInterface {
     return (
       <Host
         class={{
-          "core-field-label": true,
+          "core-label": true,
           [display]: true,
         }}
       >

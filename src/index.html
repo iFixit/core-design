@@ -26,7 +26,13 @@
         -moz-osx-font-smoothing: auto;
       }
       h2 {
+        align-items: center;
+        display: flex;
         margin-bottom: 2em;
+      }
+      h2:before {
+        content: url(https://files-4wjdvfw9u.now.sh/section.svg);
+        margin-right: 8px;
       }
       section {
         padding-top: 8px;
@@ -73,6 +79,14 @@
       }
       .toggles.grid > .grid {
         grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+      }
+      .tags.grid {
+        grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+      }
+      .tags.grid > div {
+        display: grid;
+        grid-row: 1;
+        grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
       }
       .badges.grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -292,14 +306,14 @@
               <core-input placeholder="Icon Input" icon="calendar"></core-input>
               <core-input placeholder="Error Input" icon="alert-circle" class="core-error"></core-input>
               <core-input placeholder="Success Input" icon="check" class="core-success"></core-input>
-              <core-field-label>
-                Field Label
+              <core-label>
+                Label
                 <core-input slot="label-input" id="field-label" placeholder="Placeholder"></core-input>
-              </core-field-label>
-              <core-field-label helpurl="#">
-                Help Field Label
+              </core-label>
+              <core-label helpurl="#">
+                Help Label
                 <core-input slot="label-input" id="help-field-label" placeholder="Placeholder"></core-input>
-              </core-field-label>
+              </core-label>
             </div>
             <div class="textarea">
               <core-textarea placeholder="Text area" rows="6" cols="50"></core-textarea>
@@ -378,44 +392,44 @@
           <span>Large</span>
         </div>
         <div class="checkbox grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             <core-checkbox slot="label-left"></core-checkbox>
             Checkbox
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             <core-checkbox slot="label-left" large></core-checkbox>
             Checkbox
-          </core-field-label>
+          </core-label>
         </div>
         <div class="checkbox grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             <core-checkbox slot="label-left" checked></core-checkbox>
             Selected checkbox
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             <core-checkbox slot="label-left" checked large></core-checkbox>
             Selected checkbox
-          </core-field-label>
+          </core-label>
         </div>
         <div class="checkbox grid">
-          <core-field-label display="inline" color="gray-8" disabled>
+          <core-label display="inline" color="gray-8" disabled>
             <core-checkbox slot="label-left" disabled></core-checkbox>
             Disabled checkbox
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8" disabled>
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
             <core-checkbox slot="label-left" large disabled></core-checkbox>
             Disabled checkbox
-          </core-field-label>
+          </core-label>
         </div>
         <div class="checkbox grid">
-          <core-field-label display="inline" color="gray-8" disabled>
+          <core-label display="inline" color="gray-8" disabled>
             <core-checkbox slot="label-left" disabled checked></core-checkbox>
             Disabled checkbox
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8" disabled>
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
             <core-checkbox slot="label-left" large disabled checked></core-checkbox>
             Disabled checkbox
-          </core-field-label>
+          </core-label>
         </div>
       </div>
     </section>
@@ -427,44 +441,44 @@
           <span>Large</span>
         </div>
         <div class="radio grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             <core-radio slot="label-left"></core-radio>
             Radio
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             <core-radio slot="label-left" large></core-radio>
             Large radio
-          </core-field-label>
+          </core-label>
         </div>
         <div class="radio grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             <core-radio slot="label-left" checked></core-radio>
             Selected radio
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             <core-radio slot="label-left" large checked></core-radio>
             Selected large radio
-          </core-field-label>
+          </core-label>
         </div>
         <div class="radio grid">
-          <core-field-label display="inline" color="gray-8" disabled>
+          <core-label display="inline" color="gray-8" disabled>
             <core-radio slot="label-left" disabled></core-radio>
             Disabled radio
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8" disabled>
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
             <core-radio slot="label-left" large disabled></core-radio>
             Disabled large radio
-          </core-field-label>
+          </core-label>
         </div>
         <div class="radio grid">
-          <core-field-label display="inline" color="gray-8" disabled>
+          <core-label display="inline" color="gray-8" disabled>
             <core-radio slot="label-left" checked disabled></core-radio>
             Disabled selected radio
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8" disabled>
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
             <core-radio slot="label-left" large checked disabled></core-radio>
             Disabled selected large radio
-          </core-field-label>
+          </core-label>
         </div>
       </div>
     </section>
@@ -476,44 +490,44 @@
           <span class="hint">Large</span>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             <core-toggle slot="label-left"></core-toggle>
             Off
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             <core-toggle slot="label-left" large></core-toggle>
             Large off
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             <core-toggle slot="label-left" checked></core-toggle>
             On
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             <core-toggle slot="label-left" checked large></core-toggle>
             Large on
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8" disabled>
+          <core-label display="inline" color="gray-8" disabled>
             <core-toggle slot="label-left" disabled></core-toggle>
             Off disabled
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8" disabled>
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
             <core-toggle slot="label-left" large disabled></core-toggle>
             Large off disabled
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8" disabled>
+          <core-label display="inline" color="gray-8" disabled>
             <core-toggle slot="label-left" disabled checked></core-toggle>
             On disabled
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8" disabled>
+          </core-label>
+          <core-label display="inline" color="gray-8" disabled>
             <core-toggle slot="label-left" large disabled checked></core-toggle>
             Large on disabled
-          </core-field-label>
+          </core-label>
         </div>
       </div>
     </section>
@@ -526,81 +540,211 @@
         </div>
         <div class="toggles grid">
           <div class="grid">
-            <core-field-label display="inline" color="gray-8">
+            <core-label display="inline" color="gray-8">
               <core-toggle alt></core-toggle>
-            </core-field-label>
-            <core-field-label display="inline" color="gray-8">
+            </core-label>
+            <core-label display="inline" color="gray-8">
               <core-toggle checked alt></core-toggle>
-            </core-field-label>
+            </core-label>
           </div>
           <div class="grid">
-            <core-field-label display="inline" color="gray-8">
+            <core-label display="inline" color="gray-8">
               <core-toggle large alt></core-toggle>
-            </core-field-label>
-            <core-field-label display="inline" color="gray-8">
+            </core-label>
+            <core-label display="inline" color="gray-8">
               <core-toggle checked large alt></core-toggle>
-            </core-field-label>
+            </core-label>
           </div>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             <core-toggle slot="label-left" alt></core-toggle>
             Toggle left
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             <core-toggle slot="label-left" large checked alt></core-toggle>
             Toggle left large
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             Toggle right
             <core-toggle slot="label-right" alt></core-toggle>
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             Toggle right large
             <core-toggle slot="label-right" checked large alt></core-toggle>
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             Green color
             <core-toggle slot="label-right" color="green" alt></core-toggle>
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             Green color large
             <core-toggle slot="label-right" color="green" checked large alt></core-toggle>
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             Yellow color
             <core-toggle slot="label-right" color="yellow" alt></core-toggle>
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             Yellow color large
             <core-toggle slot="label-right" color="yellow" checked large alt></core-toggle>
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             Red color
             <core-toggle slot="label-right" color="red" alt></core-toggle>
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             Red color large
             <core-toggle slot="label-right" color="red" checked large alt></core-toggle>
-          </core-field-label>
+          </core-label>
         </div>
         <div class="toggles grid">
-          <core-field-label display="inline" color="gray-8">
+          <core-label display="inline" color="gray-8">
             Black color
             <core-toggle slot="label-right" color="black" alt></core-toggle>
-          </core-field-label>
-          <core-field-label display="inline" color="gray-8">
+          </core-label>
+          <core-label display="inline" color="gray-8">
             Black color large
             <core-toggle slot="label-right" color="black" checked large alt></core-toggle>
-          </core-field-label>
+          </core-label>
+        </div>
+      </div>
+    </section>
+    <section id="tags">
+      <h2>Tags</h2>
+      <div class="grid">
+        <div class="tags grid">
+          <div>
+            <span class="hint">Small</span>
+          </div>
+          <div>
+            <span class="hint">Large</span>
+          </div>
+          <div>
+            <span class="hint">Closeable</span>
+          </div>
+        </div>
+        <div class="tags grid">
+          <div>
+            <span class="hint">Dark</span>
+            <span class="hint">Light</span>
+          </div>
+          <div>
+            <span class="hint">Dark</span>
+            <span class="hint">Light</span>
+          </div>
+          <div>
+            <span class="hint">Dark</span>
+            <span class="hint">Light</span>
+          </div>
+        </div>
+        <div class="tags grid">
+          <div>
+            <core-tag size="small">Tag</core-tag>
+            <core-tag size="small" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag>Tag</core-tag>
+            <core-tag variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag closable>
+            Tag
+            <core-icon slot="icon" icon="cross-sm"></core-icon>
+          </core-tag>
+          <core-tag closable variation="light">
+            Tag
+            <core-icon slot="icon" icon="cross-sm"></core-icon>
+          </core-tag>
+          </div>
+        </div>
+        <div class="tags grid">
+          <div>
+            <core-tag color="blue" size="small">Tag</core-tag>
+            <core-tag color="blue" size="small" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="blue">Tag</core-tag>
+            <core-tag color="blue" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="blue" closable>
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+            <core-tag color="blue" closable variation="light">
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+          </div>
+        </div>
+        <div class="tags grid">
+          <div>
+            <core-tag color="green" size="small">Tag</core-tag>
+            <core-tag color="green" size="small" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="green">Tag</core-tag>
+            <core-tag color="green" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="green" closable>
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+            <core-tag color="green" closable variation="light">
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+          </div>
+        </div>
+        <div class="tags grid">
+          <div>
+            <core-tag color="yellow" size="small">Tag</core-tag>
+            <core-tag color="yellow" size="small" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="yellow">Tag</core-tag>
+            <core-tag color="yellow" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="yellow" closable>
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+            <core-tag color="yellow" closable variation="light">
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+          </div>
+        </div>
+        <div class="tags grid">
+          <div>
+            <core-tag color="red" size="small">Tag</core-tag>
+            <core-tag color="red" size="small" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="red">Tag</core-tag>
+            <core-tag color="red" variation="light">Tag</core-tag>
+          </div>
+          <div>
+            <core-tag color="red" closable>
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+            <core-tag color="red" closable variation="light">
+              Tag
+              <core-icon slot="icon" icon="cross-sm"></core-icon>
+            </core-tag>
+          </div>
         </div>
       </div>
     </section>

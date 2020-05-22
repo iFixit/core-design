@@ -1,6 +1,7 @@
-# core-field-label
+# core-label
 
 <!-- Auto Generated Below -->
+
 
 ## Properties
 
@@ -11,6 +12,7 @@
 | `display`  | `display`  | The display determines where and how the label behaves inside an item.                                                                                                                         | `"block" \| "inline"` | `"block"`   |
 | `helpurl`  | `helpurl`  | Applies the provided URL to the helpIcon href.                                                                                                                                                 | `string`              | `undefined` |
 
+
 ## Dependencies
 
 ### Depends on
@@ -18,13 +20,12 @@
 - [core-icon](../core-icon)
 
 ### Graph
-
 ```mermaid
 graph TD;
-  core-field-label --> core-icon
-  style core-field-label fill:#f9f,stroke:#333,stroke-width:4px
+  core-label --> core-icon
+  style core-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

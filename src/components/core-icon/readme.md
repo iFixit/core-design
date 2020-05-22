@@ -20,14 +20,15 @@
 
 ### Used by
 
- - [core-field-label](../core-field-label)
+ - [core-input](../core-input)
+ - [core-label](../core-label)
  - [core-input](../core-input)
 
 ### Graph
 ```mermaid
 graph TD;
-  core-field-label --> core-icon
   core-input --> core-icon
+  core-label --> core-icon
   style core-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
