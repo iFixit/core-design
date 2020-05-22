@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CoreAlert {
+        /**
+          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+         */
+        "color"?: "gray" | "green" | "yellow" | "red";
+    }
     interface CoreBadge {
         /**
           * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
@@ -304,6 +310,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCoreAlertElement extends Components.CoreAlert, HTMLStencilElement {
+    }
+    var HTMLCoreAlertElement: {
+        prototype: HTMLCoreAlertElement;
+        new (): HTMLCoreAlertElement;
+    };
     interface HTMLCoreBadgeElement extends Components.CoreBadge, HTMLStencilElement {
     }
     var HTMLCoreBadgeElement: {
@@ -377,6 +389,7 @@ declare global {
         new (): HTMLCoreToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "core-alert": HTMLCoreAlertElement;
         "core-badge": HTMLCoreBadgeElement;
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
@@ -392,6 +405,12 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CoreAlert {
+        /**
+          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+         */
+        "color"?: "gray" | "green" | "yellow" | "red";
+    }
     interface CoreBadge {
         /**
           * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
@@ -681,6 +700,7 @@ declare namespace LocalJSX {
         "required"?: boolean;
     }
     interface IntrinsicElements {
+        "core-alert": CoreAlert;
         "core-badge": CoreBadge;
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
@@ -699,6 +719,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "core-alert": LocalJSX.CoreAlert & JSXBase.HTMLAttributes<HTMLCoreAlertElement>;
             "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
