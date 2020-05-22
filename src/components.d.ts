@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CoreAlert {
+        /**
+          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+         */
+        "color"?: "gray" | "green" | "yellow" | "red";
+    }
     interface CoreBadge {
         /**
           * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
@@ -218,6 +224,24 @@ export namespace Components {
          */
         "type"?: string;
     }
+    interface CoreProgress {
+        /**
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The progress bar maximum value.
+         */
+        "max": number;
+        /**
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The progress bar value.
+         */
+        "value": number | undefined;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -310,6 +334,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCoreAlertElement extends Components.CoreAlert, HTMLStencilElement {
+    }
+    var HTMLCoreAlertElement: {
+        prototype: HTMLCoreAlertElement;
+        new (): HTMLCoreAlertElement;
+    };
     interface HTMLCoreBadgeElement extends Components.CoreBadge, HTMLStencilElement {
     }
     var HTMLCoreBadgeElement: {
@@ -358,6 +388,12 @@ declare global {
         prototype: HTMLCoreInputElement;
         new (): HTMLCoreInputElement;
     };
+    interface HTMLCoreProgressElement extends Components.CoreProgress, HTMLStencilElement {
+    }
+    var HTMLCoreProgressElement: {
+        prototype: HTMLCoreProgressElement;
+        new (): HTMLCoreProgressElement;
+    };
     interface HTMLCoreRadioElement extends Components.CoreRadio, HTMLStencilElement {
     }
     var HTMLCoreRadioElement: {
@@ -389,6 +425,7 @@ declare global {
         new (): HTMLCoreToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "core-alert": HTMLCoreAlertElement;
         "core-badge": HTMLCoreBadgeElement;
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
@@ -397,6 +434,7 @@ declare global {
         "core-field-label": HTMLCoreFieldLabelElement;
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
+        "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
         "core-spinner": HTMLCoreSpinnerElement;
         "core-textarea": HTMLCoreTextareaElement;
@@ -405,6 +443,12 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CoreAlert {
+        /**
+          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+         */
+        "color"?: "gray" | "green" | "yellow" | "red";
+    }
     interface CoreBadge {
         /**
           * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
@@ -613,6 +657,24 @@ declare namespace LocalJSX {
          */
         "type"?: string;
     }
+    interface CoreProgress {
+        /**
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+         */
+        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        /**
+          * The progress bar maximum value.
+         */
+        "max"?: number;
+        /**
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+         */
+        "size"?: "small" | "large";
+        /**
+          * The progress bar value.
+         */
+        "value"?: number | undefined;
+    }
     interface CoreRadio {
         /**
           * If applied, the element is checked. Use: `"checked"`.
@@ -700,6 +762,7 @@ declare namespace LocalJSX {
         "required"?: boolean;
     }
     interface IntrinsicElements {
+        "core-alert": CoreAlert;
         "core-badge": CoreBadge;
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
@@ -708,6 +771,7 @@ declare namespace LocalJSX {
         "core-field-label": CoreFieldLabel;
         "core-icon": CoreIcon;
         "core-input": CoreInput;
+        "core-progress": CoreProgress;
         "core-radio": CoreRadio;
         "core-spinner": CoreSpinner;
         "core-textarea": CoreTextarea;
@@ -719,6 +783,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "core-alert": LocalJSX.CoreAlert & JSXBase.HTMLAttributes<HTMLCoreAlertElement>;
             "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
@@ -727,6 +792,7 @@ declare module "@stencil/core" {
             "core-field-label": LocalJSX.CoreFieldLabel & JSXBase.HTMLAttributes<HTMLCoreFieldLabelElement>;
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
+            "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
