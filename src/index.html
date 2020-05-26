@@ -12,13 +12,13 @@
     <script nomodule src="/build/components.js"></script>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
+      href="./assets/font/inter/inter.css"
+      rel="stylesheet" media="print" onload="this.media='all'"
     />
 
     <style>
       html {
-        font: 14px/1.143 "Inter", sans-serif;
+        font: 14px/1.143 "Inter", "Arial", sans-serif;
         font-feature-settings: "ss01" on, "ss02" on;
         margin: 5%;
         text-rendering: optimizeLegibility;
@@ -810,6 +810,32 @@
         </div>
       </div>
     </section>
+    <section id="progress">
+      <h2>Progress</h2>
+      <div class="grid">
+        <div class="progress grid">
+          <core-progress value="60"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="33" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="100" color="green" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="75" color="yellow" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="50" color="red" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="25" color="black" size="small"></core-progress>
+        </div>
+        <div class="progress grid">
+          <core-progress value="0" color="black" size="small"></core-progress>
+        </div>
+      </div>
+    </section>
     <section id="spinners">
       <h2>Spinners</h2>
       <div class="grid">
@@ -823,23 +849,6 @@
           <core-spinner color="green"></core-spinner>
           <core-spinner color="yellow" size="small"></core-spinner>
           <core-spinner color="red" size="small"></core-spinner>
-        </div>
-      </div>
-    </section>
-    <section id="toasts">
-      <h2>Toasts</h2>
-      <div class="grid">
-        <div class="toasts">
-          <core-toast>The file <strong>benchmark2</strong> was deleted.</core-toast>
-        </div>
-        <div class="toasts">
-          <core-toast color="yellow">The file <strong>benchmark2</strong> was deleted.</core-toast>
-        </div>
-        <div class="toasts">
-          <core-toast color="green">The file <strong>benchmark2</strong> was deleted.</core-toast>
-        </div>
-        <div class="toasts">
-          <core-toast color="red">The file <strong>benchmark2</strong> was deleted.</core-toast>
         </div>
       </div>
     </section>
@@ -872,29 +881,20 @@
         </div>
       </div>
     </section>
-    <section id="progress">
-      <h2>Progress</h2>
+    <section id="toasts">
+      <h2>Toasts</h2>
       <div class="grid">
-        <div class="progress grid">
-          <core-progress value="60"></core-progress>
+        <div class="toasts">
+          <core-toast>The file <strong>benchmark2</strong> was deleted.</core-toast>
         </div>
-        <div class="progress grid">
-          <core-progress value="33" size="small"></core-progress>
+        <div class="toasts">
+          <core-toast color="yellow">The file <strong>benchmark2</strong> was deleted.</core-toast>
         </div>
-        <div class="progress grid">
-          <core-progress value="100" color="green" size="small"></core-progress>
+        <div class="toasts">
+          <core-toast color="green">The file <strong>benchmark2</strong> was deleted.</core-toast>
         </div>
-        <div class="progress grid">
-          <core-progress value="75" color="yellow" size="small"></core-progress>
-        </div>
-        <div class="progress grid">
-          <core-progress value="50" color="red" size="small"></core-progress>
-        </div>
-        <div class="progress grid">
-          <core-progress value="25" color="black" size="small"></core-progress>
-        </div>
-        <div class="progress grid">
-          <core-progress value="0" color="black" size="small"></core-progress>
+        <div class="toasts">
+          <core-toast color="red">The file <strong>benchmark2</strong> was deleted.</core-toast>
         </div>
       </div>
     </section>

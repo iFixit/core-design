@@ -260,6 +260,16 @@ export namespace Components {
          */
         "required": boolean;
     }
+    interface CoreSpinner {
+        /**
+          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+         */
+        "size"?: "small" | "medium" | "large";
+    }
     interface CoreTag {
         /**
           * Allows the tag to be closeable and removed from the view.
@@ -277,16 +287,6 @@ export namespace Components {
           * The tag variation. Use: `"default"` or `"light"`. Default variation is `"default"`.
          */
         "variation"?: "default" | "light";
-    }
-    interface CoreSpinner {
-        /**
-          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
-         */
-        "color"?: "black" | "red";
-        /**
-          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
-         */
-        "size"?: "small" | "medium" | "large";
     }
     interface CoreTextarea {
         /**
@@ -405,7 +405,7 @@ declare global {
     var HTMLCoreLabelElement: {
         prototype: HTMLCoreLabelElement;
         new (): HTMLCoreLabelElement;
-    }
+    };
     interface HTMLCoreProgressElement extends Components.CoreProgress, HTMLStencilElement {
     }
     var HTMLCoreProgressElement: {
@@ -418,17 +418,17 @@ declare global {
         prototype: HTMLCoreRadioElement;
         new (): HTMLCoreRadioElement;
     };
-    interface HTMLCoreTagElement extends Components.CoreTag, HTMLStencilElement {
-    }
-    var HTMLCoreTagElement: {
-        prototype: HTMLCoreTagElement;
-        new (): HTMLCoreTagElement;
-    };
     interface HTMLCoreSpinnerElement extends Components.CoreSpinner, HTMLStencilElement {
     }
     var HTMLCoreSpinnerElement: {
         prototype: HTMLCoreSpinnerElement;
         new (): HTMLCoreSpinnerElement;
+    };
+    interface HTMLCoreTagElement extends Components.CoreTag, HTMLStencilElement {
+    }
+    var HTMLCoreTagElement: {
+        prototype: HTMLCoreTagElement;
+        new (): HTMLCoreTagElement;
     };
     interface HTMLCoreTextareaElement extends Components.CoreTextarea, HTMLStencilElement {
     }
@@ -460,8 +460,8 @@ declare global {
         "core-label": HTMLCoreLabelElement;
         "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
-        "core-tag": HTMLCoreTagElement;
         "core-spinner": HTMLCoreSpinnerElement;
+        "core-tag": HTMLCoreTagElement;
         "core-textarea": HTMLCoreTextareaElement;
         "core-toast": HTMLCoreToastElement;
         "core-toggle": HTMLCoreToggleElement;
@@ -718,6 +718,16 @@ declare namespace LocalJSX {
          */
         "required"?: boolean;
     }
+    interface CoreSpinner {
+        /**
+          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+         */
+        "color"?: "black" | "red";
+        /**
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+         */
+        "size"?: "small" | "medium" | "large";
+    }
     interface CoreTag {
         /**
           * Allows the tag to be closeable and removed from the view.
@@ -735,16 +745,6 @@ declare namespace LocalJSX {
           * The tag variation. Use: `"default"` or `"light"`. Default variation is `"default"`.
          */
         "variation"?: "default" | "light";
-    }
-    interface CoreSpinner {
-        /**
-          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
-         */
-        "color"?: "black" | "red";
-        /**
-          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
-         */
-        "size"?: "small" | "medium" | "large";
     }
     interface CoreTextarea {
         /**
@@ -816,8 +816,8 @@ declare namespace LocalJSX {
         "core-label": CoreLabel;
         "core-progress": CoreProgress;
         "core-radio": CoreRadio;
-        "core-tag": CoreTag;
         "core-spinner": CoreSpinner;
+        "core-tag": CoreTag;
         "core-textarea": CoreTextarea;
         "core-toast": CoreToast;
         "core-toggle": CoreToggle;
@@ -838,8 +838,8 @@ declare module "@stencil/core" {
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
             "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
-            "core-tag": LocalJSX.CoreTag & JSXBase.HTMLAttributes<HTMLCoreTagElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
+            "core-tag": LocalJSX.CoreTag & JSXBase.HTMLAttributes<HTMLCoreTagElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toast": LocalJSX.CoreToast & JSXBase.HTMLAttributes<HTMLCoreToastElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
