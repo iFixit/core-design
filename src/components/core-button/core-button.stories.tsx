@@ -14,11 +14,11 @@ const loading = {
 
 const radii = {
   "0": "0",
-  "2px": "2px",
-  "4px": "4px",
-  "8px": "8px",
-  "16px": "16px",
-  "32px": "32px",
+  "2": "2",
+  "4": "4",
+  "8": "8",
+  "16": "16",
+  "32": "32",
   circle: "circle",
 };
 
@@ -48,7 +48,7 @@ export const Default = (): TemplateResult => {
   return html`
     <core-button
       disabled=${boolean("Disabled", false)}
-      radius="${select("Radius", radii, "4px")}"
+      radius="${select("Radius", radii, "4")}"
       size="${select("Size", sizes, "default")}"
       status="${select("Status", status, null)}"
       variation="${select("Variation", variations, "basic")}"

@@ -5,7 +5,10 @@
 // :host targets the custom element compiled by Stencil
 :host {
   display: flex;
-  font: inherit;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "ss01" on, "ss02" on;
+  font-size: 14px;
+  line-height: 1.142857;
 
   .native-element {
     border: 1px solid @color-gray-3;

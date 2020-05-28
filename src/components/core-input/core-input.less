@@ -6,7 +6,10 @@
 :host {
   color: @color-gray-5;
   display: inline-flex;
-  font: inherit;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "ss01" on, "ss02" on;
+  font-size: 14px;
+  line-height: 1.142857;
   position: relative;
 
   &([icon]) .native-element {
@@ -88,6 +91,7 @@
 }
 
 .input-inner {
+  font: inherit;
   width: inherit;
 }
 

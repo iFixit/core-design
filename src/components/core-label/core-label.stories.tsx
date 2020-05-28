@@ -14,8 +14,7 @@ const displays = {
 export const Default = (): TemplateResult => {
   return html`
     <core-label
-      color=${text("autofocus", "gray-2")}
-      disabled=${boolean("Disabled", false)}
+      color=${text("color", "gray-2")}
       display=${select("Display", displays, "block")}
       >Form Label</core-label
     >

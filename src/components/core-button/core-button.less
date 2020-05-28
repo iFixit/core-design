@@ -8,7 +8,7 @@
   font-family: "Inter", sans-serif;
   font-feature-settings: "ss01" on, "ss02" on;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 1.142857
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
@@ -517,7 +517,7 @@
   }
 
   // @Prop href
-  ([href]) .native-element {
+  .native-element {
     text-decoration: underline;
   }
 
@@ -552,6 +552,26 @@
   }
 
   // @Prop circle radius
+  &([radius="0"]) .native-element {
+    border-radius: 0;
+  }
+
+  &([radius="2"]) .native-element {
+    border-radius: @border-radius-sm;
+  }
+
+  &([radius="8"]) .native-element {
+    border-radius: @border-radius-lg;
+  }
+
+  &([radius="16"]) .native-element {
+    border-radius: 16px;
+  }
+
+  &([radius="32"]) .native-element {
+    border-radius: 32px;
+  }
+
   &([radius="circle"]) .native-element {
     border-radius: 50%;
     padding: 10px;
@@ -565,16 +585,13 @@
   box-sizing: border-box;
   font: inherit;
   font-weight: bold;
-  max-width: 100%;
   outline: none;
   padding: 10px 15px;
   position: relative;
-  text-align: center;
   text-decoration: none;
-  text-overflow: ellipsis;
   transition: background 0.12s ease-in-out, box-shadow 0.12s ease-in-out,
     color 0.12s ease-in-out;
-  white-space: nowrap;
+  width: inherit;
 
   &:not(:disabled):not([loading]) {
     &:hover {
@@ -590,8 +607,11 @@
   }
 
   .button-inner {
-    display: flex;
-    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .button-loading {
