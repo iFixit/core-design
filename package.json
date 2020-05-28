@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "stencil build --docs",
-    "build.storybook": "build-storybook -c .storybook -s www -o storybook/",
+    "build.storybook": "build-storybook -c .storybook -s www -o storybook/ --quiet",
     "start": "stencil build --dev --watch --serve",
     "stencil": "node --max_old_space_size=4096 ./node_modules/.bin/stencil build --watch --recursive --serve --no-open --config ./stencil.config.ts",
     "storybook.run": "start-storybook -p 4444 -s www",

@@ -60,7 +60,7 @@ export const Default = (): TemplateResult => {
 export const Loading = (): TemplateResult => {
   return html`
     <core-button loading="${select("Loading", loading, "left")}"
-      >Button<core-button> </core-button
-    ></core-button>
+      >Button</core-button
+    >
   `;
 };
