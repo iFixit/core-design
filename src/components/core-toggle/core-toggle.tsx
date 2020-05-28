@@ -32,7 +32,7 @@ export class Toggle implements ComponentInterface {
    * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    * Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
    */
-  @Prop() color?: string;
+  @Prop() color?: "green" | "yellow" | "red" | "black" = "black";
 
   /**
    * If applied, the user cannot interact with the element.

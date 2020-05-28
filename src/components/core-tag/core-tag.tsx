@@ -16,10 +16,10 @@ export class Tag implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * Allows the tag to be closeable and removed from
+   * Allows the tag to be closable and removed from
    * the view.
    */
-  @Prop() closeable = false;
+  @Prop() closable = false;
 
   /**
    * Optional primary color of the tag. Defaults to `black`.

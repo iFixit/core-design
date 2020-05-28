@@ -34,7 +34,7 @@ export namespace Components {
         /**
           * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
          */
-        "display"?: "block" | "inline" | "inline-flex" | "none" | "flex";
+        "display"?: "block" | "flex" | "inline" | "inlineFlex" | "none";
         /**
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
@@ -264,7 +264,7 @@ export namespace Components {
         /**
           * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
          */
-        "color"?: "black" | "red";
+        "color"?: "black" | "red" | "blue" | "green" | "yellow";
         /**
           * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
          */
@@ -272,9 +272,9 @@ export namespace Components {
     }
     interface CoreTag {
         /**
-          * Allows the tag to be closeable and removed from the view.
+          * Allows the tag to be closable and removed from the view.
          */
-        "closeable": boolean;
+        "closable": boolean;
         /**
           * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="blue"`, `color="green"`, `color="yellow"`, `color="red"`.
          */
@@ -336,7 +336,7 @@ export namespace Components {
         /**
           * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
          */
-        "color"?: string;
+        "color"?: "green" | "yellow" | "red" | "black";
         /**
           * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */
@@ -496,7 +496,7 @@ declare namespace LocalJSX {
         /**
           * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
          */
-        "display"?: "block" | "inline" | "inline-flex" | "none" | "flex";
+        "display"?: "block" | "flex" | "inline" | "inlineFlex" | "none";
         /**
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
@@ -722,7 +722,7 @@ declare namespace LocalJSX {
         /**
           * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
          */
-        "color"?: "black" | "red";
+        "color"?: "black" | "red" | "blue" | "green" | "yellow";
         /**
           * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
          */
@@ -730,9 +730,9 @@ declare namespace LocalJSX {
     }
     interface CoreTag {
         /**
-          * Allows the tag to be closeable and removed from the view.
+          * Allows the tag to be closable and removed from the view.
          */
-        "closeable"?: boolean;
+        "closable"?: boolean;
         /**
           * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="blue"`, `color="green"`, `color="yellow"`, `color="red"`.
          */
@@ -790,7 +790,7 @@ declare namespace LocalJSX {
         /**
           * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
          */
-        "color"?: string;
+        "color"?: "green" | "yellow" | "red" | "black";
         /**
           * If applied, the user cannot interact with the element. Use: `"disabled"`.
          */

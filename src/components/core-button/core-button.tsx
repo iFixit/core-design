@@ -30,7 +30,7 @@ export class Button implements ComponentInterface {
   /**
    * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
    */
-  @Prop() display?: "block" | "inline" | "inline-flex" | "none" | "flex" =
+  @Prop() display?: "block" | "flex" | "inline" | "inlineFlex" | "none" =
     "flex";
 
   /**
