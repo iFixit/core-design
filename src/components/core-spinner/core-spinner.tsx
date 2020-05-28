@@ -20,7 +20,7 @@ export class Spinner implements ComponentInterface {
    * Use: `color="black"` or `color="red"`.
    * Default size is `"black"`.
    */
-  @Prop() color?: "black" | "red" = "black";
+  @Prop() color?: "black" | "red" | "blue" | "green" | "yellow" = "black";
 
   /**
    * The pre-defined spinner size.
