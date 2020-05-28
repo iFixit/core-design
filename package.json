@@ -20,14 +20,14 @@
   },
   "scripts": {
     "build": "stencil build --docs",
-    "build.storybook": "build-storybook -c .storybook -s www -o storybook/ --quiet",
+    "build-storybook": "build-storybook -c .storybook -s www -o storybook/",
+    "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
-    "stencil": "node --max_old_space_size=4096 ./node_modules/.bin/stencil build --watch --recursive --serve --no-open --config ./stencil.config.ts",
-    "storybook.run": "start-storybook -p 4444 -s www",
-    "storybook": "npm-run-all --parallel stencil storybook.run",
+    "start-storybook": "start-storybook -p 4444 -s www",
+    "stencil": "node --max_old_space_size=4096 ./node_modules/.bin/stencil build --watch --recursive --serve --config ./stencil.config.ts --no-open",
+    "storybook": "npm-run-all --parallel stencil start-storybook",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "test-watch": "stencil test --spec --e2e --watchAll"
   },
   "devDependencies": {
     "@core-ds/icons": "^1.2.0",
