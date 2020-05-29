@@ -32,6 +32,24 @@
     top: 100%;
     left: 0;
     z-index: 9;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      box-shadow: 0px 6px 18px rgba(16, 22, 26, 0.2),
+        0px 2px 4px rgba(16, 22, 26, 0.2);
+
+      width: 20px;
+      height: 20px;
+      margin: auto;
+
+      transform: rotate(-45deg);
+      background: #fff;
+    }
   }
 
   .menu {
