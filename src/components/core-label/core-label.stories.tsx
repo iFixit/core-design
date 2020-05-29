@@ -1,4 +1,4 @@
-import { boolean, select, text } from "@storybook/addon-knobs";
+import { select, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {

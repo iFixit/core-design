@@ -1,4 +1,4 @@
-import { boolean, select } from "@storybook/addon-knobs";
+import { boolean, select, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -60,6 +60,14 @@ export const Default = (): TemplateResult => {
 export const Loading = (): TemplateResult => {
   return html`
     <core-button loading="${select("Loading", loading, "left")}"
+      >Button</core-button
+    >
+  `;
+};
+
+export const Linked = (): TemplateResult => {
+  return html`
+    <core-button href="${text("href", "https://www.dozuki.com/")}"
       >Button</core-button
     >
   `;

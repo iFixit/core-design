@@ -517,7 +517,7 @@
   }
 
   // @Prop href
-  .native-element {
+  ([href]) .native-element {
     text-decoration: underline;
   }
 
@@ -607,7 +607,9 @@
   }
 
   .button-inner {
+    display: flex;
     max-width: 100%;
+    min-height: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
