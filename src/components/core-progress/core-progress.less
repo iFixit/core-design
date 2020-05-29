@@ -4,7 +4,6 @@
 // :host targets the custom element compiled by Stencil
 :host {
   display: flex;
-  min-width: 150px;
   width: inherit;
 
   // @Prop color
@@ -60,6 +59,7 @@ progress {
   color: @color-blue; // progress bar color for IE
   cursor: default;
   height: @space-2;
+  min-width: 150px;
   overflow: hidden;
   transition: width 0.2s ease-in-out;
   width: inherit;

@@ -33,7 +33,6 @@ const status = {
   success: "success",
   danger: "danger",
   warning: "warning",
-  none: null,
 };
 
 const variations = {
@@ -59,7 +58,12 @@ export const Default = (): TemplateResult => {
 
 export const Loading = (): TemplateResult => {
   return html`
-    <core-button loading="${select("Loading", loading, "left")}"
+    <core-button
+      loading="${select("Loading", loading, "left")}"
+      radius="${select("Radius", radii, "4")}"
+      size="${select("Size", sizes, "default")}"
+      status="${select("Status", status, null)}"
+      variation="${select("Variation", variations, "basic")}"
       >Button</core-button
     >
   `;

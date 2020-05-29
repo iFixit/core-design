@@ -13,17 +13,6 @@
     .native-element {
       height: @space-large;
       width: @space-large;
-
-      &:not(:disabled) {
-        &:focus,
-        &:active {
-          box-shadow: 0 0 0 5px @color-blue inset;
-        }
-      }
-
-      &:checked {
-        box-shadow: 0 0 0 5px @color-blue inset;
-      }
     }
   }
 }
@@ -59,10 +48,8 @@
   }
 
   &:checked:disabled {
-    &:focus,
-    &:active {
-      box-shadow: 0 0 0 4px @color-blue-light-3 inset;
-    }
+    border-color: transparent;
+    box-shadow: 0 0 0 4px @color-blue-light-3 inset;
   }
 }
 
