@@ -25,8 +25,9 @@
     "start": "stencil build --dev --watch --serve",
     "start-storybook": "start-storybook -p 4444 -s www",
     "stencil": "stencil build --docs --prod --watch",
+    "stencil.netlify": "stencil build --prod",
     "storybook": "npm-run-all --parallel stencil start-storybook",
-    "netlify": "npm-run-all --parallel stencil build --docs --prod build-storybook",
+    "netlify": "npm-run-all stencil.netlify build-storybook",
     "test": "stencil test --spec --e2e",
     "test-watch": "stencil test --spec --e2e --watchAll"
   },
