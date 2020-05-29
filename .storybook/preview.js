@@ -13,8 +13,8 @@ import customElements from "../dist/docs/custom-elements.json";
 
 setCustomElements(customElements);
 
-addDecorator(withKnobs);
 addDecorator(withA11y);
+addDecorator(withKnobs);
 
 addParameters({
   docs: {

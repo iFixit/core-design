@@ -24,7 +24,7 @@
     "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
     "start-storybook": "start-storybook -p 4444 -s www",
-    "stencil": "stencil build --prod --docs --es5 --config ./stencil.config.ts",
+    "stencil": "stencil build --prod --docs --config ./stencil.config.ts",
     "storybook": "npm-run-all --parallel stencil start-storybook",
     "test": "stencil test --spec --e2e",
     "test-watch": "stencil test --spec --e2e --watchAll"
