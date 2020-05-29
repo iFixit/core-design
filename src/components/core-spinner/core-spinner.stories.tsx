@@ -28,3 +28,21 @@ export const Default = (): TemplateResult => {
     ></core-spinner>
   `;
 };
+
+export const Small = (): TemplateResult => {
+  return html`
+    <core-spinner
+      color="${select("Color", colors, "black")}"
+      size="${select("size", sizes, "small")}"
+    ></core-spinner>
+  `;
+};
+
+export const Large = (): TemplateResult => {
+  return html`
+    <core-spinner
+      color="${select("Color", colors, "black")}"
+      size="${select("size", sizes, "large")}"
+    ></core-spinner>
+  `;
+};

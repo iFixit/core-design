@@ -16,3 +16,14 @@ export const Default = (): TemplateResult => {
     ></core-checkbox>
   `;
 };
+
+export const Large = (): TemplateResult => {
+  return html`
+    <core-checkbox
+      checked=${boolean("Checked", false)}
+      disabled=${boolean("Disabled", false)}
+      required=${boolean("Required", false)}
+      large=${boolean("Large", true)}
+    ></core-checkbox>
+  `;
+};

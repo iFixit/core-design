@@ -25,7 +25,6 @@ export const Default = (): TemplateResult => {
       inputkeyboard=${select("Inputkeyboard", inputkeyboards, "none")}
       placeholder=${text("Placeholder", "Placeholder")}
       required=${boolean("Required", false)}
-      size=${boolean("Large", false)}
     ></core-input>
   `;
 };

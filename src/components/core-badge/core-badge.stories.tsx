@@ -33,3 +33,15 @@ export const Default = (): TemplateResult => {
     </core-badge
   `;
 };
+
+export const Small = (): TemplateResult => {
+  return html`
+    <core-badge
+      color="${select("Color", colors, "red")}"
+      size="${select("Size", sizes, "small")}"
+      variation="${select("Variation", variations, "fill")}"
+    >
+      23
+    </core-badge
+  `;
+};

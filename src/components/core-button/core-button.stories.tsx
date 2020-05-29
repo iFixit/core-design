@@ -56,6 +56,32 @@ export const Default = (): TemplateResult => {
   `;
 };
 
+export const Small = (): TemplateResult => {
+  return html`
+    <core-button
+      disabled=${boolean("Disabled", false)}
+      radius="${select("Radius", radii, "4")}"
+      size="${select("Size", sizes, "small")}"
+      status="${select("Status", status, null)}"
+      variation="${select("Variation", variations, "basic")}"
+      >Button</core-button
+    >
+  `;
+};
+
+export const Large = (): TemplateResult => {
+  return html`
+    <core-button
+      disabled=${boolean("Disabled", false)}
+      radius="${select("Radius", radii, "4")}"
+      size="${select("Size", sizes, "large")}"
+      status="${select("Status", status, null)}"
+      variation="${select("Variation", variations, "basic")}"
+      >Button</core-button
+    >
+  `;
+};
+
 export const Loading = (): TemplateResult => {
   return html`
     <core-button

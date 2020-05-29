@@ -23,8 +23,10 @@ export const Default = (): TemplateResult => {
 
 export const HelpURL = (): TemplateResult => {
   return html`
-    <core-label helpurl=${text("Help URL", "https://www.dozuki.com/")}
-      >Form Help Label</core-label
-    >
+    <div style="max-width: 200px">
+      <core-label helpurl=${text("Help URL", "https://www.dozuki.com/")}
+        >Form Help Label</core-label
+      >
+    </div>
   `;
 };

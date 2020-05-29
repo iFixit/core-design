@@ -58,8 +58,10 @@ progress {
   box-sizing: border-box;
   color: @color-blue; // progress bar color for IE
   cursor: default;
+  display: flex;
+  flex: 1;
   height: @space-2;
-  min-width: 150px;
+  max-width: 100%;
   overflow: hidden;
   transition: width 0.2s ease-in-out;
   width: inherit;
@@ -67,6 +69,7 @@ progress {
   &::-moz-progress-bar {
     background-color: @color-blue;
     border-radius: @border-radius-md;
+    transition: width 0.2s ease-in-out;
   }
 }
 
@@ -77,4 +80,5 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: @color-blue;
   border-radius: @border-radius-md;
+  transition: width 0.2s ease-in-out;
 }
