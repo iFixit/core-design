@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "stencil build --docs",
-    "build-storybook": "build-storybook -c .storybook -s www -o storybook/ --quiet",
+    "build-storybook": "build-storybook -c .storybook -s www, dist/docs -o storybook/ --quiet",
     "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
     "start-storybook": "start-storybook -p 4444 -s www",
