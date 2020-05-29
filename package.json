@@ -24,7 +24,7 @@
     "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
     "start-storybook": "start-storybook -p 4444 -s www",
-    "stencil": "node --max_old_space_size=4096 ./node_modules/.bin/stencil build --watch --recursive --serve --config ./stencil.config.ts --no-open",
+    "stencil": "stencil build --prod --docs --config ./stencil.config.ts",
     "storybook": "npm-run-all --parallel stencil start-storybook",
     "test": "stencil test --spec --e2e",
     "test-watch": "stencil test --spec --e2e --watchAll"
