@@ -1,4 +1,4 @@
-import { boolean, select } from "@storybook/addon-knobs";
+import { boolean, select, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -14,11 +14,11 @@ const loading = {
 
 const radii = {
   "0": "0",
-  "2px": "2px",
-  "4px": "4px",
-  "8px": "8px",
-  "16px": "16px",
-  "32px": "32px",
+  "2": "2",
+  "4": "4",
+  "8": "8",
+  "16": "16",
+  "32": "32",
   circle: "circle",
 };
 
@@ -33,7 +33,6 @@ const status = {
   success: "success",
   danger: "danger",
   warning: "warning",
-  none: null,
 };
 
 const variations = {
@@ -48,8 +47,34 @@ export const Default = (): TemplateResult => {
   return html`
     <core-button
       disabled=${boolean("Disabled", false)}
-      radius="${select("Radius", radii, "4px")}"
+      radius="${select("Radius", radii, "4")}"
       size="${select("Size", sizes, "default")}"
+      status="${select("Status", status, null)}"
+      variation="${select("Variation", variations, "basic")}"
+      >Button</core-button
+    >
+  `;
+};
+
+export const Small = (): TemplateResult => {
+  return html`
+    <core-button
+      disabled=${boolean("Disabled", false)}
+      radius="${select("Radius", radii, "4")}"
+      size="${select("Size", sizes, "small")}"
+      status="${select("Status", status, null)}"
+      variation="${select("Variation", variations, "basic")}"
+      >Button</core-button
+    >
+  `;
+};
+
+export const Large = (): TemplateResult => {
+  return html`
+    <core-button
+      disabled=${boolean("Disabled", false)}
+      radius="${select("Radius", radii, "4")}"
+      size="${select("Size", sizes, "large")}"
       status="${select("Status", status, null)}"
       variation="${select("Variation", variations, "basic")}"
       >Button</core-button
@@ -59,7 +84,20 @@ export const Default = (): TemplateResult => {
 
 export const Loading = (): TemplateResult => {
   return html`
-    <core-button loading="${select("Loading", loading, "left")}"
+    <core-button
+      loading="${select("Loading", loading, "left")}"
+      radius="${select("Radius", radii, "4")}"
+      size="${select("Size", sizes, "default")}"
+      status="${select("Status", status, null)}"
+      variation="${select("Variation", variations, "basic")}"
+      >Button</core-button
+    >
+  `;
+};
+
+export const Linked = (): TemplateResult => {
+  return html`
+    <core-button href="${text("href", "https://www.dozuki.com/")}"
       >Button</core-button
     >
   `;

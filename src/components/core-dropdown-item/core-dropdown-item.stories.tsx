@@ -15,10 +15,12 @@ const targets = {
 
 export const Default = (): TemplateResult => {
   return html`
-    <core-dropdown-item
-      href="${text("href", null)}"
-      target="${select("target", targets, null)}"
-      >Option</core-dropdown-item
-    >
+    <div class="font-inherited">
+      <core-dropdown-item
+        href="${text("href", null)}"
+        target="${select("target", targets, null)}"
+        >Option</core-dropdown-item
+      >
+    </div>
   `;
 };

@@ -11,7 +11,6 @@ export const Default = (): TemplateResult => {
     <core-icon
       color="${text("Color", "gray-5")}"
       icon="${text("Icon", "menu")}"
-      src="${text("Src", null)}"
     ></core-icon>
   `;
 };

@@ -15,3 +15,13 @@ export const Default = (): TemplateResult => {
     ></core-radio>
   `;
 };
+
+export const Large = (): TemplateResult => {
+  return html`
+    <core-radio
+      checked="${boolean("Checked", false)}"
+      disabled="${boolean("Disabled", false)}"
+      large="${boolean("Large", true)}"
+    ></core-radio>
+  `;
+};

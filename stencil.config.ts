@@ -1,7 +1,7 @@
 import { Config } from "@stencil/core";
 import { less } from "@stencil/less";
 import LessPluginAutoPrefix from "less-plugin-autoprefix";
-import { generateJsonDocs } from "./src/customElementDocGenerator";
+import { generateJsonDocs } from "./src/utils/customElementDocGenerator";
 
 export const config: Config = {
   namespace: "components",
@@ -22,6 +22,9 @@ export const config: Config = {
     {
       type: "www",
       serviceWorker: null,
+      copy: [
+        { src: '../node_modules/@core-ds/icons/icons', dest: 'assets/icons' }
+      ]
     },
   ],
   plugins: [

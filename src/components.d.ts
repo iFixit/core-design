@@ -52,9 +52,9 @@ export namespace Components {
          */
         "loading"?: "left" | "right" | "only";
         /**
-          * Set to the value of border-radius applied. Default is 4px.
+          * Set to the value of border-radius applied. Default is 4(px).
          */
-        "radius"?: "0" | "2px" | "4px" | "8px" | "16px" | "32px" | "circle";
+        "radius"?: "0" | "2" | "4" | "8" | "16" | "32" | "circle";
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
          */
@@ -514,9 +514,9 @@ declare namespace LocalJSX {
          */
         "loading"?: "left" | "right" | "only";
         /**
-          * Set to the value of border-radius applied. Default is 4px.
+          * Set to the value of border-radius applied. Default is 4(px).
          */
-        "radius"?: "0" | "2px" | "4px" | "8px" | "16px" | "32px" | "circle";
+        "radius"?: "0" | "2" | "4" | "8" | "16" | "32" | "circle";
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
          */

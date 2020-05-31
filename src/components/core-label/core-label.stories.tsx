@@ -1,4 +1,4 @@
-import { boolean, select, text } from "@storybook/addon-knobs";
+import { select, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -14,8 +14,7 @@ const displays = {
 export const Default = (): TemplateResult => {
   return html`
     <core-label
-      color=${text("autofocus", "gray-2")}
-      disabled=${boolean("Disabled", false)}
+      color=${text("color", "gray-2")}
       display=${select("Display", displays, "block")}
       >Form Label</core-label
     >
@@ -24,8 +23,10 @@ export const Default = (): TemplateResult => {
 
 export const HelpURL = (): TemplateResult => {
   return html`
-    <core-label helpurl=${text("Help URL", "https://www.dozuki.com/")}
-      >Form Help Label</core-label
-    >
+    <div style="max-width: 200px">
+      <core-label helpurl=${text("Help URL", "https://www.dozuki.com/")}
+        >Form Help Label</core-label
+      >
+    </div>
   `;
 };

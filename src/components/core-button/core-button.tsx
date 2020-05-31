@@ -59,10 +59,9 @@ export class Button implements ComponentInterface {
   @Prop({ reflectToAttr: true }) loading?: "left" | "right" | "only";
 
   /**
-   * Set to the value of border-radius applied. Default is 4px.
+   * Set to the value of border-radius applied. Default is 4(px).
    */
-  @Prop() radius?: "0" | "2px" | "4px" | "8px" | "16px" | "32px" | "circle" =
-    "4px";
+  @Prop() radius?: "0" | "2" | "4" | "8" | "16" | "32" | "circle" = "4";
 
   /**
    * Specifies the relationship of the target object to the link object.

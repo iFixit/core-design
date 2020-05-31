@@ -16,12 +16,11 @@ const colors = {
 
 const sizes = {
   small: "small",
-  medium: "medium",
   large: "large",
 };
 
 const variations = {
-  defualt: "defualt",
+  default: "default",
   light: "light",
 };
 
@@ -30,6 +29,17 @@ export const Default = (): TemplateResult => {
     <core-tag
       color="${select("Color", colors, "black")}"
       size="${select("size", sizes, "large")}"
+      variation="${select("variation", variations, "default")}"
+      >Tag</core-tag
+    >
+  `;
+};
+
+export const Small = (): TemplateResult => {
+  return html`
+    <core-tag
+      color="${select("Color", colors, "black")}"
+      size="${select("size", sizes, "small")}"
       variation="${select("variation", variations, "default")}"
       >Tag</core-tag
     >
