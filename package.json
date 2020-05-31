@@ -1,6 +1,6 @@
 {
   "name": "@core-design/components",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Core Design System Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,11 +20,12 @@
   },
   "scripts": {
     "build": "stencil build --docs",
-    "build-storybook": "build-storybook --quiet --config-dir .storybook --static-dir www --output-dir storybook/",
+    "build-netlify": "npm-run-all stencil build-storybook",
+    "build-storybook": "build-storybook --config-dir .storybook --static-dir dist --output-dir storybook/ --quiet",
     "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
-    "start-storybook": "start-storybook -p 4444 --static-dir www",
-    "stencil": "stencil build --docs --prod --watch --config ./stencil.config.ts",
+    "start-storybook": "start-storybook -p 4444 -s www --quiet",
+    "stencil": "stencil build --prod --no-cache",
     "storybook": "npm-run-all --parallel stencil start-storybook",
     "test": "stencil test --spec --e2e",
     "test-watch": "stencil test --spec --e2e --watchAll"
