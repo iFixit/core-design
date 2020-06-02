@@ -1,3 +1,4 @@
+/* eslint-disable @stencil/strict-mutable */
 import {
   Component,
   ComponentInterface,
@@ -17,7 +18,7 @@ import {
 export class Textarea implements ComponentInterface {
   private nativeInput?: HTMLTextAreaElement;
 
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreTextareaElement;
 
   @State() hasFocus = false;
 

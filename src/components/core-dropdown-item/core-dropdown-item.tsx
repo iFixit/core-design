@@ -16,6 +16,7 @@ export class DropdownItem implements ComponentInterface {
   /**
    * The type of element.
    */
+  // eslint-disable-next-line @stencil/strict-mutable
   @Prop({ mutable: true }) elementType = "div";
 
   /**

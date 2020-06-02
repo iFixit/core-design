@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Badge implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreBadgeElement;
 
   /**
    * Color of the badge. Defaults to `red`.

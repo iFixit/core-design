@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Toggle implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreToggleElement;
 
   /**
    * If applied, the element is rendered with the alternate styling.

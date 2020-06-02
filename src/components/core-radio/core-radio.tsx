@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Radio implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreRadioElement;
 
   /**
    * If applied, the element is checked.

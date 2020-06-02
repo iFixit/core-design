@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Progress implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreProgressElement;
 
   /**
    * Color of the progress bar.

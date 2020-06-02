@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class toast implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreToastElement;
 
   /**
    * Optional primary color of the toast. Defaults to `black`.

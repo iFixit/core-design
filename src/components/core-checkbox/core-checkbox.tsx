@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Checkbox implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreCheckboxElement;
 
   /**
    * If applied, the element is checked.

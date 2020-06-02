@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Alert implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreAlertElement;
 
   /**
    * Optional primary color of the alert. Defaults to `black`.

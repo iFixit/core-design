@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Tag implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreTagElement;
 
   /**
    * Allows the tag to be closable and removed from
