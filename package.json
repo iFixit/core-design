@@ -24,7 +24,7 @@
     "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
     "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
-    "start-storybook": "start-storybook --static-dir www --quiet",
+    "start-storybook": "start-storybook --static-dir www,dist --quiet",
     "stencil": "stencil build --no-cache",
     "storybook": "npm-run-all stencil start-storybook --parallel",
     "test": "stencil test --spec --e2e",
