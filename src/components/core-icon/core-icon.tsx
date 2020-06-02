@@ -12,9 +12,9 @@ import { getSvgContent, ioniconContent } from "./request";
 import { getName, getUrl } from "./utils";
 
 @Component({
-  assetsDir: "assets/icons",
   tag: "core-icon",
   styleUrl: "core-icon.less",
+  assetsDir: "../../assets/icons",
   shadow: true,
 })
 export class Icon {
