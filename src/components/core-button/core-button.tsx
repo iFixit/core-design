@@ -20,7 +20,7 @@ import {
   shadow: true,
 })
 export class Button implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreButtonElement;
 
   /**
    * If `true`, the user cannot interact with the button.
@@ -44,6 +44,7 @@ export class Button implements ComponentInterface {
   /**
    * The type of element.
    */
+  // eslint-disable-next-line @stencil/strict-mutable
   @Prop({ mutable: true }) elementType = "button";
 
   /**
@@ -106,6 +107,7 @@ export class Button implements ComponentInterface {
   @Prop() width?: "full" | "block" | undefined;
 
   private get hasIconOnly() {
+    // eslint-disable-next-line @stencil/strict-boolean-conditions
     return !!this.el.querySelector('core-icon[slot="icon"]');
   }
 

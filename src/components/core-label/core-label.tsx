@@ -1,3 +1,4 @@
+/* eslint-disable @stencil/strict-boolean-conditions */
 import {
   Component,
   ComponentInterface,
@@ -13,7 +14,7 @@ import {
   shadow: true,
 })
 export class Label implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreLabelElement;
 
   /**
    * Optional color of the label.

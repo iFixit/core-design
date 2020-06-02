@@ -13,7 +13,7 @@ import {
   shadow: true,
 })
 export class Spinner implements ComponentInterface {
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreSpinnerElement;
 
   /**
    * Color of the spinner.

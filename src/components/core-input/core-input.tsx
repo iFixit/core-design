@@ -1,3 +1,4 @@
+/* eslint-disable @stencil/strict-boolean-conditions */
 import {
   Component,
   ComponentInterface,
@@ -21,7 +22,7 @@ export class Input implements ComponentInterface {
 
   @State() hasFocus = false;
 
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreInputElement;
 
   /**
    * Boolean attribute lets you specify that a form control should

@@ -1,3 +1,4 @@
+/* eslint-disable @stencil/strict-boolean-conditions */
 import {
   Build,
   Component,
@@ -20,7 +21,7 @@ import { getName, getUrl } from "./utils";
 export class Icon {
   private io?: IntersectionObserver;
 
-  @Element() el!: HTMLElement;
+  @Element() el!: HTMLCoreIconElement;
 
   @State() private svgContent?: string;
   @State() private isVisible = false;
@@ -78,6 +79,7 @@ export class Icon {
   }
 
   disconnectedCallback() {
+    // eslint-disable-next-line @stencil/strict-boolean-conditions
     if (this.io) {
       this.io.disconnect();
       this.io = undefined;
@@ -120,6 +122,7 @@ export class Icon {
   loadIcon() {
     if (Build.isBrowser && this.isVisible) {
       const url = getUrl(this);
+      // eslint-disable-next-line @stencil/strict-boolean-conditions
       if (url) {
         if (ioniconContent.has(url)) {
           // sync if it's already loaded
@@ -133,10 +136,12 @@ export class Icon {
       }
     }
 
+    // eslint-disable-next-line @stencil/strict-boolean-conditions
     if (!this.ariaLabel) {
       const label = getName(this.name, this.icon);
       // user did not provide a label
       // come up with the label based on the icon name
+      // eslint-disable-next-line @stencil/strict-boolean-conditions
       if (label) {
         this.ariaLabel = label.replace(/\-/g, " ");
       }
@@ -149,6 +154,7 @@ export class Icon {
         role="img"
         class={{
           "core-icon": true,
+          // eslint-disable-next-line @stencil/strict-boolean-conditions
           [`core-icon--${this.size}`]: !!this.size,
         }}
       >
