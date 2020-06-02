@@ -88,7 +88,6 @@ export const Loading = (): TemplateResult => {
       loading="${select("Loading", loading, "left")}"
       radius="${select("Radius", radii, "4")}"
       size="${select("Size", sizes, "default")}"
-      status="${select("Status", status, null)}"
       variation="${select("Variation", variations, "basic")}"
       >Button</core-button
     >

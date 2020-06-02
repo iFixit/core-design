@@ -26,7 +26,7 @@
     "start": "stencil build --dev --watch --serve",
     "start-storybook": "start-storybook --static-dir www --quiet",
     "stencil": "stencil build --no-cache",
-    "storybook": "npm-run-all stencil start-storybook",
+    "storybook": "npm-run-all stencil start-storybook --parallel",
     "test": "stencil test --spec --e2e",
     "test-watch": "stencil test --spec --e2e --watchAll"
   },
