@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-radio",
-  title: "Components|Radio",
+  title: "Components/Radio",
 };
 
 export const Default = (): TemplateResult => {

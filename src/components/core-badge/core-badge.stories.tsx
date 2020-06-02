@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-badge",
-  title: "Components|Badge",
+  title: "Components/Badge",
 };
 
 const colors = {
@@ -43,5 +43,15 @@ export const Small = (): TemplateResult => {
     >
       23
     </core-badge
+  `;
+};
+
+export const Dot = (): TemplateResult => {
+  return html`
+    <core-badge
+      color="${select("Color", colors, "red")}"
+      size="${select("Size", sizes, "large")}"
+      variation="${select("Variation", variations, "dot")}"
+    ></core-badge
   `;
 };

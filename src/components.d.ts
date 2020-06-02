@@ -78,7 +78,7 @@ export namespace Components {
         /**
           * The button variation.
          */
-        "variation"?: "basic" | "primary" | "secondary" | "dark" | "light";
+        "variation"?: "basic" | "primary" | "secondary" | "dark" | "light" | "borderless";
         /**
           * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
@@ -540,7 +540,7 @@ declare namespace LocalJSX {
         /**
           * The button variation.
          */
-        "variation"?: "basic" | "primary" | "secondary" | "dark" | "light";
+        "variation"?: "basic" | "primary" | "secondary" | "dark" | "light" | "borderless";
         /**
           * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */

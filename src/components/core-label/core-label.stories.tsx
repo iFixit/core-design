@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-label",
-  title: "Components|Label",
+  title: "Components/Label",
 };
 
 const displays = {

@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-toggle",
-  title: "Components|Toggle",
+  title: "Components/Toggle",
 };
 
 const colors = {

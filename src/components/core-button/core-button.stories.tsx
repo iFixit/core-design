@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-button",
-  title: "Components|Button",
+  title: "Components/Button",
 };
 
 const loading = {

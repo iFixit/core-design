@@ -97,7 +97,7 @@ export class Button implements ComponentInterface {
   /**
    * The button variation.
    */
-  @Prop() variation?: "basic" | "primary" | "secondary" | "dark" | "light" =
+  @Prop() variation?: "basic" | "primary" | "secondary" | "dark" | "light" | "borderless" =
     "basic";
 
   /**

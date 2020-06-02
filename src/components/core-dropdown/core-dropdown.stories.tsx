@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-dropdown",
-  title: "Components|Dropdown",
+  title: "Components/Dropdown",
 };
 
 export const Default = (): TemplateResult => {

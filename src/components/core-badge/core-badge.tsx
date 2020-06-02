@@ -48,6 +48,7 @@ export class Badge implements ComponentInterface {
         }}
       >
         <div class="native-element">
+          <div class="dot-inner"></div>
           <slot></slot>
         </div>
       </Host>

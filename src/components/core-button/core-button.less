@@ -247,6 +247,28 @@
     }
   }
 
+  // @Prop borderless variation
+  &(.borderless) {
+    .native-element {
+      background: transparent;
+
+      &:not(:disabled):not([loading]) {
+        box-shadow: 0 0 0 0 transparent inset;
+
+        &:hover,
+        &:active {
+          background: transparent;
+          box-shadow: 0 0 0 0 transparent inset;
+        }
+      }
+
+      &:disabled {
+        background: @color-gray-1;
+        color: @color-gray-4;
+      }
+    }
+  }
+
   //@Prop status success
   &(.success) {
     .native-element {
@@ -574,7 +596,6 @@
 
   &([radius="circle"]) .native-element {
     border-radius: 50%;
-    padding: 10px;
   }
 }
 

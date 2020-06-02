@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-input",
-  title: "Components|Input",
+  title: "Components/Input",
 };
 
 const inputkeyboards = {

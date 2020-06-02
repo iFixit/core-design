@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-toast",
-  title: "Components|Toast",
+  title: "Components/Toast",
 };
 
 const colors = {
