@@ -19,15 +19,14 @@
     "url": "https://github.com/Dozuki/core-components.git"
   },
   "scripts": {
-    "build": "stencil build --docs --no-cache",
-    "build-netlify": "npm-run-all stencil build-storybook",
+    "build-stencil": "stencil build --docs --no-cache",
+    "build-netlify": "npm-run-all build-stencil build-storybook",
     "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
-    "copy-icons": "cp -R ./node_modules/@core-ds/icons/icons ./src/assets",
     "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
     "start-storybook": "start-storybook --static-dir www --quiet",
-    "stencil": "npm-run-all --parallel copy-icons build",
-    "storybook": "npm-run-all --parallel stencil start-storybook",
+    "stencil": "stencil build --watch",
+    "storybook": "npm-run-all --parallel start-storybook stencil",
     "test": "stencil test --spec --e2e",
     "test-watch": "stencil test --spec --e2e --watchAll"
   },
