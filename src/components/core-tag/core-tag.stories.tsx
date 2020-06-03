@@ -51,7 +51,6 @@ export const Closable = (): TemplateResult => {
     <core-tag
       closable=${boolean("Closable", true)}
       color="${select("Color", colors, "yellow")}"
-      size="${select("size", sizes, "large")}"
       variation="${select("variation", variations, "default")}"
     >
       Tag

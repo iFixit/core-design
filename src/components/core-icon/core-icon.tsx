@@ -46,7 +46,6 @@ export class Icon {
 
   /**
    * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
-   * Default, `false`.
    */
   @Prop() lazy = false;
 
@@ -58,7 +57,6 @@ export class Icon {
   /**
    * The size of the icon.
    * Available options are: `"16"` and `"24"`.
-   * Default, `16`.
    */
   @Prop() size?: "16" | "24" = "16";
 

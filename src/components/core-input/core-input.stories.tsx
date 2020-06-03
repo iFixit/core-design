@@ -32,7 +32,7 @@ export const Default = (): TemplateResult => {
 export const Icon = (): TemplateResult => {
   return html`
     <core-input
-      icon=${text("Icon", "info")}
+      icon=${text("Icon", "search")}
       placeholder=${text("Placeholder", "Placeholder")}
     ></core-input>
   `;

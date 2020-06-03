@@ -16,9 +16,8 @@ export class Alert implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * Optional primary color of the alert. Defaults to `black`.
+   * Optional primary color of the alert.
    * Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`.
-   * Defaults to `color="gray"`.
    */
   @Prop() color?: "gray" | "green" | "yellow" | "red" = "gray";
 

@@ -47,7 +47,7 @@ export class Input implements ComponentInterface {
 
   /**
    * A hint to the browser for which keyboard to display.
-   * Possible values: `"none"`, `"text"`, `"tel"`, `"url"`,
+   * Use: `"none"`, `"text"`, `"tel"`, `"url"`,
    * `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
    */
   @Prop() inputkeyboard?:
@@ -116,7 +116,9 @@ export class Input implements ComponentInterface {
           <slot name="input-left">
             {this.icon ? (
               <core-icon slot="input-left" icon={this.icon}></core-icon>
-            ) : undefined}
+            ) : (
+              undefined
+            )}
           </slot>
           <input
             class="native-element"

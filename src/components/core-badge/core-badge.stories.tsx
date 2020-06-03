@@ -17,9 +17,9 @@ const sizes = {
 };
 
 const variations = {
+  fill: "fill",
   border: "border",
   dot: "dot",
-  fill: "fill",
 };
 
 export const Default = (): TemplateResult => {

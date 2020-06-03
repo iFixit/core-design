@@ -23,13 +23,13 @@ const radii = {
 };
 
 const sizes = {
-  small: "small",
   default: "default",
+  small: "small",
   large: "large",
 };
 
 const status = {
-  alt: "alt",
+  "--": "--",
   success: "success",
   danger: "danger",
   warning: "warning",

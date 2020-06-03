@@ -53,7 +53,8 @@ const getNamedUrl = (iconName: string) => {
     return url;
   }
   return getAssetPath(
-    `../../assets/icons/16/${iconName}.svg` || `https://unpkg.com/@core-ds/icons/icons/16/${iconName}.svg`
+    `../../assets/icons/16/${iconName}.svg` ||
+      `https://unpkg.com/@core-ds/icons/icons/16/${iconName}.svg`
   );
 };
 

@@ -13,7 +13,7 @@ export const Default = (): TemplateResult => {
       hoverable=${boolean("Hoverable", false)}
       nowrap=${boolean("Nowrap", false)}
     >
-      <core-button slot="trigger" radius="circle">
+      <core-button slot="trigger" variation="borderless">
         <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
       </core-button>
       <core-dropdown-item href="#">

@@ -31,14 +31,12 @@ export class Tag implements ComponentInterface {
   /**
    * The pre-defined tag size.
    * Use: `"small"` or `"large"`.
-   * Default size is `"large"`.
    */
   @Prop() size?: "small" | "large" = "large";
 
   /**
    * The tag variation.
    * Use: `"default"` or `"light"`.
-   * Default variation is `"default"`.
    */
   @Prop() variation?: "default" | "light" = "default";
 

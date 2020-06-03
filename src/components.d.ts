@@ -8,21 +8,21 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CoreAlert {
         /**
-          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+          * Optional primary color of the alert. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`.
          */
         "color"?: "gray" | "green" | "yellow" | "red";
     }
     interface CoreBadge {
         /**
-          * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
+          * Color of the badge. Use: `color="black"` or `color="red"`.
          */
         "color"?: "black" | "red";
         /**
-          * The pre-defined badge size. Use: `"small"` or `"large"`. Default size is `"large"`.
+          * The pre-defined badge size. Use: `"small"` or `"large"`.
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`. Default variation is `"fill"`.
+          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`.
          */
         "variation"?: "border" | "dot" | "fill";
     }
@@ -60,13 +60,13 @@ export namespace Components {
          */
         "rel": string | undefined;
         /**
-          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`. Default size is `"default"`.
+          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`.
          */
         "size"?: "small" | "default" | "large";
         /**
-          * The status classing of the button. Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+          * The status classing of the button. Use: `"success"`, `"danger"`, or `"warning"`.
          */
-        "status": "success" | "danger" | "warning" | "alt";
+        "status": "success" | "danger" | "warning";
         /**
           * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
          */
@@ -144,7 +144,7 @@ export namespace Components {
          */
         "icon"?: any;
         /**
-          * If enabled, core-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+          * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
         "lazy": boolean;
         /**
@@ -152,7 +152,7 @@ export namespace Components {
          */
         "name"?: string;
         /**
-          * The size of the icon. Available options are: `"16"` and `"24"`. Default, `16`.
+          * The size of the icon. Available options are: `"16"` and `"24"`.
          */
         "size"?: "16" | "24";
         /**
@@ -182,7 +182,7 @@ export namespace Components {
          */
         "icon"?: string;
         /**
-          * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+          * A hint to the browser for which keyboard to display. Use: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
          */
         "inputkeyboard"?: "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search";
         /**
@@ -226,7 +226,7 @@ export namespace Components {
     }
     interface CoreProgress {
         /**
-          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc.
          */
         "color"?: "black" | "blue" | "green" | "yellow" | "red";
         /**
@@ -234,7 +234,7 @@ export namespace Components {
          */
         "max": number;
         /**
-          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`.
          */
         "size"?: "small" | "large";
         /**
@@ -262,11 +262,11 @@ export namespace Components {
     }
     interface CoreSpinner {
         /**
-          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+          * Color of the spinner. Use: `color="black"` or `color="red"`.
          */
         "color"?: "black" | "red" | "blue" | "green" | "yellow";
         /**
-          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect.
          */
         "size"?: "small" | "medium" | "large";
     }
@@ -280,11 +280,11 @@ export namespace Components {
          */
         "color"?: "black" | "blue" | "green" | "yellow" | "red";
         /**
-          * The pre-defined tag size. Use: `"small"` or `"large"`. Default size is `"large"`.
+          * The pre-defined tag size. Use: `"small"` or `"large"`.
          */
         "size"?: "small" | "large";
         /**
-          * The tag variation. Use: `"default"` or `"light"`. Default variation is `"default"`.
+          * The tag variation. Use: `"default"` or `"light"`.
          */
         "variation"?: "default" | "light";
     }
@@ -320,7 +320,7 @@ export namespace Components {
     }
     interface CoreToast {
         /**
-          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="white"`.
+          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`.
          */
         "color"?: "white" | "green" | "yellow" | "red";
     }
@@ -470,21 +470,21 @@ declare global {
 declare namespace LocalJSX {
     interface CoreAlert {
         /**
-          * Optional primary color of the alert. Defaults to `black`. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="gray"`.
+          * Optional primary color of the alert. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`.
          */
         "color"?: "gray" | "green" | "yellow" | "red";
     }
     interface CoreBadge {
         /**
-          * Color of the badge. Defaults to `red`. Use: `color="black"` or `color="red"`. Default size is `"red"`.
+          * Color of the badge. Use: `color="black"` or `color="red"`.
          */
         "color"?: "black" | "red";
         /**
-          * The pre-defined badge size. Use: `"small"` or `"large"`. Default size is `"large"`.
+          * The pre-defined badge size. Use: `"small"` or `"large"`.
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`. Default variation is `"fill"`.
+          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`.
          */
         "variation"?: "border" | "dot" | "fill";
     }
@@ -522,13 +522,13 @@ declare namespace LocalJSX {
          */
         "rel"?: string | undefined;
         /**
-          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`. Default size is `"default"`.
+          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`.
          */
         "size"?: "small" | "default" | "large";
         /**
-          * The status classing of the button. Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+          * The status classing of the button. Use: `"success"`, `"danger"`, or `"warning"`.
          */
-        "status"?: "success" | "danger" | "warning" | "alt";
+        "status"?: "success" | "danger" | "warning";
         /**
           * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
          */
@@ -606,7 +606,7 @@ declare namespace LocalJSX {
          */
         "icon"?: any;
         /**
-          * If enabled, core-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+          * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
         "lazy"?: boolean;
         /**
@@ -614,7 +614,7 @@ declare namespace LocalJSX {
          */
         "name"?: string;
         /**
-          * The size of the icon. Available options are: `"16"` and `"24"`. Default, `16`.
+          * The size of the icon. Available options are: `"16"` and `"24"`.
          */
         "size"?: "16" | "24";
         /**
@@ -640,7 +640,7 @@ declare namespace LocalJSX {
          */
         "icon"?: string;
         /**
-          * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+          * A hint to the browser for which keyboard to display. Use: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
          */
         "inputkeyboard"?: "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search";
         /**
@@ -684,7 +684,7 @@ declare namespace LocalJSX {
     }
     interface CoreProgress {
         /**
-          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc. Default color is `"blue"`.
+          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc.
          */
         "color"?: "black" | "blue" | "green" | "yellow" | "red";
         /**
@@ -692,7 +692,7 @@ declare namespace LocalJSX {
          */
         "max"?: number;
         /**
-          * The pre-defined progress bar size. Use: `"small"` or `"large"`. Default size is `"large"`.
+          * The pre-defined progress bar size. Use: `"small"` or `"large"`.
          */
         "size"?: "small" | "large";
         /**
@@ -720,11 +720,11 @@ declare namespace LocalJSX {
     }
     interface CoreSpinner {
         /**
-          * Color of the spinner. Use: `color="black"` or `color="red"`. Default size is `"black"`.
+          * Color of the spinner. Use: `color="black"` or `color="red"`.
          */
         "color"?: "black" | "red" | "blue" | "green" | "yellow";
         /**
-          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. Default size is `"xlarge"`.
+          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect.
          */
         "size"?: "small" | "medium" | "large";
     }
@@ -738,11 +738,11 @@ declare namespace LocalJSX {
          */
         "color"?: "black" | "blue" | "green" | "yellow" | "red";
         /**
-          * The pre-defined tag size. Use: `"small"` or `"large"`. Default size is `"large"`.
+          * The pre-defined tag size. Use: `"small"` or `"large"`.
          */
         "size"?: "small" | "large";
         /**
-          * The tag variation. Use: `"default"` or `"light"`. Default variation is `"default"`.
+          * The tag variation. Use: `"default"` or `"light"`.
          */
         "variation"?: "default" | "light";
     }
@@ -774,7 +774,7 @@ declare namespace LocalJSX {
     }
     interface CoreToast {
         /**
-          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`. Defaults to `color="white"`.
+          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`.
          */
         "color"?: "white" | "green" | "yellow" | "red";
     }
