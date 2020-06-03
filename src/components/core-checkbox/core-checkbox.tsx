@@ -10,6 +10,7 @@ import {
 @Component({
   tag: "core-checkbox",
   styleUrl: "core-checkbox.less",
+  assetsDirs: ["../../assets/svg"],
   shadow: true,
 })
 export class Checkbox implements ComponentInterface {
