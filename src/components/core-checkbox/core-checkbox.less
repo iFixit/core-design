@@ -1,6 +1,5 @@
 @import (reference) "../../assets/font/inter/inter.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
 @space-large: 20px;
 
 // :host targets the custom element compiled by Stencil
@@ -8,6 +7,7 @@
   color: @color-gray-5;
   display: inline-flex;
   font: inherit;
+  width: inherit;
 
   // @Prop type size
   &([large]) {
@@ -16,9 +16,9 @@
       width: @space-large;
 
       &:checked:after {
-        content: url(assets/svg/check.svg);
+        content: url(../../collection/assets/svg/check.svg);
         height: 9px;
-        top: 2px;
+        top: 1px;
         width: 12px;
       }
     }
@@ -29,7 +29,7 @@
   background: @color-white;
   border: 0;
   border-radius: @space-1;
-  box-shadow: 0 0 0 1px @color-gray-3;
+  box-shadow: 0 0 0 1px @color-gray-3 inset;
   cursor: pointer;
   display: flex;
   font: inherit;
@@ -48,7 +48,7 @@
 
   &:disabled {
     background: @color-gray-1;
-    box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent inset;
     color: @color-gray-4;
     cursor: not-allowed;
   }
@@ -62,17 +62,24 @@
 
     &:checked {
       background: @color-blue;
-      box-shadow: 0 0 0 1px @color-blue-dark-1;
+      box-shadow: 0 0 0 1px @color-blue-dark-1 inset;
 
       &:after {
-        content: url(assets/svg/check-sm.svg);
+        content: url(../../collection/assets/svg/check-sm.svg);
         height: 7px;
         position: absolute;
-        top: -1px;
+        top: -2px;
         left: 50%;
         transform: translate(-50%);
         width: 10px;
       }
+    }
+
+    &:disabled {
+      background: @color-gray-1;
+      box-shadow: 0 0 0 0 transparent inset;
+      color: @color-gray-4;
+      cursor: not-allowed;
     }
   }
 }

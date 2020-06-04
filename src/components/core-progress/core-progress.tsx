@@ -18,7 +18,6 @@ export class Progress implements ComponentInterface {
   /**
    * Color of the progress bar.
    * Use: `color="black"`, `color="red"`, etc.
-   * Default color is `"blue"`.
    */
   @Prop() color?: "black" | "blue" | "green" | "yellow" | "red" = "blue";
 
@@ -30,7 +29,6 @@ export class Progress implements ComponentInterface {
   /**
    * The pre-defined progress bar size.
    * Use: `"small"` or `"large"`.
-   * Default size is `"large"`.
    */
   @Prop() size?: "small" | "large" = "large";
 

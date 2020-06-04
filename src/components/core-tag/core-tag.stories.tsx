@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-tag",
-  title: "Components|Tag",
+  title: "Components/Tag",
 };
 
 const colors = {
@@ -51,7 +51,6 @@ export const Closable = (): TemplateResult => {
     <core-tag
       closable=${boolean("Closable", true)}
       color="${select("Color", colors, "yellow")}"
-      size="${select("size", sizes, "large")}"
       variation="${select("variation", variations, "default")}"
     >
       Tag

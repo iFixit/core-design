@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-alert",
-  title: "Components|Alert",
+  title: "Components/Alert",
 };
 
 const colors = {

@@ -19,15 +19,15 @@
     "url": "https://github.com/Dozuki/core-components.git"
   },
   "scripts": {
-    "build": "stencil build --docs",
-    "build-netlify": "npm-run-all stencil build-storybook",
-    "build-storybook": "build-storybook --config-dir .storybook --static-dir dist --output-dir storybook/ --quiet",
+    "build-stencil": "stencil build --docs --no-cache",
+    "build-netlify": "npm-run-all build-stencil build-storybook",
+    "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
     "generate": "stencil generate",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "start": "stencil build --dev --watch --serve",
-    "start-storybook": "start-storybook -p 4444 -s www --quiet",
-    "stencil": "stencil build --prod --no-cache",
-    "storybook": "npm-run-all --parallel stencil start-storybook",
+    "start-storybook": "start-storybook --static-dir dist --quiet",
+    "stencil": "stencil build --watch",
+    "storybook": "npm-run-all --parallel start-storybook stencil",
     "test": "stencil test --spec --e2e",
     "test-watch": "stencil test --spec --e2e --watchAll"
   },

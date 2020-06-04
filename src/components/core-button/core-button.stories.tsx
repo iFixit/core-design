@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-button",
-  title: "Components|Button",
+  title: "Components/Button",
 };
 
 const loading = {
@@ -23,13 +23,13 @@ const radii = {
 };
 
 const sizes = {
-  small: "small",
   default: "default",
+  small: "small",
   large: "large",
 };
 
 const status = {
-  alt: "alt",
+  "--": "--",
   success: "success",
   danger: "danger",
   warning: "warning",
@@ -88,7 +88,6 @@ export const Loading = (): TemplateResult => {
       loading="${select("Loading", loading, "left")}"
       radius="${select("Radius", radii, "4")}"
       size="${select("Size", sizes, "default")}"
-      status="${select("Status", status, null)}"
       variation="${select("Variation", variations, "basic")}"
       >Button</core-button
     >

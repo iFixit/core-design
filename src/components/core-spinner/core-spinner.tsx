@@ -18,14 +18,12 @@ export class Spinner implements ComponentInterface {
   /**
    * Color of the spinner.
    * Use: `color="black"` or `color="red"`.
-   * Default size is `"black"`.
    */
   @Prop() color?: "black" | "red" | "blue" | "green" | "yellow" = "black";
 
   /**
    * The pre-defined spinner size.
    * Use: `"small"`, `"medium"`, `"large"`, ect.
-   * Default size is `"xlarge"`.
    */
   @Prop({ reflectToAttr: true }) size?: "small" | "medium" | "large" = "medium";
 

@@ -18,7 +18,6 @@ export class toast implements ComponentInterface {
   /**
    * Optional primary color of the toast. Defaults to `black`.
    * Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`.
-   * Defaults to `color="white"`.
    */
   @Prop() color?: "white" | "green" | "yellow" | "red" = "white";
 

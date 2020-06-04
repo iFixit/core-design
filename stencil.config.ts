@@ -22,9 +22,6 @@ export const config: Config = {
     {
       type: "www",
       serviceWorker: null,
-      copy: [
-        { src: '../node_modules/@core-ds/icons/icons', dest: 'assets/icons' }
-      ]
     },
   ],
   plugins: [

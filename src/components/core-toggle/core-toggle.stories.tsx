@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-toggle",
-  title: "Components|Toggle",
+  title: "Components/Toggle",
 };
 
 const colors = {
@@ -48,6 +48,20 @@ export const Alt = (): TemplateResult => {
       disabled="${boolean("Disabled", false)}"
       required="${boolean("Required", false)}"
       large="${boolean("Large", false)}"
+      >The file <strong>benchmark2</strong> was deleted.</core-toggle
+    >
+  `;
+};
+
+export const AltLarge = (): TemplateResult => {
+  return html`
+    <core-toggle
+      alt="${boolean("Alt", true)}"
+      checked="${boolean("Checked", false)}"
+      color="${select("Color", colors, "red")}"
+      disabled="${boolean("Disabled", false)}"
+      required="${boolean("Required", false)}"
+      large="${boolean("Large", true)}"
       >The file <strong>benchmark2</strong> was deleted.</core-toggle
     >
   `;

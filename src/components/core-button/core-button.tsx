@@ -73,15 +73,14 @@ export class Button implements ComponentInterface {
   /**
    * The pre-defined button size.
    * Use: `"small"`, `"default"`, or `"large"`.
-   * Default size is `"default"`.
    */
   @Prop() size?: "small" | "default" | "large" = "default";
 
   /**
    * The status classing of the button.
-   * Use: `"success"`, `"danger"`, `"warning"`, or `"alt"`.
+   * Use: `"success"`, `"danger"`, or `"warning"`.
    */
-  @Prop() status: "success" | "danger" | "warning" | "alt";
+  @Prop() status: "success" | "danger" | "warning";
 
   /**
    * Specifies where to display the linked URL.
@@ -98,8 +97,13 @@ export class Button implements ComponentInterface {
   /**
    * The button variation.
    */
-  @Prop() variation?: "basic" | "primary" | "secondary" | "dark" | "light" =
-    "basic";
+  @Prop() variation?:
+    | "basic"
+    | "primary"
+    | "secondary"
+    | "dark"
+    | "light"
+    | "borderless" = "basic";
 
   /**
    * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.

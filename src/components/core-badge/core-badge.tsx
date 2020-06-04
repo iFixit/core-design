@@ -16,23 +16,20 @@ export class Badge implements ComponentInterface {
   @Element() el!: HTMLCoreBadgeElement;
 
   /**
-   * Color of the badge. Defaults to `red`.
+   * Color of the badge.
    * Use: `color="black"` or `color="red"`.
-   * Default size is `"red"`.
    */
   @Prop() color?: "black" | "red" = "red";
 
   /**
    * The pre-defined badge size.
    * Use: `"small"` or `"large"`.
-   * Default size is `"large"`.
    */
   @Prop() size?: "small" | "large" = "large";
 
   /**
    * The badge variation.
    * Use: `"border"`, `"dot"`, or `"fill"`.
-   * Default variation is `"fill"`.
    */
   @Prop() variation?: "border" | "dot" | "fill" = "fill";
 
@@ -48,6 +45,7 @@ export class Badge implements ComponentInterface {
         }}
       >
         <div class="native-element">
+          <div class="dot-inner"></div>
           <slot></slot>
         </div>
       </Host>

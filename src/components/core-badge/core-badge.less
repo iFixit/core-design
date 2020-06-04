@@ -38,13 +38,18 @@
     color: @color-red;
   }
 
-  &(.dot) .native-element::before {
-    content: "";
-    background: @color-white;
-    border-radius: 50%;
-    height: 5px;
-    margin: auto;
-    width: 5px;
+  &(.dot) .native-element {
+    .dot-inner {
+      background: @color-white;
+      border-radius: 50%;
+      height: 5px;
+      margin: auto;
+      width: 5px;
+    }
+
+    slot {
+      display: none;
+    }
   }
 
   &(.fill) .native-element {
@@ -62,7 +67,7 @@
     padding: 2px @space-1;
   }
 
-  &([size="small"].dot) .native-element::before {
+  &([size="small"].dot) .dot-inner {
     height: 4px;
     width: 4px;
   }

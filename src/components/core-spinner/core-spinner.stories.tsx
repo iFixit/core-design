@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-spinner",
-  title: "Components|Spinner",
+  title: "Components/Spinner",
 };
 
 const colors = {
