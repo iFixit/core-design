@@ -12,6 +12,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
+  max-width: 100%;
 
   // @Prop basic variation
   &(.basic) {
@@ -607,15 +608,16 @@
   border-radius: @border-radius-md;
   border: 0;
   box-sizing: border-box;
+  display: flex;
   font: inherit;
   font-weight: bold;
+  max-width: inherit;
   outline: none;
   padding: 10px 15px;
   position: relative;
   text-decoration: none;
   transition: background 0.12s ease-in-out, box-shadow 0.12s ease-in-out,
-    color 0.12s ease-in-out;
-  width: inherit;
+  color 0.12s ease-in-out;
 
   &:not(:disabled):not([loading]) {
     &:hover {
@@ -630,13 +632,9 @@
     cursor: not-allowed;
   }
 
-  .button-inner {
-    display: flex;
-    max-width: 100%;
-    min-height: 16px;
+  .text-wrap {
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: center;
     white-space: nowrap;
   }
 

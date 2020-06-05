@@ -159,13 +159,13 @@ export class Button implements ComponentInterface {
           disabled={disabled}
           loading={loading}
         >
-          <div class="button-inner">
-            <slot name="icon"></slot>
-            <slot name="button-left"></slot>
+          <slot name="icon"></slot>
+          <slot name="button-left"></slot>
+          <div class="text-wrap">
             <slot></slot>
-            <slot name="button-right"></slot>
-            <div class="button-loading"></div>
           </div>
+          <slot name="button-right"></slot>
+          <div class="button-loading"></div>
         </TagType>
       </Host>
     );

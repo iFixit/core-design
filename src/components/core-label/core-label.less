@@ -4,7 +4,7 @@
 // :host targets the custom element compiled by Stencil
 :host {
   box-sizing: border-box;
-  display: flex;
+  color: @color-gray-5;
   font-family: "Inter", sans-serif;
   font-feature-settings: "ss01" on, "ss02" on;
   font-size: 14px;
@@ -205,13 +205,12 @@
 
   &(.block) {
     box-sizing: border-box;
+    display: flex;
     width: 100%;
 
     .native-element {
       align-items: flex-start;
-      color: @color-gray-5;
       flex-direction: column;
-      width: inherit;
     }
 
     .label-inner {
@@ -238,9 +237,15 @@
   }
 
   &(.inline) {
+    display: inline-flex;
+
     .label-inner {
       display: inline-flex;
       align-items: center;
     }
   }
+}
+
+.native-element {
+  width: inherit;
 }

@@ -14,7 +14,7 @@ const displays = {
 export const Default = (): TemplateResult => {
   return html`
     <core-label
-      color=${text("color", "gray-2")}
+      color=${text("color", "gray-5")}
       display=${select("Display", displays, "block")}
       >Form Label</core-label
     >

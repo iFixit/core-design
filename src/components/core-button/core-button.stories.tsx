@@ -101,3 +101,19 @@ export const Linked = (): TemplateResult => {
     >
   `;
 };
+
+export const Overflow = (): TemplateResult => {
+  return html`
+    <core-button
+      disabled=${boolean("Disabled", false)}
+      radius="${select("Radius", radii, "4")}"
+      size="${select("Size", sizes, "default")}"
+      status="${select("Status", status, null)}"
+      variation="${select("Variation", variations, "basic")}"
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non
+      quis exercitationem culpa nesciunt nihil aut nostrum explicabo
+      reprehenderit optio amet ab temporibus asperiores quasi cupiditate.
+      Voluptatum ducimus voluptates voluptas?</core-button
+    >
+  `;
+};
