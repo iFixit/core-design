@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build-netlify": "npm run components:run -- build-stencil && npm run components:run -- build-storybook",
-    "components:run": "lerna run --scope @core-design/components"
+    "components:run": "lerna run --scope @core-design/components",
+    "lerna": "lerna"
   },
   "devDependencies": {
     "lerna": "^3.22.0"
