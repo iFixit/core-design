@@ -1,6 +1,6 @@
 {
   "name": "@core-design/components-react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "React wrappers for Core Design System Components",
   "homepage": "https://github.com/Dozuki/core-components#readme",
   "repository": {
@@ -34,7 +34,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@core-design/components": "^2.0.2"
+    "@core-design/components": "^2.0.3"
   },
   "peerDependencies": {
     "react": "^16.9.0",
