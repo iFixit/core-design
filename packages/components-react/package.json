@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/Dozuki/core-components.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": false,
   "scripts": {
     "build": "npm run clean && npm run compile",
@@ -36,5 +39,6 @@
   "peerDependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
-  }
+  },
+  "gitHead": "bfb86b6875b40cfe9389e743d76cdafff83314e1"
 }
