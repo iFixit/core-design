@@ -19,6 +19,7 @@
     "url": "https://github.com/Dozuki/core-components.git"
   },
   "scripts": {
+    "build-netlify": "npm-run-all build-stencil build-storybook",
     "build-stencil": "stencil build --docs --no-cache",
     "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
     "generate": "stencil generate",
