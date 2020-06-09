@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-textarea",
-  title: "Components/Textarea",
+  title: "Buttons & Inputs/Textarea",
 };
 
 export const Default = (): TemplateResult => {

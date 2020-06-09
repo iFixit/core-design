@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-badge",
-  title: "Components/Badge",
+  title: "Informers/Badge",
 };
 
 const colors = {

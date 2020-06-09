@@ -15,10 +15,7 @@ export async function writeDocsOutput(
   jsonContent: string,
   root: string
 ) {
-  return compilerCtx.fs.writeFile(
-    `${root}/dist/docs/custom-elements.json`,
-    jsonContent
-  );
+  return compilerCtx.fs.writeFile(`${root}/custom-elements.json`, jsonContent);
 }
 
 export async function generateJsonDocs(

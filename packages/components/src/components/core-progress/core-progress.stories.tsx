@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-progress",
-  title: "Components/Progress",
+  title: "Informers/Progress",
 };
 
 const colors = {
