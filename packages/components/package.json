@@ -36,6 +36,7 @@
     "@stencil/core": "1.13.0",
     "@stencil/eslint-plugin": "^0.3.1",
     "@stencil/less": "^1.0.0",
+    "@stencil/react-output-target": "^0.0.6",
     "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-centered": "^5.3.18",
@@ -54,6 +55,5 @@
     "lit-html": "^1.2.1",
     "ts-loader": "^7.0.4"
   },
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }
