@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-tag",
-  title: "Components/Tag",
+  title: "Informers/Tag",
 };
 
 const colors = {

@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-alert",
-  title: "Components/Alert",
+  title: "Informers/Alert",
 };
 
 const colors = {
@@ -15,9 +15,11 @@ const colors = {
 
 export const Default = (): TemplateResult => {
   return html`
-    <core-alert color="${select("Color", colors, "gray")}">
-      <core-icon slot="icon" icon="globe"></core-icon>
-      A notification message of information.
-    </core-alert>
+    <Story>
+      <core-alert color="${select("Color", colors, "gray")}">
+        <core-icon slot="icon" icon="globe"></core-icon>
+        A notification message of information.
+      </core-alert>
+    </Story>
   `;
 };

@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-checkbox",
-  title: "Components/Checkbox",
+  title: "Buttons & Inputs/Checkbox",
 };
 
 export const Default = (): TemplateResult => {
