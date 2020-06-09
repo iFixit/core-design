@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-input",
-  title: "Components/Input",
+  title: "Buttons & Inputs/Input",
 };
 
 const icons = {

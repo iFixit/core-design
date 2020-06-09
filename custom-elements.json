@@ -1,0 +1,2025 @@
+{
+  "timestamp": "2020-06-09T00:51:07",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.13.0",
+    "typescriptVersion": "3.8.3"
+  },
+  "tags": [
+    {
+      "filePath": "./src/components/core-alert/core-alert.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-alert",
+      "name": "core-alert",
+      "readme": "# core-alert\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "color",
+          "type": "\"gray\" | \"green\" | \"red\" | \"yellow\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Optional primary color of the alert.\nUse: `color=\"gray\"`, `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`.",
+          "docsTags": [],
+          "default": "\"gray\"",
+          "values": [
+            {
+              "value": "gray",
+              "type": "string"
+            },
+            {
+              "value": "green",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            },
+            {
+              "value": "yellow",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Optional primary color of the alert.\nUse: `color=\"gray\"`, `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-badge/core-badge.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-badge",
+      "name": "core-badge",
+      "readme": "# core-badge\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "color",
+          "type": "\"black\" | \"red\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Color of the badge.\nUse: `color=\"black\"` or `color=\"red\"`.",
+          "docsTags": [],
+          "default": "\"red\"",
+          "values": [
+            {
+              "value": "black",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Color of the badge.\nUse: `color=\"black\"` or `color=\"red\"`."
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "The pre-defined badge size.\nUse: `\"small\"` or `\"large\"`.",
+          "docsTags": [],
+          "default": "\"large\"",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The pre-defined badge size.\nUse: `\"small\"` or `\"large\"`."
+        },
+        {
+          "name": "variation",
+          "type": "\"border\" | \"dot\" | \"fill\"",
+          "mutable": false,
+          "attr": "variation",
+          "reflectToAttr": false,
+          "docs": "The badge variation.\nUse: `\"border\"`, `\"dot\"`, or `\"fill\"`.",
+          "docsTags": [],
+          "default": "\"fill\"",
+          "values": [
+            {
+              "value": "border",
+              "type": "string"
+            },
+            {
+              "value": "dot",
+              "type": "string"
+            },
+            {
+              "value": "fill",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The badge variation.\nUse: `\"border\"`, `\"dot\"`, or `\"fill\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-button/core-button.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-button",
+      "name": "core-button",
+      "readme": "# core-button\n",
+      "description": "",
+      "docsTags": [
+        {
+          "text": "- Content is placed between the named slots if provided without a slot.",
+          "name": "slot"
+        },
+        {
+          "text": "`button-icon` - Should be used on an icon in a button that has no text.",
+          "name": "slot"
+        },
+        {
+          "text": "`button-left` - Content is placed to the left of the button text.",
+          "name": "slot"
+        },
+        {
+          "text": "`button-right` - Content is placed to the right of the button text.",
+          "name": "slot"
+        }
+      ],
+      "usage": {},
+      "properties": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "If `true`, the user cannot interact with the button.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the user cannot interact with the button."
+        },
+        {
+          "name": "display",
+          "type": "\"block\" | \"flex\" | \"inline\" | \"inlineFlex\" | \"none\"",
+          "mutable": false,
+          "attr": "display",
+          "reflectToAttr": false,
+          "docs": "Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)",
+          "docsTags": [],
+          "default": "\"flex\"",
+          "values": [
+            {
+              "value": "block",
+              "type": "string"
+            },
+            {
+              "value": "flex",
+              "type": "string"
+            },
+            {
+              "value": "inline",
+              "type": "string"
+            },
+            {
+              "value": "inlineFlex",
+              "type": "string"
+            },
+            {
+              "value": "none",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)"
+        },
+        {
+          "name": "download",
+          "type": "string",
+          "mutable": false,
+          "attr": "download",
+          "reflectToAttr": false,
+          "docs": "This attribute instructs browsers to download a URL instead of navigating to\nit, so the user will be prompted to save it as a local file. If the attribute\nhas a value, it is used as the pre-filled file name in the Save prompt\n(the user can still change the file name if they want).",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "This attribute instructs browsers to download a URL instead of navigating to\nit, so the user will be prompted to save it as a local file. If the attribute\nhas a value, it is used as the pre-filled file name in the Save prompt\n(the user can still change the file name if they want)."
+        },
+        {
+          "name": "elementType",
+          "type": "string",
+          "mutable": true,
+          "attr": "element-type",
+          "reflectToAttr": false,
+          "docs": "The type of element.",
+          "docsTags": [],
+          "default": "\"button\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The type of element."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "href",
+          "reflectToAttr": false,
+          "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a button.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a button."
+        },
+        {
+          "name": "loading",
+          "type": "\"left\" | \"only\" | \"right\"",
+          "mutable": false,
+          "attr": "loading",
+          "reflectToAttr": true,
+          "docs": "Specifies the loading animation location if applied.\nUse: `\"left\"`, `\"right\"`, or `\"only\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "only",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Specifies the loading animation location if applied.\nUse: `\"left\"`, `\"right\"`, or `\"only\"`."
+        },
+        {
+          "name": "radius",
+          "type": "\"0\" | \"16\" | \"2\" | \"32\" | \"4\" | \"8\" | \"circle\"",
+          "mutable": false,
+          "attr": "radius",
+          "reflectToAttr": false,
+          "docs": "Set to the value of border-radius applied. Default is 4(px).",
+          "docsTags": [],
+          "default": "\"4\"",
+          "values": [
+            {
+              "value": "0",
+              "type": "string"
+            },
+            {
+              "value": "16",
+              "type": "string"
+            },
+            {
+              "value": "2",
+              "type": "string"
+            },
+            {
+              "value": "32",
+              "type": "string"
+            },
+            {
+              "value": "4",
+              "type": "string"
+            },
+            {
+              "value": "8",
+              "type": "string"
+            },
+            {
+              "value": "circle",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Set to the value of border-radius applied. Default is 4(px)."
+        },
+        {
+          "name": "rel",
+          "type": "string",
+          "mutable": false,
+          "attr": "rel",
+          "reflectToAttr": false,
+          "docs": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)."
+        },
+        {
+          "name": "size",
+          "type": "\"default\" | \"large\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "The pre-defined button size.\nUse: `\"small\"`, `\"default\"`, or `\"large\"`.",
+          "docsTags": [],
+          "default": "\"default\"",
+          "values": [
+            {
+              "value": "default",
+              "type": "string"
+            },
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The pre-defined button size.\nUse: `\"small\"`, `\"default\"`, or `\"large\"`."
+        },
+        {
+          "name": "status",
+          "type": "\"danger\" | \"success\" | \"warning\"",
+          "mutable": false,
+          "attr": "status",
+          "reflectToAttr": false,
+          "docs": "The status classing of the button.\nUse: `\"success\"`, `\"danger\"`, or `\"warning\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "danger",
+              "type": "string"
+            },
+            {
+              "value": "success",
+              "type": "string"
+            },
+            {
+              "value": "warning",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The status classing of the button.\nUse: `\"success\"`, `\"danger\"`, or `\"warning\"`."
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "mutable": false,
+          "attr": "target",
+          "reflectToAttr": false,
+          "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nUse: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nUse: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`."
+        },
+        {
+          "name": "type",
+          "type": "\"button\" | \"reset\" | \"submit\"",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "The type of the button.",
+          "docsTags": [],
+          "default": "\"button\"",
+          "values": [
+            {
+              "value": "button",
+              "type": "string"
+            },
+            {
+              "value": "reset",
+              "type": "string"
+            },
+            {
+              "value": "submit",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The type of the button."
+        },
+        {
+          "name": "variation",
+          "type": "\"basic\" | \"borderless\" | \"dark\" | \"light\" | \"primary\" | \"secondary\"",
+          "mutable": false,
+          "attr": "variation",
+          "reflectToAttr": false,
+          "docs": "The button variation.",
+          "docsTags": [],
+          "default": "\"basic\"",
+          "values": [
+            {
+              "value": "basic",
+              "type": "string"
+            },
+            {
+              "value": "borderless",
+              "type": "string"
+            },
+            {
+              "value": "dark",
+              "type": "string"
+            },
+            {
+              "value": "light",
+              "type": "string"
+            },
+            {
+              "value": "primary",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The button variation."
+        },
+        {
+          "name": "width",
+          "type": "\"block\" | \"full\"",
+          "mutable": false,
+          "attr": "width",
+          "reflectToAttr": false,
+          "docs": "Set to \"full\" for a 100% full-width button without border-radius/borders or to \"block\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "block",
+              "type": "string"
+            },
+            {
+              "value": "full",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Set to \"full\" for a 100% full-width button without border-radius/borders or to \"block\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [
+        {
+          "name": "",
+          "docs": "Content is placed between the named slots if provided without a slot."
+        },
+        {
+          "name": "`button-icon`",
+          "docs": "Should be used on an icon in a button that has no text."
+        },
+        {
+          "name": "`button-left`",
+          "docs": "Content is placed to the left of the button text."
+        },
+        {
+          "name": "`button-right`",
+          "docs": "Content is placed to the right of the button text."
+        }
+      ],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-checkbox/core-checkbox.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-checkbox",
+      "name": "core-checkbox",
+      "readme": "# core-checkbox\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "If applied, the element is checked.\nUse: `\"checked\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the element is checked.\nUse: `\"checked\"`."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "If applied, the user cannot interact with the element.\nUse: `\"disabled\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the user cannot interact with the element.\nUse: `\"disabled\"`."
+        },
+        {
+          "name": "large",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "large",
+          "reflectToAttr": true,
+          "docs": "Apply the large pre-defined large checkbox size styling.\nUse: `\"large\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Apply the large pre-defined large checkbox size styling.\nUse: `\"large\"`."
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required",
+          "reflectToAttr": false,
+          "docs": "If applied, the user must fill in a value before submitting a form containing this element.\nUse: `\"required\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the user must fill in a value before submitting a form containing this element.\nUse: `\"required\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-dropdown/core-dropdown.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-dropdown",
+      "name": "core-dropdown",
+      "readme": "# core-dropdown\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "active",
+          "reflectToAttr": true,
+          "docs": "The dropdown visibility",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The dropdown visibility"
+        },
+        {
+          "name": "hoverable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "hoverable",
+          "reflectToAttr": false,
+          "docs": "The dropdown will show up when hovering the dropdown-trigger",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The dropdown will show up when hovering the dropdown-trigger"
+        },
+        {
+          "name": "nowrap",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "nowrap",
+          "reflectToAttr": false,
+          "docs": "The dropdown will not wrap it's child element content.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The dropdown will not wrap it's child element content."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-dropdown-item/core-dropdown-item.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-dropdown-item",
+      "name": "core-dropdown-item",
+      "readme": "# core-dropdown-item\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "elementType",
+          "type": "string",
+          "mutable": true,
+          "attr": "element-type",
+          "reflectToAttr": false,
+          "docs": "The type of element.",
+          "docsTags": [],
+          "default": "\"div\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The type of element."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "href",
+          "reflectToAttr": false,
+          "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a div.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a div."
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "mutable": false,
+          "attr": "target",
+          "reflectToAttr": false,
+          "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nUse: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nUse: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-icon/core-icon.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-icon",
+      "name": "core-icon",
+      "readme": "# core-icon\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "ariaLabel",
+          "type": "string",
+          "mutable": true,
+          "attr": "aria-label",
+          "reflectToAttr": true,
+          "docs": "Specifies the label to use for accessibility. Defaults to the icon name.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Specifies the label to use for accessibility. Defaults to the icon name."
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Optional color of the icon.\nUse any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\n(e.g. `color=\"red\"`, `color=\"gray-2\"`, etc).",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Optional color of the icon.\nUse any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\n(e.g. `color=\"red\"`, `color=\"gray-2\"`, etc)."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "mutable": false,
+          "attr": "icon",
+          "reflectToAttr": false,
+          "docs": "A combination of both `name` and `src`. If a `src` url is detected\nit will set the `src` property. Otherwise it assumes it's a built-in named\nSVG and set the `name` property.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "A combination of both `name` and `src`. If a `src` url is detected\nit will set the `src` property. Otherwise it assumes it's a built-in named\nSVG and set the `name` property."
+        },
+        {
+          "name": "lazy",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "lazy",
+          "reflectToAttr": false,
+          "docs": "If enabled, core-icon will be loaded lazily when it's visible in the viewport.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If enabled, core-icon will be loaded lazily when it's visible in the viewport."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "Specifies which icon to use from `src/core-icons`.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Specifies which icon to use from `src/core-icons`."
+        },
+        {
+          "name": "size",
+          "type": "\"16\" | \"24\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "The size of the icon.\nAvailable options are: `\"16\"` and `\"24\"`.",
+          "docsTags": [],
+          "default": "\"16\"",
+          "values": [
+            {
+              "value": "16",
+              "type": "string"
+            },
+            {
+              "value": "24",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The size of the icon.\nAvailable options are: `\"16\"` and `\"24\"`."
+        },
+        {
+          "name": "src",
+          "type": "string",
+          "mutable": false,
+          "attr": "src",
+          "reflectToAttr": false,
+          "docs": "Specifies the exact `src` of an SVG file to use.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Specifies the exact `src` of an SVG file to use."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [
+        "core-input",
+        "core-label",
+        "core-toast"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "core-input": [
+          "core-icon"
+        ],
+        "core-label": [
+          "core-icon"
+        ],
+        "core-toast": [
+          "core-icon"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/core-input/core-input.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-input",
+      "name": "core-input",
+      "readme": "# core-input\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "autofocus",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "autofocus",
+          "reflectToAttr": false,
+          "docs": "Boolean attribute lets you specify that a form control should\nhave input focus when the page loads.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Boolean attribute lets you specify that a form control should\nhave input focus when the page loads."
+        },
+        {
+          "name": "clearInput",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "clear-input",
+          "reflectToAttr": false,
+          "docs": "If `true`, a clear icon will appear in the input when there is a\nvalue. Clicking it clears the input.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, a clear icon will appear in the input when there is a\nvalue. Clicking it clears the input."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "If `true`, the user cannot interact with the input.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the user cannot interact with the input."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "mutable": false,
+          "attr": "icon",
+          "reflectToAttr": false,
+          "docs": "The core-icon to render inside the text input.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The core-icon to render inside the text input."
+        },
+        {
+          "name": "inputkeyboard",
+          "type": "\"decimal\" | \"email\" | \"none\" | \"numeric\" | \"search\" | \"tel\" | \"text\" | \"url\"",
+          "mutable": false,
+          "attr": "inputkeyboard",
+          "reflectToAttr": false,
+          "docs": "A hint to the browser for which keyboard to display.\nUse: `\"none\"`, `\"text\"`, `\"tel\"`, `\"url\"`,\n`\"email\"`, `\"numeric\"`, `\"decimal\"`, and `\"search\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "decimal",
+              "type": "string"
+            },
+            {
+              "value": "email",
+              "type": "string"
+            },
+            {
+              "value": "none",
+              "type": "string"
+            },
+            {
+              "value": "numeric",
+              "type": "string"
+            },
+            {
+              "value": "search",
+              "type": "string"
+            },
+            {
+              "value": "tel",
+              "type": "string"
+            },
+            {
+              "value": "text",
+              "type": "string"
+            },
+            {
+              "value": "url",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "A hint to the browser for which keyboard to display.\nUse: `\"none\"`, `\"text\"`, `\"tel\"`, `\"url\"`,\n`\"email\"`, `\"numeric\"`, `\"decimal\"`, and `\"search\"`."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "The name of the control, which is submitted with the form data.",
+          "docsTags": [],
+          "default": "this.inputId",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The name of the control, which is submitted with the form data."
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "Instructional placeholder text that shows before the input has a value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Instructional placeholder text that shows before the input has a value."
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required",
+          "reflectToAttr": false,
+          "docs": "If `true`, the user must fill in a value before submitting a form.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the user must fill in a value before submitting a form."
+        },
+        {
+          "name": "size",
+          "type": "\"large\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "Apply the large pre-defined input size and styling.\nUse: `\"large\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Apply the large pre-defined input size and styling.\nUse: `\"large\"`."
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": true,
+          "docs": "How an <input> works varies considerably depending on the value of\nits type attribute, hence the different types are covered in their\nown separate reference pages. If this attribute is not specified,\nthe default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)",
+          "docsTags": [],
+          "default": "\"text\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "How an <input> works varies considerably depending on the value of\nits type attribute, hence the different types are covered in their\nown separate reference pages. If this attribute is not specified,\nthe default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)"
+        }
+      ],
+      "methods": [
+        {
+          "name": "getInputElement",
+          "returns": {
+            "type": "Promise<HTMLInputElement>",
+            "docs": ""
+          },
+          "signature": "getInputElement() => Promise<HTMLInputElement>",
+          "parameters": [],
+          "docs": "Returns the native `<input>` element.",
+          "docsTags": []
+        }
+      ],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [
+        "core-icon"
+      ],
+      "dependencyGraph": {
+        "core-input": [
+          "core-icon"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/core-label/core-label.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-label",
+      "name": "core-label",
+      "readme": "# core-label\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "color",
+          "type": "string",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Optional color of the label.\nUse any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\n(e.g. `color=\"red\"`, `color=\"gray-2\"`, etc).",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Optional color of the label.\nUse any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\n(e.g. `color=\"red\"`, `color=\"gray-2\"`, etc)."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "If `true`, the user cannot interact with the nested element (typically core-input).",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the user cannot interact with the nested element (typically core-input)."
+        },
+        {
+          "name": "display",
+          "type": "\"block\" | \"inline\"",
+          "mutable": false,
+          "attr": "display",
+          "reflectToAttr": false,
+          "docs": "The display determines where and how the label behaves inside an item.",
+          "docsTags": [],
+          "default": "\"block\"",
+          "values": [
+            {
+              "value": "block",
+              "type": "string"
+            },
+            {
+              "value": "inline",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The display determines where and how the label behaves inside an item."
+        },
+        {
+          "name": "helpurl",
+          "type": "string",
+          "mutable": false,
+          "attr": "helpurl",
+          "reflectToAttr": false,
+          "docs": "Applies the provided URL to the helpIcon href.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Applies the provided URL to the helpIcon href."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [
+        "core-icon"
+      ],
+      "dependencyGraph": {
+        "core-label": [
+          "core-icon"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/core-progress/core-progress.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-progress",
+      "name": "core-progress",
+      "readme": "# core-progress\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "color",
+          "type": "\"black\" | \"blue\" | \"green\" | \"red\" | \"yellow\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Color of the progress bar.\nUse: `color=\"black\"`, `color=\"red\"`, etc.",
+          "docsTags": [],
+          "default": "\"blue\"",
+          "values": [
+            {
+              "value": "black",
+              "type": "string"
+            },
+            {
+              "value": "blue",
+              "type": "string"
+            },
+            {
+              "value": "green",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            },
+            {
+              "value": "yellow",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Color of the progress bar.\nUse: `color=\"black\"`, `color=\"red\"`, etc."
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "mutable": false,
+          "attr": "max",
+          "reflectToAttr": false,
+          "docs": "The progress bar maximum value.",
+          "docsTags": [],
+          "default": "100",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The progress bar maximum value."
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "The pre-defined progress bar size.\nUse: `\"small\"` or `\"large\"`.",
+          "docsTags": [],
+          "default": "\"large\"",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The pre-defined progress bar size.\nUse: `\"small\"` or `\"large\"`."
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "The progress bar value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The progress bar value."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-radio/core-radio.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-radio",
+      "name": "core-radio",
+      "readme": "# core-radio\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "If applied, the element is checked.\nUse: `\"checked\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the element is checked.\nUse: `\"checked\"`."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "If applied, the user cannot interact with the element.\nUse: `\"disabled\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the user cannot interact with the element.\nUse: `\"disabled\"`."
+        },
+        {
+          "name": "large",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "large",
+          "reflectToAttr": true,
+          "docs": "Apply the large pre-defined large radio size styling.\nUse: `\"large\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Apply the large pre-defined large radio size styling.\nUse: `\"large\"`."
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required",
+          "reflectToAttr": false,
+          "docs": "If applied, the user must fill in a value before submitting a form containing this element.\nUse: `\"required\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the user must fill in a value before submitting a form containing this element.\nUse: `\"required\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-spinner/core-spinner.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-spinner",
+      "name": "core-spinner",
+      "readme": "# core-spinner\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "color",
+          "type": "\"black\" | \"blue\" | \"green\" | \"red\" | \"yellow\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Color of the spinner.\nUse: `color=\"black\"` or `color=\"red\"`.",
+          "docsTags": [],
+          "default": "\"black\"",
+          "values": [
+            {
+              "value": "black",
+              "type": "string"
+            },
+            {
+              "value": "blue",
+              "type": "string"
+            },
+            {
+              "value": "green",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            },
+            {
+              "value": "yellow",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Color of the spinner.\nUse: `color=\"black\"` or `color=\"red\"`."
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"medium\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "The pre-defined spinner size.\nUse: `\"small\"`, `\"medium\"`, `\"large\"`, ect.",
+          "docsTags": [],
+          "default": "\"medium\"",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "medium",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The pre-defined spinner size.\nUse: `\"small\"`, `\"medium\"`, `\"large\"`, ect."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-tag/core-tag.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-tag",
+      "name": "core-tag",
+      "readme": "# core-tag\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "closable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "closable",
+          "reflectToAttr": false,
+          "docs": "Allows the tag to be closable and removed from\nthe view.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Allows the tag to be closable and removed from\nthe view."
+        },
+        {
+          "name": "color",
+          "type": "\"black\" | \"blue\" | \"green\" | \"red\" | \"yellow\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Optional primary color of the tag. Defaults to `black`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\nUse: `color=\"blue\"`, `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`.",
+          "docsTags": [],
+          "default": "\"black\"",
+          "values": [
+            {
+              "value": "black",
+              "type": "string"
+            },
+            {
+              "value": "blue",
+              "type": "string"
+            },
+            {
+              "value": "green",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            },
+            {
+              "value": "yellow",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Optional primary color of the tag. Defaults to `black`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\nUse: `color=\"blue\"`, `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`."
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "The pre-defined tag size.\nUse: `\"small\"` or `\"large\"`.",
+          "docsTags": [],
+          "default": "\"large\"",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The pre-defined tag size.\nUse: `\"small\"` or `\"large\"`."
+        },
+        {
+          "name": "variation",
+          "type": "\"default\" | \"light\"",
+          "mutable": false,
+          "attr": "variation",
+          "reflectToAttr": false,
+          "docs": "The tag variation.\nUse: `\"default\"` or `\"light\"`.",
+          "docsTags": [],
+          "default": "\"default\"",
+          "values": [
+            {
+              "value": "default",
+              "type": "string"
+            },
+            {
+              "value": "light",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The tag variation.\nUse: `\"default\"` or `\"light\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-textarea/core-textarea.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-textarea",
+      "name": "core-textarea",
+      "readme": "# core-textarea\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "cols",
+          "type": "number",
+          "mutable": false,
+          "attr": "cols",
+          "reflectToAttr": false,
+          "docs": "The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The visible width of the text control, in average character widths. If it is specified, it must be a positive integer."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "If `true`, the user cannot interact with the textarea.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the user cannot interact with the textarea."
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "Instructional text that shows before the input has a value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Instructional text that shows before the input has a value."
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required",
+          "reflectToAttr": false,
+          "docs": "If `true`, the user must fill in a value before submitting a form.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the user must fill in a value before submitting a form."
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "mutable": false,
+          "attr": "rows",
+          "reflectToAttr": false,
+          "docs": "The number of visible text lines for the control.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The number of visible text lines for the control."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": true,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "The value of the textarea.",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The value of the textarea."
+        }
+      ],
+      "methods": [
+        {
+          "name": "getInputElement",
+          "returns": {
+            "type": "Promise<HTMLTextAreaElement>",
+            "docs": ""
+          },
+          "signature": "getInputElement() => Promise<HTMLTextAreaElement>",
+          "parameters": [],
+          "docs": "Returns the native `<textarea>` element used under the hood.",
+          "docsTags": []
+        }
+      ],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-toast/core-toast.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-toast",
+      "name": "core-toast",
+      "readme": "# core-toast\n\n\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "color",
+          "type": "\"green\" | \"red\" | \"white\" | \"yellow\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Optional primary color of the toast. Defaults to `black`.\nUse: `color=\"white\"`, `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`.",
+          "docsTags": [],
+          "default": "\"white\"",
+          "values": [
+            {
+              "value": "green",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            },
+            {
+              "value": "white",
+              "type": "string"
+            },
+            {
+              "value": "yellow",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Optional primary color of the toast. Defaults to `black`.\nUse: `color=\"white\"`, `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [
+        "core-icon"
+      ],
+      "dependencyGraph": {
+        "core-toast": [
+          "core-icon"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/core-toggle/core-toggle.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-toggle",
+      "name": "core-toggle",
+      "readme": "# core-toggle\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "alt",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "alt",
+          "reflectToAttr": false,
+          "docs": "If applied, the element is rendered with the alternate styling.\nUse: `\"alt\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the element is rendered with the alternate styling.\nUse: `\"alt\"`."
+        },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "If applied, the element is checked.\nUse: `\"checked\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the element is checked.\nUse: `\"checked\"`."
+        },
+        {
+          "name": "color",
+          "type": "\"black\" | \"green\" | \"red\" | \"yellow\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "Optional primary color of the icon. Defaults to `blue`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\nUse: `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`, `color=\"black\"`.",
+          "docsTags": [],
+          "default": "\"black\"",
+          "values": [
+            {
+              "value": "black",
+              "type": "string"
+            },
+            {
+              "value": "green",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            },
+            {
+              "value": "yellow",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Optional primary color of the icon. Defaults to `blue`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\nUse: `color=\"green\"`, `color=\"yellow\"`, `color=\"red\"`, `color=\"black\"`."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "If applied, the user cannot interact with the element.\nUse: `\"disabled\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the user cannot interact with the element.\nUse: `\"disabled\"`."
+        },
+        {
+          "name": "large",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "large",
+          "reflectToAttr": true,
+          "docs": "Apply the large pre-defined large toggle size styling.\nUse: `\"large\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Apply the large pre-defined large toggle size styling.\nUse: `\"large\"`."
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required",
+          "reflectToAttr": false,
+          "docs": "If applied, the user must fill in a value before submitting a form containing this element.\nUse: `\"required\"`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If applied, the user must fill in a value before submitting a form containing this element.\nUse: `\"required\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-dropdown-item",
-  title: "Components/Dropdown Item",
+  title: "Dropdown Item",
 };
 
 const targets = {
