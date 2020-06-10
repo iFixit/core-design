@@ -62,7 +62,7 @@ export class Button implements ComponentInterface {
   /**
    * Set to the value of border-radius applied. Default is 4(px).
    */
-  @Prop() radius?: "0" | "2" | "4" | "8" | "16" | "32" | "circle" = "4";
+  @Prop() radius?: "0" | "4" | "circle" = "4";
 
   /**
    * Specifies the relationship of the target object to the link object.
