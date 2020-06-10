@@ -14,6 +14,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist-transpiled",
+    "declarationDir": "dist/types",
     "removeComments": false,
     "sourceMap": true,
     "jsx": "react",
