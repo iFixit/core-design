@@ -18,7 +18,7 @@ addDecorator(withKnobs);
 
 addParameters({
   docs: {
-    iframeHeight: "200px",
+    iframeHeight: "250px",
     inlineStories: false,
   },
   viewport: {
