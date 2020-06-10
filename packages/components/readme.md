@@ -1,5 +1,11 @@
 # Core Components
 
+## Package Management
+
+This repo leverages [Lerna](https://lerna.js.org/), a tool for managing multiple packages within the same repo.
+
+**Lerna bypasses typical `npm` commands**. For a full breakdown of `lerna` commands, see the [lerna readme](https://github.com/lerna/lerna#readme)
+
 ## Getting Started
 
 To start developing your Stencil project, run:
@@ -10,24 +16,12 @@ From `root`:
 lerna run start
 ```
 
-From `./packages/components`:
-
-```bash
-npm start
-```
-
 To start developing your Stencil project in Storybook, run:
 
 From `root`:
 
 ```bash
 lerna run storybook
-```
-
-From `./packages/components`:
-
-```bash
-npm run storybook
 ```
 
 ## Component Structure
