@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-09T21:04:20",
+  "timestamp": "2020-06-10T15:44:44",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -308,7 +308,7 @@
         },
         {
           "name": "radius",
-          "type": "\"0\" | \"16\" | \"2\" | \"32\" | \"4\" | \"8\" | \"circle\"",
+          "type": "\"0\" | \"4\" | \"circle\"",
           "mutable": false,
           "attr": "radius",
           "reflectToAttr": false,
@@ -321,23 +321,7 @@
               "type": "string"
             },
             {
-              "value": "16",
-              "type": "string"
-            },
-            {
-              "value": "2",
-              "type": "string"
-            },
-            {
-              "value": "32",
-              "type": "string"
-            },
-            {
               "value": "4",
-              "type": "string"
-            },
-            {
-              "value": "8",
               "type": "string"
             },
             {
