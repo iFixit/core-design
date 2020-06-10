@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-10T15:55:13",
+  "timestamp": "2020-06-10T18:47:01",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -652,6 +652,33 @@
           "optional": false,
           "required": false,
           "description": "The dropdown visibility"
+        },
+        {
+          "name": "alignment",
+          "type": "\"center\" | \"left\" | \"right\"",
+          "mutable": false,
+          "attr": "alignment",
+          "reflectToAttr": true,
+          "docs": "The dropdown alignment\nUse: `\"left\"`, `\"center\"`, or `\"right\"`.",
+          "docsTags": [],
+          "default": "\"left\"",
+          "values": [
+            {
+              "value": "center",
+              "type": "string"
+            },
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The dropdown alignment\nUse: `\"left\"`, `\"center\"`, or `\"right\"`."
         },
         {
           "name": "hoverable",
