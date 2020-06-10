@@ -4,7 +4,7 @@
 
 This repo leverages [Lerna](https://lerna.js.org/), a tool for managing multiple packages within the same repo.
 
-**Lerna bypasses typical `npm` commands**. For a full breakdown of `lerna` commands, see the [lerna readme](https://github.com/lerna/lerna#readme)
+**Lerna takes the place of typical `npm` and `yarn` commands**. For a full breakdown of `lerna` commands, see the [lerna readme](https://github.com/lerna/lerna#readme)
 
 ## Getting Started
 
