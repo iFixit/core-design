@@ -1,4 +1,4 @@
-import { boolean } from "@storybook/addon-knobs";
+import { boolean, select } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -6,10 +6,17 @@ export default {
   title: "Buttons & Inputs/Dropdown",
 };
 
+const alignments = {
+  left: "left",
+  center: "center",
+  right: "right",
+};
+
 export const Default = (): TemplateResult => {
   return html`
     <core-dropdown
       active=${boolean("Active", false)}
+      alignment=${select("Alignment", alignments, "left")}
       hoverable=${boolean("Hoverable", false)}
       nowrap=${boolean("Nowrap", false)}
     >

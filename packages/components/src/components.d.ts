@@ -108,6 +108,10 @@ export namespace Components {
          */
         "active": boolean;
         /**
+          * The dropdown alignment Use: `"left"`, `"center"`, or `"right"`.
+         */
+        "alignment"?: "left" | "center" | "right";
+        /**
           * The dropdown will show up when hovering the dropdown-trigger
          */
         "hoverable": boolean;
@@ -569,6 +573,10 @@ declare namespace LocalJSX {
           * The dropdown visibility
          */
         "active"?: boolean;
+        /**
+          * The dropdown alignment Use: `"left"`, `"center"`, or `"right"`.
+         */
+        "alignment"?: "left" | "center" | "right";
         /**
           * The dropdown will show up when hovering the dropdown-trigger
          */
