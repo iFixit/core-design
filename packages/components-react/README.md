@@ -4,7 +4,7 @@ This package contains wrappers to easily use core-components in React.
 
 ## Usage
 
-```
+```javascript
 import { CoreButton } from '@core-design/components-react';
 ```
 
