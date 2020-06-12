@@ -1,60 +1,94 @@
 @import (reference) "../../assets/font/inter/inter.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
 
 // :host targets the custom element compiled by Stencil
 :host {
-  color: @color-gray-5;
+  color: @color-gray-8;
   display: inline-flex;
   font-family: "Inter", sans-serif;
   font-feature-settings: "ss01" on, "ss02" on;
   font-size: 14px;
   line-height: 1.142857;
 
-  // @Prop nowrap
-  &([nowrap]) {
-    white-space: nowrap;
+  // @Prop top variation
+  &([variation="top"]) {
+    .popover-outter {
+      bottom: 100%;
+      margin-bottom: 20px;
+    }
+
+    .arrow {
+      bottom: -10px;
+
+      &::before {
+        top: 20px;
+        transform: rotate(180deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        top: -5px;
+      }
+    }
   }
 
-  .core-dropdown {
+  // @Prop bottom variation
+  &([variation="bottom"]) {
+    .popover-outter {
+      top: 100%;
+      margin-top: 20px;
+    }
+
+    .arrow {
+      top: -10px;
+
+      &::before {
+        top: 1px;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        top: -10px;
+      }
+    }
+  }
+
+  .core-popover {
     display: inline-flex;
     position: relative;
     vertical-align: top;
 
     &.active,
     &.hoverable:hover {
-      .menu-outter {
+      .popover-outter {
         display: flex;
       }
     }
   }
 
-  .menu-outter {
+  .popover-outter {
     display: none;
     max-width: 95vw;
     position: absolute;
-    top: 100%;
-    left: -2px;
+    transform: translate(-50%);
+    left: 50%;
     z-index: 9;
   }
 
-  .menu {
+  .popover {
     background-color: @color-white;
     border-radius: @space-1;
     box-shadow: @shadow-3;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 20px;
-    min-width: 128px;
-    padding-top: @space-2;
-    padding-bottom: @space-1;
+    min-width: 260px;
+    padding: @space-4 @space-5 @space-5;
     position: relative;
   }
 
   .arrow {
     position: absolute;
-    top: -10px;
-    left: 10px;
+    left: calc(50% - 10px);
     width: 20px;
 
     &::before {
@@ -65,7 +99,6 @@
       display: block;
       height: 0;
       position: relative;
-      top: 1px;
       left: -5px;
       width: 0;
       z-index: 2;
@@ -78,10 +111,18 @@
       height: 20px;
       transform: rotate(45deg);
       position: relative;
-      top: -10px;
+      top: -5px;
       left: 0;
       width: 20px;
       z-index: -1;
     }
   }
+}
+
+.title {
+  color: @color-gray-6;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: @space-2;
 }

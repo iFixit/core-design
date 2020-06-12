@@ -17,6 +17,7 @@ export const CoreDropdownItem = /*@__PURE__*/createReactComponent<JSX.CoreDropdo
 export const CoreIcon = /*@__PURE__*/createReactComponent<JSX.CoreIcon, HTMLCoreIconElement>('core-icon');
 export const CoreInput = /*@__PURE__*/createReactComponent<JSX.CoreInput, HTMLCoreInputElement>('core-input');
 export const CoreLabel = /*@__PURE__*/createReactComponent<JSX.CoreLabel, HTMLCoreLabelElement>('core-label');
+export const CorePopover = /*@__PURE__*/createReactComponent<JSX.CorePopover, HTMLCorePopoverElement>('core-popover');
 export const CoreProgress = /*@__PURE__*/createReactComponent<JSX.CoreProgress, HTMLCoreProgressElement>('core-progress');
 export const CoreRadio = /*@__PURE__*/createReactComponent<JSX.CoreRadio, HTMLCoreRadioElement>('core-radio');
 export const CoreSpinner = /*@__PURE__*/createReactComponent<JSX.CoreSpinner, HTMLCoreSpinnerElement>('core-spinner');

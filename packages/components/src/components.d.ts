@@ -138,7 +138,7 @@ export namespace Components {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
@@ -210,7 +210,7 @@ export namespace Components {
         /**
           * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
@@ -223,6 +223,20 @@ export namespace Components {
           * Applies the provided URL to the helpIcon href.
          */
         "helpurl"?: string | null;
+    }
+    interface CorePopover {
+        /**
+          * The popover visibility
+         */
+        "active": boolean;
+        /**
+          * The popover will show up when hovering the popover-trigger
+         */
+        "hoverable": boolean;
+        /**
+          * The popover variation.
+         */
+        "variation"?: "top" | "bottom";
     }
     interface CoreProgress {
         /**
@@ -406,6 +420,12 @@ declare global {
         prototype: HTMLCoreLabelElement;
         new (): HTMLCoreLabelElement;
     };
+    interface HTMLCorePopoverElement extends Components.CorePopover, HTMLStencilElement {
+    }
+    var HTMLCorePopoverElement: {
+        prototype: HTMLCorePopoverElement;
+        new (): HTMLCorePopoverElement;
+    };
     interface HTMLCoreProgressElement extends Components.CoreProgress, HTMLStencilElement {
     }
     var HTMLCoreProgressElement: {
@@ -458,6 +478,7 @@ declare global {
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
+        "core-popover": HTMLCorePopoverElement;
         "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
         "core-spinner": HTMLCoreSpinnerElement;
@@ -600,7 +621,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
@@ -668,7 +689,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
@@ -681,6 +702,20 @@ declare namespace LocalJSX {
           * Applies the provided URL to the helpIcon href.
          */
         "helpurl"?: string | null;
+    }
+    interface CorePopover {
+        /**
+          * The popover visibility
+         */
+        "active"?: boolean;
+        /**
+          * The popover will show up when hovering the popover-trigger
+         */
+        "hoverable"?: boolean;
+        /**
+          * The popover variation.
+         */
+        "variation"?: "top" | "bottom";
     }
     interface CoreProgress {
         /**
@@ -814,6 +849,7 @@ declare namespace LocalJSX {
         "core-icon": CoreIcon;
         "core-input": CoreInput;
         "core-label": CoreLabel;
+        "core-popover": CorePopover;
         "core-progress": CoreProgress;
         "core-radio": CoreRadio;
         "core-spinner": CoreSpinner;
@@ -836,6 +872,7 @@ declare module "@stencil/core" {
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
+            "core-popover": LocalJSX.CorePopover & JSXBase.HTMLAttributes<HTMLCorePopoverElement>;
             "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
