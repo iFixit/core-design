@@ -106,6 +106,9 @@
       .progress.grid core-progress {
         width: 100%;
       }
+      .grid core-button-group {
+        grid-column: auto / span 2;
+      }
     </style>
   </head>
   <body>
@@ -144,7 +147,7 @@
         </div>
       </div>
     </section>
-    <section class="button-states">
+    <section>
       <div class="grid">
         <div class="states grid">
           <span class="hint">Loading basic</span>
@@ -160,7 +163,7 @@
         </div>
       </div>
     </section>
-    <section class="button-states">
+    <section>
       <div class="grid">
         <div class="states grid">
           <span class="hint">Status dark</span>
@@ -288,6 +291,72 @@
               <core-icon slot="icon" icon="mail"></core-icon>
             </core-button>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="button-groups">
+      <h2>Button Groups</h2>
+      <div class="grid">
+        <div class="grid button-group">
+          <span></span>
+          <span class="hint extend-2">Outline</span>
+          <span class="hint">Secondary</span>
+        </div>
+        <div class="grid button-group">
+          <span class="hint">Default</span>
+          <core-button-group type="button">
+            <core-button grouped="outline">Button</core-button>
+            <core-button grouped="outline">Button</core-button>
+            <core-button grouped="outline">Button</core-button>
+          </core-button-group>
+          <core-button-group variation="secondary">
+            <core-button grouped="secondary">Button</core-button>
+            <core-button grouped="secondary">Button</core-button>
+            <core-button grouped="secondary">Button</core-button>
+          </core-button-group>
+        </div>
+        <div class="grid button-group">
+          <span class="hint">Selected</span>
+          <core-button-group type="button">
+            <core-button grouped="outline" class="selected">Button</core-button>
+            <core-button grouped="outline">Button</core-button>
+            <core-button grouped="outline">Button</core-button>
+          </core-button-group>
+          <core-button-group variation="secondary">
+            <core-button grouped="secondary" class="selected">Button</core-button>
+            <core-button grouped="secondary">Button</core-button>
+            <core-button grouped="secondary">Button</core-button>
+          </core-button-group>
+        </div>
+        <div class="grid button-group">
+          <span class="hint">Default</span>
+          <core-button-group type="icon">
+            <core-icon icon="search" grouped="outline"></core-icon>
+            <core-icon icon="link-out" grouped="outline"></core-icon>
+            <core-icon icon="pencil" grouped="outline"></core-icon>
+            <core-icon icon="heart" grouped="outline"></core-icon>
+          </core-button-group>
+          <core-button-group type="icon" variation="secondary">
+            <core-icon icon="search" grouped="secondary"></core-icon>
+            <core-icon icon="link-out" grouped="secondary"></core-icon>
+            <core-icon icon="pencil" grouped="secondary"></core-icon>
+            <core-icon icon="heart" grouped="secondary"></core-icon>
+          </core-button-group>
+        </div>
+        <div class="grid button-group">
+          <span class="hint">Selected</span>
+          <core-button-group type="icon">
+            <core-icon icon="search" grouped="outline" class="selected"></core-icon>
+            <core-icon icon="link-out" grouped="outline"></core-icon>
+            <core-icon icon="pencil" grouped="outline"></core-icon>
+            <core-icon icon="heart" grouped="outline"></core-icon>
+          </core-button-group>
+          <core-button-group type="icon" variation="secondary">
+            <core-icon icon="search" grouped="secondary" class="selected"></core-icon>
+            <core-icon icon="link-out" grouped="secondary"></core-icon>
+            <core-icon icon="pencil" grouped="secondary"></core-icon>
+            <core-icon icon="heart" grouped="secondary"></core-icon>
+          </core-button-group>
         </div>
       </div>
     </section>

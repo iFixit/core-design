@@ -1,0 +1,39 @@
+@import (reference) "../../assets/font/inter/inter.css";
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+// :host targets the custom element compiled by Stencil
+:host {
+  display: inline-flex;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "ss01" on, "ss02" on;
+  font-size: 14px;
+  line-height: 1.142857;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  max-width: 100%;
+
+  // @Prop type
+  &([type="icon"]) {
+    color: @color-gray-5;
+  }
+
+  // @Prop variation
+  &([variation="secondary"]) .native-element {
+    box-shadow: 0 0 0 1px @color-gray-1;
+  }
+
+  .button-group-inner {
+    display: flex;
+    margin-right: -1px;
+  }
+}
+
+// Native element styles with intentional lower specificity
+.native-element {
+  border-radius: @border-radius-md;
+  box-shadow: 0 0 0 1px @color-gray-3;
+  max-width: inherit;
+  overflow: hidden;
+  width: inherit;
+}

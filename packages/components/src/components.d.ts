@@ -28,6 +28,10 @@ export namespace Components {
     }
     interface CoreButton {
         /**
+          * Passes any applied class
+         */
+        "class": string | undefined;
+        /**
           * If `true`, the user cannot interact with the button.
          */
         "disabled": boolean;
@@ -43,6 +47,10 @@ export namespace Components {
           * The type of element.
          */
         "elementType": string;
+        /**
+          * Specifies the button-group styling if applied. Use: `"outline"`, or `"secondary"`.
+         */
+        "grouped": "outline" | "secondary";
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a button.
          */
@@ -83,6 +91,16 @@ export namespace Components {
           * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
         "width"?: "full" | "block" | undefined;
+    }
+    interface CoreButtonGroup {
+        /**
+          * The button-group type. Use: `"button"` or `"icon"`.
+         */
+        "type"?: "button" | "icon";
+        /**
+          * The button variation.
+         */
+        "variation"?: "outline" | "secondary";
     }
     interface CoreCheckbox {
         /**
@@ -136,9 +154,17 @@ export namespace Components {
          */
         "ariaLabel"?: string;
         /**
+          * Passes any applied class
+         */
+        "class": string | undefined;
+        /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
         "color"?: string;
+        /**
+          * Specifies the button-group styling if applied. Use: `"outline"`, or `"secondary"`.
+         */
+        "grouped": "outline" | "secondary";
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
@@ -370,6 +396,12 @@ declare global {
         prototype: HTMLCoreButtonElement;
         new (): HTMLCoreButtonElement;
     };
+    interface HTMLCoreButtonGroupElement extends Components.CoreButtonGroup, HTMLStencilElement {
+    }
+    var HTMLCoreButtonGroupElement: {
+        prototype: HTMLCoreButtonGroupElement;
+        new (): HTMLCoreButtonGroupElement;
+    };
     interface HTMLCoreCheckboxElement extends Components.CoreCheckbox, HTMLStencilElement {
     }
     var HTMLCoreCheckboxElement: {
@@ -452,6 +484,7 @@ declare global {
         "core-alert": HTMLCoreAlertElement;
         "core-badge": HTMLCoreBadgeElement;
         "core-button": HTMLCoreButtonElement;
+        "core-button-group": HTMLCoreButtonGroupElement;
         "core-checkbox": HTMLCoreCheckboxElement;
         "core-dropdown": HTMLCoreDropdownElement;
         "core-dropdown-item": HTMLCoreDropdownItemElement;
@@ -490,6 +523,10 @@ declare namespace LocalJSX {
     }
     interface CoreButton {
         /**
+          * Passes any applied class
+         */
+        "class"?: string | undefined;
+        /**
           * If `true`, the user cannot interact with the button.
          */
         "disabled"?: boolean;
@@ -505,6 +542,10 @@ declare namespace LocalJSX {
           * The type of element.
          */
         "elementType"?: string;
+        /**
+          * Specifies the button-group styling if applied. Use: `"outline"`, or `"secondary"`.
+         */
+        "grouped"?: "outline" | "secondary";
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a button.
          */
@@ -545,6 +586,16 @@ declare namespace LocalJSX {
           * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
         "width"?: "full" | "block" | undefined;
+    }
+    interface CoreButtonGroup {
+        /**
+          * The button-group type. Use: `"button"` or `"icon"`.
+         */
+        "type"?: "button" | "icon";
+        /**
+          * The button variation.
+         */
+        "variation"?: "outline" | "secondary";
     }
     interface CoreCheckbox {
         /**
@@ -598,9 +649,17 @@ declare namespace LocalJSX {
          */
         "ariaLabel"?: string;
         /**
+          * Passes any applied class
+         */
+        "class"?: string | undefined;
+        /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
         "color"?: string;
+        /**
+          * Specifies the button-group styling if applied. Use: `"outline"`, or `"secondary"`.
+         */
+        "grouped"?: "outline" | "secondary";
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
@@ -808,6 +867,7 @@ declare namespace LocalJSX {
         "core-alert": CoreAlert;
         "core-badge": CoreBadge;
         "core-button": CoreButton;
+        "core-button-group": CoreButtonGroup;
         "core-checkbox": CoreCheckbox;
         "core-dropdown": CoreDropdown;
         "core-dropdown-item": CoreDropdownItem;
@@ -830,6 +890,7 @@ declare module "@stencil/core" {
             "core-alert": LocalJSX.CoreAlert & JSXBase.HTMLAttributes<HTMLCoreAlertElement>;
             "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
+            "core-button-group": LocalJSX.CoreButtonGroup & JSXBase.HTMLAttributes<HTMLCoreButtonGroupElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
             "core-dropdown": LocalJSX.CoreDropdown & JSXBase.HTMLAttributes<HTMLCoreDropdownElement>;
             "core-dropdown-item": LocalJSX.CoreDropdownItem & JSXBase.HTMLAttributes<HTMLCoreDropdownItemElement>;

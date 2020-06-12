@@ -248,25 +248,52 @@
     }
   }
 
-  // @Prop borderless variation
-  &(.borderless) {
+  // Prop borderless variation
+  &(.borderless) .native-element {
+    border: 0;
+    box-shadow: none !important;
+
+    &:hover,
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+
+  // @Prop grouped styling
+  &([grouped]) {
     .native-element {
-      background: transparent;
+      border-radius: 0;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 0 transparent inset;
 
         &:hover,
         &:active {
-          background: transparent;
+          background: @color-gray-8;
           box-shadow: 0 0 0 0 transparent inset;
+          color: @color-white;
         }
       }
+    }
+  }
 
-      &:disabled {
-        background: @color-gray-1;
-        color: @color-gray-4;
-      }
+  &([grouped="outline"]) .native-element {
+    background: @color-white;
+    border-right: 1px solid @color-gray-3;
+  }
+
+  &([grouped="secondary"]) .native-element {
+    background: @color-gray-1;
+    border-right: 1px solid @color-gray-1;
+  }
+
+  &([grouped].selected) {
+    color: @color-white;
+
+    .native-element {
+      background: @color-gray-8;
+      box-shadow: 0 0 0 0 transparent inset;
+      color: inherit;
     }
   }
 
@@ -577,7 +604,7 @@
     padding: 10px;
   }
 
-  // @Prop circle radius
+  // @Prop radius
   &([radius="0"]) .native-element {
     border-radius: 0;
   }
@@ -589,6 +616,7 @@
 
 // @Prop basic (default) button styles with intentional lower specificity
 .native-element {
+  background: @color-white;
   border-radius: @border-radius-md;
   border: 0;
   box-sizing: border-box;

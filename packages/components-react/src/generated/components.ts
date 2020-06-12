@@ -11,6 +11,7 @@ applyPolyfills().then(() => defineCustomElements());
 export const CoreAlert = /*@__PURE__*/createReactComponent<JSX.CoreAlert, HTMLCoreAlertElement>('core-alert');
 export const CoreBadge = /*@__PURE__*/createReactComponent<JSX.CoreBadge, HTMLCoreBadgeElement>('core-badge');
 export const CoreButton = /*@__PURE__*/createReactComponent<JSX.CoreButton, HTMLCoreButtonElement>('core-button');
+export const CoreButtonGroup = /*@__PURE__*/createReactComponent<JSX.CoreButtonGroup, HTMLCoreButtonGroupElement>('core-button-group');
 export const CoreCheckbox = /*@__PURE__*/createReactComponent<JSX.CoreCheckbox, HTMLCoreCheckboxElement>('core-checkbox');
 export const CoreDropdown = /*@__PURE__*/createReactComponent<JSX.CoreDropdown, HTMLCoreDropdownElement>('core-dropdown');
 export const CoreDropdownItem = /*@__PURE__*/createReactComponent<JSX.CoreDropdownItem, HTMLCoreDropdownItemElement>('core-dropdown-item');

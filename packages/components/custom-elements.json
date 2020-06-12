@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-10T15:55:13",
+  "timestamp": "2020-06-12T18:40:31",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -176,6 +176,23 @@
       "usage": {},
       "properties": [
         {
+          "name": "class",
+          "type": "string",
+          "mutable": false,
+          "attr": "class",
+          "reflectToAttr": false,
+          "docs": "Passes any applied class",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Passes any applied class"
+        },
+        {
           "name": "disabled",
           "type": "boolean",
           "mutable": false,
@@ -262,6 +279,28 @@
           "optional": false,
           "required": false,
           "description": "The type of element."
+        },
+        {
+          "name": "grouped",
+          "type": "\"outline\" | \"secondary\"",
+          "mutable": false,
+          "attr": "grouped",
+          "reflectToAttr": false,
+          "docs": "Specifies the button-group styling if applied.\nUse: `\"outline\"`, or `\"secondary\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "outline",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Specifies the button-group styling if applied.\nUse: `\"outline\"`, or `\"secondary\"`."
         },
         {
           "name": "href",
@@ -535,6 +574,71 @@
       "dependencyGraph": {}
     },
     {
+      "filePath": "./src/components/core-button-group/core-button-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-button-group",
+      "name": "core-button-group",
+      "readme": "# core-button-group\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "type",
+          "type": "\"button\" | \"icon\"",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "The button-group type.\nUse: `\"button\"` or `\"icon\"`.",
+          "docsTags": [],
+          "default": "\"button\"",
+          "values": [
+            {
+              "value": "button",
+              "type": "string"
+            },
+            {
+              "value": "icon",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The button-group type.\nUse: `\"button\"` or `\"icon\"`."
+        },
+        {
+          "name": "variation",
+          "type": "\"outline\" | \"secondary\"",
+          "mutable": false,
+          "attr": "variation",
+          "reflectToAttr": false,
+          "docs": "The button variation.",
+          "docsTags": [],
+          "default": "\"outline\"",
+          "values": [
+            {
+              "value": "outline",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The button variation."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
       "filePath": "./src/components/core-checkbox/core-checkbox.tsx",
       "encapsulation": "shadow",
       "tag": "core-checkbox",
@@ -797,6 +901,23 @@
           "description": "Specifies the label to use for accessibility. Defaults to the icon name."
         },
         {
+          "name": "class",
+          "type": "string",
+          "mutable": false,
+          "attr": "class",
+          "reflectToAttr": false,
+          "docs": "Passes any applied class",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Passes any applied class"
+        },
+        {
           "name": "color",
           "type": "string",
           "mutable": false,
@@ -812,6 +933,28 @@
           "optional": true,
           "required": false,
           "description": "Optional color of the icon.\nUse any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.\n(e.g. `color=\"red\"`, `color=\"gray-2\"`, etc)."
+        },
+        {
+          "name": "grouped",
+          "type": "\"outline\" | \"secondary\"",
+          "mutable": false,
+          "attr": "grouped",
+          "reflectToAttr": false,
+          "docs": "Specifies the button-group styling if applied.\nUse: `\"outline\"`, or `\"secondary\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "outline",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Specifies the button-group styling if applied.\nUse: `\"outline\"`, or `\"secondary\"`."
         },
         {
           "name": "icon",

@@ -23,6 +23,11 @@ export class Button implements ComponentInterface {
   @Element() el!: HTMLCoreButtonElement;
 
   /**
+   * Passes any applied class
+   */
+  @Prop() class: string | undefined;
+
+  /**
    * If `true`, the user cannot interact with the button.
    */
   @Prop({ reflectToAttr: true }) disabled = false;
@@ -46,6 +51,12 @@ export class Button implements ComponentInterface {
    */
   // eslint-disable-next-line @stencil/strict-mutable
   @Prop({ mutable: true }) elementType = "button";
+
+  /**
+   * Specifies the button-group styling if applied.
+   * Use: `"outline"`, or `"secondary"`.
+   */
+  @Prop() grouped: "outline" | "secondary";
 
   /**
    * Contains a URL or a URL fragment that the hyperlink points to.
@@ -155,7 +166,9 @@ export class Button implements ComponentInterface {
       >
         <TagType
           {...attrs}
-          class="native-element"
+          class={{
+            "native-element": true,
+          }}
           disabled={disabled}
           loading={loading}
         >

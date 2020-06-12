@@ -7,11 +7,9 @@
   color: inherit;
   contain: strict;
   align-self: center;
-  fill: currentColor;
 
   &(.core-icon--16) {
     height: 16px;
-    min-width: 16px; // [[FF]]
     width: 16px;
   }
 
@@ -227,9 +225,39 @@
   &([color=gray-8]) {
     color: @color-gray-8;
   }
+
+  &([grouped]) {
+    height: 36px;
+    width: 36px;
+
+    .native-element {
+      padding: 10px;
+      transition: background 0.12s ease-in-out, color 0.12s ease-in-out;
+
+      &:hover,
+      &:active {
+        background: @color-gray-8;
+        color: @color-white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &([grouped].selected) {
+    background: @color-gray-8;
+    color: @color-white;
+  }
+
+  &([grouped="outline"]) {
+    border-right: 1px solid @color-gray-3;
+  }
+
+  &([grouped="secondary"]) {
+    background: @color-gray-1;
+    border-right: 1px solid @color-gray-1;
+  }
 }
 
-.core-icon--inner {
-  height: inherit;
-  width: inherit;
+.native-element {
+  display: flex;
 }

@@ -32,11 +32,22 @@ export class Icon {
   @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
 
   /**
+   * Passes any applied class
+   */
+  @Prop() class: string | undefined;
+
+  /**
    * Optional color of the icon.
    * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    * (e.g. `color="red"`, `color="gray-2"`, etc).
    */
   @Prop() color?: string;
+
+  /**
+   * Specifies the button-group styling if applied.
+   * Use: `"outline"`, or `"secondary"`.
+   */
+  @Prop() grouped: "outline" | "secondary";
 
   /**
    * A combination of both `name` and `src`. If a `src` url is detected
@@ -252,9 +263,9 @@ export class Icon {
         }}
       >
         {Build.isBrowser && this.svgContent ? (
-          <div class="core-icon--inner" innerHTML={this.svgContent}></div>
+          <i class="native-element" innerHTML={this.svgContent}></i>
         ) : (
-          <div class="core-icon--inner"></div>
+          <i class="native-element"></i>
         )}
       </Host>
     );
