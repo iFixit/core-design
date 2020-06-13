@@ -364,6 +364,24 @@ export namespace Components {
          */
         "required": boolean;
     }
+    interface CoreTooltip {
+        /**
+          * The tooltip visibility
+         */
+        "active": boolean;
+        /**
+          * The tooltip color Use: "dark"`or `"light"`.
+         */
+        "color"?: "dark" | "light";
+        /**
+          * The tooltip will show up when hovering the tooltip-trigger
+         */
+        "hoverable": boolean;
+        /**
+          * The tooltip variation.
+         */
+        "variation"?: "top" | "bottom";
+    }
 }
 declare global {
     interface HTMLCoreAlertElement extends Components.CoreAlert, HTMLStencilElement {
@@ -468,6 +486,12 @@ declare global {
         prototype: HTMLCoreToggleElement;
         new (): HTMLCoreToggleElement;
     };
+    interface HTMLCoreTooltipElement extends Components.CoreTooltip, HTMLStencilElement {
+    }
+    var HTMLCoreTooltipElement: {
+        prototype: HTMLCoreTooltipElement;
+        new (): HTMLCoreTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "core-alert": HTMLCoreAlertElement;
         "core-badge": HTMLCoreBadgeElement;
@@ -486,6 +510,7 @@ declare global {
         "core-textarea": HTMLCoreTextareaElement;
         "core-toast": HTMLCoreToastElement;
         "core-toggle": HTMLCoreToggleElement;
+        "core-tooltip": HTMLCoreTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -839,6 +864,24 @@ declare namespace LocalJSX {
          */
         "required"?: boolean;
     }
+    interface CoreTooltip {
+        /**
+          * The tooltip visibility
+         */
+        "active"?: boolean;
+        /**
+          * The tooltip color Use: "dark"`or `"light"`.
+         */
+        "color"?: "dark" | "light";
+        /**
+          * The tooltip will show up when hovering the tooltip-trigger
+         */
+        "hoverable"?: boolean;
+        /**
+          * The tooltip variation.
+         */
+        "variation"?: "top" | "bottom";
+    }
     interface IntrinsicElements {
         "core-alert": CoreAlert;
         "core-badge": CoreBadge;
@@ -857,6 +900,7 @@ declare namespace LocalJSX {
         "core-textarea": CoreTextarea;
         "core-toast": CoreToast;
         "core-toggle": CoreToggle;
+        "core-tooltip": CoreTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -880,6 +924,7 @@ declare module "@stencil/core" {
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toast": LocalJSX.CoreToast & JSXBase.HTMLAttributes<HTMLCoreToastElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
+            "core-tooltip": LocalJSX.CoreTooltip & JSXBase.HTMLAttributes<HTMLCoreTooltipElement>;
         }
     }
 }

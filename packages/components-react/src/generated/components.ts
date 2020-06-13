@@ -25,3 +25,4 @@ export const CoreTag = /*@__PURE__*/createReactComponent<JSX.CoreTag, HTMLCoreTa
 export const CoreTextarea = /*@__PURE__*/createReactComponent<JSX.CoreTextarea, HTMLCoreTextareaElement>('core-textarea');
 export const CoreToast = /*@__PURE__*/createReactComponent<JSX.CoreToast, HTMLCoreToastElement>('core-toast');
 export const CoreToggle = /*@__PURE__*/createReactComponent<JSX.CoreToggle, HTMLCoreToggleElement>('core-toggle');
+export const CoreTooltip = /*@__PURE__*/createReactComponent<JSX.CoreTooltip, HTMLCoreTooltipElement>('core-tooltip');
