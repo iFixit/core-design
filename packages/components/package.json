@@ -1,6 +1,6 @@
 {
   "name": "@core-design/components",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Core Design System Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -22,9 +22,11 @@
     "access": "public"
   },
   "scripts": {
+    "build": "npm-run-all clean build-stencil",
     "build-netlify": "npm-run-all build-stencil build-storybook",
     "build-stencil": "stencil build --docs --no-cache",
     "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
+    "clean": "rm -rf dist",
     "generate": "stencil generate",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "start": "stencil build --dev --watch --serve",

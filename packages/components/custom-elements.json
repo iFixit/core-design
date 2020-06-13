@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-10T18:47:01",
+  "timestamp": "2020-06-13T00:15:27",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -2022,6 +2022,107 @@
           "optional": false,
           "required": false,
           "description": "If applied, the user must fill in a value before submitting a form containing this element.\nUse: `\"required\"`."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-tooltip/core-tooltip.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-tooltip",
+      "name": "core-tooltip",
+      "readme": "# core-tooltip\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "active",
+          "reflectToAttr": true,
+          "docs": "The tooltip visibility",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The tooltip visibility"
+        },
+        {
+          "name": "color",
+          "type": "\"dark\" | \"light\"",
+          "mutable": false,
+          "attr": "color",
+          "reflectToAttr": false,
+          "docs": "The tooltip color\nUse: \"dark\"`or `\"light\"`.",
+          "docsTags": [],
+          "default": "\"dark\"",
+          "values": [
+            {
+              "value": "dark",
+              "type": "string"
+            },
+            {
+              "value": "light",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The tooltip color\nUse: \"dark\"`or `\"light\"`."
+        },
+        {
+          "name": "hoverable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "hoverable",
+          "reflectToAttr": false,
+          "docs": "The tooltip will show up when hovering the tooltip-trigger",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The tooltip will show up when hovering the tooltip-trigger"
+        },
+        {
+          "name": "variation",
+          "type": "\"bottom\" | \"top\"",
+          "mutable": false,
+          "attr": "variation",
+          "reflectToAttr": true,
+          "docs": "The tooltip variation.",
+          "docsTags": [],
+          "default": "\"top\"",
+          "values": [
+            {
+              "value": "bottom",
+              "type": "string"
+            },
+            {
+              "value": "top",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The tooltip variation."
         }
       ],
       "methods": [],

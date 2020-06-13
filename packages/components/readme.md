@@ -6,6 +6,23 @@ This repo leverages [Lerna](https://lerna.js.org/), a tool for managing multiple
 
 **Lerna takes the place of typical `npm` and `yarn` commands**. For a full breakdown of `lerna` commands, see the [lerna readme](https://github.com/lerna/lerna#readme)
 
+### Generating React components
+
+The stencil config (`stencil.config.js`) automatically generates React code for the `components-react` package whenever stencil builds.
+
+From `root`:
+
+```bash
+# This will run the `build` script in any package that has it defined in its package.json
+lerna run build
+```
+
+If you make changes to these web components be sure to build stencil and commit any changes to `packages/components-react/src/generated`.
+
+### Publishing to NPM
+
+Lerna provides a simple CLI interface for publishing to NPM. See the [root readme](https://github.com/Dozuki/core-design/blob/master/readme.md) for more info.
+
 ## Getting Started
 
 To start developing your Stencil project, run:
