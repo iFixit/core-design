@@ -585,6 +585,15 @@
   &([radius="circle"]) .native-element {
     border-radius: 50%;
   }
+
+  // @Prop group
+  &([group]) .native-element {
+    padding: 0;
+
+    .group {
+      padding: 10px 15px;
+    }
+  }
 }
 
 // @Prop basic (default) button styles with intentional lower specificity

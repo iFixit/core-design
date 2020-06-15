@@ -44,6 +44,10 @@ export namespace Components {
          */
         "elementType": string;
         /**
+          * If `true`, the group styling is applied.
+         */
+        "group": boolean;
+        /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a button.
          */
         "href": string | undefined;
@@ -79,10 +83,6 @@ export namespace Components {
           * The button variation.
          */
         "variation"?: "basic" | "primary" | "secondary" | "dark" | "light" | "borderless";
-        /**
-          * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
-         */
-        "width"?: "full" | "block" | undefined;
     }
     interface CoreCheckbox {
         /**
@@ -531,6 +531,10 @@ declare namespace LocalJSX {
          */
         "elementType"?: string;
         /**
+          * If `true`, the group styling is applied.
+         */
+        "group"?: boolean;
+        /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a button.
          */
         "href"?: string | undefined;
@@ -566,10 +570,6 @@ declare namespace LocalJSX {
           * The button variation.
          */
         "variation"?: "basic" | "primary" | "secondary" | "dark" | "light" | "borderless";
-        /**
-          * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
-         */
-        "width"?: "full" | "block" | undefined;
     }
     interface CoreCheckbox {
         /**

@@ -48,6 +48,11 @@ export class Button implements ComponentInterface {
   @Prop({ mutable: true }) elementType = "button";
 
   /**
+   * If `true`, the group styling is applied.
+   */
+  @Prop() group = false;
+
+  /**
    * Contains a URL or a URL fragment that the hyperlink points to.
    * If this property is set, an anchor tag will be rendered instead of a button.
    */
@@ -105,11 +110,6 @@ export class Button implements ComponentInterface {
     | "light"
     | "borderless" = "basic";
 
-  /**
-   * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
-   */
-  @Prop() width?: "full" | "block" | undefined;
-
   private get hasIconOnly() {
     // eslint-disable-next-line @stencil/strict-boolean-conditions
     return !!this.el.querySelector('core-icon[slot="icon"]');
@@ -127,7 +127,6 @@ export class Button implements ComponentInterface {
       size,
       status,
       variation,
-      width,
     } = this;
     const TagType = href === undefined ? "button" : ("a" as any);
     const attrs =
@@ -147,7 +146,6 @@ export class Button implements ComponentInterface {
           "core-button": true,
           "icon-only": hasIconOnly,
           [`${variation}`]: variation !== undefined,
-          [`${width}`]: width !== undefined,
           [`${size}`]: size !== undefined,
           [`${status}`]: status !== undefined,
           [`${disabled}`]: disabled,
@@ -163,6 +161,9 @@ export class Button implements ComponentInterface {
           <slot name="button-left"></slot>
           <div class="text-wrap">
             <slot></slot>
+          </div>
+          <div class="group">
+            <slot name="group"></slot>
           </div>
           <slot name="button-right"></slot>
           <div class="button-loading"></div>
