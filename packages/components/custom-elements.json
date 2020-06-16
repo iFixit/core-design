@@ -1299,6 +1299,84 @@
       }
     },
     {
+      "filePath": "./src/components/core-popover/core-popover.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-popover",
+      "name": "core-popover",
+      "readme": "# core-popover\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "active",
+          "reflectToAttr": true,
+          "docs": "The popover visibility",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The popover visibility"
+        },
+        {
+          "name": "hoverable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "hoverable",
+          "reflectToAttr": false,
+          "docs": "The popover will show up when hovering the popover-trigger",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The popover will show up when hovering the popover-trigger"
+        },
+        {
+          "name": "variation",
+          "type": "\"bottom\" | \"top\"",
+          "mutable": false,
+          "attr": "variation",
+          "reflectToAttr": true,
+          "docs": "The popover variation.",
+          "docsTags": [],
+          "default": "\"top\"",
+          "values": [
+            {
+              "value": "bottom",
+              "type": "string"
+            },
+            {
+              "value": "top",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The popover variation."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
       "filePath": "./src/components/core-progress/core-progress.tsx",
       "encapsulation": "shadow",
       "tag": "core-progress",

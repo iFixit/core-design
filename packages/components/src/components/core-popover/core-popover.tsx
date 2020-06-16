@@ -1,32 +1,25 @@
 import { Component, Prop, h, JSX, ComponentInterface } from "@stencil/core";
 
 @Component({
-  tag: "core-dropdown",
-  styleUrl: "core-dropdown.less",
+  tag: "core-popover",
+  styleUrl: "core-popover.less",
   shadow: true,
 })
-export class Dropdown implements ComponentInterface {
+export class Popover implements ComponentInterface {
   /**
-   * The dropdown visibility
+   * The popover visibility
    */
   @Prop({ mutable: true, reflectToAttr: true }) active = false;
 
   /**
-   * The dropdown alignment
-   * Use: `"left"`, `"center"`, or `"right"`.
-   */
-  @Prop({ reflectToAttr: true }) alignment?: "left" | "center" | "right" =
-    "left";
-
-  /**
-   * The dropdown will show up when hovering the dropdown-trigger
+   * The popover will show up when hovering the popover-trigger
    */
   @Prop() hoverable = false;
 
   /**
-   * The dropdown will not wrap it's child element content.
+   * The popover variation.
    */
-  @Prop() nowrap = false;
+  @Prop({ reflectToAttr: true }) variation?: "top" | "bottom" = "top";
 
   /**
    * Handle Trigger click action
@@ -41,23 +34,21 @@ export class Dropdown implements ComponentInterface {
     return (
       <div
         class={{
-          "core-dropdown": true,
+          "core-popover": true,
           active: this.active,
           hoverable: this.hoverable,
-          nowrap: this.nowrap,
         }}
       >
         <div onClick={this.handleClick} class="trigger">
           <slot name="trigger" aria-haspopup="true" />
         </div>
 
-        <div
-          class={{
-            "menu-outter": true,
-          }}
-        >
-          <div class="menu" role="menu">
+        <div class="popover-outter">
+          <div class="popover">
             <div class="arrow"></div>
+            <div class="title">
+              <slot name="title"></slot>
+            </div>
             <slot />
           </div>
         </div>
