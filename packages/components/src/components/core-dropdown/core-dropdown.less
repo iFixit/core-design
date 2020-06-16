@@ -16,6 +16,38 @@
     white-space: nowrap;
   }
 
+  // @Prop alignment
+  &([alignment="left"]) {
+    .menu-outter {
+      left: -2px;
+    }
+
+    .menu-arrow {
+      left: 0;
+    }
+  }
+
+  &([alignment="center"]) {
+    .menu-outter {
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .menu-arrow {
+      left: calc(50% - 20px);
+    }
+  }
+
+  &([alignment="right"]) {
+    .menu-outter {
+      right: -2px;
+    }
+
+    .menu-arrow {
+      right: 0;
+    }
+  }
+
   .core-dropdown {
     display: inline-flex;
     position: relative;
@@ -34,7 +66,6 @@
     max-width: 95vw;
     position: absolute;
     top: 100%;
-    left: -2px;
     z-index: 9;
   }
 
@@ -51,11 +82,11 @@
     position: relative;
   }
 
-  .arrow {
+  .menu-arrow {
+    height: 11px;
+    margin-left: 10px;
     position: absolute;
     top: -10px;
-    left: 10px;
-    width: 20px;
 
     &::before {
       content: "";

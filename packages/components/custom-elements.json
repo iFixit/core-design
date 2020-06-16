@@ -654,6 +654,33 @@
           "description": "The dropdown visibility"
         },
         {
+          "name": "alignment",
+          "type": "\"center\" | \"left\" | \"right\"",
+          "mutable": false,
+          "attr": "alignment",
+          "reflectToAttr": true,
+          "docs": "The dropdown alignment\nUse: `\"left\"`, `\"center\"`, or `\"right\"`.",
+          "docsTags": [],
+          "default": "\"left\"",
+          "values": [
+            {
+              "value": "center",
+              "type": "string"
+            },
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The dropdown alignment\nUse: `\"left\"`, `\"center\"`, or `\"right\"`."
+        },
+        {
           "name": "hoverable",
           "type": "boolean",
           "mutable": false,
