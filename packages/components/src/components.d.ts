@@ -126,6 +126,10 @@ export namespace Components {
          */
         "active": boolean;
         /**
+          * The dropdown alignment Use: `"left"`, `"center"`, or `"right"`.
+         */
+        "alignment"?: "left" | "center" | "right";
+        /**
           * The dropdown will show up when hovering the dropdown-trigger
          */
         "hoverable": boolean;
@@ -160,7 +164,7 @@ export namespace Components {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * Specifies the button-group styling if applied. Use: `"outline"`, or `"secondary"`.
          */
@@ -236,7 +240,7 @@ export namespace Components {
         /**
           * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
@@ -249,6 +253,20 @@ export namespace Components {
           * Applies the provided URL to the helpIcon href.
          */
         "helpurl"?: string | null;
+    }
+    interface CorePopover {
+        /**
+          * The popover visibility
+         */
+        "active": boolean;
+        /**
+          * The popover will show up when hovering the popover-trigger
+         */
+        "hoverable": boolean;
+        /**
+          * The popover variation.
+         */
+        "variation"?: "top" | "bottom";
     }
     interface CoreProgress {
         /**
@@ -376,6 +394,24 @@ export namespace Components {
          */
         "required": boolean;
     }
+    interface CoreTooltip {
+        /**
+          * The tooltip visibility
+         */
+        "active": boolean;
+        /**
+          * The tooltip color Use: "dark"`or `"light"`.
+         */
+        "color"?: "dark" | "light";
+        /**
+          * The tooltip will show up when hovering the tooltip-trigger
+         */
+        "hoverable": boolean;
+        /**
+          * The tooltip variation.
+         */
+        "variation"?: "top" | "bottom";
+    }
 }
 declare global {
     interface HTMLCoreAlertElement extends Components.CoreAlert, HTMLStencilElement {
@@ -438,6 +474,12 @@ declare global {
         prototype: HTMLCoreLabelElement;
         new (): HTMLCoreLabelElement;
     };
+    interface HTMLCorePopoverElement extends Components.CorePopover, HTMLStencilElement {
+    }
+    var HTMLCorePopoverElement: {
+        prototype: HTMLCorePopoverElement;
+        new (): HTMLCorePopoverElement;
+    };
     interface HTMLCoreProgressElement extends Components.CoreProgress, HTMLStencilElement {
     }
     var HTMLCoreProgressElement: {
@@ -480,6 +522,12 @@ declare global {
         prototype: HTMLCoreToggleElement;
         new (): HTMLCoreToggleElement;
     };
+    interface HTMLCoreTooltipElement extends Components.CoreTooltip, HTMLStencilElement {
+    }
+    var HTMLCoreTooltipElement: {
+        prototype: HTMLCoreTooltipElement;
+        new (): HTMLCoreTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "core-alert": HTMLCoreAlertElement;
         "core-badge": HTMLCoreBadgeElement;
@@ -491,6 +539,7 @@ declare global {
         "core-icon": HTMLCoreIconElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
+        "core-popover": HTMLCorePopoverElement;
         "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
         "core-spinner": HTMLCoreSpinnerElement;
@@ -498,6 +547,7 @@ declare global {
         "core-textarea": HTMLCoreTextareaElement;
         "core-toast": HTMLCoreToastElement;
         "core-toggle": HTMLCoreToggleElement;
+        "core-tooltip": HTMLCoreTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -621,6 +671,10 @@ declare namespace LocalJSX {
          */
         "active"?: boolean;
         /**
+          * The dropdown alignment Use: `"left"`, `"center"`, or `"right"`.
+         */
+        "alignment"?: "left" | "center" | "right";
+        /**
           * The dropdown will show up when hovering the dropdown-trigger
          */
         "hoverable"?: boolean;
@@ -655,7 +709,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * Specifies the button-group styling if applied. Use: `"outline"`, or `"secondary"`.
          */
@@ -727,7 +781,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: string;
+        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
@@ -740,6 +794,20 @@ declare namespace LocalJSX {
           * Applies the provided URL to the helpIcon href.
          */
         "helpurl"?: string | null;
+    }
+    interface CorePopover {
+        /**
+          * The popover visibility
+         */
+        "active"?: boolean;
+        /**
+          * The popover will show up when hovering the popover-trigger
+         */
+        "hoverable"?: boolean;
+        /**
+          * The popover variation.
+         */
+        "variation"?: "top" | "bottom";
     }
     interface CoreProgress {
         /**
@@ -863,6 +931,24 @@ declare namespace LocalJSX {
          */
         "required"?: boolean;
     }
+    interface CoreTooltip {
+        /**
+          * The tooltip visibility
+         */
+        "active"?: boolean;
+        /**
+          * The tooltip color Use: "dark"`or `"light"`.
+         */
+        "color"?: "dark" | "light";
+        /**
+          * The tooltip will show up when hovering the tooltip-trigger
+         */
+        "hoverable"?: boolean;
+        /**
+          * The tooltip variation.
+         */
+        "variation"?: "top" | "bottom";
+    }
     interface IntrinsicElements {
         "core-alert": CoreAlert;
         "core-badge": CoreBadge;
@@ -874,6 +960,7 @@ declare namespace LocalJSX {
         "core-icon": CoreIcon;
         "core-input": CoreInput;
         "core-label": CoreLabel;
+        "core-popover": CorePopover;
         "core-progress": CoreProgress;
         "core-radio": CoreRadio;
         "core-spinner": CoreSpinner;
@@ -881,6 +968,7 @@ declare namespace LocalJSX {
         "core-textarea": CoreTextarea;
         "core-toast": CoreToast;
         "core-toggle": CoreToggle;
+        "core-tooltip": CoreTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -897,6 +985,7 @@ declare module "@stencil/core" {
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
+            "core-popover": LocalJSX.CorePopover & JSXBase.HTMLAttributes<HTMLCorePopoverElement>;
             "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
@@ -904,6 +993,7 @@ declare module "@stencil/core" {
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toast": LocalJSX.CoreToast & JSXBase.HTMLAttributes<HTMLCoreToastElement>;
             "core-toggle": LocalJSX.CoreToggle & JSXBase.HTMLAttributes<HTMLCoreToggleElement>;
+            "core-tooltip": LocalJSX.CoreTooltip & JSXBase.HTMLAttributes<HTMLCoreTooltipElement>;
         }
     }
 }

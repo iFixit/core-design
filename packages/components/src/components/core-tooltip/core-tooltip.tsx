@@ -1,32 +1,31 @@
 import { Component, Prop, h, JSX, ComponentInterface } from "@stencil/core";
 
 @Component({
-  tag: "core-dropdown",
-  styleUrl: "core-dropdown.less",
+  tag: "core-tooltip",
+  styleUrl: "core-tooltip.less",
   shadow: true,
 })
-export class Dropdown implements ComponentInterface {
+export class tooltip implements ComponentInterface {
   /**
-   * The dropdown visibility
+   * The tooltip visibility
    */
   @Prop({ mutable: true, reflectToAttr: true }) active = false;
 
   /**
-   * The dropdown alignment
-   * Use: `"left"`, `"center"`, or `"right"`.
+   * The tooltip color
+   * Use: "dark"`or `"light"`.
    */
-  @Prop({ reflectToAttr: true }) alignment?: "left" | "center" | "right" =
-    "left";
+  @Prop() color?: "dark" | "light" = "dark";
 
   /**
-   * The dropdown will show up when hovering the dropdown-trigger
+   * The tooltip will show up when hovering the tooltip-trigger
    */
-  @Prop() hoverable = false;
+  @Prop() hoverable = true;
 
   /**
-   * The dropdown will not wrap it's child element content.
+   * The tooltip variation.
    */
-  @Prop() nowrap = false;
+  @Prop({ reflectToAttr: true }) variation?: "top" | "bottom" = "top";
 
   /**
    * Handle Trigger click action
@@ -41,22 +40,17 @@ export class Dropdown implements ComponentInterface {
     return (
       <div
         class={{
-          "core-dropdown": true,
+          "core-tooltip": true,
           active: this.active,
           hoverable: this.hoverable,
-          nowrap: this.nowrap,
         }}
       >
         <div onClick={this.handleClick} class="trigger">
           <slot name="trigger" aria-haspopup="true" />
         </div>
 
-        <div
-          class={{
-            "menu-outter": true,
-          }}
-        >
-          <div class="menu" role="menu">
+        <div class="tooltip-outter">
+          <div class="tooltip">
             <div class="arrow"></div>
             <slot />
           </div>

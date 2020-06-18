@@ -401,7 +401,7 @@
             </core-dropdown>
           </div>
           <div>
-            <core-dropdown nowrap>
+            <core-dropdown alignment="center" hoverable>
               <core-button slot="trigger" variation="borderless">
                 <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
               </core-button>
@@ -409,12 +409,12 @@
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
               <core-dropdown-item>
-                Nested content can be anything without wrapping (`nowrap` prop applied to parent `core-dropdown`)
+                Nested content can be anything
               </core-dropdown-item>
             </core-dropdown>
           </div>
           <div>
-            <core-dropdown hoverable>
+            <core-dropdown alignment="right">
               <core-button slot="trigger" variation="borderless">
                 <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
               </core-button>
@@ -430,8 +430,18 @@
                 <core-icon slot="icon" icon="archive" color="blue" style="margin-right:8px"></core-icon>
                 Option 3
               </core-dropdown-item>
+            </core-dropdown>
+          </div>
+          <div>
+            <core-dropdown nowrap>
+              <core-button slot="trigger" variation="borderless">
+                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
+              </core-button>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
               <core-dropdown-item>
-                Nested content can be anything
+                Nested content can be anything without wrapping (`nowrap` prop applied to parent `core-dropdown`)
               </core-dropdown-item>
             </core-dropdown>
           </div>
@@ -913,6 +923,68 @@
           <core-spinner color="green"></core-spinner>
           <core-spinner color="yellow" size="small"></core-spinner>
           <core-spinner color="red" size="small"></core-spinner>
+        </div>
+      </div>
+    </section>
+    <section id="popovers">
+      <h2>Popovers</h2>
+      <div class="grid">
+        <div class="grid popovers">
+          <span class="hint">Click</span>
+          <core-popover>
+            <core-button slot="trigger">Popover Top</core-button>
+            <span slot="title">Popover Title</span>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </core-popover>
+          <core-popover variation="bottom">
+            <core-button slot="trigger">Popover Bottom</core-button>
+            <span slot="title">Popover Title</span>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </core-popover>
+        </div>
+        <div class="grid popovers">
+          <span class="hint">Hover</span>
+          <core-popover hoverable>
+            <core-button slot="trigger">Popover Top</core-button>
+            <span slot="title">Popover Title</span>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </core-popover>
+          <core-popover variation="bottom" hoverable>
+            <core-button slot="trigger">Popover Bottom</core-button>
+            <span slot="title">Popover Title</span>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </core-popover>
+        </div>
+      </div>
+    </section>
+    <section id="tooltips">
+      <h2>Tooltips</h2>
+      <div class="grid">
+        <div class="grid tooltips">
+          <span class="hint">Dark</span>
+          <core-tooltip>
+            <span slot="trigger">Tooltip Trigger</span>
+            Dark Tooltip top
+          </core-tooltip>
+        </div>
+        <div class="grid tooltips">
+          <span class="hint">Light</span>
+          <core-tooltip color="light" variation="bottom">
+            <span slot="trigger">Tooltip Trigger</span>
+            Light Tooltip bottom
+          </core-tooltip>
         </div>
       </div>
     </section>
