@@ -35,6 +35,9 @@
       section:not(:last-of-type) {
         margin-bottom: 56px;
       }
+      section > .grid:not(:first-of-type) {
+        margin-top: 32px;
+      }
       .grid {
         display: grid;
         grid-gap: 32px;
@@ -962,6 +965,44 @@
         </div>
         <div class="toasts">
           <core-toast color="red">The file <strong>benchmark2</strong> was deleted.</core-toast>
+        </div>
+      </div>
+    </section>
+    <section id="tabs">
+      <h2>Tabs</h2>
+      <div class="grid">
+        <div>
+          <span class="hint">Large</span>
+        </div>
+        <div class="tabs">
+          <core-tab-group>
+            <core-tab class="active">Active</core-tab>
+            <core-tab>Default</core-tab>
+            <core-tab class="disabled">Disabled</core-tab>
+          </core-tab-group>
+        </div>
+        <div class="tabs">
+          <core-tab-group>
+            <core-tab class="active">Active</core-tab>
+            <core-tab>Default</core-tab>
+            <core-tab>
+              With Badge
+              <core-badge slot="badge" color="black" size="small">3</core-badge>
+            </core-tab>
+            <core-tab class="disabled">Disabled</core-tab>
+          </core-tab-group>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <span class="hint">Small</span>
+        </div>
+        <div class="tabs">
+          <core-tab-group size="small">
+            <core-tab class="active">Active</core-tab>
+            <core-tab>Default</core-tab>
+            <core-tab class="disabled">Disabled</core-tab>
+          </core-tab-group>
         </div>
       </div>
     </section>

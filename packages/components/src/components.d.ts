@@ -288,6 +288,22 @@ export namespace Components {
          */
         "size"?: "small" | "medium" | "large";
     }
+    interface CoreTab {
+        /**
+          * If `true`, the tab element is set to active.
+         */
+        "active": boolean;
+        /**
+          * If `true`, the user cannot interact with the tab.
+         */
+        "disabled": boolean;
+    }
+    interface CoreTabGroup {
+        /**
+          * The pre-defined tab size. Use: `"small"` or `"large"`.
+         */
+        "size": "small" | "large";
+    }
     interface CoreTag {
         /**
           * Allows the tag to be closable and removed from the view.
@@ -466,6 +482,18 @@ declare global {
         prototype: HTMLCoreSpinnerElement;
         new (): HTMLCoreSpinnerElement;
     };
+    interface HTMLCoreTabElement extends Components.CoreTab, HTMLStencilElement {
+    }
+    var HTMLCoreTabElement: {
+        prototype: HTMLCoreTabElement;
+        new (): HTMLCoreTabElement;
+    };
+    interface HTMLCoreTabGroupElement extends Components.CoreTabGroup, HTMLStencilElement {
+    }
+    var HTMLCoreTabGroupElement: {
+        prototype: HTMLCoreTabGroupElement;
+        new (): HTMLCoreTabGroupElement;
+    };
     interface HTMLCoreTagElement extends Components.CoreTag, HTMLStencilElement {
     }
     var HTMLCoreTagElement: {
@@ -510,6 +538,8 @@ declare global {
         "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
         "core-spinner": HTMLCoreSpinnerElement;
+        "core-tab": HTMLCoreTabElement;
+        "core-tab-group": HTMLCoreTabGroupElement;
         "core-tag": HTMLCoreTagElement;
         "core-textarea": HTMLCoreTextareaElement;
         "core-toast": HTMLCoreToastElement;
@@ -796,6 +826,22 @@ declare namespace LocalJSX {
          */
         "size"?: "small" | "medium" | "large";
     }
+    interface CoreTab {
+        /**
+          * If `true`, the tab element is set to active.
+         */
+        "active"?: boolean;
+        /**
+          * If `true`, the user cannot interact with the tab.
+         */
+        "disabled"?: boolean;
+    }
+    interface CoreTabGroup {
+        /**
+          * The pre-defined tab size. Use: `"small"` or `"large"`.
+         */
+        "size"?: "small" | "large";
+    }
     interface CoreTag {
         /**
           * Allows the tag to be closable and removed from the view.
@@ -904,6 +950,8 @@ declare namespace LocalJSX {
         "core-progress": CoreProgress;
         "core-radio": CoreRadio;
         "core-spinner": CoreSpinner;
+        "core-tab": CoreTab;
+        "core-tab-group": CoreTabGroup;
         "core-tag": CoreTag;
         "core-textarea": CoreTextarea;
         "core-toast": CoreToast;
@@ -928,6 +976,8 @@ declare module "@stencil/core" {
             "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;
             "core-spinner": LocalJSX.CoreSpinner & JSXBase.HTMLAttributes<HTMLCoreSpinnerElement>;
+            "core-tab": LocalJSX.CoreTab & JSXBase.HTMLAttributes<HTMLCoreTabElement>;
+            "core-tab-group": LocalJSX.CoreTabGroup & JSXBase.HTMLAttributes<HTMLCoreTabGroupElement>;
             "core-tag": LocalJSX.CoreTag & JSXBase.HTMLAttributes<HTMLCoreTagElement>;
             "core-textarea": LocalJSX.CoreTextarea & JSXBase.HTMLAttributes<HTMLCoreTextareaElement>;
             "core-toast": LocalJSX.CoreToast & JSXBase.HTMLAttributes<HTMLCoreToastElement>;
