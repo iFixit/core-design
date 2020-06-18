@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-16T17:35:01",
+  "timestamp": "2020-06-18T23:21:56",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -1650,6 +1650,103 @@
           "optional": true,
           "required": false,
           "description": "The pre-defined spinner size.\nUse: `\"small\"`, `\"medium\"`, `\"large\"`, ect."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-tab/core-tab.tsx",
+      "encapsulation": "none",
+      "tag": "core-tab",
+      "name": "core-tab",
+      "readme": "# core-tab\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "active",
+          "reflectToAttr": true,
+          "docs": "If `true`, the tab element is set to active.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the tab element is set to active."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "If `true`, the user cannot interact with the tab.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the user cannot interact with the tab."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-tab-group/core-tab-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-tab-group",
+      "name": "core-tab-group",
+      "readme": "# core-tab-group\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "size",
+          "type": "\"large\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "The pre-defined tab size.\nUse: `\"small\"` or `\"large\"`.",
+          "docsTags": [],
+          "default": "\"large\"",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The pre-defined tab size.\nUse: `\"small\"` or `\"large\"`."
         }
       ],
       "methods": [],

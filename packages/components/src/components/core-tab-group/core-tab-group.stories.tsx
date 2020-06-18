@@ -1,34 +1,33 @@
-import { boolean, number, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
-  component: "core-textarea",
-  title: "Buttons & Inputs/Textarea",
+  component: "core-tab-group",
+  title: "Page Elements/Tabs",
 };
 
 export const Default = (): TemplateResult => {
   return html`
-    <core-textarea
-      cols="${number("Columns", 50)}"
-      disabled="${boolean("Disabled", false)}"
-      placeholder="${text("Placeholder", "Placeholder")}"
-      required="${boolean("Required", false)}"
-      rows="${number("Rows", 10)}"
-      >textarea</core-textarea
+    <core-tab-group size="large"
+      >
+        <core-tab class="active">Active</core-tab>
+        <core-tab>Default</core-tab>
+        <core-tab>
+          With Badge
+          <core-badge slot="badge" color="black" size="small">3</core-badge>
+        </core-tab>
+        <core-tab class="disabled">Disabled</core-tab>
+      </core-tab-group
     >
   `;
 };
 
-export const Value = (): TemplateResult => {
+export const Small = (): TemplateResult => {
   return html`
-    <core-textarea
-      cols="${number("Columns", 50)}"
-      disabled="${boolean("Disabled", false)}"
-      placeholder="${text("Placeholder", null)}"
-      required="${boolean("Required", false)}"
-      rows="${number("Rows", 10)}"
-      value="${text("Value", "Value")}"
-      >textarea</core-textarea
+    <core-tab-group size="small">
+        <core-tab class="active">Active</core-tab>
+        <core-tab>Default</core-tab>
+        <core-tab class="disabled">Disabled</core-tab>
+      </core-tab-group
     >
   `;
 };
