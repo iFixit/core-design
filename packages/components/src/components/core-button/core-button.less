@@ -260,31 +260,28 @@
   }
 
   // @Prop grouped styling
-  &([grouped]) {
-    .native-element {
-      border-radius: 0;
+  &([grouped]) .native-element {
+    border-radius: 0;
 
-      &:not(:disabled):not([loading]) {
+    &:not(:disabled):not([loading]) {
+      box-shadow: 0 0 0 0 transparent inset;
+
+      &:hover,
+      &:active {
+        background: @color-gray-8;
         box-shadow: 0 0 0 0 transparent inset;
-
-        &:hover,
-        &:active {
-          background: @color-gray-8;
-          box-shadow: 0 0 0 0 transparent inset;
-          color: @color-white;
-        }
+        color: @color-white;
       }
     }
   }
 
   &([grouped="outline"]) .native-element {
-    background: @color-white;
-    border-right: 1px solid @color-gray-3;
+    background: transparent;
+    position: relative;
   }
 
   &([grouped="secondary"]) .native-element {
     background: @color-gray-1;
-    border-right: 1px solid @color-gray-1;
   }
 
   &([grouped].selected) {

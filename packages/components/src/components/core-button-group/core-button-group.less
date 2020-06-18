@@ -20,19 +20,18 @@
 
   // @Prop variation
   &([variation="secondary"]) .native-element {
-    box-shadow: 0 0 0 1px @color-gray-1;
+    box-shadow: 0 0 0 1px @color-gray-1 inset;
   }
 
   .button-group-inner {
     display: flex;
-    margin-right: -1px;
   }
 }
 
 // Native element styles with intentional lower specificity
 .native-element {
   border-radius: @border-radius-md;
-  box-shadow: 0 0 0 1px @color-gray-3;
+  box-shadow: 0 0 0 1px @color-gray-3 inset;
   max-width: inherit;
   overflow: hidden;
   width: inherit;
