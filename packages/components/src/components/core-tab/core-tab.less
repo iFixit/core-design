@@ -2,7 +2,7 @@
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
 @box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
 
-// :host targets the custom element compiled by Stencil
+// `shadow: false' is set in `core-tab.tsx`, so we target the custom-element selector directly instead of `:host` and remove the LESS selector wrapping parenthesis for targeting in shadow-dom
 core-tab {
   display: flex;
   font-family: "Inter", sans-serif;
