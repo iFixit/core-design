@@ -9,8 +9,11 @@ core-tab {
   font-feature-settings: "ss01" on, "ss02" on;
   font-size: 14px;
   line-height: inherit;
-  margin-right: 28px;
   position: relative;
+
+  &:not(:last-of-type) {
+    margin-right: 28px;
+  }
 
   &.active,
   &[active],
