@@ -13,6 +13,7 @@ core-tab {
   position: relative;
 
   &.active,
+  &[active],
   .native-element:hover {
     &::after {
       content: "";
@@ -36,7 +37,8 @@ core-tab {
     }
   }
 
-  &.active {
+  &.active,
+  &[active] {
     &::after {
       background: @color-blue;
     }
@@ -46,7 +48,8 @@ core-tab {
     }
   }
 
-  &.disabled .native-element {
+  &.disabled .native-element,
+  &[disabled] .native-element {
     color: @color-gray-3;
 
     &::after {
@@ -69,7 +72,8 @@ core-tab {
 }
 
 core-tab-group[size="small"] core-tab {
-  &.active::after {
+  &.active::after,
+  &[active]::after {
     height: 2px;
   }
 
