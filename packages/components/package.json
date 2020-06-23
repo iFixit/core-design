@@ -23,8 +23,9 @@
   },
   "scripts": {
     "build": "npm-run-all clean build-stencil",
-    "build-netlify": "npm-run-all build-stencil build-storybook",
-    "build-stencil": "stencil build --docs --no-cache",
+    "build-netlify": "npm-run-all build-stencil-docs build-storybook",
+    "build-stencil": "stencil build --no-cache",
+    "build-stencil-docs": "stencil build --docs --no-cache",
     "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
     "clean": "rm -rf dist",
     "generate": "stencil generate",
