@@ -2,6 +2,7 @@ dist/
 loader/
 storybook/
 www/
+packages/components/custom-elements.json
 
 *~
 *.sw[mnpcod]
