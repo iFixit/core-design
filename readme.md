@@ -43,7 +43,7 @@ npm login
 Before publishing to NPM we need to build all the packages:
 
 ```bash
-lerna run build
+lerna run build-stencil
 ```
 
 Then, publish to NPM:
