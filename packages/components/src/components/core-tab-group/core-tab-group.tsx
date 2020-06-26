@@ -26,10 +26,9 @@ export class TabGroup implements ComponentInterface {
       <Host
         class={{
           "core-tab-group": true,
-        }}>
-        <ul
-          class="native-element"
-        >
+        }}
+      >
+        <ul class="native-element">
           <slot name="tab-group-left"></slot>
           <slot></slot>
           <slot name="tab-group-right"></slot>
