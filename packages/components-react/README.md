@@ -31,4 +31,4 @@ lerna run build
 
 ### Publishing to NPM
 
-Lerna provides a simple CLI interface for publishing to NPM. See the [root readme](./core-design#core-design) for more info.
+Lerna provides a simple CLI interface for publishing to NPM. See the [root readme](https://github.com/iFixit/core-design#core-design) for more info.
