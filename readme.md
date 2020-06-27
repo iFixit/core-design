@@ -2,8 +2,8 @@
 
 ## Packages
 
-1. [Stencil Components](iFixit/packages/components)
-1. [React Components](iFixit/packages/components-react)
+1. [Stencil Components](packages/components)
+1. [React Components](packages/components-react)
 
 ## Getting Started
 
