@@ -1,5 +1,10 @@
 # Core Design
 
+## Packages
+
+1. [Stencil Components](./packages/components)
+1. [React Components](./packages/components-react)
+
 ## Getting Started
 
 ### Lerna
@@ -10,37 +15,60 @@ This repo uses [Lerna](https://github.com/lerna/lerna) to manage multiple npm pa
 npm install -g lerna
 ```
 
-You might be interested in using [lerna-wizard](https://github.com/webuniverseio/lerna-wizard) for a more helpful cli experience.
+<details>
+  <summary>Prefer a wizard?</summary>
+
+Install [lerna-wizard](https://github.com/webuniverseio/lerna-wizard) for a more helpful and visual cli experience.
 
 ```bash
 npm install -g lerna-wizard
 ```
+
+</details>
 
 ### Installing dependencies
 
 To install dependencies run:
 
 ```bash
-# First, install deps in root package.json
+# 1. Install dependencies in root package.json
 npm install
 
-# Then install and link deps in the various packages
+# 2. Install and link dependencies in all child packages
 lerna bootstrap
+```
+
+## Local Development
+
+To start developing Stencil `core-components`, run:
+
+```bash
+lerna run start
+```
+
+To start developing Storybook `core-components`, run:
+
+```bash
+lerna run storybook
 ```
 
 ## Publishing to NPM
 
-### Before your first time publishing
+<details>
+  <summary>First time publishing?</summary>
 
-Make sure you have an NPM account with access to all the `@core-design` packages and you are logged into npm on the terminal.
+1. Make sure you have an [NPM account](https://www.npmjs.com/login) with access to the `@core-design` packages.
+1. Make sure you are logged in to npm on the terminal with:
 
 ```bash
 npm login
 ```
 
+</details>
+
 ### Compile packages and publish
 
-Before publishing to NPM we need to build all the packages:
+Before publishing to NPM we need to build all child repo packages:
 
 ```bash
 lerna run build
@@ -52,4 +80,4 @@ Then, publish to NPM:
 lerna publish
 ```
 
-The above command will automatically determine which packages should be published and prompt you to choose the new version. In addition to publishing it will also add and push a commit with the changes necessary to reference the new version. See [lerna publish docs](https://github.com/lerna/lerna/tree/master/commands/publish#readme) for more info.
+`lerna publish` will automatically determine which packages should be published and prompt you to choose the new version. In addition to publishing it will also add and push a commit with the changes necessary to reference the new version. See [lerna publish docs](https://github.com/lerna/lerna/tree/master/commands/publish#readme) for more info.
