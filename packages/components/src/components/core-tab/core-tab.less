@@ -1,0 +1,91 @@
+@import (reference) "../../assets/font/inter/inter.css";
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
+
+// `shadow: false' is set in `core-tab.tsx`, so we target the custom-element selector directly instead of `:host` and remove the LESS selector wrapping parenthesis for targeting in shadow-dom
+core-tab {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "ss01" on, "ss02" on;
+  font-size: @font-size-1;
+  line-height: inherit;
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-right: 28px;
+  }
+
+  &.active,
+  &[active],
+  .native-element:hover {
+    &::after {
+      content: "";
+      background: transparent;
+      border-radius: calc(3px / 2);
+      height: 3px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .native-element:hover {
+    color: @color-gray-7;
+    cursor: pointer;
+
+    &::after {
+      background: @color-gray-4;
+    }
+  }
+
+  &.active,
+  &[active] {
+    &::after {
+      background: @color-blue;
+    }
+
+    .native-element {
+      color: @color-blue;
+    }
+  }
+
+  &.disabled .native-element,
+  &[disabled] .native-element {
+    color: @color-gray-3;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      color: @color-gray-3;
+      cursor: not-allowed;
+    }
+  }
+
+  .native-element {
+    color: @color-gray-5;
+    display: flex;
+    padding-right: @space-2;
+    padding-left: @space-2;
+    text-align: center;
+  }
+}
+
+core-tab-group[size="small"] core-tab {
+  &.active::after,
+  &[active]::after {
+    height: 2px;
+  }
+
+  .native-element {
+    padding-right: 0;
+    padding-left: 0;
+
+    &:hover::after {
+      height: 2px;
+    }
+  }
+}

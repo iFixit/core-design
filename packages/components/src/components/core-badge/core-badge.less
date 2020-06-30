@@ -60,16 +60,21 @@
   &([size="small"]) .native-element {
     border-radius: calc(16px / 2);
     font-size: 11px;
-    height: 16px;
+    height: @space-4;
     letter-spacing: unset;
-    line-height: 12px;
-    min-width: 16px;
+    line-height: @space-3;
+    min-width: @space-4;
     padding: 2px @space-1;
   }
 
   &([size="small"].dot) .dot-inner {
-    height: 4px;
-    width: 4px;
+    height: @space-1;
+    width: @space-1;
+  }
+
+  &([slot="badge"]) {
+    margin-top: 2px;
+    margin-left: @space-2;
   }
 }
 
