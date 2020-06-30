@@ -112,7 +112,7 @@ export class Button implements ComponentInterface {
 
   private get hasIconOnly() {
     // eslint-disable-next-line @stencil/strict-boolean-conditions
-    return !!this.el.querySelector('core-icon[slot="icon"]');
+    return !!this.el.querySelector('core-icon[slot="icon-only"]');
   }
 
   render() {
@@ -159,12 +159,14 @@ export class Button implements ComponentInterface {
           disabled={disabled}
           loading={loading}
         >
-          <slot name="icon"></slot>
+          <slot name="icon-only"></slot>
+          <slot name="dropdown-left"></slot>
           <slot name="button-left"></slot>
           <div class="text-wrap">
             <slot></slot>
           </div>
           <slot name="button-right"></slot>
+          <slot name="dropdown-right"></slot>
           <div class="button-loading"></div>
         </TagType>
       </Host>

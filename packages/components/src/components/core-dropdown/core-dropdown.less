@@ -48,6 +48,65 @@
     }
   }
 
+  // Applied only when a core-dropdown is in a core-button slot
+  &([slot=dropdown-right]),
+  &([slot=dropdown-left]) {
+    position: relative;
+
+    .trigger::after {
+      content: "";
+      background: @color-gray-3;
+      height: 34px;
+      position: absolute;
+      top: 1px;
+      transition: background 0.12s ease-in-out;
+      width: 1px;
+    }
+
+    .core-dropdown {
+      &.active .trigger {
+        box-shadow: 0 0 0 1px @color-gray-8 inset;
+        color: @color-gray-8;
+
+        &::after {
+          z-index: -1;
+        }
+      }
+
+      &:hover .trigger::after {
+        background: @color-gray-5;
+      }
+    }
+  }
+
+  // Applied only when a core-dropdown is in a core-button slot
+  &([slot=dropdown-right]) {
+    left: 15px;
+
+    .core-dropdown.active .trigger {
+      border-top-right-radius: @border-radius-md;
+      border-bottom-right-radius: @border-radius-md;
+    }
+
+    .trigger::after {
+      left: 0;
+    }
+  }
+
+  // Applied only when a core-dropdown is in a core-button slot
+  &([slot=dropdown-left]) {
+    right: 15px;
+
+    .core-dropdown.active .trigger {
+      border-top-left-radius: @border-radius-md;
+      border-bottom-left-radius: @border-radius-md;
+    }
+
+    .trigger::after {
+      right: 0;
+    }
+  }
+
   .core-dropdown {
     display: inline-flex;
     position: relative;
@@ -59,6 +118,12 @@
         display: flex;
       }
     }
+  }
+
+  .trigger {
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
   }
 
   .menu-outter {
@@ -75,7 +140,8 @@
     box-shadow: @shadow-3;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 20px;
+    font-weight: normal;
+    margin-top: 5px;
     min-width: 128px;
     padding-top: @space-2;
     padding-bottom: @space-1;
@@ -115,4 +181,12 @@
       z-index: -1;
     }
   }
+}
+
+// :host-context(<selector>) matches the component if it or any of its ancestors matches <selector>
+:host-context(.core-button.primary) {
+  background: @color-blue-dark-1;
+  border-top-right-radius: @border-radius-md;
+  border-bottom-right-radius: @border-radius-md;
+  color: @color-white;
 }

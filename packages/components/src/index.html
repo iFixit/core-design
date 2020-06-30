@@ -217,19 +217,19 @@
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button>
-              <core-icon slot="icon" icon="menu" color="gray-5"></core-icon>
+              <core-icon slot="icon-only" icon="menu" color="gray-5"></core-icon>
             </core-button>
             <core-button radius="circle">
-              <core-icon slot="icon" icon="cart" color="gray-5"></core-icon>
+              <core-icon slot="icon-only" icon="cart" color="gray-5"></core-icon>
             </core-button>
             <core-button radius="circle" status="danger">
-              <core-icon slot="icon" icon="info"></core-icon>
+              <core-icon slot="icon-only" icon="info"></core-icon>
             </core-button>
             <core-button radius="circle" status="success">
-              <core-icon slot="icon" icon="clipboard"></core-icon>
+              <core-icon slot="icon-only" icon="clipboard"></core-icon>
             </core-button>
             <core-button radius="circle" status="warning">
-              <core-icon slot="icon" icon="star"></core-icon>
+              <core-icon slot="icon-only" icon="star"></core-icon>
             </core-button>
           </div>
         </div>
@@ -245,19 +245,19 @@
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button variation="primary">
-              <core-icon slot="icon" icon="undo"></core-icon>
+              <core-icon slot="icon-only" icon="undo"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle">
-              <core-icon slot="icon" icon="user"></core-icon>
+              <core-icon slot="icon-only" icon="user"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle" status="danger">
-              <core-icon slot="icon" icon="video"></core-icon>
+              <core-icon slot="icon-only" icon="video"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle" status="success">
-              <core-icon slot="icon" icon="bell"></core-icon>
+              <core-icon slot="icon-only" icon="bell"></core-icon>
             </core-button>
             <core-button variation="primary" radius="circle" status="warning">
-              <core-icon slot="icon" icon="grid"></core-icon>
+              <core-icon slot="icon-only" icon="grid"></core-icon>
             </core-button>
           </div>
         </div>
@@ -273,21 +273,54 @@
           </core-button>
           <div class="grid-icon-only extend-4">
             <core-button variation="secondary">
-              <core-icon slot="icon" icon="hourglass" color="gray-5"></core-icon>
+              <core-icon slot="icon-only" icon="hourglass" color="gray-5"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle">
-              <core-icon slot="icon" icon="plus-box" color="gray-5"></core-icon>
+              <core-icon slot="icon-only" icon="plus-box" color="gray-5"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle" status="danger">
-              <core-icon slot="icon" icon="gear"></core-icon>
+              <core-icon slot="icon-only" icon="gear"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle" status="success">
-              <core-icon slot="icon" icon="minus"></core-icon>
+              <core-icon slot="icon-only" icon="minus"></core-icon>
             </core-button>
             <core-button variation="secondary" radius="circle" status="warning">
-              <core-icon slot="icon" icon="mail"></core-icon>
+              <core-icon slot="icon-only" icon="mail"></core-icon>
             </core-button>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="dual-action-buttons">
+      <h2>Dual Action Buttons</h2>
+      <div class="grid">
+        <div class="grid">
+          <span class="hint">Right</span>
+          <span class="hint">Left</span>
+        </div>
+        <div class="grid">
+          <core-button>
+            Button
+            <core-dropdown slot="dropdown-right" alignment="right">
+              <div slot="trigger">
+                <core-icon icon="plus"></core-icon>
+              </div>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+            </core-dropdown>
+          </core-button>
+          <core-button>
+            Button
+            <core-dropdown slot="dropdown-left" alignment="left">
+              <div slot="trigger">
+                <core-icon icon="plus"></core-icon>
+              </div>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+            </core-dropdown>
+          </core-button>
         </div>
       </div>
     </section>
@@ -323,9 +356,9 @@
         <div class="dropdown grid">
           <div>
             <core-dropdown>
-              <core-button slot="trigger" variation="borderless">
-                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              <div slot="trigger">
+                <core-icon slot="icon-only" icon="more" color="gray-5"></core-icon>
+              </div>
               <core-dropdown-item href="#">Option 1</core-dropdown-item>
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
@@ -333,9 +366,9 @@
           </div>
           <div>
             <core-dropdown alignment="center" hoverable>
-              <core-button slot="trigger" variation="borderless">
-                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              <div slot="trigger">
+                <core-icon slot="icon-only" icon="more" color="gray-5"></core-icon>
+              </div>
               <core-dropdown-item href="#">Option 1</core-dropdown-item>
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
@@ -346,9 +379,9 @@
           </div>
           <div>
             <core-dropdown alignment="right">
-              <core-button slot="trigger" variation="borderless">
-                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              <div slot="trigger">
+                <core-icon slot="icon-only" icon="more" color="gray-5"></core-icon>
+              </div>
               <core-dropdown-item href="#">
                 <core-icon slot="icon" icon="cart" color="green" style="margin-right:8px"></core-icon>
                 Option 1
@@ -365,9 +398,9 @@
           </div>
           <div>
             <core-dropdown nowrap>
-              <core-button slot="trigger" variation="borderless">
-                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              <div slot="trigger">
+                <core-icon slot="icon-only" icon="more" color="gray-5"></core-icon>
+              </div>
               <core-dropdown-item href="#">Option 1</core-dropdown-item>
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
