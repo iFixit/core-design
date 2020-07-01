@@ -1,6 +1,6 @@
 {
   "name": "@core-design/components",
-  "version": "2.0.4",
+  "version": "2.0.7",
   "description": "Core Design System Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -16,17 +16,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dozuki/core-components.git"
+    "url": "https://github.com/iFixit/core-components.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "npm-run-all clean build-stencil",
-    "build-netlify": "npm-run-all build-stencil build-storybook",
-    "build-stencil": "stencil build --docs --no-cache",
+    "build": "stencil build --no-cache",
+    "build-netlify": "npm-run-all build-stencil-docs build-storybook",
+    "build-stencil-docs": "stencil build --docs --no-cache",
     "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
-    "clean": "rm -rf dist",
     "generate": "stencil generate",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "start": "stencil build --dev --watch --serve",
@@ -39,7 +38,7 @@
   "devDependencies": {
     "@core-ds/icons": "^1.2.0",
     "@core-ds/primitives": "^1.0.0",
-    "@stencil/core": "1.13.0",
+    "@stencil/core": "^1.15.0",
     "@stencil/eslint-plugin": "^0.3.1",
     "@stencil/less": "^1.0.0",
     "@stencil/react-output-target": "^0.0.6",
@@ -52,10 +51,10 @@
     "@storybook/html": "^5.3.19",
     "@storybook/theming": "^5.3.18",
     "@storybook/web-components": "^5.3.19",
-    "@typescript-eslint/eslint-plugin": "^3.1.0",
-    "@typescript-eslint/parser": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
     "babel-loader": "^8.1.0",
-    "eslint": "^7.1.0",
+    "eslint": "^7.3.1",
     "eslint-plugin-react": "^7.20.0",
     "less-plugin-autoprefix": "^2.0.0",
     "lit-html": "^1.2.1",

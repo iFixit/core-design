@@ -1,11 +1,11 @@
 {
   "name": "@core-design/components-react",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "React wrappers for Core Design System Components",
-  "homepage": "https://github.com/Dozuki/core-components#readme",
+  "homepage": "https://github.com/iFixit/core-components#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dozuki/core-components.git"
+    "url": "git+https://github.com/iFixit/core-components.git"
   },
   "publishConfig": {
     "access": "public"
@@ -37,7 +37,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@core-design/components": "^2.0.4"
+    "@core-design/components": "^2.0.7"
   },
   "peerDependencies": {
     "react": "^16.9.0",
