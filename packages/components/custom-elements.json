@@ -1,9 +1,9 @@
 {
-  "timestamp": "2020-06-16T17:35:01",
+  "timestamp": "2020-07-01T22:52:50",
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.13.0",
-    "typescriptVersion": "3.8.3"
+    "version": "1.15.0",
+    "typescriptVersion": "3.9.5"
   },
   "tags": [
     {
@@ -699,12 +699,12 @@
           "description": "The dropdown will show up when hovering the dropdown-trigger"
         },
         {
-          "name": "nowrap",
+          "name": "wrap",
           "type": "boolean",
           "mutable": false,
-          "attr": "nowrap",
+          "attr": "wrap",
           "reflectToAttr": false,
-          "docs": "The dropdown will not wrap it's child element content.",
+          "docs": "The dropdown will wrap if applied.",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -714,7 +714,7 @@
           ],
           "optional": false,
           "required": false,
-          "description": "The dropdown will not wrap it's child element content."
+          "description": "The dropdown will wrap if applied."
         }
       ],
       "methods": [],
@@ -2143,7 +2143,7 @@
           "type": "\"dark\" | \"light\"",
           "mutable": false,
           "attr": "color",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "The tooltip color\nUse: \"dark\"`or `\"light\"`.",
           "docsTags": [],
           "default": "\"dark\"",
