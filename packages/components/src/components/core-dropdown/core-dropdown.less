@@ -10,10 +10,12 @@
   font-feature-settings: "ss01" on, "ss02" on;
   font-size: 14px;
   line-height: 1.142857;
+  white-space: nowrap;
+  width: inherit;
 
   // @Prop nowrap
-  &([nowrap]) {
-    white-space: nowrap;
+  &([wrap]) {
+    white-space: unset;
   }
 
   // @Prop alignment
@@ -111,6 +113,7 @@
     display: inline-flex;
     position: relative;
     vertical-align: top;
+    width: inherit;
 
     &.active,
     &.hoverable:hover {
@@ -131,6 +134,7 @@
     max-width: 95vw;
     position: absolute;
     top: 100%;
+    width: inherit;
     z-index: 9;
   }
 
@@ -142,10 +146,10 @@
     flex-direction: column;
     font-weight: normal;
     margin-top: 5px;
-    min-width: 128px;
     padding-top: @space-2;
     padding-bottom: @space-1;
     position: relative;
+    width: inherit;
   }
 
   .arrow {

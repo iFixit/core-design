@@ -354,6 +354,13 @@
       <h2>Dropdown</h2>
       <div class="grid">
         <div class="dropdown grid">
+          <span class="hint">Default</span>
+          <span class="hint">Center</span>
+          <span class="hint">Right</span>
+          <span class="hint">Hoverable</span>
+          <span class="hint">Wrap</span>
+        </div>
+        <div class="dropdown grid">
           <div>
             <core-dropdown>
               <div slot="trigger">
@@ -365,7 +372,7 @@
             </core-dropdown>
           </div>
           <div>
-            <core-dropdown alignment="center" hoverable>
+            <core-dropdown alignment="center">
               <div slot="trigger">
                 <core-icon slot="icon-only" icon="more" color="gray-5"></core-icon>
               </div>
@@ -397,7 +404,7 @@
             </core-dropdown>
           </div>
           <div>
-            <core-dropdown nowrap>
+            <core-dropdown hoverable>
               <div slot="trigger">
                 <core-icon slot="icon-only" icon="more" color="gray-5"></core-icon>
               </div>
@@ -405,7 +412,23 @@
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
               <core-dropdown-item>
-                Nested content can be anything without wrapping (`nowrap` prop applied to parent `core-dropdown`)
+                Nested content can be anything
+              </core-dropdown-item>
+            </core-dropdown>
+          </div>
+          <div>
+            <core-dropdown wrap style="width:300px">
+              <div slot="trigger">
+                <core-icon slot="icon-only" icon="more" color="gray-5"></core-icon>
+              </div>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+              <core-dropdown-item>
+                Wrap content with `wrap` prop applied to parent `core-dropdown`.
+              </core-dropdown-item>
+              <core-dropdown-item>
+                Need a specific width? Apply a width style to `core-dropdown`.
               </core-dropdown-item>
             </core-dropdown>
           </div>
