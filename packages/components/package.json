@@ -36,6 +36,7 @@
     "test-watch": "stencil test --spec --e2e --watchAll"
   },
   "devDependencies": {
+    "@core-design/components-react": "^2.0.7",
     "@core-ds/icons": "^1.2.0",
     "@core-ds/primitives": "^1.0.0",
     "@stencil/core": "^1.15.0",
@@ -46,7 +47,7 @@
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-centered": "^5.3.18",
     "@storybook/addon-docs": "^5.3.18",
-    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-viewport": "^5.3.18",
     "@storybook/html": "^5.3.19",
     "@storybook/theming": "^5.3.18",
