@@ -18,12 +18,12 @@ export class Tab implements ComponentInterface {
   /**
    * If `true`, the tab element is set to active.
    */
-  @Prop({ reflectToAttr: true }) active = false;
+  @Prop({ reflect: true }) active = false;
 
   /**
    * If `true`, the user cannot interact with the tab.
    */
-  @Prop({ reflectToAttr: true }) disabled = false;
+  @Prop({ reflect: true }) disabled = false;
 
   render() {
     const { disabled } = this;

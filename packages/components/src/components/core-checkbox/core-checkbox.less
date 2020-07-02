@@ -10,7 +10,8 @@
   width: inherit;
 
   // @Prop type size
-  &([large]) {
+  &([large]),
+  &([large="true"]) {
     .native-element {
       height: @space-large;
       width: @space-large;
@@ -23,6 +24,21 @@
       }
     }
   }
+
+  &([large="false"]) .native-element {
+      height: @space-4;
+      width: @space-4;
+  }
+}
+
+:host-context([slot="label-right"]) {
+  display: flex;
+  margin-left: @space-2;
+}
+
+:host-context([slot="label-left"]) {
+  display: flex;
+  margin-right: @space-2;
 }
 
 .native-element {
@@ -35,7 +51,6 @@
   font: inherit;
   height: @space-4;
   margin: 0;
-  margin-right: @space-2;
   outline: none;
   transition: background 0.12s ease-in-out, box-shadow 0.12s ease-in-out;
   width: @space-4;

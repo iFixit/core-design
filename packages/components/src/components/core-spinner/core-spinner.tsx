@@ -25,7 +25,7 @@ export class Spinner implements ComponentInterface {
    * The pre-defined spinner size.
    * Use: `"small"`, `"medium"`, `"large"`, ect.
    */
-  @Prop({ reflectToAttr: true }) size?: "small" | "medium" | "large" = "medium";
+  @Prop({ reflect: true }) size?: "small" | "medium" | "large" = "medium";
 
   render() {
     const { color } = this;

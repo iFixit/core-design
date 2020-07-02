@@ -22,27 +22,20 @@ export class Checkbox implements ComponentInterface {
   @Prop() checked = false;
 
   /**
-   * If applied, the user cannot interact with the element.
-   * Use: `"disabled"`.
-   */
-  @Prop() disabled = false;
-
-  /**
    * If applied, the user must fill in a value before submitting a form containing this element.
    * Use: `"required"`.
    */
   @Prop() required = false;
 
   /**
-   * Apply the large pre-defined large checkbox size styling.
+   * Apply the pre-defined large checkbox size styling.
    * Use: `"large"`.
    */
-  @Prop({ reflectToAttr: true }) large = false;
+  @Prop() large = false;
 
   render() {
     return (
       <Host
-        aria-disabled={this.disabled ? "true" : null}
         class={{
           "core-checkbox": true,
         }}
@@ -51,7 +44,6 @@ export class Checkbox implements ComponentInterface {
           class="native-element"
           type="checkbox"
           checked={this.checked}
-          disabled={this.disabled}
           required={this.required}
         />
       </Host>

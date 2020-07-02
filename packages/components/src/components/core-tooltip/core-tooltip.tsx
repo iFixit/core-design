@@ -9,7 +9,7 @@ export class tooltip implements ComponentInterface {
   /**
    * The tooltip visibility
    */
-  @Prop({ mutable: true, reflectToAttr: true }) active = false;
+  @Prop({ mutable: true, reflect: true }) active = false;
 
   /**
    * The tooltip color
@@ -25,7 +25,7 @@ export class tooltip implements ComponentInterface {
   /**
    * The tooltip variation.
    */
-  @Prop({ reflectToAttr: true }) variation?: "top" | "bottom" = "top";
+  @Prop({ reflect: true }) variation?: "top" | "bottom" = "top";
 
   /**
    * Handle Trigger click action

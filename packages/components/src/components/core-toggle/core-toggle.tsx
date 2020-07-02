@@ -50,7 +50,7 @@ export class Toggle implements ComponentInterface {
    * Apply the large pre-defined large toggle size styling.
    * Use: `"large"`.
    */
-  @Prop({ reflectToAttr: true }) large = false;
+  @Prop({ reflect: true }) large = false;
 
   render() {
     return (

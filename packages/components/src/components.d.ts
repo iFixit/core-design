@@ -78,7 +78,12 @@ export namespace Components {
         /**
           * The button variation.
          */
-        "variation"?: "basic" | "primary" | "secondary" | "dark" | "light" | "borderless";
+        "variation"?: | "basic"
+    | "primary"
+    | "secondary"
+    | "dark"
+    | "light"
+    | "borderless";
         /**
           * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
@@ -90,11 +95,7 @@ export namespace Components {
          */
         "checked": boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
-         */
-        "disabled": boolean;
-        /**
-          * Apply the large pre-defined large checkbox size styling. Use: `"large"`.
+          * Apply the pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large": boolean;
         /**
@@ -142,11 +143,151 @@ export namespace Components {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8"
+    | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
-        "icon"?: "alert-circle" | "alert-triangle" | "alert-triangle-solid" | "anchor" | "archive" | "arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "bar" | "bell" | "bell-mute" | "bell-solid" | "bold" | "bullet" | "calendar" | "camera" | "caret-down" | "caret-left" | "caret-right" | "caret-up" | "cart" | "cart-solid" | "category" | "check" | "check-sm" | "chevron-down" | "chevron-left" | "chevron-right" | "chevron-up" | "circle" | "clipboard" | "clock" | "columns" | "cross" | "cross-sm" | "disable" | "dot" | "download" | "drag" | "fast-forward" | "film-camera" | "gear" | "globe" | "grad" | "grid" | "heading" | "heart" | "help" | "help-solid" | "history" | "hourglass" | "image" | "info" | "italic" | "layers" | "link" | "link-out" | "list-bullet" | "list-num" | "logout" | "mail" | "mail-solid" | "menu" | "meter" | "minus" | "minus-box" | "more" | "paragraph" | "pen" | "pencil" | "play" | "plus" | "plus-box" | "quote" | "redo" | "refresh" | "rewind" | "rows" | "search" | "settings" | "speech" | "spinner" | "star" | "star-half" | "star-solid" | "strike" | "toolbox" | "trash" | "underline" | "undo" | "user" | "users" | "video" | string;
+        "icon"?: | "alert-circle"
+    | "alert-triangle"
+    | "alert-triangle-solid"
+    | "anchor"
+    | "archive"
+    | "arrow-down"
+    | "arrow-left"
+    | "arrow-right"
+    | "arrow-up"
+    | "bar"
+    | "bell"
+    | "bell-mute"
+    | "bell-solid"
+    | "bold"
+    | "bullet"
+    | "calendar"
+    | "camera"
+    | "caret-down"
+    | "caret-left"
+    | "caret-right"
+    | "caret-up"
+    | "cart"
+    | "cart-solid"
+    | "category"
+    | "check"
+    | "check-sm"
+    | "chevron-down"
+    | "chevron-left"
+    | "chevron-right"
+    | "chevron-up"
+    | "circle"
+    | "clipboard"
+    | "clock"
+    | "columns"
+    | "cross"
+    | "cross-sm"
+    | "disable"
+    | "dot"
+    | "download"
+    | "drag"
+    | "fast-forward"
+    | "film-camera"
+    | "gear"
+    | "globe"
+    | "grad"
+    | "grid"
+    | "heading"
+    | "heart"
+    | "help"
+    | "help-solid"
+    | "history"
+    | "hourglass"
+    | "image"
+    | "info"
+    | "italic"
+    | "layers"
+    | "link"
+    | "link-out"
+    | "list-bullet"
+    | "list-num"
+    | "logout"
+    | "mail"
+    | "mail-solid"
+    | "menu"
+    | "meter"
+    | "minus"
+    | "minus-box"
+    | "more"
+    | "paragraph"
+    | "pen"
+    | "pencil"
+    | "play"
+    | "plus"
+    | "plus-box"
+    | "quote"
+    | "redo"
+    | "refresh"
+    | "rewind"
+    | "rows"
+    | "search"
+    | "settings"
+    | "speech"
+    | "spinner"
+    | "star"
+    | "star-half"
+    | "star-solid"
+    | "strike"
+    | "toolbox"
+    | "trash"
+    | "underline"
+    | "undo"
+    | "user"
+    | "users"
+    | "video"
+    | string;
         /**
           * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
@@ -188,7 +329,14 @@ export namespace Components {
         /**
           * A hint to the browser for which keyboard to display. Use: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
          */
-        "inputkeyboard"?: "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search";
+        "inputkeyboard"?: | "none"
+    | "text"
+    | "tel"
+    | "url"
+    | "email"
+    | "numeric"
+    | "decimal"
+    | "search";
         /**
           * The name of the control, which is submitted with the form data.
          */
@@ -214,7 +362,53 @@ export namespace Components {
         /**
           * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8"
+    | string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
@@ -266,13 +460,9 @@ export namespace Components {
          */
         "checked": boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * Apply the pre-defined large radio size styling. Use: `"large"`.
          */
-        "disabled": boolean;
-        /**
-          * Apply the large pre-defined large radio size styling. Use: `"large"`.
-         */
-        "large": boolean;
+        "large": any;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */
@@ -620,7 +810,12 @@ declare namespace LocalJSX {
         /**
           * The button variation.
          */
-        "variation"?: "basic" | "primary" | "secondary" | "dark" | "light" | "borderless";
+        "variation"?: | "basic"
+    | "primary"
+    | "secondary"
+    | "dark"
+    | "light"
+    | "borderless";
         /**
           * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
          */
@@ -632,11 +827,7 @@ declare namespace LocalJSX {
          */
         "checked"?: boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
-         */
-        "disabled"?: boolean;
-        /**
-          * Apply the large pre-defined large checkbox size styling. Use: `"large"`.
+          * Apply the pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large"?: boolean;
         /**
@@ -684,11 +875,151 @@ declare namespace LocalJSX {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8"
+    | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
-        "icon"?: "alert-circle" | "alert-triangle" | "alert-triangle-solid" | "anchor" | "archive" | "arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "bar" | "bell" | "bell-mute" | "bell-solid" | "bold" | "bullet" | "calendar" | "camera" | "caret-down" | "caret-left" | "caret-right" | "caret-up" | "cart" | "cart-solid" | "category" | "check" | "check-sm" | "chevron-down" | "chevron-left" | "chevron-right" | "chevron-up" | "circle" | "clipboard" | "clock" | "columns" | "cross" | "cross-sm" | "disable" | "dot" | "download" | "drag" | "fast-forward" | "film-camera" | "gear" | "globe" | "grad" | "grid" | "heading" | "heart" | "help" | "help-solid" | "history" | "hourglass" | "image" | "info" | "italic" | "layers" | "link" | "link-out" | "list-bullet" | "list-num" | "logout" | "mail" | "mail-solid" | "menu" | "meter" | "minus" | "minus-box" | "more" | "paragraph" | "pen" | "pencil" | "play" | "plus" | "plus-box" | "quote" | "redo" | "refresh" | "rewind" | "rows" | "search" | "settings" | "speech" | "spinner" | "star" | "star-half" | "star-solid" | "strike" | "toolbox" | "trash" | "underline" | "undo" | "user" | "users" | "video" | string;
+        "icon"?: | "alert-circle"
+    | "alert-triangle"
+    | "alert-triangle-solid"
+    | "anchor"
+    | "archive"
+    | "arrow-down"
+    | "arrow-left"
+    | "arrow-right"
+    | "arrow-up"
+    | "bar"
+    | "bell"
+    | "bell-mute"
+    | "bell-solid"
+    | "bold"
+    | "bullet"
+    | "calendar"
+    | "camera"
+    | "caret-down"
+    | "caret-left"
+    | "caret-right"
+    | "caret-up"
+    | "cart"
+    | "cart-solid"
+    | "category"
+    | "check"
+    | "check-sm"
+    | "chevron-down"
+    | "chevron-left"
+    | "chevron-right"
+    | "chevron-up"
+    | "circle"
+    | "clipboard"
+    | "clock"
+    | "columns"
+    | "cross"
+    | "cross-sm"
+    | "disable"
+    | "dot"
+    | "download"
+    | "drag"
+    | "fast-forward"
+    | "film-camera"
+    | "gear"
+    | "globe"
+    | "grad"
+    | "grid"
+    | "heading"
+    | "heart"
+    | "help"
+    | "help-solid"
+    | "history"
+    | "hourglass"
+    | "image"
+    | "info"
+    | "italic"
+    | "layers"
+    | "link"
+    | "link-out"
+    | "list-bullet"
+    | "list-num"
+    | "logout"
+    | "mail"
+    | "mail-solid"
+    | "menu"
+    | "meter"
+    | "minus"
+    | "minus-box"
+    | "more"
+    | "paragraph"
+    | "pen"
+    | "pencil"
+    | "play"
+    | "plus"
+    | "plus-box"
+    | "quote"
+    | "redo"
+    | "refresh"
+    | "rewind"
+    | "rows"
+    | "search"
+    | "settings"
+    | "speech"
+    | "spinner"
+    | "star"
+    | "star-half"
+    | "star-solid"
+    | "strike"
+    | "toolbox"
+    | "trash"
+    | "underline"
+    | "undo"
+    | "user"
+    | "users"
+    | "video"
+    | string;
         /**
           * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
@@ -726,7 +1057,14 @@ declare namespace LocalJSX {
         /**
           * A hint to the browser for which keyboard to display. Use: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
          */
-        "inputkeyboard"?: "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search";
+        "inputkeyboard"?: | "none"
+    | "text"
+    | "tel"
+    | "url"
+    | "email"
+    | "numeric"
+    | "decimal"
+    | "search";
         /**
           * The name of the control, which is submitted with the form data.
          */
@@ -752,7 +1090,53 @@ declare namespace LocalJSX {
         /**
           * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
          */
-        "color"?: "blue" | "green" | "yellow" | "red" | "white" | "black" | "blue-light-4" | "blue-light-3" | "blue-light-2" | "blue-light-1" | "blue-dark-1" | "blue-dark-2" | "blue-dark-3" | "blue-dark-4" | "green-light-4" | "green-light-3" | "green-light-2" | "green-light-1" | "green-dark-1" | "green-dark-2" | "green-dark-3" | "green-dark-4" | "yellow-light-4" | "yellow-light-3" | "yellow-light-2" | "yellow-light-1" | "yellow-dark-1" | "yellow-dark-2" | "yellow-dark-3" | "yellow-dark-4" | "red-light-4" | "red-light-3" | "red-light-2" | "red-light-1" | "red-dark-1" | "red-dark-2" | "red-dark-3" | "red-dark-4" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | string;
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8"
+    | string;
         /**
           * If `true`, the user cannot interact with the nested element (typically core-input).
          */
@@ -804,13 +1188,9 @@ declare namespace LocalJSX {
          */
         "checked"?: boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * Apply the pre-defined large radio size styling. Use: `"large"`.
          */
-        "disabled"?: boolean;
-        /**
-          * Apply the large pre-defined large radio size styling. Use: `"large"`.
-         */
-        "large"?: boolean;
+        "large"?: any;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
          */

@@ -73,7 +73,7 @@ export class Label implements ComponentInterface {
   /**
    * If `true`, the user cannot interact with the nested element (typically core-input).
    */
-  @Prop({ reflectToAttr: true }) disabled = false;
+  @Prop({ reflect: true }) disabled = false;
 
   /**
    * The display determines where and how the label behaves inside an item.
@@ -89,6 +89,7 @@ export class Label implements ComponentInterface {
     const { display } = this;
     return (
       <Host
+        aria-disabled={this.disabled ? "true" : null}
         class={{
           "core-label": true,
           [display]: true,

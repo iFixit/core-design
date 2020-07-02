@@ -25,7 +25,7 @@ export class Button implements ComponentInterface {
   /**
    * If `true`, the user cannot interact with the button.
    */
-  @Prop({ reflectToAttr: true }) disabled = false;
+  @Prop({ reflect: true }) disabled = false;
 
   /**
    * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
@@ -57,7 +57,7 @@ export class Button implements ComponentInterface {
    * Specifies the loading animation location if applied.
    * Use: `"left"`, `"right"`, or `"only"`.
    */
-  @Prop({ reflectToAttr: true }) loading?: "left" | "right" | "only";
+  @Prop({ reflect: true }) loading?: "left" | "right" | "only";
 
   /**
    * Set to the value of border-radius applied. Default is 4(px).

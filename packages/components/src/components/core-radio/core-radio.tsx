@@ -22,27 +22,20 @@ export class Radio implements ComponentInterface {
   @Prop() checked = false;
 
   /**
-   * If applied, the user cannot interact with the element.
-   * Use: `"disabled"`.
-   */
-  @Prop() disabled = false;
-
-  /**
    * If applied, the user must fill in a value before submitting a form containing this element.
    * Use: `"required"`.
    */
   @Prop() required = false;
 
   /**
-   * Apply the large pre-defined large radio size styling.
+   * Apply the pre-defined large radio size styling.
    * Use: `"large"`.
    */
-  @Prop({ reflectToAttr: true }) large = false;
+  @Prop() large = null;
 
   render() {
     return (
       <Host
-        aria-disabled={this.disabled ? "true" : null}
         class={{
           "core-radio": true,
         }}
@@ -51,7 +44,6 @@ export class Radio implements ComponentInterface {
           class="native-element"
           type="radio"
           checked={this.checked}
-          disabled={this.disabled}
           required={this.required}
         />
       </Host>

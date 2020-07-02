@@ -80,7 +80,7 @@ export class Input implements ComponentInterface {
    * Apply the large pre-defined input size and styling.
    * Use: `"large"`.
    */
-  @Prop({ reflectToAttr: true }) size?: "large";
+  @Prop({ reflect: true }) size?: "large";
 
   /**
    * How an <input> works varies considerably depending on the value of
@@ -88,7 +88,7 @@ export class Input implements ComponentInterface {
    * own separate reference pages. If this attribute is not specified,
    * the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
    */
-  @Prop({ reflectToAttr: true }) type?: string = "text";
+  @Prop({ reflect: true }) type?: string = "text";
 
   /**
    * Returns the native `<input>` element.
