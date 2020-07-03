@@ -22,6 +22,12 @@ export class Checkbox implements ComponentInterface {
   @Prop() checked = false;
 
   /**
+   * If applied, the user cannot interact with the element.
+   * Use: `"disabled"`.
+   */
+  @Prop() disabled = false;
+
+  /**
    * If applied, the user must fill in a value before submitting a form containing this element.
    * Use: `"required"`.
    */
@@ -36,6 +42,7 @@ export class Checkbox implements ComponentInterface {
   render() {
     return (
       <Host
+        aria-disabled={this.disabled ? "true" : null}
         class={{
           "core-checkbox": true,
         }}
@@ -44,6 +51,7 @@ export class Checkbox implements ComponentInterface {
           class="native-element"
           type="checkbox"
           checked={this.checked}
+          disabled={this.disabled}
           required={this.required}
         />
       </Host>
