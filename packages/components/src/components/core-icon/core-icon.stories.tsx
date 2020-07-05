@@ -3,7 +3,7 @@ import { html, TemplateResult } from "lit-html";
 
 export default {
   component: "core-icon",
-  title: "Icon",
+  title: "Misc Components/Icon",
 };
 
 const icons = {
