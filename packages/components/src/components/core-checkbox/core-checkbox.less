@@ -4,13 +4,13 @@
 
 // :host targets the custom element compiled by Stencil
 :host {
-  color: @color-gray-5;
+  color: inherit;
   display: inline-flex;
   font: inherit;
   width: inherit;
 
   // @Prop type size
-  &([large]),
+  &([large]):not([large="false"]),
   &([large="true"]) {
     .native-element {
       height: @space-large;
@@ -19,7 +19,7 @@
       &:checked:after {
         content: url(../../collection/assets/svg/check.svg);
         height: 9px;
-        top: 1px;
+        top: 2px;
         width: 12px;
       }
     }
@@ -83,7 +83,7 @@
         content: url(../../collection/assets/svg/check-sm.svg);
         height: 7px;
         position: absolute;
-        top: -2px;
+        top: -1px;
         left: 50%;
         transform: translate(-50%);
         width: 10px;

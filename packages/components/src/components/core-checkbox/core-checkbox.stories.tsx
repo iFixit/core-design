@@ -13,7 +13,6 @@ export const PropStates = (): TemplateResult => {
       <core-checkbox
         slot="label-left"
         checked=${boolean("Checked", false)}
-        required=${boolean("Required", false)}
         large=${boolean("Large", false)}
       ></core-checkbox>
     </core-label>

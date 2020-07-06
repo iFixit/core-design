@@ -4,12 +4,12 @@
 
 // :host targets the custom element compiled by Stencil
 :host {
-  color: @color-gray-5;
+  color: inherit;
   display: inline-flex;
   font: inherit;
 
   // @Prop type size
-  &([large]),
+  &([large]):not([large="false"]),
   &([large="true"]) {
     .native-element {
       height: @space-large;

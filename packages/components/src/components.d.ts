@@ -95,6 +95,10 @@ export namespace Components {
          */
         "checked": boolean;
         /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled": boolean;
+        /**
           * Apply the pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large": boolean;
@@ -459,6 +463,10 @@ export namespace Components {
           * If applied, the element is checked. Use: `"checked"`.
          */
         "checked": boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled": boolean;
         /**
           * Apply the pre-defined large radio size styling. Use: `"large"`.
          */
@@ -827,6 +835,10 @@ declare namespace LocalJSX {
          */
         "checked"?: boolean;
         /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled"?: boolean;
+        /**
           * Apply the pre-defined large checkbox size styling. Use: `"large"`.
          */
         "large"?: boolean;
@@ -1187,6 +1199,10 @@ declare namespace LocalJSX {
           * If applied, the element is checked. Use: `"checked"`.
          */
         "checked"?: boolean;
+        /**
+          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+         */
+        "disabled"?: boolean;
         /**
           * Apply the pre-defined large radio size styling. Use: `"large"`.
          */
