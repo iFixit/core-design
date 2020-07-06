@@ -1,4 +1,4 @@
-# Stencil Components
+# Web Components
 
 ## Component Structure
 
@@ -18,7 +18,7 @@ export class Component {
   render() {
     return (
       <div>
-        Hello, my name is {this.first} {this.last}
+        Hello world, my name is {this.first} {this.last}
       </div>
     );
   }
@@ -33,9 +33,9 @@ Use it just like any other HTML element:
 
 ## Naming Components
 
-When creating new component tags, use the `core-` prefix (kebab-case).
+When creating new components, use the `core-` prefix. e.g. `core-button`, `core-icon`, etc are valid names.
 
-e.g. `core-button`, `core-icon`, etc are valid names. Custom Elements must contain kebab-case names so they do not collide with existing html elements.
+Custom Elements must contain kebab-case names so they do not collide with existing html elements.
 
 ## API
 
@@ -51,10 +51,10 @@ The API for Stencil closely mirrors the API for Custom Elements v1.
 | `@State()`     | Creates a local state variable that will not be placed on the element.                 |
 | `@Method()`    | Expose specific methods to be publicly accessible.                                     |
 
-## High Level Component Example
+## Component Example
 
 <details>
-  <summary>Expand a high level component example</summary>
+  <summary>Expand a detailed component example</summary>
 
 ```tsx
 @Component({
@@ -216,7 +216,7 @@ Web Components, specifically Custom Elements, are natively supported in Chrome a
 
 ## Polyfills
 
-Stencil includes a subset of the `core-js` polyfills for old browsers like IE11, `fetch` and conditionally downloads the [Custom Elements v1](https://github.com/webcomponents/polyfills/tree/master/packages/custom-elements) only when it's needed for modern browsers.
+Stencil includes a subset of the `core-js` polyfills for old browsers like IE 11, `fetch` and conditionally downloads the [Custom Elements v1](https://github.com/webcomponents/polyfills/tree/master/packages/custom-elements) only when it's needed.
 
 ### Internet Explorer 11
 
