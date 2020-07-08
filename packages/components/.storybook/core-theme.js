@@ -33,6 +33,6 @@ export const coreTheme = create({
   inputBorderRadius: 4,
 
   // Branding
-  brandTitle: "Core Design",
+  brandTitle: "Core Components",
   brandUrl: "https://core-ds-components.netlify.app/",
 });

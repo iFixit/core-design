@@ -2,7 +2,7 @@
 
 ## Packages
 
-1. [Stencil Components](packages/components)
+1. [Web Components](packages/components)
 1. [React Components](packages/components-react)
 
 ## Getting Started
