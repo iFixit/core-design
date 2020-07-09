@@ -4,22 +4,30 @@
 
 // :host targets the custom element compiled by Stencil
 :host {
-  color: @color-gray-5;
+  color: inherit;
   display: inline-flex;
   font: inherit;
 
   // @Prop type size
-  &([large]) .native-element {
-    height: @space-large;
-    width: @space-large;
+  &([large]):not([large="false"]),
+  &([large="true"]) {
+    .native-element {
+      height: @space-large;
+      width: @space-large;
 
-    &:checked:not(:disabled) {
-      box-shadow: 0 0 0 5px @color-blue inset;
-    }
+      &:checked:not(:disabled) {
+        box-shadow: 0 0 0 5px @color-blue inset;
+      }
 
-    &:checked:disabled {
-      box-shadow: 0 0 0 5px @color-blue-light-3 inset;
+      &:checked:disabled {
+        box-shadow: 0 0 0 5px @color-blue-light-3 inset;
+      }
     }
+  }
+
+  &([large="false"]) .native-element {
+      height: @space-4;
+      width: @space-4;
   }
 }
 

@@ -34,10 +34,10 @@ export class Checkbox implements ComponentInterface {
   @Prop() required = false;
 
   /**
-   * Apply the large pre-defined large checkbox size styling.
+   * Apply the pre-defined large checkbox size styling.
    * Use: `"large"`.
    */
-  @Prop({ reflectToAttr: true }) large = false;
+  @Prop() large = false;
 
   render() {
     return (

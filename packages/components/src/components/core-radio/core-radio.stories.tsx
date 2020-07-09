@@ -6,22 +6,33 @@ export default {
   title: "Buttons & Inputs/Radio",
 };
 
+export const PropStates = (): TemplateResult => {
+  return html`
+    <core-label display="inline">
+      Label
+      <core-radio
+        slot="label-left"
+        checked="${boolean("Checked", false)}"
+        large="${boolean("Large", false)}"
+      ></core-radio>
+    </core-label>
+  `;
+};
+
 export const Default = (): TemplateResult => {
   return html`
-    <core-radio
-      checked="${boolean("Checked", false)}"
-      disabled="${boolean("Disabled", false)}"
-      large="${boolean("Large", false)}"
-    ></core-radio>
+    <core-label display="inline">
+      Label
+      <core-radio slot="label-left"></core-radio>
+    </core-label>
   `;
 };
 
 export const Large = (): TemplateResult => {
   return html`
-    <core-radio
-      checked="${boolean("Checked", false)}"
-      disabled="${boolean("Disabled", false)}"
-      large="${boolean("Large", true)}"
-    ></core-radio>
+    <core-label display="inline">
+      Label
+      <core-radio slot="label-left" large></core-radio>
+    </core-label>
   `;
 };

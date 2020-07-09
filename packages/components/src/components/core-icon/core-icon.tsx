@@ -29,7 +29,7 @@ export class Icon {
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
    */
-  @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
+  @Prop({ mutable: true, reflect: true }) ariaLabel?: string;
 
   /**
    * Optional color of the icon.

@@ -9,7 +9,7 @@ export class Popover implements ComponentInterface {
   /**
    * The popover visibility
    */
-  @Prop({ mutable: true, reflectToAttr: true }) active = false;
+  @Prop({ mutable: true, reflect: true }) active = false;
 
   /**
    * The popover will show up when hovering the popover-trigger
@@ -19,7 +19,7 @@ export class Popover implements ComponentInterface {
   /**
    * The popover variation.
    */
-  @Prop({ reflectToAttr: true }) variation?: "top" | "bottom" = "top";
+  @Prop({ reflect: true }) variation?: "top" | "bottom" = "top";
 
   /**
    * Handle Trigger click action

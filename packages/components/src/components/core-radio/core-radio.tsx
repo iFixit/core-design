@@ -34,10 +34,10 @@ export class Radio implements ComponentInterface {
   @Prop() required = false;
 
   /**
-   * Apply the large pre-defined large radio size styling.
+   * Apply the pre-defined large radio size styling.
    * Use: `"large"`.
    */
-  @Prop({ reflectToAttr: true }) large = false;
+  @Prop() large = null;
 
   render() {
     return (
