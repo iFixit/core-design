@@ -51,8 +51,8 @@
   }
 
   // Applied only when a core-dropdown is in a core-button slot
-  &([slot=dropdown-right]),
-  &([slot=dropdown-left]) {
+  &([slot=button-dropdown-right]),
+  &([slot=button-dropdown-left]) {
     position: relative;
 
     .trigger::after {
@@ -82,7 +82,7 @@
   }
 
   // Applied only when a core-dropdown is in a core-button slot
-  &([slot=dropdown-right]) {
+  &([slot=button-dropdown-right]) {
     left: 15px;
 
     .core-dropdown.active .trigger {
@@ -96,7 +96,7 @@
   }
 
   // Applied only when a core-dropdown is in a core-button slot
-  &([slot=dropdown-left]) {
+  &([slot=button-dropdown-left]) {
     right: 15px;
 
     .core-dropdown.active .trigger {

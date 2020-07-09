@@ -118,7 +118,7 @@ export const DualActionRight = (): TemplateResult => {
   return html`
     <core-button>
       Button
-      <core-dropdown slot="dropdown-right" alignment="right">
+      <core-dropdown slot="button-dropdown-right" alignment="right">
         <div slot="trigger">
           <core-icon icon="plus"></core-icon>
         </div>
@@ -134,7 +134,7 @@ export const DualActionLeft = (): TemplateResult => {
   return html`
     <core-button>
       Button
-      <core-dropdown slot="dropdown-left" alignment="left">
+      <core-dropdown slot="button-dropdown-left" alignment="left">
         <div slot="trigger">
           <core-icon icon="plus"></core-icon>
         </div>
