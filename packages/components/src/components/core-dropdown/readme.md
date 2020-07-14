@@ -10,7 +10,7 @@
 | `active`    | `active`    | The dropdown visibility                                         | `boolean`                       | `false`  |
 | `alignment` | `alignment` | The dropdown alignment Use: `"left"`, `"center"`, or `"right"`. | `"center" \| "left" \| "right"` | `"left"` |
 | `hoverable` | `hoverable` | The dropdown will show up when hovering the dropdown-trigger    | `boolean`                       | `false`  |
-| `nowrap`    | `nowrap`    | The dropdown will not wrap it's child element content.          | `boolean`                       | `false`  |
+| `wrap`      | `wrap`      | The dropdown will wrap if applied.                              | `boolean`                       | `false`  |
 
 
 ----------------------------------------------

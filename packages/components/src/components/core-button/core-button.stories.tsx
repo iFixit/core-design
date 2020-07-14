@@ -113,3 +113,35 @@ export const Overflow = (): TemplateResult => {
     >
   `;
 };
+
+export const DualActionRight = (): TemplateResult => {
+  return html`
+    <core-button>
+      Button
+      <core-dropdown slot="button-dropdown-right" alignment="right">
+        <div slot="trigger">
+          <core-icon icon="plus"></core-icon>
+        </div>
+        <core-dropdown-item href="#">Option 1</core-dropdown-item>
+        <core-dropdown-item href="#">Option 2</core-dropdown-item>
+        <core-dropdown-item href="#">Option 3</core-dropdown-item>
+      </core-dropdown>
+    </core-button>
+  `;
+};
+
+export const DualActionLeft = (): TemplateResult => {
+  return html`
+    <core-button>
+      Button
+      <core-dropdown slot="button-dropdown-left" alignment="left">
+        <div slot="trigger">
+          <core-icon icon="plus"></core-icon>
+        </div>
+        <core-dropdown-item href="#">Option 1</core-dropdown-item>
+        <core-dropdown-item href="#">Option 2</core-dropdown-item>
+        <core-dropdown-item href="#">Option 3</core-dropdown-item>
+      </core-dropdown>
+    </core-button>
+  `;
+};

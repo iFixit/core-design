@@ -121,9 +121,9 @@ export namespace Components {
          */
         "hoverable": boolean;
         /**
-          * The dropdown will not wrap it's child element content.
+          * The dropdown will wrap if applied.
          */
-        "nowrap": boolean;
+        "wrap": boolean;
     }
     interface CoreDropdownItem {
         /**
@@ -861,9 +861,9 @@ declare namespace LocalJSX {
          */
         "hoverable"?: boolean;
         /**
-          * The dropdown will not wrap it's child element content.
+          * The dropdown will wrap if applied.
          */
-        "nowrap"?: boolean;
+        "wrap"?: boolean;
     }
     interface CoreDropdownItem {
         /**

@@ -294,6 +294,39 @@
         </div>
       </div>
     </section>
+    <section id="dual-action-buttons">
+      <h2>Dual Action Buttons</h2>
+      <div class="grid">
+        <div class="grid">
+          <span class="hint">Right</span>
+          <span class="hint">Left</span>
+        </div>
+        <div class="grid">
+          <core-button>
+            Button
+            <core-dropdown slot="button-dropdown-right" alignment="right">
+              <div slot="trigger">
+                <core-icon icon="plus"></core-icon>
+              </div>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+            </core-dropdown>
+          </core-button>
+          <core-button>
+            Button
+            <core-dropdown slot="button-dropdown-left" alignment="left">
+              <div slot="trigger">
+                <core-icon icon="plus"></core-icon>
+              </div>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+            </core-dropdown>
+          </core-button>
+        </div>
+      </div>
+    </section>
     <section id="text-inputs">
       <h2>Text Inputs</h2>
         <div class="grid">
@@ -324,21 +357,28 @@
       <h2>Dropdown</h2>
       <div class="grid">
         <div class="dropdown grid">
+          <span class="hint">Default</span>
+          <span class="hint">Center</span>
+          <span class="hint">Right</span>
+          <span class="hint">Hoverable</span>
+          <span class="hint">Wrap</span>
+        </div>
+        <div class="dropdown grid">
           <div>
             <core-dropdown>
-              <core-button slot="trigger" variation="borderless">
+              <div slot="trigger">
                 <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              </div>
               <core-dropdown-item href="#">Option 1</core-dropdown-item>
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
             </core-dropdown>
           </div>
           <div>
-            <core-dropdown alignment="center" hoverable>
-              <core-button slot="trigger" variation="borderless">
+            <core-dropdown alignment="center">
+              <div slot="trigger">
                 <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              </div>
               <core-dropdown-item href="#">Option 1</core-dropdown-item>
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
@@ -349,9 +389,9 @@
           </div>
           <div>
             <core-dropdown alignment="right">
-              <core-button slot="trigger" variation="borderless">
+              <div slot="trigger">
                 <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              </div>
               <core-dropdown-item href="#">
                 <core-icon slot="icon" icon="cart" color="green" style="margin-right:8px"></core-icon>
                 Option 1
@@ -367,15 +407,31 @@
             </core-dropdown>
           </div>
           <div>
-            <core-dropdown nowrap>
-              <core-button slot="trigger" variation="borderless">
+            <core-dropdown hoverable>
+              <div slot="trigger">
                 <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
-              </core-button>
+              </div>
               <core-dropdown-item href="#">Option 1</core-dropdown-item>
               <core-dropdown-item href="#">Option 2</core-dropdown-item>
               <core-dropdown-item href="#">Option 3</core-dropdown-item>
               <core-dropdown-item>
-                Nested content can be anything without wrapping (`nowrap` prop applied to parent `core-dropdown`)
+                Nested content can be anything
+              </core-dropdown-item>
+            </core-dropdown>
+          </div>
+          <div>
+            <core-dropdown wrap style="width:300px">
+              <div slot="trigger">
+                <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
+              </div>
+              <core-dropdown-item href="#">Option 1</core-dropdown-item>
+              <core-dropdown-item href="#">Option 2</core-dropdown-item>
+              <core-dropdown-item href="#">Option 3</core-dropdown-item>
+              <core-dropdown-item>
+                Wrap content with `wrap` prop applied to parent `core-dropdown`.
+              </core-dropdown-item>
+              <core-dropdown-item>
+                Need a specific width? Apply a width style to `core-dropdown`.
               </core-dropdown-item>
             </core-dropdown>
           </div>

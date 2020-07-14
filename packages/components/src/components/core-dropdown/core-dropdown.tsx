@@ -23,9 +23,9 @@ export class Dropdown implements ComponentInterface {
   @Prop() hoverable = false;
 
   /**
-   * The dropdown will not wrap it's child element content.
+   * The dropdown will wrap if applied.
    */
-  @Prop() nowrap = false;
+  @Prop() wrap = false;
 
   /**
    * Handle Trigger click action
@@ -43,7 +43,7 @@ export class Dropdown implements ComponentInterface {
           "core-dropdown": true,
           active: this.active,
           hoverable: this.hoverable,
-          nowrap: this.nowrap,
+          wrap: this.wrap,
         }}
       >
         <div onClick={this.handleClick} class="trigger">
