@@ -1,0 +1,126 @@
+@import "../../../dist/components/components.css";
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+// :host targets the custom element compiled by Stencil
+:host {
+  color: @color-gray-8;
+  cursor: default;
+  display: inline-flex;
+
+  // @Prop dark color
+  &([color="dark"]) {
+    .tooltip {
+      background-color: @color-gray-8;
+      color: @color-white;
+    }
+
+    .arrow::before {
+      border-color: transparent transparent @color-gray-8 transparent;
+    }
+  }
+
+  // @Prop light color
+  &([color="light"]) {
+    .tooltip {
+      background-color: @color-white;
+    }
+  }
+
+  // @Prop top variation
+  &([variation="top"]) {
+    .tooltip-outter {
+      bottom: 100%;
+      margin-bottom: 13px;
+    }
+
+    .arrow {
+      margin-top: -3px;
+
+      &::before {
+        top: 20px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // @Prop bottom variation
+  &([variation="bottom"]) {
+    .tooltip-outter {
+      top: 100%;
+      margin-top: 13px;
+    }
+
+    .arrow {
+      top: -5px;
+
+      &::before {
+        top: 0;
+      }
+    }
+  }
+
+  .core-tooltip {
+    display: inline-flex;
+    position: relative;
+    vertical-align: top;
+
+    &.active,
+    &.hoverable:hover {
+      .tooltip-outter {
+        display: flex;
+      }
+    }
+  }
+
+  .tooltip-outter {
+    display: none;
+    max-width: 95vw;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    z-index: 9;
+  }
+
+  .tooltip {
+    background-color: @color-white;
+    border-radius: @space-1;
+    box-shadow: @shadow-2;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .arrow {
+    height: 0;
+    position: absolute;
+    left: calc(50% - 10px);
+    width: 20px;
+
+    &::before {
+      content: "";
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent @color-white transparent;
+      display: block;
+      height: 0;
+      position: relative;
+      left: 0;
+      width: 0;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      box-shadow: @shadow-2;
+      display: block;
+      height: 20px;
+      transform: rotate(45deg);
+      position: relative;
+      top: -6px;
+      left: 0;
+      width: 20px;
+      z-index: -1;
+    }
+  }
+}

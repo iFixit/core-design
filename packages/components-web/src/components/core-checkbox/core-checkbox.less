@@ -1,0 +1,109 @@
+@import "../../../dist/components/components.css";
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+@space-large: 20px;
+
+// :host targets the custom element compiled by Stencil
+:host {
+  color: inherit;
+  display: inline-flex;
+  width: inherit;
+
+  // @Prop disabled
+  &([disabled]):not([disabled="false"]),
+  &([disabled="true"]) {
+    .label-outer {
+      color: @color-gray-4;
+    }
+
+    .native-element {
+      background-color: @color-gray-1;
+      box-shadow: 0 0 0 0 transparent inset;
+      color: inherit;
+      cursor: not-allowed;
+    }
+  }
+
+  // @Prop size
+  &([size="large"]) {
+    .native-element {
+      height: @space-large;
+      width: @space-large;
+
+      &:checked:after {
+        content: url(./collection/assets/svg/check.svg);
+      }
+    }
+  }
+
+  // @Prop display
+  &([display="block"]) .checkbox-outer {
+    display: block;
+  }
+
+  // @Prop labelposition
+  &([labelposition="right"]) .checkbox-outer {
+    input {
+      margin-right: @space-2;
+      order: -1;
+    }
+  }
+
+  &([labelposition="left"]) .checkbox-outer {
+    input {
+      margin-left: @space-2;
+    }
+  }
+}
+
+.checkbox-outer {
+  align-items: center;
+  display: flex;
+  font: inherit;
+}
+
+.label-outer {
+  color: @color-gray-6;
+  transition: color 0.12s ease-in-out;
+}
+
+.native-element {
+  background-color: @color-white;
+  border: 0;
+  border-radius: @space-1;
+  box-shadow: 0 0 0 1px @color-gray-3 inset;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  height: @space-4;
+  margin: 0;
+  outline: none;
+  transition: background-color 0.12s ease-in-out, box-shadow 0.12s ease-in-out;
+  width: @space-4;
+
+  &:focus {
+    border-color: @color-gray-5;
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .native-element {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+
+    &:checked {
+      background-color: @color-blue;
+      box-shadow: 0 0 0 1px @color-blue-dark-1 inset;
+
+      &:after {
+        content: url(./collection/assets/svg/check-sm.svg);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "../../../dist/components/components.css";
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+@toggle-ease: 0.2s cubic-bezier(0.2, 0, 0.6, 1);
+
+// :host targets the custom element compiled by Stencil
+:host {
+  color: @color-gray-5;
+  display: inline-flex;
+
+  // @Prop disabled
+  &([disabled]):not([disabled="false"]),
+  &([disabled="true"]) {
+    .label-outer {
+      color: @color-gray-4;
+    }
+
+    .native-element {
+      background-color: @color-gray-1;
+      box-shadow: 0 0 0 0 transparent inset;
+      color: inherit;
+      cursor: not-allowed;
+    }
+  }
+
+  // @Prop size
+  &([size="large"]) {
+    .native-element {
+      height: 20px;
+      width: 38px;
+
+      &::after {
+        box-shadow: @shadow-0;
+        height: @space-4;
+        width: @space-4;
+      }
+
+      &:checked::after {
+        transform: translateX(18px);
+      }
+    }
+  }
+
+  // @Prop labelposition
+  &([labelposition="right"]) .toggle-outer {
+    input {
+      margin-right: @space-2;
+      order: -1;
+    }
+  }
+
+  &([labelposition="left"]) .toggle-outer {
+    input {
+      margin-left: @space-2;
+    }
+  }
+
+  // @Prop type alt
+  &([variation="alt"]) {
+    .native-element {
+      width: 32px;
+
+      &::after {
+        height: 10px !important; // Safari bug
+        left: 3px;
+        width: 10px !important; // Safari bug
+      }
+
+      &:checked::after {
+        transform: translateX(16px);
+      }
+    }
+  }
+
+  &([variation="alt"][size="large"]) {
+    .native-element {
+      &::after {
+        left: 5px;
+      }
+
+      &:checked::after {
+        transform: translateX(12px);
+      }
+    }
+  }
+
+  // @Prop color
+  &([color=green][disabled="false"]) .native-element:checked {
+    background-color: @color-green;
+  }
+
+  &([color=yellow][disabled="false"]) .native-element:checked {
+    background-color: @color-yellow;
+  }
+
+  &([color=red][disabled="false"]) .native-element:checked {
+    background-color: @color-red;
+  }
+
+  &([color=black][disabled="false"]) .native-element:checked {
+    background-color: @color-black;
+  }
+}
+
+.toggle-outer {
+  align-items: center;
+  display: flex;
+}
+
+.native-element {
+  align-items: center;
+  background-color: @color-gray-3;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  height: @space-4;
+  margin: 0;
+  outline: none;
+  position: relative;
+  transition: background-color @toggle-ease, box-shadow 0.12s ease-in-out;
+  width: 28px;
+
+  &::after {
+    content: "";
+    box-shadow: @shadow-2;
+    left: 2px;
+    top: 0;
+    border-radius: 50%;
+    width: @space-3;
+    height: @space-3;
+    background-color: @color-white;
+    position: relative;
+    transition: transform @toggle-ease;
+  }
+
+  &:disabled {
+    background-color: @color-gray-1;
+    color: @color-gray-4;
+    cursor: not-allowed;
+
+    &::after {
+      box-shadow: none;
+    }
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .native-element {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:checked {
+      background-color: @color-blue;
+
+      &::after {
+        transform: translateX(@space-3);
+      }
+    }
+  }
+}

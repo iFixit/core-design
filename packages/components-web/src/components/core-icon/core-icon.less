@@ -1,0 +1,237 @@
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+// :host targets the custom element compiled by Stencil
+:host {
+  box-sizing: content-box;
+  color: inherit;
+  contain: strict;
+  align-self: center;
+  fill: currentColor;
+
+  &(.core-icon--16) {
+    height: 16px;
+    min-width: 16px; // [[FF]]
+    width: 16px;
+  }
+
+  &(.core-icon--24) {
+    height: 24px;
+    min-width: 24px; // [[FF]]
+    width: 24px;
+  }
+
+  &([slot=button-left]) {
+    margin-right: @space-2;
+    margin-left: -3px;
+  }
+
+  &([slot=button-right]) {
+    margin-left: @space-2;
+    margin-right: -3px;
+  }
+
+  &([slot=input-left]),
+  &([slot=input-right]) {
+    position: absolute;
+    top: calc(50% - @space-2);
+  }
+
+  &([slot=input-left]) {
+    left: @space-3;
+  }
+
+  &([slot=input-right]) {
+    right: @space-3;
+  }
+
+  // @Prop color
+  // TODO: (IR) figure out automated way to maintain
+  &([color=blue]) {
+    color: @color-blue;
+  }
+
+  &([color=green]) {
+    color: @color-green;
+  }
+
+  &([color=yellow]) {
+    color: @color-yellow;
+  }
+
+  &([color=red]) {
+    color: @color-red;
+  }
+
+  &([color=white]) {
+    color: @color-white;
+  }
+
+  &([color=black]) {
+    color: @color-black;
+  }
+
+  &([color=blue-light-4]) {
+    color: @color-blue-light-4;
+  }
+
+  &([color=blue-light-3]) {
+    color: @color-blue-light-3;
+  }
+
+  &([color=blue-light-2]) {
+    color: @color-blue-light-2;
+  }
+
+  &([color=blue-light-1]) {
+    color: @color-blue-light-1;
+  }
+
+  &([color=blue-dark-1]) {
+    color: @color-blue-dark-1;
+  }
+
+  &([color=blue-dark-2]) {
+    color: @color-blue-dark-2;
+  }
+
+  &([color=blue-dark-3]) {
+    color: @color-blue-dark-3;
+  }
+
+  &([color=blue-dark-4]) {
+    color: @color-blue-dark-4;
+  }
+
+  &([color=green-light-4]) {
+    color: @color-green-light-4;
+  }
+
+  &([color=green-light-3]) {
+    color: @color-green-light-3;
+  }
+
+  &([color=green-light-2]) {
+    color: @color-green-light-2;
+  }
+
+  &([color=green-light-1]) {
+    color: @color-green-light-1;
+  }
+
+  &([color=green-dark-1]) {
+    color: @color-green-dark-1;
+  }
+
+  &([color=green-dark-2]) {
+    color: @color-green-dark-2;
+  }
+
+  &([color=green-dark-3]) {
+    color: @color-green-dark-3;
+  }
+
+  &([color=green-dark-4]) {
+    color: @color-green-dark-4;
+  }
+
+  &([color=yellow-light-4]) {
+    color: @color-yellow-light-4;
+  }
+
+  &([color=yellow-light-3]) {
+    color: @color-yellow-light-3;
+  }
+
+  &([color=yellow-light-2]) {
+    color: @color-yellow-light-2;
+  }
+
+  &([color=yellow-light-1]) {
+    color: @color-yellow-light-1;
+  }
+
+  &([color=yellow-dark-1]) {
+    color: @color-yellow-dark-1;
+  }
+
+  &([color=yellow-dark-2]) {
+    color: @color-yellow-dark-2;
+  }
+
+  &([color=yellow-dark-3]) {
+    color: @color-yellow-dark-3;
+  }
+
+  &([color=yellow-dark-4]) {
+    color: @color-yellow-dark-4;
+  }
+
+  &([color=red-light-4]) {
+    color: @color-red-light-4;
+  }
+
+  &([color=red-light-3]) {
+    color: @color-red-light-3;
+  }
+
+  &([color=red-light-2]) {
+    color: @color-red-light-2;
+  }
+
+  &([color=red-light-1]) {
+    color: @color-red-light-1;
+  }
+
+  &([color=red-dark-1]) {
+    color: @color-red-dark-1;
+  }
+
+  &([color=red-dark-2]) {
+    color: @color-red-dark-2;
+  }
+
+  &([color=red-dark-3]) {
+    color: @color-red-dark-3;
+  }
+
+  &([color=red-dark-4]) {
+    color: @color-red-dark-4;
+  }
+
+  &([color=gray-1]) {
+    color: @color-gray-1;
+  }
+
+  &([color=gray-2]) {
+    color: @color-gray-2;
+  }
+
+  &([color=gray-3]) {
+    color: @color-gray-3;
+  }
+
+  &([color=gray-4]) {
+    color: @color-gray-4;
+  }
+
+  &([color=gray-5]) {
+    color: @color-gray-5;
+  }
+
+  &([color=gray-6]) {
+    color: @color-gray-6;
+  }
+
+  &([color=gray-7]) {
+    color: @color-gray-7;
+  }
+
+  &([color=gray-8]) {
+    color: @color-gray-8;
+  }
+}
+
+.core-icon--inner {
+  height: inherit;
+  width: inherit;
+}

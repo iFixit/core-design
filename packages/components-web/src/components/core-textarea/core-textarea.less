@@ -1,0 +1,32 @@
+@import "../../../dist/components/components.css";
+@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+
+@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
+
+// :host targets the custom element compiled by Stencil
+:host {
+  display: flex;
+
+  .native-element {
+    border: 1px solid @color-gray-3;
+    border-radius: @space-1;
+    box-shadow: 0 0 0 0 transparent;
+    box-sizing: border-box;
+    color: @color-gray-8;
+    font: inherit;
+    outline: none;
+    padding: @space-3 @space-4;
+    transition: box-shadow 0.12s ease-in-out;
+    width: inherit;
+
+    &::placeholder {
+      color: @color-gray-4;
+    }
+
+    &:focus,
+    &:active {
+      border-color: @color-gray-5;
+      box-shadow: @box-shadow;
+    }
+  }
+}
