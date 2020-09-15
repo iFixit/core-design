@@ -1,4 +1,4 @@
-import { boolean } from "@storybook/addon-knobs";
+import { boolean, select, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -6,46 +6,48 @@ export default {
   title: "Buttons & Inputs/Checkbox",
 };
 
+const labelpositions = {
+  left: "left",
+  right: "right",
+};
+
+const sizes = {
+  default: "default",
+  large: "large",
+};
+
 export const PropStates = (): TemplateResult => {
   return html`
-    <core-label display="inline">
-      Label
-      <core-checkbox
-        slot="label-left"
-        checked=${boolean("Checked", false)}
-        large=${boolean("Large", false)}
-      ></core-checkbox>
-    </core-label>
+    <core-checkbox
+      checked=${boolean("Checked", false)}
+      disabled=${boolean("Disabled", false)}
+      label=${text("Label", "Label")}
+      labelPosition=${select("Label position", labelpositions, "left")}
+      size=${select("Size", sizes, "default")}
+    ></core-checkbox>
   `;
 };
 
 export const Default = (): TemplateResult => {
   return html`
-    <core-label display="inline">
-      Label
-      <core-checkbox id="checkbox" slot="label-left"></core-checkbox>
-    </core-label>
+    <core-checkbox label="Label"></core-checkbox>
+  `;
+};
+
+export const Checked = (): TemplateResult => {
+  return html`
+    <core-checkbox label="Label" checked></core-checkbox>
   `;
 };
 
 export const Large = (): TemplateResult => {
   return html`
-    <core-label display="inline">
-      Label
-      <core-checkbox
-        id="checkbox"
-        slot="label-left"
-        large="true"
-      ></core-checkbox>
-    </core-label>
+    <core-checkbox label="Label" size="large"></core-checkbox>
   `;
 };
 
 export const RightLabel = (): TemplateResult => {
   return html`
-    <core-label display="inline">
-      Label
-      <core-checkbox id="checkbox" slot="label-right"></core-checkbox>
-    </core-label>
+    <core-checkbox label="Label" labelposition="right"></core-checkbox>
   `;
 };

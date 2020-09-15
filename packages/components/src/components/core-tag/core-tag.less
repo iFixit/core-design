@@ -4,87 +4,100 @@
 
 // :host targets the custom element compiled by Stencil
 :host {
-  display: flex;
-  font-family: "Inter", sans-serif;
-  font-feature-settings: "ss01" on, "ss02" on;
-  font-size: 13px;
+  display: inline-flex;
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
+  font-size: 14px;
   line-height: 1.142857;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: auto;
+  text-rendering: auto;
 
   // @Prop closable
-  &([closable]) .native-element {
-    cursor: pointer;
-    padding-right: 3px;
+  &([closable]):not([closable="false"]),
+  &([closable="true"]) {
+    .native-element {
+      cursor: pointer;
+      padding-right: 3px;
+    }
+
+    .closable {
+      color: fade(@color-white, 50%);
+      display: block;
+    }
   }
 
-  &([closable]) .icon-outter {
-    color: fade(@color-white, 50%) !important;
+  &([closable][variation="light"]):not([closable="false"]),
+  &([closable="true"][variation="light"]) {
+    .closable {
+      color: fade(@color-black, 15%);
+    }
   }
 
-  &([closable].light) .icon-outter {
-    color: fade(@color-black, 15%) !important;
+
+  &([closable][color="yellow"]):not([closable="false"]),
+  &([closable="true"][color="yellow"]) {
+    .closable {
+      color: fade(@color-gray-8, 25%);
+    }
   }
 
-  &([closable].yellow) .icon-outter {
-    color: fade(@color-gray-8, 25%) !important;
+  &([closable="false"]) .closable {
+    display: none;
   }
 
   // @Prop color
-  // TODO: (IR) figure out an automated way to maintain
-  &(.black) .native-element {
-    background: @color-gray-7;
+  // TODO: (IR) figure out automated way to maintain
+  &([color="black"]) .native-element {
+    background-color: @color-gray-7;
     text-shadow: @text-shadow;
   }
 
-  &(.blue) .native-element {
-    background: @color-blue-light-1;
+  &([color="blue"]) .native-element {
+    background-color: @color-blue-light-1;
     text-shadow: @text-shadow;
   }
 
-  &(.green) .native-element {
-    background: @color-green-light-1;
+  &([color="green"]) .native-element {
+    background-color: @color-green-light-1;
     text-shadow: @text-shadow;
   }
 
-  &(.yellow) .native-element {
-    background: @color-yellow-light-1;
+  &([color="yellow"]) .native-element {
+    background-color: @color-yellow-light-1;
     color: @color-gray-8;
   }
 
-  &(.red) .native-element {
-    background: @color-red-light-1;
+  &([color="red"]) .native-element {
+    background-color: @color-red-light-1;
     text-shadow: @text-shadow;
   }
 
   // @Prop variation
-  &(.light.black) .native-element {
-    background: @color-gray-1;
+  &([variation="light"][color="black"]) .native-element {
+    background-color: @color-gray-1;
     color: @color-gray-6;
     text-shadow: none;
   }
 
-  &(.light.blue) .native-element {
-    background: @color-blue-light-4;
+  &([variation="light"][color="blue"]) .native-element {
+    background-color: @color-blue-light-4;
     color: @color-blue-dark-1;
     text-shadow: none;
   }
 
-  &(.light.green) .native-element {
-    background: @color-green-light-4;
+  &([variation="light"][color="green"]) .native-element {
+    background-color: @color-green-light-4;
     color: @color-green-dark-1;
     text-shadow: none;
   }
 
-  &(.light.yellow) .native-element {
-    background: @color-yellow-light-4;
+  &([variation="light"][color="yellow"]) .native-element {
+    background-color: @color-yellow-light-4;
     color: @color-yellow-dark-2;
     text-shadow: none;
   }
 
-  &(.light.red) .native-element {
-    background: @color-red-light-4;
+  &([variation="light"][color="red"]) .native-element {
+    background-color: @color-red-light-4;
     color: @color-red-dark-1;
     text-shadow: none;
   }
@@ -96,6 +109,10 @@
     height: 18px;
     line-height: 14px;
     padding: 2px @space-1;
+
+    .closable {
+      margin-top: -1px;
+    }
   }
 }
 

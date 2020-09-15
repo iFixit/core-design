@@ -5,10 +5,10 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                               | Type                                                | Default    |
-| -------- | --------- | ------------------------------------------------------------------------- | --------------------------------------------------- | ---------- |
-| `color`  | `color`   | Color of the spinner. Use: `color="black"` or `color="red"`.              | `"black" \| "blue" \| "green" \| "red" \| "yellow"` | `"black"`  |
-| `size`   | `size`    | The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect. | `"large" \| "medium" \| "small"`                    | `"medium"` |
+| Property | Attribute | Description                   | Type                                                | Default    |
+| -------- | --------- | ----------------------------- | --------------------------------------------------- | ---------- |
+| `color`  | `color`   | Color of the spinner.         | `"black" \| "blue" \| "green" \| "red" \| "yellow"` | `"black"`  |
+| `size`   | `size`    | The pre-defined spinner size. | `"large" \| "medium" \| "small"`                    | `"medium"` |
 
 
 ----------------------------------------------

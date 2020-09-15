@@ -7,6 +7,7 @@ export default {
 };
 
 const loading = {
+  "--": "--",
   left: "left",
   right: "right",
   only: "only",
@@ -15,7 +16,7 @@ const loading = {
 const radii = {
   "0": "0",
   "4": "4",
-  circle: "circle",
+  round: "round",
 };
 
 const sizes = {
@@ -39,55 +40,34 @@ const variations = {
   light: "light",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-button
-      disabled=${boolean("Disabled", false)}
-      radius="${select("Radius", radii, "4")}"
+      disabled="${boolean("Disabled", false)}"
+      loading="${select("Loading", loading, null)}"
+      radius="${select("Border Radius", radii, "4")}"
       size="${select("Size", sizes, "default")}"
       status="${select("Status", status, null)}"
       variation="${select("Variation", variations, "basic")}"
       >Button</core-button
     >
   `;
+};
+
+export const Default = (): TemplateResult => {
+  return html` <core-button>Button</core-button> `;
 };
 
 export const Small = (): TemplateResult => {
-  return html`
-    <core-button
-      disabled=${boolean("Disabled", false)}
-      radius="${select("Radius", radii, "4")}"
-      size="${select("Size", sizes, "small")}"
-      status="${select("Status", status, null)}"
-      variation="${select("Variation", variations, "basic")}"
-      >Button</core-button
-    >
-  `;
+  return html` <core-button size="small">Button</core-button> `;
 };
 
 export const Large = (): TemplateResult => {
-  return html`
-    <core-button
-      disabled=${boolean("Disabled", false)}
-      radius="${select("Radius", radii, "4")}"
-      size="${select("Size", sizes, "large")}"
-      status="${select("Status", status, null)}"
-      variation="${select("Variation", variations, "basic")}"
-      >Button</core-button
-    >
-  `;
+  return html` <core-button size="large">Button</core-button> `;
 };
 
 export const Loading = (): TemplateResult => {
-  return html`
-    <core-button
-      loading="${select("Loading", loading, "left")}"
-      radius="${select("Radius", radii, "4")}"
-      size="${select("Size", sizes, "default")}"
-      variation="${select("Variation", variations, "basic")}"
-      >Button</core-button
-    >
-  `;
+  return html` <core-button loading="left">Button</core-button> `;
 };
 
 export const Linked = (): TemplateResult => {
@@ -98,14 +78,9 @@ export const Linked = (): TemplateResult => {
   `;
 };
 
-export const Overflow = (): TemplateResult => {
+export const OverflowTest = (): TemplateResult => {
   return html`
     <core-button
-      disabled=${boolean("Disabled", false)}
-      radius="${select("Radius", radii, "4")}"
-      size="${select("Size", sizes, "default")}"
-      status="${select("Status", status, null)}"
-      variation="${select("Variation", variations, "basic")}"
       >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non
       quis exercitationem culpa nesciunt nihil aut nostrum explicabo
       reprehenderit optio amet ab temporibus asperiores quasi cupiditate.

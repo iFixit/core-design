@@ -19,12 +19,18 @@ const sizes = {
   large: "large",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-progress
       color="${select("Color", colors, "blue")}"
       size="${select("Size", sizes, "large")}"
       value="${number("Value", 75)}"
     ></core-progress>
+  `;
+};
+
+export const Default = (): TemplateResult => {
+  return html`
+    <core-progress value="50"></core-progress>
   `;
 };

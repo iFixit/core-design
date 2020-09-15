@@ -1,4 +1,4 @@
-import { boolean } from "@storybook/addon-knobs";
+import { boolean, select, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -6,33 +6,37 @@ export default {
   title: "Buttons & Inputs/Radio",
 };
 
+const labelpositions = {
+  left: "left",
+  right: "right",
+};
+
+const sizes = {
+  default: "default",
+  large: "large",
+};
+
 export const PropStates = (): TemplateResult => {
   return html`
-    <core-label display="inline">
-      Label
-      <core-radio
-        slot="label-left"
-        checked="${boolean("Checked", false)}"
-        large="${boolean("Large", false)}"
-      ></core-radio>
-    </core-label>
+    <core-radio
+      checked=${boolean("Checked", false)}
+      disabled=${boolean("Disabled", false)}
+      label=${text("Label", "Label")}
+      labelPosition=${select("Label position", labelpositions, "left")}
+      size=${select("Size", sizes, "default")}
+    >
+    </core-radio>
   `;
 };
 
 export const Default = (): TemplateResult => {
   return html`
-    <core-label display="inline">
-      Label
-      <core-radio slot="label-left"></core-radio>
-    </core-label>
+    <core-radio label="Label"></core-radio>
   `;
 };
 
 export const Large = (): TemplateResult => {
   return html`
-    <core-label display="inline">
-      Label
-      <core-radio slot="label-left" large></core-radio>
-    </core-label>
+    <core-radio label="Label" size="large"></core-radio>
   `;
 };

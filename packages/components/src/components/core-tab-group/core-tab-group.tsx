@@ -17,7 +17,6 @@ export class TabGroup implements ComponentInterface {
 
   /**
    * The pre-defined tab size.
-   * Use: `"small"` or `"large"`.
    */
   @Prop() size: "small" | "large" = "large";
 

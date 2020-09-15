@@ -10,12 +10,13 @@ const colors = {
   dark: "dark",
   light: "light",
 };
+
 const variations = {
   top: "top",
   bottom: "bottom",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <div style="display:flex;height:250px;">
       <core-tooltip
@@ -24,6 +25,17 @@ export const Default = (): TemplateResult => {
         variation=${select("Variation", variations, "top")}
         style="margin:auto auto 0;"
       >
+        <span slot="trigger">Tooltip Trigger</span>
+        Tooltip Text
+      </core-tooltip>
+    </div>
+  `;
+};
+
+export const Default = (): TemplateResult => {
+  return html`
+    <div style="display:flex;height:250px;">
+      <core-tooltip style="margin:auto auto 0;">
         <span slot="trigger">Tooltip Trigger</span>
         Tooltip Text
       </core-tooltip>
@@ -34,12 +46,7 @@ export const Default = (): TemplateResult => {
 export const Light = (): TemplateResult => {
   return html`
     <div style="display:flex;height:250px;">
-      <core-tooltip
-        active=${boolean("Active", false)}
-        color=${select("Color", colors, "light")}
-        variation=${select("Variation", variations, "top")}
-        style="margin:auto auto 0;"
-      >
+      <core-tooltip color="light" style="margin:auto auto 0;">
         <span slot="trigger">Tooltip Trigger</span>
         Tooltip Text
       </core-tooltip>
@@ -50,12 +57,7 @@ export const Light = (): TemplateResult => {
 export const Bottom = (): TemplateResult => {
   return html`
     <div style="display:flex;height:250px;">
-      <core-tooltip
-        active=${boolean("Active", false)}
-        color=${select("Color", colors, "dark")}
-        variation=${select("Variation", variations, "bottom")}
-        style="margin:auto auto 0;"
-      >
+      <core-tooltip variation="bottom" style="margin:auto auto 0;">
         <span slot="trigger">Tooltip Trigger</span>
         Tooltip Text
       </core-tooltip>

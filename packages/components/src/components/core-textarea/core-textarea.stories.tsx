@@ -6,7 +6,7 @@ export default {
   title: "Buttons & Inputs/Textarea",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-textarea
       cols="${number("Columns", 50)}"
@@ -14,21 +14,18 @@ export const Default = (): TemplateResult => {
       placeholder="${text("Placeholder", "Placeholder")}"
       required="${boolean("Required", false)}"
       rows="${number("Rows", 10)}"
-      >textarea</core-textarea
-    >
+    ></core-textarea>
+  `;
+};
+
+export const Default = (): TemplateResult => {
+  return html`
+    <core-textarea></core-textarea>
   `;
 };
 
 export const Value = (): TemplateResult => {
   return html`
-    <core-textarea
-      cols="${number("Columns", 50)}"
-      disabled="${boolean("Disabled", false)}"
-      placeholder="${text("Placeholder", null)}"
-      required="${boolean("Required", false)}"
-      rows="${number("Rows", 10)}"
-      value="${text("Value", "Value")}"
-      >textarea</core-textarea
-    >
+    <core-textarea value="Value"></core-textarea>
   `;
 };

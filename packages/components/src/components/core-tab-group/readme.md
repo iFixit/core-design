@@ -5,9 +5,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                                            | Type                 | Default   |
-| -------- | --------- | ------------------------------------------------------ | -------------------- | --------- |
-| `size`   | `size`    | The pre-defined tab size. Use: `"small"` or `"large"`. | `"large" \| "small"` | `"large"` |
+| Property | Attribute | Description               | Type                 | Default   |
+| -------- | --------- | ------------------------- | -------------------- | --------- |
+| `size`   | `size`    | The pre-defined tab size. | `"large" \| "small"` | `"large"` |
 
 
 ----------------------------------------------

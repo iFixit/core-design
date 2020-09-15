@@ -17,9 +17,13 @@ export class Progress implements ComponentInterface {
 
   /**
    * Color of the progress bar.
-   * Use: `color="black"`, `color="red"`, etc.
    */
-  @Prop() color?: "black" | "blue" | "green" | "yellow" | "red" = "blue";
+  @Prop({ reflect: true }) color?:
+    | "black"
+    | "blue"
+    | "green"
+    | "yellow"
+    | "red" = "blue";
 
   /**
    * The progress bar maximum value.
@@ -28,7 +32,6 @@ export class Progress implements ComponentInterface {
 
   /**
    * The pre-defined progress bar size.
-   * Use: `"small"` or `"large"`.
    */
   @Prop() size?: "small" | "large" = "large";
 
@@ -38,15 +41,8 @@ export class Progress implements ComponentInterface {
   @Prop() value: number | undefined;
 
   render() {
-    const { color } = this;
-
     return (
-      <Host
-        class={{
-          "core-progress": true,
-          [`${color}`]: color !== undefined,
-        }}
-      >
+      <Host class={{ "core-progress": true }}>
         <progress max={this.max} value={this.value}></progress>
       </Host>
     );

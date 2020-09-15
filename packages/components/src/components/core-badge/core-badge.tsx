@@ -16,32 +16,25 @@ export class Badge implements ComponentInterface {
   @Element() el!: HTMLCoreBadgeElement;
 
   /**
-   * Color of the badge.
-   * Use: `color="black"` or `color="red"`.
+   * Color of the element.
    */
-  @Prop() color?: "black" | "red" = "red";
+  @Prop({ reflect: true }) color?: "black" | "red" = "red";
 
   /**
-   * The pre-defined badge size.
-   * Use: `"small"` or `"large"`.
+   * The pre-defined element size.
    */
   @Prop() size?: "small" | "large" = "large";
 
   /**
-   * The badge variation.
-   * Use: `"border"`, `"dot"`, or `"fill"`.
+   * The element variation.
    */
-  @Prop() variation?: "border" | "dot" | "fill" = "fill";
+  @Prop({ reflect: true }) variation?: "border" | "dot" | "fill" = "fill";
 
   render() {
-    const { color, variation } = this;
-
     return (
       <Host
         class={{
           "core-badge": true,
-          [`${color}`]: color !== undefined,
-          [`${variation}`]: variation !== undefined,
         }}
       >
         <div class="native-element">

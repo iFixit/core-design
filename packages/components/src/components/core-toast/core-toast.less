@@ -5,50 +5,48 @@
 // :host targets the custom element compiled by Stencil
 :host {
   display: flex;
-  font-family: "Inter", sans-serif;
-  font-feature-settings: "ss01" on, "ss02" on;
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
   font-size: 14px;
   line-height: 1.142857;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: auto;
+  text-rendering: auto;
 
   // @Prop color
-  &(.white) .native-element {
-    background: @color-white;
+  &([color="white"]) .native-element {
+    background-color: @color-white;
     color: @color-gray-8;
 
     .toast-triggers > div:not(:last-child)::after {
-      background: @color-gray-2;
+      background-color: @color-gray-2;
     }
   }
 
-  &(.yellow) .native-element {
-    background: @color-yellow;
+  &([color="yellow"]) .native-element {
+    background-color: @color-yellow;
     color: @color-gray-8;
 
     .toast-triggers > div:not(:last-child)::after {
-      background: fade(@color-gray-8, 20%);
+      background-color: fade(@color-gray-8, 20%);
     }
   }
 
-  &(.green) .native-element {
-    background: @color-green;
+  &([color="green"]) .native-element {
+    background-color: @color-green;
     color: @color-white;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
 
     .toast-triggers > div:not(:last-child)::after {
-      background: fade(@color-white, 20%);
+      background-color: fade(@color-white, 20%);
     }
   }
 
-  &(.red) .native-element {
-    background: @color-red;
+  &([color="red"]) .native-element {
+    background-color: @color-red;
     color: @color-white;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
 
     .toast-triggers > div:not(:last-child)::after {
-      background: fade(@color-white, 20%);
+      background-color: fade(@color-white, 20%);
     }
   }
 

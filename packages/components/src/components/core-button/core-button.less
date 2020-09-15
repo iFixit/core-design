@@ -5,19 +5,17 @@
 // :host targets the custom element compiled by Stencil
 :host {
   display: inline-flex;
-  font-family: "Inter", sans-serif;
-  font-feature-settings: "ss01" on, "ss02" on;
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
   font-size: 14px;
   line-height: 1.142857;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: auto;
   max-width: 100%;
+  text-rendering: auto;
 
   // @Prop basic variation
-  &(.basic) {
+  &([variation="basic"]) {
     .native-element {
-      background: @color-white;
+      background-color: @color-white;
       color: @color-gray-8;
 
       &:not(:disabled) {
@@ -35,14 +33,14 @@
       }
 
       &:disabled {
-        background: @color-gray-1;
+        background-color: @color-gray-1;
         color: @color-gray-4;
       }
     }
   }
 
-  &(.basic[loading]) {
-    slot {
+  &([variation="basic"][loading]):not([loading="false"]) {
+    .native-element {
       color: @color-gray-3;
     }
 
@@ -53,16 +51,16 @@
   }
 
   // @Prop primary variation
-  &(.primary) {
+  &([variation="primary"]) {
     .native-element {
-      background: @color-blue;
+      background-color: @color-blue;
       color: @color-white;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 1px @color-blue inset;
 
         &:hover {
-          background: @color-blue-dark-1;
+          background-color: @color-blue-dark-1;
           box-shadow: @box-shadow-transparent;
         }
 
@@ -72,13 +70,13 @@
       }
 
       &:disabled {
-        background: fade(@color-blue, 50%);
+        background-color: fade(@color-blue, 50%);
       }
     }
   }
 
-  &(.primary[loading]) {
-    slot {
+  &([variation="primary"][loading]):not([loading="false"]) {
+    .native-element {
       color: @color-blue-light-2;
     }
 
@@ -89,15 +87,15 @@
   }
 
   // @Prop secondary variation
-  &(.secondary) {
+  &([variation="secondary"]) {
     .native-element {
-      background: @color-gray-1;
+      background-color: @color-gray-1;
 
       &:not(:disabled):not([loading]) {
         box-shadow: @box-shadow-transparent;
 
         &:hover {
-          background: @color-gray-2;
+          background-color: @color-gray-2;
         }
 
         &:active {
@@ -106,24 +104,24 @@
       }
 
       &:disabled {
-        background: @color-gray-1;
+        background-color: @color-gray-1;
         color: @color-gray-4;
       }
     }
   }
 
   // @Prop dark variation
-  &(.dark),
-  &(.dark.success) {
+  &([variation="dark"]),
+  &([variation="dark"][status="success"]) {
     .native-element {
-      background: @color-green;
+      background-color: @color-green;
       color: @color-white;
 
       &:not(:disabled):not([loading]) {
         box-shadow: @box-shadow-transparent;
 
         &:hover {
-          background: @color-green-dark-1;
+          background-color: @color-green-dark-1;
         }
 
         &:active {
@@ -132,20 +130,20 @@
       }
 
       &:disabled {
-        background: fade(@color-green, 50%);
+        background-color: fade(@color-green, 50%);
       }
     }
   }
 
-  &(.dark.danger) {
+  &([variation="dark"][status="danger"]) {
     .native-element {
-      background: @color-red;
+      background-color: @color-red;
 
       &:not(:disabled):not([loading]) {
         box-shadow: @box-shadow-transparent;
 
         &:hover {
-          background: @color-red-dark-1;
+          background-color: @color-red-dark-1;
         }
 
         &:active {
@@ -155,16 +153,16 @@
     }
   }
 
-  &(.dark.warning) {
+  &([variation="dark"][status="warning"]) {
     .native-element {
-      background: @color-yellow;
+      background-color: @color-yellow;
       color: @color-gray-8;
 
       &:not(:disabled):not([loading]) {
         box-shadow: @box-shadow-transparent;
 
         &:hover {
-          background: @color-yellow-dark-1;
+          background-color: @color-yellow-dark-1;
         }
 
         &:active {
@@ -175,17 +173,17 @@
   }
 
   // @Prop light variation
-  &(.light),
-  &(.light.success) {
+  &([variation="light"]),
+  &([variation="light"][status="success"]) {
     .native-element {
-      background: @color-green-light-4;
+      background-color: @color-green-light-4;
       color: @color-green-dark-1;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 1px @color-green-light-4 inset;
 
         &:hover {
-          background: @color-green-light-3;
+          background-color: @color-green-light-3;
           box-shadow: @box-shadow-transparent;
           color: @color-green-dark-3;
         }
@@ -196,22 +194,22 @@
       }
 
       &:disabled {
-        background: @color-gray-1;
+        background-color: @color-gray-1;
         color: @color-gray-4;
       }
     }
   }
 
-  &(.light.danger) {
+  &([variation="light"][status="danger"]) {
     .native-element {
-      background: @color-red-light-4;
+      background-color: @color-red-light-4;
       color: @color-red-dark-1;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 1px @color-red-light-4 inset;
 
         &:hover {
-          background: @color-red-light-3;
+          background-color: @color-red-light-3;
           box-shadow: @box-shadow-transparent;
           color: @color-red-dark-1;
         }
@@ -223,16 +221,16 @@
     }
   }
 
-  &(.light.warning) {
+  &([variation="light"][status="warning"]) {
     .native-element {
-      background: @color-yellow-light-4;
+      background-color: @color-yellow-light-4;
       color: @color-yellow-dark-3;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 1px @color-yellow-light-4 inset;
 
         &:hover {
-          background: @color-yellow-light-3;
+          background-color: @color-yellow-light-3;
           box-shadow: @box-shadow-transparent;
           color: @color-yellow-dark-3;
         }
@@ -245,38 +243,38 @@
   }
 
   // @Prop borderless variation
-  &(.borderless) {
+  &([variation="borderless"]) {
     .native-element {
-      background: transparent;
+      background-color: transparent;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 0 transparent inset;
 
         &:hover,
         &:active {
-          background: transparent;
+          background-color: transparent;
           box-shadow: 0 0 0 0 transparent inset;
         }
       }
 
       &:disabled {
-        background: @color-gray-1;
+        background-color: @color-gray-1;
         color: @color-gray-4;
       }
     }
   }
 
   //@Prop status success
-  &(.success) {
+  &([status="success"]) {
     .native-element {
-      background: @color-green;
+      background-color: @color-green;
       color: @color-white;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 1px @color-green inset;
 
         &:hover {
-          background: @color-green-dark-1;
+          background-color: @color-green-dark-1;
           box-shadow: @box-shadow-transparent;
         }
 
@@ -286,22 +284,22 @@
       }
 
       &:disabled {
-        background: fade(@color-green, 50%);
+        background-color: fade(@color-green, 50%);
       }
     }
   }
 
   //@Prop status danger
-  &(.danger) {
+  &([status="danger"]) {
     .native-element {
-      background: @color-red;
+      background-color: @color-red;
       color: @color-white;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 1px @color-red inset;
 
         &:hover {
-          background: @color-red-dark-1;
+          background-color: @color-red-dark-1;
           box-shadow: @box-shadow-transparent;
         }
 
@@ -311,22 +309,22 @@
       }
 
       &:disabled {
-        background: fade(@color-red, 50%);
+        background-color: fade(@color-red, 50%);
       }
     }
   }
 
   //@Prop status warning
-  &(.warning) {
+  &([status="warning"]) {
     .native-element {
-      background: @color-yellow;
+      background-color: @color-yellow;
       color: @color-gray-8;
 
       &:not(:disabled):not([loading]) {
         box-shadow: 0 0 0 1px @color-yellow inset;
 
         &:hover {
-          background: @color-yellow-dark-1;
+          background-color: @color-yellow-dark-1;
           box-shadow: @box-shadow-transparent;
         }
 
@@ -336,20 +334,20 @@
       }
 
       &:disabled {
-        background: fade(@color-yellow, 50%);
+        background-color: fade(@color-yellow, 50%);
       }
     }
   }
 
   //@Prop status success icon-only
-  &(.success.default.icon-only) {
+  &([status="success"][size="default"][loading="icon-only"]) {
     .native-element {
-      background: @color-white;
+      background-color: @color-white;
       box-shadow: 0 0 0 1px @color-green-light-2 inset;
       color: @color-green;
 
       &:hover {
-        background: @color-white;
+        background-color: @color-white;
         box-shadow: 0 0 0 1px @color-green inset;
       }
 
@@ -359,14 +357,14 @@
     }
   }
 
-  &(.success.primary.icon-only) {
+  &([status="success"][size="primary"][loading="icon-only"]) {
     .native-element {
-      background: @color-green;
+      background-color: @color-green;
       box-shadow: 0 0 0 1px @color-green inset;
       color: @color-white;
 
       &:hover {
-        background: @color-green-dark-1;
+        background-color: @color-green-dark-1;
         box-shadow: @box-shadow-transparent;
       }
 
@@ -376,14 +374,14 @@
     }
   }
 
-  &(.success.secondary.icon-only) {
+  &([status="success"][size="secondary"][loading="icon-only"]) {
     .native-element {
-      background: @color-green-light-4;
+      background-color: @color-green-light-4;
       border-color: @color-green-light-4;
       box-shadow: @box-shadow-transparent;
 
       &:hover {
-        background: @color-green-light-3;
+        background-color: @color-green-light-3;
         box-shadow: @box-shadow-transparent;
         color: @color-green-dark-3;
       }
@@ -395,14 +393,14 @@
   }
 
   //@Prop status danger icon-only
-  &(.danger.default.icon-only) {
+  &([status="danger"][size="default"][loading="icon-only"]) {
     .native-element {
-      background: @color-white;
+      background-color: @color-white;
       box-shadow: 0 0 0 1px @color-red-light-2 inset;
       color: @color-red;
 
       &:hover {
-        background: @color-white;
+        background-color: @color-white;
         box-shadow: 0 0 0 1px @color-red inset;
       }
 
@@ -412,14 +410,14 @@
     }
   }
 
-  &(.danger.primary.icon-only) {
+  &([status="danger"][size="primary"][loading="icon-only"]) {
     .native-element {
-      background: @color-red;
+      background-color: @color-red;
       box-shadow: 0 0 0 1px @color-red inset;
       color: @color-white;
 
       &:hover {
-        background: @color-red-dark-1;
+        background-color: @color-red-dark-1;
         box-shadow: @box-shadow-transparent;
       }
 
@@ -429,14 +427,14 @@
     }
   }
 
-  &(.danger.secondary.icon-only) {
+  &([status="danger"][size="secondary"][loading="icon-only"]) {
     .native-element {
-      background: @color-red-light-4;
+      background-color: @color-red-light-4;
       border-color: @color-red-light-4;
       box-shadow: @box-shadow-transparent;
 
       &:hover {
-        background: @color-red-light-3;
+        background-color: @color-red-light-3;
         box-shadow: @box-shadow-transparent;
       }
 
@@ -447,14 +445,14 @@
   }
 
   //@Prop status warning icon-only
-  &(.warning.default.icon-only) {
+  &([status="warning"][size="default"][loading="icon-only"]) {
     .native-element {
-      background: @color-white;
+      background-color: @color-white;
       box-shadow: 0 0 0 1px @color-yellow-light-2 inset;
       color: @color-yellow-dark-3;
 
       &:hover {
-        background: @color-white;
+        background-color: @color-white;
         box-shadow: 0 0 0 1px @color-yellow inset;
       }
 
@@ -464,14 +462,14 @@
     }
   }
 
-  &(.warning.primary.icon-only) {
+  &([status="warning"][size="primary"][loading="icon-only"]) {
     .native-element {
-      background: @color-yellow;
+      background-color: @color-yellow;
       box-shadow: 0 0 0 1px @color-yellow inset;
       color: @color-gray-8;
 
       &:hover {
-        background: @color-yellow-dark-1;
+        background-color: @color-yellow-dark-1;
         box-shadow: @box-shadow-transparent;
       }
 
@@ -481,14 +479,14 @@
     }
   }
 
-  &(.warning.secondary.icon-only) {
+  &([status="warning"][size="secondary"][loading="icon-only"]) {
     .native-element {
-      background: @color-yellow-light-4;
+      background-color: @color-yellow-light-4;
       border-color: @color-yellow-light-4;
       box-shadow: @box-shadow-transparent;
 
       &:hover {
-        background: @color-yellow-light-3;
+        background-color: @color-yellow-light-3;
         box-shadow: @box-shadow-transparent;
       }
 
@@ -499,29 +497,29 @@
   }
 
   // @Prop loading
-  &([loading]) {
-    .native-element {
-      cursor: not-allowed;
-    }
+  &([loading="right"]),
+  &([loading="left"]),
+  &([loading="only"]) {
+    .button-loading {
+      display: flex;
 
-    .button-loading::after {
-      content: "";
-      border-radius: 50%;
-      border: 2px solid @color-gray-2;
-      border-top-color: currentColor;
-      width: @space-3;
-      height: @space-3;
-      animation: loadingAnimation 1s infinite cubic-bezier(0.4, 0.4, 0.85, 1);
+      &::after {
+        content: "";
+        border-radius: 50%;
+        border: 2px solid @color-gray-2;
+        border-top-color: currentColor;
+        width: @space-3;
+        height: @space-3;
+        animation: loadingAnimation 1s infinite cubic-bezier(0.4, 0.4, 0.85, 1);
+      }
     }
   }
 
   &([loading="right"]) .button-loading {
-    display: flex;
     margin-left: @space-2;
   }
 
   &([loading="left"]) .button-loading {
-    display: flex;
     margin-right: @space-2;
     order: -1;
   }
@@ -532,7 +530,6 @@
     }
 
     .button-loading {
-      display: flex;
       position: absolute;
       left: calc(50% - @space-2);
     }
@@ -557,6 +554,10 @@
     }
   }
 
+  ([size="small"][radius="round"]) .native-element {
+    border-radius: 30px / 2; // half button height
+  }
+
   // @Prop large size
   ([size="large"]) {
     .native-element {
@@ -569,6 +570,10 @@
       padding-top: 14px;
       padding-bottom: 14px;
     }
+  }
+
+  ([size="large"][radius="round"]) .native-element {
+    border-radius: 48px / 2; // half button height
   }
 
   // @Prop block width
@@ -591,13 +596,13 @@
     padding-left: 10px;
   }
 
-  // @Prop circle radius
+  // @Prop border radius
   &([radius="0"]) .native-element {
     border-radius: 0;
   }
 
-  &([radius="circle"]) .native-element {
-    border-radius: 50%;
+  &([radius="round"]) .native-element {
+    border-radius: 36px / 2; // half button height
   }
 }
 
@@ -616,17 +621,15 @@
   padding: 0 15px;
   position: relative;
   text-decoration: none;
-  transition: background 0.12s ease-in-out, border 0.12s ease-in-out, box-shadow 0.12s ease-in-out, color 0.12s ease-in-out;
+  transition: background-color 0.12s ease-in-out, border 0.12s ease-in-out, box-shadow 0.12s ease-in-out, color 0.12s ease-in-out;
 
-  &:not(:disabled):not([loading]) {
-    &:hover,
-    &:active {
-      cursor: pointer;
-    }
+  &:not(:disabled):not([loading]):hover,
+  &:not(:disabled):not([loading]):active {
+    cursor: pointer;
   }
 
   &:disabled {
-    background: @color-gray-1;
+    background-color: @color-gray-1;
     box-shadow: @box-shadow-transparent;
     color: @color-gray-4;
     cursor: not-allowed;

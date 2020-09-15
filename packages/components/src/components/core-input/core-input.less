@@ -4,16 +4,25 @@
 
 // :host targets the custom element compiled by Stencil
 :host {
-  color: @color-gray-5;
+  color: @color-gray-8;
   display: inline-flex;
-  font-family: "Inter", sans-serif;
-  font-feature-settings: "ss01" on, "ss02" on;
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
   font-size: 14px;
   line-height: 1.142857;
-  position: relative;
+  text-rendering: auto;
 
   &([icon]) .native-element {
     padding-left: 40px;
+  }
+
+  // @Prop disabled
+  &([disabled]):not([disabled="false"]),
+  &([disabled="true"]) {
+    core-icon,
+    .label-outer {
+      color: @color-gray-4 !important;
+    }
   }
 
   // @Prop size large
@@ -22,86 +31,118 @@
     padding: 14px 20px 14px 50px;
   }
 
-  // @Prop type text (default)
-  &([type="text"]) {
-    box-sizing: border-box;
-    width: 100%;
+  // @Prop labeldisplay
+  &([labeldisplay="block"]) {
+    .input-outer {
+      display: block;
+    }
+
+    .label-outer {
+      margin-bottom: @space-2;
+    }
   }
 
-  // @Prop type checkbox
-  &([type="checkbox"]) {
-    .input-inner {
-      height: @space-4;
+  &([labeldisplay="inline"]) {
+    .input-outer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .label-outer {
+      align-self: center;
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+
+  // @Prop labelpostion
+  &([labelposition="left"]) {
+    .label-outer {
       margin-right: @space-2;
-      width: @space-4;
-    }
-
-    .native-element {
-      height: inherit;
-      margin: 0;
-      min-height: inherit;
-      padding: 0;
-      width: inherit;
     }
   }
 
-  &(.core-error) {
+  // @Prop labeldisplay + labelpostion
+  &([labeldisplay="inline"][labelposition="right"]) {
+    .input-outer {
+      flex-direction: row-reverse;
+    }
+
+    .label-outer {
+      margin-left: @space-2;
+    }
+  }
+
+  &([labeldisplay="block"][labelposition="right"]) {
+    .label-outer {
+      justify-content: flex-end;
+    }
+  }
+
+  // @Prop error
+  &([error]):not([error="false"]),
+  &([error="true"]) {
     color: @color-red;
 
-    .native-element {
+    core-icon,
+    .label-outer {
+      color: @color-red;
+    }
+
+    .native-element:not(:disabled) {
       border-color: @color-red-light-1;
 
-      &:not(:disabled) {
-        &:focus,
-        &:active {
-          border-color: @color-red;
-          box-shadow: 0 0 0 3px fade(@color-red-light-1, 30%);
-        }
-      }
-    }
-  }
-
-  &(.core-success) {
-    color: @color-green;
-
-    .native-element {
-      border-color: @color-green-light-1;
-
-      &:not(:disabled) {
-        &:focus,
-        &:active {
-          border-color: @color-green;
-          box-shadow: 0 0 0 3px fade(@color-green-light-1, 30%);
-        }
-      }
-    }
-  }
-
-  &(.core-search) .native-element {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
-
-    &:not(:disabled) {
       &:focus,
       &:active {
-        border-color: @color-gray-5;
-        box-shadow: @box-shadow;
+        border-color: @color-red;
+        box-shadow: 0 0 0 3px fade(@color-red-light-1, 30%);
+      }
+    }
+  }
+
+  // @Prop success
+  &([success]):not([success="false"]),
+  &([success="true"]) {
+    color: @color-green;
+
+    core-icon,
+    .label-outer {
+      color: @color-green;
+    }
+
+    .native-element:not(:disabled) {
+      border-color: @color-green-light-1;
+
+      &:focus,
+      &:active {
+        border-color: @color-green;
+        box-shadow: 0 0 0 3px fade(@color-green-light-1, 30%);
       }
     }
   }
 }
 
-.input-inner {
+.input-outer {
   font: inherit;
+}
+
+.label-outer {
+  color: @color-gray-6;
+  display: flex;
+  transition: color 0.12s ease-in-out;
+}
+
+.input-inner {
+  position: relative;
   width: inherit;
 }
 
 .native-element {
-  background: @color-white;
+  background-color: @color-white;
   border: 1px solid @color-gray-3;
   border-radius: @space-1;
   box-shadow: 0 0 0 0 transparent;
   box-sizing: border-box;
-  color: @color-gray-8;
   font: inherit;
   min-height: 36px;
   outline: none;
@@ -114,7 +155,7 @@
     color: @color-gray-4;
   }
 
-  &:not(:disabled):not([type="checkbox"]) {
+  &:not(:disabled) {
     &:focus,
     &:active {
       border-color: @color-gray-5;
@@ -123,7 +164,7 @@
   }
 
   &:disabled {
-    background: @color-gray-1;
+    background-color: @color-gray-1;
     border-color: transparent;
     color: @color-gray-4;
     cursor: not-allowed;

@@ -14,12 +14,12 @@ export class Popover implements ComponentInterface {
   /**
    * The popover will show up when hovering the popover-trigger
    */
-  @Prop() hoverable = false;
+  @Prop({ reflect: true }) hoverable = false;
 
   /**
    * The popover variation.
    */
-  @Prop({ reflect: true }) variation?: "top" | "bottom" = "top";
+  @Prop() variation?: "top" | "bottom" = "top";
 
   /**
    * Handle Trigger click action

@@ -25,10 +25,10 @@ export class Button implements ComponentInterface {
   /**
    * If `true`, the user cannot interact with the button.
    */
-  @Prop({ reflect: true }) disabled = false;
+  @Prop() disabled = false;
 
   /**
-   * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+   * Specifies [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) of the custom element.
    */
   @Prop() display?: "block" | "flex" | "inline" | "inlineFlex" | "none" =
     "flex";
@@ -55,9 +55,8 @@ export class Button implements ComponentInterface {
 
   /**
    * Specifies the loading animation location if applied.
-   * Use: `"left"`, `"right"`, or `"only"`.
    */
-  @Prop({ reflect: true }) loading?: "left" | "right" | "only";
+  @Prop() loading?: "left" | "right" | "only";
 
   /**
    * Set to the value of border-radius applied. Default is 4(px).
@@ -72,20 +71,17 @@ export class Button implements ComponentInterface {
 
   /**
    * The pre-defined button size.
-   * Use: `"small"`, `"default"`, or `"large"`.
    */
-  @Prop() size?: "small" | "default" | "large" = "default";
+  @Prop({ reflect: true }) size?: "small" | "default" | "large" = "default";
 
   /**
    * The status classing of the button.
-   * Use: `"success"`, `"danger"`, or `"warning"`.
    */
   @Prop() status: "success" | "danger" | "warning";
 
   /**
    * Specifies where to display the linked URL.
    * Only applies when an `href` is provided.
-   * Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
    */
   @Prop() target: string | undefined;
 
@@ -97,7 +93,7 @@ export class Button implements ComponentInterface {
   /**
    * The button variation.
    */
-  @Prop() variation?:
+  @Prop({ reflect: true }) variation?:
     | "basic"
     | "primary"
     | "secondary"
@@ -108,7 +104,7 @@ export class Button implements ComponentInterface {
   /**
    * Set to "full" for a 100% full-width button without border-radius/borders or to "block"`.
    */
-  @Prop() width?: "full" | "block" | undefined;
+  @Prop({ reflect: true }) width?: "full" | "block" | undefined;
 
   private get hasIconOnly() {
     // eslint-disable-next-line @stencil/strict-boolean-conditions
@@ -116,19 +112,7 @@ export class Button implements ComponentInterface {
   }
 
   render() {
-    const {
-      disabled,
-      hasIconOnly,
-      href,
-      loading,
-      rel,
-      target,
-      type,
-      size,
-      status,
-      variation,
-      width,
-    } = this;
+    const { disabled, hasIconOnly, href, rel, target, type } = this;
     const TagType = href === undefined ? "button" : ("a" as any);
     const attrs =
       TagType === "button"
@@ -146,19 +130,9 @@ export class Button implements ComponentInterface {
         class={{
           "core-button": true,
           "icon-only": hasIconOnly,
-          [`${variation}`]: variation !== undefined,
-          [`${width}`]: width !== undefined,
-          [`${size}`]: size !== undefined,
-          [`${status}`]: status !== undefined,
-          [`${disabled}`]: disabled,
         }}
       >
-        <TagType
-          {...attrs}
-          class="native-element"
-          disabled={disabled}
-          loading={loading}
-        >
+        <TagType class="native-element" disabled={disabled} {...attrs}>
           <slot name="icon"></slot>
           <slot name="button-dropdown-left"></slot>
           <slot name="button-left"></slot>

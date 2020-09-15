@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                                                                                       | Type                                      | Default   |
-| -------- | --------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------- |
-| `color`  | `color`   | Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`. | `"green" \| "red" \| "white" \| "yellow"` | `"white"` |
+| Property | Attribute | Description                                               | Type                                      | Default   |
+| -------- | --------- | --------------------------------------------------------- | ----------------------------------------- | --------- |
+| `color`  | `color`   | Optional primary color of the toast. Defaults to `black`. | `"green" \| "red" \| "white" \| "yellow"` | `"white"` |
 
 
 ## Dependencies

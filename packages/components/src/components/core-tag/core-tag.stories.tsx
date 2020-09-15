@@ -1,4 +1,4 @@
-import { select, boolean } from "@storybook/addon-knobs";
+import { boolean, select } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -24,9 +24,10 @@ const variations = {
   light: "light",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-tag
+      closable="${boolean("Closable", false)}"
       color="${select("Color", colors, "black")}"
       size="${select("size", sizes, "large")}"
       variation="${select("variation", variations, "default")}"
@@ -35,26 +36,20 @@ export const Default = (): TemplateResult => {
   `;
 };
 
+export const Default = (): TemplateResult => {
+  return html`
+    <core-tag>Tag</core-tag>
+  `;
+};
+
 export const Small = (): TemplateResult => {
   return html`
-    <core-tag
-      color="${select("Color", colors, "black")}"
-      size="${select("size", sizes, "small")}"
-      variation="${select("variation", variations, "default")}"
-      >Tag</core-tag
-    >
+    <core-tag size="small">Tag</core-tag>
   `;
 };
 
 export const Closable = (): TemplateResult => {
   return html`
-    <core-tag
-      closable=${boolean("Closable", true)}
-      color="${select("Color", colors, "yellow")}"
-      variation="${select("variation", variations, "default")}"
-    >
-      Tag
-      <core-icon slot="icon" icon="cross-sm"></core-icon>
-    </core-tag>
+    <core-tag closable>Tag</core-tag>
   `;
 };

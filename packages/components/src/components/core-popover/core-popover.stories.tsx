@@ -11,7 +11,7 @@ const variations = {
   bottom: "bottom",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <div style="display:flex;height:250px;">
       <core-popover
@@ -20,6 +20,21 @@ export const Default = (): TemplateResult => {
         variation=${select("Varation", variations, "top")}
         style="margin:auto auto 0;"
       >
+        <core-button slot="trigger">Trigger</core-button>
+        <span slot="title">Popover Title</span>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </core-popover>
+    </div>
+  `;
+};
+
+export const Default = (): TemplateResult => {
+  return html`
+    <div style="display:flex;height:250px;">
+      <core-popover style="margin:auto auto 0;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
         <div>
@@ -34,12 +49,7 @@ export const Default = (): TemplateResult => {
 export const Bottom = (): TemplateResult => {
   return html`
     <div style="display:flex;height:250px;">
-      <core-popover
-        active=${boolean("Active", false)}
-        hoverable=${boolean("Hoverable", false)}
-        variation=${select("Varation", variations, "bottom")}
-        style="margin:50px auto auto;"
-      >
+      <core-popover variation="bottom" style="margin:50px auto auto;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
         <div>
@@ -54,12 +64,7 @@ export const Bottom = (): TemplateResult => {
 export const Hoverable = (): TemplateResult => {
   return html`
     <div style="display:flex;height:250px;">
-      <core-popover
-        active=${boolean("Active", false)}
-        hoverable=${boolean("Hoverable", true)}
-        variation=${select("Varation", variations, "top")}
-        style="margin:auto auto 0;"
-      >
+      <core-popover hoverable style="margin:auto auto 0;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
         <div>

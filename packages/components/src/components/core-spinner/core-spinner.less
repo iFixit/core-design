@@ -1,4 +1,3 @@
-@import (reference) "../../assets/font/inter/inter.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
 
 // :host targets the custom element compiled by Stencil
@@ -6,43 +5,43 @@
   display: flex;
 
   // @Prop color
-  &(.blue) .spinner {
+  &([color="blue"]) .spinner {
     border-color: @color-blue-light-3;
     border-top-color: @color-blue;
 
     &::before,
     &::after {
-      background: @color-blue;
+      background-color: @color-blue;
     }
   }
 
-  &(.green) .spinner {
+  &([color="green"]) .spinner {
     border-color: @color-green-light-3;
     border-top-color: @color-green;
 
     &::before,
     &::after {
-      background: @color-green;
+      background-color: @color-green;
     }
   }
 
-  &(.yellow) .spinner {
+  &([color="yellow"]) .spinner {
     border-color: @color-yellow-light-3;
     border-top-color: @color-yellow;
 
     &::before,
     &::after {
-      background: @color-yellow;
+      background-color: @color-yellow;
     }
   }
 
-  &(.red) .spinner {
+  &([color="red"]) .spinner {
     border-color: @color-red-light-3;
     border-top-color: @color-red;
 
     &::before,
     &::after {
-      background: @color-red;
+      background-color: @color-red;
     }
   }
 
@@ -94,7 +93,7 @@
 
 // spinner element styles with intentional lower specificity
 .spinner {
-  background: transparent;
+  background-color: transparent;
   border: 4px solid @color-gray-2;
   border-top-color: @color-gray-7;
   border-radius: 50%;
@@ -106,7 +105,7 @@
   &::before,
   &::after {
     content: "";
-    background: @color-gray-7;
+    background-color: @color-gray-7;
     border-radius: 50%;
     height: 4px;
     position: absolute;

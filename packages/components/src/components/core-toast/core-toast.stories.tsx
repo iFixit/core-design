@@ -13,10 +13,16 @@ const colors = {
   red: "red",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-toast color="${select("Color", colors, "white")}"
       >The file <strong>benchmark2</strong> was deleted.</core-toast
     >
+  `;
+};
+
+export const Default = (): TemplateResult => {
+  return html`
+    <core-toast>The file <strong>benchmark2</strong> was deleted.</core-toast>
   `;
 };

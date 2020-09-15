@@ -8,21 +8,21 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CoreAlert {
         /**
-          * Optional primary color of the alert. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`.
+          * Optional primary color of the element.
          */
         "color"?: "gray" | "green" | "yellow" | "red";
     }
     interface CoreBadge {
         /**
-          * Color of the badge. Use: `color="black"` or `color="red"`.
+          * Color of the element.
          */
         "color"?: "black" | "red";
         /**
-          * The pre-defined badge size. Use: `"small"` or `"large"`.
+          * The pre-defined element size.
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`.
+          * The element variation.
          */
         "variation"?: "border" | "dot" | "fill";
     }
@@ -32,7 +32,7 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+          * Specifies [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) of the custom element.
          */
         "display"?: "block" | "flex" | "inline" | "inlineFlex" | "none";
         /**
@@ -48,7 +48,7 @@ export namespace Components {
          */
         "href": string | undefined;
         /**
-          * Specifies the loading animation location if applied. Use: `"left"`, `"right"`, or `"only"`.
+          * Specifies the loading animation location if applied.
          */
         "loading"?: "left" | "right" | "only";
         /**
@@ -60,15 +60,15 @@ export namespace Components {
          */
         "rel": string | undefined;
         /**
-          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`.
+          * The pre-defined button size.
          */
         "size"?: "small" | "default" | "large";
         /**
-          * The status classing of the button. Use: `"success"`, `"danger"`, or `"warning"`.
+          * The status classing of the button.
          */
         "status": "success" | "danger" | "warning";
         /**
-          * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+          * Specifies where to display the linked URL. Only applies when an `href` is provided.
          */
         "target": string | undefined;
         /**
@@ -91,21 +91,78 @@ export namespace Components {
     }
     interface CoreCheckbox {
         /**
-          * If applied, the element is checked. Use: `"checked"`.
+          * If applied, the element is checked.
          */
         "checked": boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+         */
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8";
+        /**
+          * If applied, the user cannot interact with the element.
          */
         "disabled": boolean;
         /**
-          * Apply the pre-defined large checkbox size styling. Use: `"large"`.
+          * The label element associated with the element.
          */
-        "large": boolean;
+        "label": string | undefined;
         /**
-          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element.
          */
         "required": boolean;
+        /**
+          * Apply the pre-defined large element size styling.
+         */
+        "size"?: "default" | "large";
     }
     interface CoreDropdown {
         /**
@@ -113,7 +170,7 @@ export namespace Components {
          */
         "active": boolean;
         /**
-          * The dropdown alignment Use: `"left"`, `"center"`, or `"right"`.
+          * The element alignment
          */
         "alignment"?: "left" | "center" | "right";
         /**
@@ -135,7 +192,7 @@ export namespace Components {
          */
         "href": string | undefined;
         /**
-          * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+          * Specifies where to display the linked URL. Only applies when an `href` is provided.
          */
         "target": string | undefined;
     }
@@ -145,7 +202,7 @@ export namespace Components {
          */
         "ariaLabel"?: string;
         /**
-          * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+          * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
         "color"?: | "blue"
     | "green"
@@ -319,19 +376,68 @@ export namespace Components {
          */
         "clearInput": boolean;
         /**
-          * If `true`, the user cannot interact with the input.
+          * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+         */
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8";
+        /**
+          * If `true`, the user cannot interact with the element.
          */
         "disabled": boolean;
         /**
-          * Returns the native `<input>` element.
+          * If `true`, the pre-defined error state is applied.
          */
-        "getInputElement": () => Promise<HTMLInputElement>;
+        "error": boolean;
         /**
           * The core-icon to render inside the text input.
          */
         "icon"?: string;
         /**
-          * A hint to the browser for which keyboard to display. Use: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+          * A hint to the browser for which keyboard to display.
          */
         "inputkeyboard"?: | "none"
     | "text"
@@ -342,21 +448,33 @@ export namespace Components {
     | "decimal"
     | "search";
         /**
-          * The name of the control, which is submitted with the form data.
+          * The label element associated with the element.
          */
-        "name": string;
+        "label": string | undefined;
         /**
-          * Instructional placeholder text that shows before the input has a value.
+          * Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
          */
-        "placeholder"?: string | null;
+        "labeldisplay"?: "block" | "inline";
+        /**
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * Instructional placeholder text that shows before the element has a value.
+         */
+        "placeholder"?: string | undefined;
         /**
           * If `true`, the user must fill in a value before submitting a form.
          */
         "required": boolean;
         /**
-          * Apply the large pre-defined input size and styling. Use: `"large"`.
+          * Apply the large pre-defined element size and styling.
          */
         "size"?: "large";
+        /**
+          * If `true`, the pre-defined success state is applied.
+         */
+        "success": boolean;
         /**
           * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */
@@ -364,7 +482,7 @@ export namespace Components {
     }
     interface CoreLabel {
         /**
-          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
         "color"?: | "blue"
     | "green"
@@ -424,7 +542,7 @@ export namespace Components {
         /**
           * Applies the provided URL to the helpIcon href.
          */
-        "helpurl"?: string | null;
+        "helpurl"?: string | undefined;
     }
     interface CorePopover {
         /**
@@ -442,15 +560,19 @@ export namespace Components {
     }
     interface CoreProgress {
         /**
-          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc.
+          * Color of the progress bar.
          */
-        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        "color"?: | "black"
+    | "blue"
+    | "green"
+    | "yellow"
+    | "red";
         /**
           * The progress bar maximum value.
          */
         "max": number;
         /**
-          * The pre-defined progress bar size. Use: `"small"` or `"large"`.
+          * The pre-defined progress bar size.
          */
         "size"?: "small" | "large";
         /**
@@ -460,29 +582,41 @@ export namespace Components {
     }
     interface CoreRadio {
         /**
-          * If applied, the element is checked. Use: `"checked"`.
+          * If applied, the element is checked.
          */
         "checked": boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * If applied, the user cannot interact with the element.
          */
         "disabled": boolean;
         /**
-          * Apply the pre-defined large radio size styling. Use: `"large"`.
+          * The label element associated with the element.
          */
-        "large": any;
+        "label": string | undefined;
         /**
-          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element.
          */
         "required": boolean;
+        /**
+          * Apply the pre-defined large element size styling.
+         */
+        "size"?: "default" | "large";
     }
     interface CoreSpinner {
         /**
-          * Color of the spinner. Use: `color="black"` or `color="red"`.
+          * Color of the spinner.
          */
-        "color"?: "black" | "red" | "blue" | "green" | "yellow";
+        "color"?: | "black"
+    | "red"
+    | "blue"
+    | "green"
+    | "yellow";
         /**
-          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect.
+          * The pre-defined spinner size.
          */
         "size"?: "small" | "medium" | "large";
     }
@@ -498,7 +632,7 @@ export namespace Components {
     }
     interface CoreTabGroup {
         /**
-          * The pre-defined tab size. Use: `"small"` or `"large"`.
+          * The pre-defined tab size.
          */
         "size": "small" | "large";
     }
@@ -508,15 +642,19 @@ export namespace Components {
          */
         "closable": boolean;
         /**
-          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="blue"`, `color="green"`, `color="yellow"`, `color="red"`.
+          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        "color"?: | "black"
+    | "blue"
+    | "green"
+    | "yellow"
+    | "red";
         /**
-          * The pre-defined tag size. Use: `"small"` or `"large"`.
+          * The pre-defined tag size.
          */
         "size"?: "small" | "large";
         /**
-          * The tag variation. Use: `"default"` or `"light"`.
+          * The tag variation.
          */
         "variation"?: "default" | "light";
     }
@@ -536,7 +674,7 @@ export namespace Components {
         /**
           * Instructional text that shows before the input has a value.
          */
-        "placeholder"?: string | null;
+        "placeholder"?: string | undefined;
         /**
           * If `true`, the user must fill in a value before submitting a form.
          */
@@ -552,35 +690,43 @@ export namespace Components {
     }
     interface CoreToast {
         /**
-          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`.
+          * Optional primary color of the toast. Defaults to `black`.
          */
         "color"?: "white" | "green" | "yellow" | "red";
     }
     interface CoreToggle {
         /**
-          * If applied, the element is rendered with the alternate styling. Use: `"alt"`.
+          * If applied, the element is rendered with the alternate styling.
          */
         "alt": boolean;
         /**
-          * If applied, the element is checked. Use: `"checked"`.
+          * If applied, the element is checked.
          */
         "checked": boolean;
         /**
-          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
+          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
         "color"?: "green" | "yellow" | "red" | "black";
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * If applied, the user cannot interact with the element.
          */
         "disabled": boolean;
         /**
-          * Apply the large pre-defined large toggle size styling. Use: `"large"`.
+          * The label element associated with the element.
          */
-        "large": boolean;
+        "label": string | undefined;
         /**
-          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element.
          */
         "required": boolean;
+        /**
+          * Apply the pre-defined large element size styling.
+         */
+        "size"?: "default" | "large";
     }
     interface CoreTooltip {
         /**
@@ -588,7 +734,7 @@ export namespace Components {
          */
         "active": boolean;
         /**
-          * The tooltip color Use: "dark"`or `"light"`.
+          * The tooltip color
          */
         "color"?: "dark" | "light";
         /**
@@ -748,21 +894,21 @@ declare global {
 declare namespace LocalJSX {
     interface CoreAlert {
         /**
-          * Optional primary color of the alert. Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`.
+          * Optional primary color of the element.
          */
         "color"?: "gray" | "green" | "yellow" | "red";
     }
     interface CoreBadge {
         /**
-          * Color of the badge. Use: `color="black"` or `color="red"`.
+          * Color of the element.
          */
         "color"?: "black" | "red";
         /**
-          * The pre-defined badge size. Use: `"small"` or `"large"`.
+          * The pre-defined element size.
          */
         "size"?: "small" | "large";
         /**
-          * The badge variation. Use: `"border"`, `"dot"`, or `"fill"`.
+          * The element variation.
          */
         "variation"?: "border" | "dot" | "fill";
     }
@@ -772,7 +918,7 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * Specifies CSS display property of the custom element. [display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+          * Specifies [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) of the custom element.
          */
         "display"?: "block" | "flex" | "inline" | "inlineFlex" | "none";
         /**
@@ -788,7 +934,7 @@ declare namespace LocalJSX {
          */
         "href"?: string | undefined;
         /**
-          * Specifies the loading animation location if applied. Use: `"left"`, `"right"`, or `"only"`.
+          * Specifies the loading animation location if applied.
          */
         "loading"?: "left" | "right" | "only";
         /**
@@ -800,15 +946,15 @@ declare namespace LocalJSX {
          */
         "rel"?: string | undefined;
         /**
-          * The pre-defined button size. Use: `"small"`, `"default"`, or `"large"`.
+          * The pre-defined button size.
          */
         "size"?: "small" | "default" | "large";
         /**
-          * The status classing of the button. Use: `"success"`, `"danger"`, or `"warning"`.
+          * The status classing of the button.
          */
         "status"?: "success" | "danger" | "warning";
         /**
-          * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+          * Specifies where to display the linked URL. Only applies when an `href` is provided.
          */
         "target"?: string | undefined;
         /**
@@ -831,21 +977,78 @@ declare namespace LocalJSX {
     }
     interface CoreCheckbox {
         /**
-          * If applied, the element is checked. Use: `"checked"`.
+          * If applied, the element is checked.
          */
         "checked"?: boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+         */
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8";
+        /**
+          * If applied, the user cannot interact with the element.
          */
         "disabled"?: boolean;
         /**
-          * Apply the pre-defined large checkbox size styling. Use: `"large"`.
+          * The label element associated with the element.
          */
-        "large"?: boolean;
+        "label"?: string | undefined;
         /**
-          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element.
          */
         "required"?: boolean;
+        /**
+          * Apply the pre-defined large element size styling.
+         */
+        "size"?: "default" | "large";
     }
     interface CoreDropdown {
         /**
@@ -853,7 +1056,7 @@ declare namespace LocalJSX {
          */
         "active"?: boolean;
         /**
-          * The dropdown alignment Use: `"left"`, `"center"`, or `"right"`.
+          * The element alignment
          */
         "alignment"?: "left" | "center" | "right";
         /**
@@ -875,7 +1078,7 @@ declare namespace LocalJSX {
          */
         "href"?: string | undefined;
         /**
-          * Specifies where to display the linked URL. Only applies when an `href` is provided. Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+          * Specifies where to display the linked URL. Only applies when an `href` is provided.
          */
         "target"?: string | undefined;
     }
@@ -885,7 +1088,7 @@ declare namespace LocalJSX {
          */
         "ariaLabel"?: string;
         /**
-          * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+          * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
         "color"?: | "blue"
     | "green"
@@ -1059,15 +1262,68 @@ declare namespace LocalJSX {
          */
         "clearInput"?: boolean;
         /**
-          * If `true`, the user cannot interact with the input.
+          * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+         */
+        "color"?: | "blue"
+    | "green"
+    | "yellow"
+    | "red"
+    | "white"
+    | "black"
+    | "blue-light-4"
+    | "blue-light-3"
+    | "blue-light-2"
+    | "blue-light-1"
+    | "blue-dark-1"
+    | "blue-dark-2"
+    | "blue-dark-3"
+    | "blue-dark-4"
+    | "green-light-4"
+    | "green-light-3"
+    | "green-light-2"
+    | "green-light-1"
+    | "green-dark-1"
+    | "green-dark-2"
+    | "green-dark-3"
+    | "green-dark-4"
+    | "yellow-light-4"
+    | "yellow-light-3"
+    | "yellow-light-2"
+    | "yellow-light-1"
+    | "yellow-dark-1"
+    | "yellow-dark-2"
+    | "yellow-dark-3"
+    | "yellow-dark-4"
+    | "red-light-4"
+    | "red-light-3"
+    | "red-light-2"
+    | "red-light-1"
+    | "red-dark-1"
+    | "red-dark-2"
+    | "red-dark-3"
+    | "red-dark-4"
+    | "gray-1"
+    | "gray-2"
+    | "gray-3"
+    | "gray-4"
+    | "gray-5"
+    | "gray-6"
+    | "gray-7"
+    | "gray-8";
+        /**
+          * If `true`, the user cannot interact with the element.
          */
         "disabled"?: boolean;
+        /**
+          * If `true`, the pre-defined error state is applied.
+         */
+        "error"?: boolean;
         /**
           * The core-icon to render inside the text input.
          */
         "icon"?: string;
         /**
-          * A hint to the browser for which keyboard to display. Use: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+          * A hint to the browser for which keyboard to display.
          */
         "inputkeyboard"?: | "none"
     | "text"
@@ -1078,21 +1334,33 @@ declare namespace LocalJSX {
     | "decimal"
     | "search";
         /**
-          * The name of the control, which is submitted with the form data.
+          * The label element associated with the element.
          */
-        "name"?: string;
+        "label"?: string | undefined;
         /**
-          * Instructional placeholder text that shows before the input has a value.
+          * Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
          */
-        "placeholder"?: string | null;
+        "labeldisplay"?: "block" | "inline";
+        /**
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * Instructional placeholder text that shows before the element has a value.
+         */
+        "placeholder"?: string | undefined;
         /**
           * If `true`, the user must fill in a value before submitting a form.
          */
         "required"?: boolean;
         /**
-          * Apply the large pre-defined input size and styling. Use: `"large"`.
+          * Apply the large pre-defined element size and styling.
          */
         "size"?: "large";
+        /**
+          * If `true`, the pre-defined success state is applied.
+         */
+        "success"?: boolean;
         /**
           * How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is `text`. [<input> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
          */
@@ -1100,7 +1368,7 @@ declare namespace LocalJSX {
     }
     interface CoreLabel {
         /**
-          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. (e.g. `color="red"`, `color="gray-2"`, etc).
+          * Optional color of the label. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
         "color"?: | "blue"
     | "green"
@@ -1160,7 +1428,7 @@ declare namespace LocalJSX {
         /**
           * Applies the provided URL to the helpIcon href.
          */
-        "helpurl"?: string | null;
+        "helpurl"?: string | undefined;
     }
     interface CorePopover {
         /**
@@ -1178,15 +1446,19 @@ declare namespace LocalJSX {
     }
     interface CoreProgress {
         /**
-          * Color of the progress bar. Use: `color="black"`, `color="red"`, etc.
+          * Color of the progress bar.
          */
-        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        "color"?: | "black"
+    | "blue"
+    | "green"
+    | "yellow"
+    | "red";
         /**
           * The progress bar maximum value.
          */
         "max"?: number;
         /**
-          * The pre-defined progress bar size. Use: `"small"` or `"large"`.
+          * The pre-defined progress bar size.
          */
         "size"?: "small" | "large";
         /**
@@ -1196,29 +1468,41 @@ declare namespace LocalJSX {
     }
     interface CoreRadio {
         /**
-          * If applied, the element is checked. Use: `"checked"`.
+          * If applied, the element is checked.
          */
         "checked"?: boolean;
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * If applied, the user cannot interact with the element.
          */
         "disabled"?: boolean;
         /**
-          * Apply the pre-defined large radio size styling. Use: `"large"`.
+          * The label element associated with the element.
          */
-        "large"?: any;
+        "label"?: string | undefined;
         /**
-          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element.
          */
         "required"?: boolean;
+        /**
+          * Apply the pre-defined large element size styling.
+         */
+        "size"?: "default" | "large";
     }
     interface CoreSpinner {
         /**
-          * Color of the spinner. Use: `color="black"` or `color="red"`.
+          * Color of the spinner.
          */
-        "color"?: "black" | "red" | "blue" | "green" | "yellow";
+        "color"?: | "black"
+    | "red"
+    | "blue"
+    | "green"
+    | "yellow";
         /**
-          * The pre-defined spinner size. Use: `"small"`, `"medium"`, `"large"`, ect.
+          * The pre-defined spinner size.
          */
         "size"?: "small" | "medium" | "large";
     }
@@ -1234,7 +1518,7 @@ declare namespace LocalJSX {
     }
     interface CoreTabGroup {
         /**
-          * The pre-defined tab size. Use: `"small"` or `"large"`.
+          * The pre-defined tab size.
          */
         "size"?: "small" | "large";
     }
@@ -1244,15 +1528,19 @@ declare namespace LocalJSX {
          */
         "closable"?: boolean;
         /**
-          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="blue"`, `color="green"`, `color="yellow"`, `color="red"`.
+          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: "black" | "blue" | "green" | "yellow" | "red";
+        "color"?: | "black"
+    | "blue"
+    | "green"
+    | "yellow"
+    | "red";
         /**
-          * The pre-defined tag size. Use: `"small"` or `"large"`.
+          * The pre-defined tag size.
          */
         "size"?: "small" | "large";
         /**
-          * The tag variation. Use: `"default"` or `"light"`.
+          * The tag variation.
          */
         "variation"?: "default" | "light";
     }
@@ -1268,7 +1556,7 @@ declare namespace LocalJSX {
         /**
           * Instructional text that shows before the input has a value.
          */
-        "placeholder"?: string | null;
+        "placeholder"?: string | undefined;
         /**
           * If `true`, the user must fill in a value before submitting a form.
          */
@@ -1284,35 +1572,43 @@ declare namespace LocalJSX {
     }
     interface CoreToast {
         /**
-          * Optional primary color of the toast. Defaults to `black`. Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`.
+          * Optional primary color of the toast. Defaults to `black`.
          */
         "color"?: "white" | "green" | "yellow" | "red";
     }
     interface CoreToggle {
         /**
-          * If applied, the element is rendered with the alternate styling. Use: `"alt"`.
+          * If applied, the element is rendered with the alternate styling.
          */
         "alt"?: boolean;
         /**
-          * If applied, the element is checked. Use: `"checked"`.
+          * If applied, the element is checked.
          */
         "checked"?: boolean;
         /**
-          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`. Use: `color="green"`, `color="yellow"`, `color="red"`, `color="black"`.
+          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
         "color"?: "green" | "yellow" | "red" | "black";
         /**
-          * If applied, the user cannot interact with the element. Use: `"disabled"`.
+          * If applied, the user cannot interact with the element.
          */
         "disabled"?: boolean;
         /**
-          * Apply the large pre-defined large toggle size styling. Use: `"large"`.
+          * The label element associated with the element.
          */
-        "large"?: boolean;
+        "label"?: string | undefined;
         /**
-          * If applied, the user must fill in a value before submitting a form containing this element. Use: `"required"`.
+          * The label element position.
+         */
+        "labelposition"?: "left" | "right";
+        /**
+          * If applied, the user must fill in a value before submitting a form containing this element.
          */
         "required"?: boolean;
+        /**
+          * Apply the pre-defined large element size styling.
+         */
+        "size"?: "default" | "large";
     }
     interface CoreTooltip {
         /**
@@ -1320,7 +1616,7 @@ declare namespace LocalJSX {
          */
         "active"?: boolean;
         /**
-          * The tooltip color Use: "dark"`or `"light"`.
+          * The tooltip color
          */
         "color"?: "dark" | "light";
         /**

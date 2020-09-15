@@ -8,7 +8,7 @@
 | Property    | Attribute   | Description                                                | Type                | Default  |
 | ----------- | ----------- | ---------------------------------------------------------- | ------------------- | -------- |
 | `active`    | `active`    | The tooltip visibility                                     | `boolean`           | `false`  |
-| `color`     | `color`     | The tooltip color Use: "dark"`or `"light"`.                | `"dark" \| "light"` | `"dark"` |
+| `color`     | `color`     | The tooltip color                                          | `"dark" \| "light"` | `"dark"` |
 | `hoverable` | `hoverable` | The tooltip will show up when hovering the tooltip-trigger | `boolean`           | `true`   |
 | `variation` | `variation` | The tooltip variation.                                     | `"bottom" \| "top"` | `"top"`  |
 
