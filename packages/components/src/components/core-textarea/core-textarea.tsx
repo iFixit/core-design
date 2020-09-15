@@ -35,7 +35,7 @@ export class Textarea implements ComponentInterface {
   /**
    * Instructional text that shows before the input has a value.
    */
-  @Prop() placeholder?: string | null;
+  @Prop() placeholder?: string | undefined;
 
   /**
    * If `true`, the user must fill in a value before submitting a form.

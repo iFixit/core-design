@@ -13,10 +13,21 @@ const colors = {
   red: "red",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <Story>
       <core-alert color="${select("Color", colors, "gray")}">
+        <core-icon slot="icon" icon="globe"></core-icon>
+        A notification message of information.
+      </core-alert>
+    </Story>
+  `;
+};
+
+export const Default = (): TemplateResult => {
+  return html`
+    <Story>
+      <core-alert color="gray">
         <core-icon slot="icon" icon="globe"></core-icon>
         A notification message of information.
       </core-alert>

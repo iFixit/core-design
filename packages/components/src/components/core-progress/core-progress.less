@@ -1,4 +1,3 @@
-@import (reference) "../../assets/font/inter/inter.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
 
 // :host targets the custom element compiled by Stencil
@@ -7,38 +6,38 @@
   width: inherit;
 
   // @Prop color
-  &(.black) progress::-webkit-progress-value {
+  &([color="black"]) progress::-webkit-progress-value {
+    background-color: color-black;
+  }
+  &([color="black"]) progress::-moz-progress-bar {
     background-color: @color-black;
   }
-  &(.black) progress::-moz-progress-bar {
-    background-color: @color-black;
-  }
 
-  &(.blue) progress::-webkit-progress-value {
+  &([color="blue"]) progress::-webkit-progress-value {
     background-color: @color-blue;
   }
-  &(.blue) progress::-moz-progress-bar {
+  &([color="blue"]) progress::-moz-progress-bar {
     background-color: @color-blue;
   }
 
-  &(.green) progress::-webkit-progress-value {
+  &([color="green"]) progress::-webkit-progress-value {
     background-color: @color-green;
   }
-  &(.green) progress::-moz-progress-bar {
+  &([color="green"]) progress::-moz-progress-bar {
     background-color: @color-green;
   }
 
-  &(.yellow) progress::-webkit-progress-value {
+  &([color="yellow"]) progress::-webkit-progress-value {
     background-color: @color-yellow;
   }
-  &(.yellow) progress::-moz-progress-bar {
+  &([color="yellow"]) progress::-moz-progress-bar {
     background-color: @color-yellow;
   }
 
-  &(.red) progress::-webkit-progress-value {
+  &([color="red"]) progress::-webkit-progress-value {
     background-color: @color-red;
   }
-  &(.red) progress::-moz-progress-bar {
+  &([color="red"]) progress::-moz-progress-bar {
     background-color: @color-red;
   }
 
@@ -63,13 +62,13 @@ progress {
   height: @space-2;
   max-width: 100%;
   overflow: hidden;
-  transition: width 0.2s ease-in-out;
+  transition: width cubic-bezier(0, 0.5, 0.43, 0.58) 0.5s;
   width: inherit;
 
   &::-moz-progress-bar {
     background-color: @color-blue;
     border-radius: @border-radius-md;
-    transition: width 0.2s ease-in-out;
+    transition: width cubic-bezier(0, 0.5, 0.43, 0.58) 0.5s;
   }
 }
 
@@ -80,5 +79,5 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: @color-blue;
   border-radius: @border-radius-md;
-  transition: width 0.2s ease-in-out;
+  transition: width cubic-bezier(0, 0.5, 0.43, 0.58) 0.5s;
 }

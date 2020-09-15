@@ -5,7 +5,7 @@ export default {
   title: "Page Elements/Tabs",
 };
 
-export const Default = (): TemplateResult => {
+export const Large = (): TemplateResult => {
   return html`
     <core-tab-group size="large">
       <core-tab active>Active</core-tab>

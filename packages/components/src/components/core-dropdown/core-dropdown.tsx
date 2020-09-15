@@ -12,20 +12,19 @@ export class Dropdown implements ComponentInterface {
   @Prop({ mutable: true, reflect: true }) active = false;
 
   /**
-   * The dropdown alignment
-   * Use: `"left"`, `"center"`, or `"right"`.
+   * The element alignment
    */
-  @Prop({ reflect: true }) alignment?: "left" | "center" | "right" = "left";
+  @Prop() alignment?: "left" | "center" | "right" = "left";
 
   /**
    * The dropdown will show up when hovering the dropdown-trigger
    */
-  @Prop() hoverable = false;
+  @Prop({ reflect: true }) hoverable = false;
 
   /**
    * The dropdown will wrap if applied.
    */
-  @Prop() wrap = false;
+  @Prop({ reflect: true }) wrap = false;
 
   /**
    * Handle Trigger click action

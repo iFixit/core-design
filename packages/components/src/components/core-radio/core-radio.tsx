@@ -17,43 +17,65 @@ export class Radio implements ComponentInterface {
 
   /**
    * If applied, the element is checked.
-   * Use: `"checked"`.
    */
-  @Prop() checked = false;
+  @Prop({ reflect: true }) checked = false;
 
   /**
    * If applied, the user cannot interact with the element.
-   * Use: `"disabled"`.
    */
   @Prop() disabled = false;
 
   /**
-   * If applied, the user must fill in a value before submitting a form containing this element.
-   * Use: `"required"`.
+   * The label element associated with the element.
    */
-  @Prop() required = false;
+  @Prop() label: string | undefined;
 
   /**
-   * Apply the pre-defined large radio size styling.
-   * Use: `"large"`.
+   * The label element position.
    */
-  @Prop() large = null;
+  @Prop({ reflect: true }) labelposition?: "left" | "right" = "right";
+
+  /**
+   * If applied, the user must fill in a value before submitting a form containing this element.
+   */
+  @Prop({ reflect: true }) required = false;
+
+  /**
+   * Apply the pre-defined large element size styling.
+   */
+  @Prop() size?: "default" | "large" = "default";
+
+  /**
+   * Handle Trigger click action
+   */
+  private handleClick = (): void => {
+    if (!this.disabled) {
+      this.checked = !this.checked;
+    }
+  };
 
   render() {
     return (
       <Host
         aria-disabled={this.disabled ? "true" : null}
-        class={{
-          "core-radio": true,
-        }}
+        class={{ "core-radio": true }}
+        onClick={this.handleClick}
       >
-        <input
-          class="native-element"
-          type="radio"
-          checked={this.checked}
-          disabled={this.disabled}
-          required={this.required}
-        />
+        <div class="radio-outer">
+          {this.label && (
+            <div class="label-outer">
+              <label htmlFor={this.label}>{this.label}</label>
+            </div>
+          )}
+          <input
+            id={this.label || ""}
+            class="native-element"
+            type="radio"
+            checked={this.checked}
+            disabled={this.disabled}
+            required={this.required}
+          />
+        </div>
       </Host>
     );
   }

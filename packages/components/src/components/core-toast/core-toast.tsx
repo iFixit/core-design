@@ -17,18 +17,15 @@ export class toast implements ComponentInterface {
 
   /**
    * Optional primary color of the toast. Defaults to `black`.
-   * Use: `color="white"`, `color="green"`, `color="yellow"`, `color="red"`.
    */
-  @Prop() color?: "white" | "green" | "yellow" | "red" = "white";
+  @Prop({ reflect: true }) color?: "white" | "green" | "yellow" | "red" =
+    "white";
 
   render() {
-    const { color } = this;
-
     return (
       <Host
         class={{
           "core-toast": true,
-          [`${color}`]: color !== undefined,
         }}
       >
         <div class="native-element">

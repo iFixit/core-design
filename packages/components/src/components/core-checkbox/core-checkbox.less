@@ -6,43 +6,73 @@
 :host {
   color: inherit;
   display: inline-flex;
-  font: inherit;
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
+  font-size: 14px;
+  line-height: 1.142857;
+  text-rendering: auto;
   width: inherit;
 
-  // @Prop type size
-  &([large]):not([large="false"]),
-  &([large="true"]) {
+  // @Prop disabled
+  &([disabled]):not([disabled="false"]),
+  &([disabled="true"]) {
+    .label-outer {
+      color: @color-gray-4;
+    }
+
+    .native-element {
+      background-color: @color-gray-1;
+      box-shadow: 0 0 0 0 transparent inset;
+      color: inherit;
+      cursor: not-allowed;
+    }
+  }
+
+  // @Prop size
+  &([size="large"]) {
     .native-element {
       height: @space-large;
       width: @space-large;
 
       &:checked:after {
-        content: url(../../collection/assets/svg/check.svg);
-        height: 9px;
-        top: 2px;
-        width: 12px;
+        content: url(./collection/assets/svg/check.svg);
       }
     }
   }
 
-  &([large="false"]) .native-element {
-      height: @space-4;
-      width: @space-4;
+  // @Prop display
+  &([display="block"]) .checkbox-outer {
+    display: block;
+  }
+
+  // @Prop labelposition
+  &([labelposition="right"]) .checkbox-outer {
+    input {
+      margin-right: @space-2;
+      order: -1;
+    }
+  }
+
+  &([labelposition="left"]) .checkbox-outer {
+    input {
+      margin-left: @space-2;
+    }
   }
 }
 
-:host-context([slot="label-right"]) {
+.checkbox-outer {
+  align-items: center;
   display: flex;
-  margin-left: @space-2;
+  font: inherit;
 }
 
-:host-context([slot="label-left"]) {
-  display: flex;
-  margin-right: @space-2;
+.label-outer {
+  color: @color-gray-6;
+  transition: color 0.12s ease-in-out;
 }
 
 .native-element {
-  background: @color-white;
+  background-color: @color-white;
   border: 0;
   border-radius: @space-1;
   box-shadow: 0 0 0 1px @color-gray-3 inset;
@@ -52,20 +82,11 @@
   height: @space-4;
   margin: 0;
   outline: none;
-  transition: background 0.12s ease-in-out, box-shadow 0.12s ease-in-out;
+  transition: background-color 0.12s ease-in-out, box-shadow 0.12s ease-in-out;
   width: @space-4;
 
-  &:not(:disabled) {
-    &:focus {
-      border-color: @color-gray-5;
-    }
-  }
-
-  &:disabled {
-    background: @color-gray-1;
-    box-shadow: 0 0 0 0 transparent inset;
-    color: @color-gray-4;
-    cursor: not-allowed;
+  &:focus {
+    border-color: @color-gray-5;
   }
 }
 
@@ -76,25 +97,17 @@
     position: relative;
 
     &:checked {
-      background: @color-blue;
+      background-color: @color-blue;
       box-shadow: 0 0 0 1px @color-blue-dark-1 inset;
 
       &:after {
-        content: url(../../collection/assets/svg/check-sm.svg);
-        height: 7px;
+        content: url(./collection/assets/svg/check-sm.svg);
+        height: 100%;
         position: absolute;
-        top: -1px;
-        left: 50%;
-        transform: translate(-50%);
-        width: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
       }
-    }
-
-    &:disabled {
-      background: @color-gray-1;
-      box-shadow: 0 0 0 0 transparent inset;
-      color: @color-gray-4;
-      cursor: not-allowed;
     }
   }
 }

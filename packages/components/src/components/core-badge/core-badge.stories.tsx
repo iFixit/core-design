@@ -22,7 +22,7 @@ const variations = {
   dot: "dot",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-badge
       color="${select("Color", colors, "red")}"
@@ -30,28 +30,18 @@ export const Default = (): TemplateResult => {
       variation="${select("Variation", variations, "fill")}"
     >
       23
-    </core-badge
+    </core-badge>
   `;
+};
+
+export const Default = (): TemplateResult => {
+  return html` <core-badge>23</core-badge> `;
 };
 
 export const Small = (): TemplateResult => {
-  return html`
-    <core-badge
-      color="${select("Color", colors, "red")}"
-      size="${select("Size", sizes, "small")}"
-      variation="${select("Variation", variations, "fill")}"
-    >
-      23
-    </core-badge
-  `;
+  return html` <core-badge size="small">23</core-badge> `;
 };
 
 export const Dot = (): TemplateResult => {
-  return html`
-    <core-badge
-      color="${select("Color", colors, "red")}"
-      size="${select("Size", sizes, "large")}"
-      variation="${select("Variation", variations, "dot")}"
-    ></core-badge
-  `;
+  return html` <core-badge variation="dot">23</core-badge> `;
 };

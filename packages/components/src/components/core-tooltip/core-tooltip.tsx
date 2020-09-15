@@ -13,14 +13,13 @@ export class tooltip implements ComponentInterface {
 
   /**
    * The tooltip color
-   * Use: "dark"`or `"light"`.
    */
-  @Prop({ reflectToAttr: true }) color?: "dark" | "light" = "dark";
+  @Prop({ reflect: true }) color?: "dark" | "light" = "dark";
 
   /**
    * The tooltip will show up when hovering the tooltip-trigger
    */
-  @Prop() hoverable = true;
+  @Prop({ reflect: true }) hoverable = true;
 
   /**
    * The tooltip variation.

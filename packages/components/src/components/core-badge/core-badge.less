@@ -4,43 +4,43 @@
 // :host targets the custom element compiled by Stencil
 :host {
   display: flex;
-  font-family: "Inter", sans-serif;
-  font-feature-settings: "tnum" on, "lnum" on, "ss01" on;
-  font-size: 13px;
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
+  font-size: 14px;
   line-height: 1.142857;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: auto;
+  text-rendering: auto;
 
   // @Prop color
-  &(.black) .native-element {
-    background: @color-gray-7;
+  &([color="black"]) .native-element {
+    background-color: @color-gray-7;
+    color: @color-white;
   }
 
-  &(.red) .native-element {
-    background: @color-red;
+  &([color="red"]) .native-element {
+    background-color: @color-red;
+    color: @color-white;
   }
 
   // @Prop variation
-  &(.border) .native-element {
-    background: @color-white;
+  &([variation="border"]) .native-element {
+    background-color: @color-white;
     box-shadow: 0 0 0 1px currentColor inset;
     color: currentColor;
   }
 
-  &(.border.black) .native-element {
+  &([variation="border"][color="black"]) .native-element {
     box-shadow: 0 0 0 1px @color-gray-4 inset;
     color: @color-gray-7;
   }
 
-  &(.border.red) .native-element {
+  &([variation="border"][color="red"]) .native-element {
     box-shadow: 0 0 0 1px @color-red-light-2 inset;
     color: @color-red;
   }
 
-  &(.dot) .native-element {
+  &([variation="dot"]) .native-element {
     .dot-inner {
-      background: @color-white;
+      background-color: @color-white;
       border-radius: 50%;
       height: 5px;
       margin: auto;
@@ -50,10 +50,6 @@
     slot {
       display: none;
     }
-  }
-
-  &(.fill) .native-element {
-    color: @color-white;
   }
 
   // @Prop small size

@@ -19,7 +19,6 @@ export class Label implements ComponentInterface {
   /**
    * Optional color of the label.
    * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
-   * (e.g. `color="red"`, `color="gray-2"`, etc).
    */
   @Prop() color?:
     | "blue"
@@ -73,26 +72,24 @@ export class Label implements ComponentInterface {
   /**
    * If `true`, the user cannot interact with the nested element (typically core-input).
    */
-  @Prop({ reflect: true }) disabled = false;
+  @Prop() disabled = false;
 
   /**
    * The display determines where and how the label behaves inside an item.
    */
-  @Prop() display?: "inline" | "block" = "block";
+  @Prop({ reflect: true }) display?: "inline" | "block" = "block";
 
   /**
    * Applies the provided URL to the helpIcon href.
    */
-  @Prop() helpurl?: string | null;
+  @Prop() helpurl?: string | undefined;
 
   render() {
-    const { display } = this;
     return (
       <Host
         aria-disabled={this.disabled ? "true" : null}
         class={{
           "core-label": true,
-          [display]: true,
         }}
       >
         <label class="native-element">

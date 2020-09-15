@@ -13,8 +13,8 @@
 
     <style>
       html {
-        font: 14px/1.142857 "Inter", "Arial", sans-serif;
-        font-feature-settings: "ss01" on, "ss02" on;
+        font: 14px/1.142857 "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;;
+        font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
         margin: 5%;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -452,48 +452,24 @@
       <h2>Checkboxes</h2>
       <div class="grid">
         <div class="checkbox grid">
-          <span>Default</span>
-          <span>Large</span>
+          <span class="hint">Default</span>
+          <span class="hint">Large</span>
         </div>
         <div class="checkbox grid">
-          <core-label display="inline" color="gray-8">
-            <core-checkbox slot="label-left"></core-checkbox>
-            Checkbox
-          </core-label>
-          <core-label display="inline" color="gray-8">
-            <core-checkbox slot="label-left" large></core-checkbox>
-            Checkbox
-          </core-label>
+          <core-checkbox label="Checkbox"></core-checkbox>
+          <core-checkbox label="Checkbox" size="large"></core-checkbox>
         </div>
         <div class="checkbox grid">
-          <core-label display="inline" color="gray-8">
-            <core-checkbox slot="label-left" checked></core-checkbox>
-            Selected checkbox
-          </core-label>
-          <core-label display="inline" color="gray-8">
-            <core-checkbox slot="label-left" checked large></core-checkbox>
-            Selected checkbox
-          </core-label>
+          <core-checkbox label="Label Right" labelposition="right"></core-checkbox>
+          <core-checkbox label="Label Right" labelposition="right" size="large"></core-checkbox>
         </div>
         <div class="checkbox grid">
-          <core-label display="inline" color="gray-8" disabled>
-            <core-checkbox slot="label-left" disabled></core-checkbox>
-            Disabled checkbox
-          </core-label>
-          <core-label display="inline" color="gray-8" disabled>
-            <core-checkbox slot="label-left" large disabled></core-checkbox>
-            Disabled checkbox
-          </core-label>
+          <core-checkbox label="Selected checkbox" checked></core-checkbox>
+          <core-checkbox label="Selected checkbox" size="large" checked></core-checkbox>
         </div>
         <div class="checkbox grid">
-          <core-label display="inline" color="gray-8" disabled>
-            <core-checkbox slot="label-left" disabled checked></core-checkbox>
-            Disabled checkbox
-          </core-label>
-          <core-label display="inline" color="gray-8" disabled>
-            <core-checkbox slot="label-left" large disabled checked></core-checkbox>
-            Disabled checkbox
-          </core-label>
+          <core-checkbox label="Disabled checkbox" disabled></core-checkbox>
+          <core-checkbox label="Disabled checkbox" size="large" disabled></core-checkbox>
         </div>
       </div>
     </section>
@@ -501,8 +477,8 @@
       <h2>Radio Buttons</h2>
       <div class="grid">
         <div class="radio grid">
-          <span>Default</span>
-          <span>Large</span>
+          <span class="hint">Default</span>
+          <span class="hint">Large</span>
         </div>
         <div class="radio grid">
           <core-label display="inline" color="gray-8">
@@ -510,8 +486,8 @@
             Radio
           </core-label>
           <core-label display="inline" color="gray-8">
-            <core-radio slot="label-left" large></core-radio>
-            Large radio
+            <core-radio slot="label-left" size="large"></core-radio>
+            size="large" radio
           </core-label>
         </div>
         <div class="radio grid">
@@ -520,8 +496,8 @@
             Selected radio
           </core-label>
           <core-label display="inline" color="gray-8">
-            <core-radio slot="label-left" large checked></core-radio>
-            Selected large radio
+            <core-radio slot="label-left" size="large" checked></core-radio>
+            Selected size="large" radio
           </core-label>
         </div>
         <div class="radio grid">
@@ -530,8 +506,8 @@
             Disabled radio
           </core-label>
           <core-label display="inline" color="gray-8" disabled>
-            <core-radio slot="label-left" large disabled></core-radio>
-            Disabled large radio
+            <core-radio slot="label-left" size="large" disabled></core-radio>
+            Disabled size="large" radio
           </core-label>
         </div>
         <div class="radio grid">
@@ -540,8 +516,8 @@
             Disabled selected radio
           </core-label>
           <core-label display="inline" color="gray-8" disabled>
-            <core-radio slot="label-left" large checked disabled></core-radio>
-            Disabled selected large radio
+            <core-radio slot="label-left" size="large" checked disabled></core-radio>
+            Disabled selected size="large" radio
           </core-label>
         </div>
       </div>
@@ -559,8 +535,8 @@
             Off
           </core-label>
           <core-label display="inline" color="gray-8">
-            <core-toggle slot="label-left" large></core-toggle>
-            Large off
+            <core-toggle slot="label-left" size="large"></core-toggle>
+            size="large" off
           </core-label>
         </div>
         <div class="toggles grid">
@@ -569,8 +545,8 @@
             On
           </core-label>
           <core-label display="inline" color="gray-8">
-            <core-toggle slot="label-left" checked large></core-toggle>
-            Large on
+            <core-toggle slot="label-left" checked size="large"></core-toggle>
+            size="large" on
           </core-label>
         </div>
         <div class="toggles grid">
@@ -579,8 +555,8 @@
             Off disabled
           </core-label>
           <core-label display="inline" color="gray-8" disabled>
-            <core-toggle slot="label-left" large disabled></core-toggle>
-            Large off disabled
+            <core-toggle slot="label-left" size="large" disabled></core-toggle>
+            size="large" off disabled
           </core-label>
         </div>
         <div class="toggles grid">
@@ -589,8 +565,8 @@
             On disabled
           </core-label>
           <core-label display="inline" color="gray-8" disabled>
-            <core-toggle slot="label-left" large disabled checked></core-toggle>
-            Large on disabled
+            <core-toggle slot="label-left" size="large" disabled checked></core-toggle>
+            size="large" on disabled
           </core-label>
         </div>
       </div>
@@ -613,10 +589,10 @@
           </div>
           <div class="grid">
             <core-label display="inline" color="gray-8">
-              <core-toggle large alt></core-toggle>
+              <core-toggle size="large" alt></core-toggle>
             </core-label>
             <core-label display="inline" color="gray-8">
-              <core-toggle checked large alt></core-toggle>
+              <core-toggle checked size="large" alt></core-toggle>
             </core-label>
           </div>
         </div>
@@ -626,8 +602,8 @@
             Toggle left
           </core-label>
           <core-label display="inline" color="gray-8">
-            <core-toggle slot="label-left" large checked alt></core-toggle>
-            Toggle left large
+            <core-toggle slot="label-left" size="large" checked alt></core-toggle>
+            Toggle left size="large"
           </core-label>
         </div>
         <div class="toggles grid">
@@ -636,8 +612,8 @@
             <core-toggle slot="label-right" alt></core-toggle>
           </core-label>
           <core-label display="inline" color="gray-8">
-            Toggle right large
-            <core-toggle slot="label-right" checked large alt></core-toggle>
+            Toggle right size="large"
+            <core-toggle slot="label-right" checked size="large" alt></core-toggle>
           </core-label>
         </div>
         <div class="toggles grid">
@@ -646,8 +622,8 @@
             <core-toggle slot="label-right" color="green" alt></core-toggle>
           </core-label>
           <core-label display="inline" color="gray-8">
-            Green color large
-            <core-toggle slot="label-right" color="green" checked large alt></core-toggle>
+            Green color size="large"
+            <core-toggle slot="label-right" color="green" checked size="large" alt></core-toggle>
           </core-label>
         </div>
         <div class="toggles grid">
@@ -656,8 +632,8 @@
             <core-toggle slot="label-right" color="yellow" alt></core-toggle>
           </core-label>
           <core-label display="inline" color="gray-8">
-            Yellow color large
-            <core-toggle slot="label-right" color="yellow" checked large alt></core-toggle>
+            Yellow color size="large"
+            <core-toggle slot="label-right" color="yellow" checked size="large" alt></core-toggle>
           </core-label>
         </div>
         <div class="toggles grid">
@@ -666,8 +642,8 @@
             <core-toggle slot="label-right" color="red" alt></core-toggle>
           </core-label>
           <core-label display="inline" color="gray-8">
-            Red color large
-            <core-toggle slot="label-right" color="red" checked large alt></core-toggle>
+            Red color size="large"
+            <core-toggle slot="label-right" color="red" checked size="large" alt></core-toggle>
           </core-label>
         </div>
         <div class="toggles grid">
@@ -676,8 +652,8 @@
             <core-toggle slot="label-right" color="black" alt></core-toggle>
           </core-label>
           <core-label display="inline" color="gray-8">
-            Black color large
-            <core-toggle slot="label-right" color="black" checked large alt></core-toggle>
+            Black color size="large"
+            <core-toggle slot="label-right" color="black" checked size="large" alt></core-toggle>
           </core-label>
         </div>
       </div>

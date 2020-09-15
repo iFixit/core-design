@@ -20,7 +20,7 @@ const sizes = {
   large: "large",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-spinner
       color="${select("Color", colors, "black")}"
@@ -31,18 +31,12 @@ export const Default = (): TemplateResult => {
 
 export const Small = (): TemplateResult => {
   return html`
-    <core-spinner
-      color="${select("Color", colors, "black")}"
-      size="${select("size", sizes, "small")}"
-    ></core-spinner>
+    <core-spinner size="small"></core-spinner>
   `;
 };
 
 export const Large = (): TemplateResult => {
   return html`
-    <core-spinner
-      color="${select("Color", colors, "black")}"
-      size="${select("size", sizes, "large")}"
-    ></core-spinner>
+    <core-spinner size="large"></core-spinner>
   `;
 };

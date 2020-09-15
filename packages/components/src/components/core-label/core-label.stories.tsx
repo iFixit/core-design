@@ -1,4 +1,4 @@
-import { select, text } from "@storybook/addon-knobs";
+import { boolean, select, text } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -7,6 +7,7 @@ export default {
 };
 
 const colors = {
+  "--": "--",
   blue: "blue",
   green: "green",
   yellow: "yellow",
@@ -60,13 +61,20 @@ const displays = {
   block: "block",
 };
 
-export const Default = (): TemplateResult => {
+export const PropStates = (): TemplateResult => {
   return html`
     <core-label
-      color=${select("Color", colors, "gray-5")}
+      color=${select("Color", colors, null)}
+      disabled="${boolean("Disabled", false)}"
       display=${select("Display", displays, "block")}
       >Form Label</core-label
     >
+  `;
+};
+
+export const Default = (): TemplateResult => {
+  return html`
+    <core-label>Form Label</core-label>
   `;
 };
 

@@ -5,11 +5,13 @@
 // `shadow: false' is set in `core-tab.tsx`, so we target the custom-element selector directly instead of `:host` and remove the LESS selector wrapping parenthesis for targeting in shadow-dom
 core-tab {
   display: flex;
-  font-family: "Inter", sans-serif;
-  font-feature-settings: "ss01" on, "ss02" on;
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
+  font-size: 14px;
   font-size: @font-size-1;
   line-height: inherit;
   position: relative;
+  text-rendering: auto;
 
   &:not(:last-of-type) {
     margin-right: 28px;
@@ -20,7 +22,7 @@ core-tab {
   .native-element:hover {
     &::after {
       content: "";
-      background: transparent;
+      background-color: transparent;
       border-radius: calc(3px / 2);
       height: 3px;
       position: absolute;
@@ -36,14 +38,14 @@ core-tab {
     cursor: pointer;
 
     &::after {
-      background: @color-gray-4;
+      background-color: @color-gray-4;
     }
   }
 
   &.active,
   &[active] {
     &::after {
-      background: @color-blue;
+      background-color: @color-blue;
     }
 
     .native-element {
@@ -52,7 +54,7 @@ core-tab {
   }
 
   &.disabled .native-element,
-  &[disabled] .native-element {
+  &[disabled="true"] .native-element {
     color: @color-gray-3;
 
     &::after {
@@ -68,6 +70,7 @@ core-tab {
   .native-element {
     color: @color-gray-5;
     display: flex;
+    font: inherit;
     padding-right: @space-2;
     padding-left: @space-2;
     text-align: center;

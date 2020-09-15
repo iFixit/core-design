@@ -28,7 +28,6 @@ export class DropdownItem implements ComponentInterface {
   /**
    * Specifies where to display the linked URL.
    * Only applies when an `href` is provided.
-   * Use: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
    */
   @Prop() target: string | undefined;
 

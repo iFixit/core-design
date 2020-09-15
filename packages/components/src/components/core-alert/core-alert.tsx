@@ -16,19 +16,15 @@ export class Alert implements ComponentInterface {
   @Element() el!: HTMLCoreAlertElement;
 
   /**
-   * Optional primary color of the alert.
-   * Use: `color="gray"`, `color="green"`, `color="yellow"`, `color="red"`.
+   * Optional primary color of the element.
    */
-  @Prop() color?: "gray" | "green" | "yellow" | "red" = "gray";
+  @Prop({ reflect: true }) color?: "gray" | "green" | "yellow" | "red" = "gray";
 
   render() {
-    const { color } = this;
-
     return (
       <Host
         class={{
           "core-alert": true,
-          [`${color}`]: color !== undefined,
         }}
       >
         <div class="native-element">

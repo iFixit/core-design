@@ -103,6 +103,11 @@ const icons = {
   video: "video",
 };
 
+const labeldisplays = {
+  block: "block",
+  inline: "inline",
+};
+
 const inputkeyboards = {
   none: "none",
   text: "text",
@@ -114,23 +119,37 @@ const inputkeyboards = {
   search: "search",
 };
 
-export const Default = (): TemplateResult => {
+const labelpositions = {
+  left: "left",
+  right: "right",
+};
+
+export const PropStates = (): TemplateResult => {
   return html`
     <core-input
-      autofocus=${boolean("autofocus", false)}
+      autofocus=${boolean("Autofocus", false)}
       disabled=${boolean("Disabled", false)}
+      error=${boolean("Error", false)}
+      icon="${select("Icon", icons, "search")}"
       inputkeyboard=${select("Inputkeyboard", inputkeyboards, "none")}
+      label=${text("Label", "")}
+      labeldisplay=${select("Label Display", labeldisplays, "block")}
+      labelposition=${select("Label Position", labelpositions, "left")}
       placeholder=${text("Placeholder", "Placeholder")}
       required=${boolean("Required", false)}
+      success=${boolean("Success", false)}
     ></core-input>
   `;
 };
 
-export const Icon = (): TemplateResult => {
+export const Default = (): TemplateResult => {
   return html`
-    <core-input
-      icon="${select("Icon", icons, "search")}"
-      placeholder=${text("Placeholder", "Placeholder")}
-    ></core-input>
+    <core-input></core-input>
+  `;
+};
+
+export const Search = (): TemplateResult => {
+  return html`
+    <core-input icon="search" placeholder="Search"></core-input>
   `;
 };

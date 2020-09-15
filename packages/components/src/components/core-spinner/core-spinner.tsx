@@ -17,24 +17,24 @@ export class Spinner implements ComponentInterface {
 
   /**
    * Color of the spinner.
-   * Use: `color="black"` or `color="red"`.
    */
-  @Prop() color?: "black" | "red" | "blue" | "green" | "yellow" = "black";
+  @Prop({ reflect: true }) color?:
+    | "black"
+    | "red"
+    | "blue"
+    | "green"
+    | "yellow" = "black";
 
   /**
    * The pre-defined spinner size.
-   * Use: `"small"`, `"medium"`, `"large"`, ect.
    */
-  @Prop({ reflect: true }) size?: "small" | "medium" | "large" = "medium";
+  @Prop() size?: "small" | "medium" | "large" = "medium";
 
   render() {
-    const { color } = this;
-
     return (
       <Host
         class={{
           "core-spinner": true,
-          [`${color}`]: color !== undefined,
         }}
       >
         <div class="spinner"></div>
