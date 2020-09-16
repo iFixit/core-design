@@ -1,7 +1,7 @@
 @import "../../assets/less/global.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
 
-@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
+@tab-line-height: 3px;
 
 // :host targets the custom element compiled by Stencil
 :host {
@@ -11,8 +11,8 @@
   &::after {
     content: "";
     background-color: @color-gray-2;
-    border-radius: calc(3px / 2);
-    height: 3px;
+    border-radius: calc(@tab-line-height / 2);
+    height: @tab-line-height;
     position: absolute;
     bottom: 0;
     width: 100%;

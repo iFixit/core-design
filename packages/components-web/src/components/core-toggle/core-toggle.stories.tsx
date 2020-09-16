@@ -8,6 +8,7 @@ export default {
 
 const colors = {
   black: "black",
+  blue: "blue",
   green: "green",
   yellow: "yellow",
   red: "red",
@@ -33,7 +34,7 @@ export const PropStates = (): TemplateResult => {
   return html`
     <core-toggle
       checked="${boolean("Checked", false)}"
-      color="${select("Color", colors, "black")}"
+      color="${select("Color", colors, "blue")}"
       disabled="${boolean("Disabled", false)}"
       required="${boolean("Required", false)}"
       label=${text("Label", "Label")}

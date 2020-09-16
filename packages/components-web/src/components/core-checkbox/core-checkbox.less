@@ -12,7 +12,7 @@
   // @Prop disabled
   &([disabled]):not([disabled="false"]),
   &([disabled="true"]) {
-    .label-outer {
+    label {
       color: @color-gray-4;
     }
 
@@ -26,6 +26,10 @@
 
   // @Prop size
   &([size="large"]) {
+    label {
+      font-size: @font-size-2;
+    }
+
     .native-element {
       height: @space-large;
       width: @space-large;
@@ -62,15 +66,15 @@
   font: inherit;
 }
 
-.label-outer {
-  color: @color-gray-6;
-  transition: color 0.12s ease-in-out;
-}
-
 .checkbox-outer,
 .native-element,
 label {
   cursor: pointer;
+}
+
+label {
+  color: @color-gray-8;
+  transition: color 0.12s ease-in-out;
 }
 
 .native-element {

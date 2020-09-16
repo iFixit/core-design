@@ -13,19 +13,6 @@
 | `helpurl`  | `helpurl`  | Applies the provided URL to the helpIcon href.                                                                                                    | `string`              | `undefined` |
 
 
-## Dependencies
-
-### Depends on
-
-- [core-icon](../core-icon)
-
-### Graph
-```mermaid
-graph TD;
-  core-label --> core-icon
-  style core-label fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-09-16T16:26:53",
+  "timestamp": "2020-09-16T17:49:44",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.15.0",
@@ -1183,16 +1183,12 @@
       "slots": [],
       "dependents": [
         "core-input",
-        "core-label",
         "core-tag",
         "core-toast"
       ],
       "dependencies": [],
       "dependencyGraph": {
         "core-input": [
-          "core-icon"
-        ],
-        "core-label": [
           "core-icon"
         ],
         "core-tag": [
@@ -1729,7 +1725,7 @@
           "type": "string",
           "mutable": false,
           "attr": "color",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "Optional color of the label.\nUse any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.",
           "docsTags": [],
           "values": [
@@ -1805,14 +1801,8 @@
       "styles": [],
       "slots": [],
       "dependents": [],
-      "dependencies": [
-        "core-icon"
-      ],
-      "dependencyGraph": {
-        "core-label": [
-          "core-icon"
-        ]
-      }
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
       "filePath": "./src/components/core-popover/core-popover.tsx",

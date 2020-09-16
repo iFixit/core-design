@@ -25,6 +25,10 @@
 
   // @Prop size
   &([size="large"]) {
+    label {
+      font-size: @font-size-2;
+    }
+
     .native-element {
       height: 20px;
       width: 38px;
@@ -85,6 +89,14 @@
   }
 
   // @Prop color
+  &([color=black][disabled="false"]) .native-element:checked {
+    background-color: @color-black;
+  }
+
+  &([color=blue][disabled="false"]) .native-element:checked {
+    background-color: @color-blue;
+  }
+
   &([color=green][disabled="false"]) .native-element:checked {
     background-color: @color-green;
   }
@@ -95,10 +107,6 @@
 
   &([color=red][disabled="false"]) .native-element:checked {
     background-color: @color-red;
-  }
-
-  &([color=black][disabled="false"]) .native-element:checked {
-    background-color: @color-black;
   }
 }
 
