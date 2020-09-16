@@ -15,7 +15,6 @@ const colors = {
 };
 
 const labelpositions = {
-  "--": "--",
   left: "left",
   right: "right",
 };

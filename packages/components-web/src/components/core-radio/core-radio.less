@@ -44,16 +44,19 @@
   }
 
   // @Prop labelposition
-  &([labelposition="right"]) .radio-outer {
+  &([labelposition="right"]) {
+    .label-outer {
+      margin-left: @space-2;
+    }
+
     input {
-      margin-right: @space-2;
       order: -1;
     }
   }
 
-  &([labelposition="left"]) .radio-outer {
-    input {
-      margin-left: @space-2;
+  &([labelposition="left"]) {
+    .label-outer {
+      margin-right: @space-2;
     }
   }
 }
