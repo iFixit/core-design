@@ -1,4 +1,4 @@
-@import "../../../dist/components/components.css";
+@import "../../assets/less/global.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
 
 @toggle-ease: 0.2s cubic-bezier(0.2, 0, 0.6, 1);
@@ -105,6 +105,12 @@
 .toggle-outer {
   align-items: center;
   display: flex;
+}
+
+.toggle-outer,
+.native-element,
+label {
+  cursor: pointer;
 }
 
 .native-element {

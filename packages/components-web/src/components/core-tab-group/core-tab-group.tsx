@@ -18,15 +18,11 @@ export class TabGroup implements ComponentInterface {
   /**
    * The pre-defined tab size.
    */
-  @Prop() size: "small" | "large" = "large";
+  @Prop({ reflect: true }) size: "small" | "large" = "large";
 
   render() {
     return (
-      <Host
-        class={{
-          "core-tab-group": true,
-        }}
-      >
+      <Host class={{ "core-tab-group": true }}>
         <ul class="native-element">
           <slot name="tab-group-left"></slot>
           <slot></slot>

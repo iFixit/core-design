@@ -32,11 +32,7 @@ export class Badge implements ComponentInterface {
 
   render() {
     return (
-      <Host
-        class={{
-          "core-badge": true,
-        }}
-      >
+      <Host class={{ "core-badge": true }}>
         <div class="native-element">
           <div class="dot-inner"></div>
           <slot></slot>

@@ -6,7 +6,7 @@ import { reactOutputTarget } from "@stencil/react-output-target";
 
 export const config: Config = {
   namespace: "components",
-  globalStyle: "src/assets/less/global.less",
+  globalStyle: "src/assets/less/global.css",
   taskQueue: "async",
   outputTargets: [
     reactOutputTarget({
@@ -16,6 +16,7 @@ export const config: Config = {
     {
       type: "dist",
       esmLoaderPath: "../loader",
+      copy: [{ src: "assets" }],
     },
     {
       type: "docs-readme",

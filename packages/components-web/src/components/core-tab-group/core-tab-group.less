@@ -1,3 +1,4 @@
+@import "../../assets/less/global.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
 
 @box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
@@ -17,6 +18,10 @@
     width: 100%;
   }
 
+  &([size="large"]) .native-element {
+    font-size: @font-size-2;
+  }
+
   &([size="small"]) {
     font-size: 14px;
     line-height: 1.142857;
@@ -34,6 +39,7 @@
   .native-element {
     align-items: stretch;
     display: flex;
+    font-weight: bold;
     height: 35px;
     justify-content: flex-start;
     list-style: none;

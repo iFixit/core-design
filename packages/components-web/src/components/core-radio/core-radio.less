@@ -1,4 +1,4 @@
-@import "../../../dist/components/components.css";
+@import "../../assets/less/global.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
 
 @space-large: 20px;
@@ -57,6 +57,12 @@
 .radio-outer {
   align-items: center;
   display: flex;
+}
+
+.radio-outer,
+.native-element,
+label {
+  cursor: pointer;
 }
 
 .native-element {

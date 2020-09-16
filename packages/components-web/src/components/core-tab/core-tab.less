@@ -1,7 +1,5 @@
-@import "../../../dist/components/components.css";
+@import "../../assets/less/global.css";
 @import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-
-@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
 
 // `shadow: false' is set in `core-tab.tsx`, so we target the custom-element selector directly instead of `:host` and remove the LESS selector wrapping parenthesis for targeting in shadow-dom
 core-tab {
@@ -13,7 +11,6 @@ core-tab {
     margin-right: 28px;
   }
 
-  &.active,
   &[active],
   .native-element:hover {
     &::after {
@@ -38,7 +35,6 @@ core-tab {
     }
   }
 
-  &.active,
   &[active] {
     &::after {
       background-color: @color-blue;
@@ -49,8 +45,7 @@ core-tab {
     }
   }
 
-  &.disabled .native-element,
-  &[disabled="true"] .native-element {
+  &[disabled] .native-element {
     color: @color-gray-3;
 
     &::after {
@@ -66,7 +61,6 @@ core-tab {
   .native-element {
     color: @color-gray-5;
     display: flex;
-    font: inherit;
     padding-right: @space-2;
     padding-left: @space-2;
     text-align: center;

@@ -1,12 +1,10 @@
-@import "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-
 @font-face {
   font-family: "Inter Var";
   font-weight: 1 999;
   font-display: swap;
   font-style: oblique 0deg 10deg;
   src: local("Inter"),
-       url("Inter-subset.var.woff2?v=3.13") format("woff2");
+       url("../font/inter/Inter-subset.var.woff2") format("woff2");
 }
 
 :host {

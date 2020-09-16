@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-09-15T18:45:07",
+  "timestamp": "2020-09-16T15:59:11",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.15.0",
@@ -2254,7 +2254,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "disabled",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "If `true`, the user cannot interact with the tab.",
           "docsTags": [],
           "default": "false",
@@ -2291,7 +2291,7 @@
           "type": "\"large\" | \"small\"",
           "mutable": false,
           "attr": "size",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "The pre-defined tab size.",
           "docsTags": [],
           "default": "\"large\"",

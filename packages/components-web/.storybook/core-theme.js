@@ -15,7 +15,7 @@ export const coreTheme = create({
   // Typography
   fontBase:
     "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
-  fontCode: "Jetbrains Mono, monospace",
+  fontCode: "monospace",
 
   // Text colors
   textColor: "#242C33",
@@ -24,7 +24,6 @@ export const coreTheme = create({
   // Toolbar default and active colors
   barTextColor: "#242C33",
   barSelectedColor: "#1975F1",
-  barBg: "white",
 
   // Form colors
   inputBg: "white",

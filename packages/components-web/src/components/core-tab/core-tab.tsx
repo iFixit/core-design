@@ -23,7 +23,7 @@ export class Tab implements ComponentInterface {
   /**
    * If `true`, the user cannot interact with the tab.
    */
-  @Prop() disabled = false;
+  @Prop({ reflect: true }) disabled = false;
 
   render() {
     const { disabled } = this;
@@ -31,9 +31,7 @@ export class Tab implements ComponentInterface {
       <Host
         role="tabpanel"
         aria-hidden={disabled ? "true" : null}
-        class={{
-          "core-tab": true,
-        }}
+        class={{ "core-tab": true }}
       >
         <li class="native-element">
           <slot></slot>

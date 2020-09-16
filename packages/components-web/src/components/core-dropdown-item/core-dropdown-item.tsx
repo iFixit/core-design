@@ -40,11 +40,7 @@ export class DropdownItem implements ComponentInterface {
     };
 
     return (
-      <Host
-        class={{
-          "core-dropdown-item": true,
-        }}
-      >
+      <Host class={{ "core-dropdown-item": true }}>
         <TagType class="native-element" {...attrs}>
           <slot name="icon"></slot>
           <slot></slot>

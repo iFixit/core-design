@@ -68,9 +68,7 @@ export class Textarea implements ComponentInterface {
     const value = this.getValue();
     return (
       <Host
-        class={{
-          "core-textarea": true,
-        }}
+        class={{ "core-textarea": true }}
         aria-disabled={this.disabled ? "true" : null}
       >
         <textarea

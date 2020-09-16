@@ -23,11 +23,7 @@ export class toast implements ComponentInterface {
 
   render() {
     return (
-      <Host
-        class={{
-          "core-toast": true,
-        }}
-      >
+      <Host class={{ "core-toast": true }}>
         <div class="native-element">
           <div class="toast-slot">
             <slot></slot>
