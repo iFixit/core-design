@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-09-18T05:08:15",
+  "timestamp": "2020-09-18T16:38:05",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.15.0",
@@ -1247,7 +1247,7 @@
         },
         {
           "name": "color",
-          "type": "\"blue\" | \"green\" | \"yellow\" | \"red\" | \"white\" | \"black\" | \"blue-light-4\" | \"blue-light-3\" | \"blue-light-2\" | \"blue-light-1\" | \"blue-dark-1\" | \"blue-dark-2\" | \"blue-dark-3\" | \"blue-dark-4\" | \"green-light-4\" | \"green-light-3\" | \"green-light-2\" | \"green-light-1\" | \"green-dark-1\" | \"green-dark-2\" | \"green-dark-3\" | \"green-dark-4\" | \"yellow-light-4\" | \"yellow-light-3\" | \"yellow-light-2\" | \"yellow-light-1\" | \"yellow-dark-1\" | \"yellow-dark-2\" | \"yellow-dark-3\" | \"yellow-dark-4\" | \"red-light-4\" | \"red-light-3\" | \"red-light-2\" | \"red-light-1\" | \"red-dark-1\" | \"red-dark-2\" | \"red-dark-3\" | \"red-dark-4\" | \"gray-1\" | \"gray-2\" | \"gray-3\" | \"gray-4\" | \"gray-5\" | \"gray-6\" | \"gray-7\" | \"gray-8\"",
+          "type": "\"green\" | \"yellow\" | \"red\" | \"black\" | \"blue\" | \"white\" | \"blue-light-4\" | \"blue-light-3\" | \"blue-light-2\" | \"blue-light-1\" | \"blue-dark-1\" | \"blue-dark-2\" | \"blue-dark-3\" | \"blue-dark-4\" | \"green-light-4\" | \"green-light-3\" | \"green-light-2\" | \"green-light-1\" | \"green-dark-1\" | \"green-dark-2\" | \"green-dark-3\" | \"green-dark-4\" | \"yellow-light-4\" | \"yellow-light-3\" | \"yellow-light-2\" | \"yellow-light-1\" | \"yellow-dark-1\" | \"yellow-dark-2\" | \"yellow-dark-3\" | \"yellow-dark-4\" | \"red-light-4\" | \"red-light-3\" | \"red-light-2\" | \"red-light-1\" | \"red-dark-1\" | \"red-dark-2\" | \"red-dark-3\" | \"red-dark-4\" | \"gray-1\" | \"gray-2\" | \"gray-3\" | \"gray-4\" | \"gray-5\" | \"gray-6\" | \"gray-7\" | \"gray-8\"",
           "mutable": false,
           "attr": "color",
           "reflectToAttr": false,
@@ -1255,10 +1255,6 @@
           "docsTags": [],
           "default": "\"gray-8\"",
           "values": [
-            {
-              "value": "blue",
-              "type": "string"
-            },
             {
               "value": "green",
               "type": "string"
@@ -1272,11 +1268,15 @@
               "type": "string"
             },
             {
-              "value": "white",
+              "value": "black",
               "type": "string"
             },
             {
-              "value": "black",
+              "value": "blue",
+              "type": "string"
+            },
+            {
+              "value": "white",
               "type": "string"
             },
             {
