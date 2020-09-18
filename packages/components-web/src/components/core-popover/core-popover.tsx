@@ -43,7 +43,7 @@ export class Popover implements ComponentInterface {
           <slot name="trigger" aria-haspopup="true" />
         </div>
 
-        <div class="popover-outter">
+        <div class="popover-outer">
           <div class="popover">
             <div class="arrow"></div>
             <div class="title">

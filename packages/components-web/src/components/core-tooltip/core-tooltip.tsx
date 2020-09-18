@@ -48,7 +48,7 @@ export class tooltip implements ComponentInterface {
           <slot name="trigger" aria-haspopup="true" />
         </div>
 
-        <div class="tooltip-outter">
+        <div class="tooltip-outer">
           <div class="tooltip">
             <div class="arrow"></div>
             <slot />

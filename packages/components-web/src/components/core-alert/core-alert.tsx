@@ -24,7 +24,7 @@ export class Alert implements ComponentInterface {
     return (
       <Host class={{ "core-alert": true }}>
         <div class="native-element">
-          <div class="icon-outter">
+          <div class="icon-outer">
             {this.color == "gray" && (
               <svg
                 id="globe"

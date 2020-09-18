@@ -49,7 +49,7 @@ export class Dropdown implements ComponentInterface {
           <slot name="trigger" aria-haspopup="true" />
         </div>
 
-        <div class={{ "menu-outter": true }}>
+        <div class={{ "menu-outer": true }}>
           <div class="menu" role="menu">
             <div class="arrow"></div>
             <slot />

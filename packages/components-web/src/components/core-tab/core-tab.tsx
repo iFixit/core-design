@@ -35,7 +35,7 @@ export class Tab implements ComponentInterface {
       >
         <li class="native-element">
           <slot></slot>
-          <div class="badge-outter">
+          <div class="badge-outer">
             <slot name="badge"></slot>
           </div>
         </li>
