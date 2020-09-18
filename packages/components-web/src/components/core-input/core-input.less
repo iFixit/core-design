@@ -1,13 +1,9 @@
-@import "../../assets/less/global.css";
-@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-
-@box-shadow: 0 0 0 3px fade(@color-blue-light-1, 30%);
-
-// :host targets the custom element compiled by Stencil
+// `:host` targets the custom element compiled by Stencil
 :host {
   color: @color-gray-8;
   display: inline-flex;
 
+  // @Prop icon
   &([icon]) .native-element {
     padding-left: 40px;
   }
@@ -16,7 +12,7 @@
   &([disabled]):not([disabled="false"]),
   &([disabled="true"]) {
     core-icon,
-    .label-outer {
+    label {
       color: @color-gray-4 !important;
     }
   }
@@ -27,8 +23,8 @@
     padding: 14px 20px 14px 50px;
   }
 
-  // @Prop labeldisplay
-  &([labeldisplay="block"]) {
+  // @Prop labelDisplay
+  &([labelDisplay="block"]) {
     .input-outer {
       display: block;
     }
@@ -38,7 +34,7 @@
     }
   }
 
-  &([labeldisplay="inline"]) {
+  &([labelDisplay="inline"]) {
     .input-outer {
       display: flex;
       justify-content: center;
@@ -52,12 +48,12 @@
   }
 
   // @Prop labelpostion
-  &([labelposition="left"]) .label-outer {
+  &([labelPosition="left"]) .label-outer {
     margin-right: @space-2;
   }
 
-  // @Prop labeldisplay + labelpostion
-  &([labeldisplay="inline"][labelposition="right"]) {
+  // @Prop labelDisplay + labelpostion
+  &([labelDisplay="inline"][labelPosition="right"]) {
     .input-outer {
       flex-direction: row-reverse;
     }
@@ -67,7 +63,7 @@
     }
   }
 
-  &([labeldisplay="block"][labelposition="right"]) {
+  &([labelDisplay="block"][labelPosition="right"]) {
     .label-outer {
       justify-content: flex-end;
     }
@@ -116,13 +112,12 @@
   }
 }
 
-.input-outer {
-  font: inherit;
+.label-outer {
+  display: flex;
 }
 
-.label-outer {
-  color: @color-gray-6;
-  display: flex;
+label {
+  color: @color-gray-8;
   transition: color 0.12s ease-in-out;
 }
 
@@ -153,7 +148,7 @@
     &:focus,
     &:active {
       border-color: @color-gray-5;
-      box-shadow: @box-shadow;
+      box-shadow: @focus-box-shadow;
     }
   }
 

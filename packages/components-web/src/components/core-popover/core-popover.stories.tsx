@@ -13,7 +13,7 @@ const variations = {
 
 export const PropStates = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:250px;">
+    <div style="display:flex;height:200px;">
       <core-popover
         active=${boolean("Active", false)}
         hoverable=${boolean("Hoverable", false)}
@@ -33,7 +33,7 @@ export const PropStates = (): TemplateResult => {
 
 export const Default = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:250px;">
+    <div style="display:flex;height:200px;">
       <core-popover style="margin:auto auto 0;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
@@ -48,7 +48,7 @@ export const Default = (): TemplateResult => {
 
 export const Bottom = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:250px;">
+    <div style="display:flex;height:200px;">
       <core-popover variation="bottom" style="margin:50px auto auto;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
@@ -63,7 +63,7 @@ export const Bottom = (): TemplateResult => {
 
 export const Hoverable = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:250px;">
+    <div style="display:flex;height:200px;">
       <core-popover hoverable style="margin:auto auto 0;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>

@@ -6,7 +6,7 @@ export default {
   title: "Buttons & Inputs/Radio",
 };
 
-const labelpositions = {
+const labelPositions = {
   left: "left",
   right: "right",
 };
@@ -22,7 +22,7 @@ export const PropStates = (): TemplateResult => {
       checked=${boolean("Checked", false)}
       disabled=${boolean("Disabled", false)}
       label=${text("Label", "Label")}
-      labelPosition=${select("Label position", labelpositions, "left")}
+      labelPosition=${select("Label position", labelPositions, "right")}
       size=${select("Size", sizes, "default")}
     >
     </core-radio>
@@ -38,5 +38,11 @@ export const Default = (): TemplateResult => {
 export const Large = (): TemplateResult => {
   return html`
     <core-radio label="Label" size="large"></core-radio>
+  `;
+};
+
+export const LeftLabel = (): TemplateResult => {
+  return html`
+    <core-radio label="Label" labelPosition="left"></core-radio>
   `;
 };

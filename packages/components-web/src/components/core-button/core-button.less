@@ -1,9 +1,6 @@
-@import "../../assets/less/global.css";
-@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
+@focus-box-shadow-transparent: 0 0 0 1px transparent inset;
 
-@box-shadow-transparent: 0 0 0 1px transparent inset;
-
-// :host targets the custom element compiled by Stencil
+// `:host` targets the custom element compiled by Stencil
 :host {
   display: inline-flex;
   max-width: 100%;
@@ -57,7 +54,7 @@
 
         &:hover {
           background-color: @color-blue-dark-1;
-          box-shadow: @box-shadow-transparent;
+          box-shadow: @focus-box-shadow-transparent;
         }
 
         &:active {
@@ -88,7 +85,7 @@
       background-color: @color-gray-1;
 
       &:not(:disabled):not([loading]) {
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
 
         &:hover {
           background-color: @color-gray-2;
@@ -114,7 +111,7 @@
       color: @color-white;
 
       &:not(:disabled):not([loading]) {
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
 
         &:hover {
           background-color: @color-green-dark-1;
@@ -136,7 +133,7 @@
       background-color: @color-red;
 
       &:not(:disabled):not([loading]) {
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
 
         &:hover {
           background-color: @color-red-dark-1;
@@ -155,7 +152,7 @@
       color: @color-gray-8;
 
       &:not(:disabled):not([loading]) {
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
 
         &:hover {
           background-color: @color-yellow-dark-1;
@@ -180,7 +177,7 @@
 
         &:hover {
           background-color: @color-green-light-3;
-          box-shadow: @box-shadow-transparent;
+          box-shadow: @focus-box-shadow-transparent;
           color: @color-green-dark-3;
         }
 
@@ -206,7 +203,7 @@
 
         &:hover {
           background-color: @color-red-light-3;
-          box-shadow: @box-shadow-transparent;
+          box-shadow: @focus-box-shadow-transparent;
           color: @color-red-dark-1;
         }
 
@@ -227,7 +224,7 @@
 
         &:hover {
           background-color: @color-yellow-light-3;
-          box-shadow: @box-shadow-transparent;
+          box-shadow: @focus-box-shadow-transparent;
           color: @color-yellow-dark-3;
         }
 
@@ -271,7 +268,7 @@
 
         &:hover {
           background-color: @color-green-dark-1;
-          box-shadow: @box-shadow-transparent;
+          box-shadow: @focus-box-shadow-transparent;
         }
 
         &:active {
@@ -296,7 +293,7 @@
 
         &:hover {
           background-color: @color-red-dark-1;
-          box-shadow: @box-shadow-transparent;
+          box-shadow: @focus-box-shadow-transparent;
         }
 
         &:active {
@@ -321,7 +318,7 @@
 
         &:hover {
           background-color: @color-yellow-dark-1;
-          box-shadow: @box-shadow-transparent;
+          box-shadow: @focus-box-shadow-transparent;
         }
 
         &:active {
@@ -361,7 +358,7 @@
 
       &:hover {
         background-color: @color-green-dark-1;
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
       }
 
       &:active {
@@ -374,11 +371,11 @@
     .native-element {
       background-color: @color-green-light-4;
       border-color: @color-green-light-4;
-      box-shadow: @box-shadow-transparent;
+      box-shadow: @focus-box-shadow-transparent;
 
       &:hover {
         background-color: @color-green-light-3;
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
         color: @color-green-dark-3;
       }
 
@@ -414,7 +411,7 @@
 
       &:hover {
         background-color: @color-red-dark-1;
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
       }
 
       &:active {
@@ -427,11 +424,11 @@
     .native-element {
       background-color: @color-red-light-4;
       border-color: @color-red-light-4;
-      box-shadow: @box-shadow-transparent;
+      box-shadow: @focus-box-shadow-transparent;
 
       &:hover {
         background-color: @color-red-light-3;
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
       }
 
       &:active {
@@ -466,7 +463,7 @@
 
       &:hover {
         background-color: @color-yellow-dark-1;
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
       }
 
       &:active {
@@ -479,11 +476,11 @@
     .native-element {
       background-color: @color-yellow-light-4;
       border-color: @color-yellow-light-4;
-      box-shadow: @box-shadow-transparent;
+      box-shadow: @focus-box-shadow-transparent;
 
       &:hover {
         background-color: @color-yellow-light-3;
-        box-shadow: @box-shadow-transparent;
+        box-shadow: @focus-box-shadow-transparent;
       }
 
       &:active {
@@ -626,7 +623,7 @@
 
   &:disabled {
     background-color: @color-gray-1;
-    box-shadow: @box-shadow-transparent;
+    box-shadow: @focus-box-shadow-transparent;
     color: @color-gray-4;
     cursor: not-allowed;
   }

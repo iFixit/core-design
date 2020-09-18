@@ -6,6 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
+import { colorsPrimary } from "../../global/script/global";
 
 @Component({
   tag: "core-tag",
@@ -22,15 +23,10 @@ export class Tag implements ComponentInterface {
   @Prop({ reflect: true }) closable = false;
 
   /**
-   * Optional primary color of the tag. Defaults to `black`.
+   * Optional color of the tag. Defaults to `black`.
    * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    */
-  @Prop({ reflect: true }) color?:
-    | "black"
-    | "blue"
-    | "green"
-    | "yellow"
-    | "red" = "black";
+  @Prop({ reflect: true }) color?: colorsPrimary = "black";
 
   /**
    * The pre-defined tag size.
@@ -49,9 +45,11 @@ export class Tag implements ComponentInterface {
           <slot name="tag-left"></slot>
           <slot></slot>
           <slot name="tag-right"></slot>
-          <div class="closable">
-            <core-icon icon="cross-sm"></core-icon>
-          </div>
+          {this.closable && (
+            <div class="closable">
+              <core-icon icon="cross-sm"></core-icon>
+            </div>
+          )}
         </div>
       </Host>
     );

@@ -16,7 +16,7 @@ export class toast implements ComponentInterface {
   @Element() el!: HTMLCoreToastElement;
 
   /**
-   * Optional primary color of the toast. Defaults to `black`.
+   * Optional color of the toast. Defaults to `black`.
    */
   @Prop({ reflect: true }) color?: "white" | "green" | "yellow" | "red" =
     "white";

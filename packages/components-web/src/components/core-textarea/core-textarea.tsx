@@ -9,6 +9,7 @@ import {
   Method,
   h,
 } from "@stencil/core";
+import { labelPosition } from "../../global/script/global";
 
 @Component({
   tag: "core-textarea",
@@ -31,6 +32,21 @@ export class Textarea implements ComponentInterface {
    * If `true`, the user cannot interact with the textarea.
    */
   @Prop() disabled = false;
+
+  /**
+   * The label element associated with the element.
+   */
+  @Prop() label: string | undefined;
+
+  /**
+   * Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+   */
+  @Prop() labelDisplay?: "block" | "inline" = "block";
+
+  /**
+   * The label element position.
+   */
+  @Prop({ reflect: true }) labelPosition?: labelPosition = "right";
 
   /**
    * Instructional text that shows before the input has a value.
@@ -71,17 +87,24 @@ export class Textarea implements ComponentInterface {
         class={{ "core-textarea": true }}
         aria-disabled={this.disabled ? "true" : null}
       >
-        <textarea
-          class="native-element"
-          ref={(el) => (this.nativeInput = el)}
-          disabled={this.disabled}
-          placeholder={this.placeholder || ""}
-          required={this.required}
-          cols={this.cols}
-          rows={this.rows}
-        >
-          {value}
-        </textarea>
+        <div class="textarea-outer">
+          {this.label && (
+            <div class="label-outer">
+              <label htmlFor={this.label}>{this.label}</label>
+            </div>
+          )}
+          <textarea
+            class="native-element"
+            ref={(el) => (this.nativeInput = el)}
+            disabled={this.disabled}
+            placeholder={this.placeholder || ""}
+            required={this.required}
+            cols={this.cols}
+            rows={this.rows}
+          >
+            {value}
+          </textarea>
+        </div>
       </Host>
     );
   }

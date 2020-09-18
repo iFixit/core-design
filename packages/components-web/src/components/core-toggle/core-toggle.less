@@ -1,9 +1,6 @@
-@import "../../assets/less/global.css";
-@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-
 @toggle-ease: 0.2s cubic-bezier(0.2, 0, 0.6, 1);
 
-// :host targets the custom element compiled by Stencil
+// `:host` targets the custom element compiled by Stencil
 :host {
   color: @color-gray-5;
   display: inline-flex;
@@ -45,8 +42,8 @@
     }
   }
 
-  // @Prop labelposition
-  &([labelposition="right"]) {
+  // @Prop labelPosition
+  &([labelPosition="right"]) {
     .label-outer {
       margin-left: @space-2;
     }
@@ -56,7 +53,7 @@
     }
   }
 
-  &([labelposition="left"]) {
+  &([labelPosition="left"]) {
     .label-outer {
       margin-right: @space-2;
     }
@@ -124,6 +121,11 @@ label {
   cursor: pointer;
 }
 
+label {
+  color: @color-gray-8;
+  transition: color 0.12s ease-in-out;
+}
+
 .native-element {
   align-items: center;
   background-color: @color-gray-3;
@@ -136,7 +138,7 @@ label {
   margin: 0;
   outline: none;
   position: relative;
-  transition: background-color @toggle-ease, box-shadow 0.12s ease-in-out;
+  transition: background-color @toggle-ease;
   width: 28px;
 
   &::after {

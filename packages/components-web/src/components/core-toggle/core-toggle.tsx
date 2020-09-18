@@ -6,6 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
+import { labelPosition } from "../../global/script/global";
 
 @Component({
   tag: "core-toggle",
@@ -26,10 +27,10 @@ export class Toggle implements ComponentInterface {
   @Prop({ reflect: true }) checked = false;
 
   /**
-   * Optional primary color of the icon. Defaults to `blue`.
+   * Optional color of the icon. Defaults to `blue`.
    * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    */
-  @Prop() color?: "green" | "yellow" | "red" | "black" = "black";
+  @Prop() color?: "green" | "yellow" | "red" | "black" | "blue" = "blue";
 
   /**
    * If applied, the user cannot interact with the element.
@@ -44,7 +45,7 @@ export class Toggle implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop({ reflect: true }) labelposition?: "left" | "right" = "right";
+  @Prop({ reflect: true }) labelPosition?: labelPosition = "right";
 
   /**
    * If applied, the user must fill in a value before submitting a form containing this element.

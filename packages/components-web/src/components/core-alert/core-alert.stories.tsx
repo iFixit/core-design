@@ -17,7 +17,6 @@ export const PropStates = (): TemplateResult => {
   return html`
     <Story>
       <core-alert color="${select("Color", colors, "gray")}">
-        <core-icon slot="icon" icon="globe"></core-icon>
         A notification message of information.
       </core-alert>
     </Story>
@@ -27,10 +26,7 @@ export const PropStates = (): TemplateResult => {
 export const Default = (): TemplateResult => {
   return html`
     <Story>
-      <core-alert color="gray">
-        <core-icon slot="icon" icon="globe"></core-icon>
-        A notification message of information.
-      </core-alert>
+      <core-alert>A notification message of information.</core-alert>
     </Story>
   `;
 };

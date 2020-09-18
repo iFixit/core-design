@@ -5,10 +5,11 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { colorsAll, colorsPrimary, iconsAll, labelPosition } from "./global/script/global";
 export namespace Components {
     interface CoreAlert {
         /**
-          * Optional primary color of the element.
+          * Optional color of the element.
          */
         "color"?: "gray" | "green" | "yellow" | "red";
     }
@@ -97,52 +98,7 @@ export namespace Components {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "blue"
-    | "green"
-    | "yellow"
-    | "red"
-    | "white"
-    | "black"
-    | "blue-light-4"
-    | "blue-light-3"
-    | "blue-light-2"
-    | "blue-light-1"
-    | "blue-dark-1"
-    | "blue-dark-2"
-    | "blue-dark-3"
-    | "blue-dark-4"
-    | "green-light-4"
-    | "green-light-3"
-    | "green-light-2"
-    | "green-light-1"
-    | "green-dark-1"
-    | "green-dark-2"
-    | "green-dark-3"
-    | "green-dark-4"
-    | "yellow-light-4"
-    | "yellow-light-3"
-    | "yellow-light-2"
-    | "yellow-light-1"
-    | "yellow-dark-1"
-    | "yellow-dark-2"
-    | "yellow-dark-3"
-    | "yellow-dark-4"
-    | "red-light-4"
-    | "red-light-3"
-    | "red-light-2"
-    | "red-light-1"
-    | "red-dark-1"
-    | "red-dark-2"
-    | "red-dark-3"
-    | "red-dark-4"
-    | "gray-1"
-    | "gray-2"
-    | "gray-3"
-    | "gray-4"
-    | "gray-5"
-    | "gray-6"
-    | "gray-7"
-    | "gray-8";
+        "color"?: colorsAll;
         /**
           * If applied, the user cannot interact with the element.
          */
@@ -154,7 +110,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -204,151 +160,11 @@ export namespace Components {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "blue"
-    | "green"
-    | "yellow"
-    | "red"
-    | "white"
-    | "black"
-    | "blue-light-4"
-    | "blue-light-3"
-    | "blue-light-2"
-    | "blue-light-1"
-    | "blue-dark-1"
-    | "blue-dark-2"
-    | "blue-dark-3"
-    | "blue-dark-4"
-    | "green-light-4"
-    | "green-light-3"
-    | "green-light-2"
-    | "green-light-1"
-    | "green-dark-1"
-    | "green-dark-2"
-    | "green-dark-3"
-    | "green-dark-4"
-    | "yellow-light-4"
-    | "yellow-light-3"
-    | "yellow-light-2"
-    | "yellow-light-1"
-    | "yellow-dark-1"
-    | "yellow-dark-2"
-    | "yellow-dark-3"
-    | "yellow-dark-4"
-    | "red-light-4"
-    | "red-light-3"
-    | "red-light-2"
-    | "red-light-1"
-    | "red-dark-1"
-    | "red-dark-2"
-    | "red-dark-3"
-    | "red-dark-4"
-    | "gray-1"
-    | "gray-2"
-    | "gray-3"
-    | "gray-4"
-    | "gray-5"
-    | "gray-6"
-    | "gray-7"
-    | "gray-8"
-    | string;
+        "color"?: colorsAll | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
-        "icon"?: | "alert-circle"
-    | "alert-triangle"
-    | "alert-triangle-solid"
-    | "anchor"
-    | "archive"
-    | "arrow-down"
-    | "arrow-left"
-    | "arrow-right"
-    | "arrow-up"
-    | "bar"
-    | "bell"
-    | "bell-mute"
-    | "bell-solid"
-    | "bold"
-    | "bullet"
-    | "calendar"
-    | "camera"
-    | "caret-down"
-    | "caret-left"
-    | "caret-right"
-    | "caret-up"
-    | "cart"
-    | "cart-solid"
-    | "category"
-    | "check"
-    | "check-sm"
-    | "chevron-down"
-    | "chevron-left"
-    | "chevron-right"
-    | "chevron-up"
-    | "circle"
-    | "clipboard"
-    | "clock"
-    | "columns"
-    | "cross"
-    | "cross-sm"
-    | "disable"
-    | "dot"
-    | "download"
-    | "drag"
-    | "fast-forward"
-    | "film-camera"
-    | "gear"
-    | "globe"
-    | "grad"
-    | "grid"
-    | "heading"
-    | "heart"
-    | "help"
-    | "help-solid"
-    | "history"
-    | "hourglass"
-    | "image"
-    | "info"
-    | "italic"
-    | "layers"
-    | "link"
-    | "link-out"
-    | "list-bullet"
-    | "list-num"
-    | "logout"
-    | "mail"
-    | "mail-solid"
-    | "menu"
-    | "meter"
-    | "minus"
-    | "minus-box"
-    | "more"
-    | "paragraph"
-    | "pen"
-    | "pencil"
-    | "play"
-    | "plus"
-    | "plus-box"
-    | "quote"
-    | "redo"
-    | "refresh"
-    | "rewind"
-    | "rows"
-    | "search"
-    | "settings"
-    | "speech"
-    | "spinner"
-    | "star"
-    | "star-half"
-    | "star-solid"
-    | "strike"
-    | "toolbox"
-    | "trash"
-    | "underline"
-    | "undo"
-    | "user"
-    | "users"
-    | "video"
-    | string;
+        "icon"?: iconsAll | string;
         /**
           * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
@@ -378,52 +194,7 @@ export namespace Components {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "blue"
-    | "green"
-    | "yellow"
-    | "red"
-    | "white"
-    | "black"
-    | "blue-light-4"
-    | "blue-light-3"
-    | "blue-light-2"
-    | "blue-light-1"
-    | "blue-dark-1"
-    | "blue-dark-2"
-    | "blue-dark-3"
-    | "blue-dark-4"
-    | "green-light-4"
-    | "green-light-3"
-    | "green-light-2"
-    | "green-light-1"
-    | "green-dark-1"
-    | "green-dark-2"
-    | "green-dark-3"
-    | "green-dark-4"
-    | "yellow-light-4"
-    | "yellow-light-3"
-    | "yellow-light-2"
-    | "yellow-light-1"
-    | "yellow-dark-1"
-    | "yellow-dark-2"
-    | "yellow-dark-3"
-    | "yellow-dark-4"
-    | "red-light-4"
-    | "red-light-3"
-    | "red-light-2"
-    | "red-light-1"
-    | "red-dark-1"
-    | "red-dark-2"
-    | "red-dark-3"
-    | "red-dark-4"
-    | "gray-1"
-    | "gray-2"
-    | "gray-3"
-    | "gray-4"
-    | "gray-5"
-    | "gray-6"
-    | "gray-7"
-    | "gray-8";
+        "color"?: colorsAll;
         /**
           * If `true`, the user cannot interact with the element.
          */
@@ -454,11 +225,11 @@ export namespace Components {
         /**
           * Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
          */
-        "labeldisplay"?: "block" | "inline";
+        "labelDisplay"?: "block" | "inline";
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * Instructional placeholder text that shows before the element has a value.
          */
@@ -562,11 +333,7 @@ export namespace Components {
         /**
           * Color of the progress bar.
          */
-        "color"?: | "black"
-    | "blue"
-    | "green"
-    | "yellow"
-    | "red";
+        "color"?: colorsPrimary;
         /**
           * The progress bar maximum value.
          */
@@ -596,7 +363,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -610,11 +377,7 @@ export namespace Components {
         /**
           * Color of the spinner.
          */
-        "color"?: | "black"
-    | "red"
-    | "blue"
-    | "green"
-    | "yellow";
+        "color"?: colorsPrimary;
         /**
           * The pre-defined spinner size.
          */
@@ -642,13 +405,9 @@ export namespace Components {
          */
         "closable": boolean;
         /**
-          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+          * Optional color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "black"
-    | "blue"
-    | "green"
-    | "yellow"
-    | "red";
+        "color"?: colorsPrimary;
         /**
           * The pre-defined tag size.
          */
@@ -672,6 +431,18 @@ export namespace Components {
          */
         "getInputElement": () => Promise<HTMLTextAreaElement>;
         /**
+          * The label element associated with the element.
+         */
+        "label": string | undefined;
+        /**
+          * Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+         */
+        "labelDisplay"?: "block" | "inline";
+        /**
+          * The label element position.
+         */
+        "labelPosition"?: labelPosition;
+        /**
           * Instructional text that shows before the input has a value.
          */
         "placeholder"?: string | undefined;
@@ -690,7 +461,7 @@ export namespace Components {
     }
     interface CoreToast {
         /**
-          * Optional primary color of the toast. Defaults to `black`.
+          * Optional color of the toast. Defaults to `black`.
          */
         "color"?: "white" | "green" | "yellow" | "red";
     }
@@ -704,9 +475,9 @@ export namespace Components {
          */
         "checked": boolean;
         /**
-          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+          * Optional color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: "green" | "yellow" | "red" | "black";
+        "color"?: "green" | "yellow" | "red" | "black" | "blue";
         /**
           * If applied, the user cannot interact with the element.
          */
@@ -718,7 +489,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -894,7 +665,7 @@ declare global {
 declare namespace LocalJSX {
     interface CoreAlert {
         /**
-          * Optional primary color of the element.
+          * Optional color of the element.
          */
         "color"?: "gray" | "green" | "yellow" | "red";
     }
@@ -983,52 +754,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "blue"
-    | "green"
-    | "yellow"
-    | "red"
-    | "white"
-    | "black"
-    | "blue-light-4"
-    | "blue-light-3"
-    | "blue-light-2"
-    | "blue-light-1"
-    | "blue-dark-1"
-    | "blue-dark-2"
-    | "blue-dark-3"
-    | "blue-dark-4"
-    | "green-light-4"
-    | "green-light-3"
-    | "green-light-2"
-    | "green-light-1"
-    | "green-dark-1"
-    | "green-dark-2"
-    | "green-dark-3"
-    | "green-dark-4"
-    | "yellow-light-4"
-    | "yellow-light-3"
-    | "yellow-light-2"
-    | "yellow-light-1"
-    | "yellow-dark-1"
-    | "yellow-dark-2"
-    | "yellow-dark-3"
-    | "yellow-dark-4"
-    | "red-light-4"
-    | "red-light-3"
-    | "red-light-2"
-    | "red-light-1"
-    | "red-dark-1"
-    | "red-dark-2"
-    | "red-dark-3"
-    | "red-dark-4"
-    | "gray-1"
-    | "gray-2"
-    | "gray-3"
-    | "gray-4"
-    | "gray-5"
-    | "gray-6"
-    | "gray-7"
-    | "gray-8";
+        "color"?: colorsAll;
         /**
           * If applied, the user cannot interact with the element.
          */
@@ -1040,7 +766,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -1090,151 +816,11 @@ declare namespace LocalJSX {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "blue"
-    | "green"
-    | "yellow"
-    | "red"
-    | "white"
-    | "black"
-    | "blue-light-4"
-    | "blue-light-3"
-    | "blue-light-2"
-    | "blue-light-1"
-    | "blue-dark-1"
-    | "blue-dark-2"
-    | "blue-dark-3"
-    | "blue-dark-4"
-    | "green-light-4"
-    | "green-light-3"
-    | "green-light-2"
-    | "green-light-1"
-    | "green-dark-1"
-    | "green-dark-2"
-    | "green-dark-3"
-    | "green-dark-4"
-    | "yellow-light-4"
-    | "yellow-light-3"
-    | "yellow-light-2"
-    | "yellow-light-1"
-    | "yellow-dark-1"
-    | "yellow-dark-2"
-    | "yellow-dark-3"
-    | "yellow-dark-4"
-    | "red-light-4"
-    | "red-light-3"
-    | "red-light-2"
-    | "red-light-1"
-    | "red-dark-1"
-    | "red-dark-2"
-    | "red-dark-3"
-    | "red-dark-4"
-    | "gray-1"
-    | "gray-2"
-    | "gray-3"
-    | "gray-4"
-    | "gray-5"
-    | "gray-6"
-    | "gray-7"
-    | "gray-8"
-    | string;
+        "color"?: colorsAll | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
-        "icon"?: | "alert-circle"
-    | "alert-triangle"
-    | "alert-triangle-solid"
-    | "anchor"
-    | "archive"
-    | "arrow-down"
-    | "arrow-left"
-    | "arrow-right"
-    | "arrow-up"
-    | "bar"
-    | "bell"
-    | "bell-mute"
-    | "bell-solid"
-    | "bold"
-    | "bullet"
-    | "calendar"
-    | "camera"
-    | "caret-down"
-    | "caret-left"
-    | "caret-right"
-    | "caret-up"
-    | "cart"
-    | "cart-solid"
-    | "category"
-    | "check"
-    | "check-sm"
-    | "chevron-down"
-    | "chevron-left"
-    | "chevron-right"
-    | "chevron-up"
-    | "circle"
-    | "clipboard"
-    | "clock"
-    | "columns"
-    | "cross"
-    | "cross-sm"
-    | "disable"
-    | "dot"
-    | "download"
-    | "drag"
-    | "fast-forward"
-    | "film-camera"
-    | "gear"
-    | "globe"
-    | "grad"
-    | "grid"
-    | "heading"
-    | "heart"
-    | "help"
-    | "help-solid"
-    | "history"
-    | "hourglass"
-    | "image"
-    | "info"
-    | "italic"
-    | "layers"
-    | "link"
-    | "link-out"
-    | "list-bullet"
-    | "list-num"
-    | "logout"
-    | "mail"
-    | "mail-solid"
-    | "menu"
-    | "meter"
-    | "minus"
-    | "minus-box"
-    | "more"
-    | "paragraph"
-    | "pen"
-    | "pencil"
-    | "play"
-    | "plus"
-    | "plus-box"
-    | "quote"
-    | "redo"
-    | "refresh"
-    | "rewind"
-    | "rows"
-    | "search"
-    | "settings"
-    | "speech"
-    | "spinner"
-    | "star"
-    | "star-half"
-    | "star-solid"
-    | "strike"
-    | "toolbox"
-    | "trash"
-    | "underline"
-    | "undo"
-    | "user"
-    | "users"
-    | "video"
-    | string;
+        "icon"?: iconsAll | string;
         /**
           * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
@@ -1264,52 +850,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "blue"
-    | "green"
-    | "yellow"
-    | "red"
-    | "white"
-    | "black"
-    | "blue-light-4"
-    | "blue-light-3"
-    | "blue-light-2"
-    | "blue-light-1"
-    | "blue-dark-1"
-    | "blue-dark-2"
-    | "blue-dark-3"
-    | "blue-dark-4"
-    | "green-light-4"
-    | "green-light-3"
-    | "green-light-2"
-    | "green-light-1"
-    | "green-dark-1"
-    | "green-dark-2"
-    | "green-dark-3"
-    | "green-dark-4"
-    | "yellow-light-4"
-    | "yellow-light-3"
-    | "yellow-light-2"
-    | "yellow-light-1"
-    | "yellow-dark-1"
-    | "yellow-dark-2"
-    | "yellow-dark-3"
-    | "yellow-dark-4"
-    | "red-light-4"
-    | "red-light-3"
-    | "red-light-2"
-    | "red-light-1"
-    | "red-dark-1"
-    | "red-dark-2"
-    | "red-dark-3"
-    | "red-dark-4"
-    | "gray-1"
-    | "gray-2"
-    | "gray-3"
-    | "gray-4"
-    | "gray-5"
-    | "gray-6"
-    | "gray-7"
-    | "gray-8";
+        "color"?: colorsAll;
         /**
           * If `true`, the user cannot interact with the element.
          */
@@ -1340,11 +881,11 @@ declare namespace LocalJSX {
         /**
           * Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
          */
-        "labeldisplay"?: "block" | "inline";
+        "labelDisplay"?: "block" | "inline";
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * Instructional placeholder text that shows before the element has a value.
          */
@@ -1448,11 +989,7 @@ declare namespace LocalJSX {
         /**
           * Color of the progress bar.
          */
-        "color"?: | "black"
-    | "blue"
-    | "green"
-    | "yellow"
-    | "red";
+        "color"?: colorsPrimary;
         /**
           * The progress bar maximum value.
          */
@@ -1482,7 +1019,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -1496,11 +1033,7 @@ declare namespace LocalJSX {
         /**
           * Color of the spinner.
          */
-        "color"?: | "black"
-    | "red"
-    | "blue"
-    | "green"
-    | "yellow";
+        "color"?: colorsPrimary;
         /**
           * The pre-defined spinner size.
          */
@@ -1528,13 +1061,9 @@ declare namespace LocalJSX {
          */
         "closable"?: boolean;
         /**
-          * Optional primary color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+          * Optional color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: | "black"
-    | "blue"
-    | "green"
-    | "yellow"
-    | "red";
+        "color"?: colorsPrimary;
         /**
           * The pre-defined tag size.
          */
@@ -1554,6 +1083,18 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * The label element associated with the element.
+         */
+        "label"?: string | undefined;
+        /**
+          * Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+         */
+        "labelDisplay"?: "block" | "inline";
+        /**
+          * The label element position.
+         */
+        "labelPosition"?: labelPosition;
+        /**
           * Instructional text that shows before the input has a value.
          */
         "placeholder"?: string | undefined;
@@ -1572,7 +1113,7 @@ declare namespace LocalJSX {
     }
     interface CoreToast {
         /**
-          * Optional primary color of the toast. Defaults to `black`.
+          * Optional color of the toast. Defaults to `black`.
          */
         "color"?: "white" | "green" | "yellow" | "red";
     }
@@ -1586,9 +1127,9 @@ declare namespace LocalJSX {
          */
         "checked"?: boolean;
         /**
-          * Optional primary color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+          * Optional color of the icon. Defaults to `blue`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: "green" | "yellow" | "red" | "black";
+        "color"?: "green" | "yellow" | "red" | "black" | "blue";
         /**
           * If applied, the user cannot interact with the element.
          */
@@ -1600,7 +1141,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelposition"?: "left" | "right";
+        "labelPosition"?: labelPosition;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */

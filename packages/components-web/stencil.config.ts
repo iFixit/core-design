@@ -6,7 +6,6 @@ import { reactOutputTarget } from "@stencil/react-output-target";
 
 export const config: Config = {
   namespace: "components",
-  globalStyle: "src/assets/less/global.css",
   taskQueue: "async",
   outputTargets: [
     reactOutputTarget({
@@ -16,7 +15,7 @@ export const config: Config = {
     {
       type: "dist",
       esmLoaderPath: "../loader",
-      copy: [{ src: "assets" }],
+      copy: [{ src: "global" }],
     },
     {
       type: "docs-readme",
@@ -34,6 +33,7 @@ export const config: Config = {
   ],
   plugins: [
     less({
+      injectGlobalPaths: ["src/global/style/global.less"],
       plugins: [
         new LessPluginAutoPrefix({
           browsers: ["last 3 versions"],

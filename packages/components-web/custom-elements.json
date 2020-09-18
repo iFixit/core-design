@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-09-16T18:13:55",
+  "timestamp": "2020-09-18T05:08:15",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.15.0",
@@ -22,7 +22,7 @@
           "mutable": false,
           "attr": "color",
           "reflectToAttr": true,
-          "docs": "Optional primary color of the element.",
+          "docs": "Optional color of the element.",
           "docsTags": [],
           "default": "\"gray\"",
           "values": [
@@ -45,7 +45,7 @@
           ],
           "optional": true,
           "required": false,
-          "description": "Optional primary color of the element."
+          "description": "Optional color of the element."
         }
       ],
       "methods": [],
@@ -797,10 +797,10 @@
           "description": "The label element associated with the element."
         },
         {
-          "name": "labelposition",
+          "name": "labelPosition",
           "type": "\"left\" | \"right\"",
           "mutable": false,
-          "attr": "labelposition",
+          "attr": "label-position",
           "reflectToAttr": true,
           "docs": "The label element position.",
           "docsTags": [],
@@ -1247,7 +1247,7 @@
         },
         {
           "name": "color",
-          "type": "\"green\" | \"yellow\" | \"red\" | \"black\" | \"blue\" | \"white\" | \"blue-light-4\" | \"blue-light-3\" | \"blue-light-2\" | \"blue-light-1\" | \"blue-dark-1\" | \"blue-dark-2\" | \"blue-dark-3\" | \"blue-dark-4\" | \"green-light-4\" | \"green-light-3\" | \"green-light-2\" | \"green-light-1\" | \"green-dark-1\" | \"green-dark-2\" | \"green-dark-3\" | \"green-dark-4\" | \"yellow-light-4\" | \"yellow-light-3\" | \"yellow-light-2\" | \"yellow-light-1\" | \"yellow-dark-1\" | \"yellow-dark-2\" | \"yellow-dark-3\" | \"yellow-dark-4\" | \"red-light-4\" | \"red-light-3\" | \"red-light-2\" | \"red-light-1\" | \"red-dark-1\" | \"red-dark-2\" | \"red-dark-3\" | \"red-dark-4\" | \"gray-1\" | \"gray-2\" | \"gray-3\" | \"gray-4\" | \"gray-5\" | \"gray-6\" | \"gray-7\" | \"gray-8\"",
+          "type": "\"blue\" | \"green\" | \"yellow\" | \"red\" | \"white\" | \"black\" | \"blue-light-4\" | \"blue-light-3\" | \"blue-light-2\" | \"blue-light-1\" | \"blue-dark-1\" | \"blue-dark-2\" | \"blue-dark-3\" | \"blue-dark-4\" | \"green-light-4\" | \"green-light-3\" | \"green-light-2\" | \"green-light-1\" | \"green-dark-1\" | \"green-dark-2\" | \"green-dark-3\" | \"green-dark-4\" | \"yellow-light-4\" | \"yellow-light-3\" | \"yellow-light-2\" | \"yellow-light-1\" | \"yellow-dark-1\" | \"yellow-dark-2\" | \"yellow-dark-3\" | \"yellow-dark-4\" | \"red-light-4\" | \"red-light-3\" | \"red-light-2\" | \"red-light-1\" | \"red-dark-1\" | \"red-dark-2\" | \"red-dark-3\" | \"red-dark-4\" | \"gray-1\" | \"gray-2\" | \"gray-3\" | \"gray-4\" | \"gray-5\" | \"gray-6\" | \"gray-7\" | \"gray-8\"",
           "mutable": false,
           "attr": "color",
           "reflectToAttr": false,
@@ -1255,6 +1255,10 @@
           "docsTags": [],
           "default": "\"gray-8\"",
           "values": [
+            {
+              "value": "blue",
+              "type": "string"
+            },
             {
               "value": "green",
               "type": "string"
@@ -1268,15 +1272,11 @@
               "type": "string"
             },
             {
-              "value": "black",
-              "type": "string"
-            },
-            {
-              "value": "blue",
-              "type": "string"
-            },
-            {
               "value": "white",
+              "type": "string"
+            },
+            {
+              "value": "black",
               "type": "string"
             },
             {
@@ -1561,10 +1561,10 @@
           "description": "The label element associated with the element."
         },
         {
-          "name": "labeldisplay",
+          "name": "labelDisplay",
           "type": "\"block\" | \"inline\"",
           "mutable": false,
-          "attr": "labeldisplay",
+          "attr": "label-display",
           "reflectToAttr": false,
           "docs": "Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).",
           "docsTags": [],
@@ -1584,14 +1584,14 @@
           "description": "Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)."
         },
         {
-          "name": "labelposition",
+          "name": "labelPosition",
           "type": "\"left\" | \"right\"",
           "mutable": false,
-          "attr": "labelposition",
+          "attr": "label-position",
           "reflectToAttr": true,
           "docs": "The label element position.",
           "docsTags": [],
-          "default": "\"left\"",
+          "default": "\"right\"",
           "values": [
             {
               "value": "left",
@@ -2058,10 +2058,10 @@
           "description": "The label element associated with the element."
         },
         {
-          "name": "labelposition",
+          "name": "labelPosition",
           "type": "\"left\" | \"right\"",
           "mutable": false,
-          "attr": "labelposition",
+          "attr": "label-position",
           "reflectToAttr": true,
           "docs": "The label element position.",
           "docsTags": [],
@@ -2342,7 +2342,7 @@
           "mutable": false,
           "attr": "color",
           "reflectToAttr": true,
-          "docs": "Optional primary color of the tag. Defaults to `black`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.",
+          "docs": "Optional color of the tag. Defaults to `black`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.",
           "docsTags": [],
           "default": "\"black\"",
           "values": [
@@ -2369,7 +2369,7 @@
           ],
           "optional": true,
           "required": false,
-          "description": "Optional primary color of the tag. Defaults to `black`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`."
+          "description": "Optional color of the tag. Defaults to `black`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`."
         },
         {
           "name": "size",
@@ -2478,6 +2478,69 @@
           "description": "If `true`, the user cannot interact with the textarea."
         },
         {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The label element associated with the element.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The label element associated with the element."
+        },
+        {
+          "name": "labelDisplay",
+          "type": "\"block\" | \"inline\"",
+          "mutable": false,
+          "attr": "label-display",
+          "reflectToAttr": false,
+          "docs": "Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).",
+          "docsTags": [],
+          "default": "\"block\"",
+          "values": [
+            {
+              "value": "block",
+              "type": "string"
+            },
+            {
+              "value": "inline",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)."
+        },
+        {
+          "name": "labelPosition",
+          "type": "\"left\" | \"right\"",
+          "mutable": false,
+          "attr": "label-position",
+          "reflectToAttr": true,
+          "docs": "The label element position.",
+          "docsTags": [],
+          "default": "\"right\"",
+          "values": [
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The label element position."
+        },
+        {
           "name": "placeholder",
           "type": "string",
           "mutable": false,
@@ -2584,7 +2647,7 @@
           "mutable": false,
           "attr": "color",
           "reflectToAttr": true,
-          "docs": "Optional primary color of the toast. Defaults to `black`.",
+          "docs": "Optional color of the toast. Defaults to `black`.",
           "docsTags": [],
           "default": "\"white\"",
           "values": [
@@ -2607,7 +2670,7 @@
           ],
           "optional": true,
           "required": false,
-          "description": "Optional primary color of the toast. Defaults to `black`."
+          "description": "Optional color of the toast. Defaults to `black`."
         }
       ],
       "methods": [],
@@ -2672,16 +2735,20 @@
         },
         {
           "name": "color",
-          "type": "\"black\" | \"green\" | \"red\" | \"yellow\"",
+          "type": "\"black\" | \"blue\" | \"green\" | \"red\" | \"yellow\"",
           "mutable": false,
           "attr": "color",
           "reflectToAttr": false,
-          "docs": "Optional primary color of the icon. Defaults to `blue`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.",
+          "docs": "Optional color of the icon. Defaults to `blue`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.",
           "docsTags": [],
-          "default": "\"black\"",
+          "default": "\"blue\"",
           "values": [
             {
               "value": "black",
+              "type": "string"
+            },
+            {
+              "value": "blue",
               "type": "string"
             },
             {
@@ -2699,7 +2766,7 @@
           ],
           "optional": true,
           "required": false,
-          "description": "Optional primary color of the icon. Defaults to `blue`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`."
+          "description": "Optional color of the icon. Defaults to `blue`.\nUse the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`."
         },
         {
           "name": "disabled",
@@ -2737,10 +2804,10 @@
           "description": "The label element associated with the element."
         },
         {
-          "name": "labelposition",
+          "name": "labelPosition",
           "type": "\"left\" | \"right\"",
           "mutable": false,
-          "attr": "labelposition",
+          "attr": "label-position",
           "reflectToAttr": true,
           "docs": "The label element position.",
           "docsTags": [],

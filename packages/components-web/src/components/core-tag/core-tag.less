@@ -1,9 +1,4 @@
-@import "../../assets/less/global.css";
-@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-
-@text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
-
-// :host targets the custom element compiled by Stencil
+// `:host` targets the custom element compiled by Stencil
 :host {
   display: inline-flex;
 
@@ -34,10 +29,6 @@
     .closable {
       color: fade(@color-gray-8, 25%);
     }
-  }
-
-  &([closable="false"]) .closable {
-    display: none;
   }
 
   // @Prop color
@@ -109,6 +100,10 @@
     .closable {
       margin-top: -1px;
     }
+  }
+
+  core-icon {
+    cursor: pointer;
   }
 }
 

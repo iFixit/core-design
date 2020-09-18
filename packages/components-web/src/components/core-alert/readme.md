@@ -5,9 +5,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                            | Type                                     | Default  |
-| -------- | --------- | -------------------------------------- | ---------------------------------------- | -------- |
-| `color`  | `color`   | Optional primary color of the element. | `"gray" \| "green" \| "red" \| "yellow"` | `"gray"` |
+| Property | Attribute | Description                    | Type                                     | Default  |
+| -------- | --------- | ------------------------------ | ---------------------------------------- | -------- |
+| `color`  | `color`   | Optional color of the element. | `"gray" \| "green" \| "red" \| "yellow"` | `"gray"` |
 
 
 ----------------------------------------------

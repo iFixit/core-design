@@ -16,7 +16,7 @@ export class Alert implements ComponentInterface {
   @Element() el!: HTMLCoreAlertElement;
 
   /**
-   * Optional primary color of the element.
+   * Optional color of the element.
    */
   @Prop({ reflect: true }) color?: "gray" | "green" | "yellow" | "red" = "gray";
 
@@ -25,7 +25,7 @@ export class Alert implements ComponentInterface {
       <Host class={{ "core-alert": true }}>
         <div class="native-element">
           <div class="icon-outter">
-            {this.color == "gray" ? (
+            {this.color == "gray" && (
               <svg
                 id="globe"
                 width="16"
@@ -41,10 +41,8 @@ export class Alert implements ComponentInterface {
                   fill="currentColor"
                 />
               </svg>
-            ) : (
-              undefined
             )}
-            {this.color == "green" ? (
+            {this.color == "green" && (
               <svg
                 id="check"
                 width="16"
@@ -60,10 +58,8 @@ export class Alert implements ComponentInterface {
                   fill="currentColor"
                 />
               </svg>
-            ) : (
-              undefined
             )}
-            {this.color == "yellow" || "red" ? (
+            {this.color == "yellow" && (
               <svg
                 id="alert-circle"
                 width="16"
@@ -79,8 +75,23 @@ export class Alert implements ComponentInterface {
                   fill="currentColor"
                 />
               </svg>
-            ) : (
-              undefined
+            )}
+            {this.color == "red" && (
+              <svg
+                id="alert-circle"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16ZM8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14ZM9 11C9 11.5523 8.55229 12 8 12C7.44772 12 7 11.5523 7 11C7 10.4477 7.44772 10 8 10C8.55229 10 9 10.4477 9 11ZM9 8C9 8.55229 8.55229 9 8 9C7.44772 9 7 8.55229 7 8V5C7 4.44772 7.44772 4 8 4C8.55229 4 9 4.44772 9 5V8Z"
+                  fill="currentColor"
+                />
+              </svg>
             )}
           </div>
           <slot></slot>

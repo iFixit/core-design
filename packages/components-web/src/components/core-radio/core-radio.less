@@ -1,9 +1,4 @@
-@import "../../assets/less/global.css";
-@import (reference) "https://unpkg.com/@core-ds/primitives/core-primitives.less";
-
-@space-large: 20px;
-
-// :host targets the custom element compiled by Stencil
+// `:host` targets the custom element compiled by Stencil
 :host {
   color: inherit;
   display: inline-flex;
@@ -43,8 +38,8 @@
     }
   }
 
-  // @Prop labelposition
-  &([labelposition="right"]) {
+  // @Prop labelPosition
+  &([labelPosition="right"]) {
     .label-outer {
       margin-left: @space-2;
     }
@@ -54,7 +49,7 @@
     }
   }
 
-  &([labelposition="left"]) {
+  &([labelPosition="left"]) {
     .label-outer {
       margin-right: @space-2;
     }
