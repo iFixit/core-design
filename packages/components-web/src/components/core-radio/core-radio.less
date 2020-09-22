@@ -1,0 +1,120 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  color: inherit;
+  display: inline-flex;
+
+  // @Prop disabled
+  &([disabled]):not([disabled="false"]),
+  &([disabled="true"]) {
+    label {
+      color: @color-gray-4;
+    }
+
+    .native-element {
+      background-color: @color-gray-1;
+      box-shadow: 0 0 0 0 transparent inset;
+      color: inherit;
+      cursor: not-allowed;
+    }
+  }
+
+  // @Prop size
+  &([size="large"]) {
+    label {
+      font-size: @font-size-2;
+    }
+
+    .native-element {
+      height: @space-large;
+      width: @space-large;
+
+      &:checked:not(:disabled) {
+        box-shadow: 0 0 0 5px @color-blue inset;
+      }
+
+      &:checked:disabled {
+        box-shadow: 0 0 0 5px @color-blue-light-3 inset;
+      }
+    }
+  }
+
+  // @Prop labelPosition
+  &([labelPosition="right"]) {
+    .label-outer {
+      margin-left: @space-2;
+    }
+
+    input {
+      order: -1;
+    }
+  }
+
+  &([labelPosition="left"]) {
+    .label-outer {
+      margin-right: @space-2;
+    }
+  }
+}
+
+.radio-outer {
+  align-items: center;
+  display: flex;
+}
+
+.radio-outer,
+.native-element,
+label {
+  cursor: pointer;
+}
+
+label {
+  color: @color-gray-8;
+  transition: color 0.12s ease-in-out;
+}
+
+.native-element {
+  background-color: @color-white;
+  border: 1px solid @color-gray-3;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 transparent inset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  height: @space-4;
+  margin: 0;
+  outline: none;
+  transition: box-shadow 0.12s ease-in-out;
+  width: @space-4;
+
+  &:checked:not(:disabled) {
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 4px @color-blue inset;
+    }
+  }
+
+  &:disabled:not(:checked) {
+    background-color: @color-gray-1;
+    border-color: @color-gray-1;
+    color: @color-gray-4;
+    cursor: not-allowed;
+  }
+
+  &:checked:disabled {
+    border-color: @color-blue-light-3;
+    box-shadow: 0 0 0 4px @color-blue-light-3 inset;
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .native-element {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:checked {
+      border-color: @color-blue-dark-1;
+      box-shadow: 0 0 0 4px @color-blue inset;
+    }
+  }
+}

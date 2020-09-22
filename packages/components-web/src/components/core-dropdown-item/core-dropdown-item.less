@@ -1,0 +1,30 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  color: inherit;
+  display: flex;
+  white-space: inherit;
+
+  & > div,
+  & > a {
+    box-sizing: border-box;
+    color: @color-gray-8;
+    display: flex;
+    padding: @space-2 @space-4;
+    width: 100%;
+  }
+
+  & > a {
+    background-color: transparent;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: @color-gray-1;
+    }
+  }
+
+  slot[name="icon"]:not(:empty) {
+    display: inline-flex;
+    margin-right: @space-2;
+  }
+}

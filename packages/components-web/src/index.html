@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      icon="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Core Design System</title>
+
+    <style>
+      html {
+        font: 14px/1.142857 "Inter Var", -apple-system, BlinkMacSystemFont,
+          Segoe UI, Helvetica, Arial, sans-serif;
+        font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on,
+          "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
+        min-height: 100vh;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: auto;
+      }
+      body {
+        display: flex;
+        min-height: 100vh;
+      }
+      div {
+        margin: auto;
+        text-align: center;
+      }
+      code {
+        background-color: lightcoral;
+        padding: 4px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>
+        <a
+          href="https://github.com/iFixit/core-design/blob/master/readme.md#local-development"
+          >Use Storybook Instead</a
+        >
+      </h1>
+      <code>lerna run storybook</code>
+    </div>
+  </body>
+</html>

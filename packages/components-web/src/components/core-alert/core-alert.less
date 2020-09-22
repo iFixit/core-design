@@ -1,0 +1,61 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  display: flex;
+
+  // @Prop color
+  &([color="gray"]) .native-element {
+    background-color: @color-gray-1;
+    color: rgba(0, 3, 6, 0.87);
+
+    .icon-outer {
+      color: @color-gray-5;
+    }
+  }
+
+  &([color="green"]) .native-element {
+    background-color: @color-green-light-4;
+    color: @color-green-dark-2;
+
+    .icon-outer {
+      color: @color-green;
+    }
+  }
+
+  &([color="yellow"]) .native-element {
+    background-color: @color-yellow-light-4;
+    color: @color-yellow-dark-3;
+
+    .icon-outer {
+      color: @color-yellow;
+    }
+  }
+
+  &([color="red"]) .native-element {
+    background-color: @color-red-light-4;
+    color: @color-red-dark-2;
+
+    .icon-outer {
+      color: @color-red;
+    }
+  }
+
+  .icon-outer {
+    align-self: center;
+    height: @space-4;
+    margin-right: @space-4;
+  }
+}
+
+// native element styles with intentional lower specificity
+.native-element {
+  border-radius: @border-radius-md;
+  box-sizing: border-box;
+  display: flex;
+  font: inherit;
+  line-height: 16px;
+  max-width: 100%;
+  min-height: 44px;
+  min-width: 565px;
+  padding: 14px 16px;
+  width: inherit;
+}

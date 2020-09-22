@@ -1,0 +1,98 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  display: inline-flex;
+
+  // @Prop disabled
+  &([disabled]):not([disabled="false"]),
+  &([disabled="true"]) {
+    core-icon,
+    label {
+      color: @color-gray-4 !important;
+    }
+  }
+
+  // @Prop labelDisplay
+  &([labelDisplay="block"]) {
+    .textarea-outer {
+      display: block;
+    }
+
+    .label-outer {
+      margin-bottom: @space-2;
+    }
+  }
+
+  &([labelDisplay="inline"]) {
+    .textarea-outer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .label-outer {
+      align-self: center;
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+
+  // @Prop labelpostion
+  &([labelPosition="left"]) .label-outer {
+    margin-right: @space-2;
+  }
+
+  // @Prop labelDisplay + labelpostion
+  &([labelDisplay="inline"][labelPosition="right"]) {
+    .textarea-outer {
+      flex-direction: row-reverse;
+    }
+
+    .label-outer {
+      margin-left: @space-2;
+    }
+  }
+
+  &([labelDisplay="block"][labelPosition="right"]) {
+    .label-outer {
+      justify-content: flex-end;
+    }
+  }
+}
+
+
+.textarea-outer,
+.native-element,
+label {
+  cursor: pointer;
+}
+
+.label-outer {
+  display: flex;
+}
+
+label {
+  color: @color-gray-8;
+  transition: color 0.12s ease-in-out;
+}
+
+.native-element {
+  border: 1px solid @color-gray-3;
+  border-radius: @space-1;
+  box-shadow: 0 0 0 0 transparent;
+  box-sizing: border-box;
+  color: @color-gray-8;
+  font: inherit;
+  outline: none;
+  padding: @space-3 @space-4;
+  transition: box-shadow 0.12s ease-in-out;
+  width: inherit;
+
+  &::placeholder {
+    color: @color-gray-4;
+  }
+
+  &:focus,
+  &:active {
+    border-color: @color-gray-5;
+    box-shadow: @focus-box-shadow;
+  }
+}

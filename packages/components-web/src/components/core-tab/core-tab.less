@@ -1,0 +1,81 @@
+// `shadow: false' is set in `core-tab.tsx`, so we target the custom-element selector directly instead of `:host` and remove the LESS selector wrapping parenthesis for targeting in shadow-dom
+core-tab {
+  display: flex;
+  line-height: inherit;
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-right: 28px;
+  }
+
+  &[active],
+  .native-element:hover {
+    &::after {
+      content: "";
+      background-color: transparent;
+      border-radius: calc(@tab-line-height / 2);
+      height: @tab-line-height;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .native-element:hover {
+    color: @color-gray-7;
+    cursor: pointer;
+
+    &::after {
+      background-color: @color-gray-4;
+    }
+  }
+
+  &[active] {
+    &::after {
+      background-color: @color-blue;
+    }
+
+    .native-element {
+      color: @color-blue;
+    }
+  }
+
+  &[disabled] .native-element {
+    color: @color-gray-3;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      color: @color-gray-3;
+      cursor: not-allowed;
+    }
+  }
+
+  .native-element {
+    color: @color-gray-5;
+    display: flex;
+    padding-right: @space-2;
+    padding-left: @space-2;
+    text-align: center;
+  }
+}
+
+core-tab-group[size="small"] core-tab {
+  &.active::after,
+  &[active]::after {
+    height: 2px;
+  }
+
+  .native-element {
+    padding-right: 0;
+    padding-left: 0;
+
+    &:hover::after {
+      height: 2px;
+    }
+  }
+}
