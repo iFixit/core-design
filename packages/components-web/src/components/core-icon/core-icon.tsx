@@ -9,7 +9,7 @@ import {
   Watch,
   h,
 } from "@stencil/core";
-import { colorsAll, iconsAll } from "../../global/script/global";
+import { colorsAll, iconsAll } from "../../assets/script/global";
 import { getSvgContent, ioniconContent } from "./request";
 import { getName, getUrl } from "./utils";
 

@@ -6,7 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
-import { colorsPrimary } from "../../global/script/global";
+import { colorsPrimary } from "../../assets/script/global";
 
 @Component({
   tag: "core-tag",

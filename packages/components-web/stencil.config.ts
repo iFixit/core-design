@@ -15,7 +15,7 @@ export const config: Config = {
     {
       type: "dist",
       esmLoaderPath: "../loader",
-      copy: [{ src: "global" }],
+      copy: [{ src: "assets" }],
     },
     {
       type: "docs-readme",
@@ -33,7 +33,7 @@ export const config: Config = {
   ],
   plugins: [
     less({
-      injectGlobalPaths: ["src/global/style/global.less"],
+      injectGlobalPaths: ["src/assets/style/global.less"],
       plugins: [
         new LessPluginAutoPrefix({
           browsers: ["last 3 versions"],

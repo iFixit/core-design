@@ -9,7 +9,7 @@ import {
   Method,
   h,
 } from "@stencil/core";
-import { labelPosition } from "../../global/script/global";
+import { labelPosition } from "../../assets/script/global";
 
 @Component({
   tag: "core-textarea",
