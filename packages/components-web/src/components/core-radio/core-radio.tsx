@@ -6,7 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
-import { labelPosition } from "../../global/script/global";
+import { labelPosition } from "../../assets/script/global";
 
 @Component({
   tag: "core-radio",

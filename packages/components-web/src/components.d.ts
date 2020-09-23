@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { colorsAll, colorsPrimary, iconsAll, labelPosition } from "./global/script/global";
+import { colorsAll, colorsPrimary, iconsAll, labelPosition } from "./assets/script/global";
 export namespace Components {
     interface CoreAlert {
         /**

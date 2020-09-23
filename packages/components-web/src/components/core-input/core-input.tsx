@@ -8,7 +8,7 @@ import {
   State,
   h,
 } from "@stencil/core";
-import { colorsAll, labelPosition } from "../../global/script/global";
+import { colorsAll, labelPosition } from "../../assets/script/global";
 
 @Component({
   tag: "core-input",
