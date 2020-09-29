@@ -1,0 +1,22 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  display: grid;
+  grid-gap: @space-6;
+  grid-template-columns: repeat(4, auto);
+}
+
+.color {
+  color: @color-gray-8;
+  text-align: center;
+}
+
+.color-swatch {
+  box-shadow: 0 0 0 1px @color-gray-1;
+  height: @space-9;
+  margin-bottom: @space-2;
+  width: 100%;
+}
+
+.color-name {
+  margin-bottom: @space-1;
+}

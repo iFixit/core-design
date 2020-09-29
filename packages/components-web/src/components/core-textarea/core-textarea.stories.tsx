@@ -22,8 +22,8 @@ export const PropStates = (): TemplateResult => {
       cols="${number("Columns", 50)}"
       disabled="${boolean("Disabled", false)}"
       label=${text("Label", "Label")}
-      labelDisplay=${select("Label Display", labelDisplays, "block")}
-      labelPosition=${select("Label Position", labelPositions, "left")}
+      label-display=${select("Label Display", labelDisplays, "block")}
+      label-position=${select("Label Position", labelPositions, "left")}
       placeholder="${text("Placeholder", "Placeholder")}"
       required="${boolean("Required", false)}"
       rows="${number("Rows", 10)}"

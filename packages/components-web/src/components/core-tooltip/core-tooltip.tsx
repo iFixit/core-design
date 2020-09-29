@@ -5,7 +5,7 @@ import { Component, Prop, h, JSX, ComponentInterface } from "@stencil/core";
   styleUrl: "core-tooltip.less",
   shadow: true,
 })
-export class tooltip implements ComponentInterface {
+export class Tooltip implements ComponentInterface {
   /**
    * The tooltip visibility
    */

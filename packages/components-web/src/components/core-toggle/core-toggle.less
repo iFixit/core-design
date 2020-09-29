@@ -6,7 +6,7 @@
   display: inline-flex;
 
   // @Prop disabled
-  &([disabled]):not([disabled="false"]),
+  &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
     label {
       color: @color-gray-4;
@@ -42,8 +42,8 @@
     }
   }
 
-  // @Prop labelPosition
-  &([labelPosition="right"]) {
+  // @Prop labelPositionProps
+  &([label-position="right"]) {
     .label-outer {
       margin-left: @space-2;
     }
@@ -53,7 +53,7 @@
     }
   }
 
-  &([labelPosition="left"]) {
+  &([label-position="left"]) {
     .label-outer {
       margin-right: @space-2;
     }

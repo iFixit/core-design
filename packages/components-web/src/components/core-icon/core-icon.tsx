@@ -9,8 +9,8 @@ import {
   Watch,
   h,
 } from "@stencil/core";
-import { colorsAll, iconsAll } from "../../assets/script/global";
-import { getSvgContent, ioniconContent } from "./request";
+import { colorPropsAll, iconPropsAll } from "../../assets/script/global";
+import { getSvgContent, iconContent } from "./request";
 import { getName, getUrl } from "./utils";
 
 @Component({
@@ -35,14 +35,14 @@ export class Icon {
    * Optional color of the icon.
    * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    */
-  @Prop() color?: colorsAll | string;
+  @Prop() color?: colorPropsAll | string;
 
   /**
    * A combination of both `name` and `src`. If a `src` url is detected
    * it will set the `src` property. Otherwise it assumes it's a built-in named
    * SVG and set the `name` property.
    */
-  @Prop() icon?: iconsAll | string;
+  @Prop() icon?: iconPropsAll | string;
 
   /**
    * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
@@ -121,13 +121,13 @@ export class Icon {
       const url = getUrl(this);
       // eslint-disable-next-line @stencil/strict-boolean-conditions
       if (url) {
-        if (ioniconContent.has(url)) {
+        if (iconContent.has(url)) {
           // sync if it's already loaded
-          this.svgContent = ioniconContent.get(url);
+          this.svgContent = iconContent.get(url);
         } else {
           // async if it hasn't been loaded
           getSvgContent(url).then(
-            () => (this.svgContent = ioniconContent.get(url))
+            () => (this.svgContent = iconContent.get(url))
           );
         }
       }

@@ -103,7 +103,7 @@ const icons = {
   video: "video",
 };
 
-const inputkeyboards = {
+const inputKeyboards = {
   none: "none",
   text: "text",
   tel: "tel",
@@ -131,10 +131,10 @@ export const PropStates = (): TemplateResult => {
       disabled=${boolean("Disabled", false)}
       error=${boolean("Error", false)}
       icon="${select("Icon", icons, "search")}"
-      inputkeyboard=${select("Inputkeyboard", inputkeyboards, "none")}
+      input-keyboard=${select("InputKeyboard", inputKeyboards, "none")}
       label=${text("Label", "Label")}
-      labelDisplay=${select("Label Display", labelDisplays, "block")}
-      labelPosition=${select("Label Position", labelPositions, "left")}
+      label-display=${select("Label Display", labelDisplays, "block")}
+      label-position=${select("Label Position", labelPositions, "left")}
       placeholder=${text("Placeholder", "Placeholder")}
       required=${boolean("Required", false)}
       success=${boolean("Success", false)}

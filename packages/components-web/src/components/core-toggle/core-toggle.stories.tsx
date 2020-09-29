@@ -37,7 +37,7 @@ export const PropStates = (): TemplateResult => {
       disabled="${boolean("Disabled", false)}"
       required="${boolean("Required", false)}"
       label=${text("Label", "Label")}
-      labelPosition=${select("Label position", labelPositions, "right")}
+      label-position=${select("Label position", labelPositions, "right")}
       size=${select("Size", sizes, "default")}
       variation=${select("Variation", variations, "default")}
       >The file <strong>benchmark2</strong> was deleted.</core-toggle
@@ -60,7 +60,7 @@ export const Large = (): TemplateResult => {
 
 export const LeftLabel = (): TemplateResult => {
   return html`
-    <core-toggle label="Label" labelPosition="left"></core-toggle>
+    <core-toggle label="Label" label-position="left"></core-toggle>
   `;
 };
 

@@ -4,7 +4,7 @@
   width: inherit;
 
   // @Prop color
-  &([color="blue"]):not([disabled="true"]) {
+  &([color="blue"]:not([disabled="true"])) {
     color: @color-blue;
   }
 
@@ -189,7 +189,7 @@
   }
 
   // @Prop type disabled
-  &([disabled]):not([disabled="false"]),
+  &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
     color: @color-gray-4;
 

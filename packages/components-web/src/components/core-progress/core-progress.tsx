@@ -6,7 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
-import { colorsPrimary } from "../../assets/script/global";
+import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
   tag: "core-progress",
@@ -19,7 +19,7 @@ export class Progress implements ComponentInterface {
   /**
    * Color of the progress bar.
    */
-  @Prop({ reflect: true }) color?: colorsPrimary = "blue";
+  @Prop({ reflect: true }) color?: colorPropsPrimary = "blue";
 
   /**
    * The progress bar maximum value.

@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { colorsAll, colorsPrimary, iconsAll, labelPosition } from "./assets/script/global";
+import { colorPropsAll, colorPropsPrimary, iconPropsAll, labelPositionProps } from "./assets/script/global";
 export namespace Components {
     interface CoreAlert {
         /**
@@ -98,7 +98,7 @@ export namespace Components {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsAll;
+        "color"?: colorPropsAll;
         /**
           * If applied, the user cannot interact with the element.
          */
@@ -110,7 +110,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPositionProps"?: labelPositionProps;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -119,6 +119,8 @@ export namespace Components {
           * Apply the pre-defined large element size styling.
          */
         "size"?: "default" | "large";
+    }
+    interface CoreColorGrid {
     }
     interface CoreDropdown {
         /**
@@ -160,11 +162,11 @@ export namespace Components {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsAll | string;
+        "color"?: colorPropsAll | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
-        "icon"?: iconsAll | string;
+        "icon"?: iconPropsAll | string;
         /**
           * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
@@ -182,6 +184,8 @@ export namespace Components {
          */
         "src"?: string;
     }
+    interface CoreIconGrid {
+    }
     interface CoreInput {
         /**
           * Boolean attribute lets you specify that a form control should have input focus when the page loads.
@@ -194,7 +198,7 @@ export namespace Components {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsAll;
+        "color"?: colorPropsAll;
         /**
           * If `true`, the user cannot interact with the element.
          */
@@ -210,7 +214,7 @@ export namespace Components {
         /**
           * A hint to the browser for which keyboard to display.
          */
-        "inputkeyboard"?: | "none"
+        "inputKeyboard"?: | "none"
     | "text"
     | "tel"
     | "url"
@@ -229,7 +233,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPositionProps"?: labelPositionProps;
         /**
           * Instructional placeholder text that shows before the element has a value.
          */
@@ -333,7 +337,7 @@ export namespace Components {
         /**
           * Color of the progress bar.
          */
-        "color"?: colorsPrimary;
+        "color"?: colorPropsPrimary;
         /**
           * The progress bar maximum value.
          */
@@ -363,7 +367,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPosition"?: labelPositionProps;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -377,7 +381,7 @@ export namespace Components {
         /**
           * Color of the spinner.
          */
-        "color"?: colorsPrimary;
+        "color"?: colorPropsPrimary;
         /**
           * The pre-defined spinner size.
          */
@@ -407,7 +411,7 @@ export namespace Components {
         /**
           * Optional color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsPrimary;
+        "color"?: colorPropsPrimary;
         /**
           * The pre-defined tag size.
          */
@@ -441,7 +445,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPositionProps"?: labelPositionProps;
         /**
           * Instructional text that shows before the input has a value.
          */
@@ -489,7 +493,7 @@ export namespace Components {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPosition"?: labelPositionProps;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -543,6 +547,12 @@ declare global {
         prototype: HTMLCoreCheckboxElement;
         new (): HTMLCoreCheckboxElement;
     };
+    interface HTMLCoreColorGridElement extends Components.CoreColorGrid, HTMLStencilElement {
+    }
+    var HTMLCoreColorGridElement: {
+        prototype: HTMLCoreColorGridElement;
+        new (): HTMLCoreColorGridElement;
+    };
     interface HTMLCoreDropdownElement extends Components.CoreDropdown, HTMLStencilElement {
     }
     var HTMLCoreDropdownElement: {
@@ -560,6 +570,12 @@ declare global {
     var HTMLCoreIconElement: {
         prototype: HTMLCoreIconElement;
         new (): HTMLCoreIconElement;
+    };
+    interface HTMLCoreIconGridElement extends Components.CoreIconGrid, HTMLStencilElement {
+    }
+    var HTMLCoreIconGridElement: {
+        prototype: HTMLCoreIconGridElement;
+        new (): HTMLCoreIconGridElement;
     };
     interface HTMLCoreInputElement extends Components.CoreInput, HTMLStencilElement {
     }
@@ -644,9 +660,11 @@ declare global {
         "core-badge": HTMLCoreBadgeElement;
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
+        "core-color-grid": HTMLCoreColorGridElement;
         "core-dropdown": HTMLCoreDropdownElement;
         "core-dropdown-item": HTMLCoreDropdownItemElement;
         "core-icon": HTMLCoreIconElement;
+        "core-icon-grid": HTMLCoreIconGridElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
         "core-popover": HTMLCorePopoverElement;
@@ -754,7 +772,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsAll;
+        "color"?: colorPropsAll;
         /**
           * If applied, the user cannot interact with the element.
          */
@@ -766,7 +784,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPositionProps"?: labelPositionProps;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -775,6 +793,8 @@ declare namespace LocalJSX {
           * Apply the pre-defined large element size styling.
          */
         "size"?: "default" | "large";
+    }
+    interface CoreColorGrid {
     }
     interface CoreDropdown {
         /**
@@ -816,11 +836,11 @@ declare namespace LocalJSX {
         /**
           * Optional color of the icon. Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsAll | string;
+        "color"?: colorPropsAll | string;
         /**
           * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
          */
-        "icon"?: iconsAll | string;
+        "icon"?: iconPropsAll | string;
         /**
           * If enabled, core-icon will be loaded lazily when it's visible in the viewport.
          */
@@ -838,6 +858,8 @@ declare namespace LocalJSX {
          */
         "src"?: string;
     }
+    interface CoreIconGrid {
+    }
     interface CoreInput {
         /**
           * Boolean attribute lets you specify that a form control should have input focus when the page loads.
@@ -850,7 +872,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the label (inherited). Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsAll;
+        "color"?: colorPropsAll;
         /**
           * If `true`, the user cannot interact with the element.
          */
@@ -866,7 +888,7 @@ declare namespace LocalJSX {
         /**
           * A hint to the browser for which keyboard to display.
          */
-        "inputkeyboard"?: | "none"
+        "inputKeyboard"?: | "none"
     | "text"
     | "tel"
     | "url"
@@ -885,7 +907,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPositionProps"?: labelPositionProps;
         /**
           * Instructional placeholder text that shows before the element has a value.
          */
@@ -989,7 +1011,7 @@ declare namespace LocalJSX {
         /**
           * Color of the progress bar.
          */
-        "color"?: colorsPrimary;
+        "color"?: colorPropsPrimary;
         /**
           * The progress bar maximum value.
          */
@@ -1019,7 +1041,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPosition"?: labelPositionProps;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -1033,7 +1055,7 @@ declare namespace LocalJSX {
         /**
           * Color of the spinner.
          */
-        "color"?: colorsPrimary;
+        "color"?: colorPropsPrimary;
         /**
           * The pre-defined spinner size.
          */
@@ -1063,7 +1085,7 @@ declare namespace LocalJSX {
         /**
           * Optional color of the tag. Defaults to `black`. Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
          */
-        "color"?: colorsPrimary;
+        "color"?: colorPropsPrimary;
         /**
           * The pre-defined tag size.
          */
@@ -1093,7 +1115,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPositionProps"?: labelPositionProps;
         /**
           * Instructional text that shows before the input has a value.
          */
@@ -1141,7 +1163,7 @@ declare namespace LocalJSX {
         /**
           * The label element position.
          */
-        "labelPosition"?: labelPosition;
+        "labelPosition"?: labelPositionProps;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
@@ -1174,9 +1196,11 @@ declare namespace LocalJSX {
         "core-badge": CoreBadge;
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
+        "core-color-grid": CoreColorGrid;
         "core-dropdown": CoreDropdown;
         "core-dropdown-item": CoreDropdownItem;
         "core-icon": CoreIcon;
+        "core-icon-grid": CoreIconGrid;
         "core-input": CoreInput;
         "core-label": CoreLabel;
         "core-popover": CorePopover;
@@ -1200,9 +1224,11 @@ declare module "@stencil/core" {
             "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
+            "core-color-grid": LocalJSX.CoreColorGrid & JSXBase.HTMLAttributes<HTMLCoreColorGridElement>;
             "core-dropdown": LocalJSX.CoreDropdown & JSXBase.HTMLAttributes<HTMLCoreDropdownElement>;
             "core-dropdown-item": LocalJSX.CoreDropdownItem & JSXBase.HTMLAttributes<HTMLCoreDropdownItemElement>;
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
+            "core-icon-grid": LocalJSX.CoreIconGrid & JSXBase.HTMLAttributes<HTMLCoreIconGridElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
             "core-popover": LocalJSX.CorePopover & JSXBase.HTMLAttributes<HTMLCorePopoverElement>;

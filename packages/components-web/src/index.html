@@ -6,42 +6,900 @@
       icon="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
-    <title>Core Design System</title>
+    <title>Core Design System - Style Guide</title>
+
+    <script type="module" src="/build/components.esm.js"></script>
+    <script nomodule src="/build/components.js"></script>
+
+    <link rel="stylesheet" href="./build/components.css" />
 
     <style>
-      html {
-        font: 14px/1.142857 "Inter Var", -apple-system, BlinkMacSystemFont,
-          Segoe UI, Helvetica, Arial, sans-serif;
-        font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on,
-          "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
-        min-height: 100vh;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: auto;
-      }
-      body {
-        display: flex;
-        min-height: 100vh;
-      }
-      div {
-        margin: auto;
-        text-align: center;
-      }
-      code {
-        background-color: lightcoral;
-        padding: 4px 8px;
+      body > section {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <div>
-      <h1>
-        <a
-          href="https://github.com/iFixit/core-design/blob/master/readme.md#local-development"
-          >Use Storybook Instead</a
-        >
-      </h1>
-      <code>lerna run storybook</code>
-    </div>
+    <header>
+      <h1>Core Design System - Style Guide</h1>
+    </header>
+
+    <nav class="nav">
+      <div class="sticky">
+        <ul class="list">
+          <li>
+            <a class="list-title" href="#colors">Core Colors</a>
+          </li>
+          <li>
+            <a class="list-title" href="#icons">Core Icons</a>
+          </li>
+        </ul>
+        <ul class="list buttons-inputs">
+          <li>
+            <a class="list-title" href="#button-states">Button</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-button"
+              >Button Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#checkbox">Checkbox</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-checkbox"
+              >Checkbox Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#dropdown">Dropdown</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-dropdown"
+              >Dropdown Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#input">Input</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-input"
+              >Input Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#radio">Radio</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-radio"
+              >Radio Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#textarea">Textarea</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-textarea"
+              >Textarea Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#toggle">Toggle</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-toggle"
+              >Toggle Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#tooltip">Tooltip</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-tooltip"
+              >Tooltip Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+        </ul>
+        <ul class="list informers">
+          <li>
+            <a class="list-title" href="#alert">Alert</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-alert"
+              >Alert Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#badge">Badge</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-badge"
+              >Badge Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#popover">Popover</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-popover"
+              >Popover Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#progress">Progress</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-progress"
+              >Progress Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#spinner">Spinner</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-spinner"
+              >Spinner Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#tag">Tag</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-tag"
+              >Tag Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+          <li>
+            <a class="list-title" href="#toast">Toast</a>
+            <a
+              class="list-story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-toast"
+              >Toast Story<core-icon icon="link-out"></core-icon
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div id="core-colors">
+        <section id="colors" class="spaced">
+          <h3>Core Colors</h3>
+          <div class="grid">
+            <core-color-grid></core-color-grid>
+          </div>
+        </section>
+      </div>
+      <div id="core-icons">
+        <section id="icons" class="spaced">
+          <h3>Core Icons</h3>
+          <div class="grid">
+            <core-icon-grid></core-icon-grid>
+          </div>
+        </section>
+      </div>
+      <div id="core-buttons-inputs">
+        <h2 class="group-title">
+          <span>Buttons &amp; Inputs</span>
+        </h2>
+        <section id="button-states">
+          <h3>Button States</h3>
+          <div class="grid">
+            <div class="states grid">
+              <span></span>
+              <span class="hint">Normal</span>
+              <span class="hint">Disabled</span>
+            </div>
+            <div class="states grid">
+              <span class="hint">Basic</span>
+              <core-button>Button</core-button>
+              <core-button disabled>Button</core-button>
+            </div>
+            <div class="states grid">
+              <span class="hint">Primary</span>
+              <core-button variation="primary">Button</core-button>
+              <core-button variation="primary" disabled>Button</core-button>
+            </div>
+            <div class="states grid">
+              <span class="hint">Secondary</span>
+              <core-button variation="secondary">Button</core-button>
+              <core-button variation="secondary" disabled>Button</core-button>
+            </div>
+            <div class="states grid">
+              <span class="hint">Color dark</span>
+              <core-button variation="dark">Button</core-button>
+              <core-button variation="dark" disabled>Button</core-button>
+            </div>
+            <div class="states grid">
+              <span class="hint">Color light</span>
+              <core-button variation="light">Button</core-button>
+              <core-button variation="light" disabled>Button</core-button>
+            </div>
+          </div>
+        </section>
+        <section id="button-sizes">
+          <h3>Button Sizes</h3>
+          <div class="grid">
+            <div class="sizes grid">
+              <span class="hint">Default</span>
+              <core-button>Button</core-button>
+              <core-button variation="primary">Button</core-button>
+              <core-button variation="secondary">Button</core-button>
+              <core-button disabled>Button</core-button>
+            </div>
+            <div class="sizes grid">
+              <span class="hint">Small</span>
+              <core-button size="small">Button</core-button>
+              <core-button size="small" variation="primary">Button</core-button>
+              <core-button size="small" variation="secondary"
+                >Button</core-button
+              >
+              <core-button size="small" disabled>Button</core-button>
+            </div>
+            <div class="sizes grid">
+              <span class="hint">Large</span>
+              <core-button size="large">Button</core-button>
+              <core-button size="large" variation="primary">Button</core-button>
+              <core-button size="large" variation="secondary"
+                >Button</core-button
+              >
+              <core-button size="large" disabled>Button</core-button>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="checkbox">
+          <h3>Checkbox</h3>
+          <div class="grid">
+            <div class="checkbox grid">
+              <span class="hint">Default</span>
+              <span class="hint">Large</span>
+            </div>
+            <div class="checkbox grid">
+              <core-checkbox label="Checkbox"></core-checkbox>
+              <core-checkbox
+                label="Large Checkbox"
+                size="large"
+              ></core-checkbox>
+            </div>
+            <div class="checkbox grid">
+              <core-checkbox label="Selected checkbox" checked></core-checkbox>
+              <core-checkbox
+                label="Selected Large Checkbox"
+                size="large"
+                checked
+              ></core-checkbox>
+            </div>
+            <div class="checkbox grid">
+              <core-checkbox label="Disabled checkbox" disabled></core-checkbox>
+              <core-checkbox
+                label="Disabled Large Checkbox"
+                size="large"
+                disabled
+              ></core-checkbox>
+            </div>
+            <div class="checkbox grid">
+              <core-checkbox
+                label="Left Label Checkbox"
+                label-position="left"
+              ></core-checkbox>
+              <core-checkbox
+                label="Left Label Large Checkbox"
+                label-position="left"
+                size="large"
+              ></core-checkbox>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="dropdown">
+          <h3>Dropdown</h3>
+          <div class="grid">
+            <div class="dropdown grid">
+              <span class="hint">Default</span>
+              <span class="hint">Center</span>
+              <span class="hint">Right</span>
+              <span class="hint">Hoverable</span>
+            </div>
+            <div class="dropdown grid">
+              <div>
+                <core-dropdown>
+                  <div slot="trigger">
+                    <core-icon
+                      slot="icon"
+                      icon="more"
+                      color="gray-5"
+                    ></core-icon>
+                  </div>
+                  <core-dropdown-item href="#">Option 1</core-dropdown-item>
+                  <core-dropdown-item href="#">Option 2</core-dropdown-item>
+                  <core-dropdown-item href="#">Option 3</core-dropdown-item>
+                </core-dropdown>
+              </div>
+              <div>
+                <core-dropdown alignment="center">
+                  <div slot="trigger">
+                    <core-icon
+                      slot="icon"
+                      icon="more"
+                      color="gray-5"
+                    ></core-icon>
+                  </div>
+                  <core-dropdown-item href="#">Option 1</core-dropdown-item>
+                  <core-dropdown-item href="#">Option 2</core-dropdown-item>
+                  <core-dropdown-item href="#">Option 3</core-dropdown-item>
+                  <core-dropdown-item>
+                    Nested content can be anything
+                  </core-dropdown-item>
+                </core-dropdown>
+              </div>
+              <div>
+                <core-dropdown alignment="right">
+                  <div slot="trigger">
+                    <core-icon
+                      slot="icon"
+                      icon="more"
+                      color="gray-5"
+                    ></core-icon>
+                  </div>
+                  <core-dropdown-item href="#">
+                    <core-icon
+                      slot="icon"
+                      icon="cart"
+                      color="green"
+                      style="margin-right:8px"
+                    ></core-icon>
+                    Option 1
+                  </core-dropdown-item>
+                  <core-dropdown-item href="#">
+                    <core-icon slot="icon" icon="gear" color="red"></core-icon>
+                    <span style="margin-left:8px">Option 2</span>
+                  </core-dropdown-item>
+                  <core-dropdown-item href="#">
+                    <core-icon
+                      slot="icon"
+                      icon="archive"
+                      color="blue"
+                      style="margin-right:8px"
+                    ></core-icon>
+                    Option 3
+                  </core-dropdown-item>
+                </core-dropdown>
+              </div>
+              <div>
+                <core-dropdown hoverable>
+                  <div slot="trigger">
+                    <core-icon
+                      slot="icon"
+                      icon="more"
+                      color="gray-5"
+                    ></core-icon>
+                  </div>
+                  <core-dropdown-item href="#">Option 1</core-dropdown-item>
+                  <core-dropdown-item href="#">Option 2</core-dropdown-item>
+                  <core-dropdown-item href="#">Option 3</core-dropdown-item>
+                  <core-dropdown-item>
+                    Nested content can be anything
+                  </core-dropdown-item>
+                </core-dropdown>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="input">
+          <h3>Input</h3>
+          <div class="grid">
+            <div class="text grid">
+              <div class="row">
+                <core-input
+                  label="Label"
+                  placeholder="Placeholder"
+                ></core-input>
+                <core-input placeholder="Disabled" disabled></core-input>
+                <core-input
+                  placeholder="Icon Input"
+                  icon="calendar"
+                ></core-input>
+                <core-input
+                  placeholder="Search Input"
+                  icon="search"
+                ></core-input>
+                <core-input
+                  placeholder="Error Input"
+                  icon="alert-circle"
+                  error
+                ></core-input>
+                <core-input
+                  placeholder="Success Input"
+                  icon="check"
+                  success
+                ></core-input>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="radio">
+          <h3>Radio</h3>
+          <div class="grid">
+            <div class="radio grid">
+              <span class="hint">Default</span>
+              <span class="hint">Large</span>
+            </div>
+            <div class="radio grid">
+              <core-radio label="Radio"></core-radio>
+              <core-radio label="Large Radio" size="large"></core-radio>
+            </div>
+            <div class="radio grid">
+              <core-radio label="Selected radio" checked></core-radio>
+              <core-radio
+                label="Large Selected radio"
+                size="large"
+                checked
+              ></core-radio>
+            </div>
+            <div class="radio grid">
+              <core-radio label="Disabled Radio" disabled></core-radio>
+              <core-radio
+                label="Disabled Large Radio"
+                size="large"
+                disabled
+              ></core-radio>
+            </div>
+            <div class="radio grid">
+              <core-radio
+                label="Right Label"
+                label-position="left"
+              ></core-radio>
+              <core-radio
+                label="Right Large Label"
+                label-position="left"
+                size="large"
+              ></core-radio>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="textarea">
+          <h3>Textarea</h3>
+          <div class="grid">
+            <div class="textarea grid">
+              <core-textarea placeholder="Placeholder"></core-textarea>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="toggle">
+          <h3>Toggle</h3>
+          <div class="grid">
+            <div class="toggle grid">
+              <span class="hint">Default</span>
+              <span class="hint">Large</span>
+            </div>
+            <div class="toggle grid">
+              <core-toggle label="Toggle"></core-toggle>
+              <core-toggle label="Toggle Large" size="large"></core-toggle>
+            </div>
+            <div class="toggle grid">
+              <core-toggle label="Toggle Checked" checked></core-toggle>
+              <core-toggle
+                label="Toggle Checked Large"
+                size="large"
+                checked
+              ></core-toggle>
+            </div>
+            <div class="toggle grid">
+              <core-toggle
+                label="Toggle Left Label"
+                label-position="left"
+              ></core-toggle>
+              <core-toggle
+                label="Toggle Left Label Large"
+                size="large"
+                label-position="left"
+              ></core-toggle>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="tooltip">
+          <h3>Tooltip</h3>
+          <div class="grid">
+            <div class="tooltip grid">
+              <span></span>
+              <span class="hint extend-2">Top</span>
+              <span class="hint extend-2">Bottom</span>
+            </div>
+            <div class="tooltip grid">
+              <span class="hint">Dark</span>
+              <core-tooltip>
+                <span slot="trigger">Tooltip Trigger</span>
+                Dark Tooltip top
+              </core-tooltip>
+              <core-tooltip variation="bottom">
+                <span slot="trigger">Tooltip Trigger</span>
+                Dark Tooltip bottom
+              </core-tooltip>
+            </div>
+            <div class="tooltip grid">
+              <span class="hint">Light</span>
+              <core-tooltip color="light">
+                <span slot="trigger">Tooltip Trigger</span>
+                Light Tooltip top
+              </core-tooltip>
+              <core-tooltip color="light" variation="bottom">
+                <span slot="trigger">Tooltip Trigger</span>
+                Light Tooltip bottom
+              </core-tooltip>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="core-informers">
+        <h2 class="group-title">
+          <span>Informers</span>
+        </h2>
+        <section id="alert">
+          <h3>Alert</h3>
+          <div class="grid">
+            <core-alert
+              >A general notification message of information.</core-alert
+            >
+            <core-alert color="green"
+              >A success notification message of information.</core-alert
+            >
+            <core-alert color="yellow"
+              >A warning notification message of information.</core-alert
+            >
+            <core-alert color="red"
+              >An error notification message of information.</core-alert
+            >
+          </div>
+        </section>
+        <hr />
+        <section id="badge">
+          <h3>Badge</h3>
+          <div class="grid">
+            <div class="badge grid">
+              <span class="hint">Large</span>
+              <span class="hint">Small</span>
+              <span class="hint">Dot</span>
+            </div>
+            <div class="badge grid">
+              <div>
+                <core-badge>1</core-badge>
+                <core-badge>23</core-badge>
+                <core-badge>456</core-badge>
+              </div>
+              <div>
+                <core-badge size="small">1</core-badge>
+                <core-badge size="small">23</core-badge>
+                <core-badge size="small">456</core-badge>
+              </div>
+              <div>
+                <core-badge variation="dot"></core-badge>
+              </div>
+            </div>
+            <div class="badge grid">
+              <div>
+                <core-badge color="black">1</core-badge>
+                <core-badge color="black">23</core-badge>
+                <core-badge color="black">456</core-badge>
+              </div>
+              <div>
+                <core-badge color="black" size="small">1</core-badge>
+                <core-badge color="black" size="small">23</core-badge>
+                <core-badge color="black" size="small">456</core-badge>
+              </div>
+            </div>
+            <div class="badge grid">
+              <div>
+                <core-badge variation="border">1</core-badge>
+                <core-badge variation="border">23</core-badge>
+                <core-badge variation="border">456</core-badge>
+              </div>
+              <div>
+                <core-badge variation="border" size="small">1</core-badge>
+                <core-badge variation="border" size="small">23</core-badge>
+                <core-badge variation="border" size="small">456</core-badge>
+              </div>
+            </div>
+            <div class="badge grid">
+              <div>
+                <core-badge color="black" variation="border">1</core-badge>
+                <core-badge color="black" variation="border">23</core-badge>
+                <core-badge color="black" variation="border">456</core-badge>
+              </div>
+              <div>
+                <core-badge color="black" variation="border" size="small"
+                  >1</core-badge
+                >
+                <core-badge color="black" variation="border" size="small"
+                  >23</core-badge
+                >
+                <core-badge color="black" variation="border" size="small"
+                  >456</core-badge
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="popover">
+          <h3>Popover</h3>
+          <div class="popover grid">
+            <span class="hint">Default</span>
+            <span class="hint">Bottom</span>
+            <span class="hint">Hoverable</span>
+          </div>
+          <div class="popover grid">
+            <core-popover>
+              <core-button slot="trigger">Trigger</core-button>
+              <span slot="title">Popover Title</span>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </core-popover>
+            <core-popover variation="bottom">
+              <core-button slot="trigger">Trigger</core-button>
+              <span slot="title">Popover Title</span>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </core-popover>
+            <core-popover hoverable>
+              <core-button slot="trigger">Trigger</core-button>
+              <span slot="title">Popover Title</span>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </core-popover>
+          </div>
+        </section>
+        <hr />
+        <section id="progress">
+          <h3>Progress</h3>
+          <div class="grid">
+            <div class="progress grid">
+              <core-progress value="60"></core-progress>
+            </div>
+            <div class="progress grid">
+              <core-progress
+                value="100"
+                color="green"
+                size="small"
+              ></core-progress>
+            </div>
+            <div class="progress grid">
+              <core-progress
+                value="75"
+                color="yellow"
+                size="small"
+              ></core-progress>
+            </div>
+            <div class="progress grid">
+              <core-progress
+                value="50"
+                color="red"
+                size="small"
+              ></core-progress>
+            </div>
+            <div class="progress grid">
+              <core-progress
+                value="25"
+                color="black"
+                size="small"
+              ></core-progress>
+            </div>
+            <div class="progress grid">
+              <core-progress
+                value="0"
+                color="black"
+                size="small"
+              ></core-progress>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="spinner">
+          <h3>Spinner</h3>
+          <div class="grid">
+            <div class="spinner">
+              <core-spinner size="large"></core-spinner>
+              <core-spinner></core-spinner>
+              <core-spinner size="small"></core-spinner>
+              <core-spinner color="blue" size="large"></core-spinner>
+              <core-spinner color="green"></core-spinner>
+              <core-spinner color="yellow" size="small"></core-spinner>
+              <core-spinner color="red" size="small"></core-spinner>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="tag">
+          <h3>Tag</h3>
+          <div class="grid">
+            <div class="tag grid">
+              <div>
+                <span class="hint">Small</span>
+              </div>
+              <div>
+                <span class="hint">Large</span>
+              </div>
+              <div>
+                <span class="hint">Closable</span>
+              </div>
+            </div>
+            <div class="tag grid">
+              <div>
+                <span class="hint">Dark</span>
+                <span class="hint">Light</span>
+              </div>
+              <div>
+                <span class="hint">Dark</span>
+                <span class="hint">Light</span>
+              </div>
+              <div>
+                <span class="hint">Dark</span>
+                <span class="hint">Light</span>
+              </div>
+            </div>
+            <div class="tag grid">
+              <div>
+                <core-tag size="small">Tag</core-tag>
+                <core-tag size="small" variation="light">Tag</core-tag>
+              </div>
+              <div>
+                <core-tag>Tag</core-tag>
+                <core-tag variation="light">Tag</core-tag>
+              </div>
+              <div>
+                <core-tag closable>Tag</core-tag>
+                <core-tag closable variation="light">Tag</core-tag>
+              </div>
+            </div>
+            <div class="tag grid">
+              <div>
+                <core-tag color="blue" size="small">Tag</core-tag>
+                <core-tag color="blue" size="small" variation="light"
+                  >Tag</core-tag
+                >
+              </div>
+              <div>
+                <core-tag color="blue">Tag</core-tag>
+                <core-tag color="blue" variation="light">Tag</core-tag>
+              </div>
+              <div>
+                <core-tag color="blue" closable>Tag</core-tag>
+                <core-tag color="blue" closable variation="light">Tag</core-tag>
+              </div>
+            </div>
+            <div class="tag grid">
+              <div>
+                <core-tag color="green" size="small">Tag</core-tag>
+                <core-tag color="green" size="small" variation="light"
+                  >Tag</core-tag
+                >
+              </div>
+              <div>
+                <core-tag color="green">Tag</core-tag>
+                <core-tag color="green" variation="light">Tag</core-tag>
+              </div>
+              <div>
+                <core-tag color="green" closable>Tag</core-tag>
+                <core-tag color="green" closable variation="light"
+                  >Tag</core-tag
+                >
+              </div>
+            </div>
+            <div class="tag grid">
+              <div>
+                <core-tag color="yellow" size="small">Tag</core-tag>
+                <core-tag color="yellow" size="small" variation="light"
+                  >Tag</core-tag
+                >
+              </div>
+              <div>
+                <core-tag color="yellow">Tag</core-tag>
+                <core-tag color="yellow" variation="light">Tag</core-tag>
+              </div>
+              <div>
+                <core-tag color="yellow" closable>Tag</core-tag>
+                <core-tag color="yellow" closable variation="light"
+                  >Tag</core-tag
+                >
+              </div>
+            </div>
+            <div class="tag grid">
+              <div>
+                <core-tag color="red" size="small">Tag</core-tag>
+                <core-tag color="red" size="small" variation="light"
+                  >Tag</core-tag
+                >
+              </div>
+              <div>
+                <core-tag color="red">Tag</core-tag>
+                <core-tag color="red" variation="light">Tag</core-tag>
+              </div>
+              <div>
+                <core-tag color="red" closable>Tag</core-tag>
+                <core-tag color="red" closable variation="light">Tag</core-tag>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="toast">
+          <h3>Toast</h3>
+          <div class="grid">
+            <div class="toast">
+              <core-toast
+                >The file <strong>benchmark2</strong> was deleted.</core-toast
+              >
+            </div>
+            <div class="toast">
+              <core-toast color="yellow"
+                >The file <strong>benchmark2</strong> was deleted.</core-toast
+              >
+            </div>
+            <div class="toast">
+              <core-toast color="green"
+                >The file <strong>benchmark2</strong> was deleted.</core-toast
+              >
+            </div>
+            <div class="toast">
+              <core-toast color="red"
+                >The file <strong>benchmark2</strong> was deleted.</core-toast
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ---------------------------------------------------------------------------- -->
+
+    <section id="tabs">
+      <h3>Tabs</h3>
+      <div class="grid">
+        <div>
+          <span class="hint">Large</span>
+        </div>
+        <div class="tabs">
+          <core-tab-group>
+            <core-tab class="active">Active</core-tab>
+            <core-tab>Default</core-tab>
+            <core-tab class="disabled">Disabled</core-tab>
+          </core-tab-group>
+        </div>
+        <div class="tabs">
+          <core-tab-group>
+            <core-tab class="active">Active</core-tab>
+            <core-tab>Default</core-tab>
+            <core-tab>
+              With Badge
+              <core-badge slot="badge" color="black" size="small">3</core-badge>
+            </core-tab>
+            <core-tab class="disabled">Disabled</core-tab>
+          </core-tab-group>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <span class="hint">Small</span>
+        </div>
+        <div class="tabs">
+          <core-tab-group size="small">
+            <core-tab class="active">Active</core-tab>
+            <core-tab>Default</core-tab>
+            <core-tab class="disabled">Disabled</core-tab>
+          </core-tab-group>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

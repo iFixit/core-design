@@ -1,3 +1,6 @@
 {
+  "[less]": {
+    "editor.formatOnSave": false
+  },
   "less.validate": false
 }

@@ -35,6 +35,12 @@ export const Small = (): TemplateResult => {
   `;
 };
 
+export const Medium = (): TemplateResult => {
+  return html`
+    <core-spinner size="medium"></core-spinner>
+  `;
+};
+
 export const Large = (): TemplateResult => {
   return html`
     <core-spinner size="large"></core-spinner>

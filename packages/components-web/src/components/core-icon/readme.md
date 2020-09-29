@@ -20,6 +20,7 @@
 
 ### Used by
 
+ - [core-icon-grid](../core-icon-grid)
  - [core-input](../core-input)
  - [core-tag](../core-tag)
  - [core-toast](../core-toast)
@@ -27,6 +28,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  core-icon-grid --> core-icon
   core-input --> core-icon
   core-tag --> core-icon
   core-toast --> core-icon

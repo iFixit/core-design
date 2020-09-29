@@ -1,4 +1,4 @@
-export type colorsAll =
+export type colorPropsAll =
   | "blue"
   | "green"
   | "yellow"
@@ -45,8 +45,8 @@ export type colorsAll =
   | "gray-6"
   | "gray-7"
   | "gray-8";
-export type colorsPrimary = "black" | "blue" | "green" | "yellow" | "red";
-export type iconsAll =
+export type colorPropsPrimary = "black" | "blue" | "green" | "yellow" | "red";
+export type iconPropsAll =
   | "alert-circle"
   | "alert-triangle"
   | "alert-triangle-solid"
@@ -141,4 +141,4 @@ export type iconsAll =
   | "user"
   | "users"
   | "video";
-export type labelPosition = "left" | "right";
+export type labelPositionProps = "left" | "right";

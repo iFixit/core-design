@@ -7,7 +7,7 @@ import {
   State,
   h,
 } from "@stencil/core";
-import { colorsAll, labelPosition } from "../../assets/script/global";
+import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-checkbox",
@@ -28,7 +28,7 @@ export class Checkbox implements ComponentInterface {
    * Optional color of the label (inherited).
    * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    */
-  @Prop() color?: colorsAll = "gray-8";
+  @Prop() color?: colorPropsAll = "gray-8";
 
   /**
    * If applied, the user cannot interact with the element.
@@ -43,7 +43,7 @@ export class Checkbox implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop({ reflect: true }) labelPosition?: labelPosition = "right";
+  @Prop() labelPositionProps?: labelPositionProps = "right";
 
   /**
    * If applied, the user must fill in a value before submitting a form containing this element.
@@ -72,11 +72,6 @@ export class Checkbox implements ComponentInterface {
         onClick={this.handleClick}
       >
         <div class="checkbox-outer">
-          {this.label && (
-            <div class="label-outer">
-              <label htmlFor={this.label}>{this.label}</label>
-            </div>
-          )}
           <input
             id={this.label || ""}
             class="native-element"
@@ -85,6 +80,11 @@ export class Checkbox implements ComponentInterface {
             disabled={this.disabled}
             required={this.required}
           />
+          {this.label && (
+            <div class="label-outer">
+              <label htmlFor={this.label}>{this.label}</label>
+            </div>
+          )}
         </div>
       </Host>
     );

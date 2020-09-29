@@ -8,7 +8,7 @@ import {
   State,
   h,
 } from "@stencil/core";
-import { colorsAll, labelPosition } from "../../assets/script/global";
+import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-input",
@@ -36,7 +36,7 @@ export class Input implements ComponentInterface {
    * Optional color of the label (inherited).
    * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    */
-  @Prop() color?: colorsAll = "gray-8";
+  @Prop() color?: colorPropsAll = "gray-8";
 
   /**
    * If `true`, the user cannot interact with the element.
@@ -56,7 +56,7 @@ export class Input implements ComponentInterface {
   /**
    * A hint to the browser for which keyboard to display.
    */
-  @Prop() inputkeyboard?:
+  @Prop() inputKeyboard?:
     | "none"
     | "text"
     | "tel"
@@ -79,7 +79,7 @@ export class Input implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop({ reflect: true }) labelPosition?: labelPosition = "right";
+  @Prop() labelPositionProps?: labelPositionProps = "left";
 
   /**
    * Instructional placeholder text that shows before the element has a value.
