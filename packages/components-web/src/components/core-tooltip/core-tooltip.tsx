@@ -19,7 +19,7 @@ export class Tooltip implements ComponentInterface {
   /**
    * The tooltip will show up when hovering the tooltip-trigger
    */
-  @Prop({ reflect: true }) hoverable = true;
+  @Prop() hoverable = true;
 
   /**
    * The tooltip variation.
@@ -41,7 +41,6 @@ export class Tooltip implements ComponentInterface {
         class={{
           "core-tooltip": true,
           active: this.active,
-          hoverable: this.hoverable,
         }}
       >
         <div onClick={this.handleClick} class="trigger">

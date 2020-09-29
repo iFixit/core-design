@@ -8,16 +8,10 @@
     />
     <title>Core Design System - Style Guide</title>
 
-    <script type="module" src="/build/components.esm.js"></script>
-    <script nomodule src="/build/components.js"></script>
+    <script type="module" src="./build/core-design.esm.js"></script>
+    <script nomodule src="./build/core-design.js"></script>
 
-    <link rel="stylesheet" href="./build/components.css" />
-
-    <style>
-      body > section {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="./build/core-design.css" />
   </head>
   <body>
     <header>
@@ -30,6 +24,8 @@
           <li>
             <a class="list-title" href="#colors">Core Colors</a>
           </li>
+        </ul>
+        <ul class="list">
           <li>
             <a class="list-title" href="#icons">Core Icons</a>
           </li>
@@ -37,125 +33,55 @@
         <ul class="list buttons-inputs">
           <li>
             <a class="list-title" href="#button-states">Button</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-button"
-              >Button Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#checkbox">Checkbox</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-checkbox"
-              >Checkbox Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#dropdown">Dropdown</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-dropdown"
-              >Dropdown Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#input">Input</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-input"
-              >Input Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#radio">Radio</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-radio"
-              >Radio Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#textarea">Textarea</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-textarea"
-              >Textarea Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#toggle">Toggle</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-toggle"
-              >Toggle Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#tooltip">Tooltip</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-tooltip"
-              >Tooltip Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
         </ul>
         <ul class="list informers">
           <li>
             <a class="list-title" href="#alert">Alert</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/informers-alert"
-              >Alert Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#badge">Badge</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/informers-badge"
-              >Badge Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#popover">Popover</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/informers-popover"
-              >Popover Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#progress">Progress</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/informers-progress"
-              >Progress Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#spinner">Spinner</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/informers-spinner"
-              >Spinner Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#tag">Tag</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/informers-tag"
-              >Tag Story<core-icon icon="link-out"></core-icon
-            ></a>
           </li>
           <li>
             <a class="list-title" href="#toast">Toast</a>
-            <a
-              class="list-story"
-              href="https://core-ds-components.netlify.app/?path=/story/informers-toast"
-              >Toast Story<core-icon icon="link-out"></core-icon
-            ></a>
+          </li>
+        </ul>
+        <ul class="list page-elements">
+          <li>
+            <a class="list-title" href="#tabs">Tabs</a>
           </li>
         </ul>
       </div>
@@ -164,7 +90,9 @@
     <main>
       <div id="core-colors">
         <section id="colors" class="spaced">
-          <h3>Core Colors</h3>
+          <div class="heading">
+            <h3>Core Colors</h3>
+          </div>
           <div class="grid">
             <core-color-grid></core-color-grid>
           </div>
@@ -172,7 +100,9 @@
       </div>
       <div id="core-icons">
         <section id="icons" class="spaced">
-          <h3>Core Icons</h3>
+          <div class="heading">
+            <h3>Core Icons</h3>
+          </div>
           <div class="grid">
             <core-icon-grid></core-icon-grid>
           </div>
@@ -183,7 +113,20 @@
           <span>Buttons &amp; Inputs</span>
         </h2>
         <section id="button-states">
-          <h3>Button States</h3>
+          <div class="heading">
+            <h3>Button States</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-button"
+            >
+              <core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip>
+            </a>
+          </div>
           <div class="grid">
             <div class="states grid">
               <span></span>
@@ -218,7 +161,19 @@
           </div>
         </section>
         <section id="button-sizes">
-          <h3>Button Sizes</h3>
+          <div class="heading">
+            <h3>Button Sizes</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-button"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="sizes grid">
               <span class="hint">Default</span>
@@ -249,7 +204,19 @@
         </section>
         <hr />
         <section id="checkbox">
-          <h3>Checkbox</h3>
+          <div class="heading">
+            <h3>Checkbox</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-checkbox"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="checkbox grid">
               <span class="hint">Default</span>
@@ -293,7 +260,19 @@
         </section>
         <hr />
         <section id="dropdown">
-          <h3>Dropdown</h3>
+          <div class="heading">
+            <h3>Dropdown</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-dropdown"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="dropdown grid">
               <span class="hint">Default</span>
@@ -388,7 +367,19 @@
         </section>
         <hr />
         <section id="input">
-          <h3>Input</h3>
+          <div class="heading">
+            <h3>Input</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-input"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="text grid">
               <div class="row">
@@ -421,7 +412,19 @@
         </section>
         <hr />
         <section id="radio">
-          <h3>Radio</h3>
+          <div class="heading">
+            <h3>Radio</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-radio"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="radio grid">
               <span class="hint">Default</span>
@@ -462,7 +465,19 @@
         </section>
         <hr />
         <section id="textarea">
-          <h3>Textarea</h3>
+          <div class="heading">
+            <h3>Textarea</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-textarea"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="textarea grid">
               <core-textarea placeholder="Placeholder"></core-textarea>
@@ -471,7 +486,19 @@
         </section>
         <hr />
         <section id="toggle">
-          <h3>Toggle</h3>
+          <div class="heading">
+            <h3>Toggle</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-toggle"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="toggle grid">
               <span class="hint">Default</span>
@@ -504,7 +531,19 @@
         </section>
         <hr />
         <section id="tooltip">
-          <h3>Tooltip</h3>
+          <div class="heading">
+            <h3>Tooltip</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/buttons-inputs-tooltip"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="tooltip grid">
               <span></span>
@@ -541,7 +580,19 @@
           <span>Informers</span>
         </h2>
         <section id="alert">
-          <h3>Alert</h3>
+          <div class="heading">
+            <h3>Alert</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-alert"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <core-alert
               >A general notification message of information.</core-alert
@@ -559,7 +610,19 @@
         </section>
         <hr />
         <section id="badge">
-          <h3>Badge</h3>
+          <div class="heading">
+            <h3>Badge</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-badge"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="badge grid">
               <span class="hint">Large</span>
@@ -627,7 +690,19 @@
         </section>
         <hr />
         <section id="popover">
-          <h3>Popover</h3>
+          <div class="heading">
+            <h3>Popover</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-popover"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="popover grid">
             <span class="hint">Default</span>
             <span class="hint">Bottom</span>
@@ -662,7 +737,19 @@
         </section>
         <hr />
         <section id="progress">
-          <h3>Progress</h3>
+          <div class="heading">
+            <h3>Progress</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-progress"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="progress grid">
               <core-progress value="60"></core-progress>
@@ -706,7 +793,19 @@
         </section>
         <hr />
         <section id="spinner">
-          <h3>Spinner</h3>
+          <div class="heading">
+            <h3>Spinner</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-spinner"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="spinner">
               <core-spinner size="large"></core-spinner>
@@ -721,7 +820,19 @@
         </section>
         <hr />
         <section id="tag">
-          <h3>Tag</h3>
+          <div class="heading">
+            <h3>Tag</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-tag"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="tag grid">
               <div>
@@ -834,7 +945,19 @@
         </section>
         <hr />
         <section id="toast">
-          <h3>Toast</h3>
+          <div class="heading">
+            <h3>Toast</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/informers-toast"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
           <div class="grid">
             <div class="toast">
               <core-toast
@@ -859,47 +982,61 @@
           </div>
         </section>
       </div>
+      <div id="core-page-elements">
+        <hr />
+        <section id="tabs">
+          <div class="heading">
+            <h3>Tabs</h3>
+            <a
+              class="story"
+              href="https://core-ds-components.netlify.app/?path=/story/page-elements-tabs"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View Story
+              </core-tooltip></a
+            >
+          </div>
+          <div class="grid">
+            <div>
+              <span class="hint">Large</span>
+            </div>
+            <div class="tabs">
+              <core-tab-group>
+                <core-tab class="active">Active</core-tab>
+                <core-tab>Default</core-tab>
+                <core-tab class="disabled">Disabled</core-tab>
+              </core-tab-group>
+            </div>
+            <div class="tabs">
+              <core-tab-group>
+                <core-tab class="active">Active</core-tab>
+                <core-tab>Default</core-tab>
+                <core-tab>
+                  With Badge
+                  <core-badge slot="badge" color="black" size="small"
+                    >3</core-badge
+                  >
+                </core-tab>
+                <core-tab class="disabled">Disabled</core-tab>
+              </core-tab-group>
+            </div>
+          </div>
+          <div class="grid">
+            <div>
+              <span class="hint">Small</span>
+            </div>
+            <div class="tabs">
+              <core-tab-group size="small">
+                <core-tab class="active">Active</core-tab>
+                <core-tab>Default</core-tab>
+                <core-tab class="disabled">Disabled</core-tab>
+              </core-tab-group>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-
-    <!-- ---------------------------------------------------------------------------- -->
-
-    <section id="tabs">
-      <h3>Tabs</h3>
-      <div class="grid">
-        <div>
-          <span class="hint">Large</span>
-        </div>
-        <div class="tabs">
-          <core-tab-group>
-            <core-tab class="active">Active</core-tab>
-            <core-tab>Default</core-tab>
-            <core-tab class="disabled">Disabled</core-tab>
-          </core-tab-group>
-        </div>
-        <div class="tabs">
-          <core-tab-group>
-            <core-tab class="active">Active</core-tab>
-            <core-tab>Default</core-tab>
-            <core-tab>
-              With Badge
-              <core-badge slot="badge" color="black" size="small">3</core-badge>
-            </core-tab>
-            <core-tab class="disabled">Disabled</core-tab>
-          </core-tab-group>
-        </div>
-      </div>
-      <div class="grid">
-        <div>
-          <span class="hint">Small</span>
-        </div>
-        <div class="tabs">
-          <core-tab-group size="small">
-            <core-tab class="active">Active</core-tab>
-            <core-tab>Default</core-tab>
-            <core-tab class="disabled">Disabled</core-tab>
-          </core-tab-group>
-        </div>
-      </div>
-    </section>
   </body>
 </html>

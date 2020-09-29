@@ -40,13 +40,13 @@ lerna bootstrap
 
 ## Local Development
 
-To start developing Stencil `core-components`, run:
+To start developing Stencil `core-design`, run:
 
 ```bash
 lerna run start
 ```
 
-To start developing Storybook `core-components`, run:
+To start developing Storybook `core-design`, run:
 
 ```bash
 lerna run storybook

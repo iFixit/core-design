@@ -1,6 +1,6 @@
 # React Components
 
-This package contains Stencil's `core-components`, but in pre-compiled React wrappers.
+This package contains Stencil's `core-design`, but in pre-compiled React wrappers.
 
 ## Usage
 
@@ -23,7 +23,7 @@ export default function App() {
 
 ### Package Management
 
-To compile and build packages, head to the `core-components` root and run:
+To compile and build packages, head to the `core-design` root and run:
 
 ```bash
 lerna run build

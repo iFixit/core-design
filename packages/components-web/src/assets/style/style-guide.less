@@ -32,6 +32,7 @@ header {
 }
 
 nav {
+  border-right: 1px solid @color-gray-2;
   grid-area: nav;
 
   .sticky {
@@ -47,10 +48,10 @@ nav {
   flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0 @space-6;
+  padding: 0 @space-6 @space-3;
 
   &:first-of-type {
-    padding-top: @space-3
+    padding-top: @space-3;
   }
 
   & > li {
@@ -58,24 +59,14 @@ nav {
   }
 
   .list-title {
-    color: @color-black;
-    font-weight: bold;
+    color: @color-gray-8;
     font-size: @font-size-2;
-  }
-
-  .list-story {
-    margin-left: @space-3;
   }
 
   a {
     color: @color-blue;
     display: flex;
-    padding: 2px @space-1;
-  }
-
-  core-icon[icon="link-out"] {
-    color: @color-gray-4;
-    margin-left: @space-2;
+    padding: 1px @space-1;
   }
 }
 
@@ -113,11 +104,26 @@ h2 {
   }
 }
 
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+
+  core-tooltip {
+    cursor: pointer;
+    margin-left: @space-1;
+  }
+
+  core-icon[icon="link-out"] {
+    color: @color-blue;
+    padding: @space-2;
+  }
+}
+
 h3 {
   align-items: center;
   display: flex;
-  margin-top: 0;
-  margin-bottom: 2em;
+  margin: 0;
 
   &:before {
     content: url(../../assets/img/style-guide-section.svg);
@@ -131,7 +137,7 @@ hr {
   border: 0;
   border-top: 1px solid @color-gray-2;
   height: 0;
-  margin: 0 -@space-5;
+  margin: 0 -@space-3;
 }
 
 section {
