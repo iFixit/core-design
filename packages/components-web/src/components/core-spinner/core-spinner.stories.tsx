@@ -16,7 +16,7 @@ const colors = {
 
 const sizes = {
   small: "small",
-  medium: "medium",
+  default: "default",
   large: "large",
 };
 
@@ -24,7 +24,7 @@ export const PropStates = (): TemplateResult => {
   return html`
     <core-spinner
       color="${select("Color", colors, "black")}"
-      size="${select("size", sizes, "medium")}"
+      size="${select("size", sizes, "default")}"
     ></core-spinner>
   `;
 };
@@ -35,9 +35,9 @@ export const Small = (): TemplateResult => {
   `;
 };
 
-export const Medium = (): TemplateResult => {
+export const Default = (): TemplateResult => {
   return html`
-    <core-spinner size="medium"></core-spinner>
+    <core-spinner size="default"></core-spinner>
   `;
 };
 

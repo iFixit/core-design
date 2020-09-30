@@ -385,7 +385,7 @@ export namespace Components {
         /**
           * The pre-defined spinner size.
          */
-        "size"?: "small" | "medium" | "large";
+        "size"?: "small" | "default" | "large";
     }
     interface CoreTab {
         /**
@@ -1059,7 +1059,7 @@ declare namespace LocalJSX {
         /**
           * The pre-defined spinner size.
          */
-        "size"?: "small" | "medium" | "large";
+        "size"?: "small" | "default" | "large";
     }
     interface CoreTab {
         /**

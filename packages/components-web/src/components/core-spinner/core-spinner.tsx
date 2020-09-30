@@ -24,7 +24,7 @@ export class Spinner implements ComponentInterface {
   /**
    * The pre-defined spinner size.
    */
-  @Prop({ reflect: true }) size?: "small" | "medium" | "large" = "medium";
+  @Prop({ reflect: true }) size?: "small" | "default" | "large" = "default";
 
   render() {
     return (
