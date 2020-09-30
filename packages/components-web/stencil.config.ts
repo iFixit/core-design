@@ -10,7 +10,7 @@ export const config: Config = {
   taskQueue: "async",
   outputTargets: [
     reactOutputTarget({
-      componentCorePackage: "@core-design/components",
+      componentCorePackage: "@core-design/components-web",
       proxiesFile: "../components-react/src/generated/core-design.ts",
     }),
     {

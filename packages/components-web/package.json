@@ -1,7 +1,7 @@
 {
-  "name": "@core-design/components",
+  "name": "@core-design/components-web",
   "version": "2.0.7",
-  "description": "Core Design System Components",
+  "description": "Core Design System Web Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",

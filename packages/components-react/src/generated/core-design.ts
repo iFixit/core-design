@@ -3,9 +3,9 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import { JSX } from '@core-design/components';
+import { JSX } from '@core-design/components-web';
 
-import { defineCustomElements, applyPolyfills } from '@core-design/components/loader';
+import { defineCustomElements, applyPolyfills } from '@core-design/components-web/loader';
 
 applyPolyfills().then(() => defineCustomElements());
 export const CoreAlert = /*@__PURE__*/createReactComponent<JSX.CoreAlert, HTMLCoreAlertElement>('core-alert');

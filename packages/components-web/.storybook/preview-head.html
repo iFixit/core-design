@@ -1,5 +1,5 @@
-<script async type="module" src="./components/core-design.esm.js"></script>
-<script async nomodule src="./components/core-design.entry.js"></script>
+<script async type="module" src="./core-design/core-design.esm.js"></script>
+<script async nomodule src="./core-design/core-design.entry.js"></script>
 
 <style>
   /* TODO (IR): There are issues with loading @font-face from within the shadow-dom, so loading it in storybook head is a temps solution */
@@ -9,7 +9,7 @@
     font-display: swap;
     font-style: oblique 0deg 10deg;
     src: local("Inter"),
-      url("components/assets/font/Inter-subset.var.woff2?v3.13") format("woff2");
+      url("./assets/font/Inter-subset.var.woff2?v3.13") format("woff2");
   }
   .story {
     display: grid;

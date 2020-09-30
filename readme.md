@@ -2,7 +2,7 @@
 
 ## Packages
 
-1. [Web Components](packages/components)
+1. [Web Components](packages/components-web)
 1. [React Components](packages/components-react)
 
 ## Getting Started
