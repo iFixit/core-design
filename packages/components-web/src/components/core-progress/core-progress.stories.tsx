@@ -31,6 +31,12 @@ export const PropStates = (): TemplateResult => {
 
 export const Default = (): TemplateResult => {
   return html`
-    <core-progress value="50"></core-progress>
+    <core-progress></core-progress>
+  `;
+};
+
+export const Small = (): TemplateResult => {
+  return html`
+    <core-progress size="small" value="33"></core-progress>
   `;
 };

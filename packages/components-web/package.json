@@ -1,7 +1,7 @@
 {
-  "name": "@core-design/components",
-  "version": "2.0.7",
-  "description": "Core Design System Components",
+  "name": "@core-design/components-web",
+  "version": "2.1.0",
+  "description": "Core Design System Web Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -9,22 +9,22 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/core/components.js",
+  "unpkg": "dist/core/core-design.js",
   "files": [
     "dist/",
     "loader/"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/iFixit/core-components.git"
+    "url": "https://github.com/iFixit/core-design.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "stencil build --no-cache",
-    "build-netlify": "npm-run-all build-stencil-docs build-storybook",
-    "build-stencil-docs": "stencil build --docs --no-cache",
+    "build-netlify": "npm-run-all build-stencil build-storybook",
+    "build-stencil": "stencil build --docs-readme --no-cache",
     "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
     "generate": "stencil generate",
     "lint": "eslint src/**/*{.ts,.tsx}",

@@ -9,7 +9,7 @@ import {
   Method,
   h,
 } from "@stencil/core";
-import { labelPosition } from "../../assets/script/global";
+import { labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-textarea",
@@ -46,7 +46,7 @@ export class Textarea implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop({ reflect: true }) labelPosition?: labelPosition = "right";
+  @Prop({ reflect: true }) labelPositionProps?: labelPositionProps = "right";
 
   /**
    * Instructional text that shows before the input has a value.

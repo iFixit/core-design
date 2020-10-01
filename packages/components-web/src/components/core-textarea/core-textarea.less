@@ -3,7 +3,7 @@
   display: inline-flex;
 
   // @Prop disabled
-  &([disabled]):not([disabled="false"]),
+  &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
     core-icon,
     label {
@@ -12,7 +12,7 @@
   }
 
   // @Prop labelDisplay
-  &([labelDisplay="block"]) {
+  &([label-display="block"]) {
     .textarea-outer {
       display: block;
     }
@@ -22,7 +22,7 @@
     }
   }
 
-  &([labelDisplay="inline"]) {
+  &([label-display="inline"]) {
     .textarea-outer {
       display: flex;
       justify-content: center;
@@ -35,13 +35,13 @@
     }
   }
 
-  // @Prop labelpostion
-  &([labelPosition="left"]) .label-outer {
+  // @Prop labelPositionProps
+  &([label-position="left"]) .label-outer {
     margin-right: @space-2;
   }
 
-  // @Prop labelDisplay + labelpostion
-  &([labelDisplay="inline"][labelPosition="right"]) {
+  // @Prop labelDisplay + labelPositionProps
+  &([label-display="inline"][label-position="right"]) {
     .textarea-outer {
       flex-direction: row-reverse;
     }
@@ -51,18 +51,11 @@
     }
   }
 
-  &([labelDisplay="block"][labelPosition="right"]) {
+  &([label-display="block"][label-position="right"]) {
     .label-outer {
       justify-content: flex-end;
     }
   }
-}
-
-
-.textarea-outer,
-.native-element,
-label {
-  cursor: pointer;
 }
 
 .label-outer {

@@ -3,7 +3,7 @@
   display: inline-flex;
 
   // @Prop closable
-  &([closable]):not([closable="false"]),
+  &([closable]:not([closable="false"])),
   &([closable="true"]) {
     .native-element {
       cursor: pointer;
@@ -16,15 +16,14 @@
     }
   }
 
-  &([closable][variation="light"]):not([closable="false"]),
+  &([closable]:not([closable="false"])[variation="light"]),
   &([closable="true"][variation="light"]) {
     .closable {
       color: fade(@color-black, 15%);
     }
   }
 
-
-  &([closable][color="yellow"]):not([closable="false"]),
+  &([closable]:not([closable="false"])[color="yellow"]),
   &([closable="true"][color="yellow"]) {
     .closable {
       color: fade(@color-gray-8, 25%);
@@ -32,7 +31,6 @@
   }
 
   // @Prop color
-  // TODO: (IR) figure out automated way to maintain
   &([color="black"]) .native-element {
     background-color: @color-gray-7;
     text-shadow: @text-shadow;

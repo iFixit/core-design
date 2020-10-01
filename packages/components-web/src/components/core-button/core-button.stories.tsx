@@ -7,7 +7,7 @@ export default {
 };
 
 const loading = {
-  "--": "--",
+  "--": "false",
   left: "left",
   right: "right",
   only: "only",
@@ -44,10 +44,10 @@ export const PropStates = (): TemplateResult => {
   return html`
     <core-button
       disabled="${boolean("Disabled", false)}"
-      loading="${select("Loading", loading, null)}"
+      loading="${select("Loading", loading, "false")}"
       radius="${select("Border Radius", radii, "4")}"
       size="${select("Size", sizes, "default")}"
-      status="${select("Status", status, null)}"
+      status="${select("Status", status, "false")}"
       variation="${select("Variation", variations, "basic")}"
       >Button</core-button
     >
@@ -55,19 +55,27 @@ export const PropStates = (): TemplateResult => {
 };
 
 export const Default = (): TemplateResult => {
-  return html` <core-button>Button</core-button> `;
+  return html`
+    <core-button>Button</core-button>
+  `;
 };
 
 export const Small = (): TemplateResult => {
-  return html` <core-button size="small">Button</core-button> `;
+  return html`
+    <core-button size="small">Button</core-button>
+  `;
 };
 
 export const Large = (): TemplateResult => {
-  return html` <core-button size="large">Button</core-button> `;
+  return html`
+    <core-button size="large">Button</core-button>
+  `;
 };
 
 export const Loading = (): TemplateResult => {
-  return html` <core-button loading="left">Button</core-button> `;
+  return html`
+    <core-button loading="left">Button</core-button>
+  `;
 };
 
 export const Linked = (): TemplateResult => {

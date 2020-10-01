@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-09-23T16:28:46",
+  "timestamp": "2020-09-30T00:19:05",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.17.3",
@@ -797,11 +797,11 @@
           "description": "The label element associated with the element."
         },
         {
-          "name": "labelPosition",
+          "name": "labelPositionProps",
           "type": "\"left\" | \"right\"",
           "mutable": false,
-          "attr": "label-position",
-          "reflectToAttr": true,
+          "attr": "label-position-props",
+          "reflectToAttr": false,
           "docs": "The label element position.",
           "docsTags": [],
           "default": "\"right\"",
@@ -861,6 +861,24 @@
           "description": "Apply the pre-defined large element size styling."
         }
       ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-color-grid/core-color-grid.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-color-grid",
+      "name": "core-color-grid",
+      "readme": "# core-alert\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [],
       "methods": [],
       "events": [],
       "styles": [],
@@ -1182,12 +1200,16 @@
       "styles": [],
       "slots": [],
       "dependents": [
+        "core-icon-grid",
         "core-input",
         "core-tag",
         "core-toast"
       ],
       "dependencies": [],
       "dependencyGraph": {
+        "core-icon-grid": [
+          "core-icon"
+        ],
         "core-input": [
           "core-icon"
         ],
@@ -1195,6 +1217,30 @@
           "core-icon"
         ],
         "core-toast": [
+          "core-icon"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/core-icon-grid/core-icon-grid.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-icon-grid",
+      "name": "core-icon-grid",
+      "readme": "# core-alert\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [
+        "core-icon"
+      ],
+      "dependencyGraph": {
+        "core-icon-grid": [
           "core-icon"
         ]
       }
@@ -1498,10 +1544,10 @@
           "description": "The core-icon to render inside the text input."
         },
         {
-          "name": "inputkeyboard",
+          "name": "inputKeyboard",
           "type": "\"decimal\" | \"email\" | \"none\" | \"numeric\" | \"search\" | \"tel\" | \"text\" | \"url\"",
           "mutable": false,
-          "attr": "inputkeyboard",
+          "attr": "input-keyboard",
           "reflectToAttr": false,
           "docs": "A hint to the browser for which keyboard to display.",
           "docsTags": [],
@@ -1584,14 +1630,14 @@
           "description": "Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)."
         },
         {
-          "name": "labelPosition",
+          "name": "labelPositionProps",
           "type": "\"left\" | \"right\"",
           "mutable": false,
-          "attr": "label-position",
-          "reflectToAttr": true,
+          "attr": "label-position-props",
+          "reflectToAttr": false,
           "docs": "The label element position.",
           "docsTags": [],
-          "default": "\"right\"",
+          "default": "\"left\"",
           "values": [
             {
               "value": "left",
@@ -1837,7 +1883,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "hoverable",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "The popover will show up when hovering the popover-trigger",
           "docsTags": [],
           "default": "false",
@@ -1855,7 +1901,7 @@
           "type": "\"bottom\" | \"top\"",
           "mutable": false,
           "attr": "variation",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "The popover variation.",
           "docsTags": [],
           "default": "\"top\"",
@@ -2145,7 +2191,7 @@
           "type": "\"black\" | \"blue\" | \"green\" | \"red\" | \"yellow\"",
           "mutable": false,
           "attr": "color",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "Color of the spinner.",
           "docsTags": [],
           "default": "\"black\"",
@@ -2180,7 +2226,7 @@
           "type": "\"large\" | \"medium\" | \"small\"",
           "mutable": false,
           "attr": "size",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "The pre-defined spinner size.",
           "docsTags": [],
           "default": "\"medium\"",
@@ -2323,7 +2369,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "closable",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "Allows the tag to be closable and removed from\nthe view.",
           "docsTags": [],
           "default": "false",
@@ -2399,7 +2445,7 @@
           "type": "\"default\" | \"light\"",
           "mutable": false,
           "attr": "variation",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "The tag variation.",
           "docsTags": [],
           "default": "\"default\"",
@@ -2518,10 +2564,10 @@
           "description": "Sets the optional label to `inline` or `block` style [CSS display property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)."
         },
         {
-          "name": "labelPosition",
+          "name": "labelPositionProps",
           "type": "\"left\" | \"right\"",
           "mutable": false,
-          "attr": "label-position",
+          "attr": "label-position-props",
           "reflectToAttr": true,
           "docs": "The label element position.",
           "docsTags": [],
@@ -2932,7 +2978,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "hoverable",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "The tooltip will show up when hovering the tooltip-trigger",
           "docsTags": [],
           "default": "true",

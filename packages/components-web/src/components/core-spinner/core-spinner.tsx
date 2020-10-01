@@ -6,7 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
-import { colorsPrimary } from "../../assets/script/global";
+import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
   tag: "core-spinner",
@@ -19,12 +19,12 @@ export class Spinner implements ComponentInterface {
   /**
    * Color of the spinner.
    */
-  @Prop({ reflect: true }) color?: colorsPrimary = "black";
+  @Prop() color?: colorPropsPrimary = "black";
 
   /**
    * The pre-defined spinner size.
    */
-  @Prop() size?: "small" | "medium" | "large" = "medium";
+  @Prop({ reflect: true }) size?: "small" | "default" | "large" = "default";
 
   render() {
     return (

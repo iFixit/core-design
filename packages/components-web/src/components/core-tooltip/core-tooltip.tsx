@@ -5,7 +5,7 @@ import { Component, Prop, h, JSX, ComponentInterface } from "@stencil/core";
   styleUrl: "core-tooltip.less",
   shadow: true,
 })
-export class tooltip implements ComponentInterface {
+export class Tooltip implements ComponentInterface {
   /**
    * The tooltip visibility
    */
@@ -19,7 +19,7 @@ export class tooltip implements ComponentInterface {
   /**
    * The tooltip will show up when hovering the tooltip-trigger
    */
-  @Prop({ reflect: true }) hoverable = true;
+  @Prop() hoverable = true;
 
   /**
    * The tooltip variation.
@@ -41,7 +41,6 @@ export class tooltip implements ComponentInterface {
         class={{
           "core-tooltip": true,
           active: this.active,
-          hoverable: this.hoverable,
         }}
       >
         <div onClick={this.handleClick} class="trigger">

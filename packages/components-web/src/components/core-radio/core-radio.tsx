@@ -6,7 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
-import { labelPosition } from "../../assets/script/global";
+import { labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-radio",
@@ -34,7 +34,7 @@ export class Radio implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop({ reflect: true }) labelPosition?: labelPosition = "right";
+  @Prop({ reflect: true }) labelPosition?: labelPositionProps = "right";
 
   /**
    * If applied, the user must fill in a value before submitting a form containing this element.
@@ -63,11 +63,6 @@ export class Radio implements ComponentInterface {
         onClick={this.handleClick}
       >
         <div class="radio-outer">
-          {this.label && (
-            <div class="label-outer">
-              <label htmlFor={this.label}>{this.label}</label>
-            </div>
-          )}
           <input
             id={this.label || ""}
             class="native-element"
@@ -76,6 +71,11 @@ export class Radio implements ComponentInterface {
             disabled={this.disabled}
             required={this.required}
           />
+          {this.label && (
+            <div class="label-outer">
+              <label htmlFor={this.label}>{this.label}</label>
+            </div>
+          )}
         </div>
       </Host>
     );

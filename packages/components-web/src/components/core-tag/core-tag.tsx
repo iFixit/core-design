@@ -6,7 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
-import { colorsPrimary } from "../../assets/script/global";
+import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
   tag: "core-tag",
@@ -20,13 +20,13 @@ export class Tag implements ComponentInterface {
    * Allows the tag to be closable and removed from
    * the view.
    */
-  @Prop({ reflect: true }) closable = false;
+  @Prop() closable = false;
 
   /**
    * Optional color of the tag. Defaults to `black`.
    * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    */
-  @Prop({ reflect: true }) color?: colorsPrimary = "black";
+  @Prop({ reflect: true }) color?: colorPropsPrimary = "black";
 
   /**
    * The pre-defined tag size.
@@ -36,7 +36,7 @@ export class Tag implements ComponentInterface {
   /**
    * The tag variation.
    */
-  @Prop({ reflect: true }) variation?: "default" | "light" = "default";
+  @Prop() variation?: "default" | "light" = "default";
 
   render() {
     return (

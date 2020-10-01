@@ -6,7 +6,7 @@ import {
   Prop,
   h,
 } from "@stencil/core";
-import { labelPosition } from "../../assets/script/global";
+import { labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-toggle",
@@ -45,7 +45,7 @@ export class Toggle implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop({ reflect: true }) labelPosition?: labelPosition = "right";
+  @Prop({ reflect: true }) labelPosition?: labelPositionProps = "right";
 
   /**
    * If applied, the user must fill in a value before submitting a form containing this element.

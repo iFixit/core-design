@@ -17,7 +17,7 @@ export const PropStates = (): TemplateResult => {
       <core-popover
         active=${boolean("Active", false)}
         hoverable=${boolean("Hoverable", false)}
-        variation=${select("Varation", variations, "top")}
+        variation=${select("Variation", variations, "top")}
         style="margin:auto auto 0;"
       >
         <core-button slot="trigger">Trigger</core-button>

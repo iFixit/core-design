@@ -9,7 +9,7 @@
   }
 
   // @Prop disabled
-  &([disabled]):not([disabled="false"]),
+  &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
     core-icon,
     label {
@@ -24,17 +24,7 @@
   }
 
   // @Prop labelDisplay
-  &([labelDisplay="block"]) {
-    .input-outer {
-      display: block;
-    }
-
-    .label-outer {
-      margin-bottom: @space-2;
-    }
-  }
-
-  &([labelDisplay="inline"]) {
+  &([label-display="inline"]) {
     .input-outer {
       display: flex;
       justify-content: center;
@@ -47,13 +37,13 @@
     }
   }
 
-  // @Prop labelpostion
-  &([labelPosition="left"]) .label-outer {
+  // @Prop labelPositionProps
+  &([label-position="left"]) .label-outer {
     margin-right: @space-2;
   }
 
-  // @Prop labelDisplay + labelpostion
-  &([labelDisplay="inline"][labelPosition="right"]) {
+  // @Prop labelDisplay + labelPositionProps
+  &([label-display="inline"][label-position="right"]) {
     .input-outer {
       flex-direction: row-reverse;
     }
@@ -63,14 +53,14 @@
     }
   }
 
-  &([labelDisplay="block"][labelPosition="right"]) {
+  &([label-display="block"][label-position="right"]) {
     .label-outer {
       justify-content: flex-end;
     }
   }
 
   // @Prop error
-  &([error]):not([error="false"]),
+  &([error]:not([error="false"])),
   &([error="true"]) {
     color: @color-red;
 
@@ -91,7 +81,7 @@
   }
 
   // @Prop success
-  &([success]):not([success="false"]),
+  &([success]:not([success="false"])),
   &([success="true"]) {
     color: @color-green;
 
@@ -114,6 +104,7 @@
 
 .label-outer {
   display: flex;
+  margin-bottom: @space-2;
 }
 
 label {

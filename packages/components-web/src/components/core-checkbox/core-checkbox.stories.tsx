@@ -22,7 +22,7 @@ export const PropStates = (): TemplateResult => {
       checked=${boolean("Checked", false)}
       disabled=${boolean("Disabled", false)}
       label=${text("Label", "Label")}
-      labelPosition=${select("Label position", labelPositions, "right")}
+      label-position=${select("Label Position", labelPositions, "right")}
       size=${select("Size", sizes, "default")}
     ></core-checkbox>
   `;
@@ -48,6 +48,6 @@ export const Large = (): TemplateResult => {
 
 export const LeftLabel = (): TemplateResult => {
   return html`
-    <core-checkbox label="Label" labelPosition="left"></core-checkbox>
+    <core-checkbox label="Label" label-position="left"></core-checkbox>
   `;
 };

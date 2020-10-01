@@ -5,17 +5,18 @@ import { generateJsonDocs } from "./src/utils/customElementDocGenerator";
 import { reactOutputTarget } from "@stencil/react-output-target";
 
 export const config: Config = {
-  namespace: "components",
+  namespace: "core-design",
+  globalStyle: "./src/assets/style/style-guide.less",
   taskQueue: "async",
   outputTargets: [
     reactOutputTarget({
-      componentCorePackage: "@core-design/components",
-      proxiesFile: "../components-react/src/generated/components.ts",
+      componentCorePackage: "@core-design/components-web",
+      proxiesFile: "../components-react/src/generated/core-design.ts",
     }),
     {
       type: "dist",
       esmLoaderPath: "../loader",
-      copy: [{ src: "assets" }],
+      copy: [{ src: "assets", dest: "../assets" }],
     },
     {
       type: "docs-readme",
@@ -33,7 +34,7 @@ export const config: Config = {
   ],
   plugins: [
     less({
-      injectGlobalPaths: ["src/assets/style/global.less"],
+      injectGlobalPaths: ["./src/assets/style/global.less"],
       plugins: [
         new LessPluginAutoPrefix({
           browsers: ["last 3 versions"],

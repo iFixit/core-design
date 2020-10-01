@@ -22,7 +22,7 @@ export const PropStates = (): TemplateResult => {
       checked=${boolean("Checked", false)}
       disabled=${boolean("Disabled", false)}
       label=${text("Label", "Label")}
-      labelPosition=${select("Label position", labelPositions, "right")}
+      label-position=${select("Label position", labelPositions, "right")}
       size=${select("Size", sizes, "default")}
     >
     </core-radio>
@@ -43,6 +43,6 @@ export const Large = (): TemplateResult => {
 
 export const LeftLabel = (): TemplateResult => {
   return html`
-    <core-radio label="Label" labelPosition="left"></core-radio>
+    <core-radio label="Label" label-position="left"></core-radio>
   `;
 };

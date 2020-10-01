@@ -4,7 +4,7 @@
   display: inline-flex;
 
   // @Prop disabled
-  &([disabled]):not([disabled="false"]),
+  &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
     label {
       color: @color-gray-4;
@@ -12,6 +12,7 @@
 
     .native-element {
       background-color: @color-gray-1;
+      border-color: transparent;
       box-shadow: 0 0 0 0 transparent inset;
       color: inherit;
       cursor: not-allowed;
@@ -38,20 +39,17 @@
     }
   }
 
-  // @Prop labelPosition
-  &([labelPosition="right"]) {
+  // @Prop labelPositionProps
+  &([label-position="right"]) {
     .label-outer {
       margin-left: @space-2;
     }
-
-    input {
-      order: -1;
-    }
   }
 
-  &([labelPosition="left"]) {
+  &([label-position="left"]) {
     .label-outer {
       margin-right: @space-2;
+      order: -1;
     }
   }
 }
@@ -94,14 +92,14 @@ label {
     }
   }
 
-  &:disabled:not(:checked) {
+  &[disabled]:not(:checked) {
     background-color: @color-gray-1;
     border-color: @color-gray-1;
     color: @color-gray-4;
     cursor: not-allowed;
   }
 
-  &:checked:disabled {
+  &[disabled]:checked {
     border-color: @color-blue-light-3;
     box-shadow: 0 0 0 4px @color-blue-light-3 inset;
   }

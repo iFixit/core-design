@@ -12,7 +12,7 @@ import {
   styleUrl: "core-toast.less",
   shadow: true,
 })
-export class toast implements ComponentInterface {
+export class Toast implements ComponentInterface {
   @Element() el!: HTMLCoreToastElement;
 
   /**

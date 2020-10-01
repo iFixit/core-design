@@ -156,8 +156,8 @@ const icons = {
 export const PropStates = (): TemplateResult => {
   return html`
     <core-icon
-      color="${select("Color", colors, "gray-5")}"
-      icon="${select("Icon", icons, "alert-circle")}"
+      color="${select("Color", colors, "red")}"
+      icon="${select("Icon", icons, "alert-triangle-solid")}"
     ></core-icon>
   `;
 };
