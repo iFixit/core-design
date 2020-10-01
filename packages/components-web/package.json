@@ -25,7 +25,7 @@
     "build": "stencil build --no-cache",
     "build-netlify": "npm-run-all build-stencil build-storybook",
     "build-stencil": "stencil build --docs-readme --no-cache",
-    "build-storybook": "build-storybook --static-dir dist --output-dir storybook/ --quiet",
+    "build-storybook": "build-storybook --quiet --static-dir dist --output-dir www/storybook/",
     "generate": "stencil generate",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "start": "stencil build --dev --watch --serve",

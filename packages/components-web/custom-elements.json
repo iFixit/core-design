@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-09-30T00:19:05",
+  "timestamp": "2020-10-01T23:10:04",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.17.3",
@@ -2223,20 +2223,20 @@
         },
         {
           "name": "size",
-          "type": "\"large\" | \"medium\" | \"small\"",
+          "type": "\"default\" | \"large\" | \"small\"",
           "mutable": false,
           "attr": "size",
           "reflectToAttr": true,
           "docs": "The pre-defined spinner size.",
           "docsTags": [],
-          "default": "\"medium\"",
+          "default": "\"default\"",
           "values": [
             {
-              "value": "large",
+              "value": "default",
               "type": "string"
             },
             {
-              "value": "medium",
+              "value": "large",
               "type": "string"
             },
             {
