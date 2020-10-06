@@ -1,4 +1,4 @@
-import { select } from "@storybook/addon-knobs";
+import { boolean, select } from "@storybook/addon-knobs";
 import { html, TemplateResult } from "lit-html";
 
 export default {
@@ -6,7 +6,7 @@ export default {
   title: "Page Elements/Breadcrumb",
 };
 
-const variations = {
+const dividers = {
   slash: "slash",
   chevron: "chevron",
   triangle: "triangle",
@@ -15,14 +15,32 @@ const variations = {
 export const PropStates = (): TemplateResult => {
   return html`
     <core-breadcrumb-group
-      variation="${select("Variation", variations, "slash")}"
+      divider="${select("Divider", dividers, "slash")}"
+      overflow=${boolean("Overflow", false)}
     >
+      <core-breadcrumb href="#">Folder</core-breadcrumb>
+      <core-breadcrumb href="#">Folder</core-breadcrumb>
+      <core-breadcrumb active>Current Page</core-breadcrumb>
     </core-breadcrumb-group>
   `;
 };
 
 export const Default = (): TemplateResult => {
   return html`
-    <core-breadcrumb-group> </core-breadcrumb-group>
+    <core-breadcrumb-group>
+      <core-breadcrumb href="#">Folder</core-breadcrumb>
+      <core-breadcrumb href="#">Folder</core-breadcrumb>
+      <core-breadcrumb active>Current Page</core-breadcrumb>
+    </core-breadcrumb-group>
+  `;
+};
+
+export const Overflow = (): TemplateResult => {
+  return html`
+    <core-breadcrumb-group overflow>
+      <core-breadcrumb href="#breadcrumb-section">Folder</core-breadcrumb>
+      <core-breadcrumb href="#breadcrumb-section">Folder</core-breadcrumb>
+      <core-breadcrumb active>Current Page</core-breadcrumb>
+    </core-breadcrumb-group>
   `;
 };
