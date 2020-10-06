@@ -1,0 +1,49 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  display: flex;
+  align-items: center;
+  color: @color-gray-5;
+  display: flex;
+  font: inherit;
+  font-size: 14px;
+  max-width: 100%;
+  white-space: nowrap;
+
+  ([active]) {
+    color: @color-gray-8;
+  }
+
+  .location {
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color .12s ease-in-out;
+
+    &::before {
+      margin-right: 10px;
+      position: relative;
+    }
+  }
+
+  a.location:hover {
+    color: @color-blue;
+  }
+}
+
+
+// :host-context(<selector>) matches the component if it or any of its ancestors matches <selector>
+:host-context([divider="chevron"]) .location::before {
+  content: url(../../assets/img/breadcrumb-chevron.svg);
+}
+
+:host-context([divider="slash"]) .location::before {
+  content: url(../../assets/img/breadcrumb-slash.svg);
+  top: 2px;
+}
+
+:host-context([divider="triangle"]) .location::before {
+  content: url(../../assets/img/breadcrumb-triangle.svg);
+  bottom: 2px;
+}

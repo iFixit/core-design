@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-10-02T04:32:55",
+  "timestamp": "2020-10-06T20:41:13",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.17.3",
@@ -147,6 +147,132 @@
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-breadcrumb/core-breadcrumb.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-breadcrumb",
+      "name": "core-breadcrumb",
+      "readme": "# core-badge\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "active",
+          "reflectToAttr": false,
+          "docs": "If `true`, the core-breadcrumb element is set to active.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "If `true`, the core-breadcrumb element is set to active."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "href",
+          "reflectToAttr": false,
+          "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, the nested anchor tag will receive the URL.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, the nested anchor tag will receive the URL."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-breadcrumb-group/core-breadcrumb-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-breadcrumb-group",
+      "name": "core-breadcrumb-group",
+      "readme": "# core-badge\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "divider",
+          "type": "\"chevron\" | \"slash\" | \"triangle\"",
+          "mutable": false,
+          "attr": "divider",
+          "reflectToAttr": true,
+          "docs": "The element divider.",
+          "docsTags": [],
+          "default": "\"slash\"",
+          "values": [
+            {
+              "value": "chevron",
+              "type": "string"
+            },
+            {
+              "value": "slash",
+              "type": "string"
+            },
+            {
+              "value": "triangle",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The element divider."
+        },
+        {
+          "name": "overflow",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "overflow",
+          "reflectToAttr": false,
+          "docs": "Activates core-dropdown element overflow.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Activates core-dropdown element overflow."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [
+        "core-dropdown",
+        "core-dropdown-item"
+      ],
+      "dependencyGraph": {
+        "core-breadcrumb-group": [
+          "core-dropdown",
+          "core-dropdown-item"
+        ]
+      }
     },
     {
       "filePath": "./src/components/core-button/core-button.tsx",
@@ -920,7 +1046,7 @@
           "type": "\"center\" | \"left\" | \"right\"",
           "mutable": false,
           "attr": "alignment",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "The element alignment",
           "docsTags": [],
           "default": "\"left\"",
@@ -965,7 +1091,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "wrap",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "The dropdown will wrap if applied.",
           "docsTags": [],
           "default": "false",
@@ -983,9 +1109,15 @@
       "events": [],
       "styles": [],
       "slots": [],
-      "dependents": [],
+      "dependents": [
+        "core-breadcrumb-group"
+      ],
       "dependencies": [],
-      "dependencyGraph": {}
+      "dependencyGraph": {
+        "core-breadcrumb-group": [
+          "core-dropdown"
+        ]
+      }
     },
     {
       "filePath": "./src/components/core-dropdown-item/core-dropdown-item.tsx",
@@ -1054,9 +1186,15 @@
       "events": [],
       "styles": [],
       "slots": [],
-      "dependents": [],
+      "dependents": [
+        "core-breadcrumb-group"
+      ],
       "dependencies": [],
-      "dependencyGraph": {}
+      "dependencyGraph": {
+        "core-breadcrumb-group": [
+          "core-dropdown-item"
+        ]
+      }
     },
     {
       "filePath": "./src/components/core-icon/core-icon.tsx",

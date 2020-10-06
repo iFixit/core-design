@@ -27,6 +27,26 @@ export namespace Components {
          */
         "variation"?: "border" | "dot" | "fill";
     }
+    interface CoreBreadcrumb {
+        /**
+          * If `true`, the core-breadcrumb element is set to active.
+         */
+        "active": boolean;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, the nested anchor tag will receive the URL.
+         */
+        "href": string | undefined;
+    }
+    interface CoreBreadcrumbGroup {
+        /**
+          * The element divider.
+         */
+        "divider"?: "chevron" | "slash" | "triangle";
+        /**
+          * Activates core-dropdown element overflow.
+         */
+        "overflow": boolean;
+    }
     interface CoreButton {
         /**
           * If `true`, the user cannot interact with the button.
@@ -535,6 +555,18 @@ declare global {
         prototype: HTMLCoreBadgeElement;
         new (): HTMLCoreBadgeElement;
     };
+    interface HTMLCoreBreadcrumbElement extends Components.CoreBreadcrumb, HTMLStencilElement {
+    }
+    var HTMLCoreBreadcrumbElement: {
+        prototype: HTMLCoreBreadcrumbElement;
+        new (): HTMLCoreBreadcrumbElement;
+    };
+    interface HTMLCoreBreadcrumbGroupElement extends Components.CoreBreadcrumbGroup, HTMLStencilElement {
+    }
+    var HTMLCoreBreadcrumbGroupElement: {
+        prototype: HTMLCoreBreadcrumbGroupElement;
+        new (): HTMLCoreBreadcrumbGroupElement;
+    };
     interface HTMLCoreButtonElement extends Components.CoreButton, HTMLStencilElement {
     }
     var HTMLCoreButtonElement: {
@@ -658,6 +690,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "core-alert": HTMLCoreAlertElement;
         "core-badge": HTMLCoreBadgeElement;
+        "core-breadcrumb": HTMLCoreBreadcrumbElement;
+        "core-breadcrumb-group": HTMLCoreBreadcrumbGroupElement;
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
         "core-color-grid": HTMLCoreColorGridElement;
@@ -700,6 +734,26 @@ declare namespace LocalJSX {
           * The element variation.
          */
         "variation"?: "border" | "dot" | "fill";
+    }
+    interface CoreBreadcrumb {
+        /**
+          * If `true`, the core-breadcrumb element is set to active.
+         */
+        "active"?: boolean;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, the nested anchor tag will receive the URL.
+         */
+        "href"?: string | undefined;
+    }
+    interface CoreBreadcrumbGroup {
+        /**
+          * The element divider.
+         */
+        "divider"?: "chevron" | "slash" | "triangle";
+        /**
+          * Activates core-dropdown element overflow.
+         */
+        "overflow"?: boolean;
     }
     interface CoreButton {
         /**
@@ -1194,6 +1248,8 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "core-alert": CoreAlert;
         "core-badge": CoreBadge;
+        "core-breadcrumb": CoreBreadcrumb;
+        "core-breadcrumb-group": CoreBreadcrumbGroup;
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
         "core-color-grid": CoreColorGrid;
@@ -1222,6 +1278,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "core-alert": LocalJSX.CoreAlert & JSXBase.HTMLAttributes<HTMLCoreAlertElement>;
             "core-badge": LocalJSX.CoreBadge & JSXBase.HTMLAttributes<HTMLCoreBadgeElement>;
+            "core-breadcrumb": LocalJSX.CoreBreadcrumb & JSXBase.HTMLAttributes<HTMLCoreBreadcrumbElement>;
+            "core-breadcrumb-group": LocalJSX.CoreBreadcrumbGroup & JSXBase.HTMLAttributes<HTMLCoreBreadcrumbGroupElement>;
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
             "core-color-grid": LocalJSX.CoreColorGrid & JSXBase.HTMLAttributes<HTMLCoreColorGridElement>;

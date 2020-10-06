@@ -12,6 +12,19 @@
 | `target`      | `target`       | Specifies where to display the linked URL. Only applies when an `href` is provided.                                                      | `string` | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [core-breadcrumb-group](../core-breadcrumb-group)
+
+### Graph
+```mermaid
+graph TD;
+  core-breadcrumb-group --> core-dropdown-item
+  style core-dropdown-item fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

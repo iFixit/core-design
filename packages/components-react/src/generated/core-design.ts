@@ -3,13 +3,14 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import { JSX } from '@core-design/components-web';
+import type { JSX } from '@core-design/components-web';
 
-import { defineCustomElements, applyPolyfills } from '@core-design/components-web/loader';
 
-applyPolyfills().then(() => defineCustomElements());
+
 export const CoreAlert = /*@__PURE__*/createReactComponent<JSX.CoreAlert, HTMLCoreAlertElement>('core-alert');
 export const CoreBadge = /*@__PURE__*/createReactComponent<JSX.CoreBadge, HTMLCoreBadgeElement>('core-badge');
+export const CoreBreadcrumb = /*@__PURE__*/createReactComponent<JSX.CoreBreadcrumb, HTMLCoreBreadcrumbElement>('core-breadcrumb');
+export const CoreBreadcrumbGroup = /*@__PURE__*/createReactComponent<JSX.CoreBreadcrumbGroup, HTMLCoreBreadcrumbGroupElement>('core-breadcrumb-group');
 export const CoreButton = /*@__PURE__*/createReactComponent<JSX.CoreButton, HTMLCoreButtonElement>('core-button');
 export const CoreCheckbox = /*@__PURE__*/createReactComponent<JSX.CoreCheckbox, HTMLCoreCheckboxElement>('core-checkbox');
 export const CoreColorGrid = /*@__PURE__*/createReactComponent<JSX.CoreColorGrid, HTMLCoreColorGridElement>('core-color-grid');

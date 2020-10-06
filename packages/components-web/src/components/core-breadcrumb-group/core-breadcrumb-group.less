@@ -1,0 +1,26 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  display: flex;
+  align-items: center;
+  display: flex;
+  font: inherit;
+  max-width: 100%;
+}
+
+.home {
+  color: @color-gray-5;
+  display: flex;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color .12s ease-in-out;
+
+  &:hover {
+    color: @color-blue;
+  }
+}
+
+.divider {
+  color: @color-gray-3;
+  display: flex;
+  align-items: center;
+}
