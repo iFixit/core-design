@@ -6,6 +6,7 @@
   contain: strict;
   display: inline-flex;
   fill: currentColor;
+  vertical-align: middle;
 
   &(.core-icon--16) {
     height: 16px;
@@ -233,4 +234,9 @@
 .core-icon--inner {
   height: inherit;
   width: inherit;
+}
+
+// :host-context(<selector>) matches the component if it or any of its ancestors matches <selector>
+:host-context(.core-dropdown) {
+  display: flex;
 }

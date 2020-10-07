@@ -2,6 +2,7 @@
 :host {
   color: @color-gray-5;
   display: inline-flex;
+  vertical-align: middle;
   white-space: nowrap;
   width: inherit;
 
@@ -45,8 +46,8 @@
   }
 
   // Applied only when a core-dropdown is in a core-button slot
-  &([slot=button-dropdown-right]),
-  &([slot=button-dropdown-left]) {
+  &([slot="button-dropdown-right"]),
+  &([slot="button-dropdown-left"]) {
     position: relative;
 
     .trigger::after {
@@ -76,8 +77,8 @@
   }
 
   // Applied only when a core-dropdown is in a core-button slot
-  &([slot=button-dropdown-right]) {
-    left: 15px;
+  &([slot="button-dropdown-right"]) {
+    left: 14px;
 
     .core-dropdown.active .trigger {
       border-top-right-radius: @border-radius-md;
@@ -90,8 +91,8 @@
   }
 
   // Applied only when a core-dropdown is in a core-button slot
-  &([slot=button-dropdown-left]) {
-    right: 15px;
+  &([slot="button-dropdown-left"]) {
+    right: 14px;
 
     .core-dropdown.active .trigger {
       border-top-left-radius: @border-radius-md;
@@ -118,7 +119,9 @@
   .trigger {
     cursor: pointer;
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 10px;
   }
 
   .menu-outer {
