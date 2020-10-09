@@ -14,7 +14,7 @@ export class Dropdown implements ComponentInterface {
   /**
    * The element alignment
    */
-  @Prop() alignment?: "left" | "center" | "right" = "left";
+  @Prop({ reflect: true }) alignment?: "left" | "center" | "right" = "left";
 
   /**
    * The dropdown will show up when hovering the dropdown-trigger
@@ -24,7 +24,7 @@ export class Dropdown implements ComponentInterface {
   /**
    * The dropdown will wrap if applied.
    */
-  @Prop({ reflect: true }) wrap = false;
+  @Prop() wrap = false;
 
   /**
    * Handle Trigger click action

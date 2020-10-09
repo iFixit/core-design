@@ -3,11 +3,10 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import { JSX } from '@core-design/components-web';
+import type { JSX } from '@core-design/components-web';
 
-import { defineCustomElements, applyPolyfills } from '@core-design/components-web/loader';
 
-applyPolyfills().then(() => defineCustomElements());
+
 export const CoreAlert = /*@__PURE__*/createReactComponent<JSX.CoreAlert, HTMLCoreAlertElement>('core-alert');
 export const CoreBadge = /*@__PURE__*/createReactComponent<JSX.CoreBadge, HTMLCoreBadgeElement>('core-badge');
 export const CoreButton = /*@__PURE__*/createReactComponent<JSX.CoreButton, HTMLCoreButtonElement>('core-button');

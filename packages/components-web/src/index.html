@@ -6,8 +6,7 @@
       icon="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
-    <title>Core Design System - Style Guide</title>
-    <link rel="icon" href="favicon.svg" />
+    <title>Style Guide - Core Design System</title>
 
     <script type="module" src="./build/core-design.esm.js"></script>
     <script nomodule src="./build/core-design.js"></script>
@@ -15,74 +14,74 @@
     <link rel="stylesheet" href="./build/core-design.css" />
   </head>
   <body>
-    <header>
-      <h1>Core Design System - Style Guide</h1>
-    </header>
+    <!-- <header>
+      <h1>Style Guide</h1>
+    </header> -->
 
     <nav class="nav">
       <div class="sticky">
         <ul class="list">
           <li>
-            <a class="list-title" href="#colors">Core Colors</a>
+            <a class="list-title" href="#color-section">Core Colors</a>
           </li>
         </ul>
         <ul class="list">
           <li>
-            <a class="list-title" href="#icons">Core Icons</a>
+            <a class="list-title" href="#icon-section">Core Icons</a>
           </li>
         </ul>
         <ul class="list buttons-inputs">
           <li>
-            <a class="list-title" href="#button-states">Button</a>
+            <a class="list-title" href="#button-state-section">Button</a>
           </li>
           <li>
-            <a class="list-title" href="#checkbox">Checkbox</a>
+            <a class="list-title" href="#checkbox-section">Checkbox</a>
           </li>
           <li>
-            <a class="list-title" href="#dropdown">Dropdown</a>
+            <a class="list-title" href="#dropdown-section">Dropdown</a>
           </li>
           <li>
-            <a class="list-title" href="#input">Input</a>
+            <a class="list-title" href="#input-section">Input</a>
           </li>
           <li>
-            <a class="list-title" href="#radio">Radio</a>
+            <a class="list-title" href="#radio-section">Radio</a>
           </li>
           <li>
-            <a class="list-title" href="#textarea">Textarea</a>
+            <a class="list-title" href="#textarea-section">Textarea</a>
           </li>
           <li>
-            <a class="list-title" href="#toggle">Toggle</a>
+            <a class="list-title" href="#toggle-section">Toggle</a>
           </li>
           <li>
-            <a class="list-title" href="#tooltip">Tooltip</a>
+            <a class="list-title" href="#tooltip-section">Tooltip</a>
           </li>
         </ul>
         <ul class="list informers">
           <li>
-            <a class="list-title" href="#alert">Alert</a>
+            <a class="list-title" href="#alert-section">Alert</a>
           </li>
           <li>
-            <a class="list-title" href="#badge">Badge</a>
+            <a class="list-title" href="#badge-section">Badge</a>
           </li>
           <li>
-            <a class="list-title" href="#popover">Popover</a>
+            <a class="list-title" href="#popover-section">Popover</a>
           </li>
           <li>
-            <a class="list-title" href="#progress">Progress</a>
+            <a class="list-title" href="#progress-section">Progress</a>
           </li>
           <li>
-            <a class="list-title" href="#spinner">Spinner</a>
+            <a class="list-title" href="#spinner-section">Spinner</a>
           </li>
           <li>
-            <a class="list-title" href="#tag">Tag</a>
+            <a class="list-title" href="#tag-section">Tag</a>
           </li>
           <li>
-            <a class="list-title" href="#toast">Toast</a>
+            <a class="list-title" href="#toast-section">Toast</a>
           </li>
         </ul>
         <ul class="list page-elements">
           <li>
-            <a class="list-title" href="#tabs">Tabs</a>
+            <a class="list-title" href="#tab-section">Tab</a>
           </li>
         </ul>
       </div>
@@ -90,7 +89,10 @@
 
     <main>
       <div id="core-colors">
-        <section id="colors" class="spaced">
+        <h2 class="group-title">
+          <span>Colors</span>
+        </h2>
+        <section id="color-section">
           <div class="heading">
             <h3>Core Colors</h3>
           </div>
@@ -100,7 +102,10 @@
         </section>
       </div>
       <div id="core-icons">
-        <section id="icons" class="spaced">
+        <h2 class="group-title">
+          <span>Icons</span>
+        </h2>
+        <section id="icon-section">
           <div class="heading">
             <h3>Core Icons</h3>
           </div>
@@ -113,7 +118,7 @@
         <h2 class="group-title">
           <span>Buttons &amp; Inputs</span>
         </h2>
-        <section id="button-states">
+        <section id="button-state-section">
           <div class="heading">
             <h3>Button States</h3>
             <a
@@ -124,7 +129,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip>
             </a>
           </div>
@@ -161,7 +166,7 @@
             </div>
           </div>
         </section>
-        <section id="button-sizes">
+        <section id="button-size-section">
           <div class="heading">
             <h3>Button Sizes</h3>
             <a
@@ -171,7 +176,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -204,7 +209,52 @@
           </div>
         </section>
         <hr />
-        <section id="checkbox">
+        <section id="icon-buttons-section">
+          <div class="heading">
+            <h3>Icon Buttons</h3>
+            <a
+              class="story"
+              href="/storybook/?path=/story/buttons-inputs-button"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View in Storybook
+              </core-tooltip></a
+            >
+          </div>
+          <div class="grid">
+            <div class="icon-buttons grid">
+              <div class="extend-2">
+                <core-button>
+                  Prev
+                  <core-icon icon="chevron-left" slot="button-left"></core-icon>
+                </core-button>
+                <core-button>
+                  Next
+                  <core-icon
+                    icon="chevron-right"
+                    slot="button-right"
+                  ></core-icon>
+                </core-button>
+              </div>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon-buttons grid">
+              <div>
+                <core-button>
+                  <core-icon icon="chevron-left" slot="icon"></core-icon>
+                </core-button>
+                <core-button>
+                  <core-icon icon="chevron-right" slot="icon"></core-icon>
+                </core-button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="checkbox-section">
           <div class="heading">
             <h3>Checkbox</h3>
             <a
@@ -214,7 +264,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -260,7 +310,7 @@
           </div>
         </section>
         <hr />
-        <section id="dropdown">
+        <section id="dropdown-section">
           <div class="heading">
             <h3>Dropdown</h3>
             <a
@@ -270,7 +320,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -367,7 +417,7 @@
           </div>
         </section>
         <hr />
-        <section id="input">
+        <section id="input-section">
           <div class="heading">
             <h3>Input</h3>
             <a class="story" href="/storybook/?path=/story/buttons-inputs-input"
@@ -375,7 +425,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -410,7 +460,7 @@
           </div>
         </section>
         <hr />
-        <section id="radio">
+        <section id="radio-section">
           <div class="heading">
             <h3>Radio</h3>
             <a class="story" href="/storybook/?path=/story/buttons-inputs-radio"
@@ -418,7 +468,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -448,12 +498,9 @@
               ></core-radio>
             </div>
             <div class="radio grid">
+              <core-radio label="Left Label" label-position="left"></core-radio>
               <core-radio
-                label="Right Label"
-                label-position="left"
-              ></core-radio>
-              <core-radio
-                label="Right Large Label"
+                label="Left Large Label"
                 label-position="left"
                 size="large"
               ></core-radio>
@@ -461,7 +508,7 @@
           </div>
         </section>
         <hr />
-        <section id="textarea">
+        <section id="textarea-section">
           <div class="heading">
             <h3>Textarea</h3>
             <a
@@ -471,7 +518,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -482,7 +529,7 @@
           </div>
         </section>
         <hr />
-        <section id="toggle">
+        <section id="toggle-section">
           <div class="heading">
             <h3>Toggle</h3>
             <a
@@ -492,7 +539,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -527,7 +574,7 @@
           </div>
         </section>
         <hr />
-        <section id="tooltip">
+        <section id="tooltip-section">
           <div class="heading">
             <h3>Tooltip</h3>
             <a
@@ -537,7 +584,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -576,7 +623,7 @@
         <h2 class="group-title">
           <span>Informers</span>
         </h2>
-        <section id="alert">
+        <section id="alert-section">
           <div class="heading">
             <h3>Alert</h3>
             <a class="story" href="/storybook/?path=/story/informers-alert"
@@ -584,7 +631,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -604,7 +651,7 @@
           </div>
         </section>
         <hr />
-        <section id="badge">
+        <section id="badge-section">
           <div class="heading">
             <h3>Badge</h3>
             <a class="story" href="/storybook/?path=/story/informers-badge"
@@ -612,7 +659,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -682,7 +729,7 @@
           </div>
         </section>
         <hr />
-        <section id="popover">
+        <section id="popover-section">
           <div class="heading">
             <h3>Popover</h3>
             <a class="story" href="/storybook/?path=/story/informers-popover"
@@ -690,7 +737,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -703,31 +750,22 @@
             <core-popover>
               <core-button slot="trigger">Trigger</core-button>
               <span slot="title">Popover Title</span>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
+              <div>The quick brown fox jumps over the lazy dog.</div>
             </core-popover>
             <core-popover variation="bottom">
               <core-button slot="trigger">Trigger</core-button>
               <span slot="title">Popover Title</span>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
+              <div>The quick brown fox jumps over the lazy dog.</div>
             </core-popover>
             <core-popover hoverable>
               <core-button slot="trigger">Trigger</core-button>
               <span slot="title">Popover Title</span>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
+              <div>The quick brown fox jumps over the lazy dog.</div>
             </core-popover>
           </div>
         </section>
         <hr />
-        <section id="progress">
+        <section id="progress-section">
           <div class="heading">
             <h3>Progress</h3>
             <a class="story" href="/storybook/?path=/story/informers-progress"
@@ -735,7 +773,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -781,7 +819,7 @@
           </div>
         </section>
         <hr />
-        <section id="spinner">
+        <section id="spinner-section">
           <div class="heading">
             <h3>Spinner</h3>
             <a class="story" href="/storybook/?path=/story/informers-spinner"
@@ -789,7 +827,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -806,7 +844,7 @@
           </div>
         </section>
         <hr />
-        <section id="tag">
+        <section id="tag-section">
           <div class="heading">
             <h3>Tag</h3>
             <a class="story" href="/storybook/?path=/story/informers-tag"
@@ -814,7 +852,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -929,7 +967,7 @@
           </div>
         </section>
         <hr />
-        <section id="toast">
+        <section id="toast-section">
           <div class="heading">
             <h3>Toast</h3>
             <a class="story" href="/storybook/?path=/story/informers-toast"
@@ -937,7 +975,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>
@@ -966,8 +1004,10 @@
         </section>
       </div>
       <div id="core-page-elements">
-        <hr />
-        <section id="tabs">
+        <h2 class="group-title">
+          <span>Page Elements</span>
+        </h2>
+        <section id="tab-section">
           <div class="heading">
             <h3>Tabs</h3>
             <a class="story" href="/storybook/?path=/story/page-elements-tabs"
@@ -975,7 +1015,7 @@
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
                 ></span>
-                View Story
+                View in Storybook
               </core-tooltip></a
             >
           </div>

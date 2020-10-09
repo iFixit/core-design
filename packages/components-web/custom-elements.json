@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-10-02T04:32:55",
+  "timestamp": "2020-10-09T17:24:08",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.17.3",
@@ -920,7 +920,7 @@
           "type": "\"center\" | \"left\" | \"right\"",
           "mutable": false,
           "attr": "alignment",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "The element alignment",
           "docsTags": [],
           "default": "\"left\"",
@@ -965,7 +965,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "wrap",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "The dropdown will wrap if applied.",
           "docsTags": [],
           "default": "false",
