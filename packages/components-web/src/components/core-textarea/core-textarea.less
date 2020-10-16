@@ -18,7 +18,7 @@
       display: block;
     }
 
-    .label-outer {
+    label {
       margin-bottom: @space-2;
     }
   }
@@ -29,7 +29,7 @@
       justify-content: center;
     }
 
-    .label-outer {
+    label {
       align-self: center;
       display: flex;
       margin-bottom: 0;
@@ -37,7 +37,7 @@
   }
 
   // @Prop labelPositionProps
-  &([label-position="left"]) .label-outer {
+  &([label-position="left"]) label {
     margin-right: @space-2;
   }
 
@@ -47,19 +47,19 @@
       flex-direction: row-reverse;
     }
 
-    .label-outer {
+    label {
       margin-left: @space-2;
     }
   }
 
   &([label-display="block"][label-position="right"]) {
-    .label-outer {
+    label {
       justify-content: flex-end;
     }
   }
 }
 
-.label-outer {
+label {
   display: flex;
 }
 

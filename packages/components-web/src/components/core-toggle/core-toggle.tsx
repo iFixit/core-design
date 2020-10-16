@@ -50,7 +50,7 @@ export class Toggle implements ComponentInterface {
   /**
    * If applied, the user must fill in a value before submitting a form containing this element.
    */
-  @Prop({ reflect: true }) required = false;
+  @Prop() required = false;
 
   /**
    * Apply the pre-defined large element size styling.
@@ -75,11 +75,7 @@ export class Toggle implements ComponentInterface {
         onClick={this.handleClick}
       >
         <div class="toggle-outer">
-          {this.label && (
-            <div class="label-outer">
-              <label htmlFor={this.label}>{this.label}</label>
-            </div>
-          )}
+          {this.label && <label htmlFor={this.label}>{this.label}</label>}
           <input
             id={this.label || ""}
             class="native-element"

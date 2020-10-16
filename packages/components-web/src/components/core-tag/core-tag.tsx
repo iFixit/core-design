@@ -46,8 +46,20 @@ export class Tag implements ComponentInterface {
           <slot></slot>
           <slot name="tag-right"></slot>
           {this.closable && (
-            <div class="closable">
-              <core-icon icon="cross-sm"></core-icon>
+            <div class="close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="cross-sm"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.41 8l2.29-2.29c.19-.18.3-.43.3-.71a1.003 1.003 0 0 0-1.71-.71L8 6.59l-2.29-2.3a1.003 1.003 0 0 0-1.42 1.42L6.59 8 4.3 10.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71L8 9.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 0 0 .71-1.71L9.41 8z"
+                />
+              </svg>
             </div>
           )}
         </div>

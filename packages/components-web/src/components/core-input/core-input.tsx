@@ -119,11 +119,7 @@ export class Input implements ComponentInterface {
         }}
       >
         <div class="input-outer">
-          {this.label && (
-            <div class="label-outer">
-              <label htmlFor={this.label}>{this.label}</label>
-            </div>
-          )}
+          {this.label && <label htmlFor={this.label}>{this.label}</label>}
           <div class="input-inner">
             <slot name="input-left">
               {this.icon && (

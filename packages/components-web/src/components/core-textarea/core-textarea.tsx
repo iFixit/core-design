@@ -88,11 +88,7 @@ export class Textarea implements ComponentInterface {
         aria-disabled={this.disabled ? "true" : null}
       >
         <div class="textarea-outer">
-          {this.label && (
-            <div class="label-outer">
-              <label htmlFor={this.label}>{this.label}</label>
-            </div>
-          )}
+          {this.label && <label htmlFor={this.label}>{this.label}</label>}
           <textarea
             class="native-element"
             ref={(el) => (this.nativeInput = el)}
