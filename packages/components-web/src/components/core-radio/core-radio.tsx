@@ -37,9 +37,14 @@ export class Radio implements ComponentInterface {
   @Prop({ reflect: true }) labelPosition?: labelPositionProps = "right";
 
   /**
+   * The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)
+   */
+  @Prop({ reflect: true }) name: string | undefined;
+
+  /**
    * If applied, the user must fill in a value before submitting a form containing this element.
    */
-  @Prop({ reflect: true }) required = false;
+  @Prop() required = false;
 
   /**
    * Apply the pre-defined large element size styling.
@@ -69,13 +74,10 @@ export class Radio implements ComponentInterface {
             type="radio"
             checked={this.checked}
             disabled={this.disabled}
+            name={this.name}
             required={this.required}
           />
-          {this.label && (
-            <div class="label-outer">
-              <label htmlFor={this.label}>{this.label}</label>
-            </div>
-          )}
+          {this.label && <label htmlFor={this.label}>{this.label}</label>}
         </div>
       </Host>
     );

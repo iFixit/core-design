@@ -369,6 +369,10 @@ export namespace Components {
          */
         "labelPosition"?: labelPositionProps;
         /**
+          * The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)
+         */
+        "name": string | undefined;
+        /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */
         "required": boolean;
@@ -1042,6 +1046,10 @@ declare namespace LocalJSX {
           * The label element position.
          */
         "labelPosition"?: labelPositionProps;
+        /**
+          * The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)
+         */
+        "name"?: string | undefined;
         /**
           * If applied, the user must fill in a value before submitting a form containing this element.
          */

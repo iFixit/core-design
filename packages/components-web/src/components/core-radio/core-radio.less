@@ -31,24 +31,24 @@
       width: @space-large;
 
       &:checked:not(:disabled) {
-        box-shadow: 0 0 0 5px @color-blue inset;
+        box-shadow: 0 0 0 6px @color-blue inset;
       }
 
       &:checked:disabled {
-        box-shadow: 0 0 0 5px @color-blue-light-3 inset;
+        box-shadow: 0 0 0 6px @color-blue-light-3 inset;
       }
     }
   }
 
   // @Prop labelPositionProps
   &([label-position="right"]) {
-    .label-outer {
+    label {
       margin-left: @space-2;
     }
   }
 
   &([label-position="left"]) {
-    .label-outer {
+    label {
       margin-right: @space-2;
       order: -1;
     }
@@ -73,9 +73,9 @@ label {
 
 .native-element {
   background-color: @color-white;
-  border: 1px solid @color-gray-3;
+  border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 0 transparent inset;
+  box-shadow: 0 0 0 1px @color-gray-3 inset;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
@@ -89,7 +89,7 @@ label {
   &:checked:not(:disabled) {
     &:focus,
     &:active {
-      box-shadow: 0 0 0 4px @color-blue inset;
+      box-shadow: 0 0 0 5px @color-blue inset;
     }
   }
 
@@ -102,7 +102,7 @@ label {
 
   &[disabled]:checked {
     border-color: @color-blue-light-3;
-    box-shadow: 0 0 0 4px @color-blue-light-3 inset;
+    box-shadow: 0 0 0 5px @color-blue-light-3 inset;
   }
 }
 
@@ -113,7 +113,7 @@ label {
 
     &:checked {
       border-color: @color-blue-dark-1;
-      box-shadow: 0 0 0 4px @color-blue inset;
+      box-shadow: 0 0 0 5px @color-blue inset;
     }
   }
 }

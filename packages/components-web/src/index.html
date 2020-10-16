@@ -478,28 +478,47 @@
               <span class="hint">Large</span>
             </div>
             <div class="radio grid">
-              <core-radio label="Radio"></core-radio>
-              <core-radio label="Large Radio" size="large"></core-radio>
+              <core-radio name="radio-group" label="Radio"></core-radio>
+              <core-radio
+                name="radio-group"
+                label="Large Radio"
+                size="large"
+              ></core-radio>
             </div>
             <div class="radio grid">
-              <core-radio label="Selected radio" checked></core-radio>
               <core-radio
+                name="radio-group"
+                label="Selected radio"
+                checked
+              ></core-radio>
+              <core-radio
+                name="radio-group"
                 label="Large Selected radio"
                 size="large"
                 checked
               ></core-radio>
             </div>
             <div class="radio grid">
-              <core-radio label="Disabled Radio" disabled></core-radio>
               <core-radio
+                name="radio-group"
+                label="Disabled Radio"
+                disabled
+              ></core-radio>
+              <core-radio
+                name="radio-group"
                 label="Disabled Large Radio"
                 size="large"
                 disabled
               ></core-radio>
             </div>
             <div class="radio grid">
-              <core-radio label="Left Label" label-position="left"></core-radio>
               <core-radio
+                name="radio-group"
+                label="Left Label"
+                label-position="left"
+              ></core-radio>
+              <core-radio
+                name="radio-group"
                 label="Left Large Label"
                 label-position="left"
                 size="large"
@@ -1025,14 +1044,14 @@
             </div>
             <div class="tabs">
               <core-tab-group>
-                <core-tab class="active">Active</core-tab>
+                <core-tab active>Active</core-tab>
                 <core-tab>Default</core-tab>
-                <core-tab class="disabled">Disabled</core-tab>
+                <core-tab disabled>Disabled</core-tab>
               </core-tab-group>
             </div>
             <div class="tabs">
               <core-tab-group>
-                <core-tab class="active">Active</core-tab>
+                <core-tab active>Active</core-tab>
                 <core-tab>Default</core-tab>
                 <core-tab>
                   With Badge
@@ -1040,7 +1059,7 @@
                     >3</core-badge
                   >
                 </core-tab>
-                <core-tab class="disabled">Disabled</core-tab>
+                <core-tab disabled>Disabled</core-tab>
               </core-tab-group>
             </div>
           </div>
@@ -1050,9 +1069,9 @@
             </div>
             <div class="tabs">
               <core-tab-group size="small">
-                <core-tab class="active">Active</core-tab>
+                <core-tab active>Active</core-tab>
                 <core-tab>Default</core-tab>
-                <core-tab class="disabled">Disabled</core-tab>
+                <core-tab disabled>Disabled</core-tab>
               </core-tab-group>
             </div>
           </div>

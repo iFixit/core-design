@@ -80,11 +80,7 @@ export class Checkbox implements ComponentInterface {
             disabled={this.disabled}
             required={this.required}
           />
-          {this.label && (
-            <div class="label-outer">
-              <label htmlFor={this.label}>{this.label}</label>
-            </div>
-          )}
+          {this.label && <label htmlFor={this.label}>{this.label}</label>}
         </div>
       </Host>
     );

@@ -48,9 +48,8 @@
 
   // @Prop small size
   &([size="small"]) .native-element {
-    border-radius: calc(@space-4 / 2);
+    .pill(@space-4);
     font-size: 11px;
-    height: @space-4;
     letter-spacing: unset;
     line-height: @space-3;
     min-width: @space-4;
@@ -70,15 +69,14 @@
 
 // native element styles with intentional lower specificity
 .native-element {
+  .pill(@badge-space-lg);
   align-items: center;
-  border-radius: calc(@badge-space-lg / 2);
   box-sizing: border-box;
   cursor: default;
   display: flex;
   font: inherit;
   font-size: 12px;
   font-weight: bold;
-  height: @badge-space-lg;
   justify-content: center;
   line-height: 15px;
   max-width: 100%;

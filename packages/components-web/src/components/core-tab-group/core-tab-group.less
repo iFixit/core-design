@@ -1,3 +1,5 @@
+@tab-line-height: 3px;
+
 // `:host` targets the custom element compiled by Stencil
 :host {
   display: flex;
@@ -6,8 +8,7 @@
   &::after {
     content: "";
     background-color: @color-gray-2;
-    border-radius: calc(@tab-line-height / 2);
-    height: @tab-line-height;
+    .pill(@tab-line-height);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -22,8 +23,7 @@
     line-height: 1.142857;
 
     &::after {
-      border-radius: calc(2px / 2);
-      height: 2px;
+      .pill(2px);
     }
 
     .native-element {
