@@ -5,6 +5,7 @@
   display: inline-flex;
   max-width: 100%;
   vertical-align: middle;
+  width: inherit;
 
   // @Prop basic variation
   &([variation="basic"]) {
@@ -618,13 +619,13 @@
   font: inherit;
   font-weight: bold;
   line-height: 18px;
-  max-width: inherit;
   outline: none;
   padding: 0 15px;
   position: relative;
   text-decoration: none;
   transition: background-color 0.12s ease-in-out, border 0.12s ease-in-out,
     box-shadow 0.12s ease-in-out, color 0.12s ease-in-out;
+  width: inherit;
 
   &:not([disabled]):not([loading]):hover,
   &:not([disabled]):not([loading]):active {
@@ -639,6 +640,7 @@
   }
 
   .text-wrap {
+    margin: auto;
     min-height: @space-4;
     overflow-x: hidden;
     padding-top: 9px;
