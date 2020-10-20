@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-10-09T17:24:08",
+  "timestamp": "2020-10-20T18:13:17",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.17.3",
@@ -1201,9 +1201,7 @@
       "slots": [],
       "dependents": [
         "core-icon-grid",
-        "core-input",
-        "core-tag",
-        "core-toast"
+        "core-input"
       ],
       "dependencies": [],
       "dependencyGraph": {
@@ -1211,12 +1209,6 @@
           "core-icon"
         ],
         "core-input": [
-          "core-icon"
-        ],
-        "core-tag": [
-          "core-icon"
-        ],
-        "core-toast": [
           "core-icon"
         ]
       }
@@ -2127,11 +2119,28 @@
           "description": "The label element position."
         },
         {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": true,
+          "docs": "The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)"
+        },
+        {
           "name": "required",
           "type": "boolean",
           "mutable": false,
           "attr": "required",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "If applied, the user must fill in a value before submitting a form containing this element.",
           "docsTags": [],
           "default": "false",
@@ -2469,14 +2478,8 @@
       "styles": [],
       "slots": [],
       "dependents": [],
-      "dependencies": [
-        "core-icon"
-      ],
-      "dependencyGraph": {
-        "core-tag": [
-          "core-icon"
-        ]
-      }
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
       "filePath": "./src/components/core-textarea/core-textarea.tsx",
@@ -2724,14 +2727,8 @@
       "styles": [],
       "slots": [],
       "dependents": [],
-      "dependencies": [
-        "core-icon"
-      ],
-      "dependencyGraph": {
-        "core-toast": [
-          "core-icon"
-        ]
-      }
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
       "filePath": "./src/components/core-toggle/core-toggle.tsx",
@@ -2877,7 +2874,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "required",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "If applied, the user must fill in a value before submitting a form containing this element.",
           "docsTags": [],
           "default": "false",

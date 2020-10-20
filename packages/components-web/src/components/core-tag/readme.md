@@ -13,19 +13,6 @@
 | `variation` | `variation` | The tag variation.                                                                                                                                                             | `"default" \| "light"`                              | `"default"` |
 
 
-## Dependencies
-
-### Depends on
-
-- [core-icon](../core-icon)
-
-### Graph
-```mermaid
-graph TD;
-  core-tag --> core-icon
-  style core-tag fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
