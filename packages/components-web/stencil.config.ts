@@ -38,7 +38,7 @@ export const config: Config = {
       injectGlobalPaths: ["./src/assets/style/global.less"],
       plugins: [
         new LessPluginAutoPrefix({
-          browsers: ["last 3 versions"],
+          browsers: ["last 3 versions", "ie 11"],
         }),
       ],
     }),
