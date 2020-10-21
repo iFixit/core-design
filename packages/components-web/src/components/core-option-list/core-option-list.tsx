@@ -1,13 +1,13 @@
 import { Component, Prop, h, JSX, ComponentInterface } from "@stencil/core";
 
 @Component({
-  tag: "core-dropdown",
-  styleUrl: "core-dropdown.less",
+  tag: "core-option-list",
+  styleUrl: "core-option-list.less",
   shadow: true,
 })
-export class Dropdown implements ComponentInterface {
+export class OptionList implements ComponentInterface {
   /**
-   * The dropdown visibility
+   * The option-list visibility
    */
   @Prop({ mutable: true, reflect: true }) active = false;
 
@@ -17,12 +17,17 @@ export class Dropdown implements ComponentInterface {
   @Prop({ reflect: true }) alignment?: "left" | "center" | "right" = "left";
 
   /**
-   * The dropdown will show up when hovering the dropdown-trigger
+   * The option-lists direction to expand.
+   */
+  @Prop({ reflect: true }) direction?: "up" | "down" = "down";
+
+  /**
+   * The option-list will show up when hovering the option-list-trigger
    */
   @Prop({ reflect: true }) hoverable = false;
 
   /**
-   * The dropdown will wrap if applied.
+   * The option-list will wrap if applied.
    */
   @Prop() wrap = false;
 
@@ -39,7 +44,7 @@ export class Dropdown implements ComponentInterface {
     return (
       <div
         class={{
-          "core-dropdown": true,
+          "core-option-list": true,
           active: this.active,
           hoverable: this.hoverable,
           wrap: this.wrap,

@@ -1,79 +1,61 @@
 import React from 'react';
 
 import {
-  attachProps,
+  attachEventProps,
   createForwardRef,
   dashToPascalCase,
   isCoveredByReact,
-  mergeRefs,
-} from './utils';
+} from './utils/index';
 
-export interface HTMLStencilElement extends HTMLElement {
-  componentOnReady(): Promise<this>;
-}
-
-interface StencilReactInternalProps<ElementType> extends React.HTMLAttributes<ElementType> {
-  forwardedRef: React.RefObject<ElementType>;
+interface IonicReactInternalProps<ElementType> extends React.HTMLAttributes<ElementType> {
+  forwardedRef?: React.Ref<ElementType>;
   ref?: React.Ref<any>;
 }
 
-export const createReactComponent = <
-  PropType,
-  ElementType extends HTMLStencilElement,
-  ContextStateType = {},
-  ExpandedPropsTypes = {}
->(
-  tagName: string,
-  ReactComponentContext?: React.Context<ContextStateType>,
-  manipulatePropsFunction?: (
-    originalProps: StencilReactInternalProps<ElementType>,
-    propsToPass: any,
-  ) => ExpandedPropsTypes,
-) => {
+export const createReactComponent = <PropType, ElementType>(tagName: string) => {
   const displayName = dashToPascalCase(tagName);
-
-  const ReactComponent = class extends React.Component<StencilReactInternalProps<ElementType>> {
-    componentEl!: ElementType;
-
-    setComponentElRef = (element: ElementType) => {
-      this.componentEl = element;
-    };
-
-    constructor(props: StencilReactInternalProps<ElementType>) {
+  const ReactComponent = class extends React.Component<IonicReactInternalProps<ElementType>> {
+    
+    private ref: React.RefObject<HTMLElement>;
+    
+    constructor(props: IonicReactInternalProps<ElementType>) {
       super(props);
+      this.ref = React.createRef<HTMLElement>();
     }
 
     componentDidMount() {
       this.componentDidUpdate(this.props);
     }
 
-    componentDidUpdate(prevProps: StencilReactInternalProps<ElementType>) {
-      attachProps(this.componentEl, this.props, prevProps);
+    componentDidUpdate(prevProps: IonicReactInternalProps<ElementType>) {
+      const node = this.ref.current;
+      attachEventProps(node, this.props, prevProps);
     }
 
     render() {
       const { children, forwardedRef, style, className, ref, ...cProps } = this.props;
 
-      let propsToPass = Object.keys(cProps).reduce((acc, name) => {
-        if (name.indexOf('on') === 0 && name[2] === name[2].toUpperCase()) {
+      const propsToPass = Object.keys(cProps).reduce((acc, name) => {
+        const isEventProp = name.indexOf('on') === 0 && name[2] === name[2].toUpperCase();
+        const isDataProp = name.indexOf('data-') === 0;
+        const isAriaProp = name.indexOf('aria-') === 0;
+
+        if (isEventProp) {
           const eventName = name.substring(2).toLowerCase();
-          if (typeof document !== 'undefined' && isCoveredByReact(eventName, document)) {
+          if (typeof document !== "undefined" && isCoveredByReact(eventName)) {
             (acc as any)[name] = (cProps as any)[name];
           }
-        } else {
+        } else if (isDataProp || isAriaProp) {
           (acc as any)[name] = (cProps as any)[name];
         }
         return acc;
       }, {});
 
-      if (manipulatePropsFunction) {
-        propsToPass = manipulatePropsFunction(this.props, propsToPass);
-      }
-
-      let newProps: Omit<StencilReactInternalProps<ElementType>, 'forwardedRef'> = {
+      const newProps: any = {
         ...propsToPass,
-        ref: mergeRefs(forwardedRef, this.setComponentElRef),
+        ref: this.ref,
         style,
+        className,
       };
 
       return React.createElement(tagName, newProps, children);
@@ -83,11 +65,5 @@ export const createReactComponent = <
       return displayName;
     }
   };
-
-  // If context was passed to createReactComponent then conditionally add it to the Component Class
-  if (ReactComponentContext) {
-    ReactComponent.contextType = ReactComponentContext;
-  }
-
   return createForwardRef<PropType, ElementType>(ReactComponent, displayName);
 };

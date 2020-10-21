@@ -22,16 +22,12 @@
 
  - [core-icon-grid](../core-icon-grid)
  - [core-input](../core-input)
- - [core-tag](../core-tag)
- - [core-toast](../core-toast)
 
 ### Graph
 ```mermaid
 graph TD;
   core-icon-grid --> core-icon
   core-input --> core-icon
-  core-tag --> core-icon
-  core-toast --> core-icon
   style core-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

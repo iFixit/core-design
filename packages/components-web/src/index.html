@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="./build/core-design.css" />
   </head>
   <body>
-    <!-- <header>
-      <h1>Style Guide</h1>
-    </header> -->
+    <!-- <header></header> -->
 
     <nav class="nav">
       <div class="sticky">
@@ -39,10 +37,10 @@
             <a class="list-title" href="#checkbox-section">Checkbox</a>
           </li>
           <li>
-            <a class="list-title" href="#dropdown-section">Dropdown</a>
+            <a class="list-title" href="#input-section">Input</a>
           </li>
           <li>
-            <a class="list-title" href="#input-section">Input</a>
+            <a class="list-title" href="#option-list-section">Option List</a>
           </li>
           <li>
             <a class="list-title" href="#radio-section">Radio</a>
@@ -311,12 +309,12 @@
           </div>
         </section>
         <hr />
-        <section id="dropdown-section">
+        <section id="option-list-section">
           <div class="heading">
-            <h3>Dropdown</h3>
+            <h3>Option List</h3>
             <a
               class="story"
-              href="/storybook/?path=/story/buttons-inputs-dropdown"
+              href="/storybook/?path=/story/buttons-inputs-option-list"
               ><core-tooltip>
                 <span slot="trigger"
                   ><core-icon icon="link-out"></core-icon
@@ -326,15 +324,16 @@
             >
           </div>
           <div class="grid">
-            <div class="dropdown grid">
+            <div class="option-list grid">
               <span class="hint">Default</span>
               <span class="hint">Center</span>
               <span class="hint">Right</span>
               <span class="hint">Hoverable</span>
+              <span class="hint">Up</span>
             </div>
-            <div class="dropdown grid">
+            <div class="option-list grid">
               <div>
-                <core-dropdown>
+                <core-option-list>
                   <div slot="trigger">
                     <core-icon
                       slot="icon"
@@ -342,13 +341,19 @@
                       color="gray-5"
                     ></core-icon>
                   </div>
-                  <core-dropdown-item href="#">Option 1</core-dropdown-item>
-                  <core-dropdown-item href="#">Option 2</core-dropdown-item>
-                  <core-dropdown-item href="#">Option 3</core-dropdown-item>
-                </core-dropdown>
+                  <core-option-list-item href="#"
+                    >Option 1</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 2</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 3</core-option-list-item
+                  >
+                </core-option-list>
               </div>
               <div>
-                <core-dropdown alignment="center">
+                <core-option-list alignment="center">
                   <div slot="trigger">
                     <core-icon
                       slot="icon"
@@ -356,16 +361,22 @@
                       color="gray-5"
                     ></core-icon>
                   </div>
-                  <core-dropdown-item href="#">Option 1</core-dropdown-item>
-                  <core-dropdown-item href="#">Option 2</core-dropdown-item>
-                  <core-dropdown-item href="#">Option 3</core-dropdown-item>
-                  <core-dropdown-item>
+                  <core-option-list-item href="#"
+                    >Option 1</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 2</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 3</core-option-list-item
+                  >
+                  <core-option-list-item>
                     Nested content can be anything
-                  </core-dropdown-item>
-                </core-dropdown>
+                  </core-option-list-item>
+                </core-option-list>
               </div>
               <div>
-                <core-dropdown alignment="right">
+                <core-option-list alignment="right">
                   <div slot="trigger">
                     <core-icon
                       slot="icon"
@@ -373,7 +384,7 @@
                       color="gray-5"
                     ></core-icon>
                   </div>
-                  <core-dropdown-item href="#">
+                  <core-option-list-item href="#">
                     <core-icon
                       slot="icon"
                       icon="cart"
@@ -381,12 +392,12 @@
                       style="margin-right:8px"
                     ></core-icon>
                     Option 1
-                  </core-dropdown-item>
-                  <core-dropdown-item href="#">
+                  </core-option-list-item>
+                  <core-option-list-item href="#">
                     <core-icon slot="icon" icon="gear" color="red"></core-icon>
                     <span style="margin-left:8px">Option 2</span>
-                  </core-dropdown-item>
-                  <core-dropdown-item href="#">
+                  </core-option-list-item>
+                  <core-option-list-item href="#">
                     <core-icon
                       slot="icon"
                       icon="archive"
@@ -394,11 +405,11 @@
                       style="margin-right:8px"
                     ></core-icon>
                     Option 3
-                  </core-dropdown-item>
-                </core-dropdown>
+                  </core-option-list-item>
+                </core-option-list>
               </div>
               <div>
-                <core-dropdown hoverable>
+                <core-option-list hoverable>
                   <div slot="trigger">
                     <core-icon
                       slot="icon"
@@ -406,13 +417,39 @@
                       color="gray-5"
                     ></core-icon>
                   </div>
-                  <core-dropdown-item href="#">Option 1</core-dropdown-item>
-                  <core-dropdown-item href="#">Option 2</core-dropdown-item>
-                  <core-dropdown-item href="#">Option 3</core-dropdown-item>
-                  <core-dropdown-item>
+                  <core-option-list-item href="#"
+                    >Option 1</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 2</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 3</core-option-list-item
+                  >
+                  <core-option-list-item>
                     Nested content can be anything
-                  </core-dropdown-item>
-                </core-dropdown>
+                  </core-option-list-item>
+                </core-option-list>
+              </div>
+              <div>
+                <core-option-list direction="up">
+                  <div slot="trigger">
+                    <core-icon
+                      slot="icon"
+                      icon="more"
+                      color="gray-5"
+                    ></core-icon>
+                  </div>
+                  <core-option-list-item href="#"
+                    >Option 1</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 2</core-option-list-item
+                  >
+                  <core-option-list-item href="#"
+                    >Option 3</core-option-list-item
+                  >
+                </core-option-list>
               </div>
             </div>
           </div>

@@ -8,11 +8,11 @@ import {
 } from "@stencil/core";
 
 @Component({
-  tag: "core-dropdown-item",
-  styleUrl: "core-dropdown-item.less",
+  tag: "core-option-list-item",
+  styleUrl: "core-option-list-item.less",
   shadow: true,
 })
-export class DropdownItem implements ComponentInterface {
+export class optionListItem implements ComponentInterface {
   /**
    * The type of element.
    */
@@ -40,7 +40,7 @@ export class DropdownItem implements ComponentInterface {
     };
 
     return (
-      <Host class={{ "core-dropdown-item": true }}>
+      <Host class={{ "core-option-list-item": true }}>
         <TagType class="native-element" {...attrs}>
           <slot name="icon"></slot>
           <slot></slot>

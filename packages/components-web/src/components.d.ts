@@ -122,38 +122,6 @@ export namespace Components {
     }
     interface CoreColorGrid {
     }
-    interface CoreDropdown {
-        /**
-          * The dropdown visibility
-         */
-        "active": boolean;
-        /**
-          * The element alignment
-         */
-        "alignment"?: "left" | "center" | "right";
-        /**
-          * The dropdown will show up when hovering the dropdown-trigger
-         */
-        "hoverable": boolean;
-        /**
-          * The dropdown will wrap if applied.
-         */
-        "wrap": boolean;
-    }
-    interface CoreDropdownItem {
-        /**
-          * The type of element.
-         */
-        "elementType": string;
-        /**
-          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a div.
-         */
-        "href": string | undefined;
-        /**
-          * Specifies where to display the linked URL. Only applies when an `href` is provided.
-         */
-        "target": string | undefined;
-    }
     interface CoreIcon {
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -318,6 +286,42 @@ export namespace Components {
           * Applies the provided URL to the helpIcon href.
          */
         "helpurl"?: string | undefined;
+    }
+    interface CoreOptionList {
+        /**
+          * The option-list visibility
+         */
+        "active": boolean;
+        /**
+          * The element alignment
+         */
+        "alignment"?: "left" | "center" | "right";
+        /**
+          * The option-lists direction to expand.
+         */
+        "direction"?: "up" | "down";
+        /**
+          * The option-list will show up when hovering the option-list-trigger
+         */
+        "hoverable": boolean;
+        /**
+          * The option-list will wrap if applied.
+         */
+        "wrap": boolean;
+    }
+    interface CoreOptionListItem {
+        /**
+          * The type of element.
+         */
+        "elementType": string;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a div.
+         */
+        "href": string | undefined;
+        /**
+          * Specifies where to display the linked URL. Only applies when an `href` is provided.
+         */
+        "target": string | undefined;
     }
     interface CorePopover {
         /**
@@ -557,18 +561,6 @@ declare global {
         prototype: HTMLCoreColorGridElement;
         new (): HTMLCoreColorGridElement;
     };
-    interface HTMLCoreDropdownElement extends Components.CoreDropdown, HTMLStencilElement {
-    }
-    var HTMLCoreDropdownElement: {
-        prototype: HTMLCoreDropdownElement;
-        new (): HTMLCoreDropdownElement;
-    };
-    interface HTMLCoreDropdownItemElement extends Components.CoreDropdownItem, HTMLStencilElement {
-    }
-    var HTMLCoreDropdownItemElement: {
-        prototype: HTMLCoreDropdownItemElement;
-        new (): HTMLCoreDropdownItemElement;
-    };
     interface HTMLCoreIconElement extends Components.CoreIcon, HTMLStencilElement {
     }
     var HTMLCoreIconElement: {
@@ -592,6 +584,18 @@ declare global {
     var HTMLCoreLabelElement: {
         prototype: HTMLCoreLabelElement;
         new (): HTMLCoreLabelElement;
+    };
+    interface HTMLCoreOptionListElement extends Components.CoreOptionList, HTMLStencilElement {
+    }
+    var HTMLCoreOptionListElement: {
+        prototype: HTMLCoreOptionListElement;
+        new (): HTMLCoreOptionListElement;
+    };
+    interface HTMLCoreOptionListItemElement extends Components.CoreOptionListItem, HTMLStencilElement {
+    }
+    var HTMLCoreOptionListItemElement: {
+        prototype: HTMLCoreOptionListItemElement;
+        new (): HTMLCoreOptionListItemElement;
     };
     interface HTMLCorePopoverElement extends Components.CorePopover, HTMLStencilElement {
     }
@@ -665,12 +669,12 @@ declare global {
         "core-button": HTMLCoreButtonElement;
         "core-checkbox": HTMLCoreCheckboxElement;
         "core-color-grid": HTMLCoreColorGridElement;
-        "core-dropdown": HTMLCoreDropdownElement;
-        "core-dropdown-item": HTMLCoreDropdownItemElement;
         "core-icon": HTMLCoreIconElement;
         "core-icon-grid": HTMLCoreIconGridElement;
         "core-input": HTMLCoreInputElement;
         "core-label": HTMLCoreLabelElement;
+        "core-option-list": HTMLCoreOptionListElement;
+        "core-option-list-item": HTMLCoreOptionListItemElement;
         "core-popover": HTMLCorePopoverElement;
         "core-progress": HTMLCoreProgressElement;
         "core-radio": HTMLCoreRadioElement;
@@ -799,38 +803,6 @@ declare namespace LocalJSX {
         "size"?: "default" | "large";
     }
     interface CoreColorGrid {
-    }
-    interface CoreDropdown {
-        /**
-          * The dropdown visibility
-         */
-        "active"?: boolean;
-        /**
-          * The element alignment
-         */
-        "alignment"?: "left" | "center" | "right";
-        /**
-          * The dropdown will show up when hovering the dropdown-trigger
-         */
-        "hoverable"?: boolean;
-        /**
-          * The dropdown will wrap if applied.
-         */
-        "wrap"?: boolean;
-    }
-    interface CoreDropdownItem {
-        /**
-          * The type of element.
-         */
-        "elementType"?: string;
-        /**
-          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a div.
-         */
-        "href"?: string | undefined;
-        /**
-          * Specifies where to display the linked URL. Only applies when an `href` is provided.
-         */
-        "target"?: string | undefined;
     }
     interface CoreIcon {
         /**
@@ -996,6 +968,42 @@ declare namespace LocalJSX {
           * Applies the provided URL to the helpIcon href.
          */
         "helpurl"?: string | undefined;
+    }
+    interface CoreOptionList {
+        /**
+          * The option-list visibility
+         */
+        "active"?: boolean;
+        /**
+          * The element alignment
+         */
+        "alignment"?: "left" | "center" | "right";
+        /**
+          * The option-lists direction to expand.
+         */
+        "direction"?: "up" | "down";
+        /**
+          * The option-list will show up when hovering the option-list-trigger
+         */
+        "hoverable"?: boolean;
+        /**
+          * The option-list will wrap if applied.
+         */
+        "wrap"?: boolean;
+    }
+    interface CoreOptionListItem {
+        /**
+          * The type of element.
+         */
+        "elementType"?: string;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered instead of a div.
+         */
+        "href"?: string | undefined;
+        /**
+          * Specifies where to display the linked URL. Only applies when an `href` is provided.
+         */
+        "target"?: string | undefined;
     }
     interface CorePopover {
         /**
@@ -1205,12 +1213,12 @@ declare namespace LocalJSX {
         "core-button": CoreButton;
         "core-checkbox": CoreCheckbox;
         "core-color-grid": CoreColorGrid;
-        "core-dropdown": CoreDropdown;
-        "core-dropdown-item": CoreDropdownItem;
         "core-icon": CoreIcon;
         "core-icon-grid": CoreIconGrid;
         "core-input": CoreInput;
         "core-label": CoreLabel;
+        "core-option-list": CoreOptionList;
+        "core-option-list-item": CoreOptionListItem;
         "core-popover": CorePopover;
         "core-progress": CoreProgress;
         "core-radio": CoreRadio;
@@ -1233,12 +1241,12 @@ declare module "@stencil/core" {
             "core-button": LocalJSX.CoreButton & JSXBase.HTMLAttributes<HTMLCoreButtonElement>;
             "core-checkbox": LocalJSX.CoreCheckbox & JSXBase.HTMLAttributes<HTMLCoreCheckboxElement>;
             "core-color-grid": LocalJSX.CoreColorGrid & JSXBase.HTMLAttributes<HTMLCoreColorGridElement>;
-            "core-dropdown": LocalJSX.CoreDropdown & JSXBase.HTMLAttributes<HTMLCoreDropdownElement>;
-            "core-dropdown-item": LocalJSX.CoreDropdownItem & JSXBase.HTMLAttributes<HTMLCoreDropdownItemElement>;
             "core-icon": LocalJSX.CoreIcon & JSXBase.HTMLAttributes<HTMLCoreIconElement>;
             "core-icon-grid": LocalJSX.CoreIconGrid & JSXBase.HTMLAttributes<HTMLCoreIconGridElement>;
             "core-input": LocalJSX.CoreInput & JSXBase.HTMLAttributes<HTMLCoreInputElement>;
             "core-label": LocalJSX.CoreLabel & JSXBase.HTMLAttributes<HTMLCoreLabelElement>;
+            "core-option-list": LocalJSX.CoreOptionList & JSXBase.HTMLAttributes<HTMLCoreOptionListElement>;
+            "core-option-list-item": LocalJSX.CoreOptionListItem & JSXBase.HTMLAttributes<HTMLCoreOptionListItemElement>;
             "core-popover": LocalJSX.CorePopover & JSXBase.HTMLAttributes<HTMLCorePopoverElement>;
             "core-progress": LocalJSX.CoreProgress & JSXBase.HTMLAttributes<HTMLCoreProgressElement>;
             "core-radio": LocalJSX.CoreRadio & JSXBase.HTMLAttributes<HTMLCoreRadioElement>;

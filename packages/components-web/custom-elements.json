@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-10-09T17:24:08",
+  "timestamp": "2020-10-21T18:34:53",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.17.3",
@@ -888,177 +888,6 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/core-dropdown/core-dropdown.tsx",
-      "encapsulation": "shadow",
-      "tag": "core-dropdown",
-      "name": "core-dropdown",
-      "readme": "# core-dropdown\n",
-      "description": "",
-      "docsTags": [],
-      "usage": {},
-      "properties": [
-        {
-          "name": "active",
-          "type": "boolean",
-          "mutable": true,
-          "attr": "active",
-          "reflectToAttr": true,
-          "docs": "The dropdown visibility",
-          "docsTags": [],
-          "default": "false",
-          "values": [
-            {
-              "type": "boolean"
-            }
-          ],
-          "optional": false,
-          "required": false,
-          "description": "The dropdown visibility"
-        },
-        {
-          "name": "alignment",
-          "type": "\"center\" | \"left\" | \"right\"",
-          "mutable": false,
-          "attr": "alignment",
-          "reflectToAttr": true,
-          "docs": "The element alignment",
-          "docsTags": [],
-          "default": "\"left\"",
-          "values": [
-            {
-              "value": "center",
-              "type": "string"
-            },
-            {
-              "value": "left",
-              "type": "string"
-            },
-            {
-              "value": "right",
-              "type": "string"
-            }
-          ],
-          "optional": true,
-          "required": false,
-          "description": "The element alignment"
-        },
-        {
-          "name": "hoverable",
-          "type": "boolean",
-          "mutable": false,
-          "attr": "hoverable",
-          "reflectToAttr": true,
-          "docs": "The dropdown will show up when hovering the dropdown-trigger",
-          "docsTags": [],
-          "default": "false",
-          "values": [
-            {
-              "type": "boolean"
-            }
-          ],
-          "optional": false,
-          "required": false,
-          "description": "The dropdown will show up when hovering the dropdown-trigger"
-        },
-        {
-          "name": "wrap",
-          "type": "boolean",
-          "mutable": false,
-          "attr": "wrap",
-          "reflectToAttr": false,
-          "docs": "The dropdown will wrap if applied.",
-          "docsTags": [],
-          "default": "false",
-          "values": [
-            {
-              "type": "boolean"
-            }
-          ],
-          "optional": false,
-          "required": false,
-          "description": "The dropdown will wrap if applied."
-        }
-      ],
-      "methods": [],
-      "events": [],
-      "styles": [],
-      "slots": [],
-      "dependents": [],
-      "dependencies": [],
-      "dependencyGraph": {}
-    },
-    {
-      "filePath": "./src/components/core-dropdown-item/core-dropdown-item.tsx",
-      "encapsulation": "shadow",
-      "tag": "core-dropdown-item",
-      "name": "core-dropdown-item",
-      "readme": "# core-dropdown-item\n",
-      "description": "",
-      "docsTags": [],
-      "usage": {},
-      "properties": [
-        {
-          "name": "elementType",
-          "type": "string",
-          "mutable": true,
-          "attr": "element-type",
-          "reflectToAttr": false,
-          "docs": "The type of element.",
-          "docsTags": [],
-          "default": "\"div\"",
-          "values": [
-            {
-              "type": "string"
-            }
-          ],
-          "optional": false,
-          "required": false,
-          "description": "The type of element."
-        },
-        {
-          "name": "href",
-          "type": "string",
-          "mutable": false,
-          "attr": "href",
-          "reflectToAttr": false,
-          "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a div.",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "string"
-            }
-          ],
-          "optional": false,
-          "required": false,
-          "description": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a div."
-        },
-        {
-          "name": "target",
-          "type": "string",
-          "mutable": false,
-          "attr": "target",
-          "reflectToAttr": false,
-          "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "string"
-            }
-          ],
-          "optional": false,
-          "required": false,
-          "description": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided."
-        }
-      ],
-      "methods": [],
-      "events": [],
-      "styles": [],
-      "slots": [],
-      "dependents": [],
-      "dependencies": [],
-      "dependencyGraph": {}
-    },
-    {
       "filePath": "./src/components/core-icon/core-icon.tsx",
       "encapsulation": "shadow",
       "tag": "core-icon",
@@ -1201,9 +1030,7 @@
       "slots": [],
       "dependents": [
         "core-icon-grid",
-        "core-input",
-        "core-tag",
-        "core-toast"
+        "core-input"
       ],
       "dependencies": [],
       "dependencyGraph": {
@@ -1211,12 +1038,6 @@
           "core-icon"
         ],
         "core-input": [
-          "core-icon"
-        ],
-        "core-tag": [
-          "core-icon"
-        ],
-        "core-toast": [
           "core-icon"
         ]
       }
@@ -1851,6 +1672,200 @@
       "dependencyGraph": {}
     },
     {
+      "filePath": "./src/components/core-option-list/core-option-list.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-option-list",
+      "name": "core-option-list",
+      "readme": "# core-dropdown\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "active",
+          "reflectToAttr": true,
+          "docs": "The option-list visibility",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The option-list visibility"
+        },
+        {
+          "name": "alignment",
+          "type": "\"center\" | \"left\" | \"right\"",
+          "mutable": false,
+          "attr": "alignment",
+          "reflectToAttr": true,
+          "docs": "The element alignment",
+          "docsTags": [],
+          "default": "\"left\"",
+          "values": [
+            {
+              "value": "center",
+              "type": "string"
+            },
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The element alignment"
+        },
+        {
+          "name": "direction",
+          "type": "\"down\" | \"up\"",
+          "mutable": false,
+          "attr": "direction",
+          "reflectToAttr": true,
+          "docs": "The option-lists direction to expand.",
+          "docsTags": [],
+          "default": "\"down\"",
+          "values": [
+            {
+              "value": "down",
+              "type": "string"
+            },
+            {
+              "value": "up",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false,
+          "description": "The option-lists direction to expand."
+        },
+        {
+          "name": "hoverable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "hoverable",
+          "reflectToAttr": true,
+          "docs": "The option-list will show up when hovering the option-list-trigger",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The option-list will show up when hovering the option-list-trigger"
+        },
+        {
+          "name": "wrap",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "wrap",
+          "reflectToAttr": false,
+          "docs": "The option-list will wrap if applied.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The option-list will wrap if applied."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/core-option-list-item/core-option-list-item.tsx",
+      "encapsulation": "shadow",
+      "tag": "core-option-list-item",
+      "name": "core-option-list-item",
+      "readme": "# core-dropdown-item\n",
+      "description": "",
+      "docsTags": [],
+      "usage": {},
+      "properties": [
+        {
+          "name": "elementType",
+          "type": "string",
+          "mutable": true,
+          "attr": "element-type",
+          "reflectToAttr": false,
+          "docs": "The type of element.",
+          "docsTags": [],
+          "default": "\"div\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The type of element."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "href",
+          "reflectToAttr": false,
+          "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a div.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered instead of a div."
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "mutable": false,
+          "attr": "target",
+          "reflectToAttr": false,
+          "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided."
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
       "filePath": "./src/components/core-popover/core-popover.tsx",
       "encapsulation": "shadow",
       "tag": "core-popover",
@@ -2127,11 +2142,28 @@
           "description": "The label element position."
         },
         {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": true,
+          "docs": "The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false,
+          "description": "The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)"
+        },
+        {
           "name": "required",
           "type": "boolean",
           "mutable": false,
           "attr": "required",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "If applied, the user must fill in a value before submitting a form containing this element.",
           "docsTags": [],
           "default": "false",
@@ -2469,14 +2501,8 @@
       "styles": [],
       "slots": [],
       "dependents": [],
-      "dependencies": [
-        "core-icon"
-      ],
-      "dependencyGraph": {
-        "core-tag": [
-          "core-icon"
-        ]
-      }
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
       "filePath": "./src/components/core-textarea/core-textarea.tsx",
@@ -2724,14 +2750,8 @@
       "styles": [],
       "slots": [],
       "dependents": [],
-      "dependencies": [
-        "core-icon"
-      ],
-      "dependencyGraph": {
-        "core-toast": [
-          "core-icon"
-        ]
-      }
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
       "filePath": "./src/components/core-toggle/core-toggle.tsx",
@@ -2877,7 +2897,7 @@
           "type": "boolean",
           "mutable": false,
           "attr": "required",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "If applied, the user must fill in a value before submitting a form containing this element.",
           "docsTags": [],
           "default": "false",
