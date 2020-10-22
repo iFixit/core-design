@@ -9,6 +9,7 @@
 | ----------- | ----------- | ------------------------------------------------------------ | ------------------------------- | -------- |
 | `active`    | `active`    | The dropdown visibility                                      | `boolean`                       | `false`  |
 | `alignment` | `alignment` | The element alignment                                        | `"center" \| "left" \| "right"` | `"left"` |
+| `direction` | `direction` | The dropdown direction to expand.                            | `"down" \| "up"`                | `"down"` |
 | `hoverable` | `hoverable` | The dropdown will show up when hovering the dropdown-trigger | `boolean`                       | `false`  |
 | `wrap`      | `wrap`      | The dropdown will wrap if applied.                           | `boolean`                       | `false`  |
 
