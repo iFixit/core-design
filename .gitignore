@@ -1,9 +1,3 @@
-dist/
-loader/
-storybook/
-www/
-packages/components-web/custom-elements.json
-
 *~
 *.sw[mnpcod]
 *.log
@@ -14,14 +8,33 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 
-.stencil/
 .idea/
-.sass-cache/
-.versions/
+.vscode/
+
+coverage/
+collection/
+dist/
+dist-transpiled/
 node_modules/
+temp/
+tmp/
 $RECYCLE.BIN/
 
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
 .env
+
+.package.tmp.json
+
+# Stencil
+.stencil/
+
+build/
+css/
+hydrate/
+loader/
+www/
+
+components-web/src/components.d.ts
+components-web/custom-elements.json
