@@ -1,8 +1,8 @@
 ## Summary of Changes:
 
-- 
-- 
+-
+-
 
 #### CR:
 
-When reviewing larger pulls, search for `components-web/src/components/` in the `Files changed` github tab to exclude compiled boilerplate.
+_To bypass Stencil's compiled files in CR's, search for `components-web/src/components/` in the `Files changed` Github tab._

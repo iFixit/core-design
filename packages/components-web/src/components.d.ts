@@ -132,6 +132,10 @@ export namespace Components {
          */
         "alignment"?: "left" | "center" | "right";
         /**
+          * The dropdown direction to expand.
+         */
+        "direction"?: "up" | "down";
+        /**
           * The dropdown will show up when hovering the dropdown-trigger
          */
         "hoverable": boolean;
@@ -809,6 +813,10 @@ declare namespace LocalJSX {
           * The element alignment
          */
         "alignment"?: "left" | "center" | "right";
+        /**
+          * The dropdown direction to expand.
+         */
+        "direction"?: "up" | "down";
         /**
           * The dropdown will show up when hovering the dropdown-trigger
          */
