@@ -11,8 +11,6 @@ log.txt
 .idea/
 .vscode/
 
-coverage/
-collection/
 dist/
 dist-transpiled/
 node_modules/
@@ -27,14 +25,12 @@ UserInterfaceState.xcuserstate
 
 .package.tmp.json
 
-# Stencil
-.stencil/
-
+# Stencil compiled:
 build/
 css/
 hydrate/
 loader/
 www/
 
-components-web/src/components.d.ts
-components-web/custom-elements.json
+packages/components-web/custom-elements.json
+packages/components-web/src/components.d.ts

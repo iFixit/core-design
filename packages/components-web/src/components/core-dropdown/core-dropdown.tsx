@@ -17,6 +17,11 @@ export class Dropdown implements ComponentInterface {
   @Prop({ reflect: true }) alignment?: "left" | "center" | "right" = "left";
 
   /**
+   * The dropdown direction to expand.
+   */
+  @Prop({ reflect: true }) direction?: "up" | "down" = "down";
+
+  /**
    * The dropdown will show up when hovering the dropdown-trigger
    */
   @Prop({ reflect: true }) hoverable = false;
