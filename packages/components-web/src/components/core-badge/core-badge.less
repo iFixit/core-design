@@ -2,7 +2,9 @@
 
 // `:host` targets the custom element compiled by Stencil
 :host {
-  display: flex;
+  display: inline-flex;
+  position: relative;
+  vertical-align: middle;
 
   // @Prop color
   &([color="black"]) .native-element {
