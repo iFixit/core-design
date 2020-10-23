@@ -100,7 +100,7 @@ export const Default = (): TemplateResult => {
 export const Up = (): TemplateResult => {
   return html`
     <div class="center">
-      <core-dropdown direction="up>
+      <core-dropdown direction="up">
         <div slot="trigger">
           <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
         </div>
