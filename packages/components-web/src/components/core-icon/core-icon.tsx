@@ -1,5 +1,14 @@
 /* eslint-disable @stencil/strict-boolean-conditions */
-import { Build, Component, Host, Prop, State, Watch, h } from "@stencil/core";
+import {
+  Build,
+  Component,
+  Element,
+  Host,
+  Prop,
+  State,
+  Watch,
+  h,
+} from "@stencil/core";
 import { colorPropsAll, iconPropsAll } from "../../assets/script/global";
 import { getSvgContent, iconContent } from "./request";
 import { getName, getUrl } from "./utils";
@@ -11,6 +20,8 @@ import { getName, getUrl } from "./utils";
 })
 export class Icon {
   private io?: IntersectionObserver;
+
+  @Element() el!: HTMLCoreIconElement;
 
   @State() private svgContent?: string;
   @State() private isVisible = false;

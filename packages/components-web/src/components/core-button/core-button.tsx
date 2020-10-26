@@ -1,4 +1,11 @@
-import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Element,
+  Host,
+  Prop,
+  h,
+} from "@stencil/core";
 
 /**
  * @slot - Content is placed between the named slots if provided without a slot.
@@ -13,6 +20,8 @@ import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class Button implements ComponentInterface {
+  @Element() el!: HTMLCoreButtonElement;
+
   /**
    * If `true`, the user cannot interact with the button.
    */
