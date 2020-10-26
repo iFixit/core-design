@@ -1,11 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Host,
-  Prop,
-  h,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 import { labelPositionProps } from "../../assets/script/global";
 
 @Component({
@@ -14,8 +7,6 @@ import { labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Toggle implements ComponentInterface {
-  @Element() el!: HTMLCoreToggleElement;
-
   /**
    * If applied, the element is rendered with the alternate styling.
    */

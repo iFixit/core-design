@@ -1,11 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Host,
-  Prop,
-  h,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
@@ -14,8 +7,6 @@ import { colorPropsPrimary } from "../../assets/script/global";
   shadow: true,
 })
 export class Tag implements ComponentInterface {
-  @Element() el!: HTMLCoreTagElement;
-
   /**
    * Allows the tag to be closable and removed from
    * the view.

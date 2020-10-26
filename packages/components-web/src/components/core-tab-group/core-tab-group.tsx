@@ -1,11 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Host,
-  Prop,
-  h,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-tab-group",
@@ -13,8 +6,6 @@ import {
   shadow: true,
 })
 export class TabGroup implements ComponentInterface {
-  @Element() el!: HTMLCoreTabGroupElement;
-
   /**
    * The pre-defined tab size.
    */

@@ -2,7 +2,6 @@
 import {
   Component,
   ComponentInterface,
-  Element,
   Host,
   Prop,
   State,
@@ -17,8 +16,6 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
 })
 export class Input implements ComponentInterface {
   @State() hasFocus = false;
-
-  @Element() el!: HTMLCoreInputElement;
 
   /**
    * Boolean attribute lets you specify that a form control should
