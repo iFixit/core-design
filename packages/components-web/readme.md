@@ -1,5 +1,7 @@
 # Web Components
 
+[![npm version](https://img.shields.io/npm/v/@core-design/components-web.svg?style=flat-square)](https://www.npmjs.com/package/@core-design/components-web)
+
 ## Component Structure
 
 [Stencil](https://stenciljs.com/) components are plain ES6/TypeScript classes with some decorator metadata:
@@ -30,6 +32,8 @@ Use it just like any other HTML element:
 ```html
 <core-component first="Stencil" last="JS"></core-component>
 ```
+
+[codesandbox.io example](https://codesandbox.io/s/html-core-tag-example-vzqqc)
 
 ## Naming Components
 
