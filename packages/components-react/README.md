@@ -1,5 +1,7 @@
 # React Components
 
+[![npm version](https://img.shields.io/npm/v/@core-design/components-react.svg?style=flat-square)](https://www.npmjs.com/package/@core-design/components-react)
+
 This package contains Stencil's `core-design`, but in pre-compiled React wrappers.
 
 ## Usage
@@ -19,9 +21,9 @@ export default function App() {
 
 ...just add props 😁
 
-[Play with an example](https://codesandbox.io/s/core-button-example-dk8su)
+[codesandbox.io example](https://codesandbox.io/s/core-button-example-uu4nz)
 
-### Package Management
+## Package Management
 
 To compile and build packages, head to the `core-design` root and run:
 
@@ -29,6 +31,6 @@ To compile and build packages, head to the `core-design` root and run:
 lerna run build
 ```
 
-### Publishing to NPM
+## Publishing to NPM
 
 Lerna provides a simple CLI interface for publishing to NPM. See the [root readme](https://github.com/iFixit/core-design#core-design) for more info.
