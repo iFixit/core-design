@@ -1,11 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Host,
-  Prop,
-  h,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-tab",
@@ -13,8 +6,6 @@ import {
   shadow: false,
 })
 export class Tab implements ComponentInterface {
-  @Element() el!: HTMLCoreTabElement;
-
   /**
    * If `true`, the tab element is set to active.
    */

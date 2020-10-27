@@ -1,11 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Host,
-  Prop,
-  h,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-badge",
@@ -13,8 +6,6 @@ import {
   shadow: true,
 })
 export class Badge implements ComponentInterface {
-  @Element() el!: HTMLCoreBadgeElement;
-
   /**
    * Color of the element.
    */

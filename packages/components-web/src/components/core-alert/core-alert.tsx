@@ -1,11 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Host,
-  Prop,
-  h,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-alert",
@@ -13,8 +6,6 @@ import {
   shadow: true,
 })
 export class Alert implements ComponentInterface {
-  @Element() el!: HTMLCoreAlertElement;
-
   /**
    * Optional color of the element.
    */

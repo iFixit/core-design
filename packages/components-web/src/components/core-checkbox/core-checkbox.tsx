@@ -1,7 +1,6 @@
 import {
   Component,
   ComponentInterface,
-  Element,
   Host,
   Prop,
   State,
@@ -16,8 +15,6 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
 })
 export class Checkbox implements ComponentInterface {
   @State() hasFocus = false;
-
-  @Element() el!: HTMLCoreCheckboxElement;
 
   /**
    * If applied, the element is checked.

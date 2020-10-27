@@ -2,7 +2,6 @@
 import {
   Component,
   ComponentInterface,
-  Element,
   Host,
   Prop,
   State,
@@ -18,8 +17,6 @@ import { labelPositionProps } from "../../assets/script/global";
 })
 export class Textarea implements ComponentInterface {
   private nativeInput?: HTMLTextAreaElement;
-
-  @Element() el!: HTMLCoreTextareaElement;
 
   @State() hasFocus = false;
 

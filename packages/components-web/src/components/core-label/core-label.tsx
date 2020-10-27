@@ -1,12 +1,5 @@
 /* eslint-disable @stencil/strict-boolean-conditions */
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Host,
-  Prop,
-  h,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-label",
@@ -14,8 +7,6 @@ import {
   shadow: true,
 })
 export class Label implements ComponentInterface {
-  @Element() el!: HTMLCoreLabelElement;
-
   /**
    * Optional color of the label.
    * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
