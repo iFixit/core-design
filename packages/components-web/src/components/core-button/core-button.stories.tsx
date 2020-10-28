@@ -72,6 +72,15 @@ export const Large = (): TemplateResult => {
   `;
 };
 
+export const IconButton = (): TemplateResult => {
+  return html`
+    <core-button>
+      <core-icon icon="cross" slot"button-left"></core-icon>
+      Icon Button
+    </core-button>
+  `;
+};
+
 export const Loading = (): TemplateResult => {
   return html`
     <core-button loading="left">Button</core-button>
@@ -88,11 +97,9 @@ export const Linked = (): TemplateResult => {
 
 export const OverflowTest = (): TemplateResult => {
   return html`
-    <core-button
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non
-      quis exercitationem culpa nesciunt nihil aut nostrum explicabo
-      reprehenderit optio amet ab temporibus asperiores quasi cupiditate.
-      Voluptatum ducimus voluptates voluptas?</core-button
+    <core-button style="width:300px"
+      >Pneumonoultramicroscopicsilicovolcanoconiosis
+      Antidisestablishmentarianism</core-button
     >
   `;
 };
