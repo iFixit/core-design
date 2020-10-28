@@ -75,7 +75,7 @@ export const Large = (): TemplateResult => {
 export const IconButton = (): TemplateResult => {
   return html`
     <core-button>
-      <core-icon icon="cross" slot"button-left"></core-icon>
+      <core-icon icon="cross" slot="button-left"></core-icon>
       Icon Button
     </core-button>
   `;
