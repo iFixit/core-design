@@ -1,6 +1,6 @@
 {
   "name": "@core-design/components-web",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Core Design System Web Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
