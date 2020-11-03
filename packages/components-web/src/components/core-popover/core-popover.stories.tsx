@@ -22,10 +22,7 @@ export const PropStates = (): TemplateResult => {
       >
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        <div>The quick brown fox jumps over the lazy dog.</div>
       </core-popover>
     </div>
   `;
@@ -37,10 +34,7 @@ export const Default = (): TemplateResult => {
       <core-popover style="margin:auto auto 0;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        <div>The quick brown fox jumps over the lazy dog.</div>
       </core-popover>
     </div>
   `;
@@ -52,10 +46,7 @@ export const Bottom = (): TemplateResult => {
       <core-popover variation="bottom" style="margin:50px auto auto;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        <div>The quick brown fox jumps over the lazy dog.</div>
       </core-popover>
     </div>
   `;
@@ -67,10 +58,7 @@ export const Hoverable = (): TemplateResult => {
       <core-popover hoverable style="margin:auto auto 0;">
         <core-button slot="trigger">Trigger</core-button>
         <span slot="title">Popover Title</span>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        <div>The quick brown fox jumps over the lazy dog.</div>
       </core-popover>
     </div>
   `;

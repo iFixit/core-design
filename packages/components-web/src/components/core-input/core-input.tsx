@@ -33,7 +33,7 @@ export class Input implements ComponentInterface {
    * Optional color of the label (inherited).
    * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
    */
-  @Prop() color?: colorPropsAll = "gray-8";
+  @Prop() labelColor?: colorPropsAll = "gray-8";
 
   /**
    * If `true`, the user cannot interact with the element.
@@ -76,7 +76,7 @@ export class Input implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop() labelPositionProps?: labelPositionProps = "left";
+  @Prop() labelPosition?: labelPositionProps = "left";
 
   /**
    * Instructional placeholder text that shows before the element has a value.

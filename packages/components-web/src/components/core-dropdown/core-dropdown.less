@@ -14,7 +14,7 @@
   // @Prop alignment
   &([alignment="left"]) {
     .menu-outer {
-      left: ~"calc(50% - 12px)";
+      left: calc(~"50% -" @space-3);
       transform: translateX(-@space-2);
     }
 
@@ -30,13 +30,13 @@
     }
 
     .arrow {
-      left: ~"calc(50% - 20px)";
+      left: calc(~"50% -" 20px);
     }
   }
 
   &([alignment="right"]) {
     .menu-outer {
-      right: ~"calc(50% -  12px)";
+      right: calc(~"50% -" @space-3);
       transform: translateX(@space-2);
     }
 
@@ -48,7 +48,7 @@
   // @Prop direction
   &([direction="up"]) {
     .menu-outer {
-      bottom: ~"calc(100% + 10px)";
+      bottom: 100%;
     }
 
     .menu {
@@ -73,7 +73,7 @@
 
   &([direction]:not([direction="up"])) {
     .menu-outer {
-      top: ~"calc(100% + 10px)";
+      top: 100%;
     }
 
     .menu {
@@ -103,7 +103,7 @@
     .trigger::after {
       content: "";
       background-color: @color-gray-3;
-      height: ~"calc(100% - 2px)";
+      height: calc(~"100% -" 2px);
       position: absolute;
       top: 1px;
       transition: background-color 0.12s ease-in-out;
@@ -128,7 +128,7 @@
 
   // Applied only when a core-dropdown is in a core-button slot
   &([slot="button-dropdown-right"]) {
-    left: 14px;
+    left: 15px;
 
     .core-dropdown.active .trigger {
       border-top-right-radius: @border-radius-md;
@@ -142,7 +142,7 @@
 
   // Applied only when a core-dropdown is in a core-button slot
   &([slot="button-dropdown-left"]) {
-    right: 14px;
+    right: 15px;
 
     .core-dropdown.active .trigger {
       border-top-left-radius: @border-radius-md;
@@ -229,18 +229,24 @@
 }
 
 // :host-context(<selector>) matches the component if it or any of its ancestors matches <selector>
-:host-context(.core-button.primary) {
+:host-context(core-button[variation="primary"]) {
   background-color: @color-blue-dark-1;
   border-top-right-radius: @border-radius-md;
   border-bottom-right-radius: @border-radius-md;
   color: @color-white;
 }
 
-:host-context(.core-button) .trigger {
-  padding: 10px;
+:host-context(core-button) {
+  .trigger {
+    padding: 10px;
+  }
+
+  .menu-outer {
+    top: calc(~"100% -" @space-2) !important;
+  }
 }
 
-:host-context(.core-breadcrumb-group) {
+:host-context(core-breadcrumb-group) {
   color: @color-gray-5;
   display: flex;
   margin-right: 10px;
