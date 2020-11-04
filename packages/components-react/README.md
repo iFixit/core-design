@@ -21,7 +21,7 @@ export default function App() {
 
 ...just add props 😁
 
-[codesandbox.io example](https://codesandbox.io/s/core-button-example-uu4nz)
+[codesandbox.io example](https://codesandbox.io/s/core-button-example-e32f5)
 
 ## Package Management
 
