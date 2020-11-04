@@ -13,53 +13,44 @@ const variations = {
 
 export const PropStates = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:200px;">
-      <core-popover
-        active=${boolean("Active", false)}
-        hoverable=${boolean("Hoverable", false)}
-        variation=${select("Variation", variations, "top")}
-        style="margin:auto auto 0;"
-      >
-        <core-button slot="trigger">Trigger</core-button>
-        <span slot="title">Popover Title</span>
-        <div>The quick brown fox jumps over the lazy dog.</div>
-      </core-popover>
-    </div>
+    <core-popover
+      active=${boolean("Active", false)}
+      hoverable=${boolean("Hoverable", false)}
+      variation=${select("Variation", variations, "top")}
+    >
+      <core-button slot="trigger">Trigger</core-button>
+      <span slot="title">Popover Title</span>
+      <div>The quick brown fox jumps over the lazy dog.</div>
+    </core-popover>
   `;
 };
 
 export const Default = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:200px;">
-      <core-popover style="margin:auto auto 0;">
-        <core-button slot="trigger">Trigger</core-button>
-        <span slot="title">Popover Title</span>
-        <div>The quick brown fox jumps over the lazy dog.</div>
-      </core-popover>
-    </div>
+    <core-popover>
+      <core-button slot="trigger">Trigger</core-button>
+      <span slot="title">Popover Title</span>
+      <div>The quick brown fox jumps over the lazy dog.</div>
+    </core-popover>
   `;
 };
 
 export const Bottom = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:200px;">
-      <core-popover variation="bottom" style="margin:50px auto auto;">
-        <core-button slot="trigger">Trigger</core-button>
-        <span slot="title">Popover Title</span>
-        <div>The quick brown fox jumps over the lazy dog.</div>
-      </core-popover>
-    </div>
+    <core-popover variation="bottom">
+      <core-button slot="trigger">Trigger</core-button>
+      <span slot="title">Popover Title</span>
+      <div>The quick brown fox jumps over the lazy dog.</div>
+    </core-popover>
   `;
 };
 
 export const Hoverable = (): TemplateResult => {
   return html`
-    <div style="display:flex;height:200px;">
-      <core-popover hoverable style="margin:auto auto 0;">
-        <core-button slot="trigger">Trigger</core-button>
-        <span slot="title">Popover Title</span>
-        <div>The quick brown fox jumps over the lazy dog.</div>
-      </core-popover>
-    </div>
+    <core-popover hoverable>
+      <core-button slot="trigger">Trigger</core-button>
+      <span slot="title">Popover Title</span>
+      <div>The quick brown fox jumps over the lazy dog.</div>
+    </core-popover>
   `;
 };
