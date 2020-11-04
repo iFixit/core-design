@@ -1,3 +1,5 @@
+@spinnerAnimation: spinnerAnimation 1s infinite linear;
+
 // `:host` targets the custom element compiled by Stencil
 :host {
   display: flex;
@@ -45,7 +47,7 @@
 
   // @Prop size
   &([size="small"]) .spinner {
-    animation: spinnerAnimation 1s infinite linear;
+    animation: @spinnerAnimation;
     height: 24px;
     width: 24px;
 
@@ -64,13 +66,13 @@
   }
 
   &([size="default"]) .spinner {
-    animation: spinnerAnimation 1.5s infinite linear;
+    animation: @spinnerAnimation;
     height: 40px;
     width: 40px;
   }
 
   &([size="large"]) .spinner {
-    animation: spinnerAnimation 2s infinite linear;
+    animation: @spinnerAnimation;
     height: 80px;
     width: 80px;
 

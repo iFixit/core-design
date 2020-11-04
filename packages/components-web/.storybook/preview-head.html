@@ -11,16 +11,25 @@
     src: local("Inter"),
       url("./assets/font/Inter-subset.var.woff2?v3.13") format("woff2");
   }
+
+  #root-inner {
+    display: flex;
+    min-height: 90vh;
+  }
+  #root-inner > * {
+    margin: auto;
+  }
+
+  .simplebar-content label > span {
+    min-width: 135px !important;
+  }
+
   .story {
     display: grid;
     grid-gap: 32px;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
-  .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   .flex {
     display: flex;
     align-items: center;

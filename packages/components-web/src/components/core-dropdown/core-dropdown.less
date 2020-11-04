@@ -6,18 +6,9 @@
   white-space: nowrap;
   width: inherit;
 
-  // @Prop wrap
-  &([wrap]:not([wrap="false"])) {
-    white-space: unset;
-  }
-
   // @Prop alignment
   &([alignment="left"]) {
-    .menu-outer {
-      left: calc(~"50% -" @space-3);
-      transform: translateX(-@space-2);
-    }
-
+    .menu-outer,
     .arrow {
       left: 0;
     }
@@ -35,11 +26,7 @@
   }
 
   &([alignment="right"]) {
-    .menu-outer {
-      right: calc(~"50% -" @space-3);
-      transform: translateX(@space-2);
-    }
-
+    .menu-outer,
     .arrow {
       right: 0;
     }
@@ -48,7 +35,7 @@
   // @Prop direction
   &([direction="up"]) {
     .menu-outer {
-      bottom: 100%;
+      bottom: calc(~"100% +" @space-1);
     }
 
     .menu {
@@ -73,7 +60,7 @@
 
   &([direction]:not([direction="up"])) {
     .menu-outer {
-      top: 100%;
+      top: calc(~"100% +" @space-1);
     }
 
     .menu {
@@ -93,6 +80,26 @@
         top: -10px;
       }
     }
+  }
+
+  // @Prop onCenter
+  &([trigger-centered]:not([trigger-centered="false"])[alignment="left"]) {
+    .menu-outer {
+      left: calc(~"50% -" @space-3);
+      transform: translateX(-@space-2);
+    }
+  }
+
+  &([trigger-centered]:not([trigger-centered="false"])[alignment="right"]) {
+    .menu-outer {
+      right: calc(~"50% -" @space-3);
+      transform: translateX(@space-2);
+    }
+  }
+
+  // @Prop wrap
+  &([wrap]:not([wrap="false"])) {
+    white-space: unset;
   }
 
   // Applied only when a core-dropdown is in a core-button slot
@@ -168,6 +175,7 @@
   }
 
   .trigger {
+    color: @color-gray-8;
     cursor: pointer;
     display: flex;
     align-items: center;
