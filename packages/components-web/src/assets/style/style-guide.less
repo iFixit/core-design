@@ -10,7 +10,8 @@
 html {
   font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica, Arial, sans-serif;
-  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on,
+    "cv05" on, "cv10" on, "kern" on, "liga" on;
   font-size: @font-size-1;
   scroll-behavior: smooth;
 }
@@ -77,7 +78,12 @@ main {
 
 h2 {
   background: @color-white;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0.75) 90%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 0.75) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
   margin: 0 -@space-5;
   overflow-x: hidden;
   padding: @space-2 0;
@@ -97,7 +103,12 @@ h2 {
 
   span {
     background: @color-white;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0.75) 97%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 90%,
+      rgba(255, 255, 255, 0.75) 97%,
+      rgba(255, 255, 255, 0) 100%
+    );
     padding: 0 @space-4;
     position: relative;
     left: 46px;
@@ -198,7 +209,7 @@ section {
 
   &.checkbox,
   &.radio,
-  &.toggle  {
+  &.toggle {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
@@ -221,10 +232,10 @@ section {
   }
 
   &.badge,
-  &.popover {
+  &.popover,
+  &.input {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-
 }
 
 .badge {
