@@ -1,0 +1,23 @@
+// `:host` targets the custom element compiled by Stencil
+:host {
+  display: flex;
+  max-height: 40px;
+  max-width: 40px;
+
+  &([size="large"]) {
+    max-height: 64px;
+    max-width: 64px;
+  }
+
+  &([variation="square"]) {
+    ::slotted(img) {
+      border-radius: @border-radius-md;
+    }
+  }
+}
+
+::slotted(img) {
+  border-radius: @border-radius-pill;
+  object-fit: cover;
+  overflow: hidden;
+}
