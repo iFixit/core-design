@@ -27,7 +27,7 @@ export class Dropdown implements ComponentInterface {
   @Prop({ reflect: true }) hoverable = false;
 
   /**
-   * Center the dropdown arrow on the trigger element, overwriting the `alignment` prop inheritance.
+   * Center the dropdown arrow on the trigger element, overwriting the `alignment` prop inheritance. Use when trigger elements are less than 30px wide, such as icons.
    */
   @Prop() triggerCentered = false;
 
