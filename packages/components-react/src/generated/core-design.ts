@@ -9,6 +9,7 @@ import { defineCustomElements, applyPolyfills } from '@core-design/components-we
 
 applyPolyfills().then(() => defineCustomElements());
 export const CoreAlert = /*@__PURE__*/createReactComponent<JSX.CoreAlert, HTMLCoreAlertElement>('core-alert');
+export const CoreAvatar = /*@__PURE__*/createReactComponent<JSX.CoreAvatar, HTMLCoreAvatarElement>('core-avatar');
 export const CoreBadge = /*@__PURE__*/createReactComponent<JSX.CoreBadge, HTMLCoreBadgeElement>('core-badge');
 export const CoreButton = /*@__PURE__*/createReactComponent<JSX.CoreButton, HTMLCoreButtonElement>('core-button');
 export const CoreCheckbox = /*@__PURE__*/createReactComponent<JSX.CoreCheckbox, HTMLCoreCheckboxElement>('core-checkbox');
