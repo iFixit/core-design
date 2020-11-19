@@ -539,6 +539,7 @@
 
   // @Prop href
   &([href]) .native-element {
+    color: inherit;
     text-decoration: none;
   }
 
@@ -557,7 +558,7 @@
   }
 
   ([size="small"][radius="round"]) .native-element {
-    border-radius: 30px / 2; // half button height
+    border-radius: @border-radius-pill;
   }
 
   // @Prop large size
@@ -576,7 +577,7 @@
   }
 
   ([size="large"][radius="round"]) .native-element {
-    border-radius: 48px / 2; // half button height
+    border-radius: @border-radius-pill;
   }
 
   // @Prop block width
@@ -605,7 +606,7 @@
   }
 
   &([radius="round"]) .native-element {
-    border-radius: 36px / 2; // half button height
+    border-radius: @border-radius-pill;
   }
 }
 
