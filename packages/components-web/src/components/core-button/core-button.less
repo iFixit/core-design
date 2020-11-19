@@ -92,6 +92,7 @@
   &([variation="secondary"]) {
     .native-element {
       background-color: @color-gray-1;
+      color: @color-gray-8;
 
       &:not([disabled]):not([loading]) {
         box-shadow: @focus-box-shadow-transparent;
@@ -539,7 +540,6 @@
 
   // @Prop href
   &([href]) .native-element {
-    color: inherit;
     text-decoration: none;
   }
 
@@ -557,7 +557,7 @@
     }
   }
 
-  ([size="small"][radius="round"]) .native-element {
+  ([size="small"][radius="pill"]) .native-element {
     border-radius: @border-radius-pill;
   }
 
@@ -576,7 +576,7 @@
     }
   }
 
-  ([size="large"][radius="round"]) .native-element {
+  ([size="large"][radius="pill"]) .native-element {
     border-radius: @border-radius-pill;
   }
 
@@ -605,7 +605,11 @@
     border-radius: 0;
   }
 
-  &([radius="round"]) .native-element {
+  &([radius="8"]) .native-element {
+    border-radius: @border-radius-lg;
+  }
+
+  &([radius="pill"]) .native-element {
     border-radius: @border-radius-pill;
   }
 }

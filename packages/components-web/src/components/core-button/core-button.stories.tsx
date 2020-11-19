@@ -16,7 +16,8 @@ const loading = {
 const radii = {
   "0": "0",
   "4": "4",
-  round: "round",
+  "8": "8",
+  pill: "pill",
 };
 
 const sizes = {
@@ -44,6 +45,7 @@ export const PropStates = (): TemplateResult => {
   return html`
     <core-button
       disabled="${boolean("Disabled", false)}"
+      href="${text("href", null)}"
       loading="${select("Loading", loading, "false")}"
       radius="${select("Border Radius", radii, "4")}"
       size="${select("Size", sizes, "default")}"
