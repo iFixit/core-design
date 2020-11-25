@@ -7,9 +7,12 @@
 
   // @Prop alignment
   &([alignment="left"]) {
-    .menu-outer,
-    .arrow {
+    .menu-outer {
       left: 0;
+    }
+
+    .arrow {
+      left: 3px;
     }
   }
 
@@ -20,14 +23,17 @@
     }
 
     .arrow {
-      left: calc(~"50% -" 20px);
+      left: calc(~"50% -" 15px);
     }
   }
 
   &([alignment="right"]) {
-    .menu-outer,
-    .arrow {
+    .menu-outer {
       right: 0;
+    }
+
+    .arrow {
+      right: 3px;
     }
   }
 
@@ -62,12 +68,6 @@
       top: calc(~"100% +" @space-1);
     }
 
-    .menu {
-      margin-top: @space-3;
-      padding-top: @space-2;
-      padding-bottom: @space-1;
-    }
-
     .arrow {
       top: -10px;
 
@@ -84,14 +84,14 @@
   // @Prop onCenter
   &([trigger-centered]:not([trigger-centered="false"])[alignment="left"]) {
     .menu-outer {
-      left: calc(~"50% -" @space-3);
+      left: calc(50% - 10px);
       transform: translateX(-@space-2);
     }
   }
 
   &([trigger-centered]:not([trigger-centered="false"])[alignment="right"]) {
     .menu-outer {
-      right: calc(~"50% -" @space-3);
+      right: calc(50% - 10px);
       transform: translateX(@space-2);
     }
   }
@@ -206,30 +206,31 @@
 
   .arrow {
     height: 10px;
-    margin-left: 10px;
     position: absolute;
+    width: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+    }
 
     &::before {
-      content: "";
       border-style: solid;
       border-width: 0 15px 15px 15px;
       border-color: transparent transparent @color-white transparent;
-      display: block;
       height: 0;
-      position: relative;
-      left: -5px;
+      left: 0;
       width: 0;
       z-index: 2;
     }
 
     &::after {
-      content: "";
       box-shadow: 2px 2px @space-2 rgba(17, 22, 26, 0.2);
-      display: block;
       height: 20px;
       transform: rotate(45deg);
-      position: relative;
-      left: 0;
+      left: 5px;
       width: 20px;
       z-index: -1;
     }

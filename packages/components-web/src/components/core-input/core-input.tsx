@@ -107,6 +107,10 @@ export class Input implements ComponentInterface {
   @Prop() type?: string = "text";
 
   render() {
+    const lowerCaseLabel = this.label
+      ? `${this.label.toLowerCase()}-input`
+      : "";
+
     return (
       <Host
         aria-disabled={this.disabled ? "true" : null}
@@ -116,7 +120,7 @@ export class Input implements ComponentInterface {
         }}
       >
         <div class="input-outer">
-          {this.label && <label htmlFor={this.label}>{this.label}</label>}
+          {this.label && <label htmlFor={lowerCaseLabel}>{this.label}</label>}
           <div class="input-inner">
             <slot name="input-left">
               {this.icon && (
@@ -124,7 +128,7 @@ export class Input implements ComponentInterface {
               )}
             </slot>
             <input
-              id={this.label || ""}
+              id={lowerCaseLabel || ""}
               class="native-element"
               disabled={this.disabled}
               autoFocus={this.autofocus}

@@ -37,7 +37,7 @@ export class Tag implements ComponentInterface {
           <slot></slot>
           <slot name="tag-right"></slot>
           {this.closable && (
-            <div class="close">
+            <div class="close" onClick={() => this.remove()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -56,5 +56,9 @@ export class Tag implements ComponentInterface {
         </div>
       </Host>
     );
+  }
+
+  remove(): void {
+    throw new Error("Method not implemented.");
   }
 }

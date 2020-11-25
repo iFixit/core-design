@@ -58,6 +58,10 @@ export class Toggle implements ComponentInterface {
   };
 
   render() {
+    const lowerCaseLabel = this.label
+      ? `${this.label.toLowerCase()}-toggle`
+      : "";
+
     return (
       <Host
         alt={this.alt}
@@ -66,9 +70,11 @@ export class Toggle implements ComponentInterface {
         onClick={this.handleClick}
       >
         <div class="toggle-outer">
-          {this.label && <label htmlFor={this.label}>{this.label}</label>}
+          {lowerCaseLabel && (
+            <label htmlFor={lowerCaseLabel}>{this.label}</label>
+          )}
           <input
-            id={this.label || ""}
+            id={lowerCaseLabel || ""}
             class="native-element"
             type="checkbox"
             checked={this.checked}

@@ -21,7 +21,7 @@ export class Toast implements ComponentInterface {
           </div>
           <div class="toast-triggers">
             <div class="undo">Undo</div>
-            <div class="close">
+            <div class="close" onClick={() => this.remove()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -40,5 +40,9 @@ export class Toast implements ComponentInterface {
         </div>
       </Host>
     );
+  }
+
+  remove(): void {
+    throw new Error("Method not implemented.");
   }
 }

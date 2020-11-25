@@ -25,7 +25,7 @@ export const PropStates = (): TemplateResult => {
         alignment=${select("Alignment", alignments, "left")}
         direction=${select("Direction", directions, "down")}
         hoverable=${boolean("Hoverable", false)}
-        trigger-centered=${boolean("Trigger Centered", false)}
+        trigger-centered=${boolean("Trigger Centered", true)}
         wrap=${boolean("Wrap", false)}
       >
         <div slot="trigger">
@@ -66,7 +66,7 @@ export const Default = (): TemplateResult => {
     <div class="center">
       <core-dropdown>
         <div slot="trigger">
-          Trigger can be anything
+          Flexible trigger content
         </div>
         <core-dropdown-item href="#">
           <core-icon
@@ -106,7 +106,8 @@ export const TriggerCentered = (): TemplateResult => {
           <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
         </div>
         <core-dropdown-item href="#">
-          ^^ use prop "trigger-centered" for those itty-bitty triggers
+          Use "trigger-centered" when trigger elements are less than 30px wide,
+          such as icons.
         </core-dropdown-item>
       </core-dropdown>
     </div>
@@ -116,7 +117,7 @@ export const TriggerCentered = (): TemplateResult => {
 export const Up = (): TemplateResult => {
   return html`
     <div class="center">
-      <core-dropdown direction="up">
+      <core-dropdown direction="up" trigger-centered>
         <div slot="trigger">
           <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
         </div>
@@ -150,7 +151,7 @@ export const Up = (): TemplateResult => {
 export const Wrap = (): TemplateResult => {
   return html`
     <div class="center">
-      <core-dropdown wrap>
+      <core-dropdown wrap trigger-centered>
         <div slot="trigger">
           <core-icon slot="icon" icon="more" color="gray-5"></core-icon>
         </div>
