@@ -20,7 +20,7 @@
     }
 
     .arrow {
-      left: calc(~"50% -" 20px);
+      left: calc(50% ~"-" 15px);
     }
   }
 
@@ -34,7 +34,7 @@
   // @Prop direction
   &([direction="up"]) {
     .menu-outer {
-      bottom: calc(~"100% +" @space-1);
+      bottom: calc(100% ~"+" @space-1);
     }
 
     .menu {
@@ -59,7 +59,7 @@
 
   &([direction]:not([direction="up"])) {
     .menu-outer {
-      top: calc(~"100% +" @space-1);
+      top: calc(100% ~"+" @space-1);
     }
 
     .menu {
@@ -84,14 +84,14 @@
   // @Prop onCenter
   &([trigger-centered]:not([trigger-centered="false"])[alignment="left"]) {
     .menu-outer {
-      left: calc(~"50% -" @space-3);
+      left: calc(50% ~"-" 10px);
       transform: translateX(-@space-2);
     }
   }
 
   &([trigger-centered]:not([trigger-centered="false"])[alignment="right"]) {
     .menu-outer {
-      right: calc(~"50% -" @space-3);
+      right: calc(50% ~"-" 10px);
       transform: translateX(@space-2);
     }
   }
@@ -109,7 +109,7 @@
     .trigger::after {
       content: "";
       background-color: @color-gray-3;
-      height: calc(~"100% -" 2px);
+      height: calc(100% ~"-" 2px);
       position: absolute;
       top: 1px;
       transition: background-color 0.12s ease-in-out;
@@ -250,7 +250,7 @@
   }
 
   .menu-outer {
-    top: calc(~"100% -" @space-2) !important;
+    top: calc(100% ~"-" @space-2) !important;
   }
 }
 
