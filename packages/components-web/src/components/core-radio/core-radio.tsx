@@ -59,7 +59,7 @@ export class Radio implements ComponentInterface {
       >
         <div class="radio-outer">
           <input
-            id={lowerCaseLabel || ""}
+            id={lowerCaseLabel}
             class="native-element"
             checked={this.checked}
             disabled={this.disabled}

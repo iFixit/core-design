@@ -74,7 +74,7 @@ export class Checkbox implements ComponentInterface {
       >
         <div class="checkbox-outer">
           <input
-            id={lowerCaseLabel || ""}
+            id={lowerCaseLabel}
             class="native-element"
             type="checkbox"
             checked={this.checked}

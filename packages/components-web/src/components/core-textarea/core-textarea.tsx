@@ -93,7 +93,7 @@ export class Textarea implements ComponentInterface {
             <label htmlFor={lowerCaseLabel}>{this.label}</label>
           )}
           <textarea
-            id={lowerCaseLabel || ""}
+            id={lowerCaseLabel}
             class="native-element"
             ref={(el) => (this.nativeInput = el)}
             disabled={this.disabled}

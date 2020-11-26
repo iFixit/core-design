@@ -128,7 +128,7 @@ export class Input implements ComponentInterface {
               )}
             </slot>
             <input
-              id={lowerCaseLabel || ""}
+              id={lowerCaseLabel}
               class="native-element"
               disabled={this.disabled}
               autoFocus={this.autofocus}

@@ -74,7 +74,7 @@ export class Toggle implements ComponentInterface {
             <label htmlFor={lowerCaseLabel}>{this.label}</label>
           )}
           <input
-            id={lowerCaseLabel || ""}
+            id={lowerCaseLabel}
             class="native-element"
             type="checkbox"
             checked={this.checked}
