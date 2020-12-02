@@ -28,11 +28,6 @@ export class Radio implements ComponentInterface {
   @Prop({ reflect: true }) labelPosition?: labelPositionProps = "right";
 
   /**
-   * The radio group name that links other radio elements. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group)
-   */
-  @Prop({ reflect: true }) name: string | undefined;
-
-  /**
    * If applied, the user must fill in a value before submitting a form containing this element.
    */
   @Prop() required = false;
@@ -52,6 +47,10 @@ export class Radio implements ComponentInterface {
   };
 
   render() {
+    const lowerCaseLabel = this.label
+      ? `${this.label.toLowerCase()}-radio`
+      : "";
+
     return (
       <Host
         aria-disabled={this.disabled ? "true" : null}
@@ -60,15 +59,16 @@ export class Radio implements ComponentInterface {
       >
         <div class="radio-outer">
           <input
-            id={this.label || ""}
+            id={lowerCaseLabel}
             class="native-element"
-            type="radio"
             checked={this.checked}
             disabled={this.disabled}
-            name={this.name}
             required={this.required}
+            type="radio"
           />
-          {this.label && <label htmlFor={this.label}>{this.label}</label>}
+          {lowerCaseLabel && (
+            <label htmlFor={lowerCaseLabel}>{this.label}</label>
+          )}
         </div>
       </Host>
     );
