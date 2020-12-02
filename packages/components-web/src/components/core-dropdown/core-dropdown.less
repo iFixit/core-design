@@ -84,14 +84,14 @@
   // @Prop onCenter
   &([trigger-centered]:not([trigger-centered="false"])[alignment="left"]) {
     .menu-outer {
-      left: calc(50% - 10px);
+      left: calc(~"50% -" 10px);
       transform: translateX(-@space-2);
     }
   }
 
   &([trigger-centered]:not([trigger-centered="false"])[alignment="right"]) {
     .menu-outer {
-      right: calc(50% - 10px);
+      right: calc(~"50% -" 10px);
       transform: translateX(@space-2);
     }
   }
