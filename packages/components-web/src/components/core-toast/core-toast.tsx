@@ -1,4 +1,12 @@
-import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Element,
+  Host,
+  Method,
+  Prop,
+  h,
+} from "@stencil/core";
 
 @Component({
   tag: "core-toast",
@@ -6,6 +14,16 @@ import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class Toast implements ComponentInterface {
+  @Element() toast: HTMLCoreToastElement;
+
+  /**
+   * `core-toast` close async method to remove from DOM
+   */
+  @Method()
+  async close() {
+    this.toast.remove();
+  }
+
   /**
    * Optional color of the toast. Defaults to `black`.
    */
@@ -21,7 +39,7 @@ export class Toast implements ComponentInterface {
           </div>
           <div class="toast-triggers">
             <div class="undo">Undo</div>
-            <div class="close" onClick={() => this.remove()}>
+            <div class="close" onClick={() => this.close()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -40,9 +58,5 @@ export class Toast implements ComponentInterface {
         </div>
       </Host>
     );
-  }
-
-  remove(): void {
-    throw new Error("Method not implemented.");
   }
 }
