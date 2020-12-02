@@ -78,15 +78,22 @@ export class Textarea implements ComponentInterface {
   }
 
   render() {
+    const lowerCaseLabel = this.label
+      ? `${this.label.toLowerCase()}-textarea`
+      : "";
     const value = this.getValue();
+
     return (
       <Host
         class={{ "core-textarea": true }}
         aria-disabled={this.disabled ? "true" : null}
       >
         <div class="textarea-outer">
-          {this.label && <label htmlFor={this.label}>{this.label}</label>}
+          {lowerCaseLabel && (
+            <label htmlFor={lowerCaseLabel}>{this.label}</label>
+          )}
           <textarea
+            id={lowerCaseLabel}
             class="native-element"
             ref={(el) => (this.nativeInput = el)}
             disabled={this.disabled}

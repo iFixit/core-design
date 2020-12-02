@@ -13,6 +13,19 @@
 | `variation` | `variation` | The tag variation.                                                                                                                                                             | `"default" \| "light"`                              | `"default"` |
 
 
+## Methods
+
+### `close() => Promise<void>`
+
+`core-tag` close async method to remove from DOM
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
