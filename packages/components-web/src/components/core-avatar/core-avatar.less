@@ -3,6 +3,7 @@
   display: flex;
   max-height: 40px;
   max-width: 40px;
+  position: relative;
 
   &([size="large"]) {
     max-height: 64px;
@@ -13,6 +14,24 @@
     ::slotted(img) {
       border-radius: @border-radius-md;
     }
+  }
+}
+
+.notification {
+  border-radius: @border-radius-pill;
+  height: @space-4;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: @space-4;
+
+  &::before {
+    .absolute-centered;
+    content: "";
+    background-color: @color-red;
+    border-radius: @border-radius-pill;
+    height: @space-2;
+    width: @space-2;
   }
 }
 
