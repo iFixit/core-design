@@ -1,4 +1,12 @@
-import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Element,
+  Host,
+  Method,
+  Prop,
+  h,
+} from "@stencil/core";
 import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
@@ -7,6 +15,16 @@ import { colorPropsPrimary } from "../../assets/script/global";
   shadow: true,
 })
 export class Tag implements ComponentInterface {
+  @Element() tag: HTMLCoreTagElement;
+
+  /**
+   * `core-tag` close async method to remove from DOM
+   */
+  @Method()
+  async close() {
+    this.tag.remove();
+  }
+
   /**
    * Allows the tag to be closable and removed from
    * the view.
@@ -37,7 +55,7 @@ export class Tag implements ComponentInterface {
           <slot></slot>
           <slot name="tag-right"></slot>
           {this.closable && (
-            <div class="close">
+            <div class="close" onClick={() => this.close()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
