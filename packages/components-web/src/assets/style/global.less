@@ -16,6 +16,13 @@
 @space-large: 20px;
 
 // 4. Mixins
+.absolute-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .pill(@height) {
   border-radius: calc(@height ~"/" 2);
   height: @height;
