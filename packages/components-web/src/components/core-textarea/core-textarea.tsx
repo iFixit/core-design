@@ -63,7 +63,7 @@ export class Textarea implements ComponentInterface {
   /**
    * The value of the textarea.
    */
-  @Prop({ mutable: true }) value?: string | null = "";
+  @Prop({ mutable: true }) value?: string | undefined = "";
 
   /**
    * Returns the native `<textarea>` element used under the hood.
