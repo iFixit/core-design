@@ -14,14 +14,14 @@ import {
   shadow: true,
 })
 export class Toast implements ComponentInterface {
-  @Element() toast: HTMLCoreToastElement;
+  @Element() el: HTMLCoreToastElement;
 
   /**
    * `core-toast` close async method to remove from DOM
    */
   @Method()
   async close() {
-    this.toast.remove();
+    this.el.remove();
   }
 
   /**
