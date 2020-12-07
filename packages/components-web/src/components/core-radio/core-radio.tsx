@@ -10,6 +10,7 @@ import {
   State,
   h,
 } from "@stencil/core";
+import { RadioGroupChangeEventDetail } from "../core-radio-group/radio-group-interface";
 import { addEventListener, removeEventListener } from "../../utils/helpers";
 import { labelPositionProps } from "../../assets/script/global";
 
@@ -100,26 +101,22 @@ export class Radio implements ComponentInterface {
       this.value = this.inputId;
     }
 
-    const radioGroup = (this.radioGroup = this.el.closest("core-radio-group"));
+    this.radioGroup = this.el.closest("core-radio-group");
 
-    if (radioGroup) {
-      this.updateState();
-      addEventListener(radioGroup, "change", this.updateState);
+    if (this.radioGroup) {
+      addEventListener(this.radioGroup, "valueChange", this.updateState);
     }
   }
 
   disconnectedCallback() {
-    const radioGroup = this.radioGroup;
-
-    if (radioGroup) {
-      removeEventListener(radioGroup, "change", this.updateState);
-      this.radioGroup = null;
+    if (this.radioGroup) {
+      removeEventListener(this.radioGroup, "valueChange", this.updateState);
     }
   }
 
-  private updateState = () => {
-    if (this.radioGroup) {
-      this.checked = this.radioGroup.value === this.value;
+  private updateState = (event: CustomEvent<RadioGroupChangeEventDetail>) => {
+    if (event.detail) {
+      this.checked = event.detail.value === this.value;
     }
   };
 
@@ -131,25 +128,16 @@ export class Radio implements ComponentInterface {
     this.blurEvent.emit();
   };
 
-  /**
-   * Handle Trigger click action
-   */
-  private handleClick = (): void => {
-    if (!this.disabled) {
-      this.checked = !this.checked;
-    }
-  };
-
   render() {
-    const { checked, disabled, inputId, radioTabindex } = this;
+    const { checked, disabled, inputId, radioTabindex, value } = this;
 
     return (
       <Host
-        aria-checked={`${checked}`}
+        aria-checked={checked}
         aria-disabled={disabled ? "true" : null}
-        onClick={this.handleClick}
         role="radio"
         tabindex={radioTabindex}
+        value={value}
         onFocus={this.onFocus}
         onBlur={this.onBlur}
       >

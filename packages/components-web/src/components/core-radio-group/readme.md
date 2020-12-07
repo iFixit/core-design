@@ -16,9 +16,9 @@
 
 ## Events
 
-| Event        | Description                         | Type                                       |
-| ------------ | ----------------------------------- | ------------------------------------------ |
-| `emitChange` | Emitted when the value has changed. | `CustomEvent<RadioGroupChangeEventDetail>` |
+| Event         | Description                         | Type                                       |
+| ------------- | ----------------------------------- | ------------------------------------------ |
+| `valueChange` | Emitted when the value has changed. | `CustomEvent<RadioGroupChangeEventDetail>` |
 
 
 ----------------------------------------------
