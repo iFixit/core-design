@@ -42,8 +42,20 @@ export class Dropdown implements ComponentInterface {
   private handleClick = (): void => {
     if (!this.hoverable) {
       this.active = !this.active;
+
+      if (this.active) {
+        window.addEventListener('click', this.handleOutsideClick);
+      } else {
+        window.removeEventListener('click', this.handleOutsideClick);
+      }
     }
   };
+
+  private handleOutsideClick = (event: Event): void => {
+    if (!(event.target as HTMLElement).closest("core-dropdown")) {
+      this.active = false;
+    }
+  }
 
   render(): JSX.Element {
     return (
