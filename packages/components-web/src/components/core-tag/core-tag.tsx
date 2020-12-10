@@ -15,14 +15,14 @@ import { colorPropsPrimary } from "../../assets/script/global";
   shadow: true,
 })
 export class Tag implements ComponentInterface {
-  @Element() tag: HTMLCoreTagElement;
+  @Element() el: HTMLCoreTagElement;
 
   /**
    * `core-tag` close async method to remove from DOM
    */
   @Method()
   async close() {
-    this.tag.remove();
+    this.el.remove();
   }
 
   /**

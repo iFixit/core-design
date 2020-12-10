@@ -19,7 +19,6 @@ const sizes = {
 export const PropStates = (): TemplateResult => {
   return html`
     <core-radio
-      checked=${boolean("Checked", false)}
       disabled=${boolean("Disabled", false)}
       label=${text("Label", "Label")}
       label-position=${select("Label position", labelPositions, "right")}

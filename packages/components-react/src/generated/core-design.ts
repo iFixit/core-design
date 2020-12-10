@@ -23,6 +23,7 @@ export const CoreLabel = /*@__PURE__*/createReactComponent<JSX.CoreLabel, HTMLCo
 export const CorePopover = /*@__PURE__*/createReactComponent<JSX.CorePopover, HTMLCorePopoverElement>('core-popover');
 export const CoreProgress = /*@__PURE__*/createReactComponent<JSX.CoreProgress, HTMLCoreProgressElement>('core-progress');
 export const CoreRadio = /*@__PURE__*/createReactComponent<JSX.CoreRadio, HTMLCoreRadioElement>('core-radio');
+export const CoreRadioGroup = /*@__PURE__*/createReactComponent<JSX.CoreRadioGroup, HTMLCoreRadioGroupElement>('core-radio-group');
 export const CoreSpinner = /*@__PURE__*/createReactComponent<JSX.CoreSpinner, HTMLCoreSpinnerElement>('core-spinner');
 export const CoreTab = /*@__PURE__*/createReactComponent<JSX.CoreTab, HTMLCoreTabElement>('core-tab');
 export const CoreTabGroup = /*@__PURE__*/createReactComponent<JSX.CoreTabGroup, HTMLCoreTabGroupElement>('core-tab-group');
