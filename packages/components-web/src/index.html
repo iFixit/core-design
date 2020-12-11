@@ -45,6 +45,9 @@
             <a class="list-title" href="#radio-section">Radio</a>
           </li>
           <li>
+            <a class="list-title" href="#radio-group-section">Radio Group</a>
+          </li>
+          <li>
             <a class="list-title" href="#textarea-section">Textarea</a>
           </li>
           <li>
@@ -496,51 +499,57 @@
               <span class="hint">Large</span>
             </div>
             <div class="radio grid">
-              <core-radio name="radio-group" label="Radio"></core-radio>
-              <core-radio
-                name="radio-group"
-                label="Large Radio"
-                size="large"
-              ></core-radio>
+              <core-radio label="Radio"></core-radio>
+              <core-radio label="Large Radio" size="large"></core-radio>
             </div>
             <div class="radio grid">
+              <core-radio label="Selected radio" checked></core-radio>
               <core-radio
-                name="radio-group"
-                label="Selected radio"
-                checked
-              ></core-radio>
-              <core-radio
-                name="radio-group"
                 label="Large Selected radio"
                 size="large"
                 checked
               ></core-radio>
             </div>
             <div class="radio grid">
+              <core-radio label="Disabled Radio" disabled></core-radio>
               <core-radio
-                name="radio-group"
-                label="Disabled Radio"
-                disabled
-              ></core-radio>
-              <core-radio
-                name="radio-group"
                 label="Disabled Large Radio"
                 size="large"
                 disabled
               ></core-radio>
             </div>
             <div class="radio grid">
+              <core-radio label="Left Label" label-position="left"></core-radio>
               <core-radio
-                name="radio-group"
-                label="Left Label"
-                label-position="left"
-              ></core-radio>
-              <core-radio
-                name="radio-group"
                 label="Left Large Label"
                 label-position="left"
                 size="large"
               ></core-radio>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="radio-group-section">
+          <div class="heading">
+            <h3>Radio Group</h3>
+            <a
+              class="story"
+              href="/storybook/?path=/story/buttons-inputs-radio-group"
+              ><core-tooltip>
+                <span slot="trigger"
+                  ><core-icon icon="link-out"></core-icon
+                ></span>
+                View in Storybook
+              </core-tooltip></a
+            >
+          </div>
+          <div class="grid">
+            <div class="radio-group grid">
+              <core-radio-group>
+                <core-radio label="Radio 1"></core-radio>
+                <core-radio label="Radio 2"></core-radio>
+                <core-radio label="Radio 3"></core-radio>
+              </core-radio-group>
             </div>
           </div>
         </section>
