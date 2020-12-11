@@ -8,39 +8,39 @@
   fill: currentColor;
   vertical-align: middle;
 
-  &(.core-icon--16) {
+  &([size="16"]) {
     height: 16px;
     min-width: 16px; // [[FF]]
     width: 16px;
   }
 
-  &(.core-icon--24) {
+  &([size="24"]) {
     height: 24px;
     min-width: 24px; // [[FF]]
     width: 24px;
   }
 
-  &([slot=button-left]) {
+  &([slot="button-left"]) {
     margin-right: @space-2;
     margin-left: -3px;
   }
 
-  &([slot=button-right]) {
+  &([slot="button-right"]) {
     margin-left: @space-2;
     margin-right: -3px;
   }
 
-  &([slot=input-left]),
-  &([slot=input-right]) {
+  &([slot="input-left"]),
+  &([slot="input-right"]) {
     position: absolute;
     top: calc(50% ~"-" @space-2);
   }
 
-  &([slot=input-left]) {
+  &([slot="input-left"]) {
     left: @space-3;
   }
 
-  &([slot=input-right]) {
+  &([slot="input-right"]) {
     right: @space-3;
   }
 

@@ -69,7 +69,6 @@ export class Checkbox implements ComponentInterface {
     return (
       <Host
         aria-disabled={this.disabled ? "true" : null}
-        class={{ "core-checkbox": true }}
         onClick={this.handleClick}
       >
         <div class="checkbox-outer">

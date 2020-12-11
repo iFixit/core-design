@@ -44,9 +44,9 @@ export class Dropdown implements ComponentInterface {
       this.active = !this.active;
 
       if (this.active) {
-        window.addEventListener('click', this.handleOutsideClick);
+        window.addEventListener("click", this.handleOutsideClick);
       } else {
-        window.removeEventListener('click', this.handleOutsideClick);
+        window.removeEventListener("click", this.handleOutsideClick);
       }
     }
   };
@@ -55,13 +55,13 @@ export class Dropdown implements ComponentInterface {
     if (!(event.target as HTMLElement).closest("core-dropdown")) {
       this.active = false;
     }
-  }
+  };
 
   render(): JSX.Element {
     return (
       <div
         class={{
-          "core-dropdown": true,
+          dropdown: true,
           active: this.active,
           hoverable: this.hoverable,
           wrap: this.wrap,
@@ -71,9 +71,9 @@ export class Dropdown implements ComponentInterface {
           <slot name="trigger" aria-haspopup="true" />
         </div>
 
-        <div class={{ "menu-outer": true }}>
+        <div class="menu-outer">
           <div class="menu" role="menu">
-            <div class="arrow"></div>
+            <div class="arrow" />
             <slot />
           </div>
         </div>

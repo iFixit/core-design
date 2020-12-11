@@ -13,7 +13,7 @@ export class Alert implements ComponentInterface {
 
   render() {
     return (
-      <Host class={{ "core-alert": true }}>
+      <Host>
         <div class="native-element">
           <div class="icon-outer">
             {this.color == "gray" && (
@@ -85,7 +85,7 @@ export class Alert implements ComponentInterface {
               </svg>
             )}
           </div>
-          <slot></slot>
+          <slot />
         </div>
       </Host>
     );

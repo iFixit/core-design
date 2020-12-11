@@ -29,8 +29,8 @@ export class Progress implements ComponentInterface {
 
   render() {
     return (
-      <Host class={{ "core-progress": true }}>
-        <progress max={this.max} value={this.value}></progress>
+      <Host>
+        <progress max={this.max} value={this.value} />
       </Host>
     );
   }

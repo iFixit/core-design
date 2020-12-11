@@ -32,10 +32,10 @@ export class Toast implements ComponentInterface {
 
   render() {
     return (
-      <Host class={{ "core-toast": true }}>
+      <Host>
         <div class="native-element">
           <div class="toast-slot">
-            <slot></slot>
+            <slot />
           </div>
           <div class="toast-triggers">
             <div class="undo">Undo</div>

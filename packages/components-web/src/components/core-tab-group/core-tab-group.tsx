@@ -13,11 +13,11 @@ export class TabGroup implements ComponentInterface {
 
   render() {
     return (
-      <Host class={{ "core-tab-group": true }}>
+      <Host>
         <ul class="native-element">
-          <slot name="tab-group-left"></slot>
-          <slot></slot>
-          <slot name="tab-group-right"></slot>
+          <slot name="tab-group-left" />
+          <slot />
+          <slot name="tab-group-right" />
         </ul>
       </Host>
     );

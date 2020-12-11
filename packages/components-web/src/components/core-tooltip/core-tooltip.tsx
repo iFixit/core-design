@@ -49,7 +49,7 @@ export class Tooltip implements ComponentInterface {
 
         <div class="tooltip-outer">
           <div class="tooltip">
-            <div class="arrow"></div>
+            <div class="arrow" />
             <slot />
           </div>
         </div>

@@ -57,10 +57,10 @@ export class ColorGrid implements ComponentInterface {
     ];
 
     return (
-      <Host class={{ "core-color-grid": true }}>
+      <Host>
         {colorList.map((color) => (
           <div class="color">
-            <div class="color-swatch" style={{ background: color.hex }}></div>
+            <div class="color-swatch" style={{ background: color.hex }} />
             <div class="color-name">{color.name}</div>
             <div class="color-hex">{color.hex}</div>
           </div>

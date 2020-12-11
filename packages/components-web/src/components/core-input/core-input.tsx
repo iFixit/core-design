@@ -114,18 +114,13 @@ export class Input implements ComponentInterface {
     return (
       <Host
         aria-disabled={this.disabled ? "true" : null}
-        class={{
-          "core-input": true,
-          "has-focus": this.hasFocus,
-        }}
+        class={{ "has-focus": this.hasFocus }}
       >
         <div class="input-outer">
           {this.label && <label htmlFor={lowerCaseLabel}>{this.label}</label>}
           <div class="input-inner">
             <slot name="input-left">
-              {this.icon && (
-                <core-icon slot="input-left" icon={this.icon}></core-icon>
-              )}
+              {this.icon && <core-icon slot="input-left" icon={this.icon} />}
             </slot>
             <input
               id={lowerCaseLabel}
@@ -139,7 +134,7 @@ export class Input implements ComponentInterface {
             {this.clearInput && !this.disabled && (
               <button type="button" class="input-clear-icon" tabindex="-1" />
             )}
-            <slot name="input-right"></slot>
+            <slot name="input-right" />
           </div>
         </div>
       </Host>

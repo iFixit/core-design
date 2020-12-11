@@ -138,7 +138,7 @@ export class Component {
         }}
       >
         <div class="menu-inner page-inner">
-          <slot></slot>
+          <slot />
         </div>
       </Host>
     );

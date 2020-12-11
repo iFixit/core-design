@@ -105,10 +105,10 @@ export class IconGrid implements ComponentInterface {
     ];
 
     return (
-      <Host class={{ "core-icon-grid": true }}>
+      <Host>
         {iconList.map((icon) => (
           <div class="icon">
-            <core-icon name={icon}></core-icon>
+            <core-icon name={icon} />
             <div class="icon-name">{icon}</div>
           </div>
         ))}

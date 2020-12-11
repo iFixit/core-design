@@ -127,21 +127,18 @@ export class Button implements ComponentInterface {
     return (
       <Host
         aria-disabled={disabled ? "true" : null}
-        class={{
-          "core-button": true,
-          "icon-only": hasIconOnly,
-        }}
+        class={{ "icon-only": hasIconOnly }}
       >
         <TagType class="native-element" disabled={disabled} {...attrs}>
-          <slot name="icon"></slot>
-          <slot name="button-dropdown-left"></slot>
-          <slot name="button-left"></slot>
+          <slot name="icon" />
+          <slot name="button-dropdown-left" />
+          <slot name="button-left" />
           <div class="text-wrap">
-            <slot></slot>
+            <slot />
           </div>
-          <slot name="button-right"></slot>
-          <slot name="button-dropdown-right"></slot>
-          <div class="button-loading"></div>
+          <slot name="button-right" />
+          <slot name="button-dropdown-right" />
+          <div class="button-loading" />
         </TagType>
       </Host>
     );

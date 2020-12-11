@@ -147,18 +147,11 @@ export class Icon {
 
   render() {
     return (
-      <Host
-        role="img"
-        class={{
-          "core-icon": true,
-          // eslint-disable-next-line @stencil/strict-boolean-conditions
-          [`core-icon--${this.size}`]: !!this.size,
-        }}
-      >
+      <Host role="img">
         {Build.isBrowser && this.svgContent ? (
-          <div class="core-icon--inner" innerHTML={this.svgContent}></div>
+          <div class="core-icon--inner" innerHTML={this.svgContent} />
         ) : (
-          <div class="core-icon--inner"></div>
+          <div class="core-icon--inner" />
         )}
       </Host>
     );

@@ -84,10 +84,7 @@ export class Textarea implements ComponentInterface {
     const value = this.getValue();
 
     return (
-      <Host
-        class={{ "core-textarea": true }}
-        aria-disabled={this.disabled ? "true" : null}
-      >
+      <Host aria-disabled={this.disabled ? "true" : null}>
         <div class="textarea-outer">
           {lowerCaseLabel && (
             <label htmlFor={lowerCaseLabel}>{this.label}</label>

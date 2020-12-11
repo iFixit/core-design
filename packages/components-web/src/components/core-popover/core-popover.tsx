@@ -57,9 +57,9 @@ export class Popover implements ComponentInterface {
 
         <div class="popover-outer">
           <div class="popover">
-            <div class="arrow"></div>
+            <div class="arrow" />
             <div class="title">
-              <slot name="title"></slot>
+              <slot name="title" />
             </div>
             <slot />
           </div>

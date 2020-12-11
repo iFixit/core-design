@@ -66,7 +66,6 @@ export class Toggle implements ComponentInterface {
       <Host
         alt={this.alt}
         aria-disabled={this.disabled ? "true" : null}
-        class={{ "core-toggle": true }}
         onClick={this.handleClick}
       >
         <div class="toggle-outer">

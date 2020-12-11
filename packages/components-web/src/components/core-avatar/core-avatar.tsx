@@ -29,8 +29,8 @@ export class Avatar implements ComponentInterface {
 
   render() {
     return (
-      <Host class={{ "core-avatar": true }}>
-        <slot></slot>
+      <Host>
+        <slot />
         {this.notification && (
           <div
             class="notification"

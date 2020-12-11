@@ -19,15 +19,11 @@ export class Tab implements ComponentInterface {
   render() {
     const { disabled } = this;
     return (
-      <Host
-        role="tabpanel"
-        aria-hidden={disabled ? "true" : null}
-        class={{ "core-tab": true }}
-      >
+      <Host role="tabpanel" aria-hidden={disabled ? "true" : null}>
         <li class="native-element">
-          <slot></slot>
+          <slot />
           <div class="badge-outer">
-            <slot name="badge"></slot>
+            <slot name="badge" />
           </div>
         </li>
       </Host>

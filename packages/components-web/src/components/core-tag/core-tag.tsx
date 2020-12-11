@@ -49,11 +49,11 @@ export class Tag implements ComponentInterface {
 
   render() {
     return (
-      <Host class={{ "core-tag": true }}>
+      <Host>
         <div class="native-element">
-          <slot name="tag-left"></slot>
-          <slot></slot>
-          <slot name="tag-right"></slot>
+          <slot name="tag-left" />
+          <slot />
+          <slot name="tag-right" />
           {this.closable && (
             <div class="close" onClick={() => this.close()}>
               <svg

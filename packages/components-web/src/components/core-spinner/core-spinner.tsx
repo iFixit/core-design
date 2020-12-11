@@ -19,8 +19,8 @@ export class Spinner implements ComponentInterface {
 
   render() {
     return (
-      <Host class={{ "core-spinner": true }}>
-        <div class="spinner"></div>
+      <Host>
+        <div class="spinner" />
       </Host>
     );
   }

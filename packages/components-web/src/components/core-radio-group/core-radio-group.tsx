@@ -133,7 +133,7 @@ export class RadioGroup implements ComponentInterface {
   }
 
   render() {
-    return <Host role="radiogroup" onClick={this.onClick}></Host>;
+    return <Host role="radiogroup" onClick={this.onClick} />;
   }
 }
 

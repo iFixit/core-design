@@ -77,16 +77,11 @@ export class Label implements ComponentInterface {
 
   render() {
     return (
-      <Host
-        aria-disabled={this.disabled ? "true" : null}
-        class={{
-          "core-label": true,
-        }}
-      >
+      <Host aria-disabled={this.disabled ? "true" : null}>
         <label class="native-element">
           <div class="label-inner">
-            <slot name="label-left"></slot>
-            <slot></slot>
+            <slot name="label-left" />
+            <slot />
             <slot name="label-right">
               {this.helpurl ? (
                 <a class="help-url" href={this.helpurl}>
@@ -109,7 +104,7 @@ export class Label implements ComponentInterface {
               )}
             </slot>
           </div>
-          <slot name="label-input"></slot>
+          <slot name="label-input" />
         </label>
       </Host>
     );
