@@ -1,6 +1,6 @@
 {
   "name": "@core-design/components-react",
-  "version": "2.3.3",
+  "version": "2.4.0",
   "description": "React wrappers for Core Design System Components",
   "homepage": "https://github.com/iFixit/core-design#readme",
   "repository": {
@@ -37,7 +37,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@core-design/components-web": "^2.3.3"
+    "@core-design/components-web": "^2.4.0"
   },
   "peerDependencies": {
     "react": "^16.9.0",
