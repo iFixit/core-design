@@ -6,9 +6,15 @@
   // @Prop disabled
   &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
+    cursor: not-allowed;
+
     core-icon,
     label {
       color: @color-gray-4 !important;
+    }
+
+    .native-element {
+      pointer-events: none;
     }
   }
 
