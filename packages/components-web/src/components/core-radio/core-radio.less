@@ -61,6 +61,7 @@
 .radio-outer {
   align-items: center;
   display: flex;
+  white-space: nowrap;
 }
 
 .radio-outer,
@@ -120,14 +121,4 @@ label {
       box-shadow: 0 0 0 5px @color-blue inset;
     }
   }
-}
-
-// Styles for `core-radio-group
-:host-context(core-radio-group[display="column"]) {
-  display: flex;
-  margin-top: @space-4;
-}
-
-:host-context(core-radio-group[display="row"]) {
-  margin-left: @space-4;
 }
