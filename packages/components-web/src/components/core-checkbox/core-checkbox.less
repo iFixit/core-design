@@ -20,6 +20,12 @@
   }
 
   // @Prop size
+  &([size="default"]) {
+    #check-sm {
+      top: 3px;
+    }
+  }
+
   &([size="large"]) {
     label {
       font-size: @font-size-2;
@@ -28,10 +34,6 @@
     .native-element {
       height: @space-large;
       width: @space-large;
-
-      &:checked:after {
-        content: url(assets/img/check.svg);
-      }
     }
   }
 
@@ -45,12 +47,20 @@
     label {
       margin-left: @space-2;
     }
+
+    svg {
+      left: 0;
+    }
   }
 
   &([label-position="left"]) {
     label {
       margin-right: @space-2;
       order: -1;
+    }
+
+    svg {
+      right: 0;
     }
   }
 }
@@ -59,6 +69,11 @@
   align-items: center;
   display: flex;
   font: inherit;
+  position: relative;
+
+  svg {
+    position: absolute;
+  }
 }
 
 .checkbox-outer,
@@ -94,20 +109,10 @@ label {
   .native-element {
     -webkit-appearance: none;
     -moz-appearance: none;
-    position: relative;
 
     &:checked {
       background-color: @color-blue;
       box-shadow: 0 0 0 1px @color-blue-dark-1 inset;
-
-      &:after {
-        content: url(assets/img/check-sm.svg);
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-      }
     }
   }
 }
