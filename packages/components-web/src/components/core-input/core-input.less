@@ -14,9 +14,18 @@
   // @Prop disabled
   &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
+    cursor: not-allowed;
+
     core-icon,
     label {
       color: @color-gray-4 !important;
+    }
+
+    .native-element {
+      background-color: @color-gray-1;
+      border-color: transparent;
+      color: @color-gray-4;
+      pointer-events: none;
     }
   }
 
@@ -145,12 +154,5 @@ label {
       border-color: @color-gray-5;
       box-shadow: @focus-box-shadow;
     }
-  }
-
-  &:disabled {
-    background-color: @color-gray-1;
-    border-color: transparent;
-    color: @color-gray-4;
-    cursor: not-allowed;
   }
 }

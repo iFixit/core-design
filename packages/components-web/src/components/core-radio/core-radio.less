@@ -8,6 +8,8 @@
   // @Prop disabled
   &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
+    cursor: not-allowed;
+
     label {
       color: @color-gray-4;
     }
@@ -17,7 +19,7 @@
       border-color: transparent;
       box-shadow: 0 0 0 0 transparent inset;
       color: inherit;
-      cursor: not-allowed;
+      pointer-events: none;
     }
   }
 
