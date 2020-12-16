@@ -7,7 +7,9 @@
   // @Prop disabled
   &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
-    cursor: not-allowed;
+    * {
+      cursor: not-allowed;
+    }
 
     label {
       color: @color-gray-4;
@@ -30,10 +32,6 @@
     .native-element {
       height: @space-large;
       width: @space-large;
-
-      &:checked:after {
-        content: url(assets/img/check.svg);
-      }
     }
   }
 
@@ -47,12 +45,20 @@
     label {
       margin-left: @space-2;
     }
+
+    svg {
+      left: 0;
+    }
   }
 
   &([label-position="left"]) {
     label {
       margin-right: @space-2;
       order: -1;
+    }
+
+    svg {
+      right: 0;
     }
   }
 }
@@ -61,6 +67,11 @@
   align-items: center;
   display: flex;
   font: inherit;
+  position: relative;
+
+  svg {
+    position: absolute;
+  }
 }
 
 .checkbox-outer,
@@ -72,12 +83,14 @@ label {
 label {
   color: @color-gray-8;
   transition: color 0.12s ease-in-out;
+  position: relative;
+  z-index: -1;
 }
 
 .native-element {
   background-color: @color-white;
   border: 0;
-  border-radius: @space-1;
+  border-radius: @border-radius-md;
   box-shadow: 0 0 0 1px @color-gray-3 inset;
   display: flex;
   font: inherit;
@@ -96,20 +109,10 @@ label {
   .native-element {
     -webkit-appearance: none;
     -moz-appearance: none;
-    position: relative;
 
     &:checked {
       background-color: @color-blue;
       box-shadow: 0 0 0 1px @color-blue-dark-1 inset;
-
-      &:after {
-        content: url(assets/img/check-sm.svg);
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-      }
     }
   }
 }
