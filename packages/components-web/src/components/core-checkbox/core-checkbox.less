@@ -7,7 +7,9 @@
   // @Prop disabled
   &([disabled]:not([disabled="false"])),
   &([disabled="true"]) {
-    cursor: not-allowed;
+    * {
+      cursor: not-allowed;
+    }
 
     label {
       color: @color-gray-4;
@@ -81,12 +83,14 @@ label {
 label {
   color: @color-gray-8;
   transition: color 0.12s ease-in-out;
+  position: relative;
+  z-index: -1;
 }
 
 .native-element {
   background-color: @color-white;
   border: 0;
-  border-radius: @space-1;
+  border-radius: @border-radius-md;
   box-shadow: 0 0 0 1px @color-gray-3 inset;
   display: flex;
   font: inherit;

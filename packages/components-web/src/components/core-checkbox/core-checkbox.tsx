@@ -66,7 +66,11 @@ export class Checkbox implements ComponentInterface {
     const lowerCaseLabel = label ? `${label.toLowerCase()}-checkbox` : "";
 
     return (
-      <Host aria-disabled={disabled ? "true" : null} onClick={this.handleClick}>
+      <Host
+        aria-checked={checked}
+        aria-disabled={disabled ? "true" : null}
+        onClick={this.handleClick}
+      >
         <div class="checkbox-outer">
           <input
             id={lowerCaseLabel}
