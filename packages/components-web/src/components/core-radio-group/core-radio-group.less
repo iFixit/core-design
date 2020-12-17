@@ -1,4 +1,11 @@
-core-radio:first-of-type {
-  margin-top: 0;
-  margin-left: 0;
+core-radio-group {
+  gap: @space-4;
+
+  &[display="column"] {
+    display: grid;
+  }
+
+  &[display="row"] {
+    display: flex;
+  }
 }
