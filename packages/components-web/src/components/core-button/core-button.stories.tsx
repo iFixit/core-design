@@ -14,9 +14,9 @@ const loading = {
 };
 
 const radii = {
-  "0": "0",
-  "4": "4",
-  "8": "8",
+  "none": "none",
+  "md": "md",
+  "lg": "lg",
   pill: "pill",
 };
 
@@ -47,7 +47,7 @@ export const PropStates = (): TemplateResult => {
       disabled="${boolean("Disabled", false)}"
       href="${text("href", null)}"
       loading="${select("Loading", loading, "false")}"
-      radius="${select("Border Radius", radii, "4")}"
+      radius="${select("Border Radius", radii, "md")}"
       size="${select("Size", sizes, "default")}"
       status="${select("Status", status, "false")}"
       variation="${select("Variation", variations, "basic")}"

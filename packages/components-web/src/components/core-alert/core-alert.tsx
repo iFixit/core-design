@@ -14,7 +14,7 @@ export class Alert implements ComponentInterface {
   /**
    * Set the value of the element border-radius. Default is 4(px).
    */
-  @Prop() radius?: "0" | "4" | "8" | "pill" = "4";
+  @Prop() radius?: "none" | "md" | "lg" | "pill" = "md";
 
   render() {
     return (

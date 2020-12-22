@@ -616,11 +616,15 @@
   }
 
   // @Prop border radius
-  &([radius="0"]) .native-element {
+  &([radius="none"]) .native-element {
     border-radius: 0;
   }
 
-  &([radius="8"]) .native-element {
+  &([radius="md"]) .native-element {
+    border-radius: @border-radius-md;
+  }
+
+  &([radius="lg"]) .native-element {
     border-radius: @border-radius-lg;
   }
 
