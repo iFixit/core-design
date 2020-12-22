@@ -59,7 +59,7 @@ export class Button implements ComponentInterface {
   @Prop() loading?: "left" | "right" | "only";
 
   /**
-   * Set the value of the element border-radius. Default is 4(px).
+   * Set the value of the element border-radius. Default is `md` (4px).
    */
   @Prop() radius?: "none" | "md" | "lg" | "pill" = "md";
 

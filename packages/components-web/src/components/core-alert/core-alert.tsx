@@ -12,7 +12,7 @@ export class Alert implements ComponentInterface {
   @Prop({ reflect: true }) color?: "gray" | "green" | "yellow" | "red" = "gray";
 
   /**
-   * Set the value of the element border-radius. Default is 4(px).
+   * Set the value of the element border-radius. Default is `md` (4px).
    */
   @Prop() radius?: "none" | "md" | "lg" | "pill" = "md";
 
