@@ -39,6 +39,23 @@
     }
   }
 
+  // @Prop radius
+  &([radius="none"]) .native-element {
+    border-radius: 0;
+  }
+
+  &([radius="md"]) .native-element {
+    border-radius: @border-radius-md;
+  }
+
+  &([radius="lg"]) .native-element {
+    border-radius: @border-radius-lg;
+  }
+
+  &([radius="pill"]) .native-element {
+    border-radius: @border-radius-pill;
+  }
+
   .icon-outer {
     align-self: center;
     height: @space-4;
