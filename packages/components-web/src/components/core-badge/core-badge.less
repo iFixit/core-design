@@ -1,5 +1,3 @@
-@badge-space-lg: 23px;
-
 // `:host` targets the custom element compiled by Stencil
 :host {
   display: inline-flex;
@@ -49,7 +47,7 @@
 
   // @Prop small size
   &([size="small"]) .native-element {
-    .pill(@space-4);
+    border-radius: @border-radius-pill;
     font-size: 11px;
     letter-spacing: unset;
     line-height: @space-3;
@@ -70,7 +68,7 @@
 
 // native element styles with intentional lower specificity
 .native-element {
-  .pill(@badge-space-lg);
+  border-radius: @border-radius-pill;
   align-items: center;
   box-sizing: border-box;
   cursor: default;
@@ -81,7 +79,7 @@
   justify-content: center;
   line-height: 15px;
   max-width: 100%;
-  min-width: @badge-space-lg;
+  min-width: 23px;
   padding: @space-1 7px;
   white-space: nowrap;
 }

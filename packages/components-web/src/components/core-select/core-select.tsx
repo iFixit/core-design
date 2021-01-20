@@ -35,11 +35,6 @@ export class Select implements ComponentInterface {
   @Prop() disabled = false;
 
   /**
-   * The core-icon to render inside the text select.
-   */
-  @Prop() icon?: string;
-
-  /**
    * The label element associated with the element.
    */
   @Prop() label: string | undefined;
@@ -64,14 +59,6 @@ export class Select implements ComponentInterface {
    */
   @Prop() size?: "large";
 
-  /**
-   * How an <select> works varies considerably depending on the value of
-   * its type attribute, hence the different types are covered in their
-   * own separate reference pages. If this attribute is not specified,
-   * the default type adopted is `text`. [<select> types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
-   */
-  @Prop() type?: string = "text";
-
   render() {
     const lowerCaseLabel = this.label
       ? `${this.label.toLowerCase()}-select`
@@ -79,22 +66,23 @@ export class Select implements ComponentInterface {
 
     return (
       <Host
-        aria-disabled={this.disabled ? "true" : null}
+        aria-disabled={this.disabled ? "true" : undefined}
         class={{ "has-focus": this.hasFocus }}
       >
         <div class="select-outer">
           {this.label && <label htmlFor={lowerCaseLabel}>{this.label}</label>}
-          {this.icon && <core-icon slot="select-left" icon={this.icon} />}
-          <select
-            id={lowerCaseLabel}
-            class="native-element"
-            disabled={this.disabled}
-            autoFocus={this.autofocus}
-            required={this.required}
-          >
-            <slot />
-          </select>
-          <core-icon icon="caret-down"></core-icon>
+          <div class="select-inner">
+            <select
+              id={lowerCaseLabel}
+              class="native-element"
+              disabled={this.disabled}
+              autoFocus={this.autofocus}
+              required={this.required}
+            >
+              <slot />
+            </select>
+            <core-icon icon="caret-down"></core-icon>
+          </div>
         </div>
       </Host>
     );

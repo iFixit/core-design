@@ -23,13 +23,7 @@
   transform: translate(-50%, -50%);
 }
 
-.pill(@height) {
-  border-radius: calc(@height ~"/" 2);
-  height: @height;
-}
-
-// 5. Styles - `:host` targets the custom element compiled by Stencil
-:host {
+.inter-font {
   font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica, Arial, sans-serif;
   font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on,
@@ -41,4 +35,9 @@
   i {
     font-variation-settings: "slnt" 10deg;
   }
+}
+
+// 5. Styles - `:host` targets the custom element compiled by Stencil
+:host {
+  .inter-font;
 }

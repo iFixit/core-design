@@ -1,10 +1,10 @@
 // `shadow: false' is set in `core-select.tsx`, so we target the custom-element selector directly instead of `:host` and remove the LESS selector wrapping parenthesis for targeting in shadow-dom
 core-select {
+  .inter-font;
   color: @color-gray-8;
   display: inline-flex;
   max-width: 100%;
   vertical-align: middle;
-  width: 100%;
 
   // @Prop icon
   &[icon] .native-element {
@@ -120,7 +120,7 @@ core-select {
     transition: color 0.12s ease-in-out;
   }
 
-  .select-outer {
+  .select-inner {
     position: relative;
 
     core-icon {
