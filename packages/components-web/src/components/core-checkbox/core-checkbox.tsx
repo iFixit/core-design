@@ -63,7 +63,7 @@ export class Checkbox implements ComponentInterface {
 
   render() {
     const { checked, disabled, label, required, size } = this;
-    const lowerCaseLabel = label ? `${label.toLowerCase()}-checkbox` : "";
+    const lowerCaseLabel = label ? `${this.label.replace(/\s/g, "-").toLowerCase()}-checkbox` : "";
 
     return (
       <Host

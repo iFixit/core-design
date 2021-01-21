@@ -79,7 +79,7 @@ export class Textarea implements ComponentInterface {
 
   render() {
     const lowerCaseLabel = this.label
-      ? `${this.label.toLowerCase()}-textarea`
+      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-textarea`
       : "";
     const value = this.getValue();
 

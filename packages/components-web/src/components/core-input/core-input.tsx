@@ -108,7 +108,7 @@ export class Input implements ComponentInterface {
 
   render() {
     const lowerCaseLabel = this.label
-      ? `${this.label.toLowerCase()}-input`
+      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-input`
       : "";
 
     return (

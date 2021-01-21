@@ -26,7 +26,7 @@ export const PropStates = (): TemplateResult => {
       label-position=${select("Label Position", labelPositions, "left")}
       required=${boolean("Required", false)}
     >
-      <option value="option-1">Option 1</option>
+      <option value="option-1" selected>Option 1</option>
       <option value="option-2">Option 2</option>
       <option value="option-3">Option 3</option>
     </core-select>
@@ -36,7 +36,7 @@ export const PropStates = (): TemplateResult => {
 export const Default = (): TemplateResult => {
   return html`
     <core-select>
-      <option value="option-1">Option 1</option>
+      <option value="option-1" selected>Option 1</option>
       <option value="option-2">Option 2</option>
       <option value="option-3">Option 3</option>
     </core-select>

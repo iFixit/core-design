@@ -59,7 +59,7 @@ export class Toggle implements ComponentInterface {
 
   render() {
     const lowerCaseLabel = this.label
-      ? `${this.label.toLowerCase()}-toggle`
+      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-toggle`
       : "";
 
     return (

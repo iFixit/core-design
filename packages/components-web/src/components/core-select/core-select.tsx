@@ -61,7 +61,7 @@ export class Select implements ComponentInterface {
 
   render() {
     const lowerCaseLabel = this.label
-      ? `${this.label.toLowerCase()}-select`
+      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-select`
       : "";
 
     return (
