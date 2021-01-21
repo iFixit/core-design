@@ -22,12 +22,14 @@
 
  - [core-icon-grid](../core-icon-grid)
  - [core-input](../core-input)
+ - [core-select](../core-select)
 
 ### Graph
 ```mermaid
 graph TD;
   core-icon-grid --> core-icon
   core-input --> core-icon
+  core-select --> core-icon
   style core-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
