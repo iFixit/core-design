@@ -30,9 +30,15 @@ core-select {
   }
 
   // @Prop size large
-  &[size="large"] .native-element {
-    font-size: 16px;
-    padding: 14px 20px 14px 50px;
+  &[size="large"] {
+    .native-element {
+      font-size: 16px;
+      padding: 14px 44px 14px 20px;
+    }
+
+    .select-inner core-icon {
+      right: @space-4;
+    }
   }
 
   // @Prop labelDisplay
@@ -120,8 +126,14 @@ core-select {
     transition: color 0.12s ease-in-out;
   }
 
+  .select-outer {
+    max-width: inherit;
+    width: inherit;
+  }
+
   .select-inner {
     position: relative;
+    width: inherit;
 
     core-icon {
       color: @color-gray-5;
@@ -142,11 +154,16 @@ core-select {
     color: @color-gray-8;
     font: inherit;
     line-height: 36px;
+    max-width: 100%;
     min-height: 36px;
     outline: none;
+    overflow-x: hidden;
     padding-right: @space-6;
     padding-left: @space-4;
+    text-overflow: ellipsis;
     transition: box-shadow 0.12s ease-in-out;
+    white-space: nowrap;
+    width: inherit;
 
     &::placeholder {
       color: @color-gray-4;
