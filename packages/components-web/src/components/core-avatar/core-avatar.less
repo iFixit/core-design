@@ -10,6 +10,12 @@
     max-width: 64px;
   }
 
+  &([variation="circle"]) {
+    ::slotted(img) {
+      border-radius: @border-radius-pill;
+    }
+  }
+
   &([variation="square"]) {
     ::slotted(img) {
       border-radius: @border-radius-md;
@@ -36,7 +42,6 @@
 }
 
 ::slotted(img) {
-  border-radius: @border-radius-pill;
   object-fit: cover;
   overflow: hidden;
 }
