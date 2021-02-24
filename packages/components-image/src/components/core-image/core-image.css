@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+:host img {
+  content-visibility: auto;
+  height: auto;
+  max-width: 100%;
+}
