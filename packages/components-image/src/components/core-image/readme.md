@@ -1,9 +1,6 @@
-# my-component
-
-
+# core-image
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -14,7 +11,6 @@
 | `src`    | `src`     | The image source path without file extension. On browsers supporting `srcset`, `src` is treated as the fallback image with a 1x pixel density.       | `string` | `undefined` |
 | `width`  | `width`   | The intrinsic width of the image, in pixels. Must be an integer without a unit.                                                                      | `number` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
