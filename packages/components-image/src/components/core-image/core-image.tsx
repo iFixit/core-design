@@ -45,7 +45,7 @@ export class Image {
             type={`image/${type}`}
           />
         ))}
-        <img src={`${src}/jpg/ps5_1600w.jpg`} width={`${width}`} height={`${height}`} alt={alt} decoding="async" loading="lazy" />
+        <img src={`${src}/jpg/ps5_1600w.jpg`} width={width} height={height} alt={alt} decoding="async" loading="lazy" />
       </picture>
     );
   }
