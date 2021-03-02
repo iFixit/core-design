@@ -7,7 +7,7 @@ import { labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Toggle implements ComponentInterface {
-  private toggleId = `toggle-${toggleCount++}`;
+  private toggleId = `core-toggle-${toggleCount++}`;
 
   /**
    * If applied, the element is rendered with the alternate styling.

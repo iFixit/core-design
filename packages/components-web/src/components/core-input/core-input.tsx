@@ -15,7 +15,7 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Input implements ComponentInterface {
-  private inputId = `input-${inputCount++}`;
+  private inputId = `core-input-${inputCount++}`;
 
   @State() hasFocus = false;
 

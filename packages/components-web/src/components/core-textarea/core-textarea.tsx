@@ -16,7 +16,7 @@ import { labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Textarea implements ComponentInterface {
-  private textareaId = `textarea-${textareaCount++}`;
+  private textareaId = `core-textarea-${textareaCount++}`;
   private nativeInput?: HTMLTextAreaElement;
 
   @State() hasFocus = false;

@@ -14,7 +14,7 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Checkbox implements ComponentInterface {
-  private checkboxId = `checkbox-${checkboxCount++}`;
+  private checkboxId = `core-checkbox-${checkboxCount++}`;
 
   @State() hasFocus = false;
 

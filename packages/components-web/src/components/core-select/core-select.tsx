@@ -15,7 +15,7 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
   shadow: false, // disabling shadow dom enables native functionality
 })
 export class Select implements ComponentInterface {
-  private selectId = `select-${selectCount++}`;
+  private selectId = `core-select-${selectCount++}`;
 
   @State() hasFocus = false;
 
