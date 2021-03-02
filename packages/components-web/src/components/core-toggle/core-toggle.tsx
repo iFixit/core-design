@@ -7,6 +7,8 @@ import { labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Toggle implements ComponentInterface {
+  private toggleId = `toggle-${toggleCount++}`;
+
   /**
    * If applied, the element is rendered with the alternate styling.
    */
@@ -58,30 +60,36 @@ export class Toggle implements ComponentInterface {
   };
 
   render() {
-    const lowerCaseLabel = this.label
-      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-toggle`
-      : "";
+    const {
+      alt,
+      checked,
+      disabled,
+      handleClick,
+      label,
+      required,
+      toggleId,
+    } = this;
 
     return (
       <Host
-        alt={this.alt}
-        aria-disabled={this.disabled ? "true" : null}
-        onClick={this.handleClick}
+        alt={alt}
+        aria-disabled={disabled ? "true" : null}
+        onClick={handleClick}
       >
         <div class="toggle-outer">
-          {lowerCaseLabel && (
-            <label htmlFor={lowerCaseLabel}>{this.label}</label>
-          )}
+          {label && <label htmlFor={toggleId}>{label}</label>}
           <input
-            id={lowerCaseLabel}
+            id={toggleId}
             class="native-element"
             type="checkbox"
-            checked={this.checked}
-            disabled={this.disabled}
-            required={this.required}
+            checked={checked}
+            disabled={disabled}
+            required={required}
           />
         </div>
       </Host>
     );
   }
 }
+
+let toggleCount = 1;
