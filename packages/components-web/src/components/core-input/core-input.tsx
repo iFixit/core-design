@@ -15,6 +15,8 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Input implements ComponentInterface {
+  private inputId = `core-input-${inputCount++}`;
+
   @State() hasFocus = false;
 
   /**
@@ -107,31 +109,40 @@ export class Input implements ComponentInterface {
   @Prop() type?: string = "text";
 
   render() {
-    const lowerCaseLabel = this.label
-      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-input`
-      : "";
+    const {
+      autofocus,
+      clearInput,
+      disabled,
+      hasFocus,
+      icon,
+      inputId,
+      label,
+      placeholder,
+      required,
+      type,
+    } = this;
 
     return (
       <Host
-        aria-disabled={this.disabled ? "true" : null}
-        class={{ "has-focus": this.hasFocus }}
+        aria-disabled={disabled ? "true" : null}
+        class={{ "has-focus": hasFocus }}
       >
         <div class="input-outer">
-          {this.label && <label htmlFor={lowerCaseLabel}>{this.label}</label>}
+          {label && <label htmlFor={inputId}>{label}</label>}
           <div class="input-inner">
             <slot name="input-left">
-              {this.icon && <core-icon slot="input-left" icon={this.icon} />}
+              {icon && <core-icon slot="input-left" icon={icon} />}
             </slot>
             <input
-              id={lowerCaseLabel}
+              id={inputId}
               class="native-element"
-              disabled={this.disabled}
-              autoFocus={this.autofocus}
-              placeholder={this.placeholder || ""}
-              required={this.required}
-              type={this.type}
+              disabled={disabled}
+              autoFocus={autofocus}
+              placeholder={placeholder || ""}
+              required={required}
+              type={type}
             />
-            {this.clearInput && !this.disabled && (
+            {clearInput && !disabled && (
               <button type="button" class="input-clear-icon" tabindex="-1" />
             )}
             <slot name="input-right" />
@@ -141,3 +152,5 @@ export class Input implements ComponentInterface {
     );
   }
 }
+
+let inputCount = 1;

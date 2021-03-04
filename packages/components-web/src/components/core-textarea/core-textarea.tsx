@@ -16,6 +16,7 @@ import { labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Textarea implements ComponentInterface {
+  private textareaId = `core-textarea-${textareaCount++}`;
   private nativeInput?: HTMLTextAreaElement;
 
   @State() hasFocus = false;
@@ -43,7 +44,7 @@ export class Textarea implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop({ reflect: true }) labelPositionProps?: labelPositionProps = "right";
+  @Prop({ reflect: true }) labelPosition?: labelPositionProps = "right";
 
   /**
    * Instructional text that shows before the input has a value.
@@ -78,26 +79,30 @@ export class Textarea implements ComponentInterface {
   }
 
   render() {
-    const lowerCaseLabel = this.label
-      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-textarea`
-      : "";
+    const {
+      cols,
+      disabled,
+      label,
+      placeholder,
+      required,
+      rows,
+      textareaId,
+    } = this;
     const value = this.getValue();
 
     return (
-      <Host aria-disabled={this.disabled ? "true" : null}>
+      <Host aria-disabled={disabled ? "true" : null}>
         <div class="textarea-outer">
-          {lowerCaseLabel && (
-            <label htmlFor={lowerCaseLabel}>{this.label}</label>
-          )}
+          {label && <label htmlFor={textareaId}>{label}</label>}
           <textarea
-            id={lowerCaseLabel}
+            id={textareaId}
             class="native-element"
             ref={(el) => (this.nativeInput = el)}
-            disabled={this.disabled}
-            placeholder={this.placeholder || ""}
-            required={this.required}
-            cols={this.cols}
-            rows={this.rows}
+            disabled={disabled}
+            placeholder={placeholder || ""}
+            required={required}
+            cols={cols}
+            rows={rows}
           >
             {value}
           </textarea>
@@ -106,3 +111,5 @@ export class Textarea implements ComponentInterface {
     );
   }
 }
+
+let textareaCount = 1;

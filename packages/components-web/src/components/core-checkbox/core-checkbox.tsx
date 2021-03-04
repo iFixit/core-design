@@ -14,6 +14,8 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
   shadow: true,
 })
 export class Checkbox implements ComponentInterface {
+  private checkboxId = `core-checkbox-${checkboxCount++}`;
+
   @State() hasFocus = false;
 
   /**
@@ -40,7 +42,7 @@ export class Checkbox implements ComponentInterface {
   /**
    * The label element position.
    */
-  @Prop() labelPositionProps?: labelPositionProps = "right";
+  @Prop() labelPosition?: labelPositionProps = "right";
 
   /**
    * If applied, the user must fill in a value before submitting a form containing this element.
@@ -62,8 +64,7 @@ export class Checkbox implements ComponentInterface {
   };
 
   render() {
-    const { checked, disabled, label, required, size } = this;
-    const lowerCaseLabel = label ? `${this.label.replace(/\s/g, "-").toLowerCase()}-checkbox` : "";
+    const { checked, checkboxId, disabled, label, required, size } = this;
 
     return (
       <Host
@@ -73,14 +74,14 @@ export class Checkbox implements ComponentInterface {
       >
         <div class="checkbox-outer">
           <input
-            id={lowerCaseLabel}
+            id={checkboxId}
             class="native-element"
             type="checkbox"
             checked={checked}
             disabled={disabled}
             required={required}
           />
-          {lowerCaseLabel && <label htmlFor={lowerCaseLabel}>{label}</label>}
+          {label && <label htmlFor={checkboxId}>{label}</label>}
           {checked && size === "default" && (
             <svg
               height="16"
@@ -120,3 +121,5 @@ export class Checkbox implements ComponentInterface {
     );
   }
 }
+
+let checkboxCount = 1;

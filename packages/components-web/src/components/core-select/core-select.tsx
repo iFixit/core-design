@@ -15,6 +15,8 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
   shadow: false, // disabling shadow dom enables native functionality
 })
 export class Select implements ComponentInterface {
+  private selectId = `core-select-${selectCount++}`;
+
   @State() hasFocus = false;
 
   /**
@@ -60,24 +62,22 @@ export class Select implements ComponentInterface {
   @Prop() size?: "large";
 
   render() {
-    const lowerCaseLabel = this.label
-      ? `${this.label.replace(/\s/g, "-").toLowerCase()}-select`
-      : "";
+    const { autofocus, disabled, hasFocus, label, required, selectId } = this;
 
     return (
       <Host
-        aria-disabled={this.disabled ? "true" : undefined}
-        class={{ "has-focus": this.hasFocus }}
+        aria-disabled={disabled ? "true" : undefined}
+        class={{ "has-focus": hasFocus }}
       >
         <div class="select-outer">
-          {this.label && <label htmlFor={lowerCaseLabel}>{this.label}</label>}
+          {label && <label htmlFor={selectId}>{label}</label>}
           <div class="select-inner">
             <select
-              id={lowerCaseLabel}
+              id={selectId}
               class="native-element"
-              disabled={this.disabled}
-              autoFocus={this.autofocus}
-              required={this.required}
+              disabled={disabled}
+              autoFocus={autofocus}
+              required={required}
             >
               <slot />
             </select>
@@ -88,3 +88,5 @@ export class Select implements ComponentInterface {
     );
   }
 }
+
+let selectCount = 1;
