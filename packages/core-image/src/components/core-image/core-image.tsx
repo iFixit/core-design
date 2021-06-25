@@ -17,7 +17,12 @@ export class Image {
   @Prop() height: number;
 
   /**
-   * The image source path without file extension. On browsers supporting `srcset`, `src` is treated as the fallback image with a 1x pixel density.
+   * Controls the native img `loading` attribute. Be mindful there is a cost associated if the image is within the viewport and `lazy` is applied.
+   */
+  @Prop() lazy: 'lazy' | 'auto' | 'eager' = 'auto';
+
+  /**
+   * The image path without file extension. On browsers supporting `srcset`, `src` is treated as the fallback image with a 1x pixel density.
    */
   @Prop() src: string;
 
@@ -27,7 +32,7 @@ export class Image {
   @Prop() width: number;
 
   render() {
-    const { alt, src, height, width } = this;
+    const { alt, height, lazy, src, width } = this;
     const imageOptions = {
       types: ['avif', 'webp', 'jpg'],
     };
@@ -45,7 +50,20 @@ export class Image {
             type={`image/${type}`}
           />
         ))}
-        <img src={`${src}/jpg/ps5_1600w.jpg`} width={width} height={height} alt={alt} decoding="async" loading="lazy" />
+        <img
+          src={`${src}/jpg/ps5_1600w.jpg`}
+          srcSet={`
+            ${src}/jpg/ps5_300w.jpg 300w,
+            ${src}/jpg/ps5_592w.jpg 592w,
+            ${src}/jpg/ps5_800w.jpg 800w,
+            ${src}/jpg/ps5_1600w.jpg 1600w,
+          `}
+          width={width}
+          height={height}
+          alt={alt}
+          decoding="async"
+          loading={lazy}
+        />
       </picture>
     );
   }

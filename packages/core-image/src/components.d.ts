@@ -16,7 +16,11 @@ export namespace Components {
          */
         "height": number;
         /**
-          * The image source path without file extension. On browsers supporting `srcset`, `src` is treated as the fallback image with a 1x pixel density.
+          * Controls the native img `loading` attribute. Be mindful there is a cost associated if the image is within the viewport and `lazy` is applied.
+         */
+        "lazy": 'lazy' | 'auto' | 'eager';
+        /**
+          * The image path without file extension. On browsers supporting `srcset`, `src` is treated as the fallback image with a 1x pixel density.
          */
         "src": string;
         /**
@@ -47,7 +51,11 @@ declare namespace LocalJSX {
          */
         "height"?: number;
         /**
-          * The image source path without file extension. On browsers supporting `srcset`, `src` is treated as the fallback image with a 1x pixel density.
+          * Controls the native img `loading` attribute. Be mindful there is a cost associated if the image is within the viewport and `lazy` is applied.
+         */
+        "lazy"?: 'lazy' | 'auto' | 'eager';
+        /**
+          * The image path without file extension. On browsers supporting `srcset`, `src` is treated as the fallback image with a 1x pixel density.
          */
         "src"?: string;
         /**
