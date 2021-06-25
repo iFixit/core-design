@@ -11,7 +11,7 @@ import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
   tag: "core-tag",
-  styleUrl: "core-tag.less",
+  styleUrl: "core-tag.css",
   shadow: true,
 })
 export class Tag implements ComponentInterface {
@@ -33,7 +33,7 @@ export class Tag implements ComponentInterface {
 
   /**
    * Optional color of the tag. Defaults to `black`.
-   * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.css) without `@color-`.
    */
   @Prop({ reflect: true }) color?: colorPropsPrimary = "black";
 

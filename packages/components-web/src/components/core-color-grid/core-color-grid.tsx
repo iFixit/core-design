@@ -2,7 +2,7 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
 
 @Component({
   tag: "core-color-grid",
-  styleUrl: "core-color-grid.less",
+  styleUrl: "core-color-grid.css",
   shadow: true,
 })
 export class ColorGrid implements ComponentInterface {

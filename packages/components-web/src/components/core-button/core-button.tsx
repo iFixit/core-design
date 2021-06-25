@@ -16,7 +16,7 @@ import {
 
 @Component({
   tag: "core-button",
-  styleUrl: "core-button.less",
+  styleUrl: "core-button.css",
   shadow: true,
 })
 export class Button implements ComponentInterface {

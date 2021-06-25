@@ -16,7 +16,7 @@ import { labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-radio",
-  styleUrl: "core-radio.less",
+  styleUrl: "core-radio.css",
   shadow: true,
 })
 export class Radio implements ComponentInterface {

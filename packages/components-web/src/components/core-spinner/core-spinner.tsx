@@ -3,7 +3,7 @@ import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
   tag: "core-spinner",
-  styleUrl: "core-spinner.less",
+  styleUrl: "core-spinner.css",
   shadow: true,
 })
 export class Spinner implements ComponentInterface {

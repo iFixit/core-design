@@ -2,7 +2,7 @@ import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-alert",
-  styleUrl: "core-alert.less",
+  styleUrl: "core-alert.css",
   shadow: true,
 })
 export class Alert implements ComponentInterface {

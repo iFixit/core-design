@@ -1,0 +1,154 @@
+core-select {
+  color: var(--color-gray-8);
+  display: inline-flex;
+  max-width: 100%;
+  vertical-align: middle;
+}
+core-select[icon] .native-element {
+  padding-left: 40px;
+}
+core-select[disabled]:not([disabled="false"]),
+core-select[disabled="true"] {
+  cursor: not-allowed;
+}
+core-select[disabled]:not([disabled="false"]) core-icon,
+core-select[disabled="true"] core-icon,
+core-select[disabled]:not([disabled="false"]) label,
+core-select[disabled="true"] label {
+  color: var(--color-gray-4) !important;
+}
+core-select[disabled]:not([disabled="false"]) .native-element,
+core-select[disabled="true"] .native-element {
+  background-color: var(--color-gray-1);
+  border-color: transparent;
+  color: var(--color-gray-4);
+  pointer-events: none;
+}
+core-select[size="large"] .native-element {
+  font-size: 16px;
+  padding: 5px 44px 5px 20px;
+}
+core-select[size="large"] .select-inner core-icon {
+  right: var(--space-4);
+}
+core-select[label-display="inline"] .select-outer {
+  display: flex;
+  justify-content: center;
+}
+core-select[label-display="inline"] label {
+  align-self: center;
+  display: flex;
+  margin-bottom: 0;
+}
+core-select[label-position="left"] label {
+  margin-right: var(--space-2);
+}
+core-select[label-display="inline"][label-position="right"] .select-outer {
+  flex-direction: row-reverse;
+}
+core-select[label-display="inline"][label-position="right"] label {
+  margin-left: var(--space-2);
+}
+core-select[label-display="block"][label-position="right"] label {
+  justify-content: flex-end;
+}
+core-select[error]:not([error="false"]),
+core-select[error="true"] {
+  color: var(--color-red);
+}
+core-select[error]:not([error="false"]) core-icon,
+core-select[error="true"] core-icon,
+core-select[error]:not([error="false"]) label,
+core-select[error="true"] label {
+  color: var(--color-red);
+}
+core-select[error]:not([error="false"]) .native-element:not(:disabled),
+core-select[error="true"] .native-element:not(:disabled) {
+  border-color: var(--color-red) light-1;
+}
+core-select[error]:not([error="false"]) .native-element:not(:disabled):focus,
+core-select[error="true"] .native-element:not(:disabled):focus,
+core-select[error]:not([error="false"]) .native-element:not(:disabled):active,
+core-select[error="true"] .native-element:not(:disabled):active {
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(255, 104, 96, 0.3);
+}
+core-select[success]:not([success="false"]),
+core-select[success="true"] {
+  color: var(--color-green);
+}
+core-select[success]:not([success="false"]) core-icon,
+core-select[success="true"] core-icon,
+core-select[success]:not([success="false"]) label,
+core-select[success="true"] label {
+  color: var(--color-green);
+}
+core-select[success]:not([success="false"]) .native-element:not(:disabled),
+core-select[success="true"] .native-element:not(:disabled) {
+  border-color: var(--color-green) light-1;
+}
+core-select[success]:not([success="false"]) .native-element:not(:disabled):focus,
+core-select[success="true"] .native-element:not(:disabled):focus,
+core-select[success]:not([success="false"]) .native-element:not(:disabled):active,
+core-select[success="true"] .native-element:not(:disabled):active {
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 3px rgba(93, 201, 132, 0.3);
+}
+core-select label {
+  color: var(--color-gray-8);
+  display: flex;
+  margin-bottom: var(--space-2);
+  transition: color 0.12s ease-in-out;
+}
+core-select .select-outer {
+  max-width: inherit;
+  width: inherit;
+}
+core-select .select-inner {
+  position: relative;
+  width: inherit;
+}
+core-select .select-inner core-icon {
+  color: var(--color-gray-5);
+  position: absolute;
+  top: 50%;
+  right: var(--space-2);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+core-select .native-element {
+  background-color: transparent;
+  border: 1px solid var(--color-gray-3);
+  border-radius: var(--space-1);
+  box-shadow: 0 0 0 0 transparent;
+  box-sizing: border-box;
+  color: var(--color-gray-8);
+  font: inherit;
+  line-height: 36px;
+  max-width: 100%;
+  min-height: 36px;
+  outline: none;
+  overflow-x: hidden;
+  padding-right: var(--space-6);
+  padding-left: var(--space-4);
+  text-overflow: ellipsis;
+  transition: box-shadow 0.12s ease-in-out;
+  white-space: nowrap;
+  width: inherit;
+}
+core-select .native-element::placeholder {
+  color: var(--color-gray-4);
+}
+core-select .native-element:not(:disabled):focus,
+core-select .native-element:not(:disabled):active {
+  border-color: var(--color-gray-5);
+  box-shadow: var(--focus-box-shadow);
+}
+core-select .native-element > option {
+  padding: 0;
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  core-select .native-element {
+    appearance: none;
+  }
+}

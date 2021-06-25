@@ -1,0 +1,93 @@
+:host {
+  color: var(--color-gray-8);
+  cursor: default;
+  display: inline-flex;
+  vertical-align: middle;
+}
+:host([color="dark"]) .tooltip {
+  background-color: var(--color-gray-8);
+  color: var(--color-white);
+}
+:host([color="dark"]) .arrow::before {
+  border-color: transparent transparent var(--color-gray-8) transparent;
+}
+:host([color="light"]) .tooltip {
+  background-color: var(--color-white);
+}
+:host([variation="top"]) .tooltip-outer {
+  bottom: 100%;
+  margin-bottom: 13px;
+}
+:host([variation="top"]) .arrow {
+  margin-top: -3px;
+}
+:host([variation="top"]) .arrow::before {
+  top: 20px;
+  transform: rotate(180deg);
+}
+:host([variation="bottom"]) .tooltip-outer {
+  top: 100%;
+  margin-top: 13px;
+}
+:host([variation="bottom"]) .arrow {
+  top: -5px;
+}
+:host([variation="bottom"]) .arrow::before {
+  top: 0;
+}
+:host .core-tooltip {
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+}
+:host .core-tooltip.active .tooltip-outer,
+:host .core-tooltip:hover .tooltip-outer {
+  display: flex;
+}
+:host .tooltip-outer {
+  display: none;
+  max-width: 95vw;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  z-index: 9;
+}
+:host .tooltip {
+  background-color: var(--color-white);
+  border-radius: var(--space-1);
+  box-shadow: var(--shadow-2);
+  box-sizing: border-box;
+  padding: 6px 10px;
+  position: relative;
+  white-space: nowrap;
+}
+:host .arrow {
+  height: 0;
+  position: absolute;
+  left: calc(50% - 10px);
+  width: 20px;
+}
+:host .arrow::before {
+  content: "";
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent var(--color-white) transparent;
+  display: block;
+  height: 0;
+  position: relative;
+  left: 0;
+  width: 0;
+  z-index: 2;
+}
+:host .arrow::after {
+  content: "";
+  box-shadow: var(--shadow-2);
+  display: block;
+  height: 20px;
+  transform: rotate(45deg);
+  position: relative;
+  top: -6px;
+  left: 0;
+  width: 20px;
+  z-index: -1;
+}

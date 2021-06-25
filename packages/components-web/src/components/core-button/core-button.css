@@ -1,0 +1,487 @@
+:host {
+  display: inline-flex;
+  max-width: 100%;
+  vertical-align: middle;
+}
+:host([disabled]:not([disabled="false"])),
+:host([disabled="true"]) {
+  cursor: not-allowed;
+}
+:host([disabled]:not([disabled="false"])) .native-element,
+:host([disabled="true"]) .native-element {
+  background-color: var(--color-gray-1);
+  box-shadow: 0 0 0 1px transparent inset;
+  color: var(--color-gray-4);
+  pointer-events: none;
+}
+:host([variation="basic"]) .native-element {
+  background-color: var(--color-white);
+  color: var(--color-gray-8);
+}
+:host([variation="basic"]) .native-element:not([disabled]) {
+  box-shadow: 0 0 0 1px var(--color-gray-3) inset;
+}
+:host([variation="basic"]) .native-element:not([disabled]):not([loading]):hover {
+  box-shadow: 0 0 0 1px var(--color-gray-5) inset;
+}
+:host([variation="basic"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-gray-5) inset;
+}
+:host([variation="basic"]) .native-element[disabled] {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-4);
+}
+:host([variation="basic"][loading]:not([loading="false"])) .native-element {
+  cursor: not-allowed;
+}
+:host([variation="basic"][loading]:not([loading="false"])) .text-wrap {
+  color: var(--color-gray-3);
+}
+:host([variation="basic"][loading]:not([loading="false"])) .button-loading::after {
+  border: 2px solid var(--color-gray-3);
+  border-top-color: currentColor;
+}
+:host([variation="primary"]) .native-element {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+:host([variation="primary"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px var(--color-blue) inset;
+}
+:host([variation="primary"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-blue) dark-1;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([variation="primary"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-blue) dark-2 inset;
+}
+:host([variation="primary"]) .native-element[disabled] {
+  background-color: rgba(25, 117, 241, 0.5);
+  color: var(--color-white);
+}
+:host([variation="primary"][loading]:not([loading="false"])) .native-element {
+  cursor: not-allowed;
+}
+:host([variation="primary"][loading]:not([loading="false"])) .text-wrap {
+  color: var(--color-blue) light-2;
+}
+:host([variation="primary"][loading]:not([loading="false"])) .button-loading::after {
+  border: 2px solid var(--color-blue) light-2;
+  border-top-color: currentColor;
+}
+:host([variation="secondary"]) .native-element {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-8);
+}
+:host([variation="secondary"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([variation="secondary"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-gray-2);
+}
+:host([variation="secondary"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-gray-4) inset;
+}
+:host([variation="secondary"]) .native-element[disabled] {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-4);
+}
+:host([variation="dark"]) .native-element,
+:host([variation="dark"][status="success"]) .native-element {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+:host([variation="dark"]) .native-element:not([disabled]):not([loading]),
+:host([variation="dark"][status="success"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([variation="dark"]) .native-element:not([disabled]):not([loading]):hover,
+:host([variation="dark"][status="success"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-green) dark-1;
+}
+:host([variation="dark"]) .native-element:not([disabled]):not([loading]):active,
+:host([variation="dark"][status="success"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-green-dark-2) inset;
+}
+:host([variation="dark"]) .native-element[disabled],
+:host([variation="dark"][status="success"]) .native-element[disabled] {
+  background-color: rgba(51, 180, 100, 0.5);
+  color: var(--color-white);
+}
+:host([variation="dark"][status="danger"]) .native-element {
+  background-color: var(--color-red);
+}
+:host([variation="dark"][status="danger"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([variation="dark"][status="danger"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-red) dark-1;
+}
+:host([variation="dark"][status="danger"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-red-dark-2) inset;
+}
+:host([variation="dark"][status="warning"]) .native-element {
+  background-color: var(--color-yellow);
+  color: var(--color-gray-8);
+}
+:host([variation="dark"][status="warning"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([variation="dark"][status="warning"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-yellow) dark-1;
+}
+:host([variation="dark"][status="warning"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-yellow) dark-2 inset;
+}
+:host([variation="light"]) .native-element,
+:host([variation="light"][status="success"]) .native-element {
+  background-color: var(--color-green-light-4);
+  color: var(--color-green) dark-1;
+}
+:host([variation="light"]) .native-element:not([disabled]):not([loading]),
+:host([variation="light"][status="success"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px var(--color-green-light-4) inset;
+}
+:host([variation="light"]) .native-element:not([disabled]):not([loading]):hover,
+:host([variation="light"][status="success"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-green) light-3;
+  box-shadow: 0 0 0 1px transparent inset;
+  color: var(--color-green) dark-3;
+}
+:host([variation="light"]) .native-element:not([disabled]):not([loading]):active,
+:host([variation="light"][status="success"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-green) light-1 inset;
+}
+:host([variation="light"]) .native-element[disabled],
+:host([variation="light"][status="success"]) .native-element[disabled] {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-4);
+}
+:host([variation="light"][status="danger"]) .native-element {
+  background-color: var(--color-red-light-4);
+  color: var(--color-red) dark-1;
+}
+:host([variation="light"][status="danger"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px var(--color-red-light-4) inset;
+}
+:host([variation="light"][status="danger"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-red) light-3;
+  box-shadow: 0 0 0 1px transparent inset;
+  color: var(--color-red) dark-1;
+}
+:host([variation="light"][status="danger"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-red) light-1 inset;
+}
+:host([variation="light"][status="warning"]) .native-element {
+  background-color: var(--color-yellow-light-4);
+  color: var(--color-yellow-dark-3);
+}
+:host([variation="light"][status="warning"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px var(--color-yellow-light-4) inset;
+}
+:host([variation="light"][status="warning"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-yellow-light-3);
+  box-shadow: 0 0 0 1px transparent inset;
+  color: var(--color-yellow-dark-3);
+}
+:host([variation="light"][status="warning"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-yellow) light-1 inset;
+}
+:host([variation="borderless"]) .native-element {
+  background-color: transparent;
+}
+:host([variation="borderless"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 0 transparent inset;
+}
+:host([variation="borderless"]) .native-element:not([disabled]):not([loading]):hover,
+:host([variation="borderless"]) .native-element:not([disabled]):not([loading]):active {
+  background-color: transparent;
+  box-shadow: 0 0 0 0 transparent inset;
+}
+:host([variation="borderless"]) .native-element[disabled] {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-4);
+}
+:host([status="success"]) .native-element {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+:host([status="success"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px var(--color-green) inset;
+}
+:host([status="success"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-green) dark-1;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="success"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-green-dark-2) inset;
+}
+:host([status="success"]) .native-element[disabled] {
+  background-color: rgba(51, 180, 100, 0.5);
+}
+:host([status="danger"]) .native-element {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+:host([status="danger"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px var(--color-red) inset;
+}
+:host([status="danger"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-red) dark-1;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="danger"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-red-dark-2) inset;
+}
+:host([status="danger"]) .native-element[disabled] {
+  background-color: rgba(243, 78, 70, 0.5);
+}
+:host([status="warning"]) .native-element {
+  background-color: var(--color-yellow);
+  color: var(--color-gray-8);
+}
+:host([status="warning"]) .native-element:not([disabled]):not([loading]) {
+  box-shadow: 0 0 0 1px var(--color-yellow) inset;
+}
+:host([status="warning"]) .native-element:not([disabled]):not([loading]):hover {
+  background-color: var(--color-yellow) dark-1;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="warning"]) .native-element:not([disabled]):not([loading]):active {
+  box-shadow: 0 0 0 2px var(--color-yellow) dark-2 inset;
+}
+:host([status="warning"]) .native-element[disabled] {
+  background-color: rgba(249, 192, 62, 0.5);
+}
+:host([status="success"][size="default"][loading="icon-only"]) .native-element {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-green) light-2 inset;
+  color: var(--color-green);
+}
+:host([status="success"][size="default"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-green) inset;
+}
+:host([status="success"][size="default"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-green) dark-1 inset;
+}
+:host([status="success"][size="primary"][loading="icon-only"]) .native-element {
+  background-color: var(--color-green);
+  box-shadow: 0 0 0 1px var(--color-green) inset;
+  color: var(--color-white);
+}
+:host([status="success"][size="primary"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-green) dark-1;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="success"][size="primary"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-green-dark-2) inset;
+}
+:host([status="success"][size="secondary"][loading="icon-only"]) .native-element {
+  background-color: var(--color-green-light-4);
+  border-color: var(--color-green-light-4);
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="success"][size="secondary"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-green) light-3;
+  box-shadow: 0 0 0 1px transparent inset;
+  color: var(--color-green) dark-3;
+}
+:host([status="success"][size="secondary"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-green) light-2 inset;
+}
+:host([status="danger"][size="default"][loading="icon-only"]) .native-element {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-red) light-2 inset;
+  color: var(--color-red);
+}
+:host([status="danger"][size="default"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-red) inset;
+}
+:host([status="danger"][size="default"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-red) dark-1 inset;
+}
+:host([status="danger"][size="primary"][loading="icon-only"]) .native-element {
+  background-color: var(--color-red);
+  box-shadow: 0 0 0 1px var(--color-red) inset;
+  color: var(--color-white);
+}
+:host([status="danger"][size="primary"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-red) dark-1;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="danger"][size="primary"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-red-dark-2) inset;
+}
+:host([status="danger"][size="secondary"][loading="icon-only"]) .native-element {
+  background-color: var(--color-red-light-4);
+  border-color: var(--color-red-light-4);
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="danger"][size="secondary"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-red) light-3;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="danger"][size="secondary"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-red) light-2 inset;
+}
+:host([status="warning"][size="default"][loading="icon-only"]) .native-element {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-yellow) light-2 inset;
+  color: var(--color-yellow-dark-3);
+}
+:host([status="warning"][size="default"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-yellow) inset;
+}
+:host([status="warning"][size="default"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-yellow) dark-1 inset;
+}
+:host([status="warning"][size="primary"][loading="icon-only"]) .native-element {
+  background-color: var(--color-yellow);
+  box-shadow: 0 0 0 1px var(--color-yellow) inset;
+  color: var(--color-gray-8);
+}
+:host([status="warning"][size="primary"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-yellow) dark-1;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="warning"][size="primary"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-yellow) dark-2 inset;
+}
+:host([status="warning"][size="secondary"][loading="icon-only"]) .native-element {
+  background-color: var(--color-yellow-light-4);
+  border-color: var(--color-yellow-light-4);
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="warning"][size="secondary"][loading="icon-only"]) .native-element:hover {
+  background-color: var(--color-yellow-light-3);
+  box-shadow: 0 0 0 1px transparent inset;
+}
+:host([status="warning"][size="secondary"][loading="icon-only"]) .native-element:active {
+  box-shadow: 0 0 0 2px var(--color-yellow) light-2 inset;
+}
+:host([loading="right"]) .button-loading,
+:host([loading="left"]) .button-loading,
+:host([loading="only"]) .button-loading {
+  display: flex;
+}
+:host([loading="right"]) .button-loading::after,
+:host([loading="left"]) .button-loading::after,
+:host([loading="only"]) .button-loading::after {
+  content: "";
+  border-radius: 50%;
+  border: 2px solid var(--color-gray-2);
+  border-top-color: currentColor;
+  width: var(--space-3);
+  height: var(--space-3);
+  animation: loadingAnimation 1s infinite cubic-bezier(0.4, 0.4, 0.85, 1);
+}
+:host([loading="right"]) .button-loading {
+  margin-left: var(--space-2);
+}
+:host([loading="left"]) .button-loading {
+  margin-right: var(--space-2);
+  order: -1;
+}
+:host([loading="only"]) slot {
+  visibility: hidden;
+}
+:host([loading="only"]) .button-loading {
+  position: absolute;
+  left: calc(50% - var(--space-2));
+}
+:host([href]) .native-element {
+  text-decoration: none;
+}
+:host ([size="small"]) .native-element {
+  font-weight: var(--font-weight-normal);
+  padding-right: var(--space-3);
+  padding-left: var(--space-3);
+}
+:host ([size="small"]) .text-wrap {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+:host ([size="small"][radius="pill"]) .native-element {
+  border-radius: var(--border-radius-pill);
+}
+:host ([size="large"]) .native-element {
+  font-size: 16px;
+  line-height: 20px;
+  padding-right: var(--space-5);
+  padding-left: var(--space-5);
+}
+:host ([size="large"]) .text-wrap {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+:host ([size="large"][radius="pill"]) .native-element {
+  border-radius: var(--border-radius-pill);
+}
+:host ([width="full"]) .native-element {
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+:host ([width="inherit"]) .native-element {
+  box-sizing: border-box;
+  width: 100%;
+}
+:host(.icon-only) .native-element {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+:host([radius="none"]) .native-element {
+  border-radius: 0;
+}
+:host([radius="md"]) .native-element {
+  border-radius: var(--border-radius-md);
+}
+:host([radius="lg"]) .native-element {
+  border-radius: var(--border-radius-lg);
+}
+:host([radius="pill"]) .native-element {
+  border-radius: var(--border-radius-pill);
+}
+.native-element {
+  align-items: center;
+  border-radius: var(--border-radius-md);
+  border: 0;
+  box-sizing: border-box;
+  display: flex;
+  font: inherit;
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 18px;
+  outline: none;
+  padding: 0 15px;
+  position: relative;
+  transition: background-color 0.12s ease-in-out, border 0.12s ease-in-out, box-shadow 0.12s ease-in-out, color 0.12s ease-in-out;
+  width: inherit;
+}
+.native-element:not([disabled]):not([loading]):hover,
+.native-element:not([disabled]):not([loading]):active {
+  cursor: pointer;
+}
+.native-element .text-wrap {
+  margin: auto;
+  min-height: var(--space-4);
+  overflow-x: hidden;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.native-element .button-loading {
+  display: none;
+}
+@keyframes loadingAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

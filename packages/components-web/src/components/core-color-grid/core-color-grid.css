@@ -1,0 +1,18 @@
+:host {
+  display: grid;
+  grid-gap: var(--space-6);
+  grid-template-columns: repeat(4, auto);
+}
+.color {
+  color: var(--color-gray-8);
+  text-align: center;
+}
+.color-swatch {
+  box-shadow: 0 0 0 1px var(--color-gray-1);
+  height: var(--space-9);
+  margin-bottom: var(--space-2);
+  width: 100%;
+}
+.color-name {
+  margin-bottom: var(--space-1);
+}

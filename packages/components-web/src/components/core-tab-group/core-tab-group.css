@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  position: relative;
+}
+:host::after {
+  content: "";
+  background-color: var(--color-gray-2);
+  border-radius: var(--border-radius-pill);
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+:host([size="large"]) .native-element {
+  font-size: var(--font-size-2);
+}
+:host([size="small"]) {
+  font-size: 14px;
+  line-height: 1.142857;
+}
+:host([size="small"])::after {
+  height: 2px;
+}
+:host([size="small"]) .native-element {
+  height: 21px;
+}
+:host .native-element {
+  align-items: stretch;
+  display: flex;
+  font-weight: var(--font-weight-semi-bold);
+  height: 35px;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

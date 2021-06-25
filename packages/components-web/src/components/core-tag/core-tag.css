@@ -1,0 +1,92 @@
+:host {
+  display: inline-flex;
+  vertical-align: middle;
+}
+:host([closable]:not([closable="false"])) .native-element,
+:host([closable="true"]) .native-element {
+  cursor: pointer;
+  padding-right: 3px;
+}
+:host([closable]:not([closable="false"])) .close,
+:host([closable="true"]) .close {
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+}
+:host([closable]:not([closable="false"])[variation="light"]) .close,
+:host([closable="true"][variation="light"]) .close {
+  color: rgba(0, 0, 0, 0.15);
+}
+:host([closable]:not([closable="false"])[color="yellow"]) .close,
+:host([closable="true"][color="yellow"]) .close {
+  color: rgba(36, 44, 51, 0.25);
+}
+:host([color="black"]) .native-element {
+  background-color: var(--color-gray-7);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+:host([color="blue"]) .native-element {
+  background-color: var(--color-blue) light-1;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+:host([color="green"]) .native-element {
+  background-color: var(--color-green) light-1;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+:host([color="yellow"]) .native-element {
+  background-color: var(--color-yellow) light-1;
+  color: var(--color-gray-8);
+}
+:host([color="red"]) .native-element {
+  background-color: var(--color-red) light-1;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+:host([variation="light"][color="black"]) .native-element {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-6);
+  text-shadow: none;
+}
+:host([variation="light"][color="blue"]) .native-element {
+  background-color: var(--color-blue) light-4;
+  color: var(--color-blue) dark-1;
+  text-shadow: none;
+}
+:host([variation="light"][color="green"]) .native-element {
+  background-color: var(--color-green-light-4);
+  color: var(--color-green) dark-1;
+  text-shadow: none;
+}
+:host([variation="light"][color="yellow"]) .native-element {
+  background-color: var(--color-yellow-light-4);
+  color: var(--color-yellow) dark-2;
+  text-shadow: none;
+}
+:host([variation="light"][color="red"]) .native-element {
+  background-color: var(--color-red-light-4);
+  color: var(--color-red) dark-1;
+  text-shadow: none;
+}
+:host([size="small"]) .native-element {
+  font-size: 12px;
+  height: 18px;
+  line-height: 14px;
+  padding: 2px var(--space-1);
+}
+:host([size="small"]) .native-element .close {
+  margin-top: -1px;
+}
+.native-element {
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: var(--color-white);
+  cursor: default;
+  display: flex;
+  font: inherit;
+  font-weight: var(--font-weight-semi-bold);
+  height: 24px;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+  max-width: 100%;
+  padding: var(--space-1) 6px;
+  text-align: center;
+  white-space: nowrap;
+}

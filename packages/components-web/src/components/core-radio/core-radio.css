@@ -1,0 +1,95 @@
+:host {
+  color: inherit;
+  display: inline-flex;
+  outline: none;
+  vertical-align: middle;
+}
+:host([disabled]:not([disabled="false"])),
+:host([disabled="true"]) {
+  cursor: not-allowed;
+}
+:host([disabled]:not([disabled="false"])) label,
+:host([disabled="true"]) label {
+  color: var(--color-gray-4);
+}
+:host([disabled]:not([disabled="false"])) .native-element,
+:host([disabled="true"]) .native-element {
+  background-color: var(--color-gray-1);
+  border-color: transparent;
+  box-shadow: 0 0 0 0 transparent inset;
+  color: inherit;
+  pointer-events: none;
+}
+:host([size="large"]) label {
+  font-size: var(--font-size-2);
+}
+:host([size="large"]) .native-element {
+  height: var(--space-large);
+  width: var(--space-large);
+}
+:host([size="large"]) .native-element:checked:not(:disabled) {
+  box-shadow: 0 0 0 6px var(--color-blue) inset;
+}
+:host([size="large"]) .native-element:checked:disabled {
+  box-shadow: 0 0 0 6px var(--color-blue) light-3 inset;
+}
+:host([label-position="right"]) label {
+  margin-left: var(--space-2);
+}
+:host([label-position="left"]) label {
+  margin-right: var(--space-2);
+  order: -1;
+}
+.radio-outer {
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+}
+.radio-outer,
+.native-element,
+label {
+  cursor: pointer;
+}
+label {
+  color: var(--color-gray-8);
+  min-height: 16px;
+  transition: color 0.12s ease-in-out;
+}
+.native-element {
+  background-color: var(--color-white);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--color-gray-3) inset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  height: var(--space-4);
+  margin: 0;
+  outline: none;
+  transition: box-shadow 0.12s ease-in-out;
+  width: var(--space-4);
+}
+.native-element:checked:not(:disabled):focus,
+.native-element:checked:not(:disabled):active {
+  box-shadow: 0 0 0 5px var(--color-blue) inset;
+}
+.native-element[disabled]:not(:checked) {
+  background-color: var(--color-gray-1);
+  border-color: var(--color-gray-1);
+  color: var(--color-gray-4);
+  cursor: not-allowed;
+}
+.native-element[disabled]:checked {
+  border-color: var(--color-blue) light-3;
+  box-shadow: 0 0 0 5px var(--color-blue) light-3 inset;
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .native-element {
+    appearance: none;
+  }
+  .native-element:checked {
+    border-color: var(--color-blue) dark-1;
+    box-shadow: 0 0 0 5px var(--color-blue) inset;
+  }
+}

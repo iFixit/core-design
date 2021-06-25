@@ -1,0 +1,129 @@
+:host {
+  color: var(--color-gray-8);
+  display: inline-flex;
+  max-width: 100%;
+  vertical-align: middle;
+  width: 100%;
+}
+:host([icon]) .native-element {
+  padding-left: 40px;
+}
+:host([disabled]:not([disabled="false"])),
+:host([disabled="true"]) {
+  cursor: not-allowed;
+}
+:host([disabled]:not([disabled="false"])) core-icon,
+:host([disabled="true"]) core-icon,
+:host([disabled]:not([disabled="false"])) label,
+:host([disabled="true"]) label {
+  color: var(--color-gray-4) !important;
+}
+:host([disabled]:not([disabled="false"])) .native-element,
+:host([disabled="true"]) .native-element {
+  background-color: var(--color-gray-1);
+  border-color: transparent;
+  color: var(--color-gray-4);
+  pointer-events: none;
+}
+:host([size="large"]) .native-element {
+  font-size: 16px;
+  padding: 14px 20px 14px 50px;
+}
+:host([label-display="inline"]) .input-outer {
+  display: flex;
+  justify-content: center;
+}
+:host([label-display="inline"]) label {
+  align-self: center;
+  display: flex;
+  margin-bottom: 0;
+}
+:host([label-position="left"]) label {
+  margin-right: var(--space-2);
+}
+:host([label-display="inline"][label-position="right"]) .input-outer {
+  flex-direction: row-reverse;
+}
+:host([label-display="inline"][label-position="right"]) label {
+  margin-left: var(--space-2);
+}
+:host([label-display="block"][label-position="right"]) label {
+  justify-content: flex-end;
+}
+:host([error]:not([error="false"])),
+:host([error="true"]) {
+  color: var(--color-red);
+}
+:host([error]:not([error="false"])) core-icon,
+:host([error="true"]) core-icon,
+:host([error]:not([error="false"])) label,
+:host([error="true"]) label {
+  color: var(--color-red);
+}
+:host([error]:not([error="false"])) .native-element:not(:disabled),
+:host([error="true"]) .native-element:not(:disabled) {
+  border-color: var(--color-red) light-1;
+}
+:host([error]:not([error="false"])) .native-element:not(:disabled):focus,
+:host([error="true"]) .native-element:not(:disabled):focus,
+:host([error]:not([error="false"])) .native-element:not(:disabled):active,
+:host([error="true"]) .native-element:not(:disabled):active {
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(255, 104, 96, 0.3);
+}
+:host([success]:not([success="false"])),
+:host([success="true"]) {
+  color: var(--color-green);
+}
+:host([success]:not([success="false"])) core-icon,
+:host([success="true"]) core-icon,
+:host([success]:not([success="false"])) label,
+:host([success="true"]) label {
+  color: var(--color-green);
+}
+:host([success]:not([success="false"])) .native-element:not(:disabled),
+:host([success="true"]) .native-element:not(:disabled) {
+  border-color: var(--color-green) light-1;
+}
+:host([success]:not([success="false"])) .native-element:not(:disabled):focus,
+:host([success="true"]) .native-element:not(:disabled):focus,
+:host([success]:not([success="false"])) .native-element:not(:disabled):active,
+:host([success="true"]) .native-element:not(:disabled):active {
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 3px rgba(93, 201, 132, 0.3);
+}
+label {
+  color: var(--color-gray-8);
+  display: flex;
+  margin-bottom: var(--space-2);
+  transition: color 0.12s ease-in-out;
+}
+.input-outer {
+  width: inherit;
+}
+.input-inner {
+  position: relative;
+  width: inherit;
+}
+.native-element {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-3);
+  border-radius: var(--space-1);
+  box-shadow: 0 0 0 0 transparent;
+  box-sizing: border-box;
+  font: inherit;
+  min-height: 36px;
+  outline: none;
+  padding-right: var(--space-4);
+  padding-left: var(--space-4);
+  transition: box-shadow 0.12s ease-in-out;
+  width: inherit;
+}
+.native-element::placeholder {
+  color: var(--color-gray-4);
+}
+.native-element:not(:disabled):focus,
+.native-element:not(:disabled):active {
+  border-color: var(--color-gray-5);
+  box-shadow: var(--focus-box-shadow);
+}

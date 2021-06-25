@@ -1,0 +1,25 @@
+:host {
+  color: inherit;
+  display: flex;
+  min-width: 128px;
+  white-space: inherit;
+}
+:host > *:not(style) {
+  box-sizing: border-box;
+  color: var(--color-gray-8);
+  display: flex;
+  padding: var(--space-2) var(--space-4);
+  width: 100%;
+}
+:host > a {
+  background-color: transparent;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+:host > a:hover {
+  background-color: var(--color-gray-1);
+}
+:host slot[name="icon"]:not(:empty) {
+  display: inline-flex;
+  margin-right: var(--space-2);
+}

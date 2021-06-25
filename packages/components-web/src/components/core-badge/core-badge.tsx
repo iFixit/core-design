@@ -2,7 +2,7 @@ import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-badge",
-  styleUrl: "core-badge.less",
+  styleUrl: "core-badge.css",
   shadow: true,
 })
 export class Badge implements ComponentInterface {

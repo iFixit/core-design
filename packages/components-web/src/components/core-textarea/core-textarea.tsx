@@ -12,7 +12,7 @@ import { labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-textarea",
-  styleUrl: "core-textarea.less",
+  styleUrl: "core-textarea.css",
   shadow: true,
 })
 export class Textarea implements ComponentInterface {

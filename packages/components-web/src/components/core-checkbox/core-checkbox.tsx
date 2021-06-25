@@ -10,7 +10,7 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-checkbox",
-  styleUrl: "core-checkbox.less",
+  styleUrl: "core-checkbox.css",
   shadow: true,
 })
 export class Checkbox implements ComponentInterface {
@@ -25,7 +25,7 @@ export class Checkbox implements ComponentInterface {
 
   /**
    * Optional color of the label (inherited).
-   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.css) without `@color-`.
    */
   @Prop() color?: colorPropsAll = "gray-8";
 

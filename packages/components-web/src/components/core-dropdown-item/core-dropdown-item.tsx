@@ -9,7 +9,7 @@ import {
 
 @Component({
   tag: "core-dropdown-item",
-  styleUrl: "core-dropdown-item.less",
+  styleUrl: "core-dropdown-item.css",
   shadow: true,
 })
 export class DropdownItem implements ComponentInterface {

@@ -1,0 +1,64 @@
+core-tab {
+  display: flex;
+  line-height: inherit;
+  position: relative;
+}
+core-tab:not(:last-of-type) {
+  margin-right: 28px;
+}
+core-tab[active]::after,
+core-tab .native-element:hover::after {
+  content: "";
+  background-color: transparent;
+  border-radius: var(--border-radius-pill);
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+core-tab .native-element:hover {
+  color: var(--color-gray-7);
+  cursor: pointer;
+}
+core-tab .native-element:hover::after {
+  background-color: var(--color-gray-4);
+}
+core-tab[active]::after {
+  background-color: var(--color-blue);
+}
+core-tab[active] .native-element {
+  color: var(--color-blue);
+}
+core-tab[disabled] {
+  cursor: not-allowed;
+}
+core-tab[disabled] .native-element {
+  color: var(--color-gray-3);
+  pointer-events: none;
+}
+core-tab[disabled] .native-element::after {
+  content: none;
+}
+core-tab[disabled] .native-element:hover {
+  color: var(--color-gray-3);
+}
+core-tab .native-element {
+  color: var(--color-gray-5);
+  display: flex;
+  padding-right: var(--space-2);
+  padding-left: var(--space-2);
+  text-align: center;
+}
+core-tab-group[size="small"] core-tab.active::after,
+core-tab-group[size="small"] core-tab[active]::after {
+  height: 2px;
+}
+core-tab-group[size="small"] core-tab .native-element {
+  padding-right: 0;
+  padding-left: 0;
+}
+core-tab-group[size="small"] core-tab .native-element:hover::after {
+  height: 2px;
+}

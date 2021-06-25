@@ -1,0 +1,14 @@
+:root {
+  --focus-box-shadow: 0 0 0 3px rgba(59, 149, 255, 0.3);
+  --space-large: 20px;
+}
+:host {
+  font-family: "Inter Var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-feature-settings: "calt" on, "cpsp" on, "cv01" on, "cv03" on, "cv04" on, "cv05" on, "cv10" on, "kern" on, "liga" on;
+  font-size: 14px;
+  line-height: 1.142857;
+  text-rendering: auto;
+}
+:host i {
+  font-variation-settings: "slnt" 10deg;
+}

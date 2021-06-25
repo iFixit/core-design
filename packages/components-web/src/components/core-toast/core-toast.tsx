@@ -10,7 +10,7 @@ import {
 
 @Component({
   tag: "core-toast",
-  styleUrl: "core-toast.less",
+  styleUrl: "core-toast.css",
   shadow: true,
 })
 export class Toast implements ComponentInterface {

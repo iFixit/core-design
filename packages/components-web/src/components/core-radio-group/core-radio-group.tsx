@@ -14,7 +14,7 @@ import { RadioGroupChangeEventDetail } from "./radio-group-interface";
 
 @Component({
   tag: "core-radio-group",
-  styleUrl: "core-radio-group.less",
+  styleUrl: "core-radio-group.css",
 })
 export class RadioGroup implements ComponentInterface {
   private inputId = `radio-group-${radioGroupIds++}`;

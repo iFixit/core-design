@@ -1,0 +1,59 @@
+:host {
+  display: flex;
+}
+:host([color="gray"]) .native-element {
+  background-color: var(--color-gray-1);
+  color: rgba(0, 3, 6, 0.87);
+}
+:host([color="gray"]) .native-element .icon-outer {
+  color: var(--color-gray-5);
+}
+:host([color="green"]) .native-element {
+  background-color: var(--color-green-light-4);
+  color: var(--color-green-dark-2);
+}
+:host([color="green"]) .native-element .icon-outer {
+  color: var(--color-green);
+}
+:host([color="yellow"]) .native-element {
+  background-color: var(--color-yellow-light-4);
+  color: var(--color-yellow-dark-3);
+}
+:host([color="yellow"]) .native-element .icon-outer {
+  color: var(--color-yellow);
+}
+:host([color="red"]) .native-element {
+  background-color: var(--color-red-light-4);
+  color: var(--color-red-dark-2);
+}
+:host([color="red"]) .native-element .icon-outer {
+  color: var(--color-red);
+}
+:host([radius="none"]) .native-element {
+  border-radius: 0;
+}
+:host([radius="md"]) .native-element {
+  border-radius: var(--border-radius-md);
+}
+:host([radius="lg"]) .native-element {
+  border-radius: var(--border-radius-lg);
+}
+:host([radius="pill"]) .native-element {
+  border-radius: var(--border-radius-pill);
+}
+:host .icon-outer {
+  align-self: center;
+  height: var(--space-4);
+  margin-right: var(--space-4);
+}
+.native-element {
+  border-radius: var(--border-radius-md);
+  box-sizing: border-box;
+  display: flex;
+  font: inherit;
+  line-height: 16px;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 14px var(--space-5) 14px var(--space-4);
+  width: inherit;
+}

@@ -2,7 +2,7 @@ import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-tab-group",
-  styleUrl: "core-tab-group.less",
+  styleUrl: "core-tab-group.css",
   shadow: true,
 })
 export class TabGroup implements ComponentInterface {

@@ -1,0 +1,135 @@
+:host {
+  color: var(--color-gray-5);
+  display: inline-flex;
+  vertical-align: middle;
+}
+:host([disabled]:not([disabled="false"])),
+:host([disabled="true"]) {
+  cursor: not-allowed;
+}
+:host([disabled]:not([disabled="false"])) label,
+:host([disabled="true"]) label {
+  color: var(--color-gray-4);
+}
+:host([disabled]:not([disabled="false"])) .native-element,
+:host([disabled="true"]) .native-element {
+  background-color: var(--color-gray-1);
+  box-shadow: 0 0 0 0 transparent inset;
+  color: inherit;
+  pointer-events: none;
+}
+:host([size="large"]) label {
+  font-size: var(--font-size-2);
+}
+:host([size="large"]) .native-element {
+  height: 20px;
+  width: 38px;
+}
+:host([size="large"]) .native-element::after {
+  box-shadow: var(--shadow-0);
+  height: var(--space-4);
+  width: var(--space-4);
+}
+:host([size="large"]) .native-element:checked::after {
+  transform: translateX(18px);
+}
+:host([label-position="right"]) label {
+  margin-left: var(--space-2);
+}
+:host([label-position="right"]) input {
+  order: -1;
+}
+:host([label-position="left"]) label {
+  margin-right: var(--space-2);
+}
+:host([variation="alt"]) .native-element {
+  width: 32px;
+}
+:host([variation="alt"]) .native-element::after {
+  height: 10px !important;
+  left: 3px;
+  width: 10px !important;
+}
+:host([variation="alt"]) .native-element:checked::after {
+  transform: translateX(16px);
+}
+:host([variation="alt"][size="large"]) .native-element::after {
+  left: 5px;
+}
+:host([variation="alt"][size="large"]) .native-element:checked::after {
+  transform: translateX(12px);
+}
+:host([color=black][disabled="false"]) .native-element:checked {
+  background-color: var(--color-black);
+}
+:host([color=blue][disabled="false"]) .native-element:checked {
+  background-color: var(--color-blue);
+}
+:host([color=green][disabled="false"]) .native-element:checked {
+  background-color: var(--color-green);
+}
+:host([color=yellow][disabled="false"]) .native-element:checked {
+  background-color: var(--color-yellow);
+}
+:host([color=red][disabled="false"]) .native-element:checked {
+  background-color: var(--color-red);
+}
+.toggle-outer {
+  align-items: center;
+  display: flex;
+}
+.toggle-outer,
+.native-element,
+label {
+  cursor: pointer;
+}
+label {
+  color: var(--color-gray-8);
+  transition: color 0.12s ease-in-out;
+}
+.native-element {
+  align-items: center;
+  background-color: var(--color-gray-3);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  height: var(--space-4);
+  margin: 0;
+  outline: none;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0.6, 1);
+  width: 28px;
+}
+.native-element::after {
+  content: "";
+  box-shadow: var(--shadow-2);
+  left: 2px;
+  top: 0;
+  border-radius: 50%;
+  width: var(--space-3);
+  height: var(--space-3);
+  background-color: var(--color-white);
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.6, 1);
+}
+.native-element:disabled {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-4);
+  cursor: not-allowed;
+}
+.native-element:disabled::after {
+  box-shadow: none;
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .native-element {
+    appearance: none;
+  }
+  .native-element:checked {
+    background-color: var(--color-blue);
+  }
+  .native-element:checked::after {
+    transform: translateX(var(--space-3));
+  }
+}

@@ -11,7 +11,7 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-input",
-  styleUrl: "core-input.less",
+  styleUrl: "core-input.css",
   shadow: true,
 })
 export class Input implements ComponentInterface {
@@ -33,7 +33,7 @@ export class Input implements ComponentInterface {
 
   /**
    * Optional color of the label (inherited).
-   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.css) without `@color-`.
    */
   @Prop() labelColor?: colorPropsAll = "gray-8";
 

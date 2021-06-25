@@ -1,0 +1,183 @@
+:host {
+  align-self: center;
+  box-sizing: content-box;
+  color: inherit;
+  contain: strict;
+  display: inline-flex;
+  fill: currentColor;
+  vertical-align: middle;
+}
+:host([size="16"]) {
+  height: 16px;
+  min-width: 16px;
+  width: 16px;
+}
+:host([size="24"]) {
+  height: 24px;
+  min-width: 24px;
+  width: 24px;
+}
+:host([slot="button-left"]) {
+  margin-right: var(--space-2);
+  margin-left: -3px;
+}
+:host([slot="button-right"]) {
+  margin-left: var(--space-2);
+  margin-right: -3px;
+}
+:host([slot="input-left"]),
+:host([slot="input-right"]) {
+  position: absolute;
+  top: calc(50% - var(--space-2));
+}
+:host([slot="input-left"]) {
+  left: var(--space-3);
+}
+:host([slot="input-right"]) {
+  right: var(--space-3);
+}
+:host([color=blue]) {
+  color: var(--color-blue);
+}
+:host([color=green]) {
+  color: var(--color-green);
+}
+:host([color=yellow]) {
+  color: var(--color-yellow);
+}
+:host([color=red]) {
+  color: var(--color-red);
+}
+:host([color=white]) {
+  color: var(--color-white);
+}
+:host([color=black]) {
+  color: var(--color-black);
+}
+:host([color=blue-light-4]) {
+  color: var(--color-blue) light-4;
+}
+:host([color=blue-light-3]) {
+  color: var(--color-blue) light-3;
+}
+:host([color=blue-light-2]) {
+  color: var(--color-blue) light-2;
+}
+:host([color=blue-light-1]) {
+  color: var(--color-blue) light-1;
+}
+:host([color=blue-dark-1]) {
+  color: var(--color-blue) dark-1;
+}
+:host([color=blue-dark-2]) {
+  color: var(--color-blue) dark-2;
+}
+:host([color=blue-dark-3]) {
+  color: var(--color-blue) dark-3;
+}
+:host([color=blue-dark-4]) {
+  color: var(--color-blue) dark-4;
+}
+:host([color=green-light-4]) {
+  color: var(--color-green-light-4);
+}
+:host([color=green-light-3]) {
+  color: var(--color-green) light-3;
+}
+:host([color=green-light-2]) {
+  color: var(--color-green) light-2;
+}
+:host([color=green-light-1]) {
+  color: var(--color-green) light-1;
+}
+:host([color=green-dark-1]) {
+  color: var(--color-green) dark-1;
+}
+:host([color=green-dark-2]) {
+  color: var(--color-green-dark-2);
+}
+:host([color=green-dark-3]) {
+  color: var(--color-green) dark-3;
+}
+:host([color=green-dark-4]) {
+  color: var(--color-green) dark-4;
+}
+:host([color=yellow-light-4]) {
+  color: var(--color-yellow-light-4);
+}
+:host([color=yellow-light-3]) {
+  color: var(--color-yellow-light-3);
+}
+:host([color=yellow-light-2]) {
+  color: var(--color-yellow) light-2;
+}
+:host([color=yellow-light-1]) {
+  color: var(--color-yellow) light-1;
+}
+:host([color=yellow-dark-1]) {
+  color: var(--color-yellow) dark-1;
+}
+:host([color=yellow-dark-2]) {
+  color: var(--color-yellow) dark-2;
+}
+:host([color=yellow-dark-3]) {
+  color: var(--color-yellow-dark-3);
+}
+:host([color=yellow-dark-4]) {
+  color: var(--color-yellow) dark-4;
+}
+:host([color=red-light-4]) {
+  color: var(--color-red-light-4);
+}
+:host([color=red-light-3]) {
+  color: var(--color-red) light-3;
+}
+:host([color=red-light-2]) {
+  color: var(--color-red) light-2;
+}
+:host([color=red-light-1]) {
+  color: var(--color-red) light-1;
+}
+:host([color=red-dark-1]) {
+  color: var(--color-red) dark-1;
+}
+:host([color=red-dark-2]) {
+  color: var(--color-red-dark-2);
+}
+:host([color=red-dark-3]) {
+  color: var(--color-red) dark-3;
+}
+:host([color=red-dark-4]) {
+  color: var(--color-red) dark-4;
+}
+:host([color=gray-1]) {
+  color: var(--color-gray-1);
+}
+:host([color=gray-2]) {
+  color: var(--color-gray-2);
+}
+:host([color=gray-3]) {
+  color: var(--color-gray-3);
+}
+:host([color=gray-4]) {
+  color: var(--color-gray-4);
+}
+:host([color=gray-5]) {
+  color: var(--color-gray-5);
+}
+:host([color=gray-6]) {
+  color: var(--color-gray-6);
+}
+:host([color=gray-7]) {
+  color: var(--color-gray-7);
+}
+:host([color=gray-8]) {
+  color: var(--color-gray-8);
+}
+.core-icon--inner {
+  height: inherit;
+  width: inherit;
+}
+:host-context(core-button) {
+  display: flex;
+}

@@ -1,0 +1,88 @@
+:host {
+  color: inherit;
+  display: inline-flex;
+  vertical-align: middle;
+}
+:host([disabled]:not([disabled="false"])) *,
+:host([disabled="true"]) * {
+  cursor: not-allowed;
+}
+:host([disabled]:not([disabled="false"])) label,
+:host([disabled="true"]) label {
+  color: var(--color-gray-4);
+}
+:host([disabled]:not([disabled="false"])) .native-element,
+:host([disabled="true"]) .native-element {
+  background-color: var(--color-gray-1);
+  box-shadow: 0 0 0 0 transparent inset;
+  color: inherit;
+  pointer-events: none;
+}
+:host([size="large"]) label {
+  font-size: var(--font-size-2);
+}
+:host([size="large"]) .native-element {
+  height: var(--space-large);
+  width: var(--space-large);
+}
+:host([display="block"]) .checkbox-outer {
+  display: block;
+}
+:host([label]:not([label-position="left"])) label {
+  margin-left: var(--space-2);
+}
+:host([label]:not([label-position="left"])) svg {
+  left: 0;
+}
+:host([label-position="left"]) label {
+  margin-right: var(--space-2);
+  order: -1;
+}
+:host([label-position="left"]) svg {
+  right: 0;
+}
+.checkbox-outer {
+  align-items: center;
+  display: flex;
+  font: inherit;
+  position: relative;
+}
+.checkbox-outer svg {
+  position: absolute;
+}
+.checkbox-outer,
+.native-element,
+label {
+  cursor: pointer;
+}
+label {
+  color: var(--color-gray-8);
+  transition: color 0.12s ease-in-out;
+  position: relative;
+  z-index: -1;
+}
+.native-element {
+  background-color: var(--color-white);
+  border: 0;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 0 0 1px var(--color-gray-3) inset;
+  display: flex;
+  font: inherit;
+  height: var(--space-4);
+  margin: 0;
+  outline: none;
+  transition: background-color 0.12s ease-in-out, box-shadow 0.12s ease-in-out;
+  width: var(--space-4);
+}
+.native-element:focus {
+  border-color: var(--color-gray-5);
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .native-element {
+    appearance: none;
+  }
+  .native-element:checked {
+    background-color: var(--color-blue);
+    box-shadow: 0 0 0 1px var(--color-blue) dark-1 inset;
+  }
+}

@@ -1,0 +1,97 @@
+:host {
+  color: var(--color-gray-8);
+  display: inline-flex;
+  vertical-align: middle;
+}
+:host([variation="top"]) .popover-outer {
+  bottom: 100%;
+  margin-bottom: 20px;
+}
+:host([variation="top"]) .arrow {
+  bottom: -10px;
+}
+:host([variation="top"]) .arrow::before {
+  top: 20px;
+  transform: rotate(180deg);
+}
+:host([variation="top"]) .arrow::after {
+  transform: rotate(45deg);
+  top: -5px;
+}
+:host([variation="bottom"]) .popover-outer {
+  top: 100%;
+  margin-top: 20px;
+}
+:host([variation="bottom"]) .arrow {
+  top: -10px;
+}
+:host([variation="bottom"]) .arrow::before {
+  top: 1px;
+}
+:host([variation="bottom"]) .arrow::after {
+  transform: rotate(45deg);
+  top: -10px;
+}
+:host .core-popover {
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+}
+:host .core-popover.active .popover-outer,
+:host .core-popover.hoverable:hover .popover-outer {
+  display: flex;
+}
+:host .popover-outer {
+  display: none;
+  max-width: 95vw;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  z-index: 9;
+}
+:host .popover {
+  background-color: var(--color-white);
+  border-radius: var(--space-1);
+  box-shadow: var(--shadow-3);
+  box-sizing: border-box;
+  flex-direction: column;
+  min-width: 260px;
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  position: relative;
+}
+:host .arrow {
+  position: absolute;
+  left: calc(50% - 10px);
+  width: 20px;
+}
+:host .arrow::before {
+  content: "";
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  border-color: transparent transparent var(--color-white) transparent;
+  display: block;
+  height: 0;
+  position: relative;
+  left: -5px;
+  width: 0;
+  z-index: 2;
+}
+:host .arrow::after {
+  content: "";
+  box-shadow: var(--shadow-3);
+  display: block;
+  height: 20px;
+  transform: rotate(45deg);
+  position: relative;
+  top: -5px;
+  left: 0;
+  width: 20px;
+  z-index: -1;
+}
+.title {
+  color: var(--color-gray-6);
+  font-size: 17px;
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 20px;
+  margin-bottom: var(--space-2);
+}

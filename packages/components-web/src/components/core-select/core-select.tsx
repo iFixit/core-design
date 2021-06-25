@@ -11,7 +11,7 @@ import { colorPropsAll, labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-select",
-  styleUrl: "core-select.less",
+  styleUrl: "core-select.css",
   shadow: false, // disabling shadow dom enables native functionality
 })
 export class Select implements ComponentInterface {
@@ -27,7 +27,7 @@ export class Select implements ComponentInterface {
 
   /**
    * Optional color of the label (inherited).
-   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.css) without `@color-`.
    */
   @Prop() labelColor?: colorPropsAll = "gray-8";
 

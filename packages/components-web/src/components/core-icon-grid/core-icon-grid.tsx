@@ -2,7 +2,7 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
 
 @Component({
   tag: "core-icon-grid",
-  styleUrl: "core-icon-grid.less",
+  styleUrl: "core-icon-grid.css",
   shadow: true,
 })
 export class IconGrid implements ComponentInterface {

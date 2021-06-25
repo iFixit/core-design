@@ -2,7 +2,7 @@ import { Component, Prop, h, JSX, ComponentInterface } from "@stencil/core";
 
 @Component({
   tag: "core-popover",
-  styleUrl: "core-popover.less",
+  styleUrl: "core-popover.css",
   shadow: true,
 })
 export class Popover implements ComponentInterface {

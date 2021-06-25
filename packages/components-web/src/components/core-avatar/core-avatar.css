@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  max-height: 40px;
+  max-width: 40px;
+  position: relative;
+}
+:host([size="large"]) {
+  max-height: 64px;
+  max-width: 64px;
+}
+:host([variation="circle"]) ::slotted(img) {
+  border-radius: var(--border-radius-pill);
+}
+:host([variation="square"]) ::slotted(img) {
+  border-radius: var(--border-radius-md);
+}
+.notification {
+  border-radius: var(--border-radius-pill);
+  height: var(--space-4);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: var(--space-4);
+}
+.notification::before {
+  content: "";
+  background-color: var(--color-red);
+  border-radius: var(--border-radius-pill);
+  height: var(--space-2);
+  width: var(--space-2);
+}
+::slotted(img) {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=core-avatar.css.map */

@@ -1,0 +1,191 @@
+:host {
+  box-sizing: border-box;
+}
+:host([color="blue"]:not([disabled="true"])) {
+  color: var(--color-blue);
+}
+:host([color="green"][disabled="false"]) {
+  color: var(--color-green);
+}
+:host([color="yellow"][disabled="false"]) {
+  color: var(--color-yellow);
+}
+:host([color="red"][disabled="false"]) {
+  color: var(--color-red);
+}
+:host([color="white"][disabled="false"]) {
+  color: var(--color-white);
+}
+:host([color="black"][disabled="false"]) {
+  color: var(--color-black);
+}
+:host([color="blue-light-4"][disabled="false"]) {
+  color: var(--color-blue) light-4;
+}
+:host([color="blue-light-3"][disabled="false"]) {
+  color: var(--color-blue) light-3;
+}
+:host([color="blue-light-2"][disabled="false"]) {
+  color: var(--color-blue) light-2;
+}
+:host([color="blue-light-1"][disabled="false"]) {
+  color: var(--color-blue) light-1;
+}
+:host([color="blue-dark-1"][disabled="false"]) {
+  color: var(--color-blue) dark-1;
+}
+:host([color="blue-dark-2"][disabled="false"]) {
+  color: var(--color-blue) dark-2;
+}
+:host([color="blue-dark-3"][disabled="false"]) {
+  color: var(--color-blue) dark-3;
+}
+:host([color="blue-dark-4"][disabled="false"]) {
+  color: var(--color-blue) dark-4;
+}
+:host([color="green-light-4"][disabled="false"]) {
+  color: var(--color-green-light-4);
+}
+:host([color="green-light-3"][disabled="false"]) {
+  color: var(--color-green) light-3;
+}
+:host([color="green-light-2"][disabled="false"]) {
+  color: var(--color-green) light-2;
+}
+:host([color="green-light-1"][disabled="false"]) {
+  color: var(--color-green) light-1;
+}
+:host([color="green-dark-1"][disabled="false"]) {
+  color: var(--color-green) dark-1;
+}
+:host([color="green-dark-2"][disabled="false"]) {
+  color: var(--color-green-dark-2);
+}
+:host([color="green-dark-3"][disabled="false"]) {
+  color: var(--color-green) dark-3;
+}
+:host([color="green-dark-4"][disabled="false"]) {
+  color: var(--color-green) dark-4;
+}
+:host([color="yellow-light-4"][disabled="false"]) {
+  color: var(--color-yellow-light-4);
+}
+:host([color="yellow-light-3"][disabled="false"]) {
+  color: var(--color-yellow-light-3);
+}
+:host([color="yellow-light-2"][disabled="false"]) {
+  color: var(--color-yellow) light-2;
+}
+:host([color="yellow-light-1"][disabled="false"]) {
+  color: var(--color-yellow) light-1;
+}
+:host([color="yellow-dark-1"][disabled="false"]) {
+  color: var(--color-yellow) dark-1;
+}
+:host([color="yellow-dark-2"][disabled="false"]) {
+  color: var(--color-yellow) dark-2;
+}
+:host([color="yellow-dark-3"][disabled="false"]) {
+  color: var(--color-yellow-dark-3);
+}
+:host([color="yellow-dark-4"][disabled="false"]) {
+  color: var(--color-yellow) dark-4;
+}
+:host([color="red-light-4"][disabled="false"]) {
+  color: var(--color-red-light-4);
+}
+:host([color="red-light-3"][disabled="false"]) {
+  color: var(--color-red) light-3;
+}
+:host([color="red-light-2"][disabled="false"]) {
+  color: var(--color-red) light-2;
+}
+:host([color="red-light-1"][disabled="false"]) {
+  color: var(--color-red) light-1;
+}
+:host([color="red-dark-1"][disabled="false"]) {
+  color: var(--color-red) dark-1;
+}
+:host([color="red-dark-2"][disabled="false"]) {
+  color: var(--color-red-dark-2);
+}
+:host([color="red-dark-3"][disabled="false"]) {
+  color: var(--color-red) dark-3;
+}
+:host([color="red-dark-4"][disabled="false"]) {
+  color: var(--color-red) dark-4;
+}
+:host([color="gray-1"][disabled="false"]) {
+  color: var(--color-gray-1);
+}
+:host([color="gray-2"][disabled="false"]) {
+  color: var(--color-gray-2);
+}
+:host([color="gray-3"][disabled="false"]) {
+  color: var(--color-gray-3);
+}
+:host([color="gray-4"][disabled="false"]) {
+  color: var(--color-gray-4);
+}
+:host([color="gray-5"][disabled="false"]) {
+  color: var(--color-gray-5);
+}
+:host([color="gray-6"][disabled="false"]) {
+  color: var(--color-gray-6);
+}
+:host([color="gray-7"][disabled="false"]) {
+  color: var(--color-gray-7);
+}
+:host([color="gray-8"][disabled="false"]) {
+  color: var(--color-gray-8);
+}
+:host([disabled]:not([disabled="false"])),
+:host([disabled="true"]) {
+  color: var(--color-gray-4);
+}
+:host([disabled]:not([disabled="false"])) .native-element,
+:host([disabled="true"]) .native-element {
+  cursor: not-allowed;
+}
+:host([disabled="false"]) {
+  color: var(--color-gray-8);
+}
+:host([display="block"]) {
+  box-sizing: border-box;
+  width: 100%;
+}
+:host([display="block"]) .native-element {
+  flex-direction: column;
+}
+:host([display="block"]) .label-inner {
+  align-items: center;
+  display: flex;
+  width: inherit;
+}
+:host([display="block"]) slot[name="label-input"] {
+  display: flex;
+  margin-top: var(--space-2);
+  width: inherit;
+}
+:host([display="block"]) .help-url {
+  color: var(--color-gray-3);
+  transition: color 0.12s ease-in-out;
+}
+:host([display="block"]) .help-url:hover {
+  color: var(--color-gray-4);
+}
+:host([display="inline"]) {
+  display: inline-flex;
+}
+:host([display="inline"]) .label-inner {
+  display: inline-flex;
+  align-items: center;
+}
+:host([helpurl]) .label-inner {
+  justify-content: space-between;
+}
+.native-element {
+  display: flex;
+  font: inherit;
+  width: inherit;
+}

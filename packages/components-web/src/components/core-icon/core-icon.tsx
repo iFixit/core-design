@@ -15,7 +15,7 @@ import { getName, getUrl } from "./utils";
 
 @Component({
   tag: "core-icon",
-  styleUrl: "core-icon.less",
+  styleUrl: "core-icon.css",
   shadow: true,
 })
 export class Icon {
@@ -33,7 +33,7 @@ export class Icon {
 
   /**
    * Optional color of the icon.
-   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use any `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.css) without `@color-`.
    */
   @Prop() color?: colorPropsAll | string;
 

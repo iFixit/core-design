@@ -1,0 +1,67 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+:host([color="black"]) progress::-webkit-progress-value {
+  background-color: var(--color-black);
+}
+:host([color="black"]) progress::-moz-progress-bar {
+  background-color: var(--color-black);
+}
+:host([color="blue"]) progress::-webkit-progress-value {
+  background-color: var(--color-blue);
+}
+:host([color="blue"]) progress::-moz-progress-bar {
+  background-color: var(--color-blue);
+}
+:host([color="green"]) progress::-webkit-progress-value {
+  background-color: var(--color-green);
+}
+:host([color="green"]) progress::-moz-progress-bar {
+  background-color: var(--color-green);
+}
+:host([color="yellow"]) progress::-webkit-progress-value {
+  background-color: var(--color-yellow);
+}
+:host([color="yellow"]) progress::-moz-progress-bar {
+  background-color: var(--color-yellow);
+}
+:host([color="red"]) progress::-webkit-progress-value {
+  background-color: var(--color-red);
+}
+:host([color="red"]) progress::-moz-progress-bar {
+  background-color: var(--color-red);
+}
+:host([size="small"]) progress,
+:host([size="small"]) progress::-webkit-progress-bar {
+  border-radius: var(--border-radius-sm);
+  height: var(--space-1);
+}
+progress {
+  appearance: none;
+  border: none;
+  border-radius: var(--border-radius-md);
+  box-sizing: border-box;
+  color: var(--color-blue);
+  cursor: default;
+  display: flex;
+  flex: 1;
+  height: var(--space-2);
+  max-width: 100%;
+  overflow: hidden;
+  transition: width cubic-bezier(0, 0.5, 0.43, 0.58) 0.5s;
+  width: inherit;
+}
+progress::-moz-progress-bar {
+  background-color: var(--color-blue);
+  border-radius: var(--border-radius-md);
+  transition: width cubic-bezier(0, 0.5, 0.43, 0.58) 0.5s;
+}
+progress::-webkit-progress-bar {
+  background-color: var(--color-gray-2);
+}
+progress::-webkit-progress-value {
+  background-color: var(--color-blue);
+  border-radius: var(--border-radius-md);
+  transition: width cubic-bezier(0, 0.5, 0.43, 0.58) 0.5s;
+}

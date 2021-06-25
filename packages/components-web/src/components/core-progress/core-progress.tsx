@@ -3,7 +3,7 @@ import { colorPropsPrimary } from "../../assets/script/global";
 
 @Component({
   tag: "core-progress",
-  styleUrl: "core-progress.less",
+  styleUrl: "core-progress.css",
   shadow: true,
 })
 export class Progress implements ComponentInterface {

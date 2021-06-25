@@ -1,0 +1,9 @@
+core-radio-group {
+  gap: var(--space-4);
+}
+core-radio-group[display="column"] {
+  display: grid;
+}
+core-radio-group[display="row"] {
+  display: flex;
+}

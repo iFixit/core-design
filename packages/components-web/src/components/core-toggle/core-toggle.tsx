@@ -3,7 +3,7 @@ import { labelPositionProps } from "../../assets/script/global";
 
 @Component({
   tag: "core-toggle",
-  styleUrl: "core-toggle.less",
+  styleUrl: "core-toggle.css",
   shadow: true,
 })
 export class Toggle implements ComponentInterface {
@@ -21,7 +21,7 @@ export class Toggle implements ComponentInterface {
 
   /**
    * Optional color of the icon. Defaults to `blue`.
-   * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.less) without `@color-`.
+   * Use the following `@color` in [core-primitives](https://unpkg.com/@core-ds/primitives/core-primitives.css) without `@color-`.
    */
   @Prop() color?: "green" | "yellow" | "red" | "black" | "blue" = "blue";
 

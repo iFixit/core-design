@@ -1,0 +1,68 @@
+:host {
+  display: inline-flex;
+  vertical-align: top;
+}
+:host([color="black"]) .native-element {
+  background-color: var(--color-gray-7);
+  color: var(--color-white);
+}
+:host([color="red"]) .native-element {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+:host([variation="border"]) .native-element {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px currentColor inset;
+  color: currentColor;
+}
+:host([variation="border"][color="black"]) .native-element {
+  box-shadow: 0 0 0 1px var(--color-gray-4) inset;
+  color: var(--color-gray-7);
+}
+:host([variation="border"][color="red"]) .native-element {
+  box-shadow: 0 0 0 1px var(--color-red) light-2 inset;
+  color: var(--color-red);
+}
+:host([variation="dot"]) .native-element .dot-inner {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  height: 5px;
+  margin: auto;
+  width: 5px;
+}
+:host([variation="dot"]) .native-element slot {
+  display: none;
+}
+:host([size="small"]) .native-element {
+  border-radius: var(--border-radius-pill);
+  font-size: 11px;
+  height: 16px;
+  letter-spacing: unset;
+  line-height: var(--space-3);
+  min-width: var(--space-4);
+  padding: 2px var(--space-1);
+}
+:host([size="small"].dot) .dot-inner {
+  height: var(--space-1);
+  width: var(--space-1);
+}
+:host([slot="badge"]) {
+  margin-top: 2px;
+  margin-left: var(--space-2);
+}
+.native-element {
+  border-radius: var(--border-radius-pill);
+  align-items: center;
+  box-sizing: border-box;
+  cursor: default;
+  display: flex;
+  font: inherit;
+  font-size: 12px;
+  font-weight: var(--font-weight-semi-bold);
+  justify-content: center;
+  line-height: 15px;
+  max-width: 100%;
+  min-width: 23px;
+  padding: var(--space-1) 7px;
+  white-space: nowrap;
+}

@@ -2,7 +2,7 @@ import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "core-avatar",
-  styleUrl: "core-avatar.less",
+  styleUrl: "core-avatar.css",
   shadow: true,
 })
 export class Avatar implements ComponentInterface {

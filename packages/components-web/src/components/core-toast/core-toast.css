@@ -1,0 +1,70 @@
+:host {
+  display: flex;
+}
+:host([color="white"]) .native-element {
+  background-color: var(--color-white);
+  color: var(--color-gray-8);
+}
+:host([color="white"]) .native-element .toast-triggers > div:not(:last-child)::after {
+  background-color: var(--color-gray-2);
+}
+:host([color="yellow"]) .native-element {
+  background-color: var(--color-yellow);
+  color: var(--color-gray-8);
+}
+:host([color="yellow"]) .native-element .toast-triggers > div:not(:last-child)::after {
+  background-color: rgba(36, 44, 51, 0.2);
+}
+:host([color="green"]) .native-element {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+:host([color="green"]) .native-element .toast-triggers > div:not(:last-child)::after {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+:host([color="red"]) .native-element {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+:host([color="red"]) .native-element .toast-triggers > div:not(:last-child)::after {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+:host .toast-triggers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+:host .toast-triggers > div:not(:last-child)::after {
+  content: "";
+  cursor: default;
+  display: inline-flex;
+  height: 20px;
+  margin-top: -2px;
+  margin-left: var(--space-3);
+  position: absolute;
+  width: 1px;
+}
+:host .toast-triggers .undo,
+:host .toast-triggers .close {
+  cursor: pointer;
+  padding: var(--space-3);
+}
+:host .toast-triggers svg {
+  display: flex;
+}
+.native-element {
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-3);
+  display: flex;
+  align-items: center;
+  font: inherit;
+  height: 44px;
+  justify-content: space-between;
+  line-height: 16px;
+  max-width: 100%;
+  min-width: 565px;
+  padding: 0 3px 0 15px;
+}
