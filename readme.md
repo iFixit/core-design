@@ -1,83 +1,78 @@
-# Core Design
+# Overview
+`core-design` is our take on a framework-agnostic design system built with [stencil](https://stenciljs.com/), a web component compiler. We had unique requirements at iFixit and Dozuki which required us to consume components in React, HTML, and PHP today, and who-knows-what tomorrow. `core-design` was architecturally influenced by [Ionic](https://ionicframework.com/), but adapted for desktop environments using our own internal style guidelines.
 
-## Packages
+# Components
 
 1. [Web Components](packages/components-web)
 1. [React Components](packages/components-react)
 
-## Getting Started
+# Packages
 
-### Lerna
+1. [@core-design/components-web](https://www.npmjs.com/package/@core-design/components-web)
+1. [@core-design/components-react
+](https://www.npmjs.com/package/@core-design/components-react)
 
-This repo uses [Lerna](https://github.com/lerna/lerna) to manage multiple npm packages.
+# Getting Started
+## Dependencies
 
-```bash
-npm install -g lerna
-```
-
-<details>
-  <summary>Prefer a wizard?</summary>
-
-Install [lerna-wizard](https://github.com/webuniverseio/lerna-wizard) for a more helpful and visual cli experience.
+We opted to use [lerna](https://github.com/lerna/lerna) to help manage multiple child packages efficiently. To get yourself set up for local development, you'll need [node](https://nodejs.org/) installed to run:
 
 ```bash
-npm install -g lerna-wizard
-```
-
-</details>
-
-### Installing dependencies
-
-To install dependencies run:
-
-```bash
-# 1. Install dependencies in root package.json
+# 1. Install dependencies in the root package.json
 npm install
 
-# 2. Install and link dependencies in all child packages
-lerna bootstrap
+# 2. Install and link dependencies in child packages
+npx lerna bootstrap
 ```
 
-## Local Development
+# Local Development
 
-To start developing Stencil `core-design`, run:
+For Stencil development, run:
 
 ```bash
-lerna run start
+# from root
+npx lerna run start
+
+# from packages/components-web
+npm run start
 ```
 
-To start developing Storybook `core-design`, run:
+For Storybook development, run:
 
 ```bash
-lerna run storybook
+# from root
+npx lerna run storybook
+
+# from packages/components-web
+npm run storybook
 ```
 
-## Publishing to NPM
+# Publishing to NPM
 
 <details>
   <summary>First time publishing?</summary>
 
-1. Make sure you have an [NPM account](https://www.npmjs.com/login) with access to the `@core-design` packages.
-1. Make sure you are logged in to npm on the terminal with:
+1. You need an [NPM account](https://www.npmjs.com/login) with access to `@core-design`.
+1. You need to be logged in to npm on your terminal with:
 
 ```bash
 npm login
 ```
-
 </details>
+<br>
 
-### Compile packages and publish
+## Compile packages and publish
 
-Before publishing to NPM we need to build all child repo packages:
+Before publishing to NPM we need to build child repo packages with lerna:
 
 ```bash
-lerna run build
+npx lerna run build
 ```
 
 Then, publish to NPM:
 
 ```bash
-lerna publish
+npx lerna publish
 ```
 
-`lerna publish` will automatically determine which packages should be published and prompt you to choose the new version. In addition to publishing it will also add and push a commit with the changes necessary to reference the new version. See [lerna publish docs](https://github.com/lerna/lerna/tree/master/commands/publish#readme) for more info.
+`npx lerna publish` will automatically determine which packages should be published and prompt you to choose a new version. In addition to publishing, it will also add and push a commit with the changes necessary to reference the new version. See the [lerna publish docs](https://github.com/lerna/lerna/tree/master/commands/publish#readme) for more info.
